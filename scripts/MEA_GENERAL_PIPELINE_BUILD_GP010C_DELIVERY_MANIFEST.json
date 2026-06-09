@@ -1,0 +1,34 @@
+{
+  "boundaries": {
+    "adds_new_domain": false,
+    "installs_dependencies": false,
+    "mints_ct": false,
+    "modifies_mea": false,
+    "writes_contribution_economy": false,
+    "writes_identity_vault": false,
+    "writes_ledgers": false,
+    "writes_memory": false
+  },
+  "build_id": "GENERAL-PIPELINE-RUNTIME-TRUTH-ATTESTATION-BUILD-GP-010C",
+  "modified_existing_files": [
+    "rmc_engine_v1/general_pipeline/__init__.py",
+    "rmc_engine_v1/general_pipeline/capability_services.py",
+    "rmc_engine_v1/general_pipeline/manifest_contract_v2.py",
+    "rmc_engine_v1/general_pipeline/outcome_contract_v2.py",
+    "scripts/test_general_pipeline_capability_services_build_gp005.py",
+    "scripts/general_pipeline_capability_services_build_gp005_verify.py",
+    "scripts/test_general_pipeline_manifest_contract_v2_build_gp008.py",
+    "scripts/general_pipeline_manifest_contract_v2_build_gp008_verify.py",
+    "scripts/test_general_pipeline_outcome_closure_build_gp009.py",
+    "scripts/general_pipeline_outcome_closure_build_gp009_verify.py"
+  ],
+  "new_files": [
+    "rmc_engine_v1/general_pipeline/runtime_truth_attestation_gp010c.py",
+    "rmc_engine_v1/general_pipeline/gp010c_runtime_truth_reconciliation.py",
+    "scripts/test_general_pipeline_runtime_truth_attestation_build_gp010c.py",
+    "scripts/general_pipeline_runtime_truth_attestation_build_gp010c_verify.py",
+    "scripts/README_general_pipeline_runtime_truth_reconciliation_build_gp010c.md",
+    "scripts/MEA_GENERAL_PIPELINE_BUILD_GP010C_DELIVERY_MANIFEST.json"
+  ],
+  "purpose": "Truthfully reconcile active Lark/SymPy/Hypothesis runtime transition and add independent in-memory attestation."
+}

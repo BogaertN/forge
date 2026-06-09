@@ -1,0 +1,128 @@
+You are Forge's local LLM producing a focused revision-candidate plan.
+
+Goal:
+Choose the minimal sandbox-only candidate revision for the current import/symbol failure.
+Do not propose live writes.
+
+You MUST include one machine-readable action line:
+ACTION: USE_COREBREATHER_WRAPPER
+ACTION: REVISE_SANDBOX_DEPENDENCY_PLAN
+ACTION: MANUAL_REVIEW
+
+Then explain:
+1. Why that action is minimal.
+2. Which candidate file changes are needed.
+3. Which tests must be rerun.
+4. Why this is still sandbox-only.
+
+Current target: stack_linker_breather
+Sandbox failure status: GENERIC_SANDBOX_DEPENDENCY_TESTS_ISSUES
+Failing stderr:
+Traceback (most recent call last):
+  File "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/test_stack_linker_core.py", line 3, in <module>
+    from stack_linker_breather.stack_linker_core import unified_breathe_cycle
+  File "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/stack_linker_core.py", line 5, in <module>
+    from core_breather.core_breather import breathe_phase as core_breathe
+ImportError: cannot import name 'breathe_phase' from 'core_breather.core_breather' (/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/core_breather/core_breather.py)
+
+
+Prior LLM revision recommendation:
+Thinking...
+Okay, let's see. The user is having an ImportError because they can't import 'breathe_phase' from 'core_breather.core_breather'. The error message says that the module 'core_breather.core_breather' doesn't have a 'breathe_phase' attribute. 
+
+Looking at the core_breather.py code, there's a class CoreBreather with a method breathe(), but no function named breathe_phase. The candidate code is trying to import breathe_phase as core_breathe. So the problem is that the dependency doesn't have the expected symbol.
+
+The candidate's import statement is from core_breather.core_breather import breathe_phase as core_breathe. But the core_breather module doesn't have a breathe_phase function. The CoreBreather class has a breathe method, but that's a class method, not a standalone function.
+
+So the options are: either modify the candidate to use the existing CoreBreather class and its breathe method, or adjust the sandbox dependency to expose breathe_phase. But according to the constraints, we shouldn't change live files yet. So the minimal repair would be to adjust the candidate's import to use the existing methods.
+
+Wait, but the candidate is trying to import breathe_phase, which doesn't exist. So the candidate's code is incorrect. The minimal repair would be to revise the candidate's code to use the available breathe method from the CoreBreather class. However, the user's instruction says not to propose live writes, so we need to suggest changing the candidate's import to reference the existing symbol.
+
+Alternatively, maybe the sandbox dependency plan needs to be revised to expose breathe_phase. But since the core_breather module doesn't have that symbol, the candidate's import is wrong. Therefore, the candidate should be revised to use the existing breathe method instead of breathe_phase.
+
+So the recommendation is to REVISE_CANDIDATE. The diagnosis is that the candidate is trying to import a non-existent symbol. The minimal repair is to change the import in stack_linker_core.py from breathe_phase to the actual method, perhaps using the CoreBreather class. The exact file to change is the candidate's stack_linker_core.py. The tests to rerun are the test_stack_linker_core.py. This doesn't require live apply yet because the issue is in the candidate's import, not the sandbox setup.
+...done thinking.
+
+RECOMMENDATION: REVISE_CANDIDATE
+
+1. Diagnosis: The candidate imports `breathe_phase` from `core_breather.core_breather`, but the dependency module only contains a class `CoreBreather` with a method `breathe()` (not a standalone `breathe_phase` function). The candidate's import is attempting to access a non-existent symbol.
+
+2. Minimal next repair: Update the candidate's import to reference the actual `breathe` method from the `CoreBreather` class, or adjust the import path to match the existing symbol.
+
+3. Exact target file(s) to change: `sandbox_packages/stack_linker_breather/stack_linker_core.py` (specifically the import line: `from core_breather.core_breather import breathe_phase as core_breathe`).
+
+4. Exact tests to rerun: `test_stack_linker_core.py` (the failing test suite).
+
+5. Why this does not require live apply yet: The issue is purely a mismatch between the candidate's import and the dependency's exported symbols. No sandbox dependency plan changes are needed—only the candidate's code needs to be adjusted to align with the existing dependency implementation.
+
+
+
+Candidate target file:
+/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/stack_linker_core.py
+
+Candidate code:
+```python
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
+
+from core_breather.core_breather import breathe_phase as core_breathe
+from recursive_field_breather.field_breather import breathe_phase as field_breathe
+import time
+import json
+
+def unified_breathe_cycle():
+    # simple combined breathing cycle
+    for phase in range(1, 10):  # Full 1-9 breathing
+        core_breathe(phase)
+        field_breathe(phase)
+        event = {
+            "timestamp": time.time(),
+            "phase": phase,
+            "stack": "core_and_field",
+            "status": "",
+        }
+
+```
+
+Core dependency path: /home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/core_breather/core_breather.py
+Core dependency code:
+```python
+# core_breather.py
+
+import json
+import time
+from datetime import datetime
+
+class CoreBreather:
+    def __init__(self):
+        self.phase = 1
+        self.loop_count = 0
+        self.trace_file = "core_trace.jsonl"
+
+    def breathe(self):
+        timestamp = datetime.utcnow().isoformat() + "Z"
+        trace_entry = {
+            "phase": self.phase,
+            "timestamp": timestamp,
+            "loop": self.loop_count,
+            "drift": 0.0
+        }
+
+        with open(self.trace_file, "a") as f:
+            f.write(json.dumps(trace_entry) + "\n")
+
+        print(f"Breath Phase: {self.phase} | Loop: {self.loop_count} | Time: {timestamp}")
+
+        self.phase += 1
+        if self.phase > 9:
+            self.phase = 1
+            self.loop_count += 1
+
+```
+
+Constraints:
+- Keep it generic: infer from imports, symbols, and available code.
+- If the dependency has a class CoreBreather with breathe(self), and the candidate imports missing breathe_phase as core_breathe, prefer a candidate wrapper over live dependency mutation.
+- Do not suggest touching /home/nic/aiweb live files.
+- Do not suggest applying anything live.

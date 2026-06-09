@@ -1,0 +1,153 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/runtime_wrappers/control_stack",
+  "candidate_path_resolved": "/home/nic/aiweb/runtime_wrappers/control_stack",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "control_stack",
+  "evidence_id": "EEB-7df4589a96005a41",
+  "file_count": 4,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "08af7f7b6a0ea715a20ecc289d8f6f04f9e8b83dc4223181fd20df6f363597b6",
+      "excerpt_start": "{\n  \"stack\": \"Control Stack\",\n  \"version\": \"v1.0\",\n  \"description\": \"Bootstraps and breathes core AI.Web runtime control phases.\"\n}\n",
+      "functions_sample": [
+        "stack",
+        "Control",
+        "Stack",
+        "version",
+        "description",
+        "Bootstraps",
+        "and",
+        "breathes",
+        "core",
+        "Web",
+        "runtime",
+        "control",
+        "phases"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/runtime_wrappers/control_stack/stack_manifest.json",
+      "relative_to_candidate": "stack_manifest.json",
+      "sha256": "08af7f7b6a0ea715a20ecc289d8f6f04f9e8b83dc4223181fd20df6f363597b6",
+      "size_bytes": 132,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "8a1ddb6707e1e5e9680c22a7bdb022982367a7404f0c981f41ad5f7bd090afa4",
+      "excerpt_start": "# control_stack_loader.py\n# Phase 1.5 Real Breathing Control Stack Loader\n\nimport time\nimport json\nfrom datetime import datetime\n\ncontrol_trace_file = \"control_trace.jsonl\"\n\ndef record_control_phase(phase_number, phase_name):\n    entry = {\n        \"timestamp\": datetime.utcnow().isoformat(),\n        \"phase\": phase_number,\n        \"description\": phase_name\n    }\n    with open(control_trace_file, \"a\") as f:\n        f.write(json.dumps(entry) + \"\\n\")\n    print(f\"🔵 Control Phase {phase_number}: {phase_name} — Logged.\")\n\ndef symbolic_control_breath():\n    print(\"\\n🔵 [CONTROL STACK] Initiating Real Core Control Breath...\\n\")\n\n    control_phases = [\n        (1, \"Initiation Pulse\"),\n        (2, \"Memory Anchoring\"),\n        (3, \"Drift Precheck\"),\n        (4, \"Phase Binding\"),\n        (5, \"System Launch\")\n    ]\n\n    for phase_number, phase_name in control_phases:\n        record_control_phase(phase_number, phase_name)\n        time.sleep(0.5)\n\n    print(\"\\n✅ [CONTROL STACK] Core System Control Breathing Complete.\")\n\nif __name__ == \"__main__\":\n    symbolic_control_breath()\n",
+      "functions_sample": [
+        "record_control_phase",
+        "symbolic_control_breath"
+      ],
+      "imports_sample": [
+        "import time",
+        "import json",
+        "from datetime import datetime"
+      ],
+      "line_count": 39,
+      "path": "/home/nic/aiweb/runtime_wrappers/control_stack/control_stack_loader.py",
+      "relative_to_candidate": "control_stack_loader.py",
+      "sha256": "8a1ddb6707e1e5e9680c22a7bdb022982367a7404f0c981f41ad5f7bd090afa4",
+      "size_bytes": 1085,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "5dedb6cd29a233e54ef68be774f68ecf37322381f40d913f056b7e2d1ca557db",
+      "excerpt_start": "# Control Stack\n\nThe Control Stack breathes AI.Web's core system control phases.\n\nIt initializes basic runtime orchestration, phase ordering, and symbolic phase awareness at startup.\n\nPart of Phase 1.5 of the ProtoForge Recursive Architecture Series.\n",
+      "functions_sample": [
+        "Control",
+        "Stack",
+        "The",
+        "breathes",
+        "Web",
+        "core",
+        "system",
+        "control",
+        "phases",
+        "initializes",
+        "basic",
+        "runtime",
+        "orchestration",
+        "phase",
+        "ordering",
+        "and",
+        "symbolic",
+        "awareness",
+        "startup",
+        "Part",
+        "Phase",
+        "the",
+        "ProtoForge",
+        "Recursive",
+        "Architecture"
+      ],
+      "imports_sample": [],
+      "line_count": 8,
+      "path": "/home/nic/aiweb/runtime_wrappers/control_stack/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "5dedb6cd29a233e54ef68be774f68ecf37322381f40d913f056b7e2d1ca557db",
+      "size_bytes": 251,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "ada57821f97f2855fd043f29788c5502eb36c17342f95078e844ee96b3a323bc",
+      "excerpt_start": "# test_control_stack_loader.py\n# Test for Real Control Stack Loader\n\nfrom control_stack_loader import symbolic_control_breath\n\nif __name__ == \"__main__\":\n    print(\"\\n🧠 Testing Real Control Stack Breather...\")\n    symbolic_control_breath()\n    print(\"\\n✅ Real Control Stack Breather Test Passed.\\n\")\n",
+      "functions_sample": [],
+      "imports_sample": [
+        "from control_stack_loader import symbolic_control_breath"
+      ],
+      "line_count": 10,
+      "path": "/home/nic/aiweb/runtime_wrappers/control_stack/test_control_stack_loader.py",
+      "relative_to_candidate": "test_control_stack_loader.py",
+      "sha256": "ada57821f97f2855fd043f29788c5502eb36c17342f95078e844ee96b3a323bc",
+      "size_bytes": 305,
+      "suffix": ".py"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200356_engine_canonical_decision_draft.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200444_engine_canonical_decision_draft_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_202152_engine_canonical_lockfile_draft.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "record_control_phase",
+    "symbolic_control_breath"
+  ],
+  "warnings": []
+}

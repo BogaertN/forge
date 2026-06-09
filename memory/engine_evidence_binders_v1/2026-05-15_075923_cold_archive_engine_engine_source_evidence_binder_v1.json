@@ -1,0 +1,231 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/cold_archive_engine_frozen_v1",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "cold_archive_engine",
+  "evidence_id": "EEB-bc75b62ef10a008d",
+  "file_count": 7,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "df016369650df3d925c48bbec027ffd48114f9ed3836a7a6b847b5a40fb7482b",
+      "excerpt_start": "# test_cold_archive.py\n# Tests the cold archive loop behavior\n\nfrom run import ColdArchiveEngine\n\ndef run_test():\n    try:\n        archive = ColdArchiveEngine()\n        for i in range(2):\n            archive.archive_loop(f\"test_loop_{i+1}\")\n        archive.archive_summary()\n        print(\"✅ Cold Archive Engine Test Passed.\")\n    except Exception as e:\n        print(f\"❌ Cold Archive Engine Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    run_test()\n",
+      "functions_sample": [
+        "run_test"
+      ],
+      "imports_sample": [
+        "from run import ColdArchiveEngine"
+      ],
+      "line_count": 18,
+      "path": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1/test_cold_archive.py",
+      "relative_to_candidate": "test_cold_archive.py",
+      "sha256": "df016369650df3d925c48bbec027ffd48114f9ed3836a7a6b847b5a40fb7482b",
+      "size_bytes": 458,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "e48a8bbe2ca248e3c41001872b35b45f44f1b5053387df4eee0bec754110a274",
+      "excerpt_start": "# archive_core.py\nimport json\nfrom datetime import datetime\n\ndef store_dead_loop(loop_id, reason):\n    entry = {\n        \"timestamp\": datetime.utcnow().isoformat(),\n        \"loop_id\": loop_id,\n        \"reason\": reason,\n    }\n    try:\n        with open(\"archive_state.json\", \"r\") as f:\n            archive = json.load(f)\n    except (FileNotFoundError, json.JSONDecodeError):\n        archive = []\n\n    archive.append(entry)\n\n    with open(\"archive_state.json\", \"w\") as f:\n        json.dump(archive, f, indent=2)\n\n    return entry\n",
+      "functions_sample": [
+        "store_dead_loop"
+      ],
+      "imports_sample": [
+        "import json",
+        "from datetime import datetime"
+      ],
+      "line_count": 23,
+      "path": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1/archive_core.py",
+      "relative_to_candidate": "archive_core.py",
+      "sha256": "e48a8bbe2ca248e3c41001872b35b45f44f1b5053387df4eee0bec754110a274",
+      "size_bytes": 528,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [
+        "ColdArchiveEngine"
+      ],
+      "excerpt_sha256": "6db5f5fe7a6cc659a5f09ecd59eeb4f970b8fd09a421639b2f4ff4877d172a7c",
+      "excerpt_start": "# run.py\n# AI.Web Cold Archive Engine Runtime\n\nimport time\n\nclass ColdArchiveEngine:\n    def __init__(self):\n        self.archived_loops = []\n\n    def archive_loop(self, loop_id):\n        print(f\"❄️ [COLD ARCHIVE] Archiving Loop: {loop_id}\")\n        self.archived_loops.append(loop_id)\n        time.sleep(0.5)\n\n    def archive_summary(self):\n        print(f\"📦 [COLD ARCHIVE] Total Archived Loops: {len(self.archived_loops)}\")\n\nif __name__ == \"__main__\":\n    archive = ColdArchiveEngine()\n    for i in range(3):\n        archive.archive_loop(f\"loop_{i+1}\")\n    archive.archive_summary()\n",
+      "functions_sample": [
+        "__init__",
+        "archive_loop",
+        "archive_summary"
+      ],
+      "imports_sample": [
+        "import time"
+      ],
+      "line_count": 23,
+      "path": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1/run.py",
+      "relative_to_candidate": "run.py",
+      "sha256": "6db5f5fe7a6cc659a5f09ecd59eeb4f970b8fd09a421639b2f4ff4877d172a7c",
+      "size_bytes": 592,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "979080b68ff131e7b420c39ff137178a3663389b55c491d9d6dbe1bffb0c61ba",
+      "excerpt_start": "# Cold Archive Engine (Frozen v1.01)\n\n---\n\n## Overview:\nThe Cold Archive Engine captures and archives symbolic recursion memory loops that drift too far or collapse beyond recovery, preserving symbolic history without causing systemwide recursion breakdown.\n\n---\n\n## Functions:\n- Archival of symbolic memory loops\n- Cold storage management\n- Drift collapse prevention\n\n---\n\n## Phase Standard:\n- Phase 2.5 Recursive Breathing Activation\n\n---\n\n**Frozen Snapshot:** `cold_archive_engine_frozen_v1.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n\n",
+      "functions_sample": [
+        "Cold",
+        "Archive",
+        "Engine",
+        "Frozen",
+        "Overview",
+        "The",
+        "captures",
+        "and",
+        "archives",
+        "symbolic",
+        "recursion",
+        "memory",
+        "loops",
+        "that",
+        "drift",
+        "too",
+        "far",
+        "collapse",
+        "beyond",
+        "recovery",
+        "preserving",
+        "history",
+        "without",
+        "causing",
+        "systemwide"
+      ],
+      "imports_sample": [],
+      "line_count": 26,
+      "path": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "979080b68ff131e7b420c39ff137178a3663389b55c491d9d6dbe1bffb0c61ba",
+      "size_bytes": 560,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "ba3679ce27adb3b9def23c960bf301058d952d468f5c38e817126dd2cd761b93",
+      "excerpt_start": "# test_archive.py\nfrom archive_core import store_dead_loop\n\ndef test_archive_storage():\n    result = store_dead_loop(\"loop_φ8a\", \"Drift exceeded containment threshold\")\n    print(\"✅ Test Passed: Loop stored in archive.\")\n    print(\"Stored:\", result)\n\nif __name__ == \"__main__\":\n    test_archive_storage()\n",
+      "functions_sample": [
+        "test_archive_storage"
+      ],
+      "imports_sample": [
+        "from archive_core import store_dead_loop"
+      ],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1/test_archive.py",
+      "relative_to_candidate": "test_archive.py",
+      "sha256": "ba3679ce27adb3b9def23c960bf301058d952d468f5c38e817126dd2cd761b93",
+      "size_bytes": 308,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "15a756127bd46280d495149795a9d77c5f7ea5d4e2ac175e045256103b0f4199",
+      "excerpt_start": "{\n  \"engine\": \"cold_archive_engine\",\n  \"version\": \"v1.01\",\n  \"frozen_as\": \"cold_archive_engine_frozen_v1.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Archives symbolic recursion loops that collapse beyond recovery. Enables cold storage of symbolic memory branches to prevent full systemic collapse.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 2.5 Recursive Breathing Activation\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "cold_archive_engine",
+        "version",
+        "frozen_as",
+        "cold_archive_engine_frozen_v1",
+        "frozen_on",
+        "description",
+        "Archives",
+        "symbolic",
+        "recursion",
+        "loops",
+        "that",
+        "collapse",
+        "beyond",
+        "recovery",
+        "Enables",
+        "cold",
+        "storage",
+        "memory",
+        "branches",
+        "prevent",
+        "full",
+        "systemic",
+        "author",
+        "Web"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "15a756127bd46280d495149795a9d77c5f7ea5d4e2ac175e045256103b0f4199",
+      "size_bytes": 408,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "2a189905499f8d68e01106b775be3ae03aee41daaf035212ea6f98527a50f405",
+      "excerpt_start": "[\n  {\n    \"timestamp\": \"2025-04-25T22:17:14.211175\",\n    \"loop_id\": \"loop_\\u03c68a\",\n    \"reason\": \"Drift exceeded containment threshold\"\n  }\n]",
+      "functions_sample": [
+        "timestamp",
+        "loop_id",
+        "loop_",
+        "u03c68a",
+        "reason",
+        "Drift",
+        "exceeded",
+        "containment",
+        "threshold"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1/archive_state.json",
+      "relative_to_candidate": "archive_state.json",
+      "sha256": "2a189905499f8d68e01106b775be3ae03aee41daaf035212ea6f98527a50f405",
+      "size_bytes": 143,
+      "suffix": ".json"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "DEFERRED",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "run_test",
+    "store_dead_loop",
+    "ColdArchiveEngine",
+    "__init__",
+    "archive_loop",
+    "archive_summary",
+    "test_archive_storage"
+  ],
+  "warnings": []
+}

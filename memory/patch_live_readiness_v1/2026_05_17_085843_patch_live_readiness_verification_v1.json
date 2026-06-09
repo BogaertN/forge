@@ -1,0 +1,16 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "verification_only": true
+  },
+  "created_at": "2026-05-17T08:58:43",
+  "eligible_for_live_apply": false,
+  "problem_count": 0,
+  "problems": [],
+  "readiness_path": "/home/nic/forge/memory/patch_live_readiness_v1/latest_patch_live_readiness_v1.json",
+  "readiness_sha256": "9426442bdee9c8308e14c767dc1a66ca3d3d4af57c6ce257e2cdf5c152042fbb",
+  "report_type": "PATCH_LIVE_READINESS_VERIFICATION_V1",
+  "schema_version": "patch_live_readiness_verification_v1_patch133",
+  "status": "PATCH_LIVE_READINESS_VERIFIED_NO_APPLY_AUTHORITY"
+}

@@ -1,0 +1,15 @@
+{
+  "correction_summary": "Patch 74 originally called undefined _patch_timestamp(). Patch 74.1 fixed it by using the existing _patch60_timestamp() helper.",
+  "hidden_chain_of_thought_stored": false,
+  "lesson": "Before packaging a patch, search for undefined helper calls and run syntax/smoke checks.",
+  "project_files_changed": false,
+  "receipt_id": "seed_patch74_timestamp_helper_correction",
+  "receipt_path": "/home/nic/forge/memory/llm_memory_v1/corrections/seed_patch74_timestamp_helper_correction.json",
+  "receipt_type": "LLM_MEMORY_SEEDED_CORRECTION_V1",
+  "schema_version": "llm_memory_v1_patch75",
+  "seed_id": "patch74_timestamp_helper_correction",
+  "session_id": "forge_2026_05_14_192941",
+  "source": "patch75_llm_memory_init",
+  "timestamp": "2026-05-14T19:30:17",
+  "user_approved_project_write": false
+}

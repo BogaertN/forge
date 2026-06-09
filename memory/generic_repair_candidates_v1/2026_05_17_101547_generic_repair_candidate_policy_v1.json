@@ -1,0 +1,27 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "writes_forge_memory_only": true
+  },
+  "created_at": "2026-05-17T10:15:47",
+  "next_commands": [
+    "generic-repair-candidate-build latest CONFIRM_BUILD_GENERIC_REPAIR_CANDIDATE",
+    "generic-repair-candidate-show latest",
+    "generic-repair-candidate-verify latest"
+  ],
+  "purpose": "Build a Forge-memory-only patch candidate/diff from the latest generic LLM repair proposal and current target file contents.",
+  "report_type": "GENERIC_REPAIR_CANDIDATE_POLICY_V1",
+  "rules": [
+    "No AI.Web/project file writes.",
+    "No patch apply authority.",
+    "Verify current target SHA against evidence when available.",
+    "Write candidate file, diff, and reports only under Forge memory.",
+    "Candidate compile may be tested only against the Forge-memory candidate copy.",
+    "Live repair still requires future sandbox, fresh snapshot, human approval, and apply gate."
+  ],
+  "schema_version": "generic_repair_candidate_policy_v1_patch136",
+  "status": "GENERIC_REPAIR_CANDIDATE_POLICY_READY"
+}

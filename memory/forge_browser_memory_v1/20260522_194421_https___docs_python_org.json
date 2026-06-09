@@ -1,0 +1,7 @@
+{
+  "url": "https://docs.python.org",
+  "title": "3.14.5 Documentation",
+  "fetched_at": "20260522_194421",
+  "text_preview": "3.14.5 Documentation @media only screen { table.full-width-table { width: 100%; } } .contentstable { display: grid; gap: 0 2em; grid-template-columns: 1fr 1fr; margin: 0 auto; max-width: 90%; } .contentstable ul { list-style: none; margin: 0; padding: 0; } .contentstable a { text-decoration: none; } .contentstable a:hover { text-decoration: underline; } .contentstable li.biglink { line-height: 150%; margin-bottom: 1em; } @media (max-width: 600px) { .contentstable { grid-template-columns: 1fr; } } Theme Auto Light Dark Download Download these documents Docs by version Python 3.16 (in developmen",
+  "text_length": 3481
+}

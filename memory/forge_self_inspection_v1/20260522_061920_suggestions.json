@@ -1,0 +1,127 @@
+{
+  "suggested_at": "20260522_061920",
+  "model": "qwen3:8b",
+  "elapsed": 11.083,
+  "gaps_used": [
+    [
+      "file_operations",
+      "17%",
+      [
+        "read files",
+        "write files",
+        "search files",
+        "list files",
+        "copy files",
+        "delete files"
+      ]
+    ],
+    [
+      "code_analysis",
+      "0%",
+      [
+        "analyze code",
+        "find functions",
+        "check imports",
+        "detect dependencies"
+      ]
+    ],
+    [
+      "document_handling",
+      "0%",
+      [
+        "read pdf",
+        "read docx",
+        "read markdown",
+        "extract text"
+      ]
+    ],
+    [
+      "search",
+      "0%",
+      [
+        "search web",
+        "search local",
+        "search memory",
+        "search audit"
+      ]
+    ],
+    [
+      "testing",
+      "0%",
+      [
+        "run tests",
+        "validate syntax",
+        "check output"
+      ]
+    ],
+    [
+      "memory_management",
+      "0%",
+      [
+        "read memory",
+        "write memory",
+        "search memory",
+        "export memory"
+      ]
+    ],
+    [
+      "agent_planning",
+      "0%",
+      [
+        "plan tasks",
+        "break down goals",
+        "sequence steps"
+      ]
+    ],
+    [
+      "external_tools",
+      "0%",
+      [
+        "discover tools",
+        "install tools",
+        "wrap tools"
+      ]
+    ],
+    [
+      "self_modification",
+      "0%",
+      [
+        "propose commands",
+        "install commands",
+        "implement commands"
+      ]
+    ],
+    [
+      "audit",
+      "0%",
+      [
+        "verify chain",
+        "repair audit",
+        "show audit"
+      ]
+    ]
+  ],
+  "suggestions": [
+    {
+      "command": "forge-read-pdf",
+      "description": "Reads and extracts text from PDF files."
+    },
+    {
+      "command": "forge-write-file",
+      "description": "Writes content to a specified file location."
+    },
+    {
+      "command": "forge-search-local",
+      "description": "Searches for files or content within the local system."
+    },
+    {
+      "command": "forge-run-tests",
+      "description": "Executes tests and validates code syntax and output."
+    },
+    {
+      "command": "forge-search-memory",
+      "description": "Retrieves information stored in the system memory."
+    }
+  ],
+  "raw_response": "COMMAND: forge-read-pdf  \nDESCRIPTION: Reads and extracts text from PDF files.  \n\nCOMMAND: forge-write-file  \nDESCRIPTION: Writes content to a specified file location.  \n\nCOMMAND: forge-search-local  \nDESCRIPTION: Searches for files or content within the local system.  \n\nCOMMAND: forge-run-tests  \nDESCRIPTION: Executes tests and validates code syntax and output.  \n\nCOMMAND: forge-search-memory  \nDESCRIPTION: Retrieves information stored in the system memory."
+}

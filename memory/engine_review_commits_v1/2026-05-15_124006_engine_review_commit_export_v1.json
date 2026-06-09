@@ -1,0 +1,45 @@
+{
+  "schema_version": "engine_review_commit_v1_patch100",
+  "report_type": "ENGINE_REVIEW_COMMIT_EXPORT_V1_PATCH100",
+  "created_at": "2026-05-15_124006",
+  "plans": [
+    {
+      "path": "/home/nic/forge/memory/engine_review_commits_v1/2026-05-15_123842_engine_review_commit_plan_v1.json",
+      "sha256": "aa5211c9c0280725e6bf919a06b0bcb1bd62bb31dd3fd8362d9b01c99924686f"
+    },
+    {
+      "path": "/home/nic/forge/memory/engine_review_commits_v1/2026-05-15_123936_engine_review_commit_plan_v1.json",
+      "sha256": "b2c3f0d089108cf34b0c28d44a822bd9dc1c5900e30a4d54bcc19c049c49be1a"
+    }
+  ],
+  "receipts": [
+    {
+      "path": "/home/nic/forge/memory/engine_review_commits_v1/2026-05-15_123936_engine_review_commit_receipt_v1.json",
+      "sha256": "d399e94658b46acdd5149331ce593d32f23f59bbcd24bba6e05fcfda0cf768fa"
+    }
+  ],
+  "counts": {
+    "plans": 2,
+    "receipts": 1
+  },
+  "authority": {
+    "patch": "100",
+    "mode": "CANONICAL_DECISION_COMMITTER_LEDGER_ONLY",
+    "writes": [
+      "/home/nic/forge/memory/code_library_v1/manifests/engine_review_ledger_v1.json",
+      "/home/nic/forge/memory/engine_review_commits_v1"
+    ],
+    "human_review_ledger_write_authority": false,
+    "canonical_decision_authority": false,
+    "final_lockfile_authority": false,
+    "engine_file_write_authority": false,
+    "project_file_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "shell_execution_authority": false,
+    "chroma_write_authority": false,
+    "ingestion_write_authority": false,
+    "quarantine_authority": false,
+    "delete_authority": false,
+    "rule": "Patch 100 may update the human review ledger only from Patch 99 queue decisions after stale-evidence re-verification. It does not create final canonical authority or modify engine files."
+  }
+}

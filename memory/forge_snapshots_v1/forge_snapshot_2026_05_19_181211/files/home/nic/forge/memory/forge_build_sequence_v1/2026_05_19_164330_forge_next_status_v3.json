@@ -1,0 +1,181 @@
+{
+  "active_patch": "Patch 144 \u2014 Roadmap-Grounded Build Sequencer",
+  "authority": {
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ledger_mutation": false,
+    "network_opened": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "server_started": false,
+    "shell_execution_authority": false
+  },
+  "blocked_items": [],
+  "build_sequence": [
+    {
+      "id": "S01",
+      "purpose": "Scoped file reads, patch lifecycle, rollback discipline, audit chain, and no silent writes.",
+      "status": "DONE",
+      "title": "Patch law, audit, and exact truth"
+    },
+    {
+      "id": "S02",
+      "purpose": "Document intake, source-gap reporting, dry-run ingestion, receipts, and context library protection.",
+      "status": "DONE",
+      "title": "Corpus and source authority foundations"
+    },
+    {
+      "id": "S03",
+      "purpose": "Code index, engine inventory, duplicate visibility, and symbolic role mapping.",
+      "status": "DONE",
+      "title": "Codebase index and symbolic runtime map"
+    },
+    {
+      "id": "S04",
+      "purpose": "Sandbox rehearsal, safe test inventory, canonical tests, and no arbitrary shell execution.",
+      "status": "DONE",
+      "title": "Sandbox and safe test harness"
+    },
+    {
+      "id": "S05",
+      "purpose": "Human review ledger, final lockfile, clean deferral of stack_linker_breather, and 54-engine canonical baseline.",
+      "status": "DONE",
+      "title": "Canonical engine authority"
+    },
+    {
+      "id": "S06",
+      "purpose": "Runtime relationship map, risk neighbors, patch impact map, and clean test issue count.",
+      "status": "DONE",
+      "title": "Relationship and impact intelligence"
+    },
+    {
+      "id": "S07",
+      "purpose": "Local status artifacts and dashboard gauges before any dashboard levers.",
+      "status": "DONE",
+      "title": "Status API and read-only dashboard"
+    },
+    {
+      "id": "S08",
+      "purpose": "Known modes and check-only command permission matrix before hard blocking.",
+      "status": "DONE",
+      "title": "Mode registry and permission matrix"
+    },
+    {
+      "id": "S09",
+      "purpose": "Full Forge roadmap restored after stack_linker_breather deferral.",
+      "status": "DONE",
+      "title": "Roadmap V2 realignment"
+    },
+    {
+      "id": "S10",
+      "purpose": "Make the full roadmap actionable as current, next, deferred, blocked, and later build phases.",
+      "status": "ACTIVE_READY",
+      "title": "Patch 144 \u2014 Roadmap-Grounded Build Sequencer"
+    },
+    {
+      "id": "S11",
+      "purpose": "Preserve deferred repair targets without letting them block the main build.",
+      "status": "NEXT",
+      "title": "Patch 145 \u2014 Deferred Engine Repair Queue"
+    },
+    {
+      "id": "S12",
+      "purpose": "Check whether the current phase is eligible to proceed based on lockfile, tests, audit, status API, dashboard, and deferred queues.",
+      "status": "QUEUED",
+      "title": "Patch 146 \u2014 Build Phase Gate Checker"
+    },
+    {
+      "id": "S13",
+      "purpose": "Expose the build sequence in the read-only dashboard as an operator panel.",
+      "status": "QUEUED",
+      "title": "Patch 147 \u2014 Dashboard Roadmap Panel"
+    },
+    {
+      "id": "S14",
+      "purpose": "Tighten binding between canonical engines and source-law / implementation / validation evidence.",
+      "status": "QUEUED",
+      "title": "Patch 148 \u2014 Source Authority Runtime Binder Hardening"
+    },
+    {
+      "id": "S15",
+      "purpose": "Let the local LLM draft patch plans while Forge verifies every target, source, hash, test, and rollback field.",
+      "status": "QUEUED",
+      "title": "Patch 149 \u2014 LLM Patch Proposal v2"
+    },
+    {
+      "id": "S16",
+      "purpose": "Single read-only go/no-go surface for source grounding, scope, snapshots, sandbox, tests, rollback, and human approval.",
+      "status": "QUEUED",
+      "title": "Patch 150 \u2014 Live Apply Eligibility Gate v2"
+    },
+    {
+      "id": "S17",
+      "purpose": "Project-state snapshots, shadow restore, diffs, replay, and multi-file recovery discipline.",
+      "status": "FUTURE",
+      "title": "Snapshot and forensic replay expansion"
+    },
+    {
+      "id": "S18",
+      "purpose": "Move from static gauges to a clearer control surface while keeping write actions gated.",
+      "status": "FUTURE",
+      "title": "Dashboard v2 / operator control panel"
+    },
+    {
+      "id": "S19",
+      "purpose": "Use Forge to build Gilligan, Athena, Neo, memory stack, ChristPing listener, drift arbitration, SPC, resurrection, plugin loader, and UI.",
+      "status": "FUTURE",
+      "title": "AI.Web runtime build through Forge"
+    },
+    {
+      "id": "S20",
+      "purpose": "Installer, recovery script, user guide, developer guide, audit guide, export tool, GitHub release, and offline restore package.",
+      "status": "FUTURE",
+      "title": "Freeze, release, and recovery package"
+    }
+  ],
+  "created_at": "2026-05-19T16:43:30",
+  "current_phase": "Patch 144 \u2014 Roadmap-Grounded Build Sequencer",
+  "deferred_items": [
+    {
+      "name": "stack_linker_breather",
+      "reason": "Real import/dependency mismatch; repair candidate preserved but canonical authority deferred for later Forge-internal repair."
+    },
+    {
+      "name": "excluded/deferred engine set",
+      "reason": "26 excluded total; 24 deferred; no delete/quarantine/promote action authorized."
+    }
+  ],
+  "next_commands": [
+    "forge-build-sequence-export",
+    "Install Patch 145 when ready"
+  ],
+  "next_patch": "Patch 145 \u2014 Deferred Engine Repair Queue",
+  "plain_english": "Forge now has a roadmap-grounded build sequence. Stuck repairs are tracked as deferred work instead of hijacking the whole roadmap.",
+  "recommended_next_patch": "Patch 145 \u2014 Deferred Engine Repair Queue",
+  "report_type": "FORGE_BUILD_SEQUENCE_V1",
+  "schema_version": "forge_build_sequence_v1_patch144",
+  "status": "FORGE_BUILD_SEQUENCE_READY",
+  "verified_state": {
+    "canonical_excluded": 26,
+    "canonical_included": 54,
+    "excluded_total": 26,
+    "expected_commands": 514,
+    "generic_revision_loop": "ARCHIVED_DEFERRED_TARGET",
+    "latest_test_fail": 0,
+    "latest_test_pass": 67,
+    "latest_test_status": "CANONICAL_TEST_RUN_COMPLETED_ALL_PASS",
+    "ledger_approved": 56,
+    "ledger_deferred": 24,
+    "ledger_pending": 0,
+    "mode_matrix_status": "FORGE_MODE_PERMISSION_MATRIX_READY",
+    "patch_impact_high_risk": 0,
+    "patch_impact_matches": 54,
+    "patch_impact_test_issues": 0,
+    "relationship_engines": 54,
+    "source_law_status": "not found in roadmap scan",
+    "stack_linker_breather": "DEFERRED_AND_EXCLUDED",
+    "tools": 438,
+    "trust_level": 5.0
+  }
+}

@@ -1,0 +1,4979 @@
+{
+  "report_type": "CODE_ENGINE_CANONICAL_PLAN_PATCH58_NON_DESTRUCTIVE",
+  "timestamp": "2026-05-12T17:37:37",
+  "read_only": true,
+  "implemented_destructive_action": false,
+  "warning": "PLAN ONLY. This command does not delete, move, rename, freeze, promote, or rewrite engine files.",
+  "engine_count": 425,
+  "duplicate_group_count": 80,
+  "canonical_plan": [
+    {
+      "engine_base": "protoforge",
+      "canonical_candidate_root": "aiweb/engines/protoforge_frozen_v1.03_os_ui_rfe_dae",
+      "canonical_candidate_name": "protoforge_frozen_v1.03_os_ui_rfe_dae",
+      "canonical_score": 97,
+      "variant_count": 17,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "protoforge_frozen_v1.03_os_ui_rfe_dae",
+          "root": "aiweb/engines/protoforge_frozen_v1.03_os_ui_rfe_dae",
+          "score": 97,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 2,
+          "symbol_count": 0
+        },
+        {
+          "engine_name": "protoforge_v1.04_db_enabled",
+          "root": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+          "score": 60,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 22,
+          "symbol_count": 103
+        },
+        {
+          "engine_name": "Protoforge_v2.01",
+          "root": "runtime_wrappers/Protoforge_v2.01",
+          "score": 60,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 34,
+          "symbol_count": 152
+        },
+        {
+          "engine_name": "protoforge_v1.04_db_enabled",
+          "root": "runtime_wrappers/protoforge_v1.04_db_enabled",
+          "score": 60,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 23,
+          "symbol_count": 97
+        },
+        {
+          "engine_name": "protoforge_frozen_v1.03_os_ui_rfe_dae",
+          "root": "engines/protoforge_frozen_v1.03_os_ui_rfe_dae",
+          "score": 57,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 2,
+          "symbol_count": 0
+        },
+        {
+          "engine_name": "protoforge_frozen_v1.04_db_enabled",
+          "root": "aiweb/runtime_wrappers/protoforge_frozen_v1.04_db_enabled",
+          "score": 40,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 22,
+          "symbol_count": 103
+        },
+        {
+          "engine_name": "protoforge_frozen_v1.05_db_enabled",
+          "root": "aiweb/runtime_wrappers/protoforge_frozen_v1.05_db_enabled",
+          "score": 40,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 22,
+          "symbol_count": 104
+        },
+        {
+          "engine_name": "protoforge_frozen_v1.06_db_enabled",
+          "root": "aiweb/runtime_wrappers/protoforge_frozen_v1.06_db_enabled",
+          "score": 40,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 22,
+          "symbol_count": 102
+        },
+        {
+          "engine_name": "protoforge_frozen_v1.04_db_enabled",
+          "root": "runtime_wrappers/protoforge_frozen_v1.04_db_enabled",
+          "score": 40,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 23,
+          "symbol_count": 103
+        },
+        {
+          "engine_name": "protoforge_frozen_v1.05_db_enabled",
+          "root": "runtime_wrappers/protoforge_frozen_v1.05_db_enabled",
+          "score": 40,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 23,
+          "symbol_count": 98
+        },
+        {
+          "engine_name": "protoforge_frozen_v1.06_db_enabled",
+          "root": "runtime_wrappers/protoforge_frozen_v1.06_db_enabled",
+          "score": 40,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 23,
+          "symbol_count": 96
+        },
+        {
+          "engine_name": "protoforge",
+          "root": "runtime_wrappers/protoforge",
+          "score": 36,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "protoforge",
+          "root": "aiweb/runtime_wrappers/protoforge",
+          "score": 35,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "protoforge_frozen_v1.03_os_ui_rfe_dae",
+          "root": "runtime_wrappers/protoforge_frozen_v1.03_os_ui_rfe_dae",
+          "score": 26,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 14,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "protoforge_frozen_v1.03_os_ui_rfe_dae",
+          "root": "aiweb/runtime_wrappers/protoforge_frozen_v1.03_os_ui_rfe_dae",
+          "score": 25,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "protoforge_frozen_v1.01_ui",
+          "root": "aiweb/runtime_wrappers/protoforge_frozen_v1.01_ui",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "protoforge_frozen_v1.01_ui",
+          "root": "runtime_wrappers/protoforge_frozen_v1.01_ui",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4
+        }
+      ]
+    },
+    {
+      "engine_base": "symbolic_capacitor_engine",
+      "canonical_candidate_root": "aiweb/engines/symbolic_capacitor_engine",
+      "canonical_candidate_name": "symbolic_capacitor_engine",
+      "canonical_score": 125,
+      "variant_count": 14,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "symbolic_capacitor_engine",
+          "root": "aiweb/engines/symbolic_capacitor_engine",
+          "score": 125,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine_frozen_v1-0.01",
+          "root": "aiweb/engines/symbolic_capacitor_engine_frozen_v1-0.01",
+          "score": 105,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine_frozen_v1",
+          "root": "aiweb/engines/symbolic_capacitor_engine_frozen_v1",
+          "score": 99,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine",
+          "root": "engines/symbolic_capacitor_engine",
+          "score": 85,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine",
+          "root": "projects/recursive_lmm_grok1/engines/symbolic_capacitor_engine",
+          "score": 85,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 16,
+          "symbol_count": 20
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/symbolic_capacitor_engine",
+          "score": 75,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine_frozen_v1-0.01",
+          "root": "engines/symbolic_capacitor_engine_frozen_v1-0.01",
+          "score": 65,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine_frozen_v1",
+          "root": "engines/symbolic_capacitor_engine_frozen_v1",
+          "score": 59,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine_frozen_v1",
+          "root": "simulations/phase_vs_linear_augmented/engines/symbolic_capacitor_engine_frozen_v1",
+          "score": 50,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine_frozen_v1",
+          "root": "aiweb/runtime_wrappers/protoforge_frozen_v1.05_db_enabled/engines/symbolic_capacitor_engine_frozen_v1",
+          "score": 49,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine_frozen_v1",
+          "root": "aiweb/runtime_wrappers/protoforge_frozen_v1.06_db_enabled/engines/symbolic_capacitor_engine_frozen_v1",
+          "score": 49,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine_frozen_v1",
+          "root": "runtime_wrappers/protoforge_frozen_v1.05_db_enabled/engines/symbolic_capacitor_engine_frozen_v1",
+          "score": 49,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine_frozen_v1",
+          "root": "runtime_wrappers/protoforge_frozen_v1.06_db_enabled/engines/symbolic_capacitor_engine_frozen_v1",
+          "score": 49,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine_frozen_v1",
+          "root": "simulations/phase_vs_linear_augmented_frozen_v1-0.01/engines/symbolic_capacitor_engine_frozen_v1",
+          "score": 49,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "tone_engine",
+      "canonical_candidate_root": "aiweb/engines/tone_engine",
+      "canonical_candidate_name": "tone_engine",
+      "canonical_score": 121,
+      "variant_count": 12,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "tone_engine",
+          "root": "aiweb/engines/tone_engine",
+          "score": 121,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 5
+        },
+        {
+          "engine_name": "tone_engine_frozen_v1",
+          "root": "aiweb/engines/tone_engine_frozen_v1",
+          "score": 107,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "tone_engine_frozen_v1-0.01",
+          "root": "aiweb/engines/tone_engine_frozen_v1-0.01",
+          "score": 101,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 5
+        },
+        {
+          "engine_name": "tone_engine_frozen_v1.1.01",
+          "root": "aiweb/engines/tone_engine_frozen_v1.1.01",
+          "score": 101,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 5
+        },
+        {
+          "engine_name": "tone_engine_frozen_v1.1.02",
+          "root": "aiweb/engines/tone_engine_frozen_v1.1.02",
+          "score": 101,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 5
+        },
+        {
+          "engine_name": "tone_engine",
+          "root": "engines/tone_engine",
+          "score": 81,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 5
+        },
+        {
+          "engine_name": "tone_engine",
+          "root": "projects/recursive_lmm_grok1/engines/tone_engine",
+          "score": 77,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "tone_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/tone_engine",
+          "score": 71,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 5
+        },
+        {
+          "engine_name": "tone_engine_frozen_v1",
+          "root": "engines/tone_engine_frozen_v1",
+          "score": 67,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "tone_engine_frozen_v1-0.01",
+          "root": "engines/tone_engine_frozen_v1-0.01",
+          "score": 61,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 5
+        },
+        {
+          "engine_name": "tone_engine_frozen_v1.1.01",
+          "root": "engines/tone_engine_frozen_v1.1.01",
+          "score": 61,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 5
+        },
+        {
+          "engine_name": "tone_engine_frozen_v1.1.02",
+          "root": "engines/tone_engine_frozen_v1.1.02",
+          "score": 61,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 5
+        }
+      ]
+    },
+    {
+      "engine_base": "drift_arbitration_engine",
+      "canonical_candidate_root": "aiweb/engines/drift_arbitration_engine",
+      "canonical_candidate_name": "drift_arbitration_engine",
+      "canonical_score": 122,
+      "variant_count": 11,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "drift_arbitration_engine",
+          "root": "aiweb/engines/drift_arbitration_engine",
+          "score": 122,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 17,
+          "symbol_count": 26
+        },
+        {
+          "engine_name": "drift_arbitration_engine_frozen_v1-0.02",
+          "root": "aiweb/engines/drift_arbitration_engine_frozen_v1-0.02",
+          "score": 117,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 17,
+          "symbol_count": 26
+        },
+        {
+          "engine_name": "drift_arbitration_engine_frozen_v1-0.01",
+          "root": "aiweb/engines/drift_arbitration_engine_frozen_v1-0.01",
+          "score": 108,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 17
+        },
+        {
+          "engine_name": "drift_arbitration_engine_frozen_v1",
+          "root": "aiweb/engines/drift_arbitration_engine_frozen_v1",
+          "score": 102,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "drift_arbitration_engine",
+          "root": "engines/drift_arbitration_engine",
+          "score": 82,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 17,
+          "symbol_count": 26
+        },
+        {
+          "engine_name": "drift_arbitration_engine_frozen_v1-0.01",
+          "root": "engines/drift_arbitration_engine_frozen_v1-0.01",
+          "score": 68,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 17
+        },
+        {
+          "engine_name": "drift_arbitration_engine_frozen_v1",
+          "root": "engines/drift_arbitration_engine_frozen_v1",
+          "score": 62,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "drift_arbitration_engine_frozen_v1",
+          "root": "projects/recursive_lmm_grok1/engines/drift_arbitration_engine_frozen_v1",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 12,
+          "symbol_count": 18
+        },
+        {
+          "engine_name": "drift_arbitration_engine_frozen_v1",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/drift_arbitration_engine_frozen_v1",
+          "score": 52,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "drift_arbitration_engine_frozen_v1",
+          "root": "simulations/phase_vs_linear_augmented/engines/drift_arbitration_engine_frozen_v1",
+          "score": 52,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "drift_arbitration_engine_frozen_v1",
+          "root": "simulations/phase_vs_linear_augmented_frozen_v1-0.01/engines/drift_arbitration_engine_frozen_v1",
+          "score": 52,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 9
+        }
+      ]
+    },
+    {
+      "engine_base": "christping_listener",
+      "canonical_candidate_root": "aiweb/engines/christping_listener",
+      "canonical_candidate_name": "christping_listener",
+      "canonical_score": 120,
+      "variant_count": 10,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "christping_listener",
+          "root": "aiweb/engines/christping_listener",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7
+        },
+        {
+          "engine_name": "christping_listener_frozen_v1",
+          "root": "aiweb/engines/christping_listener_frozen_v1",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7
+        },
+        {
+          "engine_name": "christping_listener",
+          "root": "engines/christping_listener",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7
+        },
+        {
+          "engine_name": "christping_listener",
+          "root": "projects/recursive_lmm_grok1/engines/christping_listener",
+          "score": 75,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 14
+        },
+        {
+          "engine_name": "christping_listener",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/christping_listener",
+          "score": 70,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7
+        },
+        {
+          "engine_name": "christping_listener_frozen_v1",
+          "root": "engines/christping_listener_frozen_v1",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7
+        },
+        {
+          "engine_name": "christping_listener_frozen_v1",
+          "root": "simulations/phase_vs_linear_augmented/engines/christping_listener_frozen_v1",
+          "score": 51,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 7
+        },
+        {
+          "engine_name": "christping_listener_frozen_v1",
+          "root": "aiweb/runtime_wrappers/protoforge_frozen_v1.06_db_enabled/engines/christping_listener_frozen_v1",
+          "score": 50,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7
+        },
+        {
+          "engine_name": "christping_listener_frozen_v1",
+          "root": "runtime_wrappers/protoforge_frozen_v1.06_db_enabled/engines/christping_listener_frozen_v1",
+          "score": 50,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7
+        },
+        {
+          "engine_name": "christping_listener_frozen_v1",
+          "root": "simulations/phase_vs_linear_augmented_frozen_v1-0.01/engines/christping_listener_frozen_v1",
+          "score": 50,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7
+        }
+      ]
+    },
+    {
+      "engine_base": "cold_archive_engine",
+      "canonical_candidate_root": "aiweb/engines/cold_archive_engine_frozen_v1",
+      "canonical_candidate_name": "cold_archive_engine_frozen_v1",
+      "canonical_score": 79,
+      "variant_count": 10,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "cold_archive_engine_frozen_v1",
+          "root": "aiweb/engines/cold_archive_engine_frozen_v1",
+          "score": 79,
+          "tags": [
+            "frozen",
+            "backup_or_archive"
+          ],
+          "file_count": 7,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "cold_archive_engine_frozen_v1.01",
+          "root": "aiweb/engines/cold_archive_engine_frozen_v1.01",
+          "score": 79,
+          "tags": [
+            "frozen",
+            "backup_or_archive"
+          ],
+          "file_count": 7,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "cold_archive_engine_frozen_v1.1.01",
+          "root": "aiweb/engines/cold_archive_engine_frozen_v1.1.01",
+          "score": 75,
+          "tags": [
+            "frozen",
+            "backup_or_archive"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "cold_archive_engine",
+          "root": "aiweb/engines/cold_archive_engine",
+          "score": 70,
+          "tags": [
+            "backup_or_archive"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "cold_archive_engine_frozen_v1",
+          "root": "engines/cold_archive_engine_frozen_v1",
+          "score": 39,
+          "tags": [
+            "frozen",
+            "backup_or_archive"
+          ],
+          "file_count": 7,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "cold_archive_engine_frozen_v1.01",
+          "root": "engines/cold_archive_engine_frozen_v1.01",
+          "score": 39,
+          "tags": [
+            "frozen",
+            "backup_or_archive"
+          ],
+          "file_count": 7,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "cold_archive_engine_frozen_v1.1.01",
+          "root": "engines/cold_archive_engine_frozen_v1.1.01",
+          "score": 35,
+          "tags": [
+            "frozen",
+            "backup_or_archive"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "cold_archive_engine",
+          "root": "engines/cold_archive_engine",
+          "score": 30,
+          "tags": [
+            "backup_or_archive"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "cold_archive_engine_frozen_v1.1.01",
+          "root": "simulations/phase_vs_linear_augmented/engines/cold_archive_engine_frozen_v1.1.01",
+          "score": 25,
+          "tags": [
+            "frozen",
+            "backup_or_archive"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "cold_archive_engine",
+          "root": "projects/recursive_lmm_grok1/engines/cold_archive_engine",
+          "score": 20,
+          "tags": [
+            "backup_or_archive"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "control_panel_ui_engine",
+      "canonical_candidate_root": "aiweb/engines/control_panel_ui_engine_v1.02",
+      "canonical_candidate_name": "control_panel_ui_engine_v1.02",
+      "canonical_score": 134,
+      "variant_count": 10,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "control_panel_ui_engine_v1.02",
+          "root": "aiweb/engines/control_panel_ui_engine_v1.02",
+          "score": 134,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 88
+        },
+        {
+          "engine_name": "control_panel_ui_engine",
+          "root": "aiweb/engines/control_panel_ui_engine",
+          "score": 123,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 1
+        },
+        {
+          "engine_name": "control_panel_ui_engine_frozen_v1.02",
+          "root": "aiweb/engines/control_panel_ui_engine_frozen_v1.02",
+          "score": 114,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 90
+        },
+        {
+          "engine_name": "control_panel_ui_engine_frozen_v1.01",
+          "root": "aiweb/engines/control_panel_ui_engine_frozen_v1.01",
+          "score": 103,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 2
+        },
+        {
+          "engine_name": "control_panel_ui_engine_v1.02",
+          "root": "engines/control_panel_ui_engine_v1.02",
+          "score": 94,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 88
+        },
+        {
+          "engine_name": "control_panel_ui_engine",
+          "root": "engines/control_panel_ui_engine",
+          "score": 83,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 1
+        },
+        {
+          "engine_name": "control_panel_ui_engine_frozen_v1.02",
+          "root": "engines/control_panel_ui_engine_frozen_v1.02",
+          "score": 74,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 90
+        },
+        {
+          "engine_name": "control_panel_ui_engine_frozen_v1.02",
+          "root": "projects/recursive_lmm_grok1/engines/control_panel_ui_engine_frozen_v1.02",
+          "score": 73,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 18,
+          "symbol_count": 180
+        },
+        {
+          "engine_name": "control_panel_ui_engine_frozen_v1.02",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/control_panel_ui_engine_frozen_v1.02",
+          "score": 64,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 90
+        },
+        {
+          "engine_name": "control_panel_ui_engine_frozen_v1.01",
+          "root": "engines/control_panel_ui_engine_frozen_v1.01",
+          "score": 63,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 2
+        }
+      ]
+    },
+    {
+      "engine_base": "neo_engine",
+      "canonical_candidate_root": "aiweb/engines/neo_engine",
+      "canonical_candidate_name": "neo_engine",
+      "canonical_score": 120,
+      "variant_count": 10,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "neo_engine",
+          "root": "aiweb/engines/neo_engine",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "neo_engine_frozen_v1",
+          "root": "aiweb/engines/neo_engine_frozen_v1",
+          "score": 106,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "neo_engine_frozen_v1.1.01",
+          "root": "aiweb/engines/neo_engine_frozen_v1.1.01",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "neo_engine_frozen_v1.1.02",
+          "root": "aiweb/engines/neo_engine_frozen_v1.1.02",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "neo_engine",
+          "root": "engines/neo_engine",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "neo_engine",
+          "root": "projects/recursive_lmm_grok1/engines/neo_engine",
+          "score": 76,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "neo_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/neo_engine",
+          "score": 70,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "neo_engine_frozen_v1",
+          "root": "engines/neo_engine_frozen_v1",
+          "score": 66,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "neo_engine_frozen_v1.1.01",
+          "root": "engines/neo_engine_frozen_v1.1.01",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "neo_engine_frozen_v1.1.02",
+          "root": "engines/neo_engine_frozen_v1.1.02",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4
+        }
+      ]
+    },
+    {
+      "engine_base": "symbolic_feedback_loop_engine",
+      "canonical_candidate_root": "aiweb/engines/symbolic_feedback_loop_engine",
+      "canonical_candidate_name": "symbolic_feedback_loop_engine",
+      "canonical_score": 120,
+      "variant_count": 10,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "symbolic_feedback_loop_engine",
+          "root": "aiweb/engines/symbolic_feedback_loop_engine",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "symbolic_feedback_loop_engine_frozen_v1",
+          "root": "aiweb/engines/symbolic_feedback_loop_engine_frozen_v1",
+          "score": 103,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "symbolic_feedback_loop_engine_frozen_v1.01",
+          "root": "aiweb/engines/symbolic_feedback_loop_engine_frozen_v1.01",
+          "score": 103,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "symbolic_feedback_loop_engine",
+          "root": "engines/symbolic_feedback_loop_engine",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "symbolic_feedback_loop_engine",
+          "root": "projects/recursive_lmm_grok1/engines/symbolic_feedback_loop_engine",
+          "score": 76,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "symbolic_feedback_loop_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/symbolic_feedback_loop_engine",
+          "score": 70,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "symbolic_feedback_loop_engine_frozen_v1",
+          "root": "engines/symbolic_feedback_loop_engine_frozen_v1",
+          "score": 63,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "symbolic_feedback_loop_engine_frozen_v1.01",
+          "root": "engines/symbolic_feedback_loop_engine_frozen_v1.01",
+          "score": 63,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "symbolic_feedback_loop_engine_frozen_v1",
+          "root": "simulations/phase_vs_linear_augmented/engines/symbolic_feedback_loop_engine_frozen_v1",
+          "score": 54,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 7
+        },
+        {
+          "engine_name": "symbolic_feedback_loop_engine_frozen_v1",
+          "root": "simulations/phase_vs_linear_augmented_frozen_v1-0.01/engines/symbolic_feedback_loop_engine_frozen_v1",
+          "score": 53,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 8
+        }
+      ]
+    },
+    {
+      "engine_base": "dream_state_engine",
+      "canonical_candidate_root": "aiweb/engines/dream_state_engine",
+      "canonical_candidate_name": "dream_state_engine",
+      "canonical_score": 119,
+      "variant_count": 8,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "dream_state_engine",
+          "root": "aiweb/engines/dream_state_engine",
+          "score": 119,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "dream_state_engine_frozen_v1",
+          "root": "aiweb/engines/dream_state_engine_frozen_v1",
+          "score": 99,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "dream_state_engine_frozen_v1.1.01",
+          "root": "aiweb/engines/dream_state_engine_frozen_v1.1.01",
+          "score": 99,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "dream_state_engine",
+          "root": "engines/dream_state_engine",
+          "score": 79,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "dream_state_engine",
+          "root": "projects/recursive_lmm_grok1/engines/dream_state_engine",
+          "score": 74,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "dream_state_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/dream_state_engine",
+          "score": 69,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "dream_state_engine_frozen_v1",
+          "root": "engines/dream_state_engine_frozen_v1",
+          "score": 59,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "dream_state_engine_frozen_v1.1.01",
+          "root": "engines/dream_state_engine_frozen_v1.1.01",
+          "score": 59,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "loop_resurrection_engine",
+      "canonical_candidate_root": "aiweb/engines/loop_resurrection_engine",
+      "canonical_candidate_name": "loop_resurrection_engine",
+      "canonical_score": 120,
+      "variant_count": 8,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "loop_resurrection_engine",
+          "root": "aiweb/engines/loop_resurrection_engine",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "loop_resurrection_engine_frozen_v1",
+          "root": "aiweb/engines/loop_resurrection_engine_frozen_v1",
+          "score": 104,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "loop_resurrection_engine_frozen_v1.01",
+          "root": "aiweb/engines/loop_resurrection_engine_frozen_v1.01",
+          "score": 104,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "loop_resurrection_engine",
+          "root": "engines/loop_resurrection_engine",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "loop_resurrection_engine",
+          "root": "projects/recursive_lmm_grok1/engines/loop_resurrection_engine",
+          "score": 70,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "loop_resurrection_engine_frozen_v1",
+          "root": "engines/loop_resurrection_engine_frozen_v1",
+          "score": 64,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "loop_resurrection_engine_frozen_v1.01",
+          "root": "engines/loop_resurrection_engine_frozen_v1.01",
+          "score": 64,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "loop_resurrection_engine_frozen_v1",
+          "root": "simulations/phase_vs_linear_augmented/engines/loop_resurrection_engine_frozen_v1",
+          "score": 54,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 11
+        }
+      ]
+    },
+    {
+      "engine_base": "recursive_field_engine",
+      "canonical_candidate_root": "aiweb/engines/recursive_field_engine",
+      "canonical_candidate_name": "recursive_field_engine",
+      "canonical_score": 132,
+      "variant_count": 8,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "recursive_field_engine",
+          "root": "aiweb/engines/recursive_field_engine",
+          "score": 132,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 23
+        },
+        {
+          "engine_name": "recursive_field_engine_frozen_v1-0.01",
+          "root": "aiweb/engines/recursive_field_engine_frozen_v1-0.01",
+          "score": 112,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 23
+        },
+        {
+          "engine_name": "recursive_field_engine_frozen_v1",
+          "root": "aiweb/engines/recursive_field_engine_frozen_v1",
+          "score": 104,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "recursive_field_engine",
+          "root": "engines/recursive_field_engine",
+          "score": 92,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 23
+        },
+        {
+          "engine_name": "recursive_field_engine",
+          "root": "projects/recursive_lmm_grok1/engines/recursive_field_engine",
+          "score": 82,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 23
+        },
+        {
+          "engine_name": "recursive_field_engine_frozen_v1-0.01",
+          "root": "engines/recursive_field_engine_frozen_v1-0.01",
+          "score": 72,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 23
+        },
+        {
+          "engine_name": "recursive_field_engine",
+          "root": "simulations/phase_vs_linear_augmented/engines/recursive_field_engine",
+          "score": 66,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 1,
+          "symbol_count": 0
+        },
+        {
+          "engine_name": "recursive_field_engine_frozen_v1",
+          "root": "engines/recursive_field_engine_frozen_v1",
+          "score": 64,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 11
+        }
+      ]
+    },
+    {
+      "engine_base": "resonance_charge_meter",
+      "canonical_candidate_root": "aiweb/engines/resonance_charge_meter",
+      "canonical_candidate_name": "resonance_charge_meter",
+      "canonical_score": 120,
+      "variant_count": 8,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "resonance_charge_meter",
+          "root": "aiweb/engines/resonance_charge_meter",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "resonance_charge_meter_frozen_v1",
+          "root": "aiweb/engines/resonance_charge_meter_frozen_v1",
+          "score": 104,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "resonance_charge_meter_frozen_v1.01",
+          "root": "aiweb/engines/resonance_charge_meter_frozen_v1.01",
+          "score": 104,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "resonance_charge_meter",
+          "root": "engines/resonance_charge_meter",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "resonance_charge_meter",
+          "root": "projects/recursive_lmm_grok1/engines/resonance_charge_meter",
+          "score": 76,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "resonance_charge_meter",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/resonance_charge_meter",
+          "score": 70,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "resonance_charge_meter_frozen_v1",
+          "root": "engines/resonance_charge_meter_frozen_v1",
+          "score": 64,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "resonance_charge_meter_frozen_v1.01",
+          "root": "engines/resonance_charge_meter_frozen_v1.01",
+          "score": 64,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 11
+        }
+      ]
+    },
+    {
+      "engine_base": "memory_stack_engine_breathing",
+      "canonical_candidate_root": "aiweb/engines/memory_stack_engine_breathing_v1",
+      "canonical_candidate_name": "memory_stack_engine_breathing_v1",
+      "canonical_score": 126,
+      "variant_count": 7,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "memory_stack_engine_breathing_v1",
+          "root": "aiweb/engines/memory_stack_engine_breathing_v1",
+          "score": 126,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 13
+        },
+        {
+          "engine_name": "memory_stack_engine_breathing_v1_frozen_v1-0.01",
+          "root": "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.01",
+          "score": 106,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 13
+        },
+        {
+          "engine_name": "memory_stack_engine_breathing_v1_frozen_v1-0.02",
+          "root": "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.02",
+          "score": 106,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 13
+        },
+        {
+          "engine_name": "memory_stack_engine_breathing_v1",
+          "root": "engines/memory_stack_engine_breathing_v1",
+          "score": 86,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 13
+        },
+        {
+          "engine_name": "memory_stack_engine_breathing_v1_frozen_v1-0.01",
+          "root": "engines/memory_stack_engine_breathing_v1_frozen_v1-0.01",
+          "score": 66,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 13
+        },
+        {
+          "engine_name": "memory_stack_engine_breathing_v1_frozen_v1-0.02",
+          "root": "engines/memory_stack_engine_breathing_v1_frozen_v1-0.02",
+          "score": 66,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 13
+        },
+        {
+          "engine_name": "memory_stack_engine_breathing_v1_frozen_v1-0.01",
+          "root": "simulations/phase_vs_linear_augmented/engines/memory_stack_engine_breathing_v1_frozen_v1-0.01",
+          "score": 57,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 14
+        }
+      ]
+    },
+    {
+      "engine_base": "agent_reflection_engine",
+      "canonical_candidate_root": "aiweb/engines/agent_reflection_engine",
+      "canonical_candidate_name": "agent_reflection_engine",
+      "canonical_score": 119,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "agent_reflection_engine",
+          "root": "aiweb/engines/agent_reflection_engine",
+          "score": 119,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "agent_reflection_engine_frozen_v1",
+          "root": "aiweb/engines/agent_reflection_engine_frozen_v1",
+          "score": 99,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "agent_reflection_engine",
+          "root": "engines/agent_reflection_engine",
+          "score": 79,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "agent_reflection_engine",
+          "root": "projects/recursive_lmm_grok1/engines/agent_reflection_engine",
+          "score": 74,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "agent_reflection_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/agent_reflection_engine",
+          "score": 69,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "agent_reflection_engine_frozen_v1",
+          "root": "engines/agent_reflection_engine_frozen_v1",
+          "score": 59,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "aiweb_os_engine",
+      "canonical_candidate_root": "aiweb/engines/aiweb_os_engine",
+      "canonical_candidate_name": "aiweb_os_engine",
+      "canonical_score": 122,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "aiweb_os_engine",
+          "root": "aiweb/engines/aiweb_os_engine",
+          "score": 122,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 7
+        },
+        {
+          "engine_name": "aiweb_os_engine_frozen_v1",
+          "root": "aiweb/engines/aiweb_os_engine_frozen_v1",
+          "score": 103,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 7
+        },
+        {
+          "engine_name": "aiweb_os_engine",
+          "root": "engines/aiweb_os_engine",
+          "score": 82,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 7
+        },
+        {
+          "engine_name": "aiweb_os_engine_frozen_v1",
+          "root": "engines/aiweb_os_engine_frozen_v1",
+          "score": 63,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 7
+        },
+        {
+          "engine_name": "aiweb_os_engine_frozen_v1",
+          "root": "projects/recursive_lmm_grok1/engines/aiweb_os_engine_frozen_v1",
+          "score": 61,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 14,
+          "symbol_count": 14
+        },
+        {
+          "engine_name": "aiweb_os_engine_frozen_v1",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/aiweb_os_engine_frozen_v1",
+          "score": 53,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 7
+        }
+      ]
+    },
+    {
+      "engine_base": "athena_engine",
+      "canonical_candidate_root": "aiweb/engines/athena_engine",
+      "canonical_candidate_name": "athena_engine",
+      "canonical_score": 120,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "athena_engine",
+          "root": "aiweb/engines/athena_engine",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "athena_engine_frozen_v1",
+          "root": "aiweb/engines/athena_engine_frozen_v1",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "athena_engine",
+          "root": "engines/athena_engine",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "athena_engine",
+          "root": "projects/recursive_lmm_grok1/engines/athena_engine",
+          "score": 76,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "athena_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/athena_engine",
+          "score": 70,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "athena_engine_frozen_v1",
+          "root": "engines/athena_engine_frozen_v1",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "compute_contribution_engine",
+      "canonical_candidate_root": "aiweb/engines/compute_contribution_engine",
+      "canonical_candidate_name": "compute_contribution_engine",
+      "canonical_score": 119,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "compute_contribution_engine",
+          "root": "aiweb/engines/compute_contribution_engine",
+          "score": 119,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "compute_contribution_engine_frozen_v1",
+          "root": "aiweb/engines/compute_contribution_engine_frozen_v1",
+          "score": 99,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "compute_contribution_engine",
+          "root": "engines/compute_contribution_engine",
+          "score": 79,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "compute_contribution_engine",
+          "root": "projects/recursive_lmm_grok1/engines/compute_contribution_engine",
+          "score": 74,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "compute_contribution_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/compute_contribution_engine",
+          "score": 69,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "compute_contribution_engine_frozen_v1",
+          "root": "engines/compute_contribution_engine_frozen_v1",
+          "score": 59,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "contribution_dashboard_engine",
+      "canonical_candidate_root": "aiweb/engines/contribution_dashboard_engine",
+      "canonical_candidate_name": "contribution_dashboard_engine",
+      "canonical_score": 120,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "contribution_dashboard_engine",
+          "root": "aiweb/engines/contribution_dashboard_engine",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "contribution_dashboard_engine_frozen_v1",
+          "root": "aiweb/engines/contribution_dashboard_engine_frozen_v1",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "contribution_dashboard_engine",
+          "root": "engines/contribution_dashboard_engine",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "contribution_dashboard_engine",
+          "root": "projects/recursive_lmm_grok1/engines/contribution_dashboard_engine",
+          "score": 76,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "contribution_dashboard_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/contribution_dashboard_engine",
+          "score": 70,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "contribution_dashboard_engine_frozen_v1",
+          "root": "engines/contribution_dashboard_engine_frozen_v1",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "document_output_formatter",
+      "canonical_candidate_root": "aiweb/engines/document_output_formatter",
+      "canonical_candidate_name": "document_output_formatter",
+      "canonical_score": 120,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "document_output_formatter",
+          "root": "aiweb/engines/document_output_formatter",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "document_output_formatter_frozen_v1",
+          "root": "aiweb/engines/document_output_formatter_frozen_v1",
+          "score": 106,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "document_output_formatter",
+          "root": "engines/document_output_formatter",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "document_output_formatter",
+          "root": "projects/recursive_lmm_grok1/engines/document_output_formatter",
+          "score": 76,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "document_output_formatter",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/document_output_formatter",
+          "score": 70,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "document_output_formatter_frozen_v1",
+          "root": "engines/document_output_formatter_frozen_v1",
+          "score": 66,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6
+        }
+      ]
+    },
+    {
+      "engine_base": "failsafe_manager",
+      "canonical_candidate_root": "aiweb/engines/failsafe_manager",
+      "canonical_candidate_name": "failsafe_manager",
+      "canonical_score": 120,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "failsafe_manager",
+          "root": "aiweb/engines/failsafe_manager",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "failsafe_manager_frozen_v1",
+          "root": "aiweb/engines/failsafe_manager_frozen_v1",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "failsafe_manager",
+          "root": "engines/failsafe_manager",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "failsafe_manager",
+          "root": "projects/recursive_lmm_grok1/engines/failsafe_manager",
+          "score": 76,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "failsafe_manager",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/failsafe_manager",
+          "score": 70,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "failsafe_manager_frozen_v1",
+          "root": "engines/failsafe_manager_frozen_v1",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "fluid_memory_engine",
+      "canonical_candidate_root": "aiweb/engines/fluid_memory_engine",
+      "canonical_candidate_name": "fluid_memory_engine",
+      "canonical_score": 119,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "fluid_memory_engine",
+          "root": "aiweb/engines/fluid_memory_engine",
+          "score": 119,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "fluid_memory_engine_frozen_v1",
+          "root": "aiweb/engines/fluid_memory_engine_frozen_v1",
+          "score": 99,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "fluid_memory_engine",
+          "root": "engines/fluid_memory_engine",
+          "score": 79,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "fluid_memory_engine_frozen_v1",
+          "root": "engines/fluid_memory_engine_frozen_v1",
+          "score": 59,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "fluid_memory_engine_frozen_v1",
+          "root": "projects/recursive_lmm_grok1/engines/fluid_memory_engine_frozen_v1",
+          "score": 54,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "fluid_memory_engine_frozen_v1",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/fluid_memory_engine_frozen_v1",
+          "score": 49,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "goal_injection_engine",
+      "canonical_candidate_root": "aiweb/engines/goal_injection_engine",
+      "canonical_candidate_name": "goal_injection_engine",
+      "canonical_score": 119,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "goal_injection_engine",
+          "root": "aiweb/engines/goal_injection_engine",
+          "score": 119,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "goal_injection_engine_frozen_v1",
+          "root": "aiweb/engines/goal_injection_engine_frozen_v1",
+          "score": 99,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "goal_injection_engine",
+          "root": "engines/goal_injection_engine",
+          "score": 79,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "goal_injection_engine",
+          "root": "projects/recursive_lmm_grok1/engines/goal_injection_engine",
+          "score": 74,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "goal_injection_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/goal_injection_engine",
+          "score": 69,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "goal_injection_engine_frozen_v1",
+          "root": "engines/goal_injection_engine_frozen_v1",
+          "score": 59,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "memory_stack_engine",
+      "canonical_candidate_root": "aiweb/engines/memory_stack_engine",
+      "canonical_candidate_name": "memory_stack_engine",
+      "canonical_score": 126,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "memory_stack_engine",
+          "root": "aiweb/engines/memory_stack_engine",
+          "score": 126,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 19,
+          "symbol_count": 38
+        },
+        {
+          "engine_name": "memory_stack_engine_frozen_v1",
+          "root": "aiweb/engines/memory_stack_engine_frozen_v1",
+          "score": 103,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "memory_stack_engine",
+          "root": "engines/memory_stack_engine",
+          "score": 86,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 19,
+          "symbol_count": 38
+        },
+        {
+          "engine_name": "memory_stack_engine_frozen_v1",
+          "root": "engines/memory_stack_engine_frozen_v1",
+          "score": 63,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "memory_stack_engine_frozen_v1",
+          "root": "projects/recursive_lmm_grok1/engines/memory_stack_engine_frozen_v1",
+          "score": 62,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 14,
+          "symbol_count": 16
+        },
+        {
+          "engine_name": "memory_stack_engine_frozen_v1",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/memory_stack_engine_frozen_v1",
+          "score": 53,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 8
+        }
+      ]
+    },
+    {
+      "engine_base": "naming_engine",
+      "canonical_candidate_root": "aiweb/engines/naming_engine",
+      "canonical_candidate_name": "naming_engine",
+      "canonical_score": 119,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "naming_engine",
+          "root": "aiweb/engines/naming_engine",
+          "score": 119,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "naming_engine_frozen_v1",
+          "root": "aiweb/engines/naming_engine_frozen_v1",
+          "score": 99,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "naming_engine",
+          "root": "engines/naming_engine",
+          "score": 79,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "naming_engine",
+          "root": "projects/recursive_lmm_grok1/engines/naming_engine",
+          "score": 74,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "naming_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/naming_engine",
+          "score": 69,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "naming_engine_frozen_v1",
+          "root": "engines/naming_engine_frozen_v1",
+          "score": 59,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "peer_communication_engine",
+      "canonical_candidate_root": "aiweb/engines/peer_communication_engine",
+      "canonical_candidate_name": "peer_communication_engine",
+      "canonical_score": 119,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "peer_communication_engine",
+          "root": "aiweb/engines/peer_communication_engine",
+          "score": 119,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "peer_communication_engine_frozen_v1",
+          "root": "aiweb/engines/peer_communication_engine_frozen_v1",
+          "score": 99,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "peer_communication_engine",
+          "root": "engines/peer_communication_engine",
+          "score": 79,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "peer_communication_engine",
+          "root": "projects/recursive_lmm_grok1/engines/peer_communication_engine",
+          "score": 74,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "peer_communication_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/peer_communication_engine",
+          "score": 69,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "peer_communication_engine_frozen_v1",
+          "root": "engines/peer_communication_engine_frozen_v1",
+          "score": 59,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "plugin_engine",
+      "canonical_candidate_root": "aiweb/engines/plugin_engine",
+      "canonical_candidate_name": "plugin_engine",
+      "canonical_score": 122,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "plugin_engine",
+          "root": "aiweb/engines/plugin_engine",
+          "score": 122,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 5
+        },
+        {
+          "engine_name": "plugin_engine_frozen_v1",
+          "root": "aiweb/engines/plugin_engine_frozen_v1",
+          "score": 103,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 7
+        },
+        {
+          "engine_name": "plugin_engine",
+          "root": "engines/plugin_engine",
+          "score": 82,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 5
+        },
+        {
+          "engine_name": "plugin_engine_frozen_v1",
+          "root": "engines/plugin_engine_frozen_v1",
+          "score": 63,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 7
+        },
+        {
+          "engine_name": "plugin_engine_frozen_v1",
+          "root": "projects/recursive_lmm_grok1/engines/plugin_engine_frozen_v1",
+          "score": 61,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 14,
+          "symbol_count": 14
+        },
+        {
+          "engine_name": "plugin_engine_frozen_v1",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/plugin_engine_frozen_v1",
+          "score": 53,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 7
+        }
+      ]
+    },
+    {
+      "engine_base": "recursive_agent_kernel",
+      "canonical_candidate_root": "aiweb/engines/recursive_agent_kernel",
+      "canonical_candidate_name": "recursive_agent_kernel",
+      "canonical_score": 120,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "recursive_agent_kernel",
+          "root": "aiweb/engines/recursive_agent_kernel",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "recursive_agent_kernel_frozen_v1",
+          "root": "aiweb/engines/recursive_agent_kernel_frozen_v1",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "recursive_agent_kernel",
+          "root": "engines/recursive_agent_kernel",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "recursive_agent_kernel",
+          "root": "projects/recursive_lmm_grok1/engines/recursive_agent_kernel",
+          "score": 76,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "recursive_agent_kernel",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/recursive_agent_kernel",
+          "score": 70,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "recursive_agent_kernel_frozen_v1",
+          "root": "engines/recursive_agent_kernel_frozen_v1",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "resonance_visualizer_engine",
+      "canonical_candidate_root": "aiweb/engines/resonance_visualizer_engine",
+      "canonical_candidate_name": "resonance_visualizer_engine",
+      "canonical_score": 120,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "resonance_visualizer_engine",
+          "root": "aiweb/engines/resonance_visualizer_engine",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "resonance_visualizer_engine_frozen_v1",
+          "root": "aiweb/engines/resonance_visualizer_engine_frozen_v1",
+          "score": 106,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "resonance_visualizer_engine",
+          "root": "engines/resonance_visualizer_engine",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "resonance_visualizer_engine",
+          "root": "projects/recursive_lmm_grok1/engines/resonance_visualizer_engine",
+          "score": 76,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "resonance_visualizer_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/resonance_visualizer_engine",
+          "score": 70,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "resonance_visualizer_engine_frozen_v1",
+          "root": "engines/resonance_visualizer_engine_frozen_v1",
+          "score": 66,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6
+        }
+      ]
+    },
+    {
+      "engine_base": "seed_manager",
+      "canonical_candidate_root": "aiweb/engines/seed_manager",
+      "canonical_candidate_name": "seed_manager",
+      "canonical_score": 120,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "seed_manager",
+          "root": "aiweb/engines/seed_manager",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "seed_manager_frozen_v1",
+          "root": "aiweb/engines/seed_manager_frozen_v1",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "seed_manager",
+          "root": "engines/seed_manager",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "seed_manager",
+          "root": "projects/recursive_lmm_grok1/engines/seed_manager",
+          "score": 76,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "seed_manager",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/seed_manager",
+          "score": 70,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "seed_manager_frozen_v1",
+          "root": "engines/seed_manager_frozen_v1",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "symbolic_policy_engine",
+      "canonical_candidate_root": "aiweb/engines/symbolic_policy_engine",
+      "canonical_candidate_name": "symbolic_policy_engine",
+      "canonical_score": 120,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "symbolic_policy_engine",
+          "root": "aiweb/engines/symbolic_policy_engine",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "symbolic_policy_engine_frozen_v1",
+          "root": "aiweb/engines/symbolic_policy_engine_frozen_v1",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "symbolic_policy_engine",
+          "root": "engines/symbolic_policy_engine",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "symbolic_policy_engine",
+          "root": "projects/recursive_lmm_grok1/engines/symbolic_policy_engine",
+          "score": 76,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "symbolic_policy_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/symbolic_policy_engine",
+          "score": 70,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "symbolic_policy_engine_frozen_v1",
+          "root": "engines/symbolic_policy_engine_frozen_v1",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "system_log_engine",
+      "canonical_candidate_root": "aiweb/engines/system_log_engine",
+      "canonical_candidate_name": "system_log_engine",
+      "canonical_score": 121,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "system_log_engine",
+          "root": "aiweb/engines/system_log_engine",
+          "score": 121,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "system_log_engine_frozen_v1",
+          "root": "aiweb/engines/system_log_engine_frozen_v1",
+          "score": 101,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "system_log_engine",
+          "root": "engines/system_log_engine",
+          "score": 81,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "system_log_engine",
+          "root": "projects/recursive_lmm_grok1/engines/system_log_engine",
+          "score": 78,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 12,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "system_log_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/system_log_engine",
+          "score": 71,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "system_log_engine_frozen_v1",
+          "root": "engines/system_log_engine_frozen_v1",
+          "score": 61,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 4
+        }
+      ]
+    },
+    {
+      "engine_base": "tier_enforcer",
+      "canonical_candidate_root": "aiweb/engines/tier_enforcer",
+      "canonical_candidate_name": "tier_enforcer",
+      "canonical_score": 123,
+      "variant_count": 6,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "tier_enforcer",
+          "root": "aiweb/engines/tier_enforcer",
+          "score": 123,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "tier_enforcer_frozen_v1",
+          "root": "aiweb/engines/tier_enforcer_frozen_v1",
+          "score": 103,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "tier_enforcer",
+          "root": "engines/tier_enforcer",
+          "score": 83,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "tier_enforcer_frozen_v1",
+          "root": "engines/tier_enforcer_frozen_v1",
+          "score": 63,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "tier_enforcer_frozen_v1",
+          "root": "projects/recursive_lmm_grok1/engines/tier_enforcer_frozen_v1",
+          "score": 61,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 14,
+          "symbol_count": 12
+        },
+        {
+          "engine_name": "tier_enforcer_frozen_v1",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/tier_enforcer_frozen_v1",
+          "score": 53,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 6
+        }
+      ]
+    },
+    {
+      "engine_base": "drift_signature_logger",
+      "canonical_candidate_root": "aiweb/engines/drift_signature_logger",
+      "canonical_candidate_name": "drift_signature_logger",
+      "canonical_score": 132,
+      "variant_count": 5,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "drift_signature_logger",
+          "root": "aiweb/engines/drift_signature_logger",
+          "score": 132,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 12,
+          "symbol_count": 28
+        },
+        {
+          "engine_name": "drift_signature_logger_frozen_v1-0.01",
+          "root": "aiweb/engines/drift_signature_logger_frozen_v1-0.01",
+          "score": 112,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 12,
+          "symbol_count": 28
+        },
+        {
+          "engine_name": "drift_signature_logger",
+          "root": "engines/drift_signature_logger",
+          "score": 94,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 14,
+          "symbol_count": 29
+        },
+        {
+          "engine_name": "drift_signature_logger_frozen_v1.0.01",
+          "root": "engines/drift_signature_logger_frozen_v1.0.01",
+          "score": 74,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 14,
+          "symbol_count": 29
+        },
+        {
+          "engine_name": "drift_signature_logger_frozen_v1-0.01",
+          "root": "engines/drift_signature_logger_frozen_v1-0.01",
+          "score": 72,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 12,
+          "symbol_count": 28
+        }
+      ]
+    },
+    {
+      "engine_base": "phase_engine",
+      "canonical_candidate_root": "aiweb/engines/phase_engine",
+      "canonical_candidate_name": "phase_engine",
+      "canonical_score": 122,
+      "variant_count": 5,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "phase_engine",
+          "root": "aiweb/engines/phase_engine",
+          "score": 122,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "phase_engine_frozen_v1",
+          "root": "aiweb/engines/phase_engine_frozen_v1",
+          "score": 111,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 18
+        },
+        {
+          "engine_name": "phase_engine",
+          "root": "engines/phase_engine",
+          "score": 82,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "phase_engine_frozen_v1",
+          "root": "engines/phase_engine_frozen_v1",
+          "score": 71,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 18
+        },
+        {
+          "engine_name": "phase_engine_frozen_v1",
+          "root": "projects/recursive_lmm_grok1/engines/phase_engine_frozen_v1",
+          "score": 61,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 18
+        }
+      ]
+    },
+    {
+      "engine_base": "stack_breather_phase2",
+      "canonical_candidate_root": "simulations/phase_vs_linear_augmented/engines/stack_breather_phase2_frozen_v1_0_01",
+      "canonical_candidate_name": "stack_breather_phase2_frozen_v1_0_01",
+      "canonical_score": 46,
+      "variant_count": 5,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "stack_breather_phase2_frozen_v1_0_01",
+          "root": "simulations/phase_vs_linear_augmented/engines/stack_breather_phase2_frozen_v1_0_01",
+          "score": 46,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 1,
+          "symbol_count": 1
+        },
+        {
+          "engine_name": "stack_breather_phase2",
+          "root": "aiweb/runtime_wrappers/stack_breather_phase2",
+          "score": 37,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "stack_breather_phase2",
+          "root": "runtime_wrappers/stack_breather_phase2",
+          "score": 37,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "stack_breather_phase2_frozen_v1-0.01",
+          "root": "aiweb/runtime_wrappers/stack_breather_phase2_frozen_v1-0.01",
+          "score": 19,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 14
+        },
+        {
+          "engine_name": "stack_breather_phase2_frozen_v1-0.01",
+          "root": "runtime_wrappers/stack_breather_phase2_frozen_v1-0.01",
+          "score": 19,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 14
+        }
+      ]
+    },
+    {
+      "engine_base": "admin_override_console",
+      "canonical_candidate_root": "aiweb/engines/admin_override_console",
+      "canonical_candidate_name": "admin_override_console",
+      "canonical_score": 120,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "admin_override_console",
+          "root": "aiweb/engines/admin_override_console",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "admin_override_console_frozen_v1-0.01",
+          "root": "aiweb/engines/admin_override_console_frozen_v1-0.01",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "admin_override_console",
+          "root": "engines/admin_override_console",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "admin_override_console_frozen_v1-0.01",
+          "root": "engines/admin_override_console_frozen_v1-0.01",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        }
+      ]
+    },
+    {
+      "engine_base": "agents_stack",
+      "canonical_candidate_root": "aiweb/engines/agents_stack_frozen_v1-0.01",
+      "canonical_candidate_name": "agents_stack_frozen_v1-0.01",
+      "canonical_score": 100,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "agents_stack_frozen_v1-0.01",
+          "root": "aiweb/engines/agents_stack_frozen_v1-0.01",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "agents_stack_frozen_v1-0.01",
+          "root": "engines/agents_stack_frozen_v1-0.01",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "agents_stack",
+          "root": "aiweb/runtime_wrappers/agents_stack",
+          "score": 35,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "agents_stack",
+          "root": "runtime_wrappers/agents_stack",
+          "score": 35,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 8
+        }
+      ]
+    },
+    {
+      "engine_base": "athena",
+      "canonical_candidate_root": "agents/athena",
+      "canonical_candidate_name": "athena",
+      "canonical_score": 38,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "athena",
+          "root": "agents/athena",
+          "score": 38,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "athena",
+          "root": "aiweb/agents/athena",
+          "score": 38,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "athena_frozen_v1.0.01",
+          "root": "agents/athena_frozen_v1.0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "athena_frozen_v1.0.01",
+          "root": "aiweb/agents/athena_frozen_v1.0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        }
+      ]
+    },
+    {
+      "engine_base": "christping_validator_engine",
+      "canonical_candidate_root": "aiweb/engines/christping_validator_engine",
+      "canonical_candidate_name": "christping_validator_engine",
+      "canonical_score": 126,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "christping_validator_engine",
+          "root": "aiweb/engines/christping_validator_engine",
+          "score": 126,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 16
+        },
+        {
+          "engine_name": "christping_validator_engine_frozen_v1-0.01",
+          "root": "aiweb/engines/christping_validator_engine_frozen_v1-0.01",
+          "score": 106,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 16
+        },
+        {
+          "engine_name": "christping_validator_engine",
+          "root": "engines/christping_validator_engine",
+          "score": 86,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 16
+        },
+        {
+          "engine_name": "christping_validator_engine_frozen_v1-0.01",
+          "root": "engines/christping_validator_engine_frozen_v1-0.01",
+          "score": 66,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 16
+        }
+      ]
+    },
+    {
+      "engine_base": "collapse_prevention_engine",
+      "canonical_candidate_root": "aiweb/engines/collapse_prevention_engine",
+      "canonical_candidate_name": "collapse_prevention_engine",
+      "canonical_score": 121,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "collapse_prevention_engine",
+          "root": "aiweb/engines/collapse_prevention_engine",
+          "score": 121,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "collapse_prevention_engine_frozen_v1-0.01",
+          "root": "aiweb/engines/collapse_prevention_engine_frozen_v1-0.01",
+          "score": 101,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "collapse_prevention_engine",
+          "root": "engines/collapse_prevention_engine",
+          "score": 81,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "collapse_prevention_engine_frozen_v1-0.01",
+          "root": "engines/collapse_prevention_engine_frozen_v1-0.01",
+          "score": 61,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 10
+        }
+      ]
+    },
+    {
+      "engine_base": "contribution_ledger_stack",
+      "canonical_candidate_root": "aiweb/runtime_wrappers/contribution_ledger_stack",
+      "canonical_candidate_name": "contribution_ledger_stack",
+      "canonical_score": 37,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "contribution_ledger_stack",
+          "root": "aiweb/runtime_wrappers/contribution_ledger_stack",
+          "score": 37,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "contribution_ledger_stack",
+          "root": "runtime_wrappers/contribution_ledger_stack",
+          "score": 37,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "contribution_ledger_stack_frozen_v1-0.01",
+          "root": "aiweb/runtime_wrappers/contribution_ledger_stack_frozen_v1-0.01",
+          "score": 17,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "contribution_ledger_stack_frozen_v1-0.01",
+          "root": "runtime_wrappers/contribution_ledger_stack_frozen_v1-0.01",
+          "score": 17,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 10
+        }
+      ]
+    },
+    {
+      "engine_base": "core_stack_breather",
+      "canonical_candidate_root": "aiweb/engines/core_stack_breather",
+      "canonical_candidate_name": "core_stack_breather",
+      "canonical_score": 120,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "core_stack_breather",
+          "root": "aiweb/engines/core_stack_breather",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 5
+        },
+        {
+          "engine_name": "core_stack_breather_frozen_v1-0.01",
+          "root": "aiweb/engines/core_stack_breather_frozen_v1-0.01",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 5
+        },
+        {
+          "engine_name": "core_stack_breather",
+          "root": "engines/core_stack_breather",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 5
+        },
+        {
+          "engine_name": "core_stack_breather_frozen_v1-0.01",
+          "root": "engines/core_stack_breather_frozen_v1-0.01",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 5
+        }
+      ]
+    },
+    {
+      "engine_base": "core_system_stack",
+      "canonical_candidate_root": "aiweb/runtime_wrappers/core_system_stack",
+      "canonical_candidate_name": "core_system_stack",
+      "canonical_score": 35,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "core_system_stack",
+          "root": "aiweb/runtime_wrappers/core_system_stack",
+          "score": 35,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "core_system_stack",
+          "root": "runtime_wrappers/core_system_stack",
+          "score": 35,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "core_system_stack_frozen_v1-0.01",
+          "root": "aiweb/runtime_wrappers/core_system_stack_frozen_v1-0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "core_system_stack_frozen_v1-0.01",
+          "root": "runtime_wrappers/core_system_stack_frozen_v1-0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        }
+      ]
+    },
+    {
+      "engine_base": "drift_analyzer_tool",
+      "canonical_candidate_root": "aiweb/engines/drift_analyzer_tool",
+      "canonical_candidate_name": "drift_analyzer_tool",
+      "canonical_score": 120,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "drift_analyzer_tool",
+          "root": "aiweb/engines/drift_analyzer_tool",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "drift_analyzer_tool_frozen_v1-0.01",
+          "root": "aiweb/engines/drift_analyzer_tool_frozen_v1-0.01",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "drift_analyzer_tool",
+          "root": "engines/drift_analyzer_tool",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "drift_analyzer_tool_frozen_v1-0.01",
+          "root": "engines/drift_analyzer_tool_frozen_v1-0.01",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        }
+      ]
+    },
+    {
+      "engine_base": "echo_trace_visualizer",
+      "canonical_candidate_root": "aiweb/engines/echo_trace_visualizer",
+      "canonical_candidate_name": "echo_trace_visualizer",
+      "canonical_score": 120,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "echo_trace_visualizer",
+          "root": "aiweb/engines/echo_trace_visualizer",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "echo_trace_visualizer_frozen_v1-0.01",
+          "root": "aiweb/engines/echo_trace_visualizer_frozen_v1-0.01",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "echo_trace_visualizer",
+          "root": "engines/echo_trace_visualizer",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "echo_trace_visualizer_frozen_v1-0.01",
+          "root": "engines/echo_trace_visualizer_frozen_v1-0.01",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        }
+      ]
+    },
+    {
+      "engine_base": "entropy_monitor_engine",
+      "canonical_candidate_root": "aiweb/engines/entropy_monitor_engine",
+      "canonical_candidate_name": "entropy_monitor_engine",
+      "canonical_score": 126,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "entropy_monitor_engine",
+          "root": "aiweb/engines/entropy_monitor_engine",
+          "score": 126,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 19
+        },
+        {
+          "engine_name": "entropy_monitor_engine_frozen_v1-0.01",
+          "root": "aiweb/engines/entropy_monitor_engine_frozen_v1-0.01",
+          "score": 106,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 19
+        },
+        {
+          "engine_name": "entropy_monitor_engine",
+          "root": "engines/entropy_monitor_engine",
+          "score": 86,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 19
+        },
+        {
+          "engine_name": "entropy_monitor_engine_frozen_v1-0.01",
+          "root": "engines/entropy_monitor_engine_frozen_v1-0.01",
+          "score": 66,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 19
+        }
+      ]
+    },
+    {
+      "engine_base": "external_feed_listener",
+      "canonical_candidate_root": "aiweb/engines/external_feed_listener",
+      "canonical_candidate_name": "external_feed_listener",
+      "canonical_score": 120,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "external_feed_listener",
+          "root": "aiweb/engines/external_feed_listener",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "external_feed_listener_frozen_v1-0.01",
+          "root": "aiweb/engines/external_feed_listener_frozen_v1-0.01",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "external_feed_listener",
+          "root": "engines/external_feed_listener",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "external_feed_listener_frozen_v1-0.01",
+          "root": "engines/external_feed_listener_frozen_v1-0.01",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        }
+      ]
+    },
+    {
+      "engine_base": "field_resonance_mapper",
+      "canonical_candidate_root": "aiweb/engines/field_resonance_mapper",
+      "canonical_candidate_name": "field_resonance_mapper",
+      "canonical_score": 127,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "field_resonance_mapper",
+          "root": "aiweb/engines/field_resonance_mapper",
+          "score": 127,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 20
+        },
+        {
+          "engine_name": "field_resonance_mapper_frozen_v1-0.01",
+          "root": "aiweb/engines/field_resonance_mapper_frozen_v1-0.01",
+          "score": 107,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 20
+        },
+        {
+          "engine_name": "field_resonance_mapper",
+          "root": "engines/field_resonance_mapper",
+          "score": 87,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 20
+        },
+        {
+          "engine_name": "field_resonance_mapper_frozen_v1-0.01",
+          "root": "engines/field_resonance_mapper_frozen_v1-0.01",
+          "score": 67,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 20
+        }
+      ]
+    },
+    {
+      "engine_base": "gilligan",
+      "canonical_candidate_root": "agents/gilligan",
+      "canonical_candidate_name": "gilligan",
+      "canonical_score": 44,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "gilligan",
+          "root": "agents/gilligan",
+          "score": 44,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 28
+        },
+        {
+          "engine_name": "gilligan",
+          "root": "aiweb/agents/gilligan",
+          "score": 44,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 28
+        },
+        {
+          "engine_name": "gilligan_frozen_v1.0.01",
+          "root": "agents/gilligan_frozen_v1.0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "gilligan_frozen_v1.0.01",
+          "root": "aiweb/agents/gilligan_frozen_v1.0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        }
+      ]
+    },
+    {
+      "engine_base": "gilligan_drift_correction_upgrade",
+      "canonical_candidate_root": "aiweb/engines/gilligan_drift_correction_upgrade",
+      "canonical_candidate_name": "gilligan_drift_correction_upgrade",
+      "canonical_score": 121,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "gilligan_drift_correction_upgrade",
+          "root": "aiweb/engines/gilligan_drift_correction_upgrade",
+          "score": 121,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "gilligan_drift_correction_upgrade_frozen_v1-0.01",
+          "root": "aiweb/engines/gilligan_drift_correction_upgrade_frozen_v1-0.01",
+          "score": 107,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 22
+        },
+        {
+          "engine_name": "gilligan_drift_correction_upgrade",
+          "root": "engines/gilligan_drift_correction_upgrade",
+          "score": 81,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "gilligan_drift_correction_upgrade_frozen_v1-0.01",
+          "root": "engines/gilligan_drift_correction_upgrade_frozen_v1-0.01",
+          "score": 67,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 22
+        }
+      ]
+    },
+    {
+      "engine_base": "glyph_engine",
+      "canonical_candidate_root": "aiweb/engines/glyph_engine",
+      "canonical_candidate_name": "glyph_engine",
+      "canonical_score": 126,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "glyph_engine",
+          "root": "aiweb/engines/glyph_engine",
+          "score": 126,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 18
+        },
+        {
+          "engine_name": "glyph_engine_frozen_v1-0.01",
+          "root": "aiweb/engines/glyph_engine_frozen_v1-0.01",
+          "score": 106,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 18
+        },
+        {
+          "engine_name": "glyph_engine",
+          "root": "engines/glyph_engine",
+          "score": 86,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 18
+        },
+        {
+          "engine_name": "glyph_engine_frozen_v1-0.01",
+          "root": "engines/glyph_engine_frozen_v1-0.01",
+          "score": 66,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 18
+        }
+      ]
+    },
+    {
+      "engine_base": "glyph_ui_overlay",
+      "canonical_candidate_root": "aiweb/symbolic_layers/glyph_ui_overlay",
+      "canonical_candidate_name": "glyph_ui_overlay",
+      "canonical_score": 38,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "glyph_ui_overlay",
+          "root": "aiweb/symbolic_layers/glyph_ui_overlay",
+          "score": 38,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 13
+        },
+        {
+          "engine_name": "glyph_ui_overlay",
+          "root": "symbolic_layers/glyph_ui_overlay",
+          "score": 38,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 13
+        },
+        {
+          "engine_name": "glyph_ui_overlay_frozen_v1.0.01",
+          "root": "aiweb/symbolic_layers/glyph_ui_overlay_frozen_v1.0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "glyph_ui_overlay_frozen_v1.0.01",
+          "root": "symbolic_layers/glyph_ui_overlay_frozen_v1.0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        }
+      ]
+    },
+    {
+      "engine_base": "install_onboarding_engine",
+      "canonical_candidate_root": "aiweb/engines/install_onboarding_engine",
+      "canonical_candidate_name": "install_onboarding_engine",
+      "canonical_score": 120,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "install_onboarding_engine",
+          "root": "aiweb/engines/install_onboarding_engine",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "install_onboarding_engine",
+          "root": "engines/install_onboarding_engine",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "install_onboarding_engine",
+          "root": "projects/recursive_lmm_grok1/engines/install_onboarding_engine",
+          "score": 76,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "install_onboarding_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/install_onboarding_engine",
+          "score": 70,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "neo",
+      "canonical_candidate_root": "agents/neo",
+      "canonical_candidate_name": "neo",
+      "canonical_score": 38,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "neo",
+          "root": "agents/neo",
+          "score": 38,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "neo",
+          "root": "aiweb/agents/neo",
+          "score": 38,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "neo_frozen_v1.0.01",
+          "root": "agents/neo_frozen_v1.0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "neo_frozen_v1.0.01",
+          "root": "aiweb/agents/neo_frozen_v1.0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        }
+      ]
+    },
+    {
+      "engine_base": "recursive_field_breather",
+      "canonical_candidate_root": "aiweb/engines/recursive_field_breather",
+      "canonical_candidate_name": "recursive_field_breather",
+      "canonical_score": 120,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "recursive_field_breather",
+          "root": "aiweb/engines/recursive_field_breather",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "recursive_field_breather_frozen_v1-0.01",
+          "root": "aiweb/engines/recursive_field_breather_frozen_v1-0.01",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "recursive_field_breather",
+          "root": "engines/recursive_field_breather",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 8
+        },
+        {
+          "engine_name": "recursive_field_breather_frozen_v1-0.01",
+          "root": "engines/recursive_field_breather_frozen_v1-0.01",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 8
+        }
+      ]
+    },
+    {
+      "engine_base": "recursive_field_stack",
+      "canonical_candidate_root": "aiweb/runtime_wrappers/recursive_field_stack",
+      "canonical_candidate_name": "recursive_field_stack",
+      "canonical_score": 35,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "recursive_field_stack",
+          "root": "aiweb/runtime_wrappers/recursive_field_stack",
+          "score": 35,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "recursive_field_stack",
+          "root": "runtime_wrappers/recursive_field_stack",
+          "score": 35,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "recursive_field_stack_frozen_v1-0.01",
+          "root": "aiweb/runtime_wrappers/recursive_field_stack_frozen_v1-0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "recursive_field_stack_frozen_v1-0.01",
+          "root": "runtime_wrappers/recursive_field_stack_frozen_v1-0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        }
+      ]
+    },
+    {
+      "engine_base": "resonance_display",
+      "canonical_candidate_root": "aiweb/symbolic_layers/resonance_display",
+      "canonical_candidate_name": "resonance_display",
+      "canonical_score": 38,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "resonance_display",
+          "root": "aiweb/symbolic_layers/resonance_display",
+          "score": 38,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 13
+        },
+        {
+          "engine_name": "resonance_display",
+          "root": "symbolic_layers/resonance_display",
+          "score": 38,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 13
+        },
+        {
+          "engine_name": "resonance_display_frozen_v1.0.01",
+          "root": "aiweb/symbolic_layers/resonance_display_frozen_v1.0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "resonance_display_frozen_v1.0.01",
+          "root": "symbolic_layers/resonance_display_frozen_v1.0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        }
+      ]
+    },
+    {
+      "engine_base": "resurrection_planner",
+      "canonical_candidate_root": "aiweb/engines/resurrection_planner",
+      "canonical_candidate_name": "resurrection_planner",
+      "canonical_score": 120,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "resurrection_planner",
+          "root": "aiweb/engines/resurrection_planner",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "resurrection_planner_frozen_v1-0.01",
+          "root": "aiweb/engines/resurrection_planner_frozen_v1-0.01",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "resurrection_planner",
+          "root": "engines/resurrection_planner",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "resurrection_planner_frozen_v1-0.01",
+          "root": "engines/resurrection_planner_frozen_v1-0.01",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        }
+      ]
+    },
+    {
+      "engine_base": "spc_memory_migrator",
+      "canonical_candidate_root": "aiweb/engines/spc_memory_migrator",
+      "canonical_candidate_name": "spc_memory_migrator",
+      "canonical_score": 120,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "spc_memory_migrator",
+          "root": "aiweb/engines/spc_memory_migrator",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "spc_memory_migrator_frozen_v1-0.01",
+          "root": "aiweb/engines/spc_memory_migrator_frozen_v1-0.01",
+          "score": 100,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "spc_memory_migrator",
+          "root": "engines/spc_memory_migrator",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        },
+        {
+          "engine_name": "spc_memory_migrator_frozen_v1-0.01",
+          "root": "engines/spc_memory_migrator_frozen_v1-0.01",
+          "score": 60,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9
+        }
+      ]
+    },
+    {
+      "engine_base": "symbolic_cognition_stack",
+      "canonical_candidate_root": "aiweb/runtime_wrappers/symbolic_cognition_stack",
+      "canonical_candidate_name": "symbolic_cognition_stack",
+      "canonical_score": 35,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "symbolic_cognition_stack",
+          "root": "aiweb/runtime_wrappers/symbolic_cognition_stack",
+          "score": 35,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "symbolic_cognition_stack",
+          "root": "runtime_wrappers/symbolic_cognition_stack",
+          "score": 35,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7
+        },
+        {
+          "engine_name": "symbolic_cognition_stack_frozen_v1-0.01",
+          "root": "aiweb/runtime_wrappers/symbolic_cognition_stack_frozen_v1-0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "symbolic_cognition_stack_frozen_v1-0.01",
+          "root": "runtime_wrappers/symbolic_cognition_stack_frozen_v1-0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        }
+      ]
+    },
+    {
+      "engine_base": "symbolic_drift_visualizer",
+      "canonical_candidate_root": "aiweb/engines/symbolic_drift_visualizer",
+      "canonical_candidate_name": "symbolic_drift_visualizer",
+      "canonical_score": 121,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "symbolic_drift_visualizer",
+          "root": "aiweb/engines/symbolic_drift_visualizer",
+          "score": 121,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "symbolic_drift_visualizer_frozen_v1-0.01",
+          "root": "aiweb/engines/symbolic_drift_visualizer_frozen_v1-0.01",
+          "score": 101,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "symbolic_drift_visualizer",
+          "root": "engines/symbolic_drift_visualizer",
+          "score": 81,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "symbolic_drift_visualizer_frozen_v1-0.01",
+          "root": "engines/symbolic_drift_visualizer_frozen_v1-0.01",
+          "score": 61,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 10
+        }
+      ]
+    },
+    {
+      "engine_base": "symbolic_glyph_engine",
+      "canonical_candidate_root": "aiweb/engines/symbolic_glyph_engine",
+      "canonical_candidate_name": "symbolic_glyph_engine",
+      "canonical_score": 119,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "symbolic_glyph_engine",
+          "root": "aiweb/engines/symbolic_glyph_engine",
+          "score": 119,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "symbolic_glyph_engine_frozen_v1-0.01",
+          "root": "aiweb/engines/symbolic_glyph_engine_frozen_v1-0.01",
+          "score": 99,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "symbolic_glyph_engine",
+          "root": "engines/symbolic_glyph_engine",
+          "score": 79,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "symbolic_glyph_engine_frozen_v1-0.01",
+          "root": "engines/symbolic_glyph_engine_frozen_v1-0.01",
+          "score": 59,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "symbolic_layers_stack",
+      "canonical_candidate_root": "aiweb/runtime_wrappers/symbolic_layers_stack",
+      "canonical_candidate_name": "symbolic_layers_stack",
+      "canonical_score": 35,
+      "variant_count": 4,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "symbolic_layers_stack",
+          "root": "aiweb/runtime_wrappers/symbolic_layers_stack",
+          "score": 35,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "symbolic_layers_stack",
+          "root": "runtime_wrappers/symbolic_layers_stack",
+          "score": 35,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "symbolic_layers_stack_frozen_v1-0.01",
+          "root": "aiweb/runtime_wrappers/symbolic_layers_stack_frozen_v1-0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "symbolic_layers_stack_frozen_v1-0.01",
+          "root": "runtime_wrappers/symbolic_layers_stack_frozen_v1-0.01",
+          "score": 15,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        }
+      ]
+    },
+    {
+      "engine_base": "activity_log",
+      "canonical_candidate_root": "projects/recursive_lmm_grok1/engines/activity_log",
+      "canonical_candidate_name": "activity_log",
+      "canonical_score": 66,
+      "variant_count": 2,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "activity_log",
+          "root": "projects/recursive_lmm_grok1/engines/activity_log",
+          "score": 66,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 1,
+          "symbol_count": 1
+        },
+        {
+          "engine_name": "activity_log",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/activity_log",
+          "score": 66,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 1,
+          "symbol_count": 1
+        }
+      ]
+    },
+    {
+      "engine_base": "aiweb_os",
+      "canonical_candidate_root": "aiweb/runtime_wrappers/aiweb_os_v1",
+      "canonical_candidate_name": "aiweb_os_v1",
+      "canonical_score": -13,
+      "variant_count": 2,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "aiweb_os_v1",
+          "root": "aiweb/runtime_wrappers/aiweb_os_v1",
+          "score": -13,
+          "tags": [
+            "test_only"
+          ],
+          "file_count": 2,
+          "symbol_count": 1
+        },
+        {
+          "engine_name": "aiweb_os_v1",
+          "root": "runtime_wrappers/aiweb_os_v1",
+          "score": -13,
+          "tags": [
+            "test_only"
+          ],
+          "file_count": 2,
+          "symbol_count": 1
+        }
+      ]
+    },
+    {
+      "engine_base": "ascii_interpreter_engine",
+      "canonical_candidate_root": "aiweb/engines/ascii_interpreter_engine",
+      "canonical_candidate_name": "ascii_interpreter_engine",
+      "canonical_score": 120,
+      "variant_count": 2,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "ascii_interpreter_engine",
+          "root": "aiweb/engines/ascii_interpreter_engine",
+          "score": 120,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        },
+        {
+          "engine_name": "ascii_interpreter_engine",
+          "root": "engines/ascii_interpreter_engine",
+          "score": 80,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 6
+        }
+      ]
+    },
+    {
+      "engine_base": "confusion_checker",
+      "canonical_candidate_root": "projects/recursive_lmm_grok1/engines/confusion_checker",
+      "canonical_candidate_name": "confusion_checker",
+      "canonical_score": 66,
+      "variant_count": 2,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "confusion_checker",
+          "root": "projects/recursive_lmm_grok1/engines/confusion_checker",
+          "score": 66,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 1,
+          "symbol_count": 1
+        },
+        {
+          "engine_name": "confusion_checker",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/confusion_checker",
+          "score": 66,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 1,
+          "symbol_count": 1
+        }
+      ]
+    },
+    {
+      "engine_base": "control_stack",
+      "canonical_candidate_root": "aiweb/runtime_wrappers/control_stack",
+      "canonical_candidate_name": "control_stack",
+      "canonical_score": 34,
+      "variant_count": 2,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "control_stack",
+          "root": "aiweb/runtime_wrappers/control_stack",
+          "score": 34,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "control_stack",
+          "root": "runtime_wrappers/control_stack",
+          "score": 34,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "memory_stack_stack",
+      "canonical_candidate_root": "aiweb/runtime_wrappers/memory_stack_stack",
+      "canonical_candidate_name": "memory_stack_stack",
+      "canonical_score": 34,
+      "variant_count": 2,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "memory_stack_stack",
+          "root": "aiweb/runtime_wrappers/memory_stack_stack",
+          "score": 34,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 1
+        },
+        {
+          "engine_name": "memory_stack_stack",
+          "root": "runtime_wrappers/memory_stack_stack",
+          "score": 34,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 1
+        }
+      ]
+    },
+    {
+      "engine_base": "project_brain",
+      "canonical_candidate_root": "projects/recursive_lmm_grok1/engines/project_brain",
+      "canonical_candidate_name": "project_brain",
+      "canonical_score": 82,
+      "variant_count": 2,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "project_brain",
+          "root": "projects/recursive_lmm_grok1/engines/project_brain",
+          "score": 82,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 23
+        },
+        {
+          "engine_name": "project_brain",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/project_brain",
+          "score": 82,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 23
+        }
+      ]
+    },
+    {
+      "engine_base": "project_memory",
+      "canonical_candidate_root": "projects/recursive_lmm_grok1/engines/project_memory",
+      "canonical_candidate_name": "project_memory",
+      "canonical_score": 66,
+      "variant_count": 2,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "project_memory",
+          "root": "projects/recursive_lmm_grok1/engines/project_memory",
+          "score": 66,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 1,
+          "symbol_count": 1
+        },
+        {
+          "engine_name": "project_memory",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/project_memory",
+          "score": 66,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 1,
+          "symbol_count": 1
+        }
+      ]
+    },
+    {
+      "engine_base": "protoforge_dashboard_runtime",
+      "canonical_candidate_root": "runtime_wrappers/protoforge_dashboard_runtime_v2.0",
+      "canonical_candidate_name": "protoforge_dashboard_runtime_v2.0",
+      "canonical_score": 54,
+      "variant_count": 2,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "protoforge_dashboard_runtime_v2.0",
+          "root": "runtime_wrappers/protoforge_dashboard_runtime_v2.0",
+          "score": 54,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 14,
+          "symbol_count": 116
+        },
+        {
+          "engine_name": "protoforge_dashboard_runtime_v2.0",
+          "root": "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0",
+          "score": 52,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 12,
+          "symbol_count": 75
+        }
+      ]
+    },
+    {
+      "engine_base": "recursion_mapper",
+      "canonical_candidate_root": "aiweb/symbolic_layers/recursion_mapper",
+      "canonical_candidate_name": "recursion_mapper",
+      "canonical_score": 38,
+      "variant_count": 2,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "recursion_mapper",
+          "root": "aiweb/symbolic_layers/recursion_mapper",
+          "score": 38,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 11
+        },
+        {
+          "engine_name": "recursion_mapper",
+          "root": "symbolic_layers/recursion_mapper",
+          "score": 38,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 11
+        }
+      ]
+    },
+    {
+      "engine_base": "recursive_verification_engine",
+      "canonical_candidate_root": "engines/recursive_verification_engine",
+      "canonical_candidate_name": "recursive_verification_engine",
+      "canonical_score": 83,
+      "variant_count": 2,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "recursive_verification_engine",
+          "root": "engines/recursive_verification_engine",
+          "score": 83,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 10
+        },
+        {
+          "engine_name": "recursive_verification_engine_v1.0.0",
+          "root": "engines/recursive_verification_engine_v1.0.0",
+          "score": 83,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 10
+        }
+      ]
+    },
+    {
+      "engine_base": "revisit_previous_tasks",
+      "canonical_candidate_root": "projects/recursive_lmm_grok1/engines/revisit_previous_tasks",
+      "canonical_candidate_name": "revisit_previous_tasks",
+      "canonical_score": 70,
+      "variant_count": 2,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "revisit_previous_tasks",
+          "root": "projects/recursive_lmm_grok1/engines/revisit_previous_tasks",
+          "score": 70,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        },
+        {
+          "engine_name": "revisit_previous_tasks",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/revisit_previous_tasks",
+          "score": 70,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3
+        }
+      ]
+    },
+    {
+      "engine_base": "saved_ideas",
+      "canonical_candidate_root": "projects/recursive_lmm_grok1/engines/saved_ideas",
+      "canonical_candidate_name": "saved_ideas",
+      "canonical_score": 21,
+      "variant_count": 2,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "saved_ideas",
+          "root": "projects/recursive_lmm_grok1/engines/saved_ideas",
+          "score": 21,
+          "tags": [
+            "backup_or_archive"
+          ],
+          "file_count": 6,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "saved_ideas",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/saved_ideas",
+          "score": 21,
+          "tags": [
+            "backup_or_archive"
+          ],
+          "file_count": 6,
+          "symbol_count": 4
+        }
+      ]
+    },
+    {
+      "engine_base": "stack_linker_breather",
+      "canonical_candidate_root": "aiweb/engines/stack_linker_breather",
+      "canonical_candidate_name": "stack_linker_breather",
+      "canonical_score": 119,
+      "variant_count": 2,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "stack_linker_breather",
+          "root": "aiweb/engines/stack_linker_breather",
+          "score": 119,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 4
+        },
+        {
+          "engine_name": "stack_linker_breather",
+          "root": "engines/stack_linker_breather",
+          "score": 79,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 4
+        }
+      ]
+    },
+    {
+      "engine_base": "step_counter",
+      "canonical_candidate_root": "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1",
+      "canonical_candidate_name": "step_counter_frozen_v1",
+      "canonical_score": 61,
+      "variant_count": 2,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "step_counter_frozen_v1",
+          "root": "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1",
+          "score": 61,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 18
+        },
+        {
+          "engine_name": "step_counter_frozen_v1",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/step_counter_frozen_v1",
+          "score": 61,
+          "tags": [
+            "frozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 18
+        }
+      ]
+    },
+    {
+      "engine_base": "trust_guard",
+      "canonical_candidate_root": "projects/recursive_lmm_grok1/engines/trust_guard",
+      "canonical_candidate_name": "trust_guard",
+      "canonical_score": 66,
+      "variant_count": 2,
+      "keep_candidate_reason": "highest conservative canonical score; prefer active/unfrozen aiweb/engines roots; no action performed",
+      "variants": [
+        {
+          "engine_name": "trust_guard",
+          "root": "projects/recursive_lmm_grok1/engines/trust_guard",
+          "score": 66,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 1,
+          "symbol_count": 2
+        },
+        {
+          "engine_name": "trust_guard",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/trust_guard",
+          "score": 66,
+          "tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 1,
+          "symbol_count": 2
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

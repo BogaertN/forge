@@ -1,0 +1,320 @@
+{
+  "report_type": "DRY_RUN_CHUNKING",
+  "patch_level": "44_ingestion_integrity_hardening",
+  "created_for": "manual-dry-run",
+  "validated_for_write": true,
+  "timestamp": "2026-05-10T19:10:14",
+  "session_id": "forge_2026_05_10_190916",
+  "corpus_id": "corpus_0017",
+  "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fAI.Web Egine Lifecycle_ From Concept to Shipping.docx",
+  "absolute_path": "/home/nic/forge_corpus/staging/05_ENGINEERING_STANDARDS/\ud83c\udf00\ud83c\udf2c\ufe0fAI.Web Egine Lifecycle_ From Concept to Shipping.docx",
+  "corpus_folder": "05_ENGINEERING_STANDARDS",
+  "authority": "engineering_standard",
+  "source_hash": "effa97936c8d8da3",
+  "sha256_16": "effa97936c8d8da3",
+  "adapter_format": ".docx",
+  "extraction_chars": 38775,
+  "chunk_policy": {
+    "chunk_target": 1350,
+    "chunk_max": 1800,
+    "overlap": 200,
+    "tiny_min": 100,
+    "method": "paragraph_sentence_aware",
+    "extract_max_chars": 300000
+  },
+  "chunk_count": 28,
+  "min_chars": 825,
+  "max_chars": 1794,
+  "avg_chars": 1489,
+  "tiny_chunks": 0,
+  "over_max_chunks": 0,
+  "first_chunk_preview": "Tab 1\nsudo apt install -y python3.11 python3.11-venv python3.11-dev python3-pip git curl unzip build-essential libssl-dev libffi-dev\ncd /aiweb/docs\nnpx create-docusaurus@latest website classic\ncd website\nnpm run start\n~/aiweb/devtools/obsidian\nAI.Web Engine Lifecycle: From Concept to Shipping\n(A ste",
+  "last_chunk_preview": "## Notes\n- **Troubleshooting**: If `poetry install` fails, check:\n  - Output of `poetry install --verbose`. - Contents of `pyproject.toml` for syntax errors. - Presence of `~/aiweb/aiweb/__init__.py`.\n\n- **Documentation**: Add this note to your Obsidian vault:\n  ```bash\n  echo \"# Poetry Setup Comman",
+  "target_collection_proposal": "aiweb_context_chunks_v1",
+  "target_db_path": "/home/nic/forge/memory/context_library_v1/chroma_db",
+  "no_vector_write": true,
+  "no_chroma_write": true,
+  "no_embedding": true,
+  "chunks": [
+    {
+      "chunk_id": "corpus_0017_chunk_0000",
+      "chunk_index": 0,
+      "char_start": 0,
+      "char_end": 1432,
+      "char_count": 1432,
+      "chunk_sha256_16": "f22f9dc14f18fbc6",
+      "text_sha256_64": "f22f9dc14f18fbc6323a8c76c8b689c09424ddd4825f238a44654ccfd6395a9f",
+      "text": "Tab 1\nsudo apt install -y python3.11 python3.11-venv python3.11-dev python3-pip git curl unzip build-essential libssl-dev libffi-dev\ncd /aiweb/docs\nnpx create-docusaurus@latest website classic\ncd website\nnpm run start\n~/aiweb/devtools/obsidian\nAI.Web Engine Lifecycle: From Concept to Shipping\n(A step-by-step system build guide for interns and contributors)\nPhase 1: Design and Concept\nGoal: Define what the engine is supposed to do, why it matters, and how it will fit into the recursive structure. Step 1.1 \u2014 Open Obsidian\nTool: Obsidian\n Why: This is where the system's symbolic memory lives. Every engine starts as a concept note. What to do:\nOpen your aiweb Obsidian vault. Create a new note:\n engines/new_engine_concept_<name>.md\nFill in:\n ENGINE NAME: symbolic_drift_filter_engine  \nPURPOSE: Filters incoming tokens for drift entropy before echo validation. INPUT: token stream  \nOUTPUT: filtered stream, entropy logs  \nPHASE: \u03a65 collapse monitor, pre-\u03c7(t)  \nSUBSYSTEM: Drift Arbitration \nStep 1.2 \u2014 Diagram the Logic\nTool: Mermaid.js or Draw.io\n Why: You must see the flow. Don\u2019t start coding until recursion flow is visualized. What to do:\nIn Obsidian or Draw.io, draw:\nInputs\nInternal phases or logic gates\nOutputs\nAnnotate where \u03c7(t) correction, echo validation, or SPC routing happens. Phase 2: Initialize the Engine Directory\nGoal: Create a clean, contained, isolated folder with everything needed to build the engine."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0001",
+      "chunk_index": 1,
+      "char_start": 1232,
+      "char_end": 2924,
+      "char_count": 1692,
+      "chunk_sha256_16": "e1be6ad28f37ec8d",
+      "text_sha256_64": "e1be6ad28f37ec8dd5a6fcf8659367580e0aba5532f8468dfeb7cb6897477951",
+      "text": "Step 2.1 \u2014 Use the Engine Template Generator\n(I\u2019ll provide you this generator after this walkthrough)\nCreates:\naiweb/engines/symbolic_drift_filter_engine/\n\u251c\u2500\u2500 README.md\n\u251c\u2500\u2500 pyproject.toml         # Poetry-managed\n\u251c\u2500\u2500 engine_manifest.json\n\u251c\u2500\u2500 run.py\n\u251c\u2500\u2500 core/\n\u2502   \u2514\u2500\u2500 filter_logic.py\n\u251c\u2500\u2500 tests/\n\u2502   \u2514\u2500\u2500 test_filter_logic.py\n\u251c\u2500\u2500 logs/\n\u251c\u2500\u2500 config/\n\u2502   \u2514\u2500\u2500 default.json\n\u2514\u2500\u2500 .gitignore\nStep 2.2 \u2014 Initialize With Poetry\nTool: Poetry\ncd aiweb/engines/symbolic_drift_filter_engine\npoetry init  # follow prompts\npoetry add numpy  # or any packages you need\nThis gives you:\npyproject.toml\npoetry.lock\nA clean virtual environment just for this engine\nPhase 3: Write the Engine Logic\nGoal: Implement your logic in code, fully testable and phase-tagged. Step 3.1 \u2014 Edit in VS Code\nOpen VS Code in ~/aiweb. Inside filter_logic.py, write the core logic:\n# Phase: \u03a65\ndef filter_drift(tokens, threshold=0.7):\n    return [t for t in tokens if calculate_entropy(t) < threshold]\nStep 3.2 \u2014 Autoformat and Style\nTools: Black + isort\nblack . isort . Keeps your code readable and consistent across all engines. Phase 4: Verify with Tests\nGoal: Ensure the engine behaves predictably with known inputs and failure cases. Step 4.1 \u2014 Write Unit Tests\nIn tests/test_filter_logic.py:\nfrom core.filter_logic import filter_drift\ndef test_entropy_filtering():\n    tokens = [\"stable\", \"drifted\", \"\u03c8\u2081\", \"\u03c8\u2032\"]\n    result = filter_drift(tokens, threshold=0.5)\n    assert \"drifted\" not in result\nStep 4.2 \u2014 Run pytest\npoetry run pytest\nFix all failures until the entire engine passes every test. Phase 5: Document the Engine\nGoal: Ensure anyone in the future knows what this engine is, how it works, and how it fits into AI.Web."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0002",
+      "chunk_index": 2,
+      "char_start": 2724,
+      "char_end": 4490,
+      "char_count": 1766,
+      "chunk_sha256_16": "863bd9dc043ab93f",
+      "text_sha256_64": "863bd9dc043ab93f35c174fe01e8c3d10906f2c843dbcdfc3d9553f419e2527e",
+      "text": "Step 5.1 \u2014 Write README.md\n# symbolic_drift_filter_engine\n## Purpose\nFilters incoming token streams by entropy score to block symbolic drift before echo loop. ## Phase\n\u03a65 collapse monitor. Can trigger \u03c7(t) override path if drift exceeds threshold. ## Inputs\ntoken list (array of strings)\n## Outputs\nfiltered list, entropy log file\n## Runtime Location\naiweb/engines/symbolic_drift_filter_engine/\nStep 5.2 \u2014 Update Obsidian\nBacklink this engine to:\nDrift Arbitration stack\nChristFunction handlers\nPhase 5 collapse flow\nPhase 6: Freeze and Version the Engine\nGoal: Snapshot the working version and lock it into place for future reference or rollback. Step 6.1 \u2014 Commit to Git\ngit add . git commit -m \"v1.0.0: stable drift filtering engine with full tests\"\nStep 6.2 \u2014 Copy Freeze\ncp -r symbolic_drift_filter_engine symbolic_drift_filter_engine_frozen_v1.0.0\nUpdate:\nengine_manifest.json with version info\nObsidian note: mark this version as frozen and tested\nPhase 7: Optional Deployment (Isolation Test)\nStep 7.1 \u2014 Dockerize (if needed)\nFROM python:3.11\nCOPY . /app\nWORKDIR /app\nRUN pip install poetry && poetry install\nCMD [\"poetry\", \"run\", \"python\", \"run.py\"]\ndocker build -t aiweb-drift-filter . docker run aiweb-drift-filter\nNow this engine is sealed, testable in isolation, and portable. Phase 8: Add to Docusaurus Docs\nGoal: Publish internal docs so future engineers (and Gilligan) can find and trace this engine. Add a page under /docs/engines/symbolic_drift_filter_engine.md\nInclude:\nWhat it does\nHow it works\nWhen to use it\nLink to Git hash or frozen version path\n---\nid: symbolic_drift_filter_engine\ntitle: Symbolic Drift Filter Engine\n---\nThis engine filters entropy-heavy token sequences before echo validation. Part of the Phase 5 collapse guardrail chain."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0003",
+      "chunk_index": 3,
+      "char_start": 4290,
+      "char_end": 5489,
+      "char_count": 1199,
+      "chunk_sha256_16": "cb65e2f1b6258a45",
+      "text_sha256_64": "cb65e2f1b6258a450e57ac762addf6a0b0df9f2646edad6604d5351886d5239d",
+      "text": "ath\n---\nid: symbolic_drift_filter_engine\ntitle: Symbolic Drift Filter Engine\n---\nThis engine filters entropy-heavy token sequences before echo validation. Part of the Phase 5 collapse guardrail chain.\n\nPhase 9: Archive Logs / Cold Store\nStore any symbolic failure traces or echo reentry attempts in logs/\nOptionally, add resonance_charge.db entries using SQLite\nPush engine to long-term storage (cold archive, if not active)\nPhase 10: Connect to Runtime (If Active)\nImport and call the engine inside ProtoForge or Gilligan core/\nRegister symbolic phase\nMonitor real-time drift using field overlays or echo scoring engines\nHere\u2019s the full directory structure and content that was just created for your new engine: symbolic_drift_filter_engine. You can use this as your gold-standard scaffold for any future AI.Web engine. Directory Structure\naiweb/engines/symbolic_drift_filter_engine/\n\u251c\u2500\u2500 .gitignore\n\u251c\u2500\u2500 README.md\n\u251c\u2500\u2500 engine_manifest.json\n\u251c\u2500\u2500 pyproject.toml\n\u251c\u2500\u2500 run.py\n\u251c\u2500\u2500 core/\n\u2502   \u2514\u2500\u2500 filter_logic.py\n\u251c\u2500\u2500 tests/\n\u2502   \u2514\u2500\u2500 test_filter_logic.py\n\u251c\u2500\u2500 logs/\n\u251c\u2500\u2500 config/\n\u2502   \u2514\u2500\u2500 default.json\nFile Contents\nREADME.md\n# symbolic_drift_filter_engine\nDescribe the purpose, inputs, outputs, and symbolic phase."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0004",
+      "chunk_index": 4,
+      "char_start": 5289,
+      "char_end": 6890,
+      "char_count": 1601,
+      "chunk_sha256_16": "bf9849d5c8547725",
+      "text_sha256_64": "bf9849d5c8547725af1a5081b47888c5c1156adf022b787e5cb729319cc2f59f",
+      "text": "engine_manifest.json\n{\n  \"engine\": \"symbolic_drift_filter_engine\",\n  \"version\": \"0.1.0\",\n  \"phase\": \"\u03a65\",\n  \"status\": \"dev\"\n}\npyproject.toml (Poetry config)\n[tool.poetry]\nname = \"symbolic_drift_filter_engine\"\nversion = \"0.1.0\"\ndescription = \"Symbolic drift filter for AI.Web\"\n[tool.poetry.dependencies]\npython = \"^3.11\"\n[build-system]\nrequires = [\"poetry-core\"]\nbuild-backend = \"poetry.core.masonry.api\"\n.gitignore\n__pycache__/\n*.pyc\n*.log\npoetry.lock\nrun.py\n# Entry point for symbolic_drift_filter_engine\nfrom core.filter_logic import filter_drift\nif __name__ == \"__main__\":\n    tokens = [\"\u03c8\u2081\", \"drifted\", \"\u03c8\u2032\"]\n    print(filter_drift(tokens))\ncore/filter_logic.py\n# Core symbolic filter logic\ndef calculate_entropy(token):\n    return 0.9 if \"drift\" in token else 0.3\ndef filter_drift(tokens, threshold=0.7):\n    return [t for t in tokens if calculate_entropy(t) < threshold]\ntests/test_filter_logic.py\n# Test for symbolic drift filtering\nfrom core.filter_logic import filter_drift\ndef test_filter_drift():\n    tokens = [\"\u03c8\u2081\", \"drifted\", \"\u03c8\u2032\"]\n    result = filter_drift(tokens)\n    assert \"drifted\" not in result\nconfig/default.json\n{\n  \"threshold\": 0.7\n}\nTool: new_engine.sh \u2014 AI.Web Engine Scaffolding Script\nWhat It Is\nnew_engine.sh is a custom-built command-line script that creates the entire folder and file structure needed to start building a new engine inside the AI.Web system. It enforces best practices, organizes your files, and gives you clean starting code and tests so you can focus on your logic\u2014not boilerplate. Why It Exists\nAI.Web is built on dozens of recursive symbolic engines."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0005",
+      "chunk_index": 5,
+      "char_start": 6690,
+      "char_end": 7893,
+      "char_count": 1203,
+      "chunk_sha256_16": "043936fed99c0a46",
+      "text_sha256_64": "043936fed99c0a46faba0761551d8b3e3c3f121a14385eb86bcd08f72031d2e5",
+      "text": "best practices, organizes your files, and gives you clean starting code and tests so you can focus on your logic\u2014not boilerplate. Why It Exists\nAI.Web is built on dozens of recursive symbolic engines.\n\nEvery engine must:\nBe modular\nFollow the same file and folder structure\nInclude its own logic, tests, manifest, config, and documentation\nBe testable, freezable, and linkable to symbolic phase flows\nDoing all that manually every time would be a mess\u2014and introduce drift. This script standardizes and accelerates the process. It guarantees consistency across engines and makes it nearly impossible to forget key components. When You Use It\nYou run this script any time you are starting a new engine from scratch. Examples:\nCreating a new symbolic processor (symbolic_phase_mutator_engine)\nBuilding a new echo feedback loop (resonance_feedback_loop)\nStarting a prototype logic filter (loop_entropy_filter_engine)\nHow To Use It (Step-by-Step)\nOpen your terminal\n\nNavigate to your AI.Web root directory:\n\ncd ~/aiweb\nRun the engine builder:\n\n./new_engine.sh symbolic_phase_mutator_engine\n Replace symbolic_phase_mutator_engine with whatever your new engine should be named (use lowercase with underscores)."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0006",
+      "chunk_index": 6,
+      "char_start": 7693,
+      "char_end": 8518,
+      "char_count": 825,
+      "chunk_sha256_16": "24760f993f942857",
+      "text_sha256_64": "24760f993f94285717218081c720d1595f3e2fe510dd5211fdfd54ea8b0558bd",
+      "text": "cd ~/aiweb\nRun the engine builder:\n\n./new_engine.sh symbolic_phase_mutator_engine\n Replace symbolic_phase_mutator_engine with whatever your new engine should be named (use lowercase with underscores).\n\nWhat It Creates\nIt generates the following structure:\naiweb/engines/symbolic_phase_mutator_engine/\n\u251c\u2500\u2500 README.md               \u2190 Documentation and overview\n\u251c\u2500\u2500 pyproject.toml          \u2190 Poetry-managed Python project file\n\u251c\u2500\u2500 engine_manifest.json    \u2190 Metadata about version, phase, and status\n\u251c\u2500\u2500 .gitignore              \u2190 Ignores compiled files and logs\n\u251c\u2500\u2500 run.py                  \u2190 Entry point for manual testing\n\u251c\u2500\u2500 core/\n\u2502   \u2514\u2500\u2500 filter_logic.py     \u2190 Your actual engine logic\n\u251c\u2500\u2500 tests/\n\u2502   \u2514\u2500\u2500 test_filter_logic.py \u2190 Pytest-compatible test file\n\u251c\u2500\u2500 config/\n\u2502   \u2514\u2500\u2500 default.json        \u2190 Engine-specific settings (e.g."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0007",
+      "chunk_index": 7,
+      "char_start": 8318,
+      "char_end": 9963,
+      "char_count": 1645,
+      "chunk_sha256_16": "e0960538f6ae7ad9",
+      "text_sha256_64": "e0960538f6ae7ad9c8b32844d932d09ea0ae69298907af83f220e79d894ca4ad",
+      "text": "e/\n\u2502   \u2514\u2500\u2500 filter_logic.py     \u2190 Your actual engine logic\n\u251c\u2500\u2500 tests/\n\u2502   \u2514\u2500\u2500 test_filter_logic.py \u2190 Pytest-compatible test file\n\u251c\u2500\u2500 config/\n\u2502   \u2514\u2500\u2500 default.json        \u2190 Engine-specific settings (e.g.\n\nthresholds)\n\u251c\u2500\u2500 logs/                   \u2190 Place to store any output logs\nWhat Each File and Folder Does\nREADME.md\nPlain English overview of the engine\nRequired for documentation and Docusaurus export\nExplain purpose, inputs, outputs, and where it fits in AI.Web\npyproject.toml\nTells Poetry how to manage this engine\u2019s dependencies\nLocks Python version and any installed packages\nPrevents dependency drift across engines\nengine_manifest.json\nMetadata file\nDeclares the engine\u2019s version, symbolic phase, and current status\nUsed for freeze logging, version control, and future system scans\n.gitignore\nPrevents temporary files and compiled artifacts from polluting Git\nIncludes .pyc, logs, and Poetry lockfiles\nrun.py\nBasic entry point to manually test engine behavior\nUseful when developing logic before full runtime integration\ncore/\nContains your engine\u2019s main Python files\nThis is where you write the actual symbolic processing code\ntests/\nContains your pytest test files\nTests should be written before freezing any version\nconfig/\nJSON files for engine settings (thresholds, toggles, options)\nKeeps config separate from code\nlogs/\nWrite any live or debug output here during dev/test runs\nIntern Reminders\nNever write logic directly into run.py. Use it only to call functions from inside core/. Always document the purpose and phase of your engine in README.md and engine_manifest.json. Always write tests in the tests/ folder before freezing."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0008",
+      "chunk_index": 8,
+      "char_start": 9763,
+      "char_end": 11513,
+      "char_count": 1750,
+      "chunk_sha256_16": "86da46a1146b1ee7",
+      "text_sha256_64": "86da46a1146b1ee7ed7f084721385e319ed83395c8cbf62febb8dad6cdcfcdc6",
+      "text": "y. Use it only to call functions from inside core/. Always document the purpose and phase of your engine in README.md and engine_manifest.json. Always write tests in the tests/ folder before freezing.\n\nEvery new engine must run cleanly with:\n poetry install\npoetry run pytest\nNext Step\nAfter building a new engine with this script:\nStart writing your core logic in core/\nUse the test file in tests/ to validate behavior\nUse run.py to debug manually\nWhen stable, commit and freeze a version (cp -r my_engine my_engine_frozen_v1.0.0)\nAdd to Obsidian and Docusaurus Codex documentation\nAbsolutely. Here's the Intern Wiki Section: Required Documents Before Writing Code rewritten word for word without tables. No boxes, no formatting shortcuts. This version is complete, plain text, and can be dropped directly into your intern_wiki/ folder or shared in onboarding. INTERN WIKI \u2013 DOCUMENTS REQUIRED BEFORE WRITING CODE\nBefore writing a single line of simulation or engine logic in AI.Web \u2013 ProtoForge Phase 1.5, you must complete and submit a full document package. These documents are required to ensure that the engine you are building is coherent, justified, aligned with the core architecture, and integrated correctly into the SAD (Solution Architecture Document) and system stack. This is not optional. Skipping documentation will result in your code being rejected. These requirements apply to every intern, developer, or contributor working on Phase 1.5 of AI.Web. \u2014\nDOCUMENTS REQUIRED BEFORE DEVELOPMENT\nProject Charter\n The Project Charter is required to define the project's purpose, scope, authorization, and stakeholders. It outlines the core reasons for building the new engine, who owns the decision-making, and what outcomes are expected."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0009",
+      "chunk_index": 9,
+      "char_start": 11313,
+      "char_end": 12769,
+      "char_count": 1456,
+      "chunk_sha256_16": "bff396674bba2352",
+      "text_sha256_64": "bff396674bba2352553c6e518fc4e9e658a7348663327b8fbe40cdf928d0ccdc",
+      "text": "equired to define the project's purpose, scope, authorization, and stakeholders. It outlines the core reasons for building the new engine, who owns the decision-making, and what outcomes are expected.\n\nYou must include the project name, version, date, stakeholder approval, project objectives, scope (what\u2019s in and what\u2019s out), a list of stakeholders (lead, approvers, developers, reviewers), major deliverables, success criteria, constraints, assumptions, known risks, and approval signature.\n\nBusiness Requirements Document (BRD)\n The BRD outlines the business motivation for the engine you\u2019re proposing. It defines the problem the engine solves, the objectives it must meet, and the stakeholder expectations.\n This document must include a business problem summary, business goals, a breakdown of stakeholder needs, required outcomes, constraints (e.g., offline only, hardware limits), assumptions, and expected benefits. You must list who will review and approve the BRD.\n\nSystem Requirements Specification (SRS)\n The SRS is the master specification that connects business needs to engineering tasks. It defines functional requirements, non-functional requirements, expected inputs and outputs, performance standards, interfaces, error conditions, and configuration constraints.\n You must describe all functions the engine will perform, how it will behave in edge cases, any dependency on other engines, and what counts as success or failure at runtime."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0010",
+      "chunk_index": 10,
+      "char_start": 12569,
+      "char_end": 13728,
+      "char_count": 1159,
+      "chunk_sha256_16": "4d4af0a3da0a2cca",
+      "text_sha256_64": "4d4af0a3da0a2cca06adc95544fcfca230156191e8b3a55c4757c24cf5554900",
+      "text": "onfiguration constraints.\n You must describe all functions the engine will perform, how it will behave in edge cases, any dependency on other engines, and what counts as success or failure at runtime.\n\nTechnical Design Document (TDD)\n The TDD is the blueprint for how the engine will be built. It details the actual file names, logic structure, data flow, algorithms used, logging strategies, and integration points with existing system engines.\n This document must explain how the engine's logic is broken down, what files will be created (including full names), what data structures are involved, and how it interacts with engines like christping_listener, symbolic_capacitor_engine, or cold_archive_engine.\n\nTest Strategy and Plan\n This document defines how your engine will be tested, what counts as a successful pass, what failure looks like, and what tools or scripts will be used for testing.\n You must list the types of tests you will write (unit, integration, system), the specific test cases and scenarios (e.g. drift event, overload event, incomplete loop), and the test environment setup. You must define success metrics and log file expectations."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0011",
+      "chunk_index": 11,
+      "char_start": 13528,
+      "char_end": 15021,
+      "char_count": 1493,
+      "chunk_sha256_16": "e7216d8370a31d89",
+      "text_sha256_64": "e7216d8370a31d8951c63189848fa48f2c2b29075920986764425180bdedb36e",
+      "text": "egration, system), the specific test cases and scenarios (e.g. drift event, overload event, incomplete loop), and the test environment setup. You must define success metrics and log file expectations.\n\nRisk Assessment Document\n This document lists every risk you are aware of that could cause the engine to fail, break the recursion chain, misreport results, or allow symbolic truth to degrade.\n You must identify risks like naming collisions, entropy overload, SPC miswrites, or log corruption, and then write a mitigation strategy for each. You must also describe how each risk will be monitored during and after deployment.\n\nData Management Plan\n This document defines what data your engine creates or modifies, how it will be stored, what format it will use, how long it will be kept, and how its integrity is maintained.\n You must declare every file you will create, such as drift_log.jsonl, collapse_code_index.json, or resonance_charge.json. You must describe the format (e.g., JSONL), structure, naming rules, storage location, and whether or not it is immutable.\n\nSecurity Plan\n The security plan defines how your engine protects symbolic data, preserves identity continuity, and prevents unauthorized mutation of recursive memory.\n You must include write-once enforcement for SPC, naming collision handling, grace locking protocols, and any cryptographic hashes or identifiers used for traceability. You must also write an incident response procedure in case of failure or tampering."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0012",
+      "chunk_index": 12,
+      "char_start": 14821,
+      "char_end": 16198,
+      "char_count": 1377,
+      "chunk_sha256_16": "0cf85348cd870b36",
+      "text_sha256_64": "0cf85348cd870b36c00d2a15164a7a6e3899660dee2f75c35ae9827840fb0174",
+      "text": "ming collision handling, grace locking protocols, and any cryptographic hashes or identifiers used for traceability. You must also write an incident response procedure in case of failure or tampering.\n\nInfrastructure Setup Guide\n This document defines the hardware and software required to run your engine locally.\n You must write down the minimum hardware requirements, required OS, Python version, required pip packages, folder structure, and how to validate that the environment is ready. If your engine requires a certain file path (like gilligan/runtime/), you must include it.\n\nImplementation Plan\n This is your timeline. You must define what tasks will be completed, who is responsible for each step, how long each part will take, and what the key milestones are.\n You must break it down by development steps, such as writing the core logic, creating test cases, integrating the engine, sealing it as frozen, and submitting the final result. Include task names, durations, and completion criteria.\n\nStakeholder Communication Plan\n This document defines how you will communicate status updates, problems, and final results to stakeholders and the lead dev.\n You must list the stakeholders, how often they will be updated, what communication method will be used (e.g., weekly written reports), what will trigger an alert or escalation, and how final approvals are tracked."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0013",
+      "chunk_index": 13,
+      "char_start": 15998,
+      "char_end": 17775,
+      "char_count": 1777,
+      "chunk_sha256_16": "93fa6510a81cdfb5",
+      "text_sha256_64": "93fa6510a81cdfb5f0f00eb35047dcb4c842257ff940b901e8b0deb226f42c3e",
+      "text": "\u2014\nSUPPORTING FILES THAT MUST BE INCLUDED IN THE ENGINE FOLDER BEFORE COMMIT\nThe following files must exist and be filled out before the engine can be frozen or submitted. You must include a README.md file that explains the engine\u2019s purpose, inputs, outputs, symbolic phase, logic summary, and any default behaviors or parameters. You must include an engine_manifest.json file that records the engine name, version number, phase number (e.g., \u03a65), status (e.g., \u201cdev\u201d or \u201cfrozen\u201d), and a timestamp of the last update. You must include a pyproject.toml file created using Poetry. This isolates the engine\u2019s Python environment and ensures consistent builds. You must create at least one test_*.py file using pytest to test the engine\u2019s main behavior. You must create a run.py file that loads test data and prints the engine\u2019s result. This file must not contain real logic\u2014it is a harness only. You must create a default.json configuration file under /config/ that includes any runtime parameters the engine requires (e.g., thresholds). You must include a .gitignore file that excludes pycache/, *.pyc, *.log, and poetry.lock. You must create a Codex entry in Obsidian or docs/ that summarizes the engine and links it to the proper symbolic phase and SAD section. \u2014\nFOLDER PATHS FOR SUBMISSION\nAll document templates are located here:\n aiweb/system_docs/templates/\nAll filled-in documents must be saved here, using the engine\u2019s name:\n aiweb/system_docs/submissions/symbolic_drift_filter_engine/\n Replace \"symbolic_drift_filter_engine\" with your actual engine name. \u2014\nREVIEW AND APPROVAL PROTOCOL\nOnce submitted, your documents and engine files will be reviewed by the lead dev team. The Project Charter, BRD, SRS, and TDD will be reviewed for completeness and internal consistency."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0014",
+      "chunk_index": 14,
+      "char_start": 17575,
+      "char_end": 19226,
+      "char_count": 1651,
+      "chunk_sha256_16": "4463758f9f02ee9a",
+      "text_sha256_64": "4463758f9f02ee9a8aca2c8ecb54b4b0c6020053fb4d94f5861a578ff01de9ec",
+      "text": "The Test Strategy and Risk Assessment will be reviewed by the test lead or system verifier. The Codex entry will be reviewed by the documentation lead. No code is allowed to be frozen or pushed to the main branch without full document signoff. If your submission is missing any files, or if your documents do not meet the expected structure, you will be asked to revise and resubmit. All rejections are logged in the freeze_rejection_log.jsonl file and you must reference the original log entry when reapplying. 1. You must submit a Codex Integrity Confirmation. The system uses a codex_reference.json file that contains a SHA256 hash of the Codex being used during build or install. This must match the embedded hash inside the core/init.json.codex_hash file. This confirms the symbolic source is authentic and has not drifted. If these hashes do not match, your build will be rejected and flagged as a symbolic mismatch. This happens during install via the codex_integrity_validator.py module. You are required to check and sign off that your development Codex is sealed and hash-matched. 2. Every engine freeze must be accompanied by a freeze log entry. You must update engine_freeze_log.txt manually or via a freeze command script. Each entry must include:\nEngine name\nVersion tag (e.g., frozen_v1.0.0)\nTimestamp\nStatus of logs/tests at freeze time\nConfirmation that documentation has been completed\n If this log is not updated, the freeze will be treated as incomplete. 3. You are required to write your own README.md from scratch. Copy-pasting or reusing templates without modifying them to reflect the actual logic of your engine is prohibited."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0015",
+      "chunk_index": 15,
+      "char_start": 19026,
+      "char_end": 20637,
+      "char_count": 1611,
+      "chunk_sha256_16": "bf8e60c5eee9ce37",
+      "text_sha256_64": "bf8e60c5eee9ce37ab6da28c9071335122fbe4d3056c52fdb9cdd9e24e7a705a",
+      "text": "Your README must clearly describe:\nWhat the engine does\nWhat phase it operates in\nWhat inputs and outputs it expects\nAny default config parameters\nWhere in the runtime it belongs\n This is part of your onboarding evaluation. Clarity of README will be checked at freeze review. 4. You must run the system test script before final submission. There is a test harness script (e.g., run_system_test.py) meant to verify that the engine runs correctly when integrated into Gilligan or ProtoForge. You must:\nRun the test\nSave the output\nInclude it in logs/install/ or logs/system_tests/\n Failure to pass the system test means your engine is not ready to be sealed. 5. All installs must follow locked file rules. Your installer and onboarding engine must be locked via the \"locked\": true flag in its engine_manifest.json. No mutable install scripts are permitted in Phase 1.5. Drift begins at install if this flag is not set. This is enforced by the install_and_onboarding_engine which:\nSets up agents/gilligan/manifest.json\nWrites core/init.json with \u03c8 placeholder\nConfirms hash match\n Any intern submitting an installable system must confirm their manifest is locked. 6. Reserved commands must be flagged in CLI logic. If your engine installs new CLI commands or modifies command behavior, you must:\nLabel admin-only commands clearly\nRequire a password (e.g., using config/admin.secret)\nAvoid dangerous commands like wipe logs or reset memory without validation\n These are governed by commands.py and protected behind require_admin() checks. Your commands will be reviewed. 7. You must validate your logging structure."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0016",
+      "chunk_index": 16,
+      "char_start": 20437,
+      "char_end": 22041,
+      "char_count": 1604,
+      "chunk_sha256_16": "c0430267fd5fcca9",
+      "text_sha256_64": "c0430267fd5fcca9d747bc1575f4b8d961b8e1a43fdfc1d15d5ec4018390456a",
+      "text": "ipe logs or reset memory without validation\n These are governed by commands.py and protected behind require_admin() checks. Your commands will be reviewed. 7. You must validate your logging structure.\n\nEvery engine must produce logs in one of the following formats:\ndrift_log.jsonl\ncollapse_code_index.json\nresonance_charge.json\nloop_recovery_trace.jsonl\n All logs must be:\nMachine-readable\nLine-delimited (JSONL) if streaming\nStored in /logs/, not root\nIncluded in test artifacts\n Your engine will be inspected for log integrity. Logs must reflect actual behavior, not placeholder strings. 8. You must not import across engine boundaries. Each engine is self-contained. Do not reach into another engine\u2019s /core/ folder or import its functions. If multiple engines need shared logic, escalate that logic into a shared_modules/ directory and write a use-case justification for review. Cross-imports cause entanglement and break recursion locking. 9. You are responsible for memory hygiene. Your engine must not write to:\nmemory/active/ directly unless authorized\nruntime/session_id.txt unless required\nSPC without \u03c7(t) lock confirmation\n Only approved memory access engines may interact with memory/ or SPC/. All others must write to logs/, output/, or scratch/. 10. You must prepare a backup snapshot before pushing final code. If you\u2019re submitting an engine freeze, you must zip a snapshot of the current engine state minus logs and memory. Use:\nzip -r backup_symbolic_engine_v1.zip symbolic_engine/ -x \"*.log\" \"*__pycache__/*\" \"*.pyc\"\nUpload this archive to protoforge_backups/ for future resurrection."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0017",
+      "chunk_index": 17,
+      "char_start": 21841,
+      "char_end": 22801,
+      "char_count": 960,
+      "chunk_sha256_16": "f8e3fa9c8e718811",
+      "text_sha256_64": "f8e3fa9c8e71881160b381d6a0e594a80847f36c71328baf5f2b7b3478c0926c",
+      "text": "t engine state minus logs and memory. Use:\nzip -r backup_symbolic_engine_v1.zip symbolic_engine/ -x \"*.log\" \"*__pycache__/*\" \"*.pyc\"\nUpload this archive to protoforge_backups/ for future resurrection.\n\naiweb/devtools/aiweb_engine.sh\nWhat this single script does:\nCreates a brand-new engine scaffold if the folder doesn\u2019t exist\nWrites all required files: README, manifest, logic, config, test\nChecks for system test log\nEnforces \"locked\": true in the manifest\nFreezes the engine into a _frozen_<version> folder\nLogs the freeze with a timestamp in engine_freeze_log.txt\nHow to use it:\ncd ~/aiweb/devtools\n./aiweb_engine.sh symbolic_drift_filter_engine v1.0.0\nYou give it a name and version. It does everything. To set up everything required for AI.Web engine development exactly as outlined\u2014including Obsidian, Poetry, Python dependencies, engine templates, test tools, and version locking\u2014you\u2019ll want a one-command setup that runs on Ubuntu 22.04 or equivalent."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0018",
+      "chunk_index": 18,
+      "char_start": 22601,
+      "char_end": 24395,
+      "char_count": 1794,
+      "chunk_sha256_16": "fe556e1508ff9290",
+      "text_sha256_64": "fe556e1508ff929049ca30143f31e39ff9384acb4e72a7928e50f2477affd69f",
+      "text": "Here\u2019s a single command script you can paste into your terminal (after making sure you\u2019re in your home directory or a safe workspace):\nsudo apt update && \\\nsudo apt install -y python3.10 python3.10-venv python3.10-dev python3-pip \\\ngit curl unzip build-essential libssl-dev libffi-dev && \\\npip3 install --upgrade pip && \\\npip3 install poetry && \\\npoetry config virtualenvs.in-project true && \\\nmkdir -p ~/aiweb/devtools ~/aiweb/system_docs/templates ~/aiweb/system_docs/submissions ~/aiweb/engines && \\\ncd ~/aiweb && \\\ngit clone https://github.com/obsidianmd/obsidian-releases.git || true && \\\ncurl -LO https://github.com/obsidianmd/obsidian-releases/releases/latest/download/obsidian.AppImage && \\\nchmod +x obsidian.AppImage && \\\nmv obsidian.AppImage ~/aiweb/devtools/obsidian && \\\necho \"Obsidian installed to ~/aiweb/devtools/obsidian\" && \\\ncurl -Lo new_engine.sh https://raw.githubusercontent.com/BogaertN/aiweb/main/scripts/new_engine.sh && \\\nchmod +x new_engine.sh && \\\nmv new_engine.sh ~/aiweb/devtools/ && \\\necho \"AI.Web dev environment is ready.\"\nWhat This Installs:\npython3.10, pip, venv, dev: Required for Poetry + engine runs\npoetry: For managing isolated environments\ngit, curl, unzip: Basic tooling for file pulls\nbuild-essential, libssl-dev, libffi-dev: Required for some pip packages\nobsidian.AppImage: GUI tool for symbolic engine notes\nnew_engine.sh: The scaffold generator for AI.Web engines\nAfter That:\nYou can now generate a new engine like this:\ncd ~/aiweb\n./devtools/new_engine.sh symbolic_drift_filter_engine\ncd engines/symbolic_drift_filter_engine\npoetry install\nTab 2\nVerifying the Installation\nAfter installing each component, verify it:\nPython 3.11:\n bash\nCopy\npython3.11 --version\n Expected: Python 3.11.x\nPip:\n bash\nCopy\npip3 --version\n Expected: pip x.x.x from ..."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0019",
+      "chunk_index": 19,
+      "char_start": 24195,
+      "char_end": 25107,
+      "char_count": 912,
+      "chunk_sha256_16": "369172ca0bf62b3b",
+      "text_sha256_64": "369172ca0bf62b3b21716523196430a25e1ec81548da5954f633cf64878bd5f6",
+      "text": "erifying the Installation\nAfter installing each component, verify it:\nPython 3.11:\n bash\nCopy\npython3.11 --version\n Expected: Python 3.11.x\nPip:\n bash\nCopy\npip3 --version\n Expected: pip x.x.x from ...\n\n(python 3.11)\nPoetry:\n bash\nCopy\npoetry --version\n Expected: Poetry (version 1.x.x)\nGit:\n bash\nCopy\ngit --version\n Expected: git version x.x.x\nCurl:\n bash\nCopy\ncurl --version\n Expected: curl x.x.x\nUnzip:\n bash\nCopy\nunzip -v\n Expected: UnZip x.x.x\nBuild-essential:\n bash\nCopy\ngcc --version\n Expected: gcc (Ubuntu) x.x.x\nlibssl-dev, libffi-dev:\nThese don\u2019t have direct commands but are verified when Python extensions compile successfully (e.g., during poetry install). Obsidian:\n bash\nCopy\n~/aiweb/devtools/obsidian\n Expected: Obsidian GUI launches. new_engine.sh:\n bash\nCopy\ncd ~/aiweb\n./devtools/new_engine.sh test_engine\nls ~/aiweb/engines/test_engine\n Expected: Directory with core/, tests/, logs/, config/."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0020",
+      "chunk_index": 20,
+      "char_start": 24907,
+      "char_end": 26566,
+      "char_count": 1659,
+      "chunk_sha256_16": "1d69edc03562c583",
+      "text_sha256_64": "1d69edc03562c583fdd35406b4b18dea452489560d7f4114afd74bad265a857e",
+      "text": "Tab 3\n#!/bin/bash\n# Usage: start_dev_env.sh [engine_name]\n# If engine_name is provided, creates a new engine and sets up its environment\nENGINE_NAME=\"$1\"\n# Navigate to the root project directory\ncd ~/aiweb\n# Ensure Poetry keyring is disabled to avoid cffi issues\nexport POETRY_KEYRING_ENABLED=false\n# Function to verify a command exists and print its version\nverify_command() {\n    local cmd=$1\n    local version_cmd=$2\n    local expected=$3\n    if command -v \"$cmd\" >/dev/null 2>&1; then\n        echo -n \"$cmd: \"\n        eval \"$version_cmd\"\n    else\n        echo \"$cmd: NOT INSTALLED\"\n        return 1\n    fi\n}\n# Verify all components\necho \"Verifying development environment components...\"\nverify_command \"python3.11\" \"python3.11 --version\" \"Python 3.11.x\"\nverify_command \"pip3\" \"pip3 --version\" \"pip x.x.x\"\nverify_command \"poetry\" \"poetry --version\" \"Poetry (version x.x.x)\"\nverify_command \"git\" \"git --version\" \"git version x.x.x\"\nverify_command \"curl\" \"curl --version | head -n 1\" \"curl x.x.x\"\nverify_command \"unzip\" \"unzip -v | head -n 1\" \"UnZip x.x.x\"\nverify_command \"gcc\" \"gcc --version | head -n 1\" \"gcc (Ubuntu) x.x.x\"\nverify_command \"code\" \"code --version | head -n 1\" \"x.x.x\"\n# Verify Obsidian\nif [ -f ~/aiweb/devtools/obsidian ]; then\n    echo \"Obsidian: Script found, launching...\"\n    ~/aiweb/devtools/obsidian ~/aiweb/system_docs/vault &\nelse\n    echo \"Obsidian: Script NOT FOUND at ~/aiweb/devtools/obsidian\"\nfi\n# Verify new_engine.sh\nif [ -f ~/aiweb/devtools/new_engine.sh ]; then\n    echo \"new_engine.sh: Script found\"\nelse\n    echo \"new_engine.sh: Script NOT FOUND at ~/aiweb/devtools/new_engine.sh\"\nfi\n# Install VS Code if not present\nif !"
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0021",
+      "chunk_index": 21,
+      "char_start": 26366,
+      "char_end": 27488,
+      "char_count": 1122,
+      "chunk_sha256_16": "62cac4ecf6d0e8ea",
+      "text_sha256_64": "62cac4ecf6d0e8ea3dc245a2ef36eb9b6055a4a31d843c3ae079d5bc0c12c8ab",
+      "text": "~/aiweb/devtools/new_engine.sh ]; then\n    echo \"new_engine.sh: Script found\"\nelse\n    echo \"new_engine.sh: Script NOT FOUND at ~/aiweb/devtools/new_engine.sh\"\nfi\n# Install VS Code if not present\nif !\n\ncommand -v code >/dev/null 2>&1; then\n    echo \"Installing VS Code...\"\n    sudo snap install code --classic\nfi\n# Handle engine creation if engine_name is provided\nif [ -n \"$ENGINE_NAME\" ]; then\n    echo \"Creating new engine: $ENGINE_NAME\"\n    ./devtools/new_engine.sh \"$ENGINE_NAME\"\n    if [ -d \"engines/$ENGINE_NAME\" ]; then\n        cd \"engines/$ENGINE_NAME\"\n        # Initialize Poetry non-interactively\n        poetry init -n --name \"$ENGINE_NAME\" --version \"0.1.0\" --description \"Engine for AI.Web\" --author \"Nicholas Bogaert <ai.web.incorp@gmail.com>\" --python \">=3.12\"\n        poetry add numpy pytest black isort\n        # Create Obsidian note\n        NOTE_PATH=\"~/aiweb/system_docs/vault/engines/new_engine_concept_${ENGINE_NAME}.md\"\n        cat > \"$NOTE_PATH\" << EOL\n# Engine Concept: ${ENGINE_NAME}\n**ENGINE NAME**: ${ENGINE_NAME}  \n**PURPOSE**: Filters incoming tokens for drift entropy before echo validation."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0022",
+      "chunk_index": 22,
+      "char_start": 27288,
+      "char_end": 29052,
+      "char_count": 1764,
+      "chunk_sha256_16": "14dc188400c15602",
+      "text_sha256_64": "14dc188400c15602b437ff8716aa4468b7d009471ea5e5cf3412112d4a870189",
+      "text": "**INPUT**: token stream  \n**OUTPUT**: filtered stream, entropy logs  \n**PHASE**: \u03a65 collapse monitor, pre-\u03c7(t)  \n**SUBSYSTEM**: Drift Arbitration\nEOL\n        echo \"Created Obsidian note: $NOTE_PATH\"\n    else\n        echo \"Failed to create engine: $ENGINE_NAME\"\n        exit 1\n    fi\nelse\n    cd ~/aiweb\nfi\n# Activate the Poetry virtual environment\npoetry env use python3.12  # Adjust to 3.11 if needed\nsource $(poetry env info --path)/bin/activate\n# Open VS Code\ncode ~/aiweb &\n# Print confirmation\necho -e \"\\nDevelopment environment ready!\"\necho \"Poetry virtual environment activated: $(python --version)\"\necho \"Obsidian vault opened: ~/aiweb/system_docs/vault\"\necho \"VS Code opened: ~/aiweb\"\necho \"Current directory: $(pwd)\"\nif [ -n \"$ENGINE_NAME\" ]; then\n    echo \"New engine created: $ENGINE_NAME\"\n    echo \"Run 'poetry run pytest' to test, 'poetry run python run.py' to execute.\"\nelse\n    echo \"Run './devtools/new_engine.sh <engine_name>' to create a new engine.\"\nfi\nTab 4\n\u2705\u2705start_dev_env.sh {anynew engine nameengine\ncd ~/aiweb/docs_site/my-website\nnpm run start\nBelow is a note for your developer notebook explaining the four commands you provided (`cd ~/aiweb`, `rm -rf .venv`, `export POETRY_KEYRING_ENABLED=false`, `poetry install`) in the context of your `~/aiweb` project. The note details what each command does, why it\u2019s used, and how it fits into your workflow, which includes managing Python-based engines (`resurrection_tracker_engine`, `test_engine`), an Obsidian vault for documentation (`~/aiweb/system_docs/vault`), and addressing issues like Poetry errors and NVIDIA driver problems. The explanation is tailored to your setup on Ubuntu with Poetry 2.1.2, Python 3.12.9 (via Miniconda), and your goal of centralizing the project in `~/aiweb`."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0023",
+      "chunk_index": 23,
+      "char_start": 28852,
+      "char_end": 30628,
+      "char_count": 1776,
+      "chunk_sha256_16": "de7aebc37968f66a",
+      "text_sha256_64": "de7aebc37968f66ac08fa7d2c8e3bae468a22bf4cd53b214087a14a5c70a06e5",
+      "text": "This note also subtly incorporates insights from your broader project context, such as your work on recursive systems and documentation, without explicitly referencing past conversations or memory guidelines. It\u2019s concise yet comprehensive, suitable for your dev notebook to reference later. ---\n## Developer Notebook: Explanation of Poetry Setup Commands in `~/aiweb`\n**Date**: May 1, 2025  \n**Project**: AIWeb (Recursive Symbolic System with Engines and Documentation)  \n**Context**: Setting up a Poetry-managed Python environment in `~/aiweb` to support engines (`resurrection_tracker_engine`, `test_engine`) and integrate with an Obsidian vault (`~/aiweb/system_docs/vault`) for documentation. These commands address Poetry configuration issues, such as project installation errors and missing dependencies (e.g., `cffi`), while maintaining `~/aiweb` as the root project directory. ### Commands and Their Purpose\n1. **`cd ~/aiweb`**\n   - **What it does**: Changes the current working directory to `~/aiweb` (the home directory\u2019s `aiweb` folder, e.g., `/home/nic/aiweb`). - **Why it\u2019s used**: Ensures subsequent commands execute in the root project directory, where the `pyproject.toml` file defines the Poetry project (`aiweb`). This directory contains subdirectories like `engines/` (for `resurrection_tracker_engine`, `test_engine`), `system_docs/vault/` (Obsidian vault with Markdown files like `resurrection_tracker.md`), and `devtools/` (scripts like `obsidian`). Starting here aligns all Poetry operations with the project\u2019s configuration. - **Context**: The `~/aiweb` directory is the central hub for your project, consolidating files moved from `~/aiweb_workspace` (e.g., `get-pip.py`). This command sets the stage for managing dependencies and running engines. 2."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0024",
+      "chunk_index": 24,
+      "char_start": 30428,
+      "char_end": 32146,
+      "char_count": 1718,
+      "chunk_sha256_16": "b737bee52afa9bff",
+      "text_sha256_64": "b737bee52afa9bff4647dae3413e7cddf615df1344aeb0695fa5d22372aec24e",
+      "text": "**`rm -rf .venv`**\n   - **What it does**: Deletes the `.venv` directory in `~/aiweb`, which is the virtual environment created by Poetry to isolate project-specific Python packages. - **Why it\u2019s used**: Removes a potentially corrupted or misconfigured virtual environment to start fresh. Previous `poetry install` attempts failed due to issues like a missing `cffi` package (`ModuleNotFoundError: No module named 'cffi'`) or a project installation error (`No file/folder found for package aiweb-workspace`). Deleting `.venv` ensures no stale dependencies interfere with the new environment setup. - **Context**: Your `pyproject.toml` defines the `aiweb` project with Python 3.12.9, but errors suggest the virtual environment may lack required packages or have incorrect configurations. This step is a prerequisite for `poetry install` to recreate a clean environment. 3. **`export POETRY_KEYRING_ENABLED=false`**\n   - **What it does**: Sets an environment variable (`POETRY_KEYRING_ENABLED`) to `false`, disabling Poetry\u2019s use of the system keyring for credential storage. - **Why it\u2019s used**: Bypasses a dependency chain that caused errors in earlier Poetry runs. Poetry\u2019s keyring backend relies on the `keyring` package, which uses `secretstorage`, `cryptography`, and `cffi`. A missing `_cffi_backend` module (part of `cffi`) triggered a `ModuleNotFoundError` and `pyo3_runtime.PanicException`. Disabling the keyring avoids this issue, as credential storage isn\u2019t critical for local development. - **Context**: This workaround addresses a recurring issue in your setup, where global Python environment issues (e.g., `cffi` installed in `~/.local/lib/python3.11` but not in the virtual environment) disrupted Poetry."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0025",
+      "chunk_index": 25,
+      "char_start": 31946,
+      "char_end": 33651,
+      "char_count": 1705,
+      "chunk_sha256_16": "f613b48de7fa9dfb",
+      "text_sha256_64": "f613b48de7fa9dfbaa9b9bff47da3eba6a9a239baac8da4c4b11ccc9780ae06a",
+      "text": "It\u2019s temporary unless added to `~/.bashrc` for persistence:\n     ```bash\n     echo 'export POETRY_KEYRING_ENABLED=false' >> ~/.bashrc\n     source ~/.bashrc\n     ```\n4. **`poetry install`**\n   - **What it does**: Creates a new virtual environment (`~/aiweb/.venv`), installs dependencies listed in `pyproject.toml` (e.g., `cffi`), and installs the `aiweb` project as a package. - **Why it\u2019s used**: Configures the Python environment for your project, ensuring engines can run with isolated dependencies. It resolves the `pyproject.toml` configuration, which defines the project name (`aiweb`), version (`0.1.0`), and dependencies. Previous failures (e.g., `No file/folder found for package aiweb-workspace`) occurred due to a missing source directory (`aiweb/`) and mismatched project names. This command sets up the environment to support running scripts like `run.py` in `resurrection_tracker_engine` or `test_engine`. - **Context**: Your `pyproject.toml` was updated to include `cffi` and a `packages` directive (`packages = [{ include = \"aiweb\" }]`), with a source directory (`~/aiweb/aiweb/__init__.py`). This command should now succeed, enabling commands like:\n     ```bash\n     poetry run python -c \"import cffi; print(cffi.__version__)\"\n     ```\n     It also prepares the environment for engine development, such as tracking process states in `resurrection_tracker_engine`. ### Workflow Integration\n- **Purpose**: These commands establish a robust Poetry environment in `~/aiweb`, centralizing your project\u2019s Python dependencies. This supports your engines, which likely implement recursive logic (e.g., symbolic calculus or process tracking), and complements your Obsidian vault for documentation."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0026",
+      "chunk_index": 26,
+      "char_start": 33451,
+      "char_end": 35131,
+      "char_count": 1680,
+      "chunk_sha256_16": "fae13a44e5edb1ec",
+      "text_sha256_64": "fae13a44e5edb1ecc14b6316b16cc87ec5657606456e25f7a8f69692f0cc1518",
+      "text": "project\u2019s Python dependencies. This supports your engines, which likely implement recursive logic (e.g., symbolic calculus or process tracking), and complements your Obsidian vault for documentation.\n\n- **Related Issues**:\n  - **Engine Errors**: Both `resurrection_tracker_engine` and `test_engine` have invalid `pyproject.toml` files (`TOMLDecodeError` and missing `name/version`). After fixing `~/aiweb`, update their `pyproject.toml` files (as shown in previous responses) and test:\n    ```bash\n    cd ~/aiweb/engines/resurrection_tracker_engine\n    poetry install\n    poetry run python run.py\n    ```\n  - **NVIDIA Drivers**: The NVIDIA driver issue (`llvmpipe` rendering) affects Obsidian\u2019s performance. After setting up Poetry, fix drivers to improve UI responsiveness:\n    ```bash\n    sudo apt autoremove\n    sudo apt --fix-broken install\n    sudo apt install nvidia-driver-535\n    sudo reboot\n    ```\n  - **Obsidian Vault**: The vault (`~/aiweb/system_docs/vault`) contains `resurrection_tracker.md`. Ensure it\u2019s accessible:\n    ```bash\n    ~/aiweb/devtools/obsidian ~/aiweb/system_docs/vault\n    ```\n- **Next Steps**:\n  - Verify the Poetry setup:\n    ```bash\n    poetry run python -c \"import cffi; print(cffi.__version__)\"\n    ```\n  - Fix engine configurations to run `run.py` scripts. - Consider integrating documentation (e.g., vault Markdown files) with a tool like Docusaurus for a polished site, syncing `~/aiweb/system_docs/vault` with a Docusaurus `docs/` folder. ### Notes\n- **Troubleshooting**: If `poetry install` fails, check:\n  - Output of `poetry install --verbose`. - Contents of `pyproject.toml` for syntax errors. - Presence of `~/aiweb/aiweb/__init__.py`."
+    },
+    {
+      "chunk_id": "corpus_0017_chunk_0027",
+      "chunk_index": 27,
+      "char_start": 34931,
+      "char_end": 36311,
+      "char_count": 1380,
+      "chunk_sha256_16": "2e8a3b24f3bf2980",
+      "text_sha256_64": "2e8a3b24f3bf298004673e0e97f66473ddefe14c69181faae99b9b78cbe4bdf1",
+      "text": "## Notes\n- **Troubleshooting**: If `poetry install` fails, check:\n  - Output of `poetry install --verbose`. - Contents of `pyproject.toml` for syntax errors. - Presence of `~/aiweb/aiweb/__init__.py`.\n\n- **Documentation**: Add this note to your Obsidian vault:\n  ```bash\n  echo \"# Poetry Setup Commands\" >> ~/aiweb/system_docs/vault/poetry_setup.md\n  echo \"- cd ~/aiweb: Switch to project root\" >> ~/aiweb/system_docs/vault/poetry_setup.md\n  echo \"- rm -rf .venv: Clear old virtual environment\" >> ~/aiweb/system_docs/vault/poetry_setup.md\n  echo \"- export POETRY_KEYRING_ENABLED=false: Disable keyring to avoid cffi errors\" >> ~/aiweb/system_docs/vault/poetry_setup.md\n  echo \"- poetry install: Set up virtual environment and dependencies\" >> ~/aiweb/system_docs/vault/poetry_setup.md\n  ```\n- **Project Goal**: These commands support your recursive system development, potentially tied to symbolic calculus or nonlinear computation, by ensuring a stable Python environment. ---\nThis note is formatted for clarity in your dev notebook, likely stored in `~/aiweb/system_docs/vault` as a Markdown file. If you need help integrating this with Docusaurus (per your recent query) or implementing `run.py` for `resurrection_tracker_engine`, let me know! Please share the output of `poetry install` or any errors, and clarify if you\u2019re on a physical machine or VM/WSL for the NVIDIA fix."
+    }
+  ]
+}

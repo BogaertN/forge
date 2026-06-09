@@ -1,0 +1,200 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/runtime_wrappers/stack_breather_phase2",
+  "candidate_path_resolved": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "stack_breather_phase2",
+  "evidence_id": "EEB-39c6236c8ad9679b",
+  "file_count": 6,
+  "file_evidence": [
+    {
+      "classes_sample": [
+        "FieldBreather"
+      ],
+      "excerpt_sha256": "b8af748eae9703219504bf49ef0e503ed002144a3eb5a16752bb2366068e863a",
+      "excerpt_start": "# field_breather.py\n\nclass FieldBreather:\n    def __init__(self):\n        self.last_phase = None\n\n    def breathe(self, phase):\n        self.last_phase = phase\n        return {\"field_phase\": phase, \"amplitude\": round(phase * 0.111, 3)}\n\n",
+      "functions_sample": [
+        "__init__",
+        "breathe"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/field_breather.py",
+      "relative_to_candidate": "field_breather.py",
+      "sha256": "b8af748eae9703219504bf49ef0e503ed002144a3eb5a16752bb2366068e863a",
+      "size_bytes": 237,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "90f956cedaa6b0f46cf262f5320398c68aa40486df53e35f6867ed0208472cf2",
+      "excerpt_start": "# stack_breather_core.py\n\nimport json\nimport os\nfrom datetime import datetime\nfrom core_breather import CoreBreather\nfrom field_breather import FieldBreather\n\ncore_breather = CoreBreather()\nfield_breather = FieldBreather()\n\ndef unified_breathe_cycle(stack_loops=2):\n    trace_file = \"stack_breather_trace.jsonl\"\n    if os.path.exists(trace_file):\n        os.remove(trace_file)\n\n    for loop in range(stack_loops):\n        for phase in range(1, 10):\n            core_output = core_breather.breathe(phase)\n            field_output = field_breather.breathe(phase)\n\n            trace_entry = {\n                \"timestamp\": datetime.utcnow().isoformat() + \"Z\",\n                \"loop\": loop,\n                \"phase\": phase,\n                \"core_output\": core_output,\n                \"field_output\": field_output\n            }\n\n            with open(trace_file, \"a\") as f:\n                f.write(json.dumps(trace_entry) + \"\\n\")\n\n            print(f\"Loop {loop} | Phase {phase} | Core Output: {core_output} | Field Output: {field_output}\")\n\n",
+      "functions_sample": [
+        "unified_breathe_cycle"
+      ],
+      "imports_sample": [
+        "import json",
+        "import os",
+        "from datetime import datetime",
+        "from core_breather import CoreBreather",
+        "from field_breather import FieldBreather"
+      ],
+      "line_count": 35,
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/stack_breather_core.py",
+      "relative_to_candidate": "stack_breather_core.py",
+      "sha256": "90f956cedaa6b0f46cf262f5320398c68aa40486df53e35f6867ed0208472cf2",
+      "size_bytes": 1035,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "5fc4900d95e90775a5b815bea55c1105efc2ee960ccec3eec2a4048dc75308e8",
+      "excerpt_start": "from stack_breather_core import unified_breathe_cycle\n\nif __name__ == \"__main__\":\n    unified_breathe_cycle(stack_loops=2)\n    print(\"✅ Stack Breather Phase 2 Test Passed\")\n\n",
+      "functions_sample": [],
+      "imports_sample": [
+        "from stack_breather_core import unified_breathe_cycle"
+      ],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/test_stack_breather_core.py",
+      "relative_to_candidate": "test_stack_breather_core.py",
+      "sha256": "5fc4900d95e90775a5b815bea55c1105efc2ee960ccec3eec2a4048dc75308e8",
+      "size_bytes": 176,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "c15624ba2c08b719fa2eb05f0e82a18468829b13b28cda7ee3ee0756c4023529",
+      "excerpt_start": "# StackBreather Phase2\n\n**StackBreather Phase2** is the unified breathing engine that links Core Breather and Field Breather outputs into a harmonized recursive stack cycle.\n\n- Loops through 1–9 breathing phases\n- Captures output from both core and field logic\n- Logs breathing trace per cycle for synchronization\n- Used for Phase2 runtime stack linking\n\n---\n\n## Files\n\n- `stack_breather_core.py` – Core unified breathing cycle\n- `core_breather.py` – Core breather logic (frozen v1.0.01)\n- `field_breather.py` – Field breather logic (frozen v1.0.01)\n- `test_stack_breather_core.py` – Validation test\n- `engine_manifest.json` – Metadata\n- `README.md` – This file\n- `stack_breather_trace.jsonl` – Output trace log\n",
+      "functions_sample": [
+        "StackBreather",
+        "Phase2",
+        "the",
+        "unified",
+        "breathing",
+        "engine",
+        "that",
+        "links",
+        "Core",
+        "Breather",
+        "and",
+        "Field",
+        "outputs",
+        "into",
+        "harmonized",
+        "recursive",
+        "stack",
+        "cycle",
+        "Loops",
+        "through",
+        "phases",
+        "Captures",
+        "output",
+        "from",
+        "both"
+      ],
+      "imports_sample": [],
+      "line_count": 21,
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "c15624ba2c08b719fa2eb05f0e82a18468829b13b28cda7ee3ee0756c4023529",
+      "size_bytes": 728,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [
+        "CoreBreather"
+      ],
+      "excerpt_sha256": "b2e94c34d5fe775cd3d874c4251ae2681b73445d9de45f0c652b0f4e8206a7f9",
+      "excerpt_start": "# core_breather.py\n\nclass CoreBreather:\n    def __init__(self):\n        self.last_phase = None\n\n    def breathe(self, phase):\n        self.last_phase = phase\n        return {\"core_phase\": phase, \"timestamp\": \"🌀\"}\n\n",
+      "functions_sample": [
+        "__init__",
+        "breathe"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/core_breather.py",
+      "relative_to_candidate": "core_breather.py",
+      "sha256": "b2e94c34d5fe775cd3d874c4251ae2681b73445d9de45f0c652b0f4e8206a7f9",
+      "size_bytes": 217,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "31ad7d10f7a5e338d0dcdca541e71cc77bbdfacf0063347d8bdf2162003b7083",
+      "excerpt_start": "{\n    \"engine\": \"stack_breather_phase2\",\n    \"version\": \"1.0.01\",\n    \"description\": \"Unified core + field breathing stack for Phase2 runtime linking.\",\n    \"author\": \"AI.Web\",\n    \"created\": \"2025-04-28\",\n    \"status\": \"active\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "stack_breather_phase2",
+        "version",
+        "description",
+        "Unified",
+        "core",
+        "field",
+        "breathing",
+        "stack",
+        "for",
+        "Phase2",
+        "runtime",
+        "linking",
+        "author",
+        "Web",
+        "created",
+        "status",
+        "active"
+      ],
+      "imports_sample": [],
+      "line_count": 9,
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "31ad7d10f7a5e338d0dcdca541e71cc77bbdfacf0063347d8bdf2162003b7083",
+      "size_bytes": 231,
+      "suffix": ".json"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "FieldBreather",
+    "__init__",
+    "breathe",
+    "unified_breathe_cycle",
+    "CoreBreather",
+    "__init__",
+    "breathe"
+  ],
+  "warnings": []
+}

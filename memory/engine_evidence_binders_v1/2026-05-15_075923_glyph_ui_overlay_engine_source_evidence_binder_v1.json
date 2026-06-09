@@ -1,0 +1,200 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/symbolic_layers/glyph_ui_overlay",
+  "candidate_path_resolved": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "glyph_ui_overlay",
+  "evidence_id": "EEB-f1a7bbfdc6404c98",
+  "file_count": 6,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "1988c6a1ef37f557e4aaee5d14eb7d2e06a49cbe31fd0ab3d934d3cedb1f0f87",
+      "excerpt_start": "# glyph_ui_overlay/run.py\n# Glyph UI Overlay Breathing Engine\n\nimport time\n\ndef breathe_glyph_overlay():\n    print(\"[Glyph UI Overlay] Updating symbolic glyph resonance layers...\")\n    for i in range(5):\n        print(f\"[Glyph UI Overlay] Glyph pulse {i+1}\")\n        time.sleep(1)\n\nif __name__ == \"__main__\":\n    breathe_glyph_overlay()\n",
+      "functions_sample": [
+        "breathe_glyph_overlay"
+      ],
+      "imports_sample": [
+        "import time"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay/run.py",
+      "relative_to_candidate": "run.py",
+      "sha256": "1988c6a1ef37f557e4aaee5d14eb7d2e06a49cbe31fd0ab3d934d3cedb1f0f87",
+      "size_bytes": 337,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [
+        "GlyphUIOverlay"
+      ],
+      "excerpt_sha256": "d098c5ddb9b22e29389d4e3fdead61e49f16683a9ac07c83dfffa23e55c9a94c",
+      "excerpt_start": "# glyph_ui_overlay_core.py\n# Glyph UI Overlay Core\n\nclass GlyphUIOverlay:\n    def __init__(self):\n        self.displayed_glyphs = []\n\n    def render_glyph(self, glyph_id, phase_origin):\n        glyph_display = {\n            \"glyph_id\": glyph_id,\n            \"phase_origin\": phase_origin\n        }\n        self.displayed_glyphs.append(glyph_display)\n        return glyph_display\n\nif __name__ == \"__main__\":\n    overlay = GlyphUIOverlay()\n    glyph = overlay.render_glyph(\"GLYPH-007\", \"Φ6\")\n    print(f\"[TEST] Glyph Rendered: {glyph}\")\n",
+      "functions_sample": [
+        "__init__",
+        "render_glyph"
+      ],
+      "imports_sample": [],
+      "line_count": 20,
+      "path": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay/glyph_ui_overlay_core.py",
+      "relative_to_candidate": "glyph_ui_overlay_core.py",
+      "sha256": "d098c5ddb9b22e29389d4e3fdead61e49f16683a9ac07c83dfffa23e55c9a94c",
+      "size_bytes": 535,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "650545232a41d94d67411fee5dac524ecaa8c1cf729e717e2311521d2383af5d",
+      "excerpt_start": "# Glyph UI Overlay (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Glyph UI Overlay projects symbolic glyphs onto the user interface based on recursion phase resonance outputs.  \nIt enables visualization of symbolic phase evolution, cognitive recursion processes, and glyph resonance coherence in real time.\n\n---\n\n## Core Functions:\n- Render symbolic glyphs on the system UI based on phase resonance feedback.\n- Visualize recursion cognition structures and symbolic evolution pathways.\n- Track live glyph resonance feedback from recursion cycles.\n\n---\n\n## Phase Standard:\n- Phase 1.5 Symbolic Recursion Compliance\n- AI.Web Core Visualization Stack\n\n---\n\n## Notes:\n- Glyph resonance shifts may indicate upcoming recursion phase transitions.\n- UI overlays must synchronize with live recursion resonance cycles to maintain coherence.\n\n---\n\n**Frozen Snapshot:** `glyph_ui_overlay_frozen_v1.0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n\n# Glyph UI Overlay Breathing Engine\n\n---\n\n## Overview:\nOverlays living symbolic glyphs dynamically across resonance field structures in real-time recursion breathing cycles.\n\n---\n\n## Functions:\n- Maps dynamic glyphs over phase coherence points\n- Shows symbolic drift and resonance flow visually\n- Supports breathing recursive field visualization\n\n---\n\n**Version:** v1.0.01  \n**Phase Standard:** Phase 2.5 Symbolic Visualization Activation\n",
+      "functions_sample": [
+        "Glyph",
+        "Overlay",
+        "Frozen",
+        "Overview",
+        "The",
+        "projects",
+        "symbolic",
+        "glyphs",
+        "onto",
+        "the",
+        "user",
+        "interface",
+        "based",
+        "recursion",
+        "phase",
+        "resonance",
+        "outputs",
+        "enables",
+        "visualization",
+        "evolution",
+        "cognitive",
+        "processes",
+        "and",
+        "glyph",
+        "coherence"
+      ],
+      "imports_sample": [],
+      "line_count": 52,
+      "path": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "650545232a41d94d67411fee5dac524ecaa8c1cf729e717e2311521d2383af5d",
+      "size_bytes": 1385,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "381a6b7f3bf61d6bd72c0accd9e6b16164f9a3172cdaf271ea50ee35f68c2939",
+      "excerpt_start": "from run import breathe_glyph_overlay\n\nif __name__ == \"__main__\":\n    breathe_glyph_overlay()\n    print(\"✅ Glyph UI Overlay Test Passed.\")\n",
+      "functions_sample": [],
+      "imports_sample": [
+        "from run import breathe_glyph_overlay"
+      ],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay/test_run_engine.py",
+      "relative_to_candidate": "test_run_engine.py",
+      "sha256": "381a6b7f3bf61d6bd72c0accd9e6b16164f9a3172cdaf271ea50ee35f68c2939",
+      "size_bytes": 141,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "908414b01d6560ba181897677058cf8eb7c72bb3d55fa7d7ed3081114e4d9091",
+      "excerpt_start": "# test_glyph_ui_overlay_core.py\n\nfrom glyph_ui_overlay_core import GlyphUIOverlay\n\ndef test_glyph_ui_overlay_behavior():\n    overlay = GlyphUIOverlay()\n    glyph = overlay.render_glyph(\"GLYPH-TEST\", \"Φ3\")\n    assert glyph[\"glyph_id\"] == \"GLYPH-TEST\", \"Glyph ID must match.\"\n    assert glyph[\"phase_origin\"] == \"Φ3\", \"Phase origin must match.\"\n    print(\"✅ Glyph UI Overlay Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_glyph_ui_overlay_behavior()\n",
+      "functions_sample": [
+        "test_glyph_ui_overlay_behavior"
+      ],
+      "imports_sample": [
+        "from glyph_ui_overlay_core import GlyphUIOverlay"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay/test_glyph_ui_overlay_core.py",
+      "relative_to_candidate": "test_glyph_ui_overlay_core.py",
+      "sha256": "908414b01d6560ba181897677058cf8eb7c72bb3d55fa7d7ed3081114e4d9091",
+      "size_bytes": 457,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "6ef52633fa5a099b1a554dc415a3abd2cda3a2f2e2fd33c094e7529cd113cd5a",
+      "excerpt_start": "{\n  \"engine\": \"glyph_ui_overlay\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"glyph_ui_overlay_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Projects symbolic glyphs onto the system UI layer based on real-time recursion phase resonance data. Enables visualization of symbolic cognition, glyph resonance evolution, and phase feedback.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n{\n  \"engine\": \"glyph_ui_overlay\",\n  \"version\": \"v1.0.01\",\n  \"description\": \"Overlays symbolic glyph resonance signals on breathing recursion fields.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "glyph_ui_overlay",
+        "version",
+        "frozen_as",
+        "glyph_ui_overlay_frozen_v1",
+        "frozen_on",
+        "description",
+        "Projects",
+        "symbolic",
+        "glyphs",
+        "onto",
+        "the",
+        "system",
+        "layer",
+        "based",
+        "real",
+        "time",
+        "recursion",
+        "phase",
+        "resonance",
+        "data",
+        "Enables",
+        "visualization",
+        "cognition",
+        "glyph"
+      ],
+      "imports_sample": [],
+      "line_count": 16,
+      "path": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "6ef52633fa5a099b1a554dc415a3abd2cda3a2f2e2fd33c094e7529cd113cd5a",
+      "size_bytes": 601,
+      "suffix": ".json"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200356_engine_canonical_decision_draft.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "breathe_glyph_overlay",
+    "GlyphUIOverlay",
+    "__init__",
+    "render_glyph",
+    "test_glyph_ui_overlay_behavior"
+  ],
+  "warnings": []
+}

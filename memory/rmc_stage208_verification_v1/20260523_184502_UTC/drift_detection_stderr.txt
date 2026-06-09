@@ -1,0 +1,13 @@
+test_clean_transition_allows (__main__.TestDriftArbitrator.test_clean_transition_allows) ... ok
+test_dangerous_skip_blocks (__main__.TestDriftArbitrator.test_dangerous_skip_blocks) ... ok
+test_phase_6_after_5_is_valid (__main__.TestDriftArbitrator.test_phase_6_after_5_is_valid) ... ok
+test_projection_without_closure_not_ready (__main__.TestDriftArbitrator.test_projection_without_closure_not_ready) ... ok
+test_repeated_noise_detects (__main__.TestDriftArbitrator.test_repeated_noise_detects) ... ok
+test_report_has_required_fields (__main__.TestDriftArbitrator.test_report_has_required_fields) ... ok
+test_semantic_distance (__main__.TestDriftArbitrator.test_semantic_distance) ... ok
+test_unbalanced_brackets_warns_or_blocks (__main__.TestDriftArbitrator.test_unbalanced_brackets_warns_or_blocks) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+OK

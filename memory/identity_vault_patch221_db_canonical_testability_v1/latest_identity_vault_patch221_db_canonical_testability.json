@@ -1,0 +1,253 @@
+{
+  "backup_root": "/home/nic/forge/backups/patch221_identity_vault_db_canonical_testability_before/20260523_200040_UTC",
+  "backups": [
+    {
+      "backup": "/home/nic/forge/backups/patch221_identity_vault_db_canonical_testability_before/20260523_200040_UTC/db.js",
+      "copied": true,
+      "sha256": "799c438a9a96cc93ee5ec043df874b1217069be3acd6872a0e25eef986aeb27f",
+      "source": "/home/nic/identity-vault/db.js"
+    },
+    {
+      "backup": "/home/nic/forge/backups/patch221_identity_vault_db_canonical_testability_before/20260523_200040_UTC/package.json",
+      "copied": true,
+      "sha256": "263684c468dd7b5070d1cb2f14b0a8b32f792a8f88f942ac7d88b41ae9dae010",
+      "source": "/home/nic/identity-vault/package.json"
+    },
+    {
+      "copied": false,
+      "reason": "missing",
+      "source": "/home/nic/identity-vault/tests/db.canonical.test.js"
+    },
+    {
+      "backup": "/home/nic/forge/backups/patch221_identity_vault_db_canonical_testability_before/20260523_200040_UTC/cli.js",
+      "copied": true,
+      "sha256": "64a43163bfd0842c0a44387f11b8d01fe7f90f6187ea89f3de6b6faf69f13716",
+      "source": "/home/nic/identity-vault/cli.js"
+    },
+    {
+      "backup": "/home/nic/forge/backups/patch221_identity_vault_db_canonical_testability_before/20260523_200040_UTC/server.js",
+      "copied": true,
+      "sha256": "526e4f9dd1e5e7560a6f49b37dc88a5faf93302b9959f8a4bc7873b1768d062b",
+      "source": "/home/nic/identity-vault/server.js"
+    }
+  ],
+  "boundary": [
+    "This patch modifies Identity Vault JS path references and writes one static test file only after backup.",
+    "It does not modify Identity Vault database contents.",
+    "It does not read .env secret values.",
+    "It does not package node_modules, register Forge tools, write RMC memory, or activate agent identities."
+  ],
+  "canonical_db_exists": true,
+  "canonical_db_path": "/home/nic/identity-vault/data/identity_vault.db",
+  "changed_files": [
+    "cli.js",
+    "server.js",
+    "tests/db.canonical.test.js"
+  ],
+  "database_summaries": {
+    "canonical": {
+      "error": null,
+      "exists": true,
+      "ok": true,
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/data/identity_vault.db",
+      "tables": {
+        "agent_profiles": 0,
+        "audit_logs": 0,
+        "feedback_logs": 0,
+        "session_state": 0,
+        "sqlite_sequence": 0,
+        "user_profiles": 0
+      }
+    },
+    "legacy_preserved": {
+      "error": null,
+      "exists": true,
+      "ok": true,
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/vault.db",
+      "tables": {
+        "feedback_logs": 0,
+        "profiles": 1,
+        "session_state": 1,
+        "sqlite_sequence": 0
+      }
+    }
+  },
+  "findings": [
+    {
+      "code": "IV_LEGACY_DB_REFS_REMAIN",
+      "level": "WARN",
+      "message": "Some vault.db references remain in scanned JS files; review before connector registration."
+    },
+    {
+      "code": "IV_NODE_SYNTAX_OK",
+      "level": "INFO",
+      "message": "Changed/tested JS files pass node --check."
+    },
+    {
+      "code": "IV_CANONICAL_DB_READONLY_OK",
+      "level": "INFO",
+      "message": "Canonical DB opens read-only after path normalization."
+    },
+    {
+      "code": "IV_SAFETY_SNAPSHOT_CHANGED",
+      "level": "FAIL",
+      "message": "A protected safety snapshot changed unexpectedly."
+    },
+    {
+      "code": "IV_OPTIONAL_JEST_FAILED",
+      "level": "WARN",
+      "message": "Static canonical DB Jest test did not pass in this environment; inspect stdout/stderr tail in JSON report."
+    }
+  ],
+  "identity_root": "/home/nic/identity-vault",
+  "legacy_db_exists": true,
+  "legacy_db_path": "/home/nic/identity-vault/vault.db",
+  "legacy_scan_after": {
+    "files": {
+      "cli.js": [
+        {
+          "line": 51,
+          "text": "const dbPath = path.join(__dirname, 'data/identity_vault.db');"
+        }
+      ],
+      "db.js": [
+        {
+          "line": 50,
+          "text": "// Init DB: Safe, local file-based (vault.db in project root, gitignore'd)"
+        }
+      ],
+      "scripts/init-database.js": [
+        {
+          "line": 6,
+          "text": "const dataDir = path.dirname(process.env.DB_PATH || './data/identity_vault.db');"
+        },
+        {
+          "line": 11,
+          "text": "const dbPath = process.env.DB_PATH || './data/identity_vault.db';"
+        }
+      ],
+      "scripts/reset-database.js": [
+        {
+          "line": 7,
+          "text": "const dbPath = process.env.DB_PATH || './data/identity_vault.db';"
+        }
+      ],
+      "server.js": [
+        {
+          "line": 11,
+          "text": "const dbPath = path.join(__dirname, 'data/identity_vault.db');"
+        }
+      ],
+      "tests/db.canonical.test.js": [
+        {
+          "line": 3,
+          "text": "// This test is static on purpose: it proves code defaults do not fall back to root vault.db."
+        },
+        {
+          "line": 16,
+          "text": "test('db.js references data/identity_vault.db as the canonical local database', () => {"
+        },
+        {
+          "line": 18,
+          "text": "expect(text).toContain('identity_vault.db');"
+        },
+        {
+          "line": 22,
+          "text": "test('db.js does not directly default to root-level vault.db', () => {"
+        }
+      ]
+    },
+    "total_legacy_refs": 10
+  },
+  "legacy_scan_before": {
+    "files": {
+      "cli.js": [
+        {
+          "line": 51,
+          "text": "const dbPath = path.join(__dirname, 'vault.db');"
+        }
+      ],
+      "db.js": [
+        {
+          "line": 50,
+          "text": "// Init DB: Safe, local file-based (vault.db in project root, gitignore'd)"
+        }
+      ],
+      "scripts/init-database.js": [
+        {
+          "line": 6,
+          "text": "const dataDir = path.dirname(process.env.DB_PATH || './data/identity_vault.db');"
+        },
+        {
+          "line": 11,
+          "text": "const dbPath = process.env.DB_PATH || './data/identity_vault.db';"
+        }
+      ],
+      "scripts/reset-database.js": [
+        {
+          "line": 7,
+          "text": "const dbPath = process.env.DB_PATH || './data/identity_vault.db';"
+        }
+      ],
+      "server.js": [
+        {
+          "line": 11,
+          "text": "const dbPath = path.join(__dirname, 'vault.db');"
+        }
+      ]
+    },
+    "total_legacy_refs": 6
+  },
+  "node_checks": {
+    "cli.js": {
+      "exists": true,
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    "db.js": {
+      "exists": true,
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    "server.js": {
+      "exists": true,
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    "tests/db.canonical.test.js": {
+      "exists": true,
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    }
+  },
+  "optional_jest": {
+    "attempted": true,
+    "ok": false,
+    "returncode": 1,
+    "stderr_tail": "P\n          WHERE id = ?\n        `, values, function(err) {\n          if (err) reject(err);\n          else resolve(this.changes);\n        });\n      });\n    }\u00b7\n    // Get audit trail: Full logs for profile (regulatory exports, drift review)\n    async function getAuditTrail(profileId, limit = 100) {\n      return new Promise((resolve, reject) => {\n        db.all(`\n          SELECT * FROM feedback_logs\n          WHERE profile_id = ?\n          ORDER BY timestamp DESC\n          LIMIT ?\n        `, [profileId, limit], (err, rows) => {\n          if (err) reject(err);\n          else {\n            rows.forEach(row => {\n              row.data = JSON.parse(row.data);\n            });\n            resolve(rows);\n          }\n        });\n      });\n    }\u00b7\n    // Close DB (graceful shutdown)\n    function closeDB() {\n      if (db) {\n        db.close((err) => {\n          if (err) console.error('DB Close Error:', err.message);\n          else console.log('DB closed safely.');\n        });\n      }\n    }\u00b7\n    // Export for server.js\n    module.exports = {\n      initDB,\n      saveProfile,\n      getProfile,\n      updateProfile,\n      deleteProfile,\n      logFeedback,\n      getState,\n      updateState,\n      getAuditTrail,\n      closeDB\n    };\n    \"\n\n      16 |   test('db.js references data/identity_vault.db as the canonical local database', () => {\n      17 |     const text = readText(dbJsPath);\n    > 18 |     expect(text).toContain('identity_vault.db');\n         |                  ^\n      19 |     expect(text).toContain('data');\n      20 |   });\n      21 |\n\n      at Object.toContain (tests/db.canonical.test.js:18:18)\n\nTest Suites: 1 failed, 1 total\nTests:       1 failed, 1 passed, 2 total\nSnapshots:   0 total\nTime:        0.211 s\nRan all test suites matching tests/db.canonical.test.js.\nnpm notice\nnpm notice New major version of npm available! 10.8.2 -> 11.15.0\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.15.0\nnpm notice To update run: npm install -g npm@11.15.0\nnpm notice\n",
+    "stdout_tail": ""
+  },
+  "patch_id": "patch221_identity_vault_db_canonical_testability_apply",
+  "safety_checks": {
+    "agent_identity_activation_performed": false,
+    "canonical_db_sha_unchanged": true,
+    "database_write_performed": false,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "forge_tool_registry_modified": false,
+    "legacy_db_sha_unchanged": true
+  },
+  "test_written": true,
+  "timestamp": "20260523_200040_UTC",
+  "verdict": "FAIL"
+}

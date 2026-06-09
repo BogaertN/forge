@@ -1,0 +1,22 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "completed": [
+    "Final canonical engine lockfile",
+    "Read-only Forge dashboard",
+    "Mode permission matrix/check layer",
+    "Source-authority runtime binder"
+  ],
+  "created_at": "2026-05-17T08:32:04",
+  "current_milestone": "Source-authority runtime binding ready; LLM source-grounded proposals next",
+  "next_patch_sequence": [
+    "Patch 132 \u2014 LLM Source-Grounded Patch Proposal",
+    "Patch 133 \u2014 Patch Lifecycle 2.0 Gate Matrix",
+    "Patch 134 \u2014 Repair stack_linker_breather import/test issue after gates are ready"
+  ],
+  "report_type": "FORGE_ROADMAP_STATUS_V1",
+  "schema_version": "forge_roadmap_status_v1_patch131",
+  "status": "ROADMAP_STATUS_READY"
+}

@@ -1,0 +1,69 @@
+{
+  "allowed_tools": {
+    "code_related_files": {
+      "allowed_scope": "current engine family evidence/relation context only",
+      "description": "Read relationship metadata for the engine family under review.",
+      "executes": false,
+      "writes": false
+    },
+    "read_file": {
+      "allowed_scope": "candidate files listed in engine_evidence_binders_v1 only",
+      "description": "Read only files already bound by an engine evidence binder, within approved review context.",
+      "executes": false,
+      "writes": false
+    }
+  },
+  "authority": {
+    "allowed_gateway_tools": [
+      "read_file",
+      "code_related_files"
+    ],
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "forbidden_gateway_tools": [
+      "shell",
+      "patch-apply",
+      "ingest-one",
+      "ingest-batch-apply",
+      "delete",
+      "quarantine",
+      "restore",
+      "snapshot-live-restore",
+      "network",
+      "pip",
+      "npm",
+      "sudo"
+    ],
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "LLM_ENGINE_REVIEW_DRAFTS_WITH_REVIEW_LIMITED_READ_LENS",
+    "patch": "98",
+    "project_write_authority": false,
+    "rule": "The LLM may draft review recommendations from bound evidence. Nic approves separately. Forge commits only in a future gated patch.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/llm_engine_review_drafts_v1"
+  },
+  "blocked_tools": [
+    "shell",
+    "patch-apply",
+    "ingest-one",
+    "ingest-batch-apply",
+    "delete",
+    "quarantine",
+    "restore",
+    "snapshot-live-restore",
+    "network",
+    "pip",
+    "npm",
+    "sudo",
+    "raw-filesystem-crawl"
+  ],
+  "created_at": "2026-05-15_083114",
+  "execution_performed_by_gateway": false,
+  "mode": "ENGINE_REVIEW_READ_LENS_ONLY",
+  "path_scope_rule": "LLM review access is limited to evidence-binder file paths under /home/nic/aiweb and Forge-owned report receipts under /home/nic/forge/memory.",
+  "report_type": "LLM_ENGINE_REVIEW_GATEWAY_POLICY_V1_PATCH98",
+  "schema_version": "llm_engine_review_draft_v1_patch98"
+}

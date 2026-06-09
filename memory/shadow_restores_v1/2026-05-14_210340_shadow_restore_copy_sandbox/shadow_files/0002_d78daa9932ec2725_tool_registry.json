@@ -1,0 +1,762 @@
+{
+  "_comment": "Defines every tool Forge has. trust_level is the minimum level required to use it.",
+  "current_trust_level": 5.0,
+  "tools": {
+    "analyze_command_output": {
+      "description": "Receive and store terminal output pasted by Nic for analysis. Never executes anything.",
+      "executes": false,
+      "trust_level": 0.7,
+      "writes": false
+    },
+    "apply_patch": {
+      "description": "Apply an approved patch to a file. Requires explicit Nic approval.",
+      "executes": false,
+      "trust_level": 4.0,
+      "writes": true
+    },
+    "code_related_files": {
+      "description": "List related indexed files for one engine family. Read-only; does not touch project files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "code_relationship_export": {
+      "description": "Export relationship intelligence reports as Forge-owned JSON/Markdown manifests. Does not modify engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "code_relationship_map": {
+      "description": "Build a read-only relationship map for one engine family, connecting indexed files, symbols, tests, runtime roles, variants, and readiness status.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "code_relationship_policy": {
+      "description": "Show Patch 79 read-only code relationship intelligence policy. No engine file writes, no authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "code_risk_neighbors": {
+      "description": "Show read-only risk neighbors for one engine family, including variants, test/validation neighbors, and patch history hints.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_approved_lockfile_candidate": {
+      "description": "Create a Forge-owned non-authoritative lockfile candidate from approved eligible review ledger rows only. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_approved_lockfile_export": {
+      "description": "Export the human-approved lockfile candidate as JSON and Markdown under Forge-owned manifests. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_approved_lockfile_policy": {
+      "description": "Show Patch 74 human-approved lockfile candidate policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_approved_lockfile_show": {
+      "description": "Show one exact engine_base row from the approved lockfile candidate or exclusions. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_approved_lockfile_validate": {
+      "description": "Validate approved-candidate invariants: approved eligible rows only, no holds, no pending/deferred/rejected rows, no authority. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_brief": {
+      "description": "Generate a plain-English read-only brief for one engine family.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_brief_core": {
+      "description": "Show plain-English read-only briefs for core runtime engine families.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_brief_export": {
+      "description": "Export engine briefs as Forge-owned JSON/Markdown reports. Does not modify engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_brief_holds": {
+      "description": "Show plain-English read-only briefs for held/deferred engine families.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_brief_policy": {
+      "description": "Show Patch 77 read-only engine brief policy.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_canonical_export": {
+      "description": "Export the canonical engine review as JSON and Markdown under Forge-owned manifests. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_canonical_policy": {
+      "description": "Show the Patch 68 canonical engine review policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_canonical_review": {
+      "description": "Create a Forge-owned review-only canonical engine candidate report. Does not move/delete/quarantine/lock engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_canonical_show": {
+      "description": "Show one canonical engine family and its variants from the review layer. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_decision_core": {
+      "description": "Show decision rows for core runtime engine bases that require symbolic-runtime review before lockfile. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_decision_draft": {
+      "description": "Create a Forge-owned review-only draft of keep/hold decisions for canonical engine candidates. Does not lock/move/delete/quarantine engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_decision_exact": {
+      "description": "Show exactly one engine_base decision row without fuzzy variant-path matches. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_decision_export": {
+      "description": "Export the canonical engine decision draft as JSON and Markdown under Forge-owned manifests. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_decision_holds": {
+      "description": "Show only canonical engine decision rows that are on manual hold. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_decision_list": {
+      "description": "List Patch 69 decision draft rows by HOLD, DRAFT, ALL, or exact decision type. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_decision_policy": {
+      "description": "Show the Patch 69 canonical engine decision-draft policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_decision_show": {
+      "description": "Show one canonical engine decision draft row and its required human checks. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_decision_summary": {
+      "description": "Show Patch 70 read-only summary of decision counts, holds, confidence, and high-variant families.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_lockfile_draft": {
+      "description": "Create a Forge-owned draft canonical engine lockfile from DRAFT decisions only. Excludes HOLD families. Does not move/delete/quarantine/lock engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_lockfile_export": {
+      "description": "Export draft canonical engine lockfile JSON and Markdown under Forge-owned manifests. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_lockfile_policy": {
+      "description": "Show Patch 71 draft canonical engine lockfile policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_lockfile_show": {
+      "description": "Show one exact engine_base row from the draft lockfile payload, including held/excluded status. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_lockfile_validate": {
+      "description": "Validate draft lockfile invariants: no HOLD rows included, no destructive claims, no duplicate included bases. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_readiness_export": {
+      "description": "Export approved candidate readiness report as JSON and Markdown under Forge-owned manifests. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_readiness_policy": {
+      "description": "Show Patch 78 approved candidate readiness report policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_readiness_report": {
+      "description": "Summarize human-approved candidate readiness before final authority. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_readiness_risks": {
+      "description": "Summarize remaining blockers before any final engine authority. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_readiness_show": {
+      "description": "Show one approved candidate readiness row. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_batch_approve_core": {
+      "description": "Batch-approve non-held core runtime candidates in the review ledger only. Does not create canonical authority or touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_defer_holds": {
+      "description": "Batch-defer all held engine families in the review ledger only. Held families remain excluded.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_export": {
+      "description": "Export Patch 73 batch review ledger/status as JSON and Markdown. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_plan": {
+      "description": "Create a Forge-owned batch review plan for core approvals and held-family deferrals. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_policy": {
+      "description": "Show Patch 73 engine review batch policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_batch_status": {
+      "description": "Summarize Patch 73 batch review progress for core rows and held families. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_export": {
+      "description": "Export the engine review ledger as JSON and Markdown under Forge-owned manifests. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_ledger_init": {
+      "description": "Initialize a Forge-owned human review ledger from the draft canonical engine lockfile. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_ledger_policy": {
+      "description": "Show Patch 72 human review ledger policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_mark": {
+      "description": "Record human review status for one engine family in the Forge-owned review ledger. Does not grant canonical authority or touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_show": {
+      "description": "Show one exact engine review ledger row. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_status": {
+      "description": "Summarize the engine review ledger approval/deferred/rejected/pending state. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "list_allowed_folders": {
+      "description": "List the currently approved and session-scoped folders Forge can access.",
+      "executes": false,
+      "trust_level": 0.5,
+      "writes": false
+    },
+    "list_files": {
+      "description": "List files inside an approved directory up to a given depth.",
+      "executes": false,
+      "trust_level": 0.5,
+      "writes": false
+    },
+    "llm_memory_correction": {
+      "description": "Write a safe correction receipt so future LLM-facing work can reference prior mistakes and fixes. No project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_memory_export": {
+      "description": "Export LLM memory ledger summary as JSON and Markdown under Forge-owned memory only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_memory_init": {
+      "description": "Initialize Forge-owned LLM memory ledger folders and policy receipts. Does not touch project files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_memory_log_turn": {
+      "description": "Write a safe LLM turn receipt containing summaries, recommendations, outcomes, and next command context. No hidden chain-of-thought.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_memory_policy": {
+      "description": "Show Patch 75 LLM memory ledger policy. Read-only; no hidden chain-of-thought storage.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_memory_search": {
+      "description": "Search Forge-owned LLM memory receipts by plain text. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_memory_session": {
+      "description": "Summarize LLM memory ledger/session state. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_memory_show": {
+      "description": "Show latest or selected LLM memory receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_tool_check": {
+      "description": "Check whether a requested Forge tool is allowed through the LLM gateway. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_tool_init": {
+      "description": "Initialize Forge-owned LLM tool gateway policy/index receipts. Does not touch project files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_tool_list": {
+      "description": "List read-only gateway-eligible tools. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_tool_mode": {
+      "description": "Show current LLM tool gateway mode and authority limits. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_tool_policy": {
+      "description": "Show Patch 76 LLM tool gateway policy. Read-only; no tool execution.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_tool_report": {
+      "description": "Show latest or selected LLM tool request receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_tool_request": {
+      "description": "Write an audited LLM tool request receipt under Forge-owned llm_memory_v1/tool_requests. Does not execute tools.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "patch_apply_gate_matrix": {
+      "description": "Read-only full matrix showing whether an apply plan passes disk, sandbox, test, and relevance gates.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_apply_gate_show": {
+      "description": "Detailed read-only full apply gate matrix for one apply plan.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_apply_gate_status": {
+      "description": "Read-only summary of recent apply plans and which gate blocks them.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_sandbox_apply": {
+      "description": "Apply a patch plan to a Forge-owned sandbox copy only. Never modifies project files.",
+      "executes": false,
+      "trust_level": 4.5,
+      "writes": true
+    },
+    "patch_sandbox_clean": {
+      "description": "Delete a Forge-owned sandbox copy after explicit CLEAN confirmation. Reports are preserved.",
+      "executes": false,
+      "trust_level": 4.5,
+      "writes": true
+    },
+    "patch_sandbox_gate_check": {
+      "description": "Read-only check that an apply plan has a matching SANDBOX_APPLIED report before real patch-apply.",
+      "executes": false,
+      "trust_level": 4.8,
+      "writes": false
+    },
+    "patch_sandbox_gate_status": {
+      "description": "Read-only summary of sandbox reports that can satisfy the Patch 62 apply gate.",
+      "executes": false,
+      "trust_level": 4.8,
+      "writes": false
+    },
+    "patch_sandbox_plan": {
+      "description": "Create a Forge-owned sandbox rehearsal plan from an approved apply plan. Does not modify project files.",
+      "executes": false,
+      "trust_level": 4.5,
+      "writes": true
+    },
+    "patch_sandbox_report": {
+      "description": "Show the current sandbox plan/report state.",
+      "executes": false,
+      "trust_level": 4.5,
+      "writes": false
+    },
+    "patch_sandbox_smoke_apply": {
+      "description": "Apply the Patch 61 smoke plan through sandbox mode only. Writes only under Forge-owned sandbox folders.",
+      "executes": false,
+      "trust_level": 4.5,
+      "writes": true
+    },
+    "patch_sandbox_smoke_clean": {
+      "description": "Delete the Forge-owned smoke sandbox copy after explicit CLEAN confirmation. Reports are preserved.",
+      "executes": false,
+      "trust_level": 4.5,
+      "writes": true
+    },
+    "patch_sandbox_smoke_plan": {
+      "description": "Create a Forge-owned smoke target plus matching apply/sandbox plan to prove the sandbox success path. Never modifies AI.Web project files.",
+      "executes": false,
+      "trust_level": 4.5,
+      "writes": true
+    },
+    "patch_sandbox_smoke_report": {
+      "description": "Show the Patch 61 smoke sandbox plan/report state.",
+      "executes": false,
+      "trust_level": 4.5,
+      "writes": false
+    },
+    "patch_test_bind": {
+      "description": "Bind one apply plan to one successful Patch 64 safe test report. Writes only Forge-owned patch_test_bindings JSON.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "patch_test_binding_report": {
+      "description": "Read one Forge-owned patch/test binding receipt.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_test_gate_check": {
+      "description": "Read-only check that an apply plan has a matching TEST_BOUND safe test receipt before real patch-apply.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_test_gate_status": {
+      "description": "Read-only summary of safe test bindings eligible for the Patch 65 apply gate.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_test_relevance_check": {
+      "description": "Read-only check that a patch/test binding uses a relevant safe test, not an unrelated PASS report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_test_relevance_policy": {
+      "description": "Show Patch 66 rules for relevant safe test binding. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_test_relevance_status": {
+      "description": "Summarize TEST_BOUND receipts by relevance status.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "propose_command": {
+      "description": "Propose a safe diagnostic shell command for Nic to run manually. Forge never executes it.",
+      "executes": false,
+      "trust_level": 0.6,
+      "writes": false
+    },
+    "read_file": {
+      "description": "Read the contents of a file inside an approved path.",
+      "executes": false,
+      "trust_level": 0.5,
+      "writes": false
+    },
+    "run_safe_command": {
+      "description": "Execute a command from the Level 1.0 hard-coded allowlist. No shell. No user input in argv.",
+      "executes": true,
+      "trust_level": 1.0,
+      "writes": false
+    },
+    "run_tests": {
+      "description": "Run the project test suite and return output.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "search_knowledge_base": {
+      "description": "Search the local ChromaDB knowledge base. Only available after indexing.",
+      "executes": false,
+      "trust_level": 0.5,
+      "writes": false
+    },
+    "search_text": {
+      "description": "Search for a text string across files in an approved path.",
+      "executes": false,
+      "trust_level": 0.5,
+      "writes": false
+    },
+    "show_diff": {
+      "description": "Show the diff between current file and a proposed change.",
+      "executes": false,
+      "trust_level": 2.0,
+      "writes": false
+    },
+    "snapshot_create_policy": {
+      "description": "Show Patch 81 snapshot manifest dry-run policy. Read-only; no snapshot creation or restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_diff_plan": {
+      "description": "Compare latest snapshot plan metadata only. No file diff and no restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_export": {
+      "description": "Export snapshot plan index as Forge-owned JSON/Markdown. Does not copy project files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_manifest_dry_run": {
+      "description": "Write a Forge-owned dry-run hash manifest receipt for future snapshots. Does not copy project files or grant restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_manifest_export": {
+      "description": "Export the snapshot manifest dry-run index as JSON and Markdown under Forge-owned memory. Does not copy project files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_manifest_show": {
+      "description": "Show a snapshot manifest dry-run receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_manifest_validate": {
+      "description": "Validate dry-run snapshot manifest invariants: no copy, no restore, hashes present. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_plan": {
+      "description": "Write a Forge-owned forensic snapshot plan receipt. Does not copy project files and does not restore anything.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_policy": {
+      "description": "Show Patch 80 snapshot planning policy. Plan/export only; no snapshot creation or restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_readiness_blockers": {
+      "description": "Show blockers/warnings from a snapshot readiness receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_readiness_check": {
+      "description": "Verify latest dry-run snapshot manifest and write Forge-owned readiness receipt. No snapshot creation or restore.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_readiness_export": {
+      "description": "Export snapshot readiness receipt index as JSON and Markdown under Forge-owned memory. No snapshot creation or restore.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_readiness_policy": {
+      "description": "Show Patch 82 snapshot manifest verify / snapshot-create readiness gate policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_readiness_show": {
+      "description": "Show a snapshot readiness receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_show": {
+      "description": "Show one snapshot plan receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "test_inventory": {
+      "description": "Read-only inventory of indexed test files, configs, logs, and engine test coverage. Does not execute tests.",
+      "executes": false,
+      "trust_level": 4.8,
+      "writes": false
+    },
+    "test_policy": {
+      "description": "Show the safe-test policy and future execution allowlist rules. Does not execute tests.",
+      "executes": false,
+      "trust_level": 4.8,
+      "writes": false
+    },
+    "test_readiness": {
+      "description": "Read-only readiness summary for future safe test runner integration.",
+      "executes": false,
+      "trust_level": 4.8,
+      "writes": false
+    },
+    "test_run_history": {
+      "description": "List recent safe test run reports.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "test_run_policy": {
+      "description": "Show Patch 64 allowlisted safe test runner policy. Does not execute tests.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "test_run_report": {
+      "description": "Read one safe test run report from Forge-owned memory/test_run_reports.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "test_run_safe": {
+      "description": "Run one explicit allowlisted Python test target using subprocess argv with shell=False. Writes only test run reports.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "test_run_smoke": {
+      "description": "Create a Forge-owned smoke Python file and compile it through the Patch 64 safe runner.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "test_show": {
+      "description": "Read-only display of test inventory rows by path, framework, or engine.",
+      "executes": false,
+      "trust_level": 4.8,
+      "writes": false
+    },
+    "write_proposed_patch": {
+      "description": "Write a patch proposal to ~/forge/proposed_patches/. NEVER modifies project files. Nic applies manually.",
+      "executes": false,
+      "trust_level": 2.0,
+      "writes": false
+    },
+    "snapshot_archive_policy": {
+      "description": "Show Patch 83 snapshot-create/no-restore policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_create": {
+      "description": "Create a Forge-owned snapshot archive from the latest validated manifest/readiness receipts. No restore or project-write authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_create_show": {
+      "description": "Show a snapshot create receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_create_verify": {
+      "description": "Verify a snapshot create receipt and copied files. Read-only verification; no restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_create_export": {
+      "description": "Export snapshot create receipt index as Forge-owned JSON/Markdown. No restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    }
+  }
+}

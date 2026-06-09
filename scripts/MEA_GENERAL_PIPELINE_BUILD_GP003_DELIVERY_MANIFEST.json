@@ -1,0 +1,13 @@
+{
+  "build_id": "GENERAL-LEARNING-TO-ANSWER-PIPELINE-MULTISTEP-WORDPROBLEMS-BUILD-GP-003",
+  "schema_version": "general_pipeline_v1_build_gp003",
+  "built_against": "gp_post_gp002_state_for_claude (live installed GP-001+GP-002, byte-verified)",
+  "install_type": "additive_source_overlay_new_files_only",
+  "modifies_existing_files": false,
+  "prior_files_untouched": true,
+  "adds_learned_domain": "multi_step_count_change",
+  "activation": "import rmc_engine_v1.general_pipeline.gp003_word_problems and call activate() (idempotent; compose with gp002 activate())",
+  "routing_diagnostic": "zero collisions across all four loaded domains",
+  "boundaries": ["in_memory_only","no_route","no_ui","no_llm","no_file_io","no_memory_write","no_chroma","no_identity_vault","no_ct_or_ledger"],
+  "expected_results": {"behavior": "Total:29 Passed:29 Failed:0", "verify": "Total:31 Passed:31 Failed:0"}
+}

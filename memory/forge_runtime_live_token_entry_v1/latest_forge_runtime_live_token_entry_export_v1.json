@@ -1,0 +1,138 @@
+{
+  "created_at": "20260520_165137",
+  "export_type": "FORGE_RUNTIME_LIVE_TOKEN_ENTRY_EXPORT_V1",
+  "payload": {
+    "active_patch": "Patch 169 \u2014 Runtime Live Build Human Approval Token Entry Gate",
+    "approval_entry_status": "TEMPLATE_READY_NOT_ENTERED",
+    "approval_token_status": "TEMPLATE_READY_NOT_APPROVED",
+    "approval_token_template": {
+      "approval_present": false,
+      "candidate": "failsafe_manager",
+      "entry_captured": false,
+      "instructions": "Do not type this token unless Nic intentionally approves a future live runtime write in a separate approval step.",
+      "required_phrase": "APPROVE_RUNTIME_LIVE_BUILD_FAILSAFE_MANAGER_ac243190ee3a80c5",
+      "required_phrase_hash": "4a3331971186fdabb0d9a6b32d5340702007658e71a15e47a5a75ecdd487bb51",
+      "status": "TEMPLATE_READY_NOT_ENTERED",
+      "token_type": "HUMAN_APPROVAL_TOKEN_TEMPLATE"
+    },
+    "authority": {
+      "engine_file_write_authority": false,
+      "forge_memory_write_only": true,
+      "patch_apply_authority": false,
+      "project_file_write_authority": false,
+      "read_only": true,
+      "runtime_file_write_authority": false,
+      "server_started": false,
+      "shell_execution_authority": false
+    },
+    "candidate": "failsafe_manager",
+    "created_at": "20260520_165109",
+    "current_phase": "S19O \u2014 Runtime Live Build Human Approval Token Entry Gate",
+    "engine_writes": 0,
+    "execution_decision": "HOLD_FOR_HUMAN_APPROVAL",
+    "gate_summary": {
+      "fail": 0,
+      "locked": 2,
+      "pass": 6,
+      "warn": 0
+    },
+    "gates": [
+      {
+        "detail": "FORGE_RUNTIME_LIVE_DECISION_READY_GATE_LOCKED",
+        "id": "T01",
+        "name": "Approval decision report exists",
+        "status": "PASS"
+      },
+      {
+        "detail": "FORGE_RUNTIME_LIVE_EXECUTION_PLAN_READY_GATE_LOCKED",
+        "id": "T02",
+        "name": "Execution plan report exists",
+        "status": "PASS"
+      },
+      {
+        "detail": "FORGE_RUNTIME_LIVE_FINAL_APPROVAL_GATE_READY_LOCKED",
+        "id": "T03",
+        "name": "Final approval gate exists",
+        "status": "PASS"
+      },
+      {
+        "detail": "failsafe_manager",
+        "id": "T04",
+        "name": "Candidate known",
+        "status": "PASS"
+      },
+      {
+        "detail": "planned_files=4",
+        "id": "T05",
+        "name": "Planned files available",
+        "status": "PASS"
+      },
+      {
+        "detail": "TEMPLATE_READY_NOT_ENTERED",
+        "id": "T06",
+        "name": "Human approval token entry captured",
+        "status": "LOCKED"
+      },
+      {
+        "detail": "runtime writes remain disabled",
+        "id": "T07",
+        "name": "Live runtime write authority",
+        "status": "LOCKED"
+      },
+      {
+        "detail": "runtime_writes=0 project_writes=0 engine_writes=0",
+        "id": "T08",
+        "name": "No live writes performed",
+        "status": "PASS"
+      }
+    ],
+    "human_approval_present": false,
+    "live_build_ready": false,
+    "next_patch": "Patch 170 \u2014 Runtime Live Build Approval Token Validation / Final Execution Preflight",
+    "plain_english": "Patch 169 creates a separate human approval token entry gate. It generates the required token template but does not treat it as entered and performs zero live writes.",
+    "planned_file_count": 4,
+    "planned_files": [
+      {
+        "live_write_planned_now": false,
+        "relative_path": "governance_and_safety/failsafe_manager/README.md",
+        "sandbox_source": "final_gate",
+        "source": "final_gate",
+        "target_relative_path": "governance_and_safety/failsafe_manager/README.md"
+      },
+      {
+        "live_write_planned_now": false,
+        "relative_path": "governance_and_safety/failsafe_manager/runtime_manifest.json",
+        "sandbox_source": "final_gate",
+        "source": "final_gate",
+        "target_relative_path": "governance_and_safety/failsafe_manager/runtime_manifest.json"
+      },
+      {
+        "live_write_planned_now": false,
+        "relative_path": "governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py",
+        "sandbox_source": "final_gate",
+        "source": "final_gate",
+        "target_relative_path": "governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py"
+      },
+      {
+        "live_write_planned_now": false,
+        "relative_path": "governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py",
+        "sandbox_source": "final_gate",
+        "source": "final_gate",
+        "target_relative_path": "governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py"
+      }
+    ],
+    "planning_ready": true,
+    "prior_human_approval_detected": false,
+    "problem_count": 0,
+    "problems": [],
+    "project_writes": 0,
+    "recommended_next_patch": "Patch 170 \u2014 Runtime Live Build Approval Token Validation / Final Execution Preflight",
+    "report_type": "FORGE_RUNTIME_LIVE_HUMAN_APPROVAL_TOKEN_ENTRY_GATE_V1",
+    "roadmap_mutation_policy": "APPEND_ONLY",
+    "runtime_writes": 0,
+    "schema_version": "forge_runtime_live_token_entry_v1_patch169",
+    "status": "FORGE_RUNTIME_LIVE_TOKEN_ENTRY_READY_GATE_LOCKED"
+  },
+  "source_report": "/home/nic/forge/memory/forge_runtime_live_token_entry_v1/latest_forge_runtime_live_token_entry_v1.json",
+  "source_status": "FORGE_RUNTIME_LIVE_TOKEN_ENTRY_READY_GATE_LOCKED"
+}

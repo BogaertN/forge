@@ -1,0 +1,4828 @@
+{
+  "_comment": "Records every file indexed into the ChromaDB knowledge base. INACTIVE until Level 0.5C.",
+  "_status": "inactive",
+  "db_path": "/home/nic/forge/memory/chroma_db",
+  "embedding_model": "nomic-embed-text",
+  "entries": [
+    {
+      "path": "/home/nic/forge_test_project/test.txt",
+      "project": "forge_test_project",
+      "hash": "fc0a6c04e779f517",
+      "indexed_at": "2026-05-08T16:07:30",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.03
+    },
+    {
+      "path": "/home/nic/forge_test_project/kb_audit_test.txt",
+      "project": "forge_test_project",
+      "hash": "e28f77cb98a8e265",
+      "indexed_at": "2026-05-08T16:44:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.04
+    },
+    {
+      "path": "/home/nic/aiweb/agents/athena/README.md",
+      "project": "aiweb",
+      "hash": "cb1222ec2b399a64",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.9
+    },
+    {
+      "path": "/home/nic/aiweb/agents/athena/athena_core.py",
+      "project": "aiweb",
+      "hash": "6bf23c7a34f3225c",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.5
+    },
+    {
+      "path": "/home/nic/aiweb/agents/athena/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "8b2c7548edeb26b6",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.42
+    },
+    {
+      "path": "/home/nic/aiweb/agents/athena/run.py",
+      "project": "aiweb",
+      "hash": "019176113b3539d6",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.22
+    },
+    {
+      "path": "/home/nic/aiweb/agents/athena/test_athena_core.py",
+      "project": "aiweb",
+      "hash": "0c9f674f2f6ed842",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.42
+    },
+    {
+      "path": "/home/nic/aiweb/agents/gilligan/gilligan_breathing_upgrade_v1/README.md",
+      "project": "aiweb",
+      "hash": "967aa52c69f21bee",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.81
+    },
+    {
+      "path": "/home/nic/aiweb/agents/gilligan/gilligan_breathing_upgrade_v1/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "c3e4d93da9f674c4",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.29
+    },
+    {
+      "path": "/home/nic/aiweb/agents/gilligan/gilligan_breathing_upgrade_v1/run.py",
+      "project": "aiweb",
+      "hash": "54bfa164b7273663",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 3,
+      "file_type": ".py",
+      "size_kb": 1.92
+    },
+    {
+      "path": "/home/nic/aiweb/agents/gilligan/README.md",
+      "project": "aiweb",
+      "hash": "a8448e0f27963746",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 1.4
+    },
+    {
+      "path": "/home/nic/aiweb/agents/gilligan/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "d994f7dc2409ed7d",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.69
+    },
+    {
+      "path": "/home/nic/aiweb/agents/gilligan/gilligan_core.py",
+      "project": "aiweb",
+      "hash": "3f031ffb80ddade5",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.52
+    },
+    {
+      "path": "/home/nic/aiweb/agents/gilligan/run.py",
+      "project": "aiweb",
+      "hash": "806e98fc2be8b58b",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 1.21
+    },
+    {
+      "path": "/home/nic/aiweb/agents/gilligan/test_gilligan_core.py",
+      "project": "aiweb",
+      "hash": "9f685a9a8624b6ce",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.43
+    },
+    {
+      "path": "/home/nic/aiweb/agents/gilligan/test_run_agent.py",
+      "project": "aiweb",
+      "hash": "7aa9a86175d24f0d",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.23
+    },
+    {
+      "path": "/home/nic/aiweb/agents/neo/README.md",
+      "project": "aiweb",
+      "hash": "3b001e10ac791953",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.88
+    },
+    {
+      "path": "/home/nic/aiweb/agents/neo/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "e594eda7f88787f9",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.42
+    },
+    {
+      "path": "/home/nic/aiweb/agents/neo/neo_core.py",
+      "project": "aiweb",
+      "hash": "696a82e6505f2c8c",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.49
+    },
+    {
+      "path": "/home/nic/aiweb/agents/neo/run.py",
+      "project": "aiweb",
+      "hash": "dd846724b175bca8",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.21
+    },
+    {
+      "path": "/home/nic/aiweb/agents/neo/test_neo_core.py",
+      "project": "aiweb",
+      "hash": "642139d778ed8a4c",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.41
+    },
+    {
+      "path": "/home/nic/aiweb/engines/admin_override_console/README.md",
+      "project": "aiweb",
+      "hash": "0ea52d4577a1149d",
+      "indexed_at": "2026-05-08T17:30:08",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.95
+    },
+    {
+      "path": "/home/nic/aiweb/engines/admin_override_console/admin_override_core.py",
+      "project": "aiweb",
+      "hash": "83740f67c3227419",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.57
+    },
+    {
+      "path": "/home/nic/aiweb/engines/admin_override_console/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "905916f7b93fa360",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.49
+    },
+    {
+      "path": "/home/nic/aiweb/engines/admin_override_console/test_admin_override_core.py",
+      "project": "aiweb",
+      "hash": "d1bdee103e657e77",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.48
+    },
+    {
+      "path": "/home/nic/aiweb/engines/agent_reflection_engine/README.md",
+      "project": "aiweb",
+      "hash": "3326826534de3f1c",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.18
+    },
+    {
+      "path": "/home/nic/aiweb/engines/agent_reflection_engine/reflection_core.py",
+      "project": "aiweb",
+      "hash": "2feabf3cbcde360c",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.73
+    },
+    {
+      "path": "/home/nic/aiweb/engines/agent_reflection_engine/reflection_manifest.json",
+      "project": "aiweb",
+      "hash": "e2124108c3bf4848",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.17
+    },
+    {
+      "path": "/home/nic/aiweb/engines/agent_reflection_engine/test_reflection.py",
+      "project": "aiweb",
+      "hash": "51597c796861770b",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.4
+    },
+    {
+      "path": "/home/nic/aiweb/engines/aiweb_os_engine/README.md",
+      "project": "aiweb",
+      "hash": "f438156f2aadfe66",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.97
+    },
+    {
+      "path": "/home/nic/aiweb/engines/aiweb_os_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "4a272d9afd46ec9f",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.35
+    },
+    {
+      "path": "/home/nic/aiweb/engines/aiweb_os_engine/run.py",
+      "project": "aiweb",
+      "hash": "9197c8ef8a619a6f",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 4,
+      "file_type": ".py",
+      "size_kb": 1.49
+    },
+    {
+      "path": "/home/nic/aiweb/engines/aiweb_os_engine/status.json",
+      "project": "aiweb",
+      "hash": "741fe6fd2172e730",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.09
+    },
+    {
+      "path": "/home/nic/aiweb/engines/aiweb_os_engine/test_aiweb_os_engine.py",
+      "project": "aiweb",
+      "hash": "a4ccbb93aceeb7d2",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.28
+    },
+    {
+      "path": "/home/nic/aiweb/engines/aiweb_os_engine/test_log.txt",
+      "project": "aiweb",
+      "hash": "54aca18646b22d54",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.23
+    },
+    {
+      "path": "/home/nic/aiweb/engines/ascii_interpreter_engine/README.md",
+      "project": "aiweb",
+      "hash": "5ce7ca3a9f2c7681",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.36
+    },
+    {
+      "path": "/home/nic/aiweb/engines/ascii_interpreter_engine/ascii_core.py",
+      "project": "aiweb",
+      "hash": "ecab6b25f9834263",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 3,
+      "file_type": ".py",
+      "size_kb": 1.38
+    },
+    {
+      "path": "/home/nic/aiweb/engines/ascii_interpreter_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "031b426284514a75",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.27
+    },
+    {
+      "path": "/home/nic/aiweb/engines/ascii_interpreter_engine/test_ascii_core.py",
+      "project": "aiweb",
+      "hash": "0ddef67c649165cc",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.33
+    },
+    {
+      "path": "/home/nic/aiweb/engines/athena_engine/README.md",
+      "project": "aiweb",
+      "hash": "9ab485c89a3acecc",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.21
+    },
+    {
+      "path": "/home/nic/aiweb/engines/athena_engine/athena_core.py",
+      "project": "aiweb",
+      "hash": "fbdde9edf3e7b84e",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.72
+    },
+    {
+      "path": "/home/nic/aiweb/engines/athena_engine/athena_manifest.json",
+      "project": "aiweb",
+      "hash": "2f3016e48cf9e779",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.17
+    },
+    {
+      "path": "/home/nic/aiweb/engines/athena_engine/athena_state.json",
+      "project": "aiweb",
+      "hash": "efec3c1d65891669",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.1
+    },
+    {
+      "path": "/home/nic/aiweb/engines/athena_engine/test_athena.py",
+      "project": "aiweb",
+      "hash": "68f7621ee8694af5",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.39
+    },
+    {
+      "path": "/home/nic/aiweb/engines/christping_listener/README.md",
+      "project": "aiweb",
+      "hash": "c8f7c7ef2e96bfec",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 1.06
+    },
+    {
+      "path": "/home/nic/aiweb/engines/christping_listener/christ_listener.py",
+      "project": "aiweb",
+      "hash": "28272b5541abd5bb",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 3,
+      "file_type": ".py",
+      "size_kb": 1.01
+    },
+    {
+      "path": "/home/nic/aiweb/engines/christping_listener/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "3661878d7c34a9e0",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.36
+    },
+    {
+      "path": "/home/nic/aiweb/engines/christping_listener/listener_config.json",
+      "project": "aiweb",
+      "hash": "0740b668e8a3136f",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.03
+    },
+    {
+      "path": "/home/nic/aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/README.md",
+      "project": "aiweb",
+      "hash": "52e525b9d15de243",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.74
+    },
+    {
+      "path": "/home/nic/aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "5c00699aaaaee03e",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.45
+    },
+    {
+      "path": "/home/nic/aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/ping_calibrator_core.py",
+      "project": "aiweb",
+      "hash": "52a21d7408e55a2a",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.51
+    },
+    {
+      "path": "/home/nic/aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/test_ping_calibrator_core.py",
+      "project": "aiweb",
+      "hash": "01100d8b190abb8e",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.39
+    },
+    {
+      "path": "/home/nic/aiweb/engines/christping_validator_engine/README.md",
+      "project": "aiweb",
+      "hash": "c3b21a5ad3aa8cf4",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.89
+    },
+    {
+      "path": "/home/nic/aiweb/engines/christping_validator_engine/christping_validator_core.py",
+      "project": "aiweb",
+      "hash": "0723af7717778e63",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.52
+    },
+    {
+      "path": "/home/nic/aiweb/engines/christping_validator_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "5c00699aaaaee03e",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.45
+    },
+    {
+      "path": "/home/nic/aiweb/engines/christping_validator_engine/test_christping_validator_core.py",
+      "project": "aiweb",
+      "hash": "2885e2ad960f7a59",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.37
+    },
+    {
+      "path": "/home/nic/aiweb/engines/code_patch_engine/README.md",
+      "project": "aiweb",
+      "hash": "c4470fa99a225858",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.23
+    },
+    {
+      "path": "/home/nic/aiweb/engines/code_patch_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "a3c8d9b539a38fbc",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.19
+    },
+    {
+      "path": "/home/nic/aiweb/engines/code_patch_engine/patch_core.py",
+      "project": "aiweb",
+      "hash": "53cdf2febbc11001",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.36
+    },
+    {
+      "path": "/home/nic/aiweb/engines/code_patch_engine/test_patch_core.py",
+      "project": "aiweb",
+      "hash": "73e04191993c6e1c",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.35
+    },
+    {
+      "path": "/home/nic/aiweb/engines/cold_archive_engine/README.md",
+      "project": "aiweb",
+      "hash": "64f7c1620612481a",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.2
+    },
+    {
+      "path": "/home/nic/aiweb/engines/cold_archive_engine/archive_core.py",
+      "project": "aiweb",
+      "hash": "e48a8bbe2ca248e3",
+      "indexed_at": "2026-05-08T17:30:09",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.52
+    },
+    {
+      "path": "/home/nic/aiweb/engines/cold_archive_engine/archive_state.json",
+      "project": "aiweb",
+      "hash": "2a189905499f8d68",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.14
+    },
+    {
+      "path": "/home/nic/aiweb/engines/cold_archive_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "9902bf854130025c",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.17
+    },
+    {
+      "path": "/home/nic/aiweb/engines/cold_archive_engine/test_archive.py",
+      "project": "aiweb",
+      "hash": "ba3679ce27adb3b9",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.3
+    },
+    {
+      "path": "/home/nic/aiweb/engines/collapse_prevention_engine/README.md",
+      "project": "aiweb",
+      "hash": "d97f20764949bd95",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.91
+    },
+    {
+      "path": "/home/nic/aiweb/engines/collapse_prevention_engine/collapse_prevention_core.py",
+      "project": "aiweb",
+      "hash": "d66665f2df98506a",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.56
+    },
+    {
+      "path": "/home/nic/aiweb/engines/collapse_prevention_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "266e3fa79c3bc56e",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.45
+    },
+    {
+      "path": "/home/nic/aiweb/engines/collapse_prevention_engine/test_collapse_prevention_core.py",
+      "project": "aiweb",
+      "hash": "4198ad9321c59945",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.41
+    },
+    {
+      "path": "/home/nic/aiweb/engines/compute_contribution_engine/README.md",
+      "project": "aiweb",
+      "hash": "a3cf1fd594f1b005",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.19
+    },
+    {
+      "path": "/home/nic/aiweb/engines/compute_contribution_engine/contribution_core.py",
+      "project": "aiweb",
+      "hash": "185e79b07913e88c",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.75
+    },
+    {
+      "path": "/home/nic/aiweb/engines/compute_contribution_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "b0c3de7647f1c6a8",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.2
+    },
+    {
+      "path": "/home/nic/aiweb/engines/compute_contribution_engine/test_contribution.py",
+      "project": "aiweb",
+      "hash": "ac671f705530065e",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.33
+    },
+    {
+      "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/README.md",
+      "project": "aiweb",
+      "hash": "604aa8576157225f",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.21
+    },
+    {
+      "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/dashboard_core.py",
+      "project": "aiweb",
+      "hash": "9cdadc600cb2a84a",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 1.31
+    },
+    {
+      "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/dashboard_output.json",
+      "project": "aiweb",
+      "hash": "00a3ddfaa314ef9f",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.12
+    },
+    {
+      "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "7320ae4d759c466b",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.19
+    },
+    {
+      "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/test_contribution_dashboard.py",
+      "project": "aiweb",
+      "hash": "788e3f47075e55c3",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.32
+    },
+    {
+      "path": "/home/nic/aiweb/engines/control_panel_ui_engine/templates/index.html",
+      "project": "aiweb",
+      "hash": "95e3b01073680249",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".html",
+      "size_kb": 1.0
+    },
+    {
+      "path": "/home/nic/aiweb/engines/control_panel_ui_engine/test_log.txt",
+      "project": "aiweb",
+      "hash": "cad8693a417c54c7",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.05
+    },
+    {
+      "path": "/home/nic/aiweb/engines/control_panel_ui_engine/ui_server.py",
+      "project": "aiweb",
+      "hash": "0b11b4b4f5381504",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 3,
+      "file_type": ".py",
+      "size_kb": 2.55
+    },
+    {
+      "path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/templates/index.html",
+      "project": "aiweb",
+      "hash": "d09ce3132e0dfc48",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".html",
+      "size_kb": 2.12
+    },
+    {
+      "path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/README.md",
+      "project": "aiweb",
+      "hash": "4033b1db3336a320",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.41
+    },
+    {
+      "path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "deae8001406e734b",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.44
+    },
+    {
+      "path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/style.css",
+      "project": "aiweb",
+      "hash": "b13495bb80c9ee63",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".css",
+      "size_kb": 0.22
+    },
+    {
+      "path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/test_log.txt",
+      "project": "aiweb",
+      "hash": "cad8693a417c54c7",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.05
+    },
+    {
+      "path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/ui_server.py",
+      "project": "aiweb",
+      "hash": "081190c36f5268b4",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 3,
+      "file_type": ".py",
+      "size_kb": 2.37
+    },
+    {
+      "path": "/home/nic/aiweb/engines/core_stack_breather/README.md",
+      "project": "aiweb",
+      "hash": "c2af2db4e430a176",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.34
+    },
+    {
+      "path": "/home/nic/aiweb/engines/core_stack_breather/core_breather.py",
+      "project": "aiweb",
+      "hash": "69d62eacf0079e5b",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.75
+    },
+    {
+      "path": "/home/nic/aiweb/engines/core_stack_breather/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "4d48f67fe9f4c8a6",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.16
+    },
+    {
+      "path": "/home/nic/aiweb/engines/core_stack_breather/test_core_breather.py",
+      "project": "aiweb",
+      "hash": "8511b10874d2b244",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.29
+    },
+    {
+      "path": "/home/nic/aiweb/engines/document_output_formatter/README.md",
+      "project": "aiweb",
+      "hash": "f5a86f5e7af90353",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.14
+    },
+    {
+      "path": "/home/nic/aiweb/engines/document_output_formatter/formatter_core.py",
+      "project": "aiweb",
+      "hash": "611b4b7ac445bc68",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.23
+    },
+    {
+      "path": "/home/nic/aiweb/engines/document_output_formatter/formatter_manifest.json",
+      "project": "aiweb",
+      "hash": "b97521bc75309378",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.16
+    },
+    {
+      "path": "/home/nic/aiweb/engines/document_output_formatter/output_log.json",
+      "project": "aiweb",
+      "hash": "37517e5f3dc66819",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.0
+    },
+    {
+      "path": "/home/nic/aiweb/engines/document_output_formatter/test_formatter.py",
+      "project": "aiweb",
+      "hash": "d53279bd2989c9a9",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.3
+    },
+    {
+      "path": "/home/nic/aiweb/engines/dream_state_engine/README.md",
+      "project": "aiweb",
+      "hash": "691435ed6ca15931",
+      "indexed_at": "2026-05-08T17:30:10",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.2
+    },
+    {
+      "path": "/home/nic/aiweb/engines/dream_state_engine/dream_core.py",
+      "project": "aiweb",
+      "hash": "93261746084bbd12",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.75
+    },
+    {
+      "path": "/home/nic/aiweb/engines/dream_state_engine/dream_manifest.json",
+      "project": "aiweb",
+      "hash": "26e7ede2b0e54987",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.15
+    },
+    {
+      "path": "/home/nic/aiweb/engines/dream_state_engine/test_dream.py",
+      "project": "aiweb",
+      "hash": "f07c26f2b6ff89ce",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.4
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_analyzer_tool/README.md",
+      "project": "aiweb",
+      "hash": "6f9b8d7f76b480ba",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.87
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_analyzer_tool/drift_analyzer_core.py",
+      "project": "aiweb",
+      "hash": "e8dcfbcba7e115a6",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.52
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_analyzer_tool/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "709a09acdc34b606",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.43
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_analyzer_tool/test_drift_analyzer_core.py",
+      "project": "aiweb",
+      "hash": "a837b9374ea8cdb3",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.45
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_arbitration_engine/entropy_buffer_upgrade/README.md",
+      "project": "aiweb",
+      "hash": "31fe9d174d691e5e",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.6
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_arbitration_engine/entropy_buffer_upgrade/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "f60064b59d6312c1",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.19
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_arbitration_engine/entropy_buffer_upgrade/entropy_buffer_core.py",
+      "project": "aiweb",
+      "hash": "a935be537ac15421",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.84
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_arbitration_engine/entropy_buffer_upgrade/test_entropy_buffer_core.py",
+      "project": "aiweb",
+      "hash": "ab206261b8bafc2c",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.49
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_arbitration_engine/README.md",
+      "project": "aiweb",
+      "hash": "102cfc27a634f666",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 1.41
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_arbitration_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "c228373bc7abefb0",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.53
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_arbitration_engine/run.py",
+      "project": "aiweb",
+      "hash": "f10d5601c4159d52",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 4,
+      "file_type": ".py",
+      "size_kb": 1.93
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_arbitration_engine/test_drift_arbitration.py",
+      "project": "aiweb",
+      "hash": "7123d24d6b14ca2c",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.74
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_arbitration_engine/test_entropy_buffer_integration.py",
+      "project": "aiweb",
+      "hash": "a67169955ad4a83f",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.54
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_arbitration_engine/test_log.txt",
+      "project": "aiweb",
+      "hash": "b9f7c8892f9a9dcc",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.13
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/ghost_loop_tagger/README.md",
+      "project": "aiweb",
+      "hash": "a7661960efb7f46f",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.28
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/ghost_loop_tagger/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "dc541ea2424a46ce",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.21
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/ghost_loop_tagger/ghost_tagger_core.py",
+      "project": "aiweb",
+      "hash": "ce703d4977c965c5",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.55
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/ghost_loop_tagger/test_ghost_tagger_core.py",
+      "project": "aiweb",
+      "hash": "e0e43180d9329ee4",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.38
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/README.md",
+      "project": "aiweb",
+      "hash": "47b5c99c965d9381",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.89
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "f15f806aa76de874",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.41
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/ghost_tagger_core.py",
+      "project": "aiweb",
+      "hash": "ce703d4977c965c5",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.55
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/test_ghost_tagger_core.py",
+      "project": "aiweb",
+      "hash": "e0e43180d9329ee4",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.38
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_signature_logger/README.md",
+      "project": "aiweb",
+      "hash": "a46ac52d5cb212dc",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.88
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_signature_logger/drift_core.py",
+      "project": "aiweb",
+      "hash": "e741a43d59dde6ea",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.63
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_signature_logger/drift_signature_core.py",
+      "project": "aiweb",
+      "hash": "a6ee7f9502861f56",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.54
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_signature_logger/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "b7735d3f1f8ad2e1",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.44
+    },
+    {
+      "path": "/home/nic/aiweb/engines/drift_signature_logger/test_drift_signature_core.py",
+      "project": "aiweb",
+      "hash": "d8d41dac7e3777f1",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.44
+    },
+    {
+      "path": "/home/nic/aiweb/engines/echo_trace_visualizer/README.md",
+      "project": "aiweb",
+      "hash": "707b00542b46d1bb",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.88
+    },
+    {
+      "path": "/home/nic/aiweb/engines/echo_trace_visualizer/echo_trace_core.py",
+      "project": "aiweb",
+      "hash": "5c512c404777d200",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.52
+    },
+    {
+      "path": "/home/nic/aiweb/engines/echo_trace_visualizer/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "4677f291f5bfb4d5",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.45
+    },
+    {
+      "path": "/home/nic/aiweb/engines/echo_trace_visualizer/test_echo_trace_core.py",
+      "project": "aiweb",
+      "hash": "56b2d40d2990977d",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.47
+    },
+    {
+      "path": "/home/nic/aiweb/engines/entropy_monitor_engine/gradient_entropy_detector/README.md",
+      "project": "aiweb",
+      "hash": "95e7f6592127e4d4",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.83
+    },
+    {
+      "path": "/home/nic/aiweb/engines/entropy_monitor_engine/gradient_entropy_detector/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "cad5f6c0629fded6",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.43
+    },
+    {
+      "path": "/home/nic/aiweb/engines/entropy_monitor_engine/gradient_entropy_detector/gradient_entropy_core.py",
+      "project": "aiweb",
+      "hash": "828b05b11678f0a0",
+      "indexed_at": "2026-05-08T17:30:11",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.48
+    },
+    {
+      "path": "/home/nic/aiweb/engines/entropy_monitor_engine/gradient_entropy_detector/test_gradient_entropy_core.py",
+      "project": "aiweb",
+      "hash": "31ed970d25dca290",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.38
+    },
+    {
+      "path": "/home/nic/aiweb/engines/entropy_monitor_engine/README.md",
+      "project": "aiweb",
+      "hash": "076b024ed1a7911b",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.89
+    },
+    {
+      "path": "/home/nic/aiweb/engines/entropy_monitor_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "46e0b5d17e706122",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.46
+    },
+    {
+      "path": "/home/nic/aiweb/engines/entropy_monitor_engine/entropy_monitor_core.py",
+      "project": "aiweb",
+      "hash": "7ec99518a89f458b",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.55
+    },
+    {
+      "path": "/home/nic/aiweb/engines/entropy_monitor_engine/test_entropy_monitor_core.py",
+      "project": "aiweb",
+      "hash": "c19eee5c585ddc44",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.42
+    },
+    {
+      "path": "/home/nic/aiweb/engines/external_feed_listener/README.md",
+      "project": "aiweb",
+      "hash": "b0b94b26f0719ca6",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.96
+    },
+    {
+      "path": "/home/nic/aiweb/engines/external_feed_listener/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "626ce02c86fec9dd",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.48
+    },
+    {
+      "path": "/home/nic/aiweb/engines/external_feed_listener/external_feed_core.py",
+      "project": "aiweb",
+      "hash": "c50adc1d0bc231c9",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.52
+    },
+    {
+      "path": "/home/nic/aiweb/engines/external_feed_listener/test_external_feed_core.py",
+      "project": "aiweb",
+      "hash": "c763443bdbbee3b1",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.49
+    },
+    {
+      "path": "/home/nic/aiweb/engines/failsafe_manager/README.md",
+      "project": "aiweb",
+      "hash": "4b53cf65fbcda940",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.19
+    },
+    {
+      "path": "/home/nic/aiweb/engines/failsafe_manager/failsafe_core.py",
+      "project": "aiweb",
+      "hash": "5b01786473d87260",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.42
+    },
+    {
+      "path": "/home/nic/aiweb/engines/failsafe_manager/failsafe_manifest.json",
+      "project": "aiweb",
+      "hash": "32356befa5ef8bd8",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.15
+    },
+    {
+      "path": "/home/nic/aiweb/engines/failsafe_manager/failsafe_status.json",
+      "project": "aiweb",
+      "hash": "3a73b169667ebab2",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.14
+    },
+    {
+      "path": "/home/nic/aiweb/engines/failsafe_manager/test_failsafe.py",
+      "project": "aiweb",
+      "hash": "fb2661677517ae8d",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.29
+    },
+    {
+      "path": "/home/nic/aiweb/engines/field_resonance_mapper/external_field_feed_adapter/README.md",
+      "project": "aiweb",
+      "hash": "0aad8cd7de13f12f",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 1.0
+    },
+    {
+      "path": "/home/nic/aiweb/engines/field_resonance_mapper/external_field_feed_adapter/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "74d0eae52cfafa6c",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.49
+    },
+    {
+      "path": "/home/nic/aiweb/engines/field_resonance_mapper/external_field_feed_adapter/field_feed_core.py",
+      "project": "aiweb",
+      "hash": "6edf13de337b2251",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.49
+    },
+    {
+      "path": "/home/nic/aiweb/engines/field_resonance_mapper/external_field_feed_adapter/test_field_feed_core.py",
+      "project": "aiweb",
+      "hash": "45a133451a8d0bdc",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.38
+    },
+    {
+      "path": "/home/nic/aiweb/engines/field_resonance_mapper/README.md",
+      "project": "aiweb",
+      "hash": "95dde5a3669a4181",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 1.16
+    },
+    {
+      "path": "/home/nic/aiweb/engines/field_resonance_mapper/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "5419279cd5eeb26c",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.52
+    },
+    {
+      "path": "/home/nic/aiweb/engines/field_resonance_mapper/resonance_mapper_core.py",
+      "project": "aiweb",
+      "hash": "927cb9d82e30390c",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.55
+    },
+    {
+      "path": "/home/nic/aiweb/engines/field_resonance_mapper/test_resonance_mapper_core.py",
+      "project": "aiweb",
+      "hash": "e5d223641346ef0c",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.4
+    },
+    {
+      "path": "/home/nic/aiweb/engines/fluid_memory_engine/README.md",
+      "project": "aiweb",
+      "hash": "9b5c6850e5679f3d",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.2
+    },
+    {
+      "path": "/home/nic/aiweb/engines/fluid_memory_engine/fluid_memory_core.py",
+      "project": "aiweb",
+      "hash": "22d5b80e5a625a9e",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.73
+    },
+    {
+      "path": "/home/nic/aiweb/engines/fluid_memory_engine/fluid_memory_manifest.json",
+      "project": "aiweb",
+      "hash": "1402d0dc02c6ff1c",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.18
+    },
+    {
+      "path": "/home/nic/aiweb/engines/fluid_memory_engine/test_fluid_memory.py",
+      "project": "aiweb",
+      "hash": "a14018f59bd998bd",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.41
+    },
+    {
+      "path": "/home/nic/aiweb/engines/gilligan_drift_correction_upgrade/README.md",
+      "project": "aiweb",
+      "hash": "61eedad80dca85e8",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.45
+    },
+    {
+      "path": "/home/nic/aiweb/engines/gilligan_drift_correction_upgrade/drift_correction_core.py",
+      "project": "aiweb",
+      "hash": "e0a74586830828fa",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 1.88
+    },
+    {
+      "path": "/home/nic/aiweb/engines/gilligan_drift_correction_upgrade/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "0f2d353be989cf82",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.21
+    },
+    {
+      "path": "/home/nic/aiweb/engines/gilligan_drift_correction_upgrade/test_drift_correction_core.py",
+      "project": "aiweb",
+      "hash": "ad4c2b3c630cbf81",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.32
+    },
+    {
+      "path": "/home/nic/aiweb/engines/glyph_engine/dynamic_symbol_mutator/README.md",
+      "project": "aiweb",
+      "hash": "bcaa2645777542d0",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.91
+    },
+    {
+      "path": "/home/nic/aiweb/engines/glyph_engine/dynamic_symbol_mutator/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "ee655b0a79478c29",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.42
+    },
+    {
+      "path": "/home/nic/aiweb/engines/glyph_engine/dynamic_symbol_mutator/symbol_mutator_core.py",
+      "project": "aiweb",
+      "hash": "eff63d5552f8afcb",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.47
+    },
+    {
+      "path": "/home/nic/aiweb/engines/glyph_engine/dynamic_symbol_mutator/test_symbol_mutator_core.py",
+      "project": "aiweb",
+      "hash": "7c9956f416139b93",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.38
+    },
+    {
+      "path": "/home/nic/aiweb/engines/glyph_engine/README.md",
+      "project": "aiweb",
+      "hash": "caf9f83d826d0d64",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.83
+    },
+    {
+      "path": "/home/nic/aiweb/engines/glyph_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "e0df850e981215ef",
+      "indexed_at": "2026-05-08T17:30:12",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.42
+    },
+    {
+      "path": "/home/nic/aiweb/engines/glyph_engine/glyph_core.py",
+      "project": "aiweb",
+      "hash": "25108a909f6a29a3",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.53
+    },
+    {
+      "path": "/home/nic/aiweb/engines/glyph_engine/test_glyph_core.py",
+      "project": "aiweb",
+      "hash": "b6c74853e20ebde2",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.42
+    },
+    {
+      "path": "/home/nic/aiweb/engines/goal_injection_engine/README.md",
+      "project": "aiweb",
+      "hash": "5ce92e3c874f8b4c",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.2
+    },
+    {
+      "path": "/home/nic/aiweb/engines/goal_injection_engine/goal_core.py",
+      "project": "aiweb",
+      "hash": "ae3ab4adeafe439f",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.66
+    },
+    {
+      "path": "/home/nic/aiweb/engines/goal_injection_engine/goal_manifest.json",
+      "project": "aiweb",
+      "hash": "933e4994fa84ba92",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.16
+    },
+    {
+      "path": "/home/nic/aiweb/engines/goal_injection_engine/test_goal.py",
+      "project": "aiweb",
+      "hash": "bf232d89e73e217e",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.33
+    },
+    {
+      "path": "/home/nic/aiweb/engines/install_onboarding_engine/README.md",
+      "project": "aiweb",
+      "hash": "6f9a9930fb58004d",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.2
+    },
+    {
+      "path": "/home/nic/aiweb/engines/install_onboarding_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "d70dcb8e4637e92a",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.19
+    },
+    {
+      "path": "/home/nic/aiweb/engines/install_onboarding_engine/install_state.json",
+      "project": "aiweb",
+      "hash": "b6d5865a6d037cc6",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.1
+    },
+    {
+      "path": "/home/nic/aiweb/engines/install_onboarding_engine/onboarding_core.py",
+      "project": "aiweb",
+      "hash": "0db1377a606bd017",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 1.2
+    },
+    {
+      "path": "/home/nic/aiweb/engines/install_onboarding_engine/test_onboarding.py",
+      "project": "aiweb",
+      "hash": "f0c20615c3469627",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.33
+    },
+    {
+      "path": "/home/nic/aiweb/engines/loop_resurrection_engine/README.md",
+      "project": "aiweb",
+      "hash": "83a8a3b01009a4d6",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.26
+    },
+    {
+      "path": "/home/nic/aiweb/engines/loop_resurrection_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "d4047152e88ec997",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.17
+    },
+    {
+      "path": "/home/nic/aiweb/engines/loop_resurrection_engine/resurrection_core.py",
+      "project": "aiweb",
+      "hash": "306453111ab36e31",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.5
+    },
+    {
+      "path": "/home/nic/aiweb/engines/loop_resurrection_engine/resurrection_queue.json",
+      "project": "aiweb",
+      "hash": "5448e10b3b615e3e",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.11
+    },
+    {
+      "path": "/home/nic/aiweb/engines/loop_resurrection_engine/test_resurrection.py",
+      "project": "aiweb",
+      "hash": "1a2a1a193b5c7579",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.26
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine/spiral_drift_controller/README.md",
+      "project": "aiweb",
+      "hash": "4be9cdd5bf9e4c20",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.79
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine/spiral_drift_controller/drift_angle_monitor.py",
+      "project": "aiweb",
+      "hash": "fc7c346ba3d8b733",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.83
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine/spiral_drift_controller/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "e1a9e44a410928d7",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.44
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine/spiral_drift_controller/fibonacci_alignment_enforcer.py",
+      "project": "aiweb",
+      "hash": "1eb72c2c16a1c864",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.86
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine/spiral_drift_controller/spiral_rebinding_router.py",
+      "project": "aiweb",
+      "hash": "4d793cb37e575912",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.85
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine/spiral_drift_controller/test_spiral_drift_controller.py",
+      "project": "aiweb",
+      "hash": "58aa601631a76b45",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.97
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine/README.md",
+      "project": "aiweb",
+      "hash": "ad0423c13031731b",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 1.09
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "4db324e4d3a3bb48",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.42
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine/log.py",
+      "project": "aiweb",
+      "hash": "97a9fd898985ff9c",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 5,
+      "file_type": ".py",
+      "size_kb": 1.35
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine/stack.json",
+      "project": "aiweb",
+      "hash": "76a3eaf613c53d61",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.27
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine/test_log.txt",
+      "project": "aiweb",
+      "hash": "66b9ec451e772d2d",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.28
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine/test_memory_stack.py",
+      "project": "aiweb",
+      "hash": "4313c5cbc48597de",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.36
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine_breathing_v1/README.md",
+      "project": "aiweb",
+      "hash": "8c1b90dc042eba79",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 1.51
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine_breathing_v1/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "cd450ede37aa023d",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.62
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine_breathing_v1/log.py",
+      "project": "aiweb",
+      "hash": "97a9fd898985ff9c",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 5,
+      "file_type": ".py",
+      "size_kb": 1.35
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine_breathing_v1/memory_breather.py",
+      "project": "aiweb",
+      "hash": "38a691ced949c9f5",
+      "indexed_at": "2026-05-08T17:30:13",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.38
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine_breathing_v1/stack.json",
+      "project": "aiweb",
+      "hash": "5bd7f4ca265c3144",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 3,
+      "file_type": ".json",
+      "size_kb": 4.58
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine_breathing_v1/test_log.txt",
+      "project": "aiweb",
+      "hash": "3ea15e57dda03643",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 3,
+      "file_type": ".txt",
+      "size_kb": 3.58
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine_breathing_v1/test_memory_breather.py",
+      "project": "aiweb",
+      "hash": "d8be370fe71ec5ea",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.29
+    },
+    {
+      "path": "/home/nic/aiweb/engines/memory_stack_engine_breathing_v1/test_memory_stack.py",
+      "project": "aiweb",
+      "hash": "4313c5cbc48597de",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.36
+    },
+    {
+      "path": "/home/nic/aiweb/engines/naming_engine/README.md",
+      "project": "aiweb",
+      "hash": "8b6af63059afd3cf",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.2
+    },
+    {
+      "path": "/home/nic/aiweb/engines/naming_engine/naming_core.py",
+      "project": "aiweb",
+      "hash": "79896376a29ea3b1",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.73
+    },
+    {
+      "path": "/home/nic/aiweb/engines/naming_engine/naming_manifest.json",
+      "project": "aiweb",
+      "hash": "dac126ea6e587b05",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.14
+    },
+    {
+      "path": "/home/nic/aiweb/engines/naming_engine/test_naming.py",
+      "project": "aiweb",
+      "hash": "4e192e3739a6aac0",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.37
+    },
+    {
+      "path": "/home/nic/aiweb/engines/neo_engine/README.md",
+      "project": "aiweb",
+      "hash": "960c326155649900",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.2
+    },
+    {
+      "path": "/home/nic/aiweb/engines/neo_engine/neo_core.py",
+      "project": "aiweb",
+      "hash": "cd363e9048c2afc7",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.99
+    },
+    {
+      "path": "/home/nic/aiweb/engines/neo_engine/neo_manifest.json",
+      "project": "aiweb",
+      "hash": "b11a45383e369c79",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.17
+    },
+    {
+      "path": "/home/nic/aiweb/engines/neo_engine/neo_state.json",
+      "project": "aiweb",
+      "hash": "2aa81d02f822a9bb",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.14
+    },
+    {
+      "path": "/home/nic/aiweb/engines/neo_engine/test_neo.py",
+      "project": "aiweb",
+      "hash": "fa55ab70e751086f",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.37
+    },
+    {
+      "path": "/home/nic/aiweb/engines/peer_communication_engine/README.md",
+      "project": "aiweb",
+      "hash": "aa406602904dbec9",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.2
+    },
+    {
+      "path": "/home/nic/aiweb/engines/peer_communication_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "b107a781e25eaebd",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.18
+    },
+    {
+      "path": "/home/nic/aiweb/engines/peer_communication_engine/peer_comm_core.py",
+      "project": "aiweb",
+      "hash": "7d95829d3e5290c5",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.72
+    },
+    {
+      "path": "/home/nic/aiweb/engines/peer_communication_engine/test_peer_comm.py",
+      "project": "aiweb",
+      "hash": "963127e26ffbda18",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.33
+    },
+    {
+      "path": "/home/nic/aiweb/engines/phase_engine/README.md",
+      "project": "aiweb",
+      "hash": "6b8d4c03848c7b53",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 1.28
+    },
+    {
+      "path": "/home/nic/aiweb/engines/phase_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "a1cad3e26165ff53",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.45
+    },
+    {
+      "path": "/home/nic/aiweb/engines/phase_engine/run.py",
+      "project": "aiweb",
+      "hash": "e84ea4d02eccff37",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 6,
+      "file_type": ".py",
+      "size_kb": 2.13
+    },
+    {
+      "path": "/home/nic/aiweb/engines/phase_engine/status.json",
+      "project": "aiweb",
+      "hash": "1d096dfaea3987ee",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.13
+    },
+    {
+      "path": "/home/nic/aiweb/engines/phase_engine/test_log.txt",
+      "project": "aiweb",
+      "hash": "9718c0a0fbe55212",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.16
+    },
+    {
+      "path": "/home/nic/aiweb/engines/phase_engine/test_phase_engine.py",
+      "project": "aiweb",
+      "hash": "2f08993b22ebd608",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.34
+    },
+    {
+      "path": "/home/nic/aiweb/engines/plugin_engine/README.md",
+      "project": "aiweb",
+      "hash": "e79c18c1ca9c67e3",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.73
+    },
+    {
+      "path": "/home/nic/aiweb/engines/plugin_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "5b086b45780b5547",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.36
+    },
+    {
+      "path": "/home/nic/aiweb/engines/plugin_engine/loader.py",
+      "project": "aiweb",
+      "hash": "d10e47f3f5bbe8b1",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 3,
+      "file_type": ".py",
+      "size_kb": 1.22
+    },
+    {
+      "path": "/home/nic/aiweb/engines/plugin_engine/test_log.txt",
+      "project": "aiweb",
+      "hash": "c3d812b7fdb3e71a",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.29
+    },
+    {
+      "path": "/home/nic/aiweb/engines/plugin_engine/test_plugin_engine.py",
+      "project": "aiweb",
+      "hash": "1fc3e41ee14793ac",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.17
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_agent_kernel/README.md",
+      "project": "aiweb",
+      "hash": "a72d6f812eafc340",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.2
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_agent_kernel/agent_kernel_core.py",
+      "project": "aiweb",
+      "hash": "8ded1ca9c586f368",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.58
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_agent_kernel/agent_kernel_manifest.json",
+      "project": "aiweb",
+      "hash": "389c66550a997458",
+      "indexed_at": "2026-05-08T17:30:14",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.16
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_agent_kernel/recursion_state.json",
+      "project": "aiweb",
+      "hash": "79786838902e110a",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.11
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_agent_kernel/test_agent_kernel.py",
+      "project": "aiweb",
+      "hash": "d9b53e4fd8647808",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.4
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_field_breather/README.md",
+      "project": "aiweb",
+      "hash": "4b244aba625aa200",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.86
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_field_breather/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "a71c0449a28dd4be",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.26
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_field_breather/field_breather.py",
+      "project": "aiweb",
+      "hash": "5d060541bd72764c",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.84
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_field_breather/test_field_breather.py",
+      "project": "aiweb",
+      "hash": "c0655a96ca1d8fa7",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.31
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_field_engine/field_memory_binder/README.md",
+      "project": "aiweb",
+      "hash": "429b3cc96b6f8128",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.21
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_field_engine/field_memory_binder/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "f32e124371b6ddac",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.18
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_field_engine/field_memory_binder/memory_binder_core.py",
+      "project": "aiweb",
+      "hash": "57343c25ddd3dad0",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.47
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_field_engine/field_memory_binder/test_memory_binder_core.py",
+      "project": "aiweb",
+      "hash": "54401bed2501f638",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.38
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_field_engine/README.md",
+      "project": "aiweb",
+      "hash": "48b59e442fb63367",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".md",
+      "size_kb": 1.83
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_field_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "3bf0d470b10e9b97",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.16
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_field_engine/field_state.json",
+      "project": "aiweb",
+      "hash": "ecd480ea02407f97",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.08
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_field_engine/recursive_field_core.py",
+      "project": "aiweb",
+      "hash": "67f3c20b7d0a1621",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.45
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_field_engine/run.py",
+      "project": "aiweb",
+      "hash": "b2a97fdd2c4b1aed",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 6,
+      "file_type": ".py",
+      "size_kb": 1.77
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_field_engine/test_log.txt",
+      "project": "aiweb",
+      "hash": "2998640c0f943bee",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.32
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_field_engine/test_recursive_field.py",
+      "project": "aiweb",
+      "hash": "5e36714b5ad1dd2d",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.43
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_field_engine/test_recursive_field_core.py",
+      "project": "aiweb",
+      "hash": "e286beb9fa460570",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.38
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine/.gitignore",
+      "project": "aiweb",
+      "hash": "5c9aff029b065971",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": "",
+      "size_kb": 0.0
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine/README.md",
+      "project": "aiweb",
+      "hash": "52ecbbd6e9219c14",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 1.09
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine/convert_to_jsonl.py",
+      "project": "aiweb",
+      "hash": "d7e168165a631c79",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.63
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "14cbfd0f34714878",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.51
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine/generate_phase_loop_dataset.py",
+      "project": "aiweb",
+      "hash": "faa295cb59b52540",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 1.6
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine/rvdit_core.py",
+      "project": "aiweb",
+      "hash": "16c955468547b98c",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 5,
+      "file_type": ".py",
+      "size_kb": 2.46
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine/test_recursive_verification.py",
+      "project": "aiweb",
+      "hash": "2e69478e8baecc30",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 1.89
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine_v1.0.0/.gitignore",
+      "project": "aiweb",
+      "hash": "5c9aff029b065971",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": "",
+      "size_kb": 0.0
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine_v1.0.0/README.md",
+      "project": "aiweb",
+      "hash": "52ecbbd6e9219c14",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 1.09
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine_v1.0.0/convert_to_jsonl.py",
+      "project": "aiweb",
+      "hash": "d7e168165a631c79",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.63
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine_v1.0.0/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "14cbfd0f34714878",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.51
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine_v1.0.0/generate_phase_loop_dataset.py",
+      "project": "aiweb",
+      "hash": "faa295cb59b52540",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 1.6
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine_v1.0.0/rvdit_core.py",
+      "project": "aiweb",
+      "hash": "16c955468547b98c",
+      "indexed_at": "2026-05-08T17:30:15",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 5,
+      "file_type": ".py",
+      "size_kb": 2.46
+    },
+    {
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine_v1.0.0/test_recursive_verification.py",
+      "project": "aiweb",
+      "hash": "2e69478e8baecc30",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 1.89
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resonance_charge_meter/README.md",
+      "project": "aiweb",
+      "hash": "4a147c4f5633e8ba",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.18
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resonance_charge_meter/charge_meter_core.py",
+      "project": "aiweb",
+      "hash": "deaa1ec360846405",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.66
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resonance_charge_meter/charge_meter_state.json",
+      "project": "aiweb",
+      "hash": "c6c98a53ca319d8a",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.08
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resonance_charge_meter/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "a1a84c0e7007cbb3",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.17
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resonance_charge_meter/test_charge_meter.py",
+      "project": "aiweb",
+      "hash": "f4bd87fdff88f750",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.31
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resonance_visualizer_engine/README.md",
+      "project": "aiweb",
+      "hash": "55231a46675fb90f",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.19
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resonance_visualizer_engine/test_visualizer.py",
+      "project": "aiweb",
+      "hash": "9b6b8b514f3c69f6",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.41
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resonance_visualizer_engine/visualizer_core.py",
+      "project": "aiweb",
+      "hash": "f345ac3ac2debcc4",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.69
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resonance_visualizer_engine/visualizer_manifest.json",
+      "project": "aiweb",
+      "hash": "e2012a2bed90a1f9",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.19
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resonance_visualizer_engine/visualizer_output.json",
+      "project": "aiweb",
+      "hash": "2ba89b57235bbf4d",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.09
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resurrection_planner/README.md",
+      "project": "aiweb",
+      "hash": "5bd431d50bedc9eb",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.92
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resurrection_planner/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "bafccbd9b122714f",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.45
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resurrection_planner/resurrection_planner_core.py",
+      "project": "aiweb",
+      "hash": "ef2aa5f380a639ae",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.56
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resurrection_planner/test_resurrection_planner_core.py",
+      "project": "aiweb",
+      "hash": "5ec49a53c11515e9",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.48
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resurrection_tracker_engine/config/threshold.json",
+      "project": "aiweb",
+      "hash": "22680463144708e0",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.36
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resurrection_tracker_engine/core/resurrection_log.py",
+      "project": "aiweb",
+      "hash": "22680463144708e0",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.36
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resurrection_tracker_engine/tests/test_resurrection_log.py",
+      "project": "aiweb",
+      "hash": "22680463144708e0",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.36
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resurrection_tracker_engine/.gitignore",
+      "project": "aiweb",
+      "hash": "22680463144708e0",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": "",
+      "size_kb": 0.36
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resurrection_tracker_engine/README.md",
+      "project": "aiweb",
+      "hash": "22680463144708e0",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.36
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resurrection_tracker_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "22680463144708e0",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.36
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resurrection_tracker_engine/pyproject.toml",
+      "project": "aiweb",
+      "hash": "22680463144708e0",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".toml",
+      "size_kb": 0.36
+    },
+    {
+      "path": "/home/nic/aiweb/engines/resurrection_tracker_engine/run.py",
+      "project": "aiweb",
+      "hash": "22680463144708e0",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.36
+    },
+    {
+      "path": "/home/nic/aiweb/engines/seed_manager/README.md",
+      "project": "aiweb",
+      "hash": "21be0611885c4470",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.14
+    },
+    {
+      "path": "/home/nic/aiweb/engines/seed_manager/seed_bank.json",
+      "project": "aiweb",
+      "hash": "c760a2f535e77b4e",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.17
+    },
+    {
+      "path": "/home/nic/aiweb/engines/seed_manager/seed_core.py",
+      "project": "aiweb",
+      "hash": "2ad603313cd8f3e1",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.76
+    },
+    {
+      "path": "/home/nic/aiweb/engines/seed_manager/seed_manifest.json",
+      "project": "aiweb",
+      "hash": "cb1492d5b15513d9",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.15
+    },
+    {
+      "path": "/home/nic/aiweb/engines/seed_manager/test_seed.py",
+      "project": "aiweb",
+      "hash": "6fe0caa1737b2f1e",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.35
+    },
+    {
+      "path": "/home/nic/aiweb/engines/spc_memory_migrator/README.md",
+      "project": "aiweb",
+      "hash": "4ab43130c8acd452",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.9
+    },
+    {
+      "path": "/home/nic/aiweb/engines/spc_memory_migrator/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "89c0752791997c5d",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.44
+    },
+    {
+      "path": "/home/nic/aiweb/engines/spc_memory_migrator/spc_migrator_core.py",
+      "project": "aiweb",
+      "hash": "33c4f409a4ad9f30",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.55
+    },
+    {
+      "path": "/home/nic/aiweb/engines/spc_memory_migrator/test_spc_migrator_core.py",
+      "project": "aiweb",
+      "hash": "1254c8b82308ee9b",
+      "indexed_at": "2026-05-08T17:30:16",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.48
+    },
+    {
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/README.md",
+      "project": "aiweb",
+      "hash": "2efdf8022ab9261a",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.55
+    },
+    {
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "15a5e9e3189581e4",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.23
+    },
+    {
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py",
+      "project": "aiweb",
+      "hash": "f34d77a31cdd9a5c",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.59
+    },
+    {
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py",
+      "project": "aiweb",
+      "hash": "2297b612ec1a6c6e",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.44
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_capacitor_engine/resonance_decay_tracker/README.md",
+      "project": "aiweb",
+      "hash": "76d737a5a5fe1d10",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.56
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_capacitor_engine/resonance_decay_tracker/decay_tracker_core.py",
+      "project": "aiweb",
+      "hash": "6e7e6b74187ed1ce",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.67
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_capacitor_engine/resonance_decay_tracker/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "f0d5a20f625666f1",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.19
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_capacitor_engine/resonance_decay_tracker/test_decay_tracker_core.py",
+      "project": "aiweb",
+      "hash": "1c89eb93bd41f14b",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.44
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_capacitor_engine/README.md",
+      "project": "aiweb",
+      "hash": "4abefaa8530215bc",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.46
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_capacitor_engine/capacitor_core.py",
+      "project": "aiweb",
+      "hash": "b4de056c9990bd00",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 3,
+      "file_type": ".py",
+      "size_kb": 0.55
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_capacitor_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "0ffbbf69cb4f5870",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.26
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_capacitor_engine/resonance_sync.json",
+      "project": "aiweb",
+      "hash": "0eb887d2e652ad02",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.03
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_drift_visualizer/README.md",
+      "project": "aiweb",
+      "hash": "fec436f949ae9219",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 1.03
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_drift_visualizer/drift_visualizer_core.py",
+      "project": "aiweb",
+      "hash": "598b89f7c74f2c29",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.6
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_drift_visualizer/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "a039d8cf25e52851",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.44
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_drift_visualizer/test_drift_visualizer_core.py",
+      "project": "aiweb",
+      "hash": "d4b144f355b005bc",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.42
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_feedback_loop_engine/README.md",
+      "project": "aiweb",
+      "hash": "2b63e2f4d7ced881",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.33
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_feedback_loop_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "d3743b20556f3ddd",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.2
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_feedback_loop_engine/feedback_loop_core.py",
+      "project": "aiweb",
+      "hash": "7803be9ededec2c6",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.86
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_feedback_loop_engine/loop_trace.json",
+      "project": "aiweb",
+      "hash": "18ff1170acb4cc59",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.11
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_feedback_loop_engine/test_feedback_loop.py",
+      "project": "aiweb",
+      "hash": "c9f9eadccb5a768a",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.3
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_glyph_engine/README.md",
+      "project": "aiweb",
+      "hash": "64651d8ec5fbd07f",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.26
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_glyph_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "0c16da3c78e49948",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.16
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_glyph_engine/glyph_core.py",
+      "project": "aiweb",
+      "hash": "346e978e251cc395",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.18
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_glyph_engine/test_glyph_core.py",
+      "project": "aiweb",
+      "hash": "88cc690ebe003184",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.29
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_policy_engine/README.md",
+      "project": "aiweb",
+      "hash": "0479a65edd593d10",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.17
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_policy_engine/policy_core.py",
+      "project": "aiweb",
+      "hash": "846cd260c634b965",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.7
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_policy_engine/policy_manifest.json",
+      "project": "aiweb",
+      "hash": "15fd56e4b588fee9",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.18
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_policy_engine/policy_rules.json",
+      "project": "aiweb",
+      "hash": "ca3d163bab055381",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.0
+    },
+    {
+      "path": "/home/nic/aiweb/engines/symbolic_policy_engine/test_policy.py",
+      "project": "aiweb",
+      "hash": "f401afcd8a274cbf",
+      "indexed_at": "2026-05-08T17:30:17",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.42
+    },
+    {
+      "path": "/home/nic/aiweb/engines/system_log_engine/README.md",
+      "project": "aiweb",
+      "hash": "e915c1cbfad06620",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.96
+    },
+    {
+      "path": "/home/nic/aiweb/engines/system_log_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "62d655fb2515009d",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.36
+    },
+    {
+      "path": "/home/nic/aiweb/engines/system_log_engine/log_event.py",
+      "project": "aiweb",
+      "hash": "acbf5b79b98e5f52",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.92
+    },
+    {
+      "path": "/home/nic/aiweb/engines/system_log_engine/test_log.txt",
+      "project": "aiweb",
+      "hash": "88a66ba55035ee2e",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.23
+    },
+    {
+      "path": "/home/nic/aiweb/engines/system_log_engine/test_system_log.py",
+      "project": "aiweb",
+      "hash": "6f9265fde3d091f8",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.57
+    },
+    {
+      "path": "/home/nic/aiweb/engines/tier_enforcer/README.md",
+      "project": "aiweb",
+      "hash": "32a9a95d1451e727",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.38
+    },
+    {
+      "path": "/home/nic/aiweb/engines/tier_enforcer/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "5a08ed7936afb286",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.37
+    },
+    {
+      "path": "/home/nic/aiweb/engines/tier_enforcer/run.py",
+      "project": "aiweb",
+      "hash": "8be3d8ddd0dfaf71",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 6,
+      "file_type": ".py",
+      "size_kb": 2.14
+    },
+    {
+      "path": "/home/nic/aiweb/engines/tier_enforcer/test_log.txt",
+      "project": "aiweb",
+      "hash": "2e7d2ac6c77a2acb",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.2
+    },
+    {
+      "path": "/home/nic/aiweb/engines/tier_enforcer/test_tier_enforcer.py",
+      "project": "aiweb",
+      "hash": "43dfaf56cf055d46",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.49
+    },
+    {
+      "path": "/home/nic/aiweb/engines/tier_enforcer/tier_rules.json",
+      "project": "aiweb",
+      "hash": "f29a905ecbe6ea96",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.8
+    },
+    {
+      "path": "/home/nic/aiweb/engines/tier_enforcer/tier_violation_log.json",
+      "project": "aiweb",
+      "hash": "9e0ac6996a0ba458",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.22
+    },
+    {
+      "path": "/home/nic/aiweb/engines/tone_engine/README.md",
+      "project": "aiweb",
+      "hash": "db5991bbe282790c",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.16
+    },
+    {
+      "path": "/home/nic/aiweb/engines/tone_engine/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "e09a6a398ecaf964",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.18
+    },
+    {
+      "path": "/home/nic/aiweb/engines/tone_engine/test_tone_engine.py",
+      "project": "aiweb",
+      "hash": "4f6bf92d20cd9ede",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.29
+    },
+    {
+      "path": "/home/nic/aiweb/engines/tone_engine/tone_core.py",
+      "project": "aiweb",
+      "hash": "901fdb846a04be31",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.74
+    },
+    {
+      "path": "/home/nic/aiweb/engines/tone_engine/tone_state.json",
+      "project": "aiweb",
+      "hash": "91bf68e337c12763",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.08
+    },
+    {
+      "path": "/home/nic/aiweb/engines/Dockerfile",
+      "project": "aiweb",
+      "hash": "e682c8b38a4a47a6",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": "",
+      "size_kb": 0.12
+    },
+    {
+      "path": "/home/nic/aiweb/engines/engine_freeze_log.txt",
+      "project": "aiweb",
+      "hash": "8c038047b33a8733",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 5,
+      "file_type": ".txt",
+      "size_kb": 7.91
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/Build Engines Separately and Safely.md",
+      "project": "aiweb",
+      "hash": "47124f1f43df3d3f",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 3,
+      "file_type": ".md",
+      "size_kb": 3.39
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/Correct Approach Modularized Runtime Stack.md",
+      "project": "aiweb",
+      "hash": "ae3dff816dc8de7a",
+      "indexed_at": "2026-05-08T17:30:18",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 3,
+      "file_type": ".md",
+      "size_kb": 4.59
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/Gork1 code.md",
+      "project": "aiweb",
+      "hash": "7aa0c94930c68d50",
+      "indexed_at": "2026-05-08T17:30:19",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 15,
+      "file_type": ".md",
+      "size_kb": 27.17
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/How to Build at Ai.Web Inc..md",
+      "project": "aiweb",
+      "hash": "a5878627d9e34511",
+      "indexed_at": "2026-05-08T17:30:19",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 5,
+      "file_type": ".md",
+      "size_kb": 7.41
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/Im not really sure what this ids or why im saving it.md",
+      "project": "aiweb",
+      "hash": "4e419f0b33316bb6",
+      "indexed_at": "2026-05-08T17:30:19",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 1.09
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/Project Overview.md",
+      "project": "aiweb",
+      "hash": "92b1d1e73c68b8bd",
+      "indexed_at": "2026-05-08T17:30:19",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 28,
+      "file_type": ".md",
+      "size_kb": 41.56
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/Protoforge upgrade with breather.md",
+      "project": "aiweb",
+      "hash": "4992b6437afb286e",
+      "indexed_at": "2026-05-08T17:30:19",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 6,
+      "file_type": ".md",
+      "size_kb": 8.55
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/RSCP.md",
+      "project": "aiweb",
+      "hash": "34c3585b0f12c443",
+      "indexed_at": "2026-05-08T17:30:19",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 15,
+      "file_type": ".md",
+      "size_kb": 18.33
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/Resolution.md",
+      "project": "aiweb",
+      "hash": "5923173b2057b4bc",
+      "indexed_at": "2026-05-08T17:30:20",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 54,
+      "file_type": ".md",
+      "size_kb": 73.11
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/Response to \u201cRecursion and Cognitive Science\u201d.md",
+      "project": "aiweb",
+      "hash": "e7c877063a0fef27",
+      "indexed_at": "2026-05-08T17:30:20",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 18,
+      "file_type": ".md",
+      "size_kb": 25.45
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/StepbyStep How to Build and Test Engines Without Breaking the System.md",
+      "project": "aiweb",
+      "hash": "9a6a4114bde5e2f0",
+      "indexed_at": "2026-05-08T17:30:20",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".md",
+      "size_kb": 3.17
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/Terminal Readout whiulde making the engines.md",
+      "project": "aiweb",
+      "hash": "9b10dc2931d60e1f",
+      "indexed_at": "2026-05-08T17:30:20",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 4,
+      "file_type": ".md",
+      "size_kb": 6.1
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/This file contains the complete session transcript between Nic and.md",
+      "project": "aiweb",
+      "hash": "c25cfa4cf048410b",
+      "indexed_at": "2026-05-08T17:30:22",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 176,
+      "file_type": ".md",
+      "size_kb": 269.65
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/Untitled 1.md",
+      "project": "aiweb",
+      "hash": "cf50550924e5b8f3",
+      "indexed_at": "2026-05-08T17:30:23",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 77,
+      "file_type": ".md",
+      "size_kb": 114.27
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/Untitled.md",
+      "project": "aiweb",
+      "hash": "bb0cc72a8c0778fe",
+      "indexed_at": "2026-05-08T17:30:24",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 62,
+      "file_type": ".md",
+      "size_kb": 94.99
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/Updated Echo Command to Also Refresh the Project Tree.md",
+      "project": "aiweb",
+      "hash": "3dc132a137eb981c",
+      "indexed_at": "2026-05-08T17:30:24",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.33
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/WHAT TO DO BEFORE MERGING INTO PROTOFORGE.md",
+      "project": "aiweb",
+      "hash": "d7df0551dbaaf29c",
+      "indexed_at": "2026-05-08T17:30:24",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 12,
+      "file_type": ".md",
+      "size_kb": 15.37
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/cd ~aiwebruntimewrappers.md",
+      "project": "aiweb",
+      "hash": "0b78bcbc96378659",
+      "indexed_at": "2026-05-08T17:30:24",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.99
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/iwebprojectsrecursivelmmgrok1engines.md",
+      "project": "aiweb",
+      "hash": "2eed531dc1042244",
+      "indexed_at": "2026-05-08T17:30:24",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 29,
+      "file_type": ".md",
+      "size_kb": 49.41
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/protoforge.md",
+      "project": "aiweb",
+      "hash": "d75993b37e304800",
+      "indexed_at": "2026-05-08T17:30:25",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 5,
+      "file_type": ".md",
+      "size_kb": 7.28
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/Ai.Web/system engines that must be built to fulfill the entire vision..md",
+      "project": "aiweb",
+      "hash": "ab35fa452b081daf",
+      "indexed_at": "2026-05-08T17:30:25",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 3,
+      "file_type": ".md",
+      "size_kb": 3.42
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/new_engine.sh",
+      "project": "aiweb",
+      "hash": "22680463144708e0",
+      "indexed_at": "2026-05-08T17:30:25",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".sh",
+      "size_kb": 0.36
+    },
+    {
+      "path": "/home/nic/aiweb/devtools/start_dev_env.sh",
+      "project": "aiweb",
+      "hash": "193a0457cb737c1d",
+      "indexed_at": "2026-05-08T17:30:25",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 3,
+      "file_type": ".sh",
+      "size_kb": 3.48
+    },
+    {
+      "path": "/home/nic/aiweb/docs/vault/spec_sheets/neo_engine.md",
+      "project": "aiweb",
+      "hash": "3575006a3b6c0361",
+      "indexed_at": "2026-05-08T17:30:25",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.26
+    },
+    {
+      "path": "/home/nic/aiweb/docs/vault/spec_sheets/tone_engine.md",
+      "project": "aiweb",
+      "hash": "ea02bf03a4223dc1",
+      "indexed_at": "2026-05-08T17:30:25",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.25
+    },
+    {
+      "path": "/home/nic/aiweb/docs/vault/keywords.yml",
+      "project": "aiweb",
+      "hash": "30144624bb3b4393",
+      "indexed_at": "2026-05-08T17:30:25",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".yml",
+      "size_kb": 0.18
+    },
+    {
+      "path": "/home/nic/aiweb/docs/vault/overview.md",
+      "project": "aiweb",
+      "hash": "25219da1a6540ab4",
+      "indexed_at": "2026-05-08T17:30:25",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.16
+    },
+    {
+      "path": "/home/nic/aiweb/docs/website/docusaurus.config.js",
+      "project": "aiweb",
+      "hash": "2edaeefaffdf107c",
+      "indexed_at": "2026-05-08T17:30:25",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".js",
+      "size_kb": 0.53
+    },
+    {
+      "path": "/home/nic/aiweb/docs/website/package.json",
+      "project": "aiweb",
+      "hash": "bf40ebc4ab954149",
+      "indexed_at": "2026-05-08T17:30:25",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.05
+    },
+    {
+      "path": "/home/nic/aiweb/system_docs/vault/resurrection_tracker.md",
+      "project": "aiweb",
+      "hash": "ed8fb96f2dc870b1",
+      "indexed_at": "2026-05-08T17:30:25",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.05
+    },
+    {
+      "path": "/home/nic/aiweb/system_docs/Build_Order.md",
+      "project": "aiweb",
+      "hash": "b5f145fb3fea7648",
+      "indexed_at": "2026-05-08T17:30:25",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 1.62
+    },
+    {
+      "path": "/home/nic/aiweb/system_docs/Engine_Manifest.md",
+      "project": "aiweb",
+      "hash": "5ede7e6699e49f9e",
+      "indexed_at": "2026-05-08T17:30:25",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".md",
+      "size_kb": 2.17
+    },
+    {
+      "path": "/home/nic/aiweb/system_docs/aiweb_project_tree.txt",
+      "project": "aiweb",
+      "hash": "8f6aedf657e30233",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 36,
+      "file_type": ".txt",
+      "size_kb": 81.14
+    },
+    {
+      "path": "/home/nic/aiweb/system_docs/freeze_log.txt",
+      "project": "aiweb",
+      "hash": "2b02a2714f03eb8f",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.17
+    },
+    {
+      "path": "/home/nic/aiweb/system_docs/stack_manifest.json",
+      "project": "aiweb",
+      "hash": "4e354b2e7d9c2d2f",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.25
+    },
+    {
+      "path": "/home/nic/aiweb/scripts/copy_engines_to_copilot.sh",
+      "project": "aiweb",
+      "hash": "192c6ebc2b2f1b35",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".sh",
+      "size_kb": 1.19
+    },
+    {
+      "path": "/home/nic/aiweb/scripts/sync_docusaurus_to_obsidian.sh",
+      "project": "aiweb",
+      "hash": "ff811b5a67929da5",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".sh",
+      "size_kb": 0.46
+    },
+    {
+      "path": "/home/nic/aiweb/plugins/broken_plugin.py",
+      "project": "aiweb",
+      "hash": "ad063546ab334e32",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.07
+    },
+    {
+      "path": "/home/nic/aiweb/plugins/good_plugin.py",
+      "project": "aiweb",
+      "hash": "6577733c6f9cfe13",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.06
+    },
+    {
+      "path": "/home/nic/aiweb/plugins/hello_plugin.py",
+      "project": "aiweb",
+      "hash": "8e3bf72532c800c4",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.01
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay/README.md",
+      "project": "aiweb",
+      "hash": "650545232a41d94d",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 1.35
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "6ef52633fa5a099b",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.59
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay/glyph_ui_overlay_core.py",
+      "project": "aiweb",
+      "hash": "d098c5ddb9b22e29",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.52
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay/run.py",
+      "project": "aiweb",
+      "hash": "1988c6a1ef37f557",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.33
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay/test_glyph_ui_overlay_core.py",
+      "project": "aiweb",
+      "hash": "908414b01d6560ba",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.45
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay/test_run_engine.py",
+      "project": "aiweb",
+      "hash": "381a6b7f3bf61d6b",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.14
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/recursion_mapper/README.md",
+      "project": "aiweb",
+      "hash": "a5edffd176d0777b",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.69
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/recursion_mapper/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "5e82c147ecf52d3d",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.57
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/recursion_mapper/recursion_mapper_core.py",
+      "project": "aiweb",
+      "hash": "cfc463750a4dc192",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.51
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/recursion_mapper/run.py",
+      "project": "aiweb",
+      "hash": "ed32c5944c168d85",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.34
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/recursion_mapper/test_recursion_mapper_core.py",
+      "project": "aiweb",
+      "hash": "042275dee7ba21aa",
+      "indexed_at": "2026-05-08T17:30:26",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.47
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/recursion_mapper/test_run_engine.py",
+      "project": "aiweb",
+      "hash": "b19e044b765a9db8",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.15
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/resonance_display/README.md",
+      "project": "aiweb",
+      "hash": "ec016a6a86f72b64",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 1.23
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/resonance_display/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "0d870eab780f1afc",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.57
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/resonance_display/resonance_display_core.py",
+      "project": "aiweb",
+      "hash": "1a589500934e87c9",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.53
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/resonance_display/run.py",
+      "project": "aiweb",
+      "hash": "c171eda2c2e426fa",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.34
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/resonance_display/test_resonance_display_core.py",
+      "project": "aiweb",
+      "hash": "c2d0fe4961887e5b",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.46
+    },
+    {
+      "path": "/home/nic/aiweb/symbolic_layers/resonance_display/test_run_engine.py",
+      "project": "aiweb",
+      "hash": "de5ccbade2ad706a",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.15
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/Protoforge_v2.01/protoforge_dashboard_runtime_v2.0/templates/index.html",
+      "project": "aiweb",
+      "hash": "d6eec46a807dfed6",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".html",
+      "size_kb": 2.11
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/Protoforge_v2.01/protoforge_dashboard_runtime_v2.0/gilligan_logic.py",
+      "project": "aiweb",
+      "hash": "ea8e843485167afa",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 1.31
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/Protoforge_v2.01/protoforge_dashboard_runtime_v2.0/test_log.txt",
+      "project": "aiweb",
+      "hash": "cad8693a417c54c7",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.05
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/Protoforge_v2.01/protoforge_dashboard_runtime_v2.0/ui_server.py",
+      "project": "aiweb",
+      "hash": "921e2e17e7bd2dd9",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 7,
+      "file_type": ".py",
+      "size_kb": 4.03
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/Protoforge_v2.01/diagnostic_panel.js",
+      "project": "aiweb",
+      "hash": "cca0c93684417da9",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".js",
+      "size_kb": 2.31
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/Protoforge_v2.01/index.html",
+      "project": "aiweb",
+      "hash": "b7625755fcf0e7ad",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".html",
+      "size_kb": 2.7
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/Protoforge_v2.01/rvdit_trace_log.py",
+      "project": "aiweb",
+      "hash": "97bf24d092726404",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 5,
+      "file_type": ".py",
+      "size_kb": 2.98
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/Protoforge_v2.01/test_recursive_verification.py",
+      "project": "aiweb",
+      "hash": "9e3fbcc5d9a2ede7",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 5,
+      "file_type": ".py",
+      "size_kb": 3.01
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/agents_stack/README.md",
+      "project": "aiweb",
+      "hash": "abceaff87cf1977b",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.73
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/agents_stack/agents_stack_loader.py",
+      "project": "aiweb",
+      "hash": "13386e29279ee587",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 5,
+      "file_type": ".py",
+      "size_kb": 0.93
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/agents_stack/stack_manifest.json",
+      "project": "aiweb",
+      "hash": "2257c08e3fbe259b",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.27
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/agents_stack/test_agents_stack_loader.py",
+      "project": "aiweb",
+      "hash": "8a2f5e4e73d3729a",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.21
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1/run_system_test.py",
+      "project": "aiweb",
+      "hash": "79d66f45d8bd1daa",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 2.26
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack/README.md",
+      "project": "aiweb",
+      "hash": "bcb5e9a552a2b3e5",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.65
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack/contribution_ledger_stack_loader.py",
+      "project": "aiweb",
+      "hash": "dce4ec89c79a9c41",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 6,
+      "file_type": ".py",
+      "size_kb": 2.11
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack/stack_manifest.json",
+      "project": "aiweb",
+      "hash": "edf4f0140c04b377",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.43
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack/test_contribution_ledger_stack_loader.py",
+      "project": "aiweb",
+      "hash": "a09fcf4416e91d38",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.4
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack/user_registry.json",
+      "project": "aiweb",
+      "hash": "9c27a994e5a063f9",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.08
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/control_stack/README.md",
+      "project": "aiweb",
+      "hash": "5dedb6cd29a233e5",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.25
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/control_stack/control_stack_loader.py",
+      "project": "aiweb",
+      "hash": "8a1ddb6707e1e5e9",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 3,
+      "file_type": ".py",
+      "size_kb": 1.06
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/control_stack/stack_manifest.json",
+      "project": "aiweb",
+      "hash": "08af7f7b6a0ea715",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.13
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/control_stack/test_control_stack_loader.py",
+      "project": "aiweb",
+      "hash": "ada57821f97f2855",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.3
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/core_system_stack/README.md",
+      "project": "aiweb",
+      "hash": "30e882e4e523c036",
+      "indexed_at": "2026-05-08T17:30:27",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.62
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/core_system_stack/core_system_stack_loader.py",
+      "project": "aiweb",
+      "hash": "5827adc9e62b3f23",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.94
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/core_system_stack/stack_manifest.json",
+      "project": "aiweb",
+      "hash": "9e623cc8b7925e52",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.37
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/core_system_stack/test_core_system_stack_loader.py",
+      "project": "aiweb",
+      "hash": "818e0dabe41499d8",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.38
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/memory_stack_stack/README.md",
+      "project": "aiweb",
+      "hash": "7558973c1cbedb6f",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.25
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/memory_stack_stack/memory_stack_stack_loader.py",
+      "project": "aiweb",
+      "hash": "0943ca1a60c4b1fb",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.41
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/memory_stack_stack/stack_manifest.json",
+      "project": "aiweb",
+      "hash": "ddc14b188a227235",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.16
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/memory_stack_stack/test_memory_stack_stack_loader.py",
+      "project": "aiweb",
+      "hash": "ff8ffb5c31205861",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.16
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge/UI/terminal_display.py",
+      "project": "aiweb",
+      "hash": "34389e0df8becd05",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.58
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge/log/protoforge_log.txt",
+      "project": "aiweb",
+      "hash": "bc194ae66823e01e",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.3
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge/test_harness/run_system_test.py",
+      "project": "aiweb",
+      "hash": "79d66f45d8bd1daa",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 2.26
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge/config.json",
+      "project": "aiweb",
+      "hash": "8dc5f7473db77d00",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.2
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge/engine_freeze_log.txt",
+      "project": "aiweb",
+      "hash": "c653efb56c7c4094",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.15
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge/run.py",
+      "project": "aiweb",
+      "hash": "b83a9e7091c8be31",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 2.97
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/templates/index.html",
+      "project": "aiweb",
+      "hash": "c49d506237dcbeca",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".html",
+      "size_kb": 1.96
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/gilligan_logic.py",
+      "project": "aiweb",
+      "hash": "ea8e843485167afa",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 1.31
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/test_log.txt",
+      "project": "aiweb",
+      "hash": "cad8693a417c54c7",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.05
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/ui_server.py",
+      "project": "aiweb",
+      "hash": "654ff4acbae5b143",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 7,
+      "file_type": ".py",
+      "size_kb": 3.94
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/UI/templates/index.html",
+      "project": "aiweb",
+      "hash": "d09ce3132e0dfc48",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".html",
+      "size_kb": 2.12
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/UI/README.md",
+      "project": "aiweb",
+      "hash": "3fa55ebd8d8122c6",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.85
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/UI/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "ca70685662bb9b02",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.38
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/UI/test_log.txt",
+      "project": "aiweb",
+      "hash": "cad8693a417c54c7",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.05
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/UI/ui_server.py",
+      "project": "aiweb",
+      "hash": "dd0c74551b52085d",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 3,
+      "file_type": ".py",
+      "size_kb": 2.37
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/log/field_state.json",
+      "project": "aiweb",
+      "hash": "d67ae7421518a53a",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.05
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/log/protoforge_log.txt",
+      "project": "aiweb",
+      "hash": "b261a2d77c6cb92d",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.07
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/protoforge/UI/terminal_display.py",
+      "project": "aiweb",
+      "hash": "34389e0df8becd05",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.58
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/protoforge/log/protoforge_log.txt",
+      "project": "aiweb",
+      "hash": "bc194ae66823e01e",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.3
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/protoforge/test_harness/run_system_test.py",
+      "project": "aiweb",
+      "hash": "79d66f45d8bd1daa",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 2.26
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/protoforge/config.json",
+      "project": "aiweb",
+      "hash": "8dc5f7473db77d00",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.2
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/protoforge/engine_freeze_log.txt",
+      "project": "aiweb",
+      "hash": "c653efb56c7c4094",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.15
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/protoforge/run.py",
+      "project": "aiweb",
+      "hash": "b83a9e7091c8be31",
+      "indexed_at": "2026-05-08T17:30:28",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 2.97
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/test_harness/run_system_test.py",
+      "project": "aiweb",
+      "hash": "79d66f45d8bd1daa",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 2.26
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/README.md",
+      "project": "aiweb",
+      "hash": "5045c8164e1a3b26",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.76
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/config.json",
+      "project": "aiweb",
+      "hash": "e062dcb7d6c034cc",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.4
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "acad2b5e03036b18",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.58
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/run.py",
+      "project": "aiweb",
+      "hash": "c7237299e7e9bc6c",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 2.43
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/run_system_test.py",
+      "project": "aiweb",
+      "hash": "e5708795a2a85ba6",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 5,
+      "file_type": ".py",
+      "size_kb": 2.68
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/test_log.txt",
+      "project": "aiweb",
+      "hash": "f3a525fd83de3ddf",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.17
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/recursive_field_stack/README.md",
+      "project": "aiweb",
+      "hash": "cd3b26999db894bf",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.61
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/recursive_field_stack/recursive_field_stack_loader.py",
+      "project": "aiweb",
+      "hash": "bd5129ea9c3bdd0d",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.99
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/recursive_field_stack/stack_manifest.json",
+      "project": "aiweb",
+      "hash": "94a4b2d469ed8350",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.37
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/recursive_field_stack/test_recursive_field_stack_loader.py",
+      "project": "aiweb",
+      "hash": "3526a1cd433dacf4",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.4
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/README.md",
+      "project": "aiweb",
+      "hash": "c15624ba2c08b719",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.71
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/core_breather.py",
+      "project": "aiweb",
+      "hash": "b2e94c34d5fe775c",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.21
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/engine_manifest.json",
+      "project": "aiweb",
+      "hash": "31ad7d10f7a5e338",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.23
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/field_breather.py",
+      "project": "aiweb",
+      "hash": "b8af748eae970321",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.23
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/stack_breather_core.py",
+      "project": "aiweb",
+      "hash": "90f956cedaa6b0f4",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 1.01
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/test_stack_breather_core.py",
+      "project": "aiweb",
+      "hash": "5fc4900d95e90775",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".py",
+      "size_kb": 0.17
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack/README.md",
+      "project": "aiweb",
+      "hash": "689028ed8a6f47ed",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.66
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack/stack_manifest.json",
+      "project": "aiweb",
+      "hash": "1e0e2c4d633ef977",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.4
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack/symbolic_cognition_stack_loader.py",
+      "project": "aiweb",
+      "hash": "ca5f86329139c41b",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 1.02
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack/test_symbolic_cognition_stack_loader.py",
+      "project": "aiweb",
+      "hash": "54f82c33329bbcab",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.42
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/symbolic_layers_stack/README.md",
+      "project": "aiweb",
+      "hash": "48c0f45a87aeddcb",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".md",
+      "size_kb": 0.58
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/symbolic_layers_stack/stack_manifest.json",
+      "project": "aiweb",
+      "hash": "d759171fd5a917b6",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".json",
+      "size_kb": 0.4
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/symbolic_layers_stack/symbolic_layers_stack_loader.py",
+      "project": "aiweb",
+      "hash": "b952d241b917ac7b",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.96
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/symbolic_layers_stack/test_symbolic_layers_stack_loader.py",
+      "project": "aiweb",
+      "hash": "73bc89acf7ef0d92",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 2,
+      "file_type": ".py",
+      "size_kb": 0.4
+    },
+    {
+      "path": "/home/nic/aiweb/runtime_wrappers/engine_freeze_log.txt",
+      "project": "aiweb",
+      "hash": "dae33dc316d2884b",
+      "indexed_at": "2026-05-08T17:30:29",
+      "embedding_model": "nomic-embed-text",
+      "chunk_count": 1,
+      "file_type": ".txt",
+      "size_kb": 0.6
+    }
+  ]
+}

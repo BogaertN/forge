@@ -1,0 +1,127 @@
+{
+  "boundary": "read-only reconcile; no template apply; no database writes; no identity activation",
+  "canonical_db": {
+    "exists": true,
+    "ok": true,
+    "opened_readonly": true,
+    "path": "/home/nic/identity-vault/data/identity_vault.db",
+    "rows": {
+      "agent_profiles": 0,
+      "audit_logs": 0,
+      "feedback_logs": 0,
+      "session_state": 0,
+      "sqlite_sequence": 0,
+      "user_profiles": 0
+    },
+    "tables": [
+      "agent_profiles",
+      "audit_logs",
+      "feedback_logs",
+      "session_state",
+      "sqlite_sequence",
+      "user_profiles"
+    ]
+  },
+  "findings": [
+    {
+      "code": "IV_SOURCE_TEMPLATES_INVALID_CONFIRMED",
+      "level": "INFO",
+      "message": "Existing Identity Vault templates remain invalid JSON and were not overwritten."
+    },
+    {
+      "code": "IV_REPAIRED_TEMPLATE_PREVIEWS_RECONCILED",
+      "level": "INFO",
+      "message": "Both repaired preview JSON files are valid and satisfy blueprint required fields."
+    },
+    {
+      "code": "IV_NO_MUTATION_CHECK_FAILED",
+      "level": "FAIL",
+      "message": "One or more no-mutation checks failed."
+    }
+  ],
+  "legacy_db": {
+    "exists": true,
+    "ok": true,
+    "opened_readonly": true,
+    "path": "/home/nic/identity-vault/vault.db",
+    "rows": {
+      "feedback_logs": 0,
+      "profiles": 1,
+      "session_state": 1,
+      "sqlite_sequence": 0
+    },
+    "tables": [
+      "feedback_logs",
+      "profiles",
+      "session_state",
+      "sqlite_sequence"
+    ]
+  },
+  "preview_validation": {
+    "agent": {
+      "error": null,
+      "exists": true,
+      "forbidden_token_hits": [],
+      "inactive_defaults_ok": true,
+      "json_ok": true,
+      "lookup_field": "agent_id",
+      "ok": true,
+      "path": "/home/nic/forge/memory/identity_vault_patch226d_template_repair_preview_v1/latest_agent_template_repaired_preview.json",
+      "profile_schema_version": "1.0.0-blueprint",
+      "required_missing": [],
+      "sha16": "1435d68801b42c55",
+      "target_table": "agent_profiles",
+      "template_type_expected": "agent_operational_identity_template",
+      "template_type_found": "agent_operational_identity_template"
+    },
+    "user": {
+      "error": null,
+      "exists": true,
+      "forbidden_token_hits": [],
+      "inactive_defaults_ok": true,
+      "json_ok": true,
+      "lookup_field": "user_id",
+      "ok": true,
+      "path": "/home/nic/forge/memory/identity_vault_patch226d_template_repair_preview_v1/latest_user_template_repaired_preview.json",
+      "profile_schema_version": "1.0.0-blueprint",
+      "required_missing": [],
+      "sha16": "64dac853fa7f0f36",
+      "target_table": "user_profiles",
+      "template_type_expected": "user_operational_identity_template",
+      "template_type_found": "user_operational_identity_template"
+    }
+  },
+  "safety": {
+    "agent_identity_activation_performed": false,
+    "agent_template_sha_unchanged": true,
+    "canonical_db_sha_unchanged": true,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "forge_tool_registry_modified": false,
+    "identity_vault_database_write_performed": false,
+    "identity_vault_template_write_performed": false,
+    "legacy_db_sha_unchanged": true,
+    "profiles_created": false,
+    "rmc_memory_write_performed": false,
+    "tool_registry_sha_unchanged": true,
+    "user_template_sha_unchanged": true
+  },
+  "source_templates": {
+    "agent": {
+      "error": "Expecting value: line 7 column 5 (char 95)",
+      "exists": true,
+      "json_ok": false,
+      "path": "/home/nic/identity-vault/templates/agent-template.json",
+      "sha16": "ed18366ba9e5808a"
+    },
+    "user": {
+      "error": "Expecting value: line 6 column 5 (char 96)",
+      "exists": true,
+      "json_ok": false,
+      "path": "/home/nic/identity-vault/templates/user-template.json",
+      "sha16": "97aeb120737d7c2e"
+    }
+  },
+  "timestamp": "20260523_215738_UTC",
+  "verdict": "FAIL"
+}

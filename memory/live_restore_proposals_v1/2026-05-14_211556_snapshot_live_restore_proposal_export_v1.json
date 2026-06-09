@@ -1,0 +1,49 @@
+{
+  "schema_version": "snapshot_live_restore_proposal_v1_patch88",
+  "report_type": "SNAPSHOT_LIVE_RESTORE_PROPOSAL_EXPORT_V1_PATCH88",
+  "created_at": "2026-05-14T21:15:56",
+  "mode": "EXPORT_ONLY_NO_LIVE_RESTORE_NO_PROJECT_WRITE",
+  "authority": {
+    "live_restore_proposal_authority": true,
+    "restore_authority": false,
+    "live_restore_authority": false,
+    "shadow_restore_copy_authority": false,
+    "snapshot_create_authority": false,
+    "project_file_write_authority": false,
+    "engine_file_write_authority": false,
+    "delete_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false,
+    "chroma_write_authority": false,
+    "final_lockfile_authority": false
+  },
+  "count": 1,
+  "reports": [
+    {
+      "path": "/home/nic/forge/memory/live_restore_proposals_v1/2026-05-14_211521_snapshot_live_restore_proposal_v1.json",
+      "created_at": "2026-05-14T21:15:21",
+      "status": "LIVE_RESTORE_PROPOSAL_READY_WITH_WARNINGS_NO_AUTHORITY",
+      "counts": {
+        "proposed_files": 58,
+        "blockers": 0,
+        "warnings": 4,
+        "inspection_problems": 0,
+        "inspection_warnings": 4
+      },
+      "authority": {
+        "live_restore_proposal_authority": true,
+        "restore_authority": false,
+        "live_restore_authority": false,
+        "shadow_restore_copy_authority": false,
+        "snapshot_create_authority": false,
+        "project_file_write_authority": false,
+        "engine_file_write_authority": false,
+        "delete_authority": false,
+        "quarantine_authority": false,
+        "shell_execution_authority": false,
+        "chroma_write_authority": false,
+        "final_lockfile_authority": false
+      }
+    }
+  ]
+}

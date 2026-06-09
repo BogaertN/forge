@@ -1,0 +1,56 @@
+# .gitignore for Self-Hosted Identity Vault
+# Ignores build artifacts, secrets, local data, and temp files.
+# Ensures privacy (e.g., no .env, vault.db) and clean repo.
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment vars and secrets
+.env
+.env.local
+.env.*.local
+.key-backup.enc  # Encrypted key backups
+.salt  # PBKDF2 salt file
+
+# Local DB and storage
+vault.db
+ipfs-repo/  # IPFS local repo (large/binary)
+templates/*.json  # Generated templates (regen via CLI)
+
+# Logs and temps
+*.log
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Testing
+coverage/
+.nyc_output
+test-results/
+
+# Builds/dist
+dist/
+build/
+
+# ZKP stubs (large binaries)
+utils/zk-proof.wasm
+utils/verification_key.json  # If generated
+
+# Exports (user-generated)
+export-*.json

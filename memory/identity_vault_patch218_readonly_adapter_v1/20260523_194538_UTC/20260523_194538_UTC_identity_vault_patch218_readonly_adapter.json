@@ -1,0 +1,207 @@
+{
+  "adapter_checks": {
+    "adapter_exists": true,
+    "adapter_version": "0.1.0-readonly",
+    "canonical_db_exists": true,
+    "contract_exists": true,
+    "import_ok": true,
+    "read_only_constant": true
+  },
+  "adapter_status": {
+    "adapter_version": "0.1.0-readonly",
+    "agent_identity_activation_performed": false,
+    "contract": {
+      "allowed_writes_empty": true,
+      "canonical_database_path": "/home/nic/identity-vault/data/identity_vault.db",
+      "contract_name": "identity_vault_readonly_service_contract_draft",
+      "controlled_by": "Forge",
+      "missing_fields": [],
+      "ok": true,
+      "status": "DRAFT_NOT_ACTIVE",
+      "version": "0.1.1-draft-file"
+    },
+    "database": {
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/data/identity_vault.db",
+      "row_counts": {
+        "agent_profiles": 0,
+        "audit_logs": 0,
+        "feedback_logs": 0,
+        "session_state": 0,
+        "sqlite_sequence": 0,
+        "user_profiles": 0
+      },
+      "tables": [
+        "agent_profiles",
+        "audit_logs",
+        "feedback_logs",
+        "session_state",
+        "sqlite_sequence",
+        "user_profiles"
+      ]
+    },
+    "database_write_performed": false,
+    "env_secret_values_read": false,
+    "identity_metadata_preview": {
+      "agent_profiles": {
+        "ok": true,
+        "row_count_returned": 0,
+        "safe_columns": [
+          "id",
+          "agent_id",
+          "role",
+          "created_at",
+          "updated_at"
+        ]
+      },
+      "user_profiles": {
+        "ok": true,
+        "row_count_returned": 0,
+        "safe_columns": [
+          "id",
+          "user_id",
+          "created_at",
+          "updated_at"
+        ]
+      }
+    },
+    "ok": true,
+    "package": {
+      "dependency_count": 34,
+      "description": "Sovereign Identity Management & Agent Orchestration Platform - A powerful, self-hosted identity management system designed for privacy-conscious individuals and organizations",
+      "dev_dependency_count": 32,
+      "name": "identity-vault",
+      "scripts": [
+        "build",
+        "build:docs",
+        "cli",
+        "db:backup",
+        "db:migrate",
+        "db:restore",
+        "db:seed",
+        "debug",
+        "deploy",
+        "dev",
+        "docker:build",
+        "docker:build:dev",
+        "docker:logs",
+        "docker:run",
+        "docker:run:dev",
+        "docker:shell",
+        "docker:stop",
+        "format",
+        "format:check",
+        "health",
+        "install:dev",
+        "k8s:delete",
+        "k8s:deploy",
+        "lint",
+        "lint:check",
+        "monitoring:start",
+        "monitoring:stop",
+        "postinstall",
+        "preinstall",
+        "prepare",
+        "release",
+        "release:dry",
+        "security:audit",
+        "security:scan",
+        "start",
+        "test",
+        "test:e2e",
+        "test:integration",
+        "test:unit",
+        "test:watch",
+        "type-check",
+        "validate"
+      ],
+      "version": "1.0.0"
+    },
+    "read_only": true
+  },
+  "after_snapshot": {
+    "/home/nic/identity-vault/.env": {
+      "exists": true,
+      "mtime_ns": 1759221548592283936,
+      "sha256": null,
+      "size": 1605
+    },
+    "/home/nic/identity-vault/data/identity_vault.db": {
+      "exists": true,
+      "mtime_ns": 1758703591831126824,
+      "sha256": "d185eb83a37a9be907ff6525deb241778772fbc7fcc51794efc4c94ab6ecf32f",
+      "size": 57344
+    },
+    "/home/nic/identity-vault/service_contracts/identity_vault_readonly_service_contract.draft.json": {
+      "exists": true,
+      "mtime_ns": 1779565008935363941,
+      "sha256": "2e1573ae148f68ea3d2035c9d5f99d633251f070f7e212e13cbde3e563343189",
+      "size": 1922
+    },
+    "/home/nic/identity-vault/vault.db": {
+      "exists": true,
+      "mtime_ns": 1759223030055894074,
+      "sha256": "1bfcaca815f7149d32b30e261c20d0679d7182191fe55cfa63ce830c287d87b9",
+      "size": 36864
+    }
+  },
+  "before_snapshot": {
+    "/home/nic/identity-vault/.env": {
+      "exists": true,
+      "mtime_ns": 1759221548592283936,
+      "sha256": null,
+      "size": 1605
+    },
+    "/home/nic/identity-vault/data/identity_vault.db": {
+      "exists": true,
+      "mtime_ns": 1758703591831126824,
+      "sha256": "d185eb83a37a9be907ff6525deb241778772fbc7fcc51794efc4c94ab6ecf32f",
+      "size": 57344
+    },
+    "/home/nic/identity-vault/service_contracts/identity_vault_readonly_service_contract.draft.json": {
+      "exists": true,
+      "mtime_ns": 1779565008935363941,
+      "sha256": "2e1573ae148f68ea3d2035c9d5f99d633251f070f7e212e13cbde3e563343189",
+      "size": 1922
+    },
+    "/home/nic/identity-vault/vault.db": {
+      "exists": true,
+      "mtime_ns": 1759223030055894074,
+      "sha256": "1bfcaca815f7149d32b30e261c20d0679d7182191fe55cfa63ce830c287d87b9",
+      "size": 36864
+    }
+  },
+  "boundary_notes": [
+    "This verification imports Forge's Identity Vault adapter only.",
+    "The adapter is read-only and unregistered in Forge's tool surface.",
+    "No .env secret values are read.",
+    "No Identity Vault database writes are performed.",
+    "No agent identity activation is performed."
+  ],
+  "findings": [
+    {
+      "code": "IV_READONLY_ADAPTER_OK",
+      "level": "INFO",
+      "message": "Adapter imported and returned contract-bound read-only status."
+    },
+    {
+      "code": "IV_NO_MUTATION_EVIDENCE",
+      "level": "INFO",
+      "message": "Contract, databases, legacy DB, and .env metadata/hash snapshots were unchanged."
+    }
+  ],
+  "no_mutation_check": {
+    "agent_identity_activation_performed": false,
+    "contract_db_env_legacy_snapshots_unchanged": true,
+    "database_write_performed": false,
+    "env_secret_values_read": false
+  },
+  "paths": {
+    "adapter": "/home/nic/forge/agents/forge/identity_vault_adapter.py",
+    "canonical_db": "/home/nic/identity-vault/data/identity_vault.db",
+    "contract": "/home/nic/identity-vault/service_contracts/identity_vault_readonly_service_contract.draft.json",
+    "legacy_db": "/home/nic/identity-vault/vault.db"
+  },
+  "timestamp": "20260523_194538_UTC",
+  "verdict": "PASS"
+}

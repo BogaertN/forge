@@ -1,0 +1,21 @@
+{
+  "report_type": "PATCH_SANDBOX_PLAN_PATCH60",
+  "timestamp": "2026-05-12T18:03:27",
+  "sandbox_id": "sandbox_2026-05-12_180327_README.md",
+  "status": "REFUSED_UNTIL_REVIEW",
+  "read_only_project_files": true,
+  "forge_owned_writes_only": true,
+  "apply_plan_path": "/home/nic/forge/apply_plans/2026-05-09_154718_PLAN_README_md.txt",
+  "target_file": "/home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack/README.md",
+  "target_size_bytes": 828,
+  "original_sha256": "689028ed8a6f47ed",
+  "future_sha256": "3c1e7372d60a6695",
+  "current_sha256": "3c1e7372d60a6695",
+  "rollback_path": "/home/nic/forge/rollback_registry/2026-05-09_154718_ROLLBACK_README_md.txt",
+  "sandbox_root": "/home/nic/forge/patch_sandboxes/sandbox_2026-05-12_180327_README.md",
+  "sandbox_relative_target": "runtime_wrappers/symbolic_cognition_stack/README.md",
+  "issues": [
+    "current SHA 3c1e7372d60a6695 does not match apply-plan original SHA 689028ed8a6f47ed"
+  ],
+  "next_step": "Resolve issues before sandbox apply."
+}

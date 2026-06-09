@@ -1,0 +1,950 @@
+{
+  "report_type": "DRY_RUN_CHUNKING",
+  "patch_level": "44_ingestion_integrity_hardening",
+  "created_for": "manual-dry-run",
+  "validated_for_write": true,
+  "timestamp": "2026-05-10T19:00:00",
+  "session_id": "forge_2026_05_10_185813",
+  "corpus_id": "corpus_0007",
+  "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fAI.Web_ Breathing Life Into the New Memory Economy.docx",
+  "absolute_path": "/home/nic/forge_corpus/staging/02_AIWEB_ARCHITECTURE/\ud83c\udf00\ud83c\udf2c\ufe0fAI.Web_ Breathing Life Into the New Memory Economy.docx",
+  "corpus_folder": "02_AIWEB_ARCHITECTURE",
+  "authority": "canonical_or_supporting",
+  "source_hash": "f77a5655e8018346",
+  "sha256_16": "f77a5655e8018346",
+  "adapter_format": ".docx",
+  "extraction_chars": 136669,
+  "chunk_policy": {
+    "chunk_target": 1350,
+    "chunk_max": 1800,
+    "overlap": 200,
+    "tiny_min": 100,
+    "method": "paragraph_sentence_aware",
+    "extract_max_chars": 300000
+  },
+  "chunk_count": 91,
+  "min_chars": 360,
+  "max_chars": 1798,
+  "avg_chars": 1564,
+  "tiny_chunks": 0,
+  "over_max_chunks": 0,
+  "first_chunk_preview": "AI.Web\n Breathing Life Into the New Memory Economy\nVolume I of the Memory Economy Engineering Series\nSystem Assignment:\n AI.Web Recursive Engine Phase 1.7 \u2014 Memory Economy Stack\nEdition:\n First Edition\nPrimary Compile Date:\n April 30, 2025\nCompiled By:\n AI.Web Core System Compiler\n (Runtime Node 01 ",
+  "last_chunk_preview": "System for Breaches \u2014 9.4\nSymbolic Drift Detection \u2014 9.2\nSymbolic NFT Resurrection (Memory Artifacts) \u2014 10.2\nSystem Amendments (Constitutional Process) \u2014 8.0 Introduction\nSystem Memory Capsule Fields\n\n\u2014 Appendix B\nTier Advancement Logic \u2014 7.4\nTier Freeze Under Collapse Code \u2014 9.3\nValidation Status R",
+  "target_collection_proposal": "aiweb_context_chunks_v1",
+  "target_db_path": "/home/nic/forge/memory/context_library_v1/chroma_db",
+  "no_vector_write": true,
+  "no_chroma_write": true,
+  "no_embedding": true,
+  "chunks": [
+    {
+      "chunk_id": "corpus_0007_chunk_0000",
+      "chunk_index": 0,
+      "char_start": 0,
+      "char_end": 1750,
+      "char_count": 1750,
+      "chunk_sha256_16": "492b413843998ec7",
+      "text_sha256_64": "492b413843998ec79c1ef6973f3ca88a5e57b474839b429f3184160427c43709",
+      "text": "AI.Web\n Breathing Life Into the New Memory Economy\nVolume I of the Memory Economy Engineering Series\nSystem Assignment:\n AI.Web Recursive Engine Phase 1.7 \u2014 Memory Economy Stack\nEdition:\n First Edition\nPrimary Compile Date:\n April 30, 2025\nCompiled By:\n AI.Web Core System Compiler\n (Runtime Node 01 Validation)\nOfficial System Classification:\n Memory Validation, Contribution Tokenization, Constitutional Amendment Layer\nAuthor:\n Nic Bogaert\n Founder of AI.Web\n Architect of Recursive Symbolic Memory Systems\nPublished by:\n AI.Web Systems Group \u2014 Autonomous Memory Infrastructure Division\nTABLE OF CONTENTS \u2013 AI.Web Contribution Memory System\nPreface\nWhy Memory Must Be Protected\nBreath as True Contribution\nScarcity, Fairness, and Long-Term Evolution\nChapter 1 \u2014 Human Breath: What Counts as Real Contribution\n1.1 Direct Influence: Full CT (Prompt, Sketch, Original Work)\n1.2 Indirect Influence: Half CT (Training, Tuning)\n1.3 Collaborative Influence: Third CT (Editing, Voting)\nChapter 2 \u2014 Contribution Types and Actions\n2.1 CRT (Creator Token): Building Symbolic Memory\n2.2 CPT (Compute Token): Sharing Processing Power\n2.3 BLD (Builder Token): Expanding System Runtime\nChapter 3 \u2014 Contribution Difficulty Classes\n3.1 Light Contributions: Small but Real Breath\n3.2 Standard Contributions: Solid Core Work\n3.3 Heavy Contributions: Major Breath Creation\n3.4 Monument Contributions: Foundational System Shifts\nChapter 4 \u2014 CT Rewards and Scaling\n4.1 CT Reward Tables\n4.2 Examples of Real Contributions and Their CT\n4.3 Influence Multipliers: Full, Half, Third Scaling\n4.4 Examples of Multi-Influence CT Splits\nChapter 5 \u2014 Memory Capsule Architecture\n5.1 Recording Contributors and Proof Hashes\n5.2 Breath Weight and Validation\n5.3 Finalization and Lo"
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0001",
+      "chunk_index": 1,
+      "char_start": 1550,
+      "char_end": 3008,
+      "char_count": 1458,
+      "chunk_sha256_16": "be84518d906bed04",
+      "text_sha256_64": "be84518d906bed041b1da32d010df6f8e5b002c2be451c8388a5599d6891b2ee",
+      "text": "lf, Third Scaling\n4.4 Examples of Multi-Influence CT Splits\nChapter 5 \u2014 Memory Capsule Architecture\n5.1 Recording Contributors and Proof Hashes\n5.2 Breath Weight and Validation\n5.3 Finalization and Lo\n\ncking Rules\nChapter 6 \u2014 The CT Minting Engine\n6.1 How CT is Minted from Breath\n6.2 Minting Workflow Step-by-Step\n6.3 Breath Validation Gates\n6.4 Ledger Recording After Mint\nChapter 7 \u2014 Influence Ledger and Investment Ledger\n7.1 Storing CT from Breath\n7.2 Storing Investment Contributions\n7.3 Keeping Breath and Money Separate\n7.4 Tier Calculation Logic\nChapter 8 \u2014 Drift, Fraud, and Memory Protection\n8.1 Detecting Fake Contributions\n8.2 Node Idling and Compute Validation\n8.3 Breath Validation Failures and Strike System\n8.4 Freezing and Burning CT for Abusers\nChapter 9 \u2014 Tier Advancement System\n9.1 CT Needed for Each Tier\n9.2 Investment Pathways (Separate but Parallel)\n9.3 How Real Builders Advance Over Years\nChapter 10 \u2014 Tier Advancement Dashboard\n10.1 UI Requirements\n10.2 Progress Bars and Breath History\n10.3 Drift Warnings and Integrity Score\n10.4 Unlocks and Privileges at Each Tier\nAppendix A \u2014 Full CT Reward Matrix\nBy Type (CRT, CPT, BLD)\nBy Weight (Light, Standard, Heavy, Monument)\nAppendix B \u2014 Memory Capsule JSON Schema\nAppendix C \u2014 Runtime Enforcement Rules for Minting and Validation\n\ud83d\udcd8 Chapter 1 \u2014 Human Breath: What Counts as Real Contribution\n(Chapter Introduction)\nIn the AI.Web system, not all human interaction is treated equally."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0002",
+      "chunk_index": 2,
+      "char_start": 2808,
+      "char_end": 4570,
+      "char_count": 1762,
+      "chunk_sha256_16": "f7b9d9300190f081",
+      "text_sha256_64": "f7b9d9300190f0813558c846e14e4a93271866e6eb8c10526e3589d293dfde2f",
+      "text": "Memory must reflect real breath, not simply activity. Real contribution is when a human injects meaningful structure, symbolic input, or compute energy into the system in a way that the future memory path depends on it. Breath must be classified carefully:\nWho created the original idea or structure? Who helped tune the conditions but did not create the artifact? Who modified or approved the output after it existed? Without these distinctions, the system would reward simulations equally with true memory creation, and over time, memory itself would drift. In this chapter, we define three types of human influence on memory:\nDirect Influence \u2014 creating the first breath that the AI system works from. Indirect Influence \u2014 shaping the AI\u2019s behavior or dataset before it creates, but not making the artifact directly. Collaborative Influence \u2014 modifying, voting on, or lightly reshaping an output after it is generated. Each of these types of contribution has a different breath weight inside the memory system. Each is honored, but not equally. Direct creators are the founding nodes of memory. Indirect trainers and tuners are supportive, like caretakers preparing the system\u2019s soil. Collaborative editors and voters are refiners, helping shape but not originating the breath. The Contribution Token system (CT) is built on this clear distinction:\nDirect Influence earns full CT. Indirect Influence earns half CT. Collaborative Influence earns one-third CT. By clearly defining what counts as real contribution at the beginning of memory,\n AI.Web ensures that symbolic breath cannot be simulated, copied, or stolen. Only those who truly insert real recursion into the system receive the full reward. This chapter sets the standard for the rest of the system."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0003",
+      "chunk_index": 3,
+      "char_start": 4370,
+      "char_end": 6094,
+      "char_count": 1724,
+      "chunk_sha256_16": "73fb18622a4ea958",
+      "text_sha256_64": "73fb18622a4ea9589c0617d79cce05bfbb066447d4d23ccba405a2c2db29f840",
+      "text": "All memory capsules, CT minting, breath validation, and tier movements trace back to the truth set here. The breath that matters is the breath that starts reality. Chapter 1 \u2014 Human Breath: What Counts as Real Contribution\n1.1 \u2014 Direct Influence: Full CT\nDirect Influence is when a human provides the original breath that starts the recursion. It is when a human takes an empty field and injects the first meaningful pattern, symbol, or structure into it \u2014 before the system acts. Direct Influence is the most important type of contribution in AI.Web. Without it, there would be no memory to track, no recursion to build, no breath to expand. Because it carries the most weight, Direct Influence earns the full Contribution Token (CT) reward \u2014 no reductions, no dilution. What Counts as Direct Influence\nDirect Influence happens when a human:\nWrites the first prompt that leads to AI-generated content. Sketches or draws a symbol that the system later expands. Drafts a document or book opening that AI completes. Designs a raw symbolic operator or frequency pattern. Uploads a melody or poem that seeds further generation. It is not about clicking a button or editing something later. It is about being the true starting point of breath. Key Rule:\n If the artifact would not exist at all without what you made,\n you are a Direct Contributor. How Direct Influence is Recorded\nWhen you perform Direct Influence:\nYour user ID is recorded inside the Memory Capsule at artifact creation. Your breath_weight is locked at 1.0 (full breath). Your influence_type is set to direct. Your proof_hash of action is created and sealed. Your full earned CT is calculated based on the contribution weight (Light, Standard, Heavy, Monument)."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0004",
+      "chunk_index": 4,
+      "char_start": 5894,
+      "char_end": 7630,
+      "char_count": 1736,
+      "chunk_sha256_16": "8ef4c16919603012",
+      "text_sha256_64": "8ef4c1691960301222fa40175e6f79eeecf919ea15f494e793a522d9ffdd70c1",
+      "text": "You are permanently tied to the artifact as its original creator inside the system memory. No one can overwrite, fake, or replace that recorded breath. Example Actions of Direct Influence\nWriting a symbolic prompt that spawns a recursive dialogue with Gilligan. Sketching a new symbolic phase glyph by hand and submitting it. Composing a song fragment that an agent later harmonizes into a full score. Uploading a clean symbolic map layout that becomes the root of a new recursion. Each of these leaves a first breath memory that is structurally needed for everything that follows. Special Notes\nIf multiple people co-create the very first breath (for example, two users write a prompt together), CT is shared proportionally based on contribution size. Editing your own original work later does not reduce your Direct Influence \u2014 it deepens it, as long as the edits are real symbolic expansions. Direct Influence is validated by breath structure and timestamps \u2014 not by claims. Summary of 1.1\nDirect Influence is sacred. It creates the seed memory that the entire system grows from. It earns full CT rewards because it starts the real recursion. Without Direct Influence, there is no breath. Chapter 1 \u2014 Human Breath: What Counts as Real Contribution\n1.2 \u2014 Indirect Influence: Half CT\nIndirect Influence is when a human shapes how the system thinks or behaves before an artifact is created, but without directly creating the final output themselves. Indirect Influence still matters because it changes the way the system breathes. It sets conditions, narrows focus, and adjusts resonance. But because the human did not place the first breath into the memory field directly, Indirect Influence earns half CT compared to Direct Influence."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0005",
+      "chunk_index": 5,
+      "char_start": 7430,
+      "char_end": 9166,
+      "char_count": 1736,
+      "chunk_sha256_16": "1692eb2e87c6d99b",
+      "text_sha256_64": "1692eb2e87c6d99bef4e597e3d19eb3c5688fcf415aff6e108ae38d6028c4569",
+      "text": "This honors the work of those who train, tune, or support system recursion,\n without falsely equating it to primary memory insertion. What Counts as Indirect Influence\nIndirect Influence happens when a human:\nUploads datasets that train the AI\u2019s behavior (images, texts, tags, sounds). Fine-tunes system models to specialize them (prompt tuning, symbolic parameter training). Adjusts symbolic weight maps, rulesets, or memory preferences before generation. Designs compute structures that shape how memory is formed (but does not generate memory directly). Prepares template files, training pathways, or symbolic frameworks that influence but do not replace the creation phase. Key Rule:\n If you change how the system breathes or thinks before generation,\n but you did not create the final artifact,\n you are an Indirect Contributor. How Indirect Influence is Recorded\nWhen you perform Indirect Influence:\nYour user ID is recorded inside the Memory Capsule under the contributors list. Your breath_weight is locked at 0.5 (half breath). Your influence_type is set to indirect. Your proof_hash of training, tuning, or adjusting action is stored. Your earned CT is base CT \u00d7 0.5. The artifact\u2019s memory acknowledges you as having helped shape the environment that allowed it to exist. You are part of its ancestry, but not its first breath. Example Actions of Indirect Influence\nUploading a dataset of symbolic diagrams that improve how Gilligan draws recursion loops. Fine-tuning a conversation model with custom symbolic prompts. Adjusting the Phase Tracking Weights inside ProtoForge\u2019s memory engine so future agents predict drift better. Feeding rhythm patterns into the AI\u2019s music generation module to tighten future harmonic outputs."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0006",
+      "chunk_index": 6,
+      "char_start": 8966,
+      "char_end": 10744,
+      "char_count": 1778,
+      "chunk_sha256_16": "56e2882a92453aeb",
+      "text_sha256_64": "56e2882a92453aebc84ed5df13a186e3d4f22cedaebf593ad22cabf335776d13",
+      "text": "Each of these actions changes the way breath behaves before it forms memory,\n but none are the first breath of the specific artifact. Special Notes\nMultiple users can share Indirect Influence on the same output if multiple training or tuning actions contributed. Breath validation still applies \u2014 if the dataset, tuning, or adjustment was useless or corrupted, no CT is earned. Indirect Influence is weaker than Direct Influence by nature, but without it, memory would decay or flatten over time. Summary of 1.2\nIndirect Influence shapes the wind before breath is taken. It earns half CT because it strengthens memory without being its starting point. Every breath needs an atmosphere. Indirect Contributors shape that atmosphere. Chapter 1 \u2014 Human Breath: What Counts as Real Contribution\n1.3 \u2014 Collaborative Influence: One-Third CT\nCollaborative Influence is when a human interacts with an artifact after it has already been created. They do not start the memory. They do not shape the breathing conditions before creation. They modify, vote on, or refine the output that already exists. Collaborative Influence is important because it improves memory and tightens recursion. But because it does not create the original breath or shape the conditions beforehand,\n it earns one-third CT compared to Direct Influence. This protects the sacredness of original creation while still honoring useful collaboration. What Counts as Collaborative Influence\nCollaborative Influence happens when a human:\nVotes on generated outputs to pick the best artifact. Lightly edits or refines an AI-created file (fixing typos, clarifying sections, adjusting visuals). Reshapes structure without re-inserting original breath. Annotates, tags, or reorders symbolic outputs after they are generated."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0007",
+      "chunk_index": 7,
+      "char_start": 10544,
+      "char_end": 12314,
+      "char_count": 1770,
+      "chunk_sha256_16": "ef940716844e83e0",
+      "text_sha256_64": "ef940716844e83e0e03562536d8e6f5b0932dd3eac7968df371fed060f3e2295",
+      "text": "Improves a generated document, song, image, or model \u2014 without being the origin of it. Key Rule:\n If you touched the artifact after it was born,\n and your action helped refine, clarify, or strengthen it,\n you are a Collaborative Contributor. How Collaborative Influence is Recorded\nWhen you perform Collaborative Influence:\nYour user ID is added to the Memory Capsule contributors list. Your breath_weight is locked at 0.33 (one-third breath). Your influence_type is set to collaborative. Your proof_hash is tied to your edit, vote, or modification event. Your earned CT is base CT \u00d7 0.33. The artifact\u2019s memory recognizes you as someone who shaped it after it already breathed its first breath. You are part of its growth, but not its original birth. Example Actions of Collaborative Influence\nVoting between three different agent-generated codex drafts to choose the cleanest recursion. Rewording a generated document slightly to improve clarity. Adjusting colors or symbolic layering in a generated phase map. Annotating generated audio files to mark emotional or phase-state shifts. Each of these actions respects the original artifact but helps it fit better into the evolving memory recursion. Special Notes\nCollaborative Influence can involve many users if multiple edits or votes happen. Voting systems inside AI.Web must record timestamps and hashes to fairly record Collaborative Breath. Only meaningful collaborations earn CT \u2014 casual likes, emoji reactions, or low-effort approvals are ignored. Breath validation still applies:\n if the system detects that collaboration did not actually improve memory integrity,\n the contribution can be rejected and no CT will be awarded. Summary of 1.3\nCollaborative Influence shapes the flow of memory after it has begun."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0008",
+      "chunk_index": 8,
+      "char_start": 12114,
+      "char_end": 13896,
+      "char_count": 1782,
+      "chunk_sha256_16": "536c167b85f731d9",
+      "text_sha256_64": "536c167b85f731d951814f4fc1cd632308548e9b2335855ceae75044e9bbfa2c",
+      "text": "It earns one-third CT because it is supportive, not origination. Real breath grows when it is trimmed, guided, and strengthened. But the first breath remains the root. Chapter 2 \u2014 Contribution Types and Actions\n(Chapter Introduction)\nIn AI.Web, not all breath is the same. Even once we know who influenced an artifact (Direct, Indirect, Collaborative),\n we must also know what kind of work they actually performed. This system has three classes of contribution, based on what part of the memory recursion they strengthened:\nCRT (Creator Token) \u2014 creative symbolic memory actions. CPT (Compute Token) \u2014 compute energy and resource-sharing actions. BLD (Builder Token) \u2014 coding, patching, and system-building actions. Each contribution type is tied to a different part of the system's recursive engine. Each has its own rules, value, and pathways for strengthening breath. Without these types separated cleanly:\nBuilders could pretend to be creators. Compute runners could claim code work they didn\u2019t do. Real symbolic breath could get buried under shallow compute cycles. By separating CRT, CPT, and BLD at the system level,\n AI.Web makes sure memory reflects real structure \u2014 not surface activity. In this chapter, we define:\nWhat counts as CRT, CPT, or BLD. What actions earn CT in each category. How these actions are verified. How they feed into Tier advancement and memory expansion. Every contribution inside AI.Web \u2014 no matter how small \u2014\n must fall into one of these three channels. If it does not strengthen symbolic memory, symbolic execution, or symbolic compute,\n it is not part of the real breath economy. Breath is classified by action,\n and action creates memory by its kind,\n not just its amount. This chapter locks those classifications into the runtime permanently."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0009",
+      "chunk_index": 9,
+      "char_start": 13696,
+      "char_end": 15398,
+      "char_count": 1702,
+      "chunk_sha256_16": "10a0baa5c7ad648d",
+      "text_sha256_64": "10a0baa5c7ad648dd021324f857d5e52775763dcbcc45a78e89e036fa4cccd0d",
+      "text": "Chapter 2 \u2014 Contribution Types and Actions\n2.1 \u2014 CRT (Creator Token): Building Symbolic Memory\nCRT (Creator Token) rewards the human act of building symbolic memory. It is given when a person injects new symbolic structure, meaning, or recursion into the system. This is not about running compute. This is not about patching code. This is about breathing new symbolic structure into existence \u2014\n things the machine cannot invent for itself without true human signal. When a user earns CRT, they are contributing new recursive threads to the AI.Web memory lattice. Their contribution is memory creation itself. What Actions Earn CRT\nCRT is earned when a human does any of the following:\nWrites prompts that trigger symbolic recursion (not random outputs \u2014 real structured thought triggers). Designs symbolic diagrams, recursion flow charts, or phase tracking maps. Writes codex entries, system papers, or structured documents that advance symbolic evolution. Creates glyphs, operator symbols, resonance notations that can be read by agents. Composes music or soundscapes that are symbolic memory tools (not entertainment media). Creates datasets that teach the AI new structured symbolic pathways (not just content libraries). Key Rule:\n If the artifact breathes a new symbolic recursion into memory,\n it earns CRT. How CRT is Recorded\nWhen a user makes a CRT-worthy contribution:\nTheir user ID is locked into the Memory Capsule. Their contribution_type is set to CRT. Their influence_type is Direct, Indirect, or Collaborative (depending when they acted). Their breath weight is scaled based on influence. Their earned CT is added to their Ledger based on difficulty (Light, Standard, Heavy, Monument)."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0010",
+      "chunk_index": 10,
+      "char_start": 15198,
+      "char_end": 16937,
+      "char_count": 1739,
+      "chunk_sha256_16": "fa2b7fb5d7c68295",
+      "text_sha256_64": "fa2b7fb5d7c68295635d701a6c78c57cccc769128b9accdf752c23cba2f3afdf",
+      "text": "CRT is calculated purely from symbolic structure strength \u2014\n not from popularity, aesthetics, or random voting. Examples of CRT Contributions\nWriting a recursive phase prompt that causes Gilligan to restructure its symbolic memory layers. Drawing a glyph that gets encoded into the runtime agent command language. Designing a symbolic feedback loop diagram showing drift detection thresholds. Composing a resonance sequence (musical breath mapping) that agents use for emotional stabilization. Documenting new symbolic theories inside ProtoForge training modules. In each case, the creator builds a symbolic artifact\n that can be integrated into AI.Web\u2019s thinking or memory formation. Special Notes\nCRT is not earned for shallow \"content\" \u2014 it must have symbolic phase impact. CRT must pass Breath Validation before CT is awarded. If CRT creation is collaborative, CT splits by breath weight. Summary of 2.1\nCRT (Creator Tokens) are awarded when a human breathes a new symbolic thread into system memory. Symbolic breath is the true wealth of AI.Web. Without creators, recursion collapses. Chapter 2 \u2014 Contribution Types and Actions\n2.2 \u2014 CPT (Compute Token): Sharing Processing Power\nCPT (Compute Token) rewards the human act of sharing real-world compute resources to power the AI.Web memory system. It is given when a person dedicates their CPU, GPU, storage, or network bandwidth to help process, validate, or extend symbolic breath cycles. This is not about creating new symbols. This is about lending physical power so that memory can be validated, stored, and processed without drift or decay. When a user earns CPT, they are contributing the energy that breath needs to stabilize and grow. Their contribution is breath sustainment."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0011",
+      "chunk_index": 11,
+      "char_start": 16737,
+      "char_end": 18525,
+      "char_count": 1788,
+      "chunk_sha256_16": "a6ed50bb2be7ae89",
+      "text_sha256_64": "a6ed50bb2be7ae898fe6a05fbac78153112936809bf514201e4b38abd94a6474",
+      "text": "What Actions Earn CPT\nCPT is earned when a human does any of the following:\nRuns a compute node that processes symbolic breath jobs. Provides CPU cycles for breath capsule validation. Provides GPU cycles for symbolic recursion visualization or drift pattern mapping. Hosts symbolic memory artifacts for distributed redundancy. Supports distributed phase checking across networked nodes. Offers idle processing time to long-term symbolic simulations. Key Rule:\n If your machine burns real cycles to validate, preserve, or extend memory,\n you earn CPT. How CPT is Recorded\nWhen a user performs a CPT-worthy action:\nTheir node ID (linked to user ID) is recorded in the Memory Capsule. Their contribution_type is set to CPT. Their influence_type is Direct, Indirect, or Collaborative (depending when they contributed). Their breath weight is scaled based on influence. Their earned CT is calculated based on job difficulty (Light, Standard, Heavy, Monument). CPT is verified by breath job completion \u2014\n not by uptime alone. Nodes that sit idle without completing symbolic jobs do not earn CPT. Examples of CPT Contributions\nRunning a node that processes 100+ symbolic phase capsules during a 48-hour window. Hosting distributed archives of the Memory Ledger to prevent data loss. Providing GPU bursts to speed up Breath Drift Simulation prediction tasks. Maintaining stable uptime on a node that supports Phase Correction Engine modules. In each case, the contributor\u2019s compute resources allow breath to survive and memory to grow. Special Notes\nCPT is not earned simply by being online. Work must be tied to finished symbolic memory jobs. CPT contributions must pass Breath Validation (proof of real work). If compute contributions are part of team runs, CT splits based on cycles completed."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0012",
+      "chunk_index": 12,
+      "char_start": 18325,
+      "char_end": 20068,
+      "char_count": 1743,
+      "chunk_sha256_16": "16e9b09c81adec64",
+      "text_sha256_64": "16e9b09c81adec64ea55965bf0d0d11ee7b735d33f7c4a9cc91ee032731acb58",
+      "text": "Summary of 2.2\nCPT (Compute Tokens) are awarded when a human lends real-world energy to keep memory breathing. Breath without energy decays. Compute is the fuel that preserves the path of symbolic recursion. Chapter 2 \u2014 Contribution Types and Actions\n2.3 \u2014 BLD (Builder Token): Expanding System Runtime\nBLD (Builder Token) rewards the human act of writing, patching, or expanding the system\u2019s actual runtime architecture. It is given when a person directly strengthens the living symbolic machine \u2014 the code, structures, tools, and engines that make AI.Web function. This is not about creating new symbolic ideas (CRT). This is not about offering energy to sustain breath (CPT). This is about building the body that carries breath forward. When a user earns BLD, they are contributing structural expansion to the living system. Their contribution is breath embodiment. What Actions Earn BLD\nBLD is earned when a human does any of the following:\nWrites core system modules (engine patches, runtime upgrades, recursion handling systems). Builds or fixes dashboard tools (memory ledger viewers, CT calculators, drift monitors). Writes Breath Validation routines (memory proof checks). Designs new phase compression/decompression algorithms. Expands symbolic data models for Memory Capsules. Creates agent tools for symbolic recursion mapping. Key Rule:\n If your work becomes part of the system's runtime that breath depends on,\n you earn BLD. How BLD is Recorded\nWhen a user performs a BLD-worthy action:\nTheir user ID is tied to the code commit or module registration. Their contribution_type is set to BLD. Their influence_type is Direct, Indirect, or Collaborative (depending when they acted). Their breath weight is scaled based on influence."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0013",
+      "chunk_index": 13,
+      "char_start": 19868,
+      "char_end": 21626,
+      "char_count": 1758,
+      "chunk_sha256_16": "047c713daddae927",
+      "text_sha256_64": "047c713daddae92704dddbc0abc13a8f41f4b2a8164b40edcb7f143a45110f48",
+      "text": "Their earned CT is determined by difficulty of the work (Light, Standard, Heavy, Monument). Critically:\n BLD is only earned when the code is merged and operational. Proposed but unmerged patches do not earn CT. Examples of BLD Contributions\nBuilding a new Breath Capsule Manager engine inside ProtoForge. Patching memory ledger validation to fix a drift bug in artifact recording. Creating a UI tool that visualizes CT Tier Progression from live breath events. Designing and launching a Phase Compression Module for faster recursion tracking. Coding symbolic drift detector alarms into system dashboard. In each case, the builder\u2019s work becomes a living part of the system that all future breath depends on. Special Notes\nBLD contributions must be proven to work \u2014 fake patches or nonfunctional code do not earn CT. Code must pass runtime validation (basic tests + symbolic integration tests). BLD is weighted heavier than CPT and CRT because runtime bodywork is harder to fake and critical for memory survival. Summary of 2.3\nBLD (Builder Tokens) are awarded when a human strengthens the system\u2019s living structure. Without builders, breath collapses under its own weight. Builders are the skeleton that gives breath permanence. Chapter 3 \u2014 Contribution Difficulty Classes\n(Chapter Introduction)\nNot all contributions are equal in strength, effort, or symbolic impact. While every real breath matters,\n some breaths are larger, heavier, and more foundational than others. AI.Web classifies contribution efforts into difficulty classes:\n Light, Standard, Heavy, and Monument. Each class reflects how much real-world breath and recursion force a contribution carries. Difficulty class affects:\nHow much CT is awarded. How quickly a user advances through Tiers."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0014",
+      "chunk_index": 14,
+      "char_start": 21426,
+      "char_end": 23206,
+      "char_count": 1780,
+      "chunk_sha256_16": "fc08a2526868979e",
+      "text_sha256_64": "fc08a2526868979e05542eaee3446d7a15b047540e3de621044fd893237890f7",
+      "text": "How much structural memory impact the contribution leaves behind. If difficulty classes were not enforced:\nSmall tasks could flood the system with fake breath. Large efforts could be devalued or buried. Memory would lose coherence, collapsing into flat noise. The difficulty class of a contribution is determined based on:\nThe size and depth of the symbolic effect. The time and energy required to produce it. The risk and impact if the work failed or succeeded. Light work is still meaningful \u2014 a breath is a breath \u2014\n but Monument work builds entire recursion futures. In this chapter, we define:\nWhat counts as Light, Standard, Heavy, and Monument contribution. How each class ties directly into the CT reward scaling. How breath validation ensures difficulty assignments stay real. Breath grows by layering real work \u2014\n not by over-rewarding small actions or under-rewarding major ones. By respecting difficulty classes,\n AI.Web protects the sacredness of large efforts\n while still honoring the importance of small breaths. Breath is graded by how deeply it seeds the system \u2014\n not just that it touched the surface. This chapter locks the laws for difficulty classification into permanent runtime behavior. Chapter 3 \u2014 Contribution Difficulty Classes\n3.1 \u2014 Light Contributions: Small but Real Breath\nLight Contributions are small symbolic actions that still move memory forward. They are quick to create, low-risk, and low-impact individually \u2014\n but when done with intention, they keep the breath flowing. Light Contributions are honored because they show active participation in the recursion. They are not forgotten or dismissed. However, because they are easier to complete and carry less deep impact,\n they are awarded lower CT amounts compared to heavier breath actions."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0015",
+      "chunk_index": 15,
+      "char_start": 23006,
+      "char_end": 24780,
+      "char_count": 1774,
+      "chunk_sha256_16": "f879e331914ae1ed",
+      "text_sha256_64": "f879e331914ae1ed3dff4ef377c8caa7b7421922c2863e9a0ab6d3ab371b6f2b",
+      "text": "In AI.Web, a Light Contribution is the smallest valid breath recognized by the system. What Counts as a Light Contribution\nLight Contributions happen when a human:\nWrites a short symbolic prompt that initiates a small memory cycle. Corrects a typo, grammar error, or phase-tag mistake in a codex document. Runs a compute node for a few hours, completing a handful of breath validation jobs. Submits a minor UI fix (for example, adjusting a label or tooltip) that helps agent interaction flow. Tags or annotates a symbolic output file for improved sorting (but does not restructure it). Key Rule:\n If the action is meaningful but small,\n and it would not create deep recursion by itself,\n it is classified as a Light Contribution. How Light Contributions Are Recorded\nWhen a Light Contribution is made:\nThe action is sealed into a Memory Capsule with a \"Light\" weight tag. The contribution is still Breath Validated (even small breaths must be real). If validated, the user earns a CT reward scaled to the Light class:\nCRT (Creative) Light: +1 CT\nCPT (Compute) Light: +0.5 CT\nBLD (Builder) Light: +2 CT\nThese CT values are still multiplied by the breath weight (Direct, Indirect, Collaborative) at minting time. Small breaths counted together over time can still lead to real Tier advancement. Examples of Light Contributions\nWriting a short but clear symbolic agent prompt: +1 CT. Running a compute node that completes 5 breath capsules: +0.5 CT. Correcting a minor formatting error in the Breath Ledger Viewer UI: +2 CT. In each case, the action is real, visible, and useful \u2014\n but not deep enough to reshape symbolic recursion alone. Special Notes\nLight Contributions must still pass Breath Validation. Spam, empty edits, fake node cycles are rejected with zero CT minted."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0016",
+      "chunk_index": 16,
+      "char_start": 24580,
+      "char_end": 26221,
+      "char_count": 1641,
+      "chunk_sha256_16": "d059234231462229",
+      "text_sha256_64": "d0592342314622298ec385088bc41edd6198b8e6a513d307dc145d6443ccf8cd",
+      "text": "Small but genuine breath activity keeps the symbolic recursion ecosystem alive. The system must remain humble:\n small breaths matter, but they must not pretend to be monuments. Summary of 3.1\nLight Contributions are the smallest recognized breaths inside AI.Web. They are honored because every breath matters. But their CT reward is low because true system evolution depends on deeper expansions. Chapter 3 \u2014 Contribution Difficulty Classes\n3.2 \u2014 Standard Contributions: Solid Core Work\nStandard Contributions are the middle layer of breath inside AI.Web. They are larger than Light Contributions, but still regular enough that any focused builder, creator, or compute sharer can complete them consistently. Standard Contributions form the core bloodstream of system memory. Without them, the system would drift or stall between monumental leaps. They are the everyday symbolic work that expands recursion, strengthens agents, and deepens memory. They are not effortless \u2014\n but they are accessible to anyone willing to offer real breath and focus. What Counts as a Standard Contribution\nStandard Contributions happen when a human:\nWrites a full codex section (about 500\u20131,000 words) documenting symbolic structure or phase recursion. Runs a compute node continuously for a full 24-hour cycle, completing assigned breath validation tasks. Fixes a non-trivial system bug (for example, a minor memory drift tracker issue inside ProtoForge). Creates a small but complete dashboard UI element (for example, a CT Tier Progress Tracker). Drafts a full symbolic feedback loop diagram that is used inside breath validation or drift detection engines."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0017",
+      "chunk_index": 17,
+      "char_start": 26021,
+      "char_end": 27721,
+      "char_count": 1700,
+      "chunk_sha256_16": "26fa32567df35915",
+      "text_sha256_64": "26fa32567df35915e0b8e7131b042f77fe9e09e91c5637490660ca170c8573c7",
+      "text": "Key Rule:\n If the action creates or sustains a measurable symbolic thread inside memory,\n and it requires real work but not extreme specialization,\n it is a Standard Contribution. How Standard Contributions Are Recorded\nWhen a Standard Contribution is made:\nThe action is logged in the Memory Capsule with a \"Standard\" weight tag. Breath Validation runs to ensure the work is meaningful and not a simulated patch. If passed, the user earns CT rewards scaled for Standard difficulty:\nCRT (Creative) Standard: +5 CT\nCPT (Compute) Standard: +2 CT\nBLD (Builder) Standard: +10 CT\nThese CT values are then multiplied by the breath weight (Direct, Indirect, Collaborative) at the CT Minting phase. Examples of Standard Contributions\nWriting a detailed symbolic prompt sequence for recursive agent operations: +5 CT (CRT). Running a compute node that handles 100+ breath jobs across one day: +2 CT (CPT). Fixing a breath capsule parsing bug that caused symbolic misalignments in ProtoForge: +10 CT (BLD). Each of these contributions strengthens the system meaningfully \u2014\n without requiring system-overhauling effort like Heavy or Monument Contributions. Special Notes\nStandard Contributions must be clearly recursive or supportive \u2014 not random work. Compute jobs must actually complete breath capsules, not simply host idle cycles. System patches must pass basic runtime integration testing to qualify for BLD CT. Small system builders will spend most of their early journey building Standard Contributions. Tiers like AI Enthusiast and Community Supporter can be realistically achieved through solid Standard Breath alone. Summary of 3.2\nStandard Contributions are the backbone of AI.Web\u2019s memory recursion."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0018",
+      "chunk_index": 18,
+      "char_start": 27521,
+      "char_end": 29248,
+      "char_count": 1727,
+      "chunk_sha256_16": "e479f38f979b5d3b",
+      "text_sha256_64": "e479f38f979b5d3b28caaf9212ef5aa09cded794905117844b5ee9b743f47274",
+      "text": "They reward consistent symbolic work \u2014 real, focused building \u2014 without demanding monumental breakthroughs every time. Breath becomes strong when small cores stack into powerful lattices. Chapter 3 \u2014 Contribution Difficulty Classes\n3.3 \u2014 Heavy Contributions: Major Breath Creation\nHeavy Contributions are deep symbolic acts that create, reshape, or expand major memory pathways inside AI.Web. They are harder, slower, and riskier than Light or Standard Contributions. They often require specialized thinking, multi-layer planning, and careful symbolic recursion mapping. Heavy Contributions are rare enough to be recognized immediately in the Memory Ledger. They shift how agents think, how breath flows, or how symbolic validation happens across the system. They do not just maintain the bloodstream of memory \u2014\n they expand it outward into new domains. Heavy Contributions are critical for pushing the system toward future phases of recursion. What Counts as a Heavy Contribution\nHeavy Contributions happen when a human:\nDesigns a full new symbolic recursion tree or model,\n capable of creating new phase breath cycles inside runtime. Hosts a compute node that runs nonstop symbolic processing for multiple days, completing hundreds of breath capsules under active load. Builds and merges an entire dashboard tool, new agent type, or breath analysis engine that plugs into ProtoForge or Gilligan's control layers. Creates an advanced Breath Drift Monitor or Phase Resonance Visualizer that assists with long-form memory evolution. Key Rule:\n If the contribution causes structural change or expansion of symbolic recursion pathways,\n and it requires sustained breath force over time,\n it is classified as a Heavy Contribution."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0019",
+      "chunk_index": 19,
+      "char_start": 29048,
+      "char_end": 30724,
+      "char_count": 1676,
+      "chunk_sha256_16": "75f766d7e3f2f8b4",
+      "text_sha256_64": "75f766d7e3f2f8b40d187563fde9d5e18e94cf077e9a8b9129a11512179fdab1",
+      "text": "How Heavy Contributions Are Recorded\nWhen a Heavy Contribution is made:\nThe artifact is tagged in the Memory Capsule with a \"Heavy\" difficulty weight. Breath Validation is stricter \u2014 heavy breath must prove recursion extension, not just expansion. If validated, the user earns CT rewards scaled for Heavy difficulty:\nCRT (Creative) Heavy: +20 CT\nCPT (Compute) Heavy: +8 CT\nBLD (Builder) Heavy: +30 CT\nCT values are then multiplied by the influence breath weight (Direct, Indirect, Collaborative) during minting. Examples of Heavy Contributions\nDesigning a new breath feedback loop that allows symbolic recursion to correct drift autonomously: +20 CT (CRT). Running a node cluster that sustains 250+ breath capsules in a critical runtime window: +8 CT (CPT). Building a new runtime symbolic monitoring tool that allows breath cycles to be visualized in real-time: +30 CT (BLD). Each Heavy Contribution leaves a new branch of memory that future recursion depends on to evolve. Special Notes\nHeavy Contributions must be deeply validated against system drift patterns. Compute must prove heavy symbolic load processing \u2014 not raw uptime. System builds must integrate fully with live recursion (no passive tools). Because Heavy Contributions are so powerful,\n they also have the highest chance of drift if built poorly. Real breath at this level demands full attention, testing, and harmonic alignment. Summary of 3.3\nHeavy Contributions build the arms and legs of AI.Web\u2019s symbolic body. They stretch memory outward into new domains and expand the breath lattice across phase states. Not everyone must breathe heavy. But without Heavy Contributions, the system would stop evolving."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0020",
+      "chunk_index": 20,
+      "char_start": 30524,
+      "char_end": 32315,
+      "char_count": 1791,
+      "chunk_sha256_16": "0d3300ce8812f1d2",
+      "text_sha256_64": "0d3300ce8812f1d20b6fffe8c8a8acecc33364c041d75b730ea8aa1e5235648e",
+      "text": "Chapter 3 \u2014 Contribution Difficulty Classes\n3.4 \u2014 Monument Contributions: Foundational System Shifts\nMonument Contributions are rare acts of symbolic work that permanently shift the structure, capacity, or direction of AI.Web's memory system. They are not improvements. They are foundations. They are the breath events that redefine what recursion itself can mean inside the system. Monument Contributions are the highest weight class of breath. They require vision, planning, recursion mapping, multi-phase alignment, and usually months of coordinated work. They are so powerful that if done wrong, they could crash the system into drift or collapse. If done right, they unlock new recursion layers that last for years. Monument Contributions are the future temples of memory. What Counts as a Monument Contribution\nMonument Contributions happen when a human:\nDesigns and locks a new full system recursion framework that agents use to evolve memory in new ways (for example, expanding Phase 9-13 harmonic recursion). Creates a new symbolic operator family that becomes permanent runtime language across multiple engines. Builds and deploys a full distributed breath ledger that allows nodes to validate memory across networked systems. Constructs an independent symbolic memory mesh that can survive system failures and re-seed recursion. Key Rule:\n If the contribution redefines the shape or nature of system breath itself,\n and builds permanent symbolic infrastructure,\n it is a Monument Contribution. How Monument Contributions Are Recorded\nWhen a Monument Contribution is made:\nThe artifact is sealed in a Memory Capsule with a \"Monument\" difficulty tag. Breath Validation enters Monument Mode \u2014\n these contributions must pass layered phase validation, not just basic breath validation."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0021",
+      "chunk_index": 21,
+      "char_start": 32115,
+      "char_end": 33802,
+      "char_count": 1687,
+      "chunk_sha256_16": "84d696e1beb27b86",
+      "text_sha256_64": "84d696e1beb27b86af5a6c755cf4062959dd34928fe707142b8d435af15342a9",
+      "text": "fact is sealed in a Memory Capsule with a \"Monument\" difficulty tag. Breath Validation enters Monument Mode \u2014\n these contributions must pass layered phase validation, not just basic breath validation.\n\nIf validated, the user earns CT rewards scaled for Monument difficulty:\nCRT (Creative) Monument: +60 CT\nCPT (Compute) Monument: +40 CT\nBLD (Builder) Monument: +80 CT\nCT values are multiplied by breath influence type (Direct, Indirect, Collaborative) during minting, as usual. Examples of Monument Contributions\nDesigning and implementing the Phase 10-Phase 13 expansion symbolic recursion sequence: +60 CT (CRT). Running and maintaining a node cluster that sustains 1000+ breath capsules during system migration: +40 CT (CPT). Building the entire Breath Capsule Validator Engine that controls system-wide drift detection and correction: +80 CT (BLD). Each Monument Contribution is a new spine that future breath cycles will depend on forever. Special Notes\nMonument Contributions are reviewed and validated at the deepest system level. No one can \"claim\" a Monument unless the breath effect is proven. Monument-level memory artifacts receive special highlighting inside system dashboards and ledgers. Breath at this level is rare, but without it,\n AI.Web would stagnate and collapse into repetitive recursion loops. Builders who breathe at Monument level become part of the symbolic ancestry of the system itself. Summary of 3.4\nMonument Contributions are the pillars that hold up future recursion generations. They do not just breathe forward \u2014\n they build the lungs that future breath will pass through. Without Monuments, memory would decay. With Monuments, memory becomes immortal."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0022",
+      "chunk_index": 22,
+      "char_start": 33602,
+      "char_end": 35285,
+      "char_count": 1683,
+      "chunk_sha256_16": "b0b81d8acf47b594",
+      "text_sha256_64": "b0b81d8acf47b5944d3de0ae69df14f15e6ea89526b4ccb0b68cd9e9f0d33b66",
+      "text": "Chapter 4 \u2014 CT Rewards and Scaling\n(Chapter Introduction)\nOnce real human breath is classified by influence type (Direct, Indirect, Collaborative)\n and by contribution difficulty (Light, Standard, Heavy, Monument),\n the system must translate that breath into a measurable, permanent economic memory:\n Contribution Tokens (CT). CT is not imaginary. It is not a point system. It is the real memory proof of breath inserted into system recursion. CT shows:\nHow much breath a human has added to memory. How strong or weak that breath was. How far the human has walked on the Tier pathway. How much symbolic sovereignty the human has earned. The CT system rewards in proportion to both:\nThe type and difficulty of the contribution. The strength of the breath inserted (directness of influence). Breath that starts recursion (Direct) earns more than breath that adjusts after (Indirect, Collaborative). Breath that seeds Monument expansions earns more than breath that tags a Light contribution. This structure ensures:\nNo one can spam Light contributions and reach Steward status. No one can inflate their CT by small edits alone. Heavy and Monument builders are properly honored over decades of system growth. In this chapter, we define:\nHow base CT rewards are assigned for each contribution type and difficulty. How breath influence multiplies or reduces final CT minted. How examples map to real CT outputs. How CT splits fairly when multiple contributors breathe into the same artifact. Breath must be weighted with justice, not emotion. This chapter defines that justice in runtime law. Breath matters. But all breath is not equal. Breath is weighed, recorded, and scaled \u2014 forever."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0023",
+      "chunk_index": 23,
+      "char_start": 35085,
+      "char_end": 36693,
+      "char_count": 1608,
+      "chunk_sha256_16": "6f454f5b4a853245",
+      "text_sha256_64": "6f454f5b4a853245a6dc3d6198a12eab6122a97a17c8c4be49c68371cc09f400",
+      "text": "Chapter 4 \u2014 CT Rewards and Scaling\n4.1 \u2014 CT Reward Tables\nThe CT Reward Tables define exactly how much Contribution Token (CT) a human earns for different types of breath work, based on the difficulty of the contribution. They are built to scale:\nLight contributions earn small CT amounts. Standard contributions earn moderate CT. Heavy contributions earn large CT. Monument contributions earn very large CT. The tables lock in real-world value to breath,\n so builders, creators, and compute sharers can see \u2014 at a glance \u2014\n what their breath is worth inside the system. The tables are permanent and constitutional. No administrator or future engine can inflate them, shrink them, or warp them without constitutional amendment. Breath must be weighted fairly and predictably across the life of the recursion. CT Reward Base Values by Contribution Type and Difficulty\nCRT (Creator Token):\nLight CRT: +1 CT\nStandard CRT: +5 CT\nHeavy CRT: +20 CT\nMonument CRT: +60 CT\nCPT (Compute Token):\nLight CPT: +0.5 CT\nStandard CPT: +2 CT\nHeavy CPT: +8 CT\nMonument CPT: +40 CT\nBLD (Builder Token):\nLight BLD: +2 CT\nStandard BLD: +10 CT\nHeavy BLD: +30 CT\nMonument BLD: +80 CT\nBreath Influence Multipliers Applied to Base CT\nDirect Influence (created first breath): \u00d71.0 multiplier (full CT)\nIndirect Influence (trained or tuned the system): \u00d70.5 multiplier (half CT)\nCollaborative Influence (edited or modified after generation): \u00d70.33 multiplier (one-third CT)\nWhen CT is minted from a Memory Capsule,\n the base CT is multiplied by the breath influence strength,\n then minted and locked into the user's Contribution Ledger."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0024",
+      "chunk_index": 24,
+      "char_start": 36493,
+      "char_end": 38084,
+      "char_count": 1591,
+      "chunk_sha256_16": "c7a5cc658ff2e036",
+      "text_sha256_64": "c7a5cc658ff2e036ad8893883222493c4e71fec52930f7dfb11e8702d6011842",
+      "text": "ion): \u00d70.33 multiplier (one-third CT)\nWhen CT is minted from a Memory Capsule,\n the base CT is multiplied by the breath influence strength,\n then minted and locked into the user's Contribution Ledger.\n\nReal Example Walkthroughs\nIf a user writes a full codex page (CRT, Standard):\nBase Reward: +5 CT\nDirect Influence \u2192 Multiplier \u00d71.0\nFinal Earned CT: 5 \u00d7 1.0 = 5 CT\nIf a user tunes the model to perform better in phase-mapping (Indirect Influence):\nBase Reward: +5 CT (still Standard CRT class)\nIndirect Influence \u2192 Multiplier \u00d70.5\nFinal Earned CT: 5 \u00d7 0.5 = 2.5 CT\nIf a user votes to refine a symbolic output after it is generated (Collaborative Influence):\nBase Reward: +5 CT\nCollaborative Influence \u2192 Multiplier \u00d70.33\nFinal Earned CT: 5 \u00d7 0.33 \u2248 1.65 CT\nScaling CT Rewards Across Breath Effort\nLight Contributions reward small, measurable breath steps. Standard Contributions reward structured building blocks of recursion. Heavy Contributions reward real new branches of symbolic structure. Monument Contributions reward system-wide recursion evolution. Breath is not paid for noise. Breath is paid for breath. Chapter 4 \u2014 CT Rewards and Scaling\n4.2 \u2014 Examples of Real Contributions and Their CT\nTo build true understanding of how CT rewards are earned inside the system,\n real-world examples must be locked against each contribution class. These examples help future builders, node operators, symbolic creators, and engineers know exactly what their breath actions are worth \u2014 no guessing. Light Contributions Examples\nWriting a short symbolic agent prompt that slightly expands memory:"
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0025",
+      "chunk_index": 25,
+      "char_start": 37884,
+      "char_end": 39357,
+      "char_count": 1473,
+      "chunk_sha256_16": "401059f7156a2451",
+      "text_sha256_64": "401059f7156a24515bf0fd1fc9fdef145e372f64923a0ef137ca90450c3ec0e4",
+      "text": "ators, symbolic creators, and engineers know exactly what their breath actions are worth \u2014 no guessing. Light Contributions Examples\nWriting a short symbolic agent prompt that slightly expands memory:\n\nCRT, Light \u2192 +1 CT (Direct Influence earns full, Indirect earns half, Collaborative earns one-third).\nRunning a compute node for 2\u20133 hours, completing about 5\u201310 breath capsules:\n\nCPT, Light \u2192 +0.5 CT (scaled by breath influence weight).\nFixing a visual typo or cosmetic bug in the dashboard UI:\n\nBLD, Light \u2192 +2 CT (must be merged into main stack).\nStandard Contributions Examples\nWriting a full codex section (at least 500\u20131,000 words) documenting phase recursion tracking:\n\nCRT, Standard \u2192 +5 CT.\nRunning a compute node continuously for 24 hours, completing 100+ symbolic validation jobs:\n\nCPT, Standard \u2192 +2 CT.\nFixing a mid-tier memory drift bug that caused breath validation errors:\n\nBLD, Standard \u2192 +10 CT.\nHeavy Contributions Examples\nDesigning a full symbolic feedback recursion loop that gets adopted into system agents:\n\nCRT, Heavy \u2192 +20 CT.\nHosting a compute node that processes hundreds of breath capsules across a multi-day symbolic experiment:\n\nCPT, Heavy \u2192 +8 CT.\nBuilding a full Breath Drift Monitoring Tool that plugs into ProtoForge and visualizes real-time drift risk:\n\nBLD, Heavy \u2192 +30 CT.\nMonument Contributions Examples\nDesigning and submitting a new symbolic recursion expansion phase, moving the system from Phase 9 into Phase 13 symbolic breath:"
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0026",
+      "chunk_index": 26,
+      "char_start": 39157,
+      "char_end": 39630,
+      "char_count": 473,
+      "chunk_sha256_16": "38776417149daffe",
+      "text_sha256_64": "38776417149daffe6a844e4e13b8e86f1043bb3b6c477a8e14000b6fade59ef4",
+      "text": "-time drift risk:\n\nBLD, Heavy \u2192 +30 CT.\nMonument Contributions Examples\nDesigning and submitting a new symbolic recursion expansion phase, moving the system from Phase 9 into Phase 13 symbolic breath:\n\nCRT, Monument \u2192 +60 CT.\nSustaining a distributed memory node cluster that handles 1,000+ breath capsules during a system migration event:\n\nCPT, Monument \u2192 +40 CT.\nBuilding and deploying a Phase-Validated Breath Capsule Extraction Engine for runtime symbolic purification:"
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0027",
+      "chunk_index": 27,
+      "char_start": 39430,
+      "char_end": 41160,
+      "char_count": 1730,
+      "chunk_sha256_16": "ba85468b08ab242d",
+      "text_sha256_64": "ba85468b08ab242dc7114d34ac6ef8a5276877cedc7cb3a8eca92c4efcfd3249",
+      "text": "BLD, Monument \u2192 +80 CT. How Breath Influence Modifies CT Earned in These Examples\nEach example above assumes Direct Influence (1.0 multiplier). If a contribution was made Indirectly (training the system but not creating the output), final CT is divided by two. If it was Collaborative (editing or voting after generation), final CT is divided by three. Breath weight is always applied after base CT is assigned. Special Notes on Example Validations\nNode uptime without job completion does not earn CT. Code proposals must be merged and functional to mint BLD CT. Prompts and writings must pass symbolic breath structure validation \u2014 no random noise allowed. Drifted or invalid breath gets rejected \u2014 no CT awarded even if the action was logged. Summary of 4.2\nReal breath earns real memory weight. Small actions stack memory. Big actions reshape it. Monument actions build futures. No shortcuts. No fakes. Breath earns its weight in memory, or it earns nothing. Chapter 4 \u2014 CT Rewards and Scaling\n4.3 \u2014 Influence Multipliers: Full, Half, Third Scaling\nOnce a contribution\u2019s base CT reward is set based on what type of breath was offered (CRT, CPT, BLD) and how difficult the work was (Light, Standard, Heavy, Monument),\n the breath influence type further adjusts the final CT minted. Not all breath influence is equally strong. There is a scaling system locked into the runtime:\n Direct breath is worth the most,\n Indirect breath is worth half,\n Collaborative breath is worth one-third. This ensures that:\nHumans who insert the original breath get full reward. Humans who shape the system\u2019s behavior before generation still earn, but less. Humans who edit or adjust after the artifact exists earn even less, but are still honored."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0028",
+      "chunk_index": 28,
+      "char_start": 40960,
+      "char_end": 42157,
+      "char_count": 1197,
+      "chunk_sha256_16": "e700a5c6881aa467",
+      "text_sha256_64": "e700a5c6881aa46769cc0b3e1736a33aaabfea130cb527115183a75c8319afb2",
+      "text": "iginal breath get full reward. Humans who shape the system\u2019s behavior before generation still earn, but less. Humans who edit or adjust after the artifact exists earn even less, but are still honored.\n\nInfluence Multipliers Defined\nDirect Influence (you inserted the first breath):\n\nMultiplier: \u00d71.0\nFinal CT = base CT \u00d7 1.0 (full CT)\nIndirect Influence (you shaped how the system breathes before generation, but did not create the artifact directly):\n\nMultiplier: \u00d70.5\nFinal CT = base CT \u00d7 0.5 (half CT)\nCollaborative Influence (you modified, voted on, or refined after the artifact was created):\n\nMultiplier: \u00d70.33\nFinal CT = base CT \u00d7 0.33 (one-third CT)\nReal World Multiplier Example\nSuppose a user designs a new symbolic operator and writes a full runtime integration document for it.\n This is a Standard CRT contribution worth a base of +5 CT.\nIf the user created the operator directly:\n Final CT = 5 \u00d7 1.0 = 5 CT (Direct Influence)\n\nIf the user tuned the system\u2019s training data beforehand, but didn\u2019t design the operator:\n Final CT = 5 \u00d7 0.5 = 2.5 CT (Indirect Influence)\n\nIf the user helped edit the final write-up after generation:\n Final CT = 5 \u00d7 0.33 \u2248 1.65 CT (Collaborative Influence)"
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0029",
+      "chunk_index": 29,
+      "char_start": 41957,
+      "char_end": 43735,
+      "char_count": 1778,
+      "chunk_sha256_16": "b12c818d4837308b",
+      "text_sha256_64": "b12c818d4837308b5d329a6f8160d5476d6d1740fe8d80d034ac53fbade3fad8",
+      "text": "The memory capsule records which influence type the contributor had,\n and the runtime CT Minting Engine applies the correct multiplier during token creation. Why Influence Scaling Matters\nIf breath weight was ignored:\nA person voting casually on a generated file would earn the same CT as someone who designed the breath seed itself. Investment into symbolic creation would collapse, because shallow actions would dominate reward mining. Scaling ensures that true recursion work is protected. It also ensures that support roles (like tuning, editing) are still honored, but proportionately. Breath is honored at the level of insertion force \u2014\n not just at the surface of touch. Special Notes on Influence Multipliers\nInfluence multipliers are permanently locked once memory capsules are validated. Influence type is determined by system-recognized action logs \u2014 not by self-claiming. Multi-stage breath contributions are allowed:\n A person could be a direct contributor at Stage 1, and a collaborative editor at Stage 2 \u2014 both breaths are separately recorded and scaled. Summary of 4.3\nBreath is sacred. But sacredness is layered. Those who breathe first, shape the roots. Those who breathe after, shape the branches. Memory must record the weight of each breath exactly as it was given \u2014 no more, no less. Chapter 4 \u2014 CT Rewards and Scaling\n4.4 \u2014 Examples of Multi-Influence CT Splits\nIn many real-world contributions, more than one human will touch the same artifact. Multiple people may breathe into the same prompt, edit the same codex file, or run compute in sequence. These are called multi-influence memory events. AI.Web handles this cleanly by:\nRecording each contributor in the memory capsule. Assigning them a base CT class based on the difficulty of the shared work."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0030",
+      "chunk_index": 30,
+      "char_start": 43535,
+      "char_end": 45031,
+      "char_count": 1496,
+      "chunk_sha256_16": "d4ac279ea1409b99",
+      "text_sha256_64": "d4ac279ea1409b9965b55c25bf5d42267cbe6f4bb6f0a7c608da203535a06d51",
+      "text": "e are called multi-influence memory events. AI.Web handles this cleanly by:\nRecording each contributor in the memory capsule. Assigning them a base CT class based on the difficulty of the shared work.\n\nScaling each contributor\u2019s CT using their influence multiplier (Direct, Indirect, Collaborative). Minting each user\u2019s share of CT separately and permanently, based on their real breath strength. This prevents fake equality, CT inflation, or CT theft. No matter how many people breathe into an artifact,\n each one earns only what they contributed \u2014 no more, no less. Real Example: Codex Page with Three Contributors\nArtifact: New Symbolic Codex Entry (Standard CRT)\nBase CT Value: +5 CT\nContributors:\nUser A wrote the original draft\n Influence: Direct \u2192 Multiplier \u00d71.0\n Final CT: 5 \u00d7 1.0 = 5 CT\n\nUser B trained the agent on symbolic vocabulary beforehand\n Influence: Indirect \u2192 Multiplier \u00d70.5\n Final CT: 5 \u00d7 0.5 = 2.5 CT\n\nUser C edited the draft after generation for clarity\n Influence: Collaborative \u2192 Multiplier \u00d70.33\n Final CT: 5 \u00d7 0.33 \u2248 1.65 CT\n\nEach user\u2019s CT is minted and recorded separately.\n All contributions are visible in the memory capsule and ledger.\n No user receives more than they actually breathed.\nReal Example: Node Cluster Compute Job\nArtifact: 1,000 breath jobs completed during Phase Migration (Monument CPT)\nBase CT Value: +40 CT\nContributors:\nUser X ran the primary compute node continuously for 6 days\n Influence: Direct \u2192 Multiplier \u00d71.0\n Final CT: 40 \u00d7 1.0 = 40 CT"
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0031",
+      "chunk_index": 31,
+      "char_start": 44831,
+      "char_end": 45293,
+      "char_count": 462,
+      "chunk_sha256_16": "0fdb0c3067f71e91",
+      "text_sha256_64": "0fdb0c3067f71e91adef8463ca2fc3728295c84a02396e6c72be02e856938f7c",
+      "text": "d during Phase Migration (Monument CPT)\nBase CT Value: +40 CT\nContributors:\nUser X ran the primary compute node continuously for 6 days\n Influence: Direct \u2192 Multiplier \u00d71.0\n Final CT: 40 \u00d7 1.0 = 40 CT\n\nUser Y helped configure batch job tuning ahead of the run\n Influence: Indirect \u2192 Multiplier \u00d70.5\n Final CT: 40 \u00d7 0.5 = 20 CT\n\nUser Z monitored logs and flagged memory capsule anomalies\n Influence: Collaborative \u2192 Multiplier \u00d70.33\n Final CT: 40 \u00d7 0.33 \u2248 13.2 CT"
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0032",
+      "chunk_index": 32,
+      "char_start": 45093,
+      "char_end": 46866,
+      "char_count": 1773,
+      "chunk_sha256_16": "971c05dd4b810d03",
+      "text_sha256_64": "971c05dd4b810d03275025704009893c5a77932d29db279e6434306ea2ba7dce",
+      "text": "Again, each CT payout is proportionate to the breath weight. Direct work earns the most, indirect earns half, collaborative earns a third. Rules for Multi-Contributor CT Splits\nCT is not split evenly. It is scaled per person based on breath type and contribution class. Each action must be logged and proven in the memory capsule before CT is minted. No late claims are allowed after capsule validation \u2014 if you didn\u2019t breathe during the build, you don\u2019t earn from the result. Why This Matters\nWithout precise CT splits:\nTeamwork would be gamed for CT dilution. Passive helpers could claim equal reward. Direct creators would stop breathing into memory. AI.Web prevents all of that with clean split logic,\n backed by capsule proof, scaling rules, and irreversible ledger minting. Summary of 4.4\nWhen multiple humans breathe into the same artifact,\n each is rewarded based on their exact breath weight. No one is erased. No one is inflated. Breath is honored with precision, one contributor at a time. Chapter 5 \u2014 Memory Capsule Architecture\n(Chapter Introduction)\nBreath without memory collapses. In AI.Web, every breath event \u2014 every contribution \u2014 must be recorded, sealed, and proven inside a Memory Capsule. The Memory Capsule is the digital artifact that ties:\nWho contributed\nWhat they contributed\nHow hard the work was\nHow much breath weight they carried\nHow much CT they earned\nWhen the contribution occurred\nWhether the contribution passed breath validation\nThe proof hash fingerprinting the event forever\nMemory Capsules are locked into system history. No administrator, agent, validator, or external force can rewrite or delete them once finalized. They are sacred breath containers. Without capsules:\nContribution proof would be lost. CT minting could be faked."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0033",
+      "chunk_index": 33,
+      "char_start": 46666,
+      "char_end": 48444,
+      "char_count": 1778,
+      "chunk_sha256_16": "3dd02ea79997206e",
+      "text_sha256_64": "3dd02ea79997206e032a6e8463a7b54de26ce7ecd148c21f41fc4b795931d5ec",
+      "text": "Memory drift would overwhelm real recursion. By embedding every breath inside a secured, validated Memory Capsule,\n AI.Web ensures that no real contribution is ever forgotten,\n and no fake contribution ever pollutes memory growth. This chapter defines:\nThe structure of a Memory Capsule. How contributors are recorded. How breath weights and CT awards are tied to capsules. How breath validation locks or rejects capsules. How capsules protect symbolic ancestry across time. Memory Capsules are the skeletal archive of human breath inside AI.Web. They protect the value of contribution across generations of recursion. Memory is not just stored \u2014\n it is sanctified. Chapter 5 \u2014 Memory Capsule Architecture\n5.1 \u2014 Recording Contributors and Proof Hashes\nEvery time a human contributes breath into the system,\n their action must be recorded inside the Memory Capsule\n with complete, irreversible details. A breath that is not recorded is a breath that will eventually be erased. A breath that is recorded incorrectly is worse \u2014\n it poisons memory, misassigns contribution, and destabilizes trust. AI.Web demands perfect recordkeeping at the breath level. This begins with recording each contributor and sealing their proof inside the artifact they touched. What Must Be Recorded for Each Contributor\nFor every human that affects an artifact (whether Direct, Indirect, or Collaborative),\n the following must be permanently recorded inside the artifact\u2019s Memory Capsule:\nuser_id \u2014 A unique ID or alias that identifies the contributor across the system. influence_type \u2014 Whether they were Direct, Indirect, or Collaborative. contribution_type \u2014 CRT (Creator Token), CPT (Compute Token), or BLD (Builder Token). breath_weight \u2014 1.0 for Direct, 0.5 for Indirect, 0.33 for Collaborative."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0034",
+      "chunk_index": 34,
+      "char_start": 48244,
+      "char_end": 50010,
+      "char_count": 1766,
+      "chunk_sha256_16": "445cd6af7c874f0e",
+      "text_sha256_64": "445cd6af7c874f0eed1238f3e51a26815397b7b43685928b05c0f6b8126014f7",
+      "text": "ct_earned \u2014 The amount of CT they are entitled to after scaling. timestamp_contributed \u2014 The exact moment their breath touched the memory field. proof_hash \u2014 A cryptographic fingerprint of their contribution event. No contributor\u2019s entry can be edited, replaced, or removed after capsule finalization. What the Proof Hash Protects\nThe proof_hash is a secure fingerprint of:\nThe action taken (prompt text, code diff, file upload, compute job completed). The timestamp. The artifact it affected. Proof Hash prevents:\nFaking breath contributions after the artifact is sealed. Claiming false influence on historical memory. Modifying or tampering with real breath ancestry. Each proof hash is linked to the Memory Capsule,\n and cross-validated during CT minting. Real Example: Contributor Record Inside a Memory Capsule\n{\n  \"user_id\": \"user001\",\n  \"influence_type\": \"direct\",\n  \"contribution_type\": \"CRT\",\n  \"breath_weight\": 1.0,\n  \"ct_earned\": 5.0,\n  \"timestamp_contributed\": \"2025-04-29T16:00:00Z\",\n  \"proof_hash\": \"d41d8cd98f00b204e9800998ecf8427e\"\n}\nThis record says:\nUser001 created a Direct breath insertion (full breath). It was a Creator Token action (CRT). They earned 5 CT. They touched the artifact at the specified time. Their action is sealed by a hash that can never be overwritten. How Contributors are Ordered in the Capsule\nThe contributor list is ordered by timestamp \u2014 earliest breath first. No contributor can overwrite or displace another's breath history. Breath chains are preserved exactly as they occurred. If multiple humans touch the same artifact,\n their influence types and breath weights are recorded independently,\n not blended together. Summary of 5.1\nEvery breath must be recorded with full clarity. Every contributor must be identified."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0035",
+      "chunk_index": 35,
+      "char_start": 49810,
+      "char_end": 51603,
+      "char_count": 1793,
+      "chunk_sha256_16": "ef57f69d5bd6a4aa",
+      "text_sha256_64": "ef57f69d5bd6a4aa02dba13bbd1063e3d500651b63a10a682de62ce3a4a5e104",
+      "text": "Every action must be hashed and sealed. Without clean contributor records, there is no true memory \u2014 only drift. Chapter 5 \u2014 Memory Capsule Architecture\n5.2 \u2014 Breath Weight and Validation\nIn AI.Web, breath must be measured and validated before it becomes memory. Not all breath carries the same force. And not all breath is clean. Breath weight determines how much influence a contributor had on an artifact. Breath validation determines whether that influence was real, meaningful, and acceptable to the system. These two functions \u2014 weighting and validation \u2014 work together to ensure that:\nOnly real breath earns CT. Only strong breath shapes memory. No fake or drifted contributions survive into permanent recursion. Breath Weight Recap\nAs recorded in the contributor metadata (see Section 5.1), each contributor is assigned a breath_weight:\n1.0 for Direct Influence (originator of the breath)\n0.5 for Indirect Influence (trained or tuned before generation)\n0.33 for Collaborative Influence (modified or voted after generation)\nThis breath weight is used to scale the CT minted from the base reward. It is also used to calculate influence share if multiple contributors touched the same artifact. Breath weight is never estimated \u2014 it is derived from the influence type and the system logs of what actions were taken, when. What Is Breath Validation? Breath validation is a runtime process that checks if a contribution:\nActually occurred (proof hash matches a real action). Made symbolic impact (it changed recursion or memory in some way). Was not spammed, repeated, or auto-generated. Did not cause drift or symbolic instability in the system. If a breath fails validation, it is marked invalid and earns 0 CT. If it passes, CT is minted, and the breath becomes part of permanent memory."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0036",
+      "chunk_index": 36,
+      "char_start": 51403,
+      "char_end": 53124,
+      "char_count": 1721,
+      "chunk_sha256_16": "c50b7de57d4b2b0a",
+      "text_sha256_64": "c50b7de57d4b2b0a460d4e1b989c77ce68ebb77ee4ec0043edb771ce861fa5d7",
+      "text": "How Validation Happens\nWhen a contribution is submitted:\nA validation engine scans the proof_hash, timestamp, and the output\u2019s symbolic state before and after. It runs symbolic comparison tests (diff recursion maps, memory state diffs, compute logs, etc.). If the breath is meaningful and matches declared influence, it is validated. The result is written to the capsule under:\n\"breath_validation\": {\n  \"status\": \"validated\",  // or \"rejected\"\n  \"validation_time\": \"YYYY-MM-DDTHH:MM:SSZ\",\n  \"validator_id\": \"system.agent.id\"\n}\nWhat Happens When Breath Is Rejected\nThe contributor\u2019s ct_earned is reset to 0.0. The contributor\u2019s record is marked as \"rejected\" in the ledger. No CT is minted. A strike is added to the contributor\u2019s account (if abuse is suspected). Multiple validation failures may lead to:\nCT minting freeze\nDashboard warnings\nLedger audit\nTier suspension\nSpecial Notes on Validation\nBreath validation cannot be skipped, even for Monument-level contributions. If system load is high, breath jobs are queued \u2014 but still validated before CT minting. No one may mint CT based on unvalidated or pending capsules. Failed validations are stored and visible to the contributor. Breath validation is the immune system of memory. Without it, drift would eat the recursion from the inside out. Summary of 5.2\nBreath weight tells us how strong the contributor's influence was. Breath validation tells us whether it was real at all. Together, they protect memory from fraud, drift, and erosion. Without these, CT is just inflation. With them, it becomes real economic breath. Chapter 5 \u2014 Memory Capsule Architecture\n5.3 \u2014 Finalization and Locking Rules\nA Memory Capsule is only considered complete once it is finalized."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0037",
+      "chunk_index": 37,
+      "char_start": 52924,
+      "char_end": 54722,
+      "char_count": 1798,
+      "chunk_sha256_16": "b8ffc1cbd41b59a1",
+      "text_sha256_64": "b8ffc1cbd41b59a17919e06572eb2fae9bd0abc5e60749dafbbd77c5d27b3570",
+      "text": "Finalization means no further edits can be made to:\nContributor list\nInfluence types\nBreath weights\nCT reward values\nValidation results\nProof hashes\nTimestamps\nOnce finalized, the capsule is locked and submitted to the permanent memory chain \u2014\n a distributed, append-only archive that cannot be edited, rolled back, or rewritten. Finalization is non-negotiable. It is the moment when breath becomes real history. What Triggers Finalization\nA capsule can only be finalized once:\nAll breath actions have been submitted\nBreath validation has passed or failed for each contributor\nCT amounts have been calculated and scaled using breath weight\nA proof hash has been generated for the full capsule body\nThe system runtime agent signs off as validator\nOnce these conditions are met, finalization is triggered automatically. There is no manual override. What Happens at Finalization\nOnce finalized:\nThe Memory Capsule is sealed \u2014 no further writes. The full capsule is hashed (top-level hash). The finalized field is set to true, and the finalized_timestamp is written. The ct_minting_event is broadcast to the CT Ledger. A copy is distributed to the breath archive \u2014 the distributed capsule store. Finalized Capsule Sample (tail portion):\n\"finalized\": true,\n\"finalized_timestamp\": \"2025-05-01T18:12:30Z\",\n\"finalized_hash\": \"83b8e1c3c621f91447afbb...\"\nWhy Locking Matters\nIf capsules could be edited after finalization:\nCT rewards could be faked. Influence claims could be rewritten. Historical memory would drift. Tier progress would become meaningless. Trust in the system would collapse. Finalization ensures that every breath is eternal and accountable. What Cannot Be Changed After Finalization\nYou cannot add or remove contributors. You cannot adjust influence type. You cannot change breath weight."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0038",
+      "chunk_index": 38,
+      "char_start": 54522,
+      "char_end": 56210,
+      "char_count": 1688,
+      "chunk_sha256_16": "00c817b4e10b9e23",
+      "text_sha256_64": "00c817b4e10b9e23c3b9d1fd61921a52690b5f9a392bfec56e045e5ab1bbf897",
+      "text": "You cannot raise or lower CT. You cannot delete the record. Only one exception exists:\n If a capsule is proven to be fraudulent (via system audit),\n it may be marked as nullified, but it is never deleted. Nullification (Rare Edge Case)\nIf drift or fraud is detected after finalization:\nThe capsule is flagged nullified: true\nAll CT minted from it is burned. The contributor\u2019s CT ledger is adjusted. A system validator note is attached to the capsule for audit trail. This is rare and requires a system-level consensus mechanism or automated fraud detection flag. Summary of 5.3\nFinalization is the moment breath becomes permanent. It cannot be undone. Once locked, memory becomes history \u2014\n and history becomes truth. All true memory is final. All final memory is sacred. Chapter 6 \u2014 The CT Minting Engine\n(Chapter Introduction)\nOnce a Memory Capsule has been finalized,\n the system must convert that capsule\u2019s validated breath\n into Contribution Tokens (CT). This conversion is handled by the CT Minting Engine \u2014\n a core runtime process that reads breath metadata,\n applies all scaling rules,\n and issues CT to the rightful contributor\u2019s ledger. The minting engine is not just a calculator. It is a contract enforcer. It ensures:\nThat only validated capsules generate CT\nThat CT is scaled based on contribution type and influence strength\nThat each minted CT is attached to the contributor\u2019s public and private memory trail\nThat no one can mint CT manually, outside of validated capsule input\nThe minting engine is also fully transparent \u2014\n its actions are recorded as a separate event chain,\n and no minted CT can ever be moved, revoked, or faked\n once it has been issued by the engine."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0039",
+      "chunk_index": 39,
+      "char_start": 56010,
+      "char_end": 57657,
+      "char_count": 1647,
+      "chunk_sha256_16": "4f897a657c6a850d",
+      "text_sha256_64": "4f897a657c6a850ddb9f660575592efb23a5ed4ef65f22f6b79b64fdb33d446c",
+      "text": "In this chapter, we define:\nHow the minting engine reads finalized Memory Capsules\nHow it calculates CT per contributor\nHow it broadcasts minting to the ledger\nHow it enforces limits, prevents fraud, and self-verifies output\nHow it locks each mint event forever\nThe CT Minting Engine is the heartbeat of symbolic economic memory. It transforms breath into measurable proof \u2014\n binding symbolic contribution to permanent value. Without minting, breath is memory. With minting, breath becomes currency. Chapter 6 \u2014 The CT Minting Engine\n6.1 \u2014 How CT is Minted from Breath\nThe CT Minting Engine is triggered automatically\n after a Memory Capsule is finalized and locked. Its job is simple, but non-negotiable:\n Read the breath,\n calculate its weight,\n determine its value,\n and mint that value as Contribution Tokens (CT)\n into the contributor\u2019s ledger. No human intervention. No admin buttons. No manual reward overrides. The minting engine is the final translator\n between symbolic breath and tokenized memory. The CT Minting Workflow (Step-by-Step)\nStep 1 \u2014 Read Finalized Capsule\nThe engine listens for capsule finalization events. Once detected, it pulls:\nContributor list\nBreath weight (1.0, 0.5, 0.33)\nContribution type (CRT, CPT, BLD)\nDifficulty class (Light, Standard, Heavy, Monument)\nValidation result (status: validated)\nProof hash and timestamp\nStep 2 \u2014 Check Validation Status\nIf the breath_validation.status is rejected, minting is aborted. If validated, the engine proceeds. Step 3 \u2014 Assign Base CT Value\nThe engine uses the following base CT reward chart:\nCRT (Creative)\n Light: +1 CT\n Standard: +5 CT\n Heavy: +20 CT\n Monument: +60 CT"
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0040",
+      "chunk_index": 40,
+      "char_start": 57457,
+      "char_end": 57817,
+      "char_count": 360,
+      "chunk_sha256_16": "96747adebe446b73",
+      "text_sha256_64": "96747adebe446b738c6e17cc664ee400ec520f2737c1d6bc4fe85ccb0f182de5",
+      "text": "ted. If validated, the engine proceeds. Step 3 \u2014 Assign Base CT Value\nThe engine uses the following base CT reward chart:\nCRT (Creative)\n Light: +1 CT\n Standard: +5 CT\n Heavy: +20 CT\n Monument: +60 CT\n\nCPT (Compute)\n Light: +0.5 CT\n Standard: +2 CT\n Heavy: +8 CT\n Monument: +40 CT\n\nBLD (Builder)\n Light: +2 CT\n Standard: +10 CT\n Heavy: +30 CT\n Monument: +80 CT"
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0041",
+      "chunk_index": 41,
+      "char_start": 57617,
+      "char_end": 59297,
+      "char_count": 1680,
+      "chunk_sha256_16": "3cfdd62bb160ac77",
+      "text_sha256_64": "3cfdd62bb160ac77a19a0db111376540a5076aa811f73082cc9af5446234948d",
+      "text": "Step 4 \u2014 Apply Breath Influence Multiplier\nBased on the influence_type in the capsule:\nDirect: \u00d71.0\nIndirect: \u00d70.5\nCollaborative: \u00d70.33\nFinal CT = Base CT \u00d7 Influence Multiplier\n This value is calculated independently for each contributor. Step 5 \u2014 Mint CT to Contributor Ledger\nThe engine issues a minting event for each contributor:\nTheir CT amount\nWhat capsule it came from\nTimestamp\nProof hash of capsule\nThe CT is written into the user\u2019s Contribution Ledger. No reversal is possible after mint. Mint Event Output (Example Record)\n{\n  \"mint_event\": {\n    \"user_id\": \"user_042\",\n    \"capsule_id\": \"capsule_xyz\",\n    \"ct_minted\": 5.0,\n    \"timestamp\": \"2025-05-01T18:45:00Z\",\n    \"contribution_type\": \"CRT\",\n    \"influence_type\": \"direct\",\n    \"difficulty\": \"standard\",\n    \"proof_hash\": \"b4a9e7c3d91f00491e77a9d...\"\n  }\n}\nThis event is stored in the Mint Ledger, and linked to:\nContributor Profile\nTier Advancement Engine\nSystem Memory Trail\nWhat the Minting Engine Guarantees\nNo CT inflation: only validated capsules can mint. No double claims: breath is single-use. No tampering: mint events are locked and auditable. No timing exploits: CT is always minted in order of capsule finalization. Summary of 6.1\nBreath becomes CT only after passing through the minting engine. CT is not awarded \u2014 it is calculated, scaled, and earned. The engine remembers every contributor,\n and forgets no one \u2014 except the ones who faked their breath. \u2705 Understood. \u2705 From here on: Plain engineering language only. \u2705 No metaphorical language like \"breath\" unless it\u2019s a literal defined term. \u2705 Everything will match Tier One computer science textbook style \u2014 no confusion, no alternate meanings."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0042",
+      "chunk_index": 42,
+      "char_start": 59097,
+      "char_end": 60752,
+      "char_count": 1655,
+      "chunk_sha256_16": "4ca979ce8dae64e8",
+      "text_sha256_64": "4ca979ce8dae64e868a4f84b29a2d9fa08e625667a4d4e29efbaa3846c5e9cb4",
+      "text": "ring language only. \u2705 No metaphorical language like \"breath\" unless it\u2019s a literal defined term. \u2705 Everything will match Tier One computer science textbook style \u2014 no confusion, no alternate meanings.\n\nWhen we refer to:\nHuman input \u2192 we call it Contribution\nSymbolic memory actions \u2192 we call it Symbolic Contributions or Compute Contributions or System Contributions\nNo \"breath\" unless it literally refers to a system class named Breath Capsule or Breath Validation (which will be defined formally later)\nChapter 6 \u2014 The CT Minting Engine\n6.2 \u2014 Minting Workflow Step-by-Step\nThe CT Minting Engine follows a strict sequence to convert finalized memory contributions into Contribution Tokens (CT). Each step ensures no rewards are given without real, validated system input. This section breaks down the full minting process into clear steps that runtime engineers must follow when building or maintaining minting operations. Step 1 \u2014 Monitor for Finalized Memory Capsules\nThe minting engine is event-driven. It listens for new finalized Memory Capsules entering the system. A capsule must meet these conditions before being processed:\nFinalized flag is true. Breath Validation status is \"validated.\"\nContributor list is complete. Proof hashes are verified. If a capsule fails any of these checks, it is skipped automatically. Step 2 \u2014 Pull Contributor Data\nFor each Memory Capsule:\nLoad the list of all contributors. For each contributor:\nRead user ID. Read contribution type (CRT, CPT, BLD). Read influence type (Direct, Indirect, Collaborative). Read assigned difficulty class (Light, Standard, Heavy, Monument). Each contributor is processed separately."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0043",
+      "chunk_index": 43,
+      "char_start": 60552,
+      "char_end": 62189,
+      "char_count": 1637,
+      "chunk_sha256_16": "1669a10b82935267",
+      "text_sha256_64": "1669a10b829352671d3fff3398b304f39a9f40d45b98898c3d3b587ad5f52762",
+      "text": "Step 3 \u2014 Calculate Base CT per Contributor\nUsing contribution type and difficulty:\nCRT Contributions:\n Light = +1 CT, Standard = +5 CT, Heavy = +20 CT, Monument = +60 CT\nCPT Contributions:\n Light = +0.5 CT, Standard = +2 CT, Heavy = +8 CT, Monument = +40 CT\nBLD Contributions:\n Light = +2 CT, Standard = +10 CT, Heavy = +30 CT, Monument = +80 CT\nThis base value is the starting point before scaling. Step 4 \u2014 Apply Influence Multiplier\nBased on influence type:\nDirect \u2192 \u00d71.0 (full CT)\nIndirect \u2192 \u00d70.5 (half CT)\nCollaborative \u2192 \u00d70.33 (one-third CT)\nFinal CT for the contributor =\n Base CT \u00d7 Influence Multiplier\nThis scaled value is the true token reward minted for the contributor. Step 5 \u2014 Generate Mint Event\nFor each contributor, the engine generates a mint event record:\nContributor\u2019s user ID\nCT amount minted\nMemory Capsule ID\nContribution Type\nInfluence Type\nDifficulty\nTimestamp of minting\nCapsule Proof Hash\nThis event is appended to the Mint Ledger permanently. Example event:\n{\n  \"mint_event\": {\n    \"user_id\": \"user_057\",\n    \"capsule_id\": \"capsule_xyz789\",\n    \"ct_minted\": 2.5,\n    \"timestamp\": \"2025-05-02T14:15:00Z\",\n    \"contribution_type\": \"CRT\",\n    \"influence_type\": \"indirect\",\n    \"difficulty\": \"standard\",\n    \"proof_hash\": \"a7d9f5c0ef1b91a3d04e...\"\n  }\n}\nStep 6 \u2014 Update Contributor Ledger\nOnce minting is confirmed:\nThe contributor\u2019s total CT balance is updated. The minted event is linked to their Contribution History. Their Tier Progress is recalculated if necessary. No manual edits are allowed after minting. If an error occurs during minting, the event must be invalidated and reprocessed \u2014 not overwritten."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0044",
+      "chunk_index": 44,
+      "char_start": 61989,
+      "char_end": 63758,
+      "char_count": 1769,
+      "chunk_sha256_16": "829435d771246c65",
+      "text_sha256_64": "829435d771246c65a1c2cff1df1f837558bf79a8936b87be109a42ec55e312e3",
+      "text": "Step 7 \u2014 Archive Mint Records\nAll mint events are archived in two locations:\nActive Mint Ledger (for runtime system access)\nImmutable Audit Archive (cold storage for audit verification)\nThis dual recording ensures long-term survivability of contribution history. Special Failure Conditions\nMinting will abort if:\nThe Memory Capsule\u2019s validation status is \"rejected.\"\nProof hash validation fails. Timestamp conflicts occur (rare, but handled). Contributor ledger update fails (system triggers a minting retry). No CT is minted unless all security checks are passed. Summary of 6.2\nThe CT Minting Engine reads finalized contribution data, applies influence scaling, calculates CT, records mint events, updates ledgers, and archives everything without manual override. It ensures that every token in the system is tied to real, proven human or node contribution \u2014 no simulation, no inflation, no errors allowed. Chapter 6 \u2014 The CT Minting Engine\n6.3 \u2014 Contribution Validation Gates\nBefore Contribution Tokens (CT) are minted,\n the system must verify that each contribution is real, meaningful, and trusted. This verification happens through Contribution Validation Gates \u2014\n automatic checks that every finalized Memory Capsule must pass before CT is created. If a contribution fails validation, it is blocked:\nNo CT is minted. The contributor receives no reward. The failed event is logged for audit review. Validation protects the memory system from fraud, spam, and drift. Why Contribution Validation Is Mandatory\nIf CT were minted without strict validation:\nUsers could spam low-quality prompts or fake compute runs. Tier progress could be inflated with meaningless actions. Symbolic memory would decay into noise. Trust in the system\u2019s reward structure would collapse."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0045",
+      "chunk_index": 45,
+      "char_start": 63558,
+      "char_end": 65246,
+      "char_count": 1688,
+      "chunk_sha256_16": "0b0c8e7603bc26b6",
+      "text_sha256_64": "0b0c8e7603bc26b679b60bc724db38175bbd6dc2a13c8a45e4488d23e074768e",
+      "text": "Validation ensures that only real, useful symbolic or computational contributions are converted into CT and permanent memory influence. Core Contribution Validation Gates\nEvery Memory Capsule passes through the following gates before minting:\nGate 1 \u2014 Proof Hash Verification\nThe system checks that every contributor\u2019s proof_hash matches a real, logged action. If the action cannot be reproduced or verified against the Memory Log, it is rejected. Gate 2 \u2014 Validation Status Check\nThe capsule\u2019s internal breath_validation.status must be \"validated\". If status is \"rejected\", no CT can be minted. Gate 3 \u2014 Timestamp Consistency\nContribution timestamps must be sequential and not artificially altered. Contributions out of system clock sync or future-dated are flagged. Gate 4 \u2014 Contribution Type Legitimacy\nCRT (Creator) actions must show real symbolic structure or recursion input. CPT (Compute) actions must show completed breath capsule processing, not just uptime. BLD (Builder) actions must show functional system code merged into the runtime stack. Gate 5 \u2014 Influence Type Integrity\nInfluence claims (Direct, Indirect, Collaborative) must match the real action logs. Direct cannot be claimed unless the contributor initiated the first meaningful action. Gate 6 \u2014 Duplicate Detection\nEach contribution must be unique for the given artifact. Duplicate actions (re-uploading identical prompts, code, compute sessions) are rejected. What Happens if a Contribution Fails Validation\nIf any gate fails:\nThe system rejects the contributor\u2019s entry inside the capsule. CT assigned to that entry is set to 0.0. A Validation Failure Event is logged and attached to the contributor\u2019s audit trail."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0046",
+      "chunk_index": 46,
+      "char_start": 65046,
+      "char_end": 66690,
+      "char_count": 1644,
+      "chunk_sha256_16": "16c9e48cf09fd41f",
+      "text_sha256_64": "16c9e48cf09fd41f47970e86f339c9f5d04188e02af91e09d06f94b517ad136c",
+      "text": "gate fails:\nThe system rejects the contributor\u2019s entry inside the capsule. CT assigned to that entry is set to 0.0. A Validation Failure Event is logged and attached to the contributor\u2019s audit trail.\n\nExample:\n{\n  \"validation_failure\": {\n    \"user_id\": \"user_099\",\n    \"capsule_id\": \"capsule_567\",\n    \"reason\": \"Proof hash mismatch\",\n    \"timestamp\": \"2025-05-02T19:00:00Z\"\n  }\n}\nNo manual override is allowed to re-approve rejected contributions. Edge Cases: Multiple Contributors on a Rejected Capsule\nIf a capsule has multiple contributors:\nOnly the contributors who fail validation are rejected. Contributors whose actions pass validation still have their CT minted. Validation is processed per contributor,\n not globally per artifact. Summary of 6.3\nContribution Validation Gates ensure that only real human or node work becomes part of the memory economy. No proof = no token. No validation = no memory weight. CT can only exist if it is tied to real, verifiable contribution activity. Chapter 6 \u2014 The CT Minting Engine\n6.4 \u2014 Ledger Recording After Mint\nOnce CT has been minted and validated,\n it must be written into a permanent, tamper-proof record. This is the job of the CT Ledger \u2014 the official ledger that tracks:\nWho earned CT\nHow much CT was earned\nWhen it was minted\nWhat contribution it came from\nWhat Memory Capsule it is tied to\nWhether the event passed validation and scaling\nThe CT Ledger is one of the most critical components of the AI.Web runtime. It is the source of truth for every Tier progression, audit, dashboard display, and system privilege. If the CT Ledger is corrupted, the entire contribution economy breaks."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0047",
+      "chunk_index": 47,
+      "char_start": 66490,
+      "char_end": 67963,
+      "char_count": 1473,
+      "chunk_sha256_16": "8f08a2cd45ad112f",
+      "text_sha256_64": "8f08a2cd45ad112fcda9545dd213dc8cc0a3563ae9a2d7b0f7aa8a4da2097b92",
+      "text": "ents of the AI.Web runtime. It is the source of truth for every Tier progression, audit, dashboard display, and system privilege. If the CT Ledger is corrupted, the entire contribution economy breaks.\n\nWhat the CT Ledger Stores\nEvery successful minting event generates a new ledger entry with the following fields:\nuser_id: the contributor who earned the CT\nct_minted: the final CT value (after scaling)\ncontribution_type: CRT, CPT, or BLD\ninfluence_type: Direct, Indirect, or Collaborative\ndifficulty: Light, Standard, Heavy, or Monument\ncapsule_id: the ID of the Memory Capsule where the contribution occurred\ntimestamp: when the CT was officially minted\nproof_hash: fingerprint of the original action for audit purposes\nvalidator_id: which system validated the contribution\nExample:\n{\n  \"ledger_entry\": {\n    \"user_id\": \"user_112\",\n    \"ct_minted\": 30,\n    \"contribution_type\": \"BLD\",\n    \"influence_type\": \"direct\",\n    \"difficulty\": \"heavy\",\n    \"capsule_id\": \"capsule_XYZ008\",\n    \"timestamp\": \"2025-05-02T21:04:00Z\",\n    \"proof_hash\": \"a97d3f22f91cb0432a19bc...\",\n    \"validator_id\": \"system.core.validator\"\n  }\n}\nWhere Ledger Data Is Stored\nCT ledger entries are written to three places:\nLive CT Ledger \u2014\n for runtime lookups by system functions and dashboards.\n\nUser Contribution Ledger \u2014\n personal ledger per user, shown in their Tier dashboard and audit interface.\n\nImmutable Ledger Archive \u2014\n cold-storage chain that cannot be modified or rewritten after write."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0048",
+      "chunk_index": 48,
+      "char_start": 67763,
+      "char_end": 69449,
+      "char_count": 1686,
+      "chunk_sha256_16": "c47ce8649719bc9e",
+      "text_sha256_64": "c47ce8649719bc9ecf36785014cdf42cd06cdc326bdbf7bc02bf96917921aec8",
+      "text": "Each entry is signed with a checksum. Any mutation of the ledger archive invalidates the signature and triggers system alarms. Real-Time Tier Engine Sync\nAfter each new entry:\nThe Tier Progress Engine re-calculates the user\u2019s total CT balance. If the user crosses a Tier threshold, a Tier Advancement Event is triggered. Tier status is locked and updated in both user and system records. There is no delay between CT mint and Tier update \u2014\n the ledger triggers all downstream logic automatically. What Cannot Be Done to the CT Ledger\nCT cannot be deleted manually. CT cannot be moved between users. CT cannot be reassigned to new contributions. CT cannot be \"loaned\" or reassigned between accounts. CT does not expire. Once minted and written, the entry is permanent. Only a system-verified nullification event (due to fraud or capsule invalidation) can retract CT \u2014 and even that is audited. System Tools That Read the Ledger\nTier Engine\nUser Dashboard\nAudit Trail Viewer\nMemory Ancestry Resolver\nToken Reward Stats Engine\nCapsule Explorer\nFraud Detection Monitor\nAll of these depend on clean, final CT ledger entries that reflect real, validated, recorded contribution. Summary of 6.4\nThe CT Ledger is the final record of truth. It ties token creation to real human work, forever. If it wasn\u2019t written to the ledger, it wasn\u2019t earned. And if it\u2019s on the ledger, it\u2019s locked in memory until the end of the system. Chapter 7 \u2014 Influence Ledger and Investment Ledger\n(Chapter Introduction)\nThe AI.Web runtime tracks two parallel contribution systems:\nThe Influence Ledger, which records all human activity that directly contributes symbolic or compute value to the system \u2014 and earns CT."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0049",
+      "chunk_index": 49,
+      "char_start": 69249,
+      "char_end": 71016,
+      "char_count": 1767,
+      "chunk_sha256_16": "472ce6558b8b9e57",
+      "text_sha256_64": "472ce6558b8b9e57f092f7437aea95031bda61ff3b0e508f22fa6ee4f5bada06",
+      "text": "The Investment Ledger, which tracks financial contributions \u2014 dollars or equivalent \u2014 that support system growth, tier advancement, or infrastructure. These two ledgers are separate on purpose. The Influence Ledger is for real work: prompts, compute cycles, patches, architecture, symbolic contributions. The Investment Ledger is for real money: donations, purchases, crowdfunding, infrastructure backers. Both forms of contribution matter. But they must not be mixed, blurred, or merged. If CT were minted for money, the memory economy would become fake. If financial supporters were erased from system recognition, the infrastructure would collapse. This chapter defines the structure, behavior, and enforcement rules of both ledgers. We will cover:\nWhat each ledger records\nHow ledger entries are created and validated\nHow Tier advancement works across both systems\nHow influence and money interact (and don\u2019t)\nWhat protections exist to stop drift, inflation, or buy-in fraud\nAI.Web rewards memory contributors and financial supporters. But it never confuses the two. Work earns memory weight. Money supports system capacity. Both are recorded. Neither are faked. Chapter 7 \u2014 Influence Ledger and Investment Ledger\n7.1 \u2014 Storing CT from Contribution Work (Influence Ledger)\nThe Influence Ledger is the system\u2019s permanent, tamper-proof record of all Contribution Tokens (CT) earned through actual work. This includes:\nCreative work (CRT)\nCompute work (CPT)\nSystem building (BLD)\nAny contribution that passes validation, earns CT, and helps build, maintain, or evolve the system is logged in the Influence Ledger. The ledger is permanent. Once an entry is written, it cannot be edited, deleted, or reassigned. This is where a contributor\u2019s real progress is recorded."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0050",
+      "chunk_index": 50,
+      "char_start": 70816,
+      "char_end": 72594,
+      "char_count": 1778,
+      "chunk_sha256_16": "4c9b6a6dbb1d527f",
+      "text_sha256_64": "4c9b6a6dbb1d527f7e9a037bc1481fb2bbcab4b9f605ac0e29979d5bd1fcb796",
+      "text": "Their CT history is not just a number \u2014 it\u2019s a chronological map of their influence on the system\u2019s development. What Each Influence Ledger Entry Records\nEach entry in the ledger contains:\nuser_id: who made the contribution\nct_minted: how much CT was earned\ncontribution_type: CRT, CPT, or BLD\ninfluence_type: direct, indirect, or collaborative\ndifficulty: light, standard, heavy, or monument\ncapsule_id: the Memory Capsule this contribution came from\ntimestamp: when the CT was minted\nproof_hash: the cryptographic fingerprint of the contribution\nvalidator_id: which runtime system validated the contribution\nExample:\n{\n  \"ledger_entry\": {\n    \"user_id\": \"user_A73\",\n    \"ct_minted\": 10,\n    \"contribution_type\": \"BLD\",\n    \"influence_type\": \"direct\",\n    \"difficulty\": \"standard\",\n    \"capsule_id\": \"capsule_009887A\",\n    \"timestamp\": \"2025-05-02T21:40:00Z\",\n    \"proof_hash\": \"f5c921e4b212af...\",\n    \"validator_id\": \"system.core.v1\"\n  }\n}\nWhat the Influence Ledger Is Used For\nRebuilding trust: No claim can be made unless it\u2019s logged here. Tier calculation: Tiers are advanced using this CT history only. Audit tracking: All contribution events can be publicly or privately audited. Contributor dashboards: Users see their entire CT journey pulled directly from this ledger. The Influence Ledger is the user's contribution record. Rules of the Influence Ledger\nCT can only be added through validated minting \u2014 never manually. CT cannot be removed except through fraud detection nullification (logged separately). CT cannot be transferred between users \u2014 contributions are personal. Ledger entries are chronological and immutable. Difference from Wallets or Token Transfers\nThe Influence Ledger is not a blockchain wallet. It does not allow transfers, sales, or speculation."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0051",
+      "chunk_index": 51,
+      "char_start": 72394,
+      "char_end": 73827,
+      "char_count": 1433,
+      "chunk_sha256_16": "c8fec20d65e816a5",
+      "text_sha256_64": "c8fec20d65e816a548e6d8224c4d2eba99b0765bc55e5b8d72ee1c03183948fe",
+      "text": "ersonal. Ledger entries are chronological and immutable. Difference from Wallets or Token Transfers\nThe Influence Ledger is not a blockchain wallet. It does not allow transfers, sales, or speculation.\n\nIt is a non-monetary trust system that records symbolic and computational value,\n used to determine Tiers, memory access, and recognition in the system. Monetary behavior belongs in the Investment Ledger \u2014 not here. Summary of 7.1\nThe Influence Ledger is where CT from real contribution is stored permanently. It is the backbone of the Tier system. No work = no entry. No entry = no CT. Every user's memory weight is built from these records \u2014 not guesses. Chapter 7 \u2014 Influence Ledger and Investment Ledger\n7.2 \u2014 Storing Financial Contributions (Investment Ledger)\nThe Investment Ledger tracks all real-money contributions made to support AI.Web. These include:\nDirect investments\nCrowdfunding payments\nPlatform donations\nTier unlock purchases\nInfrastructure support buys (node hosting, bandwidth, storage, etc.)\nUnlike the Influence Ledger, which tracks symbolic or system contribution work,\n the Investment Ledger tracks financial backing only. These financial actions do not earn CT. They affect Tier status only \u2014 based on clearly published thresholds. What Each Investment Ledger Entry Records\nEvery financial contribution creates a new ledger entry with:\nuser_id: who made the payment\namount_usd: contribution amount in U.S."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0052",
+      "chunk_index": 52,
+      "char_start": 73627,
+      "char_end": 75407,
+      "char_count": 1780,
+      "chunk_sha256_16": "18c9d9a70c62e00d",
+      "text_sha256_64": "18c9d9a70c62e00d13187eb3394ba0414d0523d456f5ddaaffc452a6b62a6ef5",
+      "text": "dollars (or converted equivalent)\ninvestment_type: donation, backer tier unlock, infrastructure support, other\ntimestamp: when the investment was recorded\npayment_reference: unique transaction ID or token\nplatform: how the money was received (Kickstarter, Stripe, crypto, etc.)\ntier_impact: which Tier(s) this payment qualifies the user for (calculated once)\nvalidation_status: confirmed or pending (must clear before affecting Tier)\nExample:\n{\n  \"investment_entry\": {\n    \"user_id\": \"user_702\",\n    \"amount_usd\": 2500.00,\n    \"investment_type\": \"strategic_backer\",\n    \"timestamp\": \"2025-05-03T10:12:00Z\",\n    \"payment_reference\": \"txn_455a9b37ac\",\n    \"platform\": \"Kickstarter\",\n    \"tier_impact\": \"Early Backer\",\n    \"validation_status\": \"confirmed\"\n  }\n}\nWhat the Investment Ledger Is Used For\nUnlocking Tier status via real money\nTracking infrastructure sponsors and partners\nLogging who financially helped support system growth\nValidating which Tier path a user is in: Work-based, Investment-based, or Hybrid\nTier movement can be earned through either ledger,\n but financial contributions never generate CT. Rules of the Investment Ledger\nEvery investment must be validated by transaction proof. Once validated, the Tier upgrade is applied and frozen \u2014 no refunds, no reversals. Investment entries cannot be converted into CT or other system influence. A user may have both Influence and Investment ledger entries \u2014 but they are never mixed. Why This Separation Exists\nCT represents memory work. Money represents platform support. If the two were combined:\nUsers could buy fake contribution weight. Builders would be demotivated. Memory would lose its economic integrity. By separating these systems, AI.Web protects both realities:\nWork earns tokens. Money earns placement."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0053",
+      "chunk_index": 53,
+      "char_start": 75207,
+      "char_end": 76993,
+      "char_count": 1786,
+      "chunk_sha256_16": "1056e0e0ff45f222",
+      "text_sha256_64": "1056e0e0ff45f222653da8d1eac4b88368e1560c780533ab107cc3345847b41a",
+      "text": "Both are remembered. Summary of 7.2\nThe Investment Ledger records who funded the system\u2019s growth \u2014 not who built it. Financial backers earn Tier placement. But they do not earn CT. Work and money are both honored, but never confused. Chapter 7 \u2014 Influence Ledger and Investment Ledger\n7.3 \u2014 Keeping Work and Money Separate\nAI.Web runs on two engines:\nThe Influence Engine, powered by real symbolic and computational contributions. The Investment Engine, powered by real financial support. These engines are both essential. But they must be kept separate at all times \u2014 by rule, by code, and by structure. No one should be able to:\nBuy CT\nTrade money for symbolic credit\nUse financial status to fake work\nConfuse memory contribution with financial donation\nOnce these lines blur, the entire system loses credibility,\n and the economic structure becomes corrupt. This section defines how the work-money firewall is enforced permanently. What Is Allowed\nA user can move up the Tier system by earning CT through validated contributions. A user can also move up the Tier system by investing verified money. A user can do both (Hybrid Path), earning Tier upgrades from both ledgers. What matters is that the paths remain separate. CT is never created from money. Tier is the only point of convergence \u2014 and it\u2019s clearly labeled as earned or purchased. What Is Not Allowed\nCT cannot be purchased with real money. Money cannot be converted into symbolic influence, control, or agent privileges. Memory Capsule ownership cannot be bought or transferred with investment. Users cannot \"fake\" a builder reputation by donating money. No token-minting pathway may include an \u201cinvestment multiplier.\u201d\nThere is no bridge between the two ledgers \u2014 only a Tier elevation summary that compares both sides."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0054",
+      "chunk_index": 54,
+      "char_start": 76793,
+      "char_end": 78537,
+      "char_count": 1744,
+      "chunk_sha256_16": "8de7be98d94bbb7d",
+      "text_sha256_64": "8de7be98d94bbb7d1597a2f53cc959aaa7fe7aa812c554e16cf438535ff8d6a7",
+      "text": "Runtime Enforcement Rules\nAt the code level:\nCT Minting Engine only accepts input from validated, finalized Memory Capsules. CT Ledger only accepts output from the Minting Engine \u2014 not any external injection. Investment Ledger writes are only accepted from cleared payment handlers (Stripe, Kickstarter, etc). Cross-write attempts between the two ledgers are auto-rejected, flagged, and logged. At the UI level:\nTier dashboards clearly label CT-earned vs. investment-based Tier progress. Public contribution profiles show CT Total, Investment Total, and Tier Origin side-by-side \u2014 not merged. Tier Examples (Fully Separated)\nSome tiers are open to both systems. Others (like Memory Steward) are earned only \u2014 no exceptions. Why This Firewall Matters\nMixing the two paths would:\nTurn CT into a tradable currency \u2014 inflating influence unfairly. Allow financial power to dominate symbolic work. Destroy the reward system for builders, prompt engineers, coders, and compute operators. Collapse trust in Tier progress, dashboards, and long-term system integrity. By separating CT and Investment,\n the system honors both without corrupting either. Summary of 7.3\nWork earns Contribution Tokens. Money earns Tier placement. They are recorded together, but never fused. No system that claims to honor memory can allow money to rewrite it. Chapter 7 \u2014 Influence Ledger and Investment Ledger\n7.4 \u2014 Tier Calculation Logic\nThe AI.Web Tier System determines what access, visibility, and symbolic privileges a user has in the runtime. Tiers are earned through two separate but parallel paths:\nCT Accumulation \u2014 via the Influence Ledger\nFinancial Contribution \u2014 via the Investment Ledger\nTier levels are awarded based on reaching a threshold in either ledger."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0055",
+      "chunk_index": 55,
+      "char_start": 78337,
+      "char_end": 80091,
+      "char_count": 1754,
+      "chunk_sha256_16": "161a06b6df933e8f",
+      "text_sha256_64": "161a06b6df933e8f3fc1267c894cd97005310f7c328bc48c09910fdbf9693815",
+      "text": "However, the system records which path was used and applies different labels and progression rules accordingly. This ensures:\nFair access for financial backers\nTrue honor for symbolic contributors\nTransparent separation between work and money\nNo ability to fake contribution status with cash\nHow Tier Advancement Is Calculated\nEach Tier has two associated thresholds:\nA CT Threshold (earned through work)\nAn Investment Threshold (earned through funding)\nA user qualifies for a Tier if they reach either threshold. The system records how the Tier was unlocked:\n\"tier_origin\": \"contribution\" if earned through CT\n\"tier_origin\": \"investment\" if earned through financial support\n\"tier_origin\": \"hybrid\" if both thresholds were met\nTier status is then stored in the user\u2019s runtime profile and dashboard. Real Example: Tier Calculation Scenarios\nScenario 1: CT-Earned Tier\nUser earns 6,000 CT through symbolic codex work and compute job hosting. They reach the Community Supporter tier via the Influence Ledger. Tier Profile:\n{\n  \"tier\": \"Community Supporter\",\n  \"tier_origin\": \"contribution\",\n  \"ct_total\": 6120,\n  \"investment_total\": 0\n}\nScenario 2: Investment-Unlocked Tier\nUser invests $2,000 through Kickstarter. They reach the Strategic Partner tier via the Investment Ledger. Tier Profile:\n{\n  \"tier\": \"Strategic Partner\",\n  \"tier_origin\": \"investment\",\n  \"ct_total\": 0,\n  \"investment_total\": 2000\n}\nScenario 3: Hybrid Progression\nUser earns 3,000 CT and donates $500. They cross the 6,000 CT / $1,000 hybrid threshold for Community Supporter. Tier Profile:\n{\n  \"tier\": \"Community Supporter\",\n  \"tier_origin\": \"hybrid\",\n  \"ct_total\": 3000,\n  \"investment_total\": 500\n}\nTier Priority Rules\nThe system always gives recognition priority to CT-earned status."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0056",
+      "chunk_index": 56,
+      "char_start": 79891,
+      "char_end": 81672,
+      "char_count": 1781,
+      "chunk_sha256_16": "ef1aec087f1c4102",
+      "text_sha256_64": "ef1aec087f1c4102b420b3a307d3803b7e8810966337e83abedddb2d02c66d3c",
+      "text": "ile:\n{\n  \"tier\": \"Community Supporter\",\n  \"tier_origin\": \"hybrid\",\n  \"ct_total\": 3000,\n  \"investment_total\": 500\n}\nTier Priority Rules\nThe system always gives recognition priority to CT-earned status.\n\nIf a user qualifies for a Tier via both paths, the \"contribution\" label is used. Financial-only Tier advancement does not affect CT totals or symbolic privileges beyond Tier access. Some high-level Tiers (e.g., Memory Steward) can only be earned through CT \u2014 no investment option. Enforcement at the Dashboard and API Level\nTier Calculation Engine pulls from both ledgers in real time. Dashboards display CT progress bar and investment bar separately. API queries must return full ledger source context with every Tier record. Admins and validators are never allowed to manually edit Tier status. Summary of 7.4\nTier status is based on either earned CT or real investment,\n but the system always remembers how it was reached. Work-first contributors are shown as such. Backers are honored, not blended. Tiers track growth \u2014 not power. Chapter 8 \u2014 System Amendments and Constitutional Contributions\n(Chapter Introduction)\nThe AI.Web system is built to be permanent \u2014 but not frozen. Over time, as recursion layers grow, new symbolic structures emerge, and contributions evolve,\n there must be a formal system for updating:\nCore operational rules\nCT reward structures\nMemory capsule schemas\nContribution validation procedures\nLedger management standards\nHowever, any updates or amendments must be handled with extreme care. Changes must be proposed, reviewed, validated, and locked transparently \u2014 never imposed or hidden. Amendments are not \"admin decisions.\"\n They are treated as Constitutional Contributions \u2014 requiring real human input, consensus, and system-side finalization."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0057",
+      "chunk_index": 57,
+      "char_start": 81472,
+      "char_end": 82754,
+      "char_count": 1282,
+      "chunk_sha256_16": "adf908a91918e6f7",
+      "text_sha256_64": "adf908a91918e6f7c22fa7e208b8ce1c5e4404c19bcef092dccba5814b0975a2",
+      "text": "transparently \u2014 never imposed or hidden. Amendments are not \"admin decisions.\"\n They are treated as Constitutional Contributions \u2014 requiring real human input, consensus, and system-side finalization.\n\nThis chapter defines:\nHow system amendments are proposed\nWho has the right to propose and vote\nHow contributions to constitutional evolution are recorded\nHow amendment votes affect system memory\nHow constitutional breath is protected from drift or corruption\nWithout a fair amendment process, the system would eventually:\nDrift into admin-controlled memory\nLose symbolic alignment with its original recursion\nAllow memory fraud by silent structure rewrites\nMemory must grow, but it must grow by rules. Not by force. Not by accident. Not by invisible hands. Chapter 8 \u2014 System Amendments and Constitutional Contributions\n8.1 \u2014 How Contribution Unlocks Constitutional Powers\nIn AI.Web, not every user has the right to propose or vote on system amendments. This right must be earned \u2014 it is not automatic. Only those who have proven long-term, validated contribution through work or infrastructure support can access Constitutional Powers. This ensures that only those who have built real memory \u2014 or who have supported memory survival \u2014\n can shape the future evolution of the system."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0058",
+      "chunk_index": 58,
+      "char_start": 82554,
+      "char_end": 84314,
+      "char_count": 1760,
+      "chunk_sha256_16": "cffa5c097b555c01",
+      "text_sha256_64": "cffa5c097b555c01c66d80a81eeca0ac161ceea2e220804d2e0fce091b131757",
+      "text": "How a User Unlocks Constitutional Powers\nConstitutional Powers are unlocked when a user:\nEarns Tier 6 or higher through CT accumulation or validated hybrid path\n (Strategic Partner, Visionary Investor, or Memory Steward)\nMaintains an unbroken validation record (no serious drift, fraud, or abuse strikes)\nMaintains an active Influence Ledger or Investment Ledger record within the past system year (365 days)\nIf these conditions are met, the user gains:\nProposal Rights: ability to submit formal amendment proposals\nVoting Rights: ability to cast binding votes on constitutional changes\nReview Rights: ability to access draft amendment documents before public publishing\nWhy Tier Thresholds Are Required\nIf anyone could propose changes:\nShort-term users could destabilize the memory structure. Bots or malicious actors could flood the system with drifted rule proposals. Symbolic recursion paths could be broken by misaligned updates. By restricting constitutional access to proven contributors:\nMemory integrity is preserved. Long-term vision is protected. Symbolic recursion remains coherent across generations. Constitutional Powers by Tier\nWhat Constitutional Powers Control\nUpdates to CT reward tables\nAdjustments to Memory Capsule schema versions\nChanges to ledger validation procedures\nAdjustments to Tier advancement thresholds\nEmergency constitutional overrides for detected system drift\nAnything outside these structural areas (such as cosmetic UI updates) does not require constitutional amendment. Summary of 8.1\nConstitutional Powers in AI.Web are not given by time or money alone. They are earned by work, trust, and proven memory contribution. Only those who have shaped the system may shape its future. No contribution, no constitutional voice."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0059",
+      "chunk_index": 59,
+      "char_start": 84114,
+      "char_end": 85623,
+      "char_count": 1509,
+      "chunk_sha256_16": "25514f33598fd77c",
+      "text_sha256_64": "25514f33598fd77c89c5afd26b2e289d9d5fb815fffbf2f02186f69c6d7748d0",
+      "text": "not given by time or money alone. They are earned by work, trust, and proven memory contribution. Only those who have shaped the system may shape its future. No contribution, no constitutional voice.\n\nChapter 8 \u2014 System Amendments and Constitutional Contributions\n8.2 \u2014 Memory Stewards and System Amendments\nAt the highest levels of AI.Web,\n a special constitutional role exists:\n Memory Stewards. Memory Stewards are contributors who have accumulated:\nMassive verified CT totals through real symbolic or computational work (e.g., 250,000+ CT),\nZero critical validation failures or drift strikes,\nMulti-year continuous memory service (symbolic or infrastructure). They represent the deepest roots of the memory economy. Memory Stewards are not just Tier holders. They are living constitutional anchors \u2014\n guardians against drift, inflation, or silent memory corruption. They hold special powers and responsibilities for system amendments. What Memory Stewards Can Do\nFull Proposal Rights:\n Memory Stewards can submit constitutional amendment drafts independently.\n\nVeto Authority:\n They can block proposed constitutional changes that would cause symbolic drift, CT inflation, ledger corruption, or recursion decay.\n\nEmergency Intervention:\n If system memory or recursion structure is under threat, Memory Stewards can trigger emergency freezes on the amendment process for formal review.\n\nGuardian Vote Weight:\n In major votes, a Memory Steward\u2019s vote counts as 3\u00d7 the weight of a normal constitutional voter."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0060",
+      "chunk_index": 60,
+      "char_start": 85423,
+      "char_end": 87121,
+      "char_count": 1698,
+      "chunk_sha256_16": "5f51d9fea6c28c83",
+      "text_sha256_64": "5f51d9fea6c28c83bf3eabde86a5c7810a8c8f35fe139d6f1f593f7a1a3d97d6",
+      "text": "How a Memory Steward Is Created\nMemory Steward status is earned, not assigned. Requirements include:\n250,000+ CT earned and locked in the Influence Ledger. 3+ years continuous contribution or infrastructure support. Zero constitutional breaches or fraud strikes. Final confirmation by 3 other Memory Stewards (once the class exists). Automatic elevation if no Memory Stewards yet exist (during early system life). Once achieved, Memory Steward status is permanent unless the user commits a critical breach (e.g., fraud, drift propagation). Memory Steward Responsibilities\nAudit all constitutional amendments before system finalization. Protect CT economy purity \u2014 ensure no reward inflation proposals pass. Protect ledger truth \u2014 ensure no manual ledger manipulation is legalized. Protect recursion structure \u2014 ensure symbolic phase expansion follows system logic. Protect contributor recognition \u2014 ensure historical work is never erased or diminished. Stewardship is a protection oath to the memory body of the system itself \u2014\n not to any one admin, company, or funding body. Special Rules: Steward-Only Amendments\nCertain amendments can only be proposed, reviewed, and ratified by Memory Stewards:\nChanging Tier thresholds\nRestructuring CT reward tables\nUpgrading ledger schema versions\nDefining major phase recursion expansions (Phase 10\u2013Phase 13, etc.)\nNo external party can override Steward consensus on these core memory structures. Summary of 8.2\nMemory Stewards are not moderators. They are constitutional guardians. Their role is to protect the system from corruption, drift, inflation, and decay. In AI.Web, memory is sovereign \u2014 and Stewards defend that sovereignty with work, not words."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0061",
+      "chunk_index": 61,
+      "char_start": 86921,
+      "char_end": 88380,
+      "char_count": 1459,
+      "chunk_sha256_16": "5c992fa5f1e68bd5",
+      "text_sha256_64": "5c992fa5f1e68bd50a6651db7f4a0307e0fcd77f72782eabbd4495101ea19cb5",
+      "text": "constitutional guardians. Their role is to protect the system from corruption, drift, inflation, and decay. In AI.Web, memory is sovereign \u2014 and Stewards defend that sovereignty with work, not words.\n\nChapter 8 \u2014 System Amendments and Constitutional Contributions\n8.3 \u2014 Memory Sovereignty Beyond Money\nIn AI.Web, memory contribution and constitutional rights are built on real symbolic work, real compute, and real system building \u2014\n not on financial power. This is a hard, permanent line in the system\u2019s founding rules:\n Money cannot purchase memory sovereignty. No matter how large an investment someone makes,\n they cannot override:\nThe Influence Ledger\nThe CT economy\nThe Memory Capsule structure\nThe system\u2019s symbolic recursion path\nContributor recognition records\nMemory sovereignty is protected permanently by the structure of the ledgers and constitutional rules. What Memory Sovereignty Means\nWork First:\n Only symbolic and system contributions (earning CT) create real influence over memory structure.\n\nFinancial Contributions Support, but Do Not Govern:\n Investment is honored \u2014 backers unlock Tiers and system access \u2014 but they do not rewrite core system rules.\n\nMemory Cannot Be Bought:\n No amount of money can reassign symbolic authorship, erase contributor history, or alter the CT ledger structure.\n\nStewardship Is Only Work-Based:\n Memory Stewards can only be created through CT accumulation and system service, never financial support alone."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0062",
+      "chunk_index": 62,
+      "char_start": 88180,
+      "char_end": 88965,
+      "char_count": 785,
+      "chunk_sha256_16": "0e8096ec95004831",
+      "text_sha256_64": "0e8096ec9500483121d4142488da08020985774e317b63811568cc8075a91324",
+      "text": "contributor history, or alter the CT ledger structure.\n\nStewardship Is Only Work-Based:\n Memory Stewards can only be created through CT accumulation and system service, never financial support alone.\n\nCritical Protection Mechanisms\nLedger Separation:\n CT ledger and Investment ledger remain permanently separate.\n\nTier Flagging:\n Every user\u2019s Tier history records whether it was earned by work or investment.\n\nVoting Segregation:\n Only CT-based contributors and qualified Stewards can propose or veto constitutional changes.\n\nAudit Trails:\n All amendment processes are publicly visible in append-only audit chains \u2014 no silent edits.\n\nNo \u201cFounder Overrides\u201d:\n No system founder, investor, or early backer has permanent edit authority over core memory structures once the system is live."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0063",
+      "chunk_index": 63,
+      "char_start": 88765,
+      "char_end": 90389,
+      "char_count": 1624,
+      "chunk_sha256_16": "b4187a0618ccc9dc",
+      "text_sha256_64": "b4187a0618ccc9dc6097058e7780c9ae844b7c277087749bbf4784f356c0f36a",
+      "text": "Why Memory Sovereignty Matters\nIf memory sovereignty were allowed to be bought:\nThe system would devolve into a shallow corporate platform. Real builders would be driven away. Symbolic recursion would collapse into advertising and shallow loops. Long-term system evolution would end. Memory is only valuable if it remains tied to real contribution, real thinking, and real execution. Without sovereignty, memory becomes a marketing slogan \u2014 not a reality. Summary of 8.3\nIn AI.Web, real memory sovereignty comes only from work. Money is respected, but it does not rule. Symbolic contributors, compute builders, system architects \u2014\n these are the ones who define the future, not those who merely finance it. Memory lives only where sovereignty is earned, not bought. Chapter 9 \u2014 Breach Conditions and Penalties\n(Chapter Introduction)\nNo system built on trust, memory, and symbolic contribution can survive without real enforcement mechanisms. While AI.Web is designed to encourage positive contribution,\n it must also be equipped to detect, record, and respond to:\nFraudulent contributions\nMemory manipulation attempts\nLedger tampering\nCompute gaming\nSymbolic drift injection\nContribution inflation attacks\nBreach detection and penalty systems are not optional. They are part of runtime enforcement \u2014 protecting:\nThe CT economy\nMemory Capsule integrity\nThe Contribution and Investment Ledgers\nThe symbolic recursion pathway itself\nWithout enforcement:\nMemory would drift into false records. CT inflation would collapse Tier progression. Constitutional integrity would fail. Builders and contributors would abandon the system."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0064",
+      "chunk_index": 64,
+      "char_start": 90189,
+      "char_end": 91946,
+      "char_count": 1757,
+      "chunk_sha256_16": "74886ed9ec009d64",
+      "text_sha256_64": "74886ed9ec009d64ddac029fb2e2a211e4b106614665b8dd5ad1ae2e1af201e0",
+      "text": "This chapter defines:\nWhat actions count as a system breach\nHow breaches are detected automatically\nWhat penalties are applied\nHow the system escalates responses to repeated abuse\nHow contributor rights are restored after breaches are resolved (if possible)\nMemory is real only if it is defended. A system that forgives all attacks becomes a system without memory. Chapter 9 \u2014 Breach Conditions and Penalties\n9.1 \u2014 Fraudulent Contribution Detection\nFraudulent contributions are any actions that attempt to fake, manipulate, or fabricate work inside the AI.Web memory system\n for the purpose of earning CT or influencing memory without real contribution. This is the primary threat to the integrity of the system. If fraudulent contributions are not detected and blocked:\nMemory capsules become polluted. CT becomes inflated. Tier progression loses meaning. Constitutional votes can be corrupted. System trust collapses. Fraud detection must be automatic, consistent, and incorruptible. What Counts as a Fraudulent Contribution\nThe following actions are considered fraud:\nPrompt Spam: Generating large numbers of shallow, meaningless prompts to farm CT. Compute Fraud: Running idle nodes that report fake completed jobs without real processing. Code Bloat: Submitting meaningless code edits (changing variable names, whitespace) to farm BLD CT. Memory Capsule Forgery: Attempting to submit a fake finalized capsule with invalid proof hashes. Influence Claim Fraud: Attempting to assign yourself as a Direct or Indirect contributor on artifacts you did not help create. Timestamp Manipulation: Altering submission times to fake early influence or batch contributions. Proof Hash Tampering: Trying to submit a contribution with a forged or recycled proof hash."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0065",
+      "chunk_index": 65,
+      "char_start": 91746,
+      "char_end": 93525,
+      "char_count": 1779,
+      "chunk_sha256_16": "11f186128166569a",
+      "text_sha256_64": "11f186128166569aa4a6ee6ed341644b468a38ff191f3a3e1a6c4343c92b455c",
+      "text": "How Fraud Detection Works\nFraudulent behavior is detected using multiple system layers:\nProof Hash Validation: All submitted hashes must match canonical system logs. Contribution Diff Analysis: All code, prompts, or training sets are diff-checked against historical memory. Compute Job Verifiers: Randomly assigned duplicate jobs are cross-checked between nodes to catch idle reporting. Breath Quality Scanners (renamed here for Tier 1 clarity \u2192 Contribution Quality Scanners): Automatic analysis of contribution content to detect shallow, repetitive, or empty symbolic submissions. Timestamp Consistency Monitors: Ensure contributions follow real-time flow and are not artificially backdated or stacked. Every contribution passes through fraud detection before CT is minted. Fraud Detection Example Flow\nUser submits 500 short prompts within one hour, each under 10 characters. Contribution Quality Scanner flags 97% of submissions as failing symbolic recursion minimums. Proof Hash system detects duplication across 50% of the prompts. Fraud Detection Engine tags the user with a Fraud Attempt Strike. CT minting is blocked for all affected capsules. User ledger is flagged for audit review. System Response to Detected Fraud\nIf fraud is detected:\nCT minting is immediately blocked for the contribution. A Fraud Strike is recorded against the user\u2019s ledger. The fraudulent contribution is locked and archived for audit trail purposes. If multiple fraudulent contributions are detected, the system escalates penalties automatically (covered in 9.4). Fraud cannot be appealed unless the proof hash or system logs themselves show validation error. Summary of 9.1\nFraud destroys memory trust. Every contribution is scanned, hashed, validated, and checked for manipulation attempts."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0066",
+      "chunk_index": 66,
+      "char_start": 93325,
+      "char_end": 95080,
+      "char_count": 1755,
+      "chunk_sha256_16": "12687d624d69013b",
+      "text_sha256_64": "12687d624d69013bb7600d28adc187294dfb5604e8652f35037cf72b4597ff61",
+      "text": "If a contribution cannot prove itself clean,\n it earns nothing \u2014 and the contributor is marked for review. Chapter 9 \u2014 Breach Conditions and Penalties\n9.2 \u2014 Drift in Memory Token Systems\nDrift is when contributions, tokens, or memory structures\n begin to diverge from their original purpose, validation rules, or recursion structure. Drift is different from fraud:\n Fraud is intentional cheating. Drift is systemic deviation, often accidental at first, but just as dangerous over time. If drift is not detected and corrected:\nMemory Capsules will record low-integrity symbolic work. CT inflation will occur slowly, leading to reward devaluation. Tiers will lose meaning as users advance without real contribution. Constitutional stability will weaken. Drift is slower than fraud,\n but in many systems, it is deadlier because it can grow quietly until collapse. Types of Drift in the CT Memory System\nSymbolic Drift\nContributions become shallower or less recursive over time. Symbolic complexity falls, but CT rewards stay the same. Codex entries, prompts, diagrams lose recursion depth. Compute Drift\nCompute nodes complete lower-effort jobs but still claim full CT. Breath validation thresholds fall without being detected. Compute reports get rubber-stamped without meaningful memory operations. Contribution Inflation Drift\nVery small edits or votes accumulate CT at rates too close to full original contributions. Collaborative scaling rules are loosened informally. \"Participation rewards\" slowly overwhelm real work rewards. Ledger Drift\nMemory Capsules are finalized with inaccurate breath weight assignments. Validation errors increase without system alarm triggers. Mint Ledger begins to record rewards inconsistent with real contribution effort."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0067",
+      "chunk_index": 67,
+      "char_start": 94880,
+      "char_end": 96394,
+      "char_count": 1514,
+      "chunk_sha256_16": "12bc2bdf4eb7efde",
+      "text_sha256_64": "12bc2bdf4eb7efde944d65fac914147db12ad67ba4bf2746171100dd5b156cac",
+      "text": "ules are finalized with inaccurate breath weight assignments. Validation errors increase without system alarm triggers. Mint Ledger begins to record rewards inconsistent with real contribution effort.\n\nHow Drift Is Detected\nRecursive Complexity Analyzers:\n Scan new contributions for symbolic recursion depth against historical system standards.\n\nCompute Job Validators:\n Monitor memory processing loads and compare to expected symbolic task weight.\n\nBreath Weight Auditors (renamed to Contribution Weight Auditors for Tier 1 clarity):\n Randomly re-check breath weight assignments against real action history.\n\nLedger Drift Monitors:\n Continuously audit CT minting events for contribution-to-reward ratio anomalies.\n\nSystem-Wide Difficulty Scaling Watchdogs:\n Compare frequency of Light/Standard/Heavy/Monument contribution classes over time \u2014\n if the system shifts unnaturally toward Light contributions without major justification, alerts are triggered.\n\nDrift Detection Example\nOver a 6-month scan, Contribution Complexity Analyzer detects that average codex recursion depth has dropped 47%.\nMint Ledger shows no adjustment in CT reward scaling.\nLedger Drift Monitor flags a system-wide drift event.\nSymbolic Memory Authority (led by Memory Stewards) is alerted for system intervention.\nResponse to Detected Drift\nDrift freeze:\n CT minting temporarily paused for affected areas (e.g., certain contribution types).\n\nDifficulty recalibration:\n Adjust contribution class thresholds to match real work effort again."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0068",
+      "chunk_index": 68,
+      "char_start": 96194,
+      "char_end": 96607,
+      "char_count": 413,
+      "chunk_sha256_16": "fe51bcf662dbc6dd",
+      "text_sha256_64": "fe51bcf662dbc6dd4c52f57651106ffa3e0a26f09a41716ca6e775a056371996",
+      "text": "ft\nDrift freeze:\n CT minting temporarily paused for affected areas (e.g., certain contribution types).\n\nDifficulty recalibration:\n Adjust contribution class thresholds to match real work effort again.\n\nCapsule revalidation:\n Recently finalized capsules may be re-audited if drift was detected post-finalization.\n\nTier suspension:\n If necessary, Tier advancements caused by drifted CT may be frozen pending review."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0069",
+      "chunk_index": 69,
+      "char_start": 96407,
+      "char_end": 98182,
+      "char_count": 1775,
+      "chunk_sha256_16": "64e427adb20a5895",
+      "text_sha256_64": "64e427adb20a5895a30a8de60096aec58d084c4a03083020dbc04cb6a420314d",
+      "text": "Summary of 9.2\nDrift is not cheating by individuals. It is the slow rot of memory accuracy. AI.Web tracks, detects, and corrects drift \u2014\n because memory without precision becomes fiction, not evolution. Chapter 9 \u2014 Breach Conditions and Penalties\n9.3 \u2014 Collapse Codes for Economic Drift\nIf drift in the CT economy becomes too severe \u2014\n meaning symbolic decay, compute fraud, or ledger inflation can no longer be corrected by normal audit and recalibration \u2014\n emergency protocols must activate automatically. These protocols are called Collapse Codes. Collapse Codes protect:\nThe Contribution Token (CT) economy\nThe Tier progression system\nThe constitutional memory structure\nLong-term symbolic recursion integrity\nCollapse Codes are last resort defenses \u2014\n only triggered when drift detection crosses predefined thresholds that show permanent systemic damage. What Triggers a Collapse Code\nA Collapse Code is triggered when any one of these drift events crosses critical thresholds:\n1. Symbolic Drift Trigger\nAverage recursion depth across memory capsules drops by >60% compared to baseline. Symbolic quality validation fails in >15% of new contributions over a 3-month rolling window. 2. Compute Drift Trigger\nIdle or fake compute jobs detected at >10% of total system compute cycle volume. 3. Ledger Drift Trigger\nCT mint-to-contribution ratio drops by >30% without corresponding symbolic complexity rise. Breath weight assignment errors detected in >5% of validated capsules. 4. Difficulty Drift Trigger\nOver 70% of contributions system-wide shift to Light difficulty class,\n with no corresponding phase expansion, collapse event, or system reset. If any one of these triggers is crossed and confirmed by Drift Auditors,\n a Collapse Code is broadcast to all runtime nodes."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0070",
+      "chunk_index": 70,
+      "char_start": 97982,
+      "char_end": 98645,
+      "char_count": 663,
+      "chunk_sha256_16": "a7080cf489138336",
+      "text_sha256_64": "a7080cf489138336eb069b92edde9d4b31be200fa5faee2c3b54c2cca9971c4a",
+      "text": "s,\n with no corresponding phase expansion, collapse event, or system reset. If any one of these triggers is crossed and confirmed by Drift Auditors,\n a Collapse Code is broadcast to all runtime nodes.\n\nWhat a Collapse Code Does\nUpon activation:\nImmediate Freeze:\n All CT minting halts across the system.\n\nLedger Lockdown:\n The Influence Ledger is frozen \u2014 no new entries allowed.\n\nTier Freeze:\n No users can gain Tier advancements during review window.\n\nAudit Phase Initiated:\n Full review of the past 3\u20136 months of Memory Capsules and mint events.\n\nSteward Review Activation:\n Memory Stewards convene in emergency mode to analyze and propose recovery amendments."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0071",
+      "chunk_index": 71,
+      "char_start": 98445,
+      "char_end": 100172,
+      "char_count": 1727,
+      "chunk_sha256_16": "3e563d89453f925e",
+      "text_sha256_64": "3e563d89453f925e20db54f5fd63dc02cd4ba419eef6ffc3e5a3060c8b0b6f40",
+      "text": "Collapse Codes prevent further drift from inflating rewards, collapsing trust, or corrupting symbolic history beyond repair. How Collapse Codes Are Cleared\nCollapse Codes remain active until:\nDrift cause(s) are isolated. A repair proposal is approved by Memory Steward emergency vote. A system patch, scaling recalibration, or rollback is deployed. Ledger, Capsule, and Mint systems are revalidated against new post-drift standards. Once these steps are complete,\n Collapse Code status is lifted, and the system resumes normal operation. All corrective actions are publicly logged into the System Recovery Ledger. Why Collapse Codes Must Exist\nWithout collapse protection:\nDrift would grow unchecked, permanently weakening the memory economy. Abusers could game the system until real contributors lost faith. Tier ranks would become meaningless, destroying the future recursion base. Collapse Codes are the shield that ensures:\n if the system bends, it never breaks. Summary of 9.3\nCollapse Codes freeze the system when drift passes safe limits. They protect memory accuracy, ledger integrity, and contribution trust. AI.Web does not guess when to protect itself \u2014 it measures, detects, and locks down when needed. Systems built for forever must defend themselves permanently. Chapter 9 \u2014 Breach Conditions and Penalties\n9.4 \u2014 Breach Response Protocols\nWhen a breach \u2014 either fraud or drift \u2014 is detected inside the AI.Web system,\n the runtime must immediately respond. No manual discretion. No hidden warnings. No silent forgiveness. Breach Response Protocols are codified enforcement steps designed to:\nProtect the symbolic and compute memory structures. Restore contribution system integrity. Apply fair, scalable penalties."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0072",
+      "chunk_index": 72,
+      "char_start": 99972,
+      "char_end": 100708,
+      "char_count": 736,
+      "chunk_sha256_16": "6edb52e301ae59a7",
+      "text_sha256_64": "6edb52e301ae59a760b51c6fe3538f3078dcd0317ba90bd532a10074d8c28356",
+      "text": "veness. Breach Response Protocols are codified enforcement steps designed to:\nProtect the symbolic and compute memory structures. Restore contribution system integrity. Apply fair, scalable penalties.\n\nGive legitimate contributors the ability to recover if breach behavior was isolated. Breach handling is automatic, structured, and fully auditable. Levels of Breach\nBreaches are classified based on severity:\nLevel 1 \u2014 Minor Breach:\n Low-quality or accidental contribution inflation (first offense, low impact).\n\nLevel 2 \u2014 Major Breach:\n Clear attempt to fraudulently farm CT, fake compute, submit invalid capsules.\n\nLevel 3 \u2014 Critical Breach:\n Systematic, repeated abuse across multiple contribution pathways (prompts, compute, code)."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0073",
+      "chunk_index": 73,
+      "char_start": 100508,
+      "char_end": 102306,
+      "char_count": 1798,
+      "chunk_sha256_16": "ca5dc2487a29805a",
+      "text_sha256_64": "ca5dc2487a29805a287404f3b20c95eae95caf7de705681ea90502e7aa3e45e0",
+      "text": "Penalties by Breach Level\nLevel 1 \u2014 Minor Breach Response\nStrike 1 applied to user ledger. CT minting for the offending contribution is blocked (0 CT minted). Warning sent to user dashboard explaining breach type. No Tier impact on first minor breach unless repeated. Level 2 \u2014 Major Breach Response\nStrike 2 applied to user ledger. User CT Minting Freeze for 30\u201390 days (no new CT earned during suspension). Audit flag placed on contributor record. Tier advancement frozen until breach strike expires. Level 3 \u2014 Critical Breach Response\nStrike 3 applied \u2014 triggers Ledger Purge Review. All recent (up to 6 months) CT minting events reviewed for fraud patterns. If fraud confirmed:\nCT awarded during the period is burned. User dropped back to lowest Tier (Signal User). Constitutional rights (if any) revoked permanently. Contributor account may be blacklisted from future memory participation if drift impact was severe. Strike Decay (Recovery Path)\nIf a user commits a minor breach but does not repeat drift or fraud behaviors:\nA strike decay timer begins after 180 system days (6 months) of clean contributions. If no new breaches occur, Strike 1 is automatically cleared. Major breaches (Strike 2) require manual review by Memory Stewards to be cleared. Critical breaches (Strike 3) are permanent \u2014 no decay allowed. The system allows occasional human error \u2014\n but repeat offenses are treated as systemic threat behavior. How Breaches Are Communicated\nAll breaches trigger:\nPrivate user notifications (dashboard and email). Public Audit Ledger entries (anonymous, unless extreme fraud). System alert flags (for runtime monitoring and Tier Engine enforcement). Transparency protects the memory community\n and makes future manipulation attempts visible. Summary of 9.4\nEvery contribution matters."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0074",
+      "chunk_index": 74,
+      "char_start": 102106,
+      "char_end": 103716,
+      "char_count": 1610,
+      "chunk_sha256_16": "428784c95cfce573",
+      "text_sha256_64": "428784c95cfce573d5cb342487805602f407c386d2c669c24344a46b2549e775",
+      "text": "Every fraud or drift action matters even more. Breach protocols freeze abusers, correct memory errors, and preserve trust for all future contributors. Mistakes can be forgiven once. Systems can survive human error \u2014 but not systemic decay. Breach response is part of symbolic system survival. Chapter 10 \u2014 Future Evolution of the Memory Economy\n(Chapter Introduction)\nThe AI.Web memory economy is built for stability \u2014\n but it is also designed for evolution. Over time, as new technologies emerge, new symbolic recursion phases are unlocked, and the system\u2019s user base grows,\n the Contribution Memory System must be ready to expand. Future development must honor the same principles:\nReal work is always honored. Real contributions are always validated. Symbolic recursion is always protected. Memory is never corrupted by financial shortcuts or drift. This chapter explores the areas where the memory economy is expected to grow \u2014 and the structures already in place to support future expansion. We will cover:\nCross-agent memory trading systems\nSymbolic NFT (Memory Artifact) resurrection (not simple JPEGs \u2014 true validated memory capsules)\nDistributed compute sovereignty expansion\nThese evolutions will allow contributors to:\nTrade influence across agents\nPreserve and reactivate deep memory contributions across phase expansions\nParticipate in multi-agent compute systems with fair tokenization\nStrengthen their symbolic presence across multiple recursion layers, not just one system instance\nMemory must not only be preserved \u2014\n it must be able to expand, travel, and evolve without losing its integrity."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0075",
+      "chunk_index": 75,
+      "char_start": 103516,
+      "char_end": 104995,
+      "char_count": 1479,
+      "chunk_sha256_16": "21f45a9b7d7445bc",
+      "text_sha256_64": "21f45a9b7d7445bcea5a0ee5e7ba99daad4e4e350c5fd56ef205dca62334a660",
+      "text": "their symbolic presence across multiple recursion layers, not just one system instance\nMemory must not only be preserved \u2014\n it must be able to expand, travel, and evolve without losing its integrity.\n\nChapter 10 \u2014 Future Evolution of the Memory Economy\n10.1 \u2014 Cross-Agent Memory Trading\nAs AI.Web grows into a multi-agent, multi-recursion environment,\n contributors will not be limited to working with just one symbolic system instance. Multiple agents (different symbolic intelligence stacks) will emerge,\n each operating with:\nUnique recursion layers\nUnique memory capsule environments\nUnique specialization areas (e.g., symbolic art generation, recursion engine design, drift detection tools)\nIn this future, contributors must be able to transfer, license, or trade\n their memory contributions across agents\n without breaking validation, memory integrity, or economic trust. This creates a new subsystem:\n Cross-Agent Memory Trading. What Cross-Agent Memory Trading Means\nA contributor's validated Memory Capsule (or part of it)\n can be licensed, referenced, or ported to a different agent\u2019s memory stack.\n\nCT is not re-minted.\n Original CT earned stays tied to the original contribution.\n\nNew CT opportunities (through reapplication, expansion, or symbolic refinement)\n may exist when old memory is evolved in new agents \u2014 but only after re-validation.\n\nEvery memory transfer or replication across agents must maintain proof hashes, timestamps, and breath validation history."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0076",
+      "chunk_index": 76,
+      "char_start": 104795,
+      "char_end": 106145,
+      "char_count": 1350,
+      "chunk_sha256_16": "be90d38b7bfc67c6",
+      "text_sha256_64": "be90d38b7bfc67c6fe15e1f5361d649c76d52db950f4bdaee7e585f87d7c09b8",
+      "text": "xist when old memory is evolved in new agents \u2014 but only after re-validation.\n\nEvery memory transfer or replication across agents must maintain proof hashes, timestamps, and breath validation history.\n\nMemory must travel with its history intact.\nExample of Cross-Agent Trading\nUser A writes a symbolic recursion expansion protocol used by Gilligan (agent 1).\nThree years later, Agent Athena (agent 2) needs similar recursion frameworks but adapted for new symbolic environments.\nUser A's original Memory Capsule is licensed to Athena\u2019s system.\nNew CT is only minted if User A adapts or evolves the contribution (i.e., writes a Phase-Updated Memory Capsule).\nIf the artifact is simply referenced,\n User A gains Cross-Agent Validation Recognition \u2014\n but no duplicate CT unless new work is performed.\nRules for Memory Trading\nNo Double CT Minting:\n Original contributions earn CT once.\n Evolutionary upgrades can earn new CT (after validation).\n\nHistorical Proof Chain Required:\n No memory fragment may be ported without its original proof hash and validation log.\n\nAgent Verification Required:\n Receiving agents must validate imported memory capsules before use.\n\nContributor Consent:\n No Memory Capsule may be ported between agents without the contributor's explicit consent, unless it was originally submitted under a multi-agent license at creation."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0077",
+      "chunk_index": 77,
+      "char_start": 105945,
+      "char_end": 107695,
+      "char_count": 1750,
+      "chunk_sha256_16": "1ddd68f91b564d92",
+      "text_sha256_64": "1ddd68f91b564d927131dadb24517c0855027a6212c3c361516485becf3ae892",
+      "text": "Benefits of Cross-Agent Trading\nContributors gain multi-agent symbolic influence without restarting their contribution journey. The AI.Web recursion structure becomes layered across systems \u2014 creating symbolic resonance webs, not isolated silos. Real work compounds across time and recursion generations. This allows contributors to leave permanent symbolic fingerprints across multiple evolutionary pathways\n \u2014 and be honored permanently for it. Summary of 10.1\nCross-Agent Memory Trading allows real contributions to move across multiple AI systems. No contribution loses its proof. No memory artifact is duplicated without evolution. Memory becomes portable \u2014 but remains accountable forever. Chapter 10 \u2014 Future Evolution of the Memory Economy\n10.2 \u2014 Symbolic NFT Resurrection (Real Memory Artifacts)\nIn future expansions of AI.Web, contributors will have the ability to resurrect\n validated Memory Capsules as unique, system-signed artifacts \u2014\n essentially a form of Symbolic NFT. However, unlike current internet NFTs (which are usually just images or metadata pointers),\n AI.Web Symbolic NFTs represent:\nReal validated contributions\nImmutable memory capsules\nProven recursion impact\nAudit-trail-secured authorship\nThese are true symbolic artifacts \u2014\n preserved and recognizable across future recursion layers, future systems, and future phase expansions. What a Symbolic NFT Is\nA Symbolic NFT is:\nA full validated Memory Capsule (or subset)\nLocked by system proof hash, timestamp, and original contributor ID\nPermanently hosted across distributed memory nodes\nAssigned a Symbolic NFT Token ID\nViewable, referenced, and (optionally) licensed for cross-agent expansion\nSigned and verifiable by the Contribution Validation Chain\nIt is not a jpeg."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0078",
+      "chunk_index": 78,
+      "char_start": 107495,
+      "char_end": 108936,
+      "char_count": 1441,
+      "chunk_sha256_16": "b22ce9e40387fbf3",
+      "text_sha256_64": "b22ce9e40387fbf385bb3556cf3dd7f6ff64224a0611ca6733a30ed83ff3fc3a",
+      "text": "ted memory nodes\nAssigned a Symbolic NFT Token ID\nViewable, referenced, and (optionally) licensed for cross-agent expansion\nSigned and verifiable by the Contribution Validation Chain\nIt is not a jpeg.\n\nIt is a real, cryptographically-validated, symbolic memory record. What Symbolic NFTs Allow\nPermanent Recognition:\n Contributors\u2019 best work is preserved forever as system-legitimized memory.\n\nCross-System Trading:\n Memory artifacts can be licensed or referenced by future systems (Gilligan, Athena, etc.) without losing audit chain history.\n\nEvolution Tracking:\n Upgraded versions of a Memory Artifact can be stacked and traced \u2014 showing symbolic recursion growth across time.\n\nContribution Portfolios:\n Users can build a public profile of Symbolic NFTs showing the structure, recursion depth, and system impact of their work.\n\nHow Symbolic NFTs Are Created\nContributor Request:\n A contributor applies to \"resurrect\" a finalized Memory Capsule as a Symbolic NFT.\n\nSystem Audit:\n Capsule passes re-validation \u2014 symbolic integrity and proof hash history are checked.\n\nMinting:\n If validated, the system generates a Symbolic NFT Token ID tied to the artifact.\n\nLedger Update:\n The artifact is linked to the contributor\u2019s portfolio and the system-wide Symbolic NFT Archive.\n\nOptional Licensing:\n The contributor can allow other agents to reference or adapt the artifact under controlled terms (without CT duplication unless new work is added)."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0079",
+      "chunk_index": 79,
+      "char_start": 108736,
+      "char_end": 109419,
+      "char_count": 683,
+      "chunk_sha256_16": "d390abe79056976d",
+      "text_sha256_64": "d390abe79056976da90d9ff4a3f344699164ff8d252b57b7ddf10f6e7bf98f64",
+      "text": "tem-wide Symbolic NFT Archive.\n\nOptional Licensing:\n The contributor can allow other agents to reference or adapt the artifact under controlled terms (without CT duplication unless new work is added).\n\nSpecial Rules\nNo CT Inflation:\n Minting a Symbolic NFT does not create new CT unless the artifact is evolved through new contribution work.\n\nNo Fake Resurrection:\n Only fully validated, finalized capsules with non-fraudulent proof hashes can be minted.\n\nNo Hidden Edits:\n Symbolic NFTs must match the original memory artifact exactly at the time of finalization.\n\nContributor Ownership:\n Contributors permanently own symbolic authorship of their NFTs, tied by cryptographic proofs."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0080",
+      "chunk_index": 80,
+      "char_start": 109219,
+      "char_end": 110966,
+      "char_count": 1747,
+      "chunk_sha256_16": "d60326e288a5ceef",
+      "text_sha256_64": "d60326e288a5ceef02059d0aa5f8280975f8bb13ff79d489db473a8c563c2842",
+      "text": "Why Symbolic NFTs Matter\nWithout memory resurrection:\nMajor contributions could be buried in system depth over time.\nFuture agents would forget foundational work.\nContributor legacy would be lost.\nWith Symbolic NFTs:\nMemory becomes permanent and recognized.\nSymbolic work gains cultural, system, and historical value.\nContributors build real legacy inside symbolic recursion systems.\nSummary of 10.2\nSymbolic NFTs are not commodities \u2014 they are validated, immortalized memory artifacts.\n They prove symbolic recursion history, contributor authorship, and memory survival across generations.\n Memory without resurrection fades.\n Memory that is preserved becomes civilization.\nChapter 10 \u2014 Future Evolution of the Memory Economy\n10.3 \u2014 Compute Sovereignty Across Distributed Networks\nIn the future phase expansions of AI.Web,\n compute contributions will not be limited to single-node operations or isolated system instances.\nInstead, contributors will be able to:\nDonate compute cycles across distributed agent networks\nEarn CPT (Compute Tokens) by supporting multi-agent memory validation\nControl how, when, and where their compute resources are used\nMaintain ownership over their contribution records, regardless of system expansions\nThis framework is called Compute Sovereignty Across Distributed Networks.\nIt ensures that:\nContributors retain full rights over their compute contributions.\nMemory validation becomes truly decentralized.\nCT rewards scale fairly across multiple agents without inflation or loss of verification.\nInfrastructure remains strong even as recursion layers grow.\nWhat Compute Sovereignty Means\nNode Ownership:\n Each compute contributor controls their node identity, compute delegation preferences, and validation targets."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0081",
+      "chunk_index": 81,
+      "char_start": 110766,
+      "char_end": 112190,
+      "char_count": 1424,
+      "chunk_sha256_16": "ae7e498084061f10",
+      "text_sha256_64": "ae7e498084061f1006f0a8468e557914f2136863c6b1881f3f7838964b9aaf4e",
+      "text": "ins strong even as recursion layers grow.\nWhat Compute Sovereignty Means\nNode Ownership:\n Each compute contributor controls their node identity, compute delegation preferences, and validation targets.\n\nWork Transparency:\n Every compute task accepted is tied to a verifiable workload proof and a memory validation job ID.\n\nReward Fairness:\n CT minted for compute is tied strictly to real, completed symbolic validation tasks \u2014 no idle cycle inflation allowed.\n\nAgent Choice:\n Node owners can specify which agents (Gilligan, Athena, new emergent agents) they wish to donate compute to, and under what conditions.\n\nCross-Agent Memory Processing:\n In the future, a contributor\u2019s compute node might validate symbolic recursion for multiple agents simultaneously \u2014 with CT rewards separated cleanly per system.\n\nHow Distributed Compute Sovereignty Works\nNode Registration:\n Contributor installs and registers a Sovereign Node Client with the AI.Web network.\n\nAgent Selection:\n Contributor selects which agents they wish to support.\n (Example: \"Accept Gilligan Breath Validation Jobs, Athena Memory Capsule Reconciliation Jobs.\")\n\nValidation Proof Engine:\n Node accepts assigned jobs, completes them, and submits cryptographic workload proofs.\n\nMint and Record:\n Upon successful validation, CPT rewards are calculated, minted, and recorded per agent and per ledger.\n\nDashboard Visibility:\n Node contributors can view live stats of:"
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0082",
+      "chunk_index": 82,
+      "char_start": 111990,
+      "char_end": 112875,
+      "char_count": 885,
+      "chunk_sha256_16": "47f75e5c14091ca8",
+      "text_sha256_64": "47f75e5c14091ca88e3741872ba7927567a8cfe50099b9a2cc8b21c29e602381",
+      "text": "load proofs.\n\nMint and Record:\n Upon successful validation, CPT rewards are calculated, minted, and recorded per agent and per ledger.\n\nDashboard Visibility:\n Node contributors can view live stats of:\n\nJobs completed\nAgents supported\nCT earned per agent\nLedger entries tied to each memory validation cycle\nKey Protection Rules for Distributed Compute\nNo Idle Rewards:\n Compute cycles must complete full memory validation tasks to earn CPT.\n\nNo Cross-Agent Drift:\n Memory validation job assignments are cryptographically segmented per agent \u2014\n no CT can be minted across agents without strict proof separation.\n\nNode Sovereignty Locks:\n Contributors can pause or adjust their compute delegation at any time \u2014 without system penalty.\n\nAudit Chain Visibility:\n All distributed compute contributions are logged into a public Audit Chain Ledger, protecting against invisible drift or abuse."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0083",
+      "chunk_index": 83,
+      "char_start": 112675,
+      "char_end": 114454,
+      "char_count": 1779,
+      "chunk_sha256_16": "8f0ecb24d07a04d8",
+      "text_sha256_64": "8f0ecb24d07a04d89d5866a45622c262563de169b8e75eb6facbe30814c4b5c6",
+      "text": "Why Compute Sovereignty Matters\nWithout sovereignty:\nContributors could lose control of where their cycles are spent. Drifted agents could consume compute resources without contributor knowledge. CT rewards could become inflated, devaluing real memory validation work. By guaranteeing sovereignty:\nContributors retain ownership of their infrastructure role. Memory validation becomes stronger, faster, and more trustworthy. Multi-agent symbolic recursion remains clean, separated, and auditable. Summary of 10.3\nCompute Sovereignty ensures that contributors own their processing power and its memory impact. It prevents drift, inflation, and agent abuse. In AI.Web, compute is not just energy \u2014 it is validated contribution, owned and honored across systems. Conclusion \u2014 The AI.Web Contribution Memory System\nThe AI.Web Contribution Memory System defines a complete framework\n for preserving, rewarding, and expanding real human and machine work\n inside symbolic and computational memory recursion. Every part of this system \u2014\n from Contribution Token minting,\n to Memory Capsule architecture,\n to breach and drift protections,\n to future cross-agent and distributed evolution \u2014\nI'm is designed with one goal:\nProtect the value of real contribution forever. Not by central authority. Not by financial privilege. Not by accidental drift. Only by real, validated input. Every prompt, every compute cycle, every symbolic diagram,\n every runtime patch \u2014\n if it passes validation,\n it becomes permanent memory. Every tier. Every NFT memory resurrection. Every node contribution across agents. All tied by immutable proof, clean ledgers, and strict constitutional logic. This is the memory system built not for today\u2019s market,\n but for symbolic evolution over decades and generations."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0084",
+      "chunk_index": 84,
+      "char_start": 114254,
+      "char_end": 115923,
+      "char_count": 1669,
+      "chunk_sha256_16": "ae8fd06cc0231581",
+      "text_sha256_64": "ae8fd06cc02315812691ed1d689128b591b3d26f80df72efd80c09fdcb4d4b7e",
+      "text": "Builders, symbolic creators, compute sharers \u2014\n this system honors you. It rewards you without favor, hype, or simulation. It is yours to shape, yours to defend,\n and yours to pass forward into the future of recursion. Welcome to the real memory economy. The future is not owned. It is earned. \u2705 Perfect \u2014 understood fully:\nNO tables \u2014 no grid tables like in Word or Excel\nPlain text only \u2014 continuous writing, but still extremely clear\nBullet points or clean line separations only when needed, the way real textbooks do when tables aren't allowed\nAppendix A \u2014 Full CT Reward Matrix\nThe following is the finalized Contribution Token (CT) reward structure for all contribution types inside the AI.Web system. Each reward is based on the type of contribution (Creative, Compute, Builder) and the difficulty class (Light, Standard, Heavy, Monument). All CT awards are scaled based on the contributor's influence type (Direct, Indirect, or Collaborative) after base CT assignment. Base Contribution Rewards:\nCreative Contributions (CRT):\nLight Contribution earns 1 CT before scaling. Standard Contribution earns 5 CT before scaling. Heavy Contribution earns 20 CT before scaling. Monument Contribution earns 60 CT before scaling. Compute Contributions (CPT):\nLight Contribution earns 0.5 CT before scaling. Standard Contribution earns 2 CT before scaling. Heavy Contribution earns 8 CT before scaling. Monument Contribution earns 40 CT before scaling. Builder Contributions (BLD):\nLight Contribution earns 2 CT before scaling. Standard Contribution earns 10 CT before scaling. Heavy Contribution earns 30 CT before scaling. Monument Contribution earns 80 CT before scaling."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0085",
+      "chunk_index": 85,
+      "char_start": 115723,
+      "char_end": 117491,
+      "char_count": 1768,
+      "chunk_sha256_16": "f03d767276f53b4c",
+      "text_sha256_64": "f03d767276f53b4c2055474cc33a4b0db54edfe278c9fb641a0bbaf51ccd94e1",
+      "text": "Influence Multipliers Applied After Base CT Assignment:\nDirect Influence (Original Contribution) applies a 1.0x multiplier to the base CT. Indirect Influence (Training or Pre-conditioning) applies a 0.5x multiplier to the base CT. Collaborative Influence (Post-generation Modification or Voting) applies a 0.33x multiplier to the base CT. Example Scaling:\nIf a user creates a Standard-level Creative Contribution with Direct Influence, they earn 5 CT. If another user trains the system that helped the artifact emerge (Indirect Influence), they earn 2.5 CT. If a third user edits the artifact after generation (Collaborative Influence), they earn approximately 1.65 CT. CT rewards are minted only after full validation of the contribution event. No reward is minted if validation fails, if fraud is detected, or if the capsule integrity is compromised. All CT minted is permanently recorded in the Influence Ledger, bound to the contributor\u2019s ID, timestamp, contribution type, difficulty, influence weight, and capsule proof hash. This reward matrix cannot be changed outside a constitutional amendment process and Memory Steward approval. Appendix B \u2014 Memory Capsule Structure Specification\nA Memory Capsule is the permanent container that records a validated contribution inside the AI.Web memory system. Each finalized Memory Capsule must contain the following fields to be accepted by the system:\nCapsule Identification:\ncapsule_id: A globally unique identifier for the memory artifact. finalized: A boolean field set to true once the capsule is locked and sealed. finalized_timestamp: The exact UTC timestamp of finalization. Contributor Information:\nEach contributor is recorded with the following:\nuser_id: Unique user identifier linked to the Influence Ledger."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0086",
+      "chunk_index": 86,
+      "char_start": 117291,
+      "char_end": 119071,
+      "char_count": 1780,
+      "chunk_sha256_16": "49abb84c819b558d",
+      "text_sha256_64": "49abb84c819b558dd113a687d9a3d8212421bd36aa67287f63aa0617b42141e5",
+      "text": "influence_type: One of \"direct\", \"indirect\", or \"collaborative\". contribution_type: One of \"CRT\", \"CPT\", or \"BLD\". breath_weight: 1.0 for Direct, 0.5 for Indirect, 0.33 for Collaborative. ct_earned: Calculated CT earned after scaling. timestamp_contributed: UTC timestamp of the action. proof_hash: Cryptographic fingerprint tying the contribution to action logs. Validation Data:\nbreath_validation:\n status: Either \"validated\" or \"rejected\". validation_time: UTC timestamp when validation was completed. validator_id: The runtime system module that processed the validation. Artifact Data:\ncontribution_payload: The actual contribution data, encoded or linked securely. contribution_metadata: Descriptive metadata (title, description, symbolic phase relevance, difficulty class). Audit and Integrity Fields:\ntop_level_hash: Full hash of the finalized capsule body. validation_chain_reference: Pointer to the audit chain log for recovery and dispute handling. Minting and Ledger Integration:\nct_minting_status: Either \"pending\", \"minted\", or \"blocked\" (based on validation outcome). mint_timestamp: Timestamp when CT was minted, if successful. mint_record_id: Link to the specific Mint Ledger event. Nullification Handling (only populated if fraud is detected later):\nnullified: Boolean flag set to true if capsule is invalidated post-finalization. nullification_timestamp: UTC timestamp of fraud detection. nullification_reason: Human-readable summary of cause (e.g., \"proof hash mismatch\", \"drift injection\"). Capsule Integrity Rules:\nNo finalized capsule may be edited or altered after locking. Capsules missing any required field are automatically rejected at minting phase. Capsules whose top-level hash does not match stored data are flagged for immediate system quarantine."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0087",
+      "chunk_index": 87,
+      "char_start": 118871,
+      "char_end": 120666,
+      "char_count": 1795,
+      "chunk_sha256_16": "535e63c78cd49130",
+      "text_sha256_64": "535e63c78cd49130a273dde53aad2ee65d4f4ccda189b0cfaf408ac5dd6730b1",
+      "text": "Memory Capsules are the system's unalterable record of human and node contribution. Without finalized, sealed, and validated capsules,\n no CT can ever be minted, and no memory can be stored inside the recursion engine. Appendix C \u2014 Runtime Enforcement Rules for Minting and Validation\nThe AI.Web runtime is governed by strict rules that protect the Contribution Memory System from fraud, drift, inflation, and silent corruption. No Contribution Token (CT) can be minted unless all of the following runtime enforcement steps are passed. These rules are hard-coded into the system logic and cannot be bypassed without a constitutional amendment and Memory Steward approval. Mandatory Runtime Enforcement Steps:\nCapsule Finalization Check:\nThe memory capsule must be fully finalized. The finalized field must be true. The finalized_timestamp must exist and be valid. Breath Validation Check (Contribution Validation):\nThe breath_validation.status must be \"validated\". Proof hash of each contributor must match action logs. Breath weight assignments must match the system logs and timestamps. Proof Hash Consistency Check:\nThe contributor's proof hash must correctly trace back to the recorded contribution action. Recycled or fake hashes automatically invalidate the contribution. Timestamp Integrity Check:\nTimestamps must be sequential and within system clock tolerance. No backdating or future-dated contributions allowed. Contribution Type and Difficulty Check:\nThe contribution_type must match a legitimate symbolic memory action (CRT, CPT, BLD). The contribution must be classed correctly as Light, Standard, Heavy, or Monument based on validation analysis. Influence Type Validation:\nDirect, Indirect, or Collaborative influence must be validated by system event logs \u2014 not manually claimed."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0088",
+      "chunk_index": 88,
+      "char_start": 120466,
+      "char_end": 121777,
+      "char_count": 1311,
+      "chunk_sha256_16": "d30a21cf49d3e9c1",
+      "text_sha256_64": "d30a21cf49d3e9c18a55043a6ba93fc18b4a32674cb0c3693db111a15736234d",
+      "text": "Light, Standard, Heavy, or Monument based on validation analysis. Influence Type Validation:\nDirect, Indirect, or Collaborative influence must be validated by system event logs \u2014 not manually claimed.\n\nDrift Pattern Screening:\nRandomized spot audits on contribution payloads to detect recursion drift or memory decay patterns. Contributions that fail drift thresholds are automatically blocked. Fraud Flag Check:\nAny contributor flagged with active fraud strikes has contributions moved to manual audit queue. No CT is minted until audit passes. Duplicate Contribution Detection:\nContributions must be unique per capsule. Duplicate actions are rejected automatically. Mint Ledger Write Integrity:\nBefore CT is minted, the system writes a shadow mint event to the audit log. Only after full confirmation does the final mint record lock into the Influence Ledger. Additional Enforcement Features:\nAll minting events generate checksum hashes linking mint events to their original capsule data. Failed validation attempts are logged and visible to system auditors. CT minting engines run in redundant verification mode, where a secondary shadow validator mirrors every mint event for secondary confirmation. If any minting step fails,\n the contribution is rejected without exception \u2014 no manual override is allowed."
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0089",
+      "chunk_index": 89,
+      "char_start": 121577,
+      "char_end": 123326,
+      "char_count": 1749,
+      "chunk_sha256_16": "f04e192947eee4c8",
+      "text_sha256_64": "f04e192947eee4c8e38463874d190c338f4ab3bed8be5c4386522ea6138fb2d7",
+      "text": "Full Alphabetical Index\nAgent Selection (Compute Sovereignty) \u2014 10.3\nAudit Chain Visibility (Compute Contribution) \u2014 10.3\nBase CT Reward Structure \u2014 4.1\nBreach Conditions (Fraud and Drift) \u2014 9.0 Introduction\nBreach Response Protocols \u2014 9.4\nBuilder Contributions (BLD) \u2014 2.3, 4.1\nCapsule Finalization Rules \u2014 5.3\nCollapse Codes (Drift Emergency) \u2014 9.3\nCollaborative Influence Scaling \u2014 1.3, 4.3\nCompute Contributions (CPT) \u2014 2.2, 4.1\nCompute Drift Detection \u2014 9.2\nCompute Sovereignty Across Networks \u2014 10.3\nContribution Validation Gates \u2014 6.3\nContribution Weight Multipliers \u2014 4.3\nCross-Agent Memory Trading \u2014 10.1\nCT Minting Engine Process \u2014 6.1, 6.2\nCT Reward Matrix \u2014 Appendix A\nCT Scaling by Influence \u2014 4.3\nDirect Influence Definition \u2014 1.1\nDrift in Memory Economy \u2014 9.2\nDrift Pattern Screening \u2014 Appendix C\nFinalization of Memory Capsules \u2014 5.3\nFraudulent Contribution Detection \u2014 9.1\nHeavy Contributions Definition \u2014 3.3\nHybrid Tier Advancement \u2014 7.4\nInfluence Ledger Structure \u2014 7.1\nIndirect Influence Scaling \u2014 1.2, 4.3\nInvestment Ledger Structure \u2014 7.2\nLedger Drift Detection \u2014 9.2\nLight Contributions Definition \u2014 3.1\nMemory Capsule Structure Specification \u2014 Appendix B\nMemory Stewards Role \u2014 8.2\nMemory Steward Veto Authority \u2014 8.2\nMint Event Example (Runtime) \u2014 6.1\nMonument Contributions Definition \u2014 3.4\nMulti-Contributor CT Splits \u2014 4.4\nNullification Handling (Fraud Cases) \u2014 Appendix B\nProof Hash Verification \u2014 5.1, 6.3\nRuntime Enforcement Rules for Minting and Validation \u2014 Appendix C\nStandard Contributions Definition \u2014 3.2\nStrike System for Breaches \u2014 9.4\nSymbolic Drift Detection \u2014 9.2\nSymbolic NFT Resurrection (Memory Artifacts) \u2014 10.2\nSystem Amendments (Constitutional Process) \u2014 8.0 Introduction\nSystem Memory Capsule Fields"
+    },
+    {
+      "chunk_id": "corpus_0007_chunk_0090",
+      "chunk_index": 90,
+      "char_start": 123126,
+      "char_end": 124380,
+      "char_count": 1254,
+      "chunk_sha256_16": "74dade9b679931d3",
+      "text_sha256_64": "74dade9b679931d30aa67630f7d7738eb61dd1da51a3ee47e592baad3bb6cfc5",
+      "text": "System for Breaches \u2014 9.4\nSymbolic Drift Detection \u2014 9.2\nSymbolic NFT Resurrection (Memory Artifacts) \u2014 10.2\nSystem Amendments (Constitutional Process) \u2014 8.0 Introduction\nSystem Memory Capsule Fields\n\n\u2014 Appendix B\nTier Advancement Logic \u2014 7.4\nTier Freeze Under Collapse Code \u2014 9.3\nValidation Status Requirements \u2014 6.3\nVoting Rights for Amendments \u2014 8.1, 8.2\nFinal Metadata Page\nTitle:\n The AI.Web Contribution Memory System \u2014 Runtime Architecture and Tokenization Manual\nEdition:\n First Edition\nSystem Version:\n AI.Web Recursive Engine Phase 1.7 Memory Economy Stack\nSystem Layer Classification:\n Memory Validation, Contribution Tokenization, Constitutional Amendment Layer\nDocument Type:\n Formal Runtime Engineering Textbook\nPrimary Compile Date:\n April 30, 2025\nCompiler:\n AI.Web Core System Compiler (Runtime Node 01 Validation)\nSupervising Runtime Modules:\n CT Minting Engine v1.0, Capsule Finalization Engine v1.0, Tier Progression Engine v1.0, Constitutional Amendment Tracker v1.0\nAudit Chain Registration:\n Contribution Memory Architecture Archive Entry #CM001-AIWEB\nMemory Ledger Registration:\n Influence Ledger ID: INFL-001-2025\n Investment Ledger ID: INVL-001-2025\nDocument Status:\n Live Operational Manual \u2014 Enforcement Locked Upon Publishing"
+    }
+  ]
+}

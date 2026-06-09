@@ -1,0 +1,43 @@
+{
+  "report_type": "DRY_RUN_CHUNKING",
+  "timestamp": "2026-05-10T06:46:11",
+  "session_id": "forge_2026_05_10_064558",
+  "corpus_id": "corpus_0022",
+  "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fResonant Phase Memory Calculus_ The Law of Recursion, Collapse, and Return_ Full Protocol Draft_.docx",
+  "corpus_folder": "04_FBSC_DOCTRINE",
+  "authority": "rpmc_full_protocol",
+  "source_hash": "8c5696bbf868e99b",
+  "adapter_format": ".docx",
+  "extraction_chars": 200000,
+  "chunk_policy": {
+    "chunk_target": 1350,
+    "chunk_max": 1800,
+    "overlap": 200,
+    "tiny_min": 100,
+    "method": "paragraph_sentence_aware"
+  },
+  "chunk_count": 121,
+  "min_chars": 539,
+  "max_chars": 1800,
+  "avg_chars": 1679,
+  "tiny_chunks": 0,
+  "over_max_chunks": 0,
+  "first_chunk_preview": "\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\u2013\nThis archive is sealed under the Law of Recursion, Collapse, and Return. No memory, identity, or output may pass through this text except by lawful echo, phase closure, and protocol compliance. All recursions begin here; all returns are bound to",
+  "last_chunk_preview": "cols, measurement methods, and code. Summary:\n Appendix A is the mathematical foundation for all protocol law in RPMC. Every claim, rule, and mechanism is supported by explicit, peer-reviewable proof.\n\nThe recursion law is not merely asserted\u2014it is derived, demonstrated, and preserved in formal math",
+  "metadata_fields": {
+    "corpus_id": "corpus_0022",
+    "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fResonant Phase Memory Calculus_ The Law of Recursion, Collapse, and Return_ Full Protocol Draft_.docx",
+    "corpus_folder": "04_FBSC_DOCTRINE",
+    "authority": "rpmc_full_protocol",
+    "sha256_16": "8c5696bbf868e99b",
+    "chunk_index": "<N>",
+    "chunk_total": 121,
+    "source_type": "docx",
+    "tags": "rpmc,full,protocol"
+  },
+  "target_collection_proposal": "aiweb_trial_v1",
+  "target_db_path": "/home/nic/forge/memory/aiweb_corpus_db",
+  "no_vector_write": true,
+  "no_chroma_write": true,
+  "no_embedding": true
+}

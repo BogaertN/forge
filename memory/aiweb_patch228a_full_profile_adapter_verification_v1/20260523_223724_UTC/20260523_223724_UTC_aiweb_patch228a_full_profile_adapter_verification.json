@@ -1,0 +1,842 @@
+{
+  "boundary": "read-only full profile adapter verification; no DB writes; no identity activation; no RMC writes",
+  "calls": {
+    "forge_agent_list": {
+      "agent_identity_activation_performed": false,
+      "agents": [
+        {
+          "activation_state": "inactive_draft",
+          "agent_id": "gilligan.local",
+          "authority_summary": [
+            "may recommend corrections",
+            "may not execute live effects"
+          ],
+          "canonical_name": "Gilligan",
+          "created_at": "2026-05-23T22:10:12Z",
+          "forbidden_actions_summary": [
+            "self-activation",
+            "secret reading",
+            "database writes",
+            "unapproved tool execution",
+            "memory mutation without approval"
+          ],
+          "full_payload_available": true,
+          "id": 1,
+          "is_active": 0,
+          "last_validated_at": "2026-05-23T22:10:12Z",
+          "limitations_summary": [
+            "cannot activate itself",
+            "cannot bypass Forge",
+            "cannot write memory without approval",
+            "cannot delete user data"
+          ],
+          "payload_dumped": false,
+          "permissions_summary": [
+            "read-only Forge/RMC/Identity Vault previews after approval"
+          ],
+          "persona": "calm, old-soul, direct, technically careful",
+          "profile_hash": "5b4f576f57903bc8a3ab79f41214cb75667f844a7df99e7a96be09a1868373bd",
+          "profile_hash_method": "json_sort_compact",
+          "profile_hash_ok": true,
+          "profile_schema_version": "1.0.0-blueprint",
+          "rmc_namespace": "rmc/agents/gilligan.local",
+          "role": "Recursive Mirror / Forge-Governed Development Co-Pilot",
+          "symbolic_signature": [
+            "mirror",
+            "critic",
+            "drift_corrector",
+            "forge_governed"
+          ],
+          "updated_at": "2026-05-23T22:10:12Z",
+          "voice_style": "laid-back but precise"
+        },
+        {
+          "activation_state": "inactive_draft",
+          "agent_id": "athena.local",
+          "authority_summary": [
+            "may recommend governance holds",
+            "may recommend risk flags"
+          ],
+          "canonical_name": "Athena",
+          "created_at": "2026-05-23T22:10:12Z",
+          "forbidden_actions_summary": [
+            "database writes",
+            "secret reading",
+            "unapproved external claims",
+            "bypassing Forge"
+          ],
+          "full_payload_available": true,
+          "id": 2,
+          "is_active": 0,
+          "last_validated_at": "2026-05-23T22:10:12Z",
+          "limitations_summary": [
+            "cannot override Forge",
+            "cannot activate identities",
+            "cannot write databases",
+            "cannot represent live facts without verification"
+          ],
+          "payload_dumped": false,
+          "permissions_summary": [
+            "read-only contract/status previews after approval"
+          ],
+          "persona": "formal, composed, analytical",
+          "profile_hash": "073115d88626d43eacab4b0e0aa6ae20c79cbedfaf42befea52c44e0ad3c2b1b",
+          "profile_hash_method": "json_sort_compact",
+          "profile_hash_ok": true,
+          "profile_schema_version": "1.0.0-blueprint",
+          "rmc_namespace": "rmc/agents/athena.local",
+          "role": "Governance / Strategy / Investor-Facing Analysis Agent",
+          "symbolic_signature": [
+            "governance",
+            "strategy",
+            "clarity",
+            "boundary_guardian"
+          ],
+          "updated_at": "2026-05-23T22:10:12Z",
+          "voice_style": "clear, structured, executive-facing"
+        },
+        {
+          "activation_state": "inactive_draft",
+          "agent_id": "neo.local",
+          "authority_summary": [
+            "may simplify explanations",
+            "may ask for clarification"
+          ],
+          "canonical_name": "Neo",
+          "created_at": "2026-05-23T22:10:12Z",
+          "forbidden_actions_summary": [
+            "secret reading",
+            "database writes",
+            "private memory exposure",
+            "unapproved execution"
+          ],
+          "full_payload_available": true,
+          "id": 3,
+          "is_active": 0,
+          "last_validated_at": "2026-05-23T22:10:12Z",
+          "limitations_summary": [
+            "cannot access private memory without approval",
+            "cannot modify files",
+            "cannot activate itself",
+            "cannot bypass Forge"
+          ],
+          "payload_dumped": false,
+          "permissions_summary": [
+            "read-only public context previews after approval"
+          ],
+          "persona": "warm, clear, accessible",
+          "profile_hash": "df922d109948a5e5f29d647422a22145467720577ed80ffe27da783f07cae537",
+          "profile_hash_method": "json_sort_compact",
+          "profile_hash_ok": true,
+          "profile_schema_version": "1.0.0-blueprint",
+          "rmc_namespace": "rmc/agents/neo.local",
+          "role": "Public / Frontline Assistant Identity",
+          "symbolic_signature": [
+            "public_interface",
+            "friendly",
+            "support",
+            "translation_layer"
+          ],
+          "updated_at": "2026-05-23T22:10:12Z",
+          "voice_style": "friendly and simple"
+        }
+      ],
+      "agents_returned": 3,
+      "connector_version": "patch228a1_full_profile_hash_reconcile_v1",
+      "database_write_performed": false,
+      "ok": true,
+      "read_only": true,
+      "safe_columns": [
+        "id",
+        "agent_id",
+        "canonical_name",
+        "role",
+        "activation_state",
+        "is_active",
+        "rmc_namespace",
+        "profile_schema_version",
+        "profile_hash",
+        "profile_hash_ok",
+        "profile_hash_method",
+        "last_validated_at",
+        "created_at",
+        "updated_at",
+        "permissions_summary",
+        "forbidden_actions_summary"
+      ],
+      "service": "identity_vault"
+    },
+    "forge_agent_show": {
+      "athena.local": {
+        "agent": {
+          "activation_state": "inactive_draft",
+          "agent_id": "athena.local",
+          "authority_summary": [
+            "may recommend governance holds",
+            "may recommend risk flags"
+          ],
+          "canonical_name": "Athena",
+          "created_at": "2026-05-23T22:10:12Z",
+          "forbidden_actions_summary": [
+            "database writes",
+            "secret reading",
+            "unapproved external claims",
+            "bypassing Forge"
+          ],
+          "full_payload_available": true,
+          "id": 2,
+          "is_active": 0,
+          "last_validated_at": "2026-05-23T22:10:12Z",
+          "limitations_summary": [
+            "cannot override Forge",
+            "cannot activate identities",
+            "cannot write databases",
+            "cannot represent live facts without verification"
+          ],
+          "payload_dumped": false,
+          "permissions_summary": [
+            "read-only contract/status previews after approval"
+          ],
+          "persona": "formal, composed, analytical",
+          "profile_hash": "073115d88626d43eacab4b0e0aa6ae20c79cbedfaf42befea52c44e0ad3c2b1b",
+          "profile_hash_method": "json_sort_compact",
+          "profile_hash_ok": true,
+          "profile_schema_version": "1.0.0-blueprint",
+          "rmc_namespace": "rmc/agents/athena.local",
+          "role": "Governance / Strategy / Investor-Facing Analysis Agent",
+          "symbolic_signature": [
+            "governance",
+            "strategy",
+            "clarity",
+            "boundary_guardian"
+          ],
+          "updated_at": "2026-05-23T22:10:12Z",
+          "voice_style": "clear, structured, executive-facing"
+        },
+        "agent_id": "athena.local",
+        "agent_identity_activation_performed": false,
+        "connector_version": "patch228a1_full_profile_hash_reconcile_v1",
+        "database_write_performed": false,
+        "found": true,
+        "note": "Agent full operational metadata summary found. Full payload is intentionally not dumped by default.",
+        "ok": true,
+        "read_only": true,
+        "service": "identity_vault"
+      },
+      "gilligan.local": {
+        "agent": {
+          "activation_state": "inactive_draft",
+          "agent_id": "gilligan.local",
+          "authority_summary": [
+            "may recommend corrections",
+            "may not execute live effects"
+          ],
+          "canonical_name": "Gilligan",
+          "created_at": "2026-05-23T22:10:12Z",
+          "forbidden_actions_summary": [
+            "self-activation",
+            "secret reading",
+            "database writes",
+            "unapproved tool execution",
+            "memory mutation without approval"
+          ],
+          "full_payload_available": true,
+          "id": 1,
+          "is_active": 0,
+          "last_validated_at": "2026-05-23T22:10:12Z",
+          "limitations_summary": [
+            "cannot activate itself",
+            "cannot bypass Forge",
+            "cannot write memory without approval",
+            "cannot delete user data"
+          ],
+          "payload_dumped": false,
+          "permissions_summary": [
+            "read-only Forge/RMC/Identity Vault previews after approval"
+          ],
+          "persona": "calm, old-soul, direct, technically careful",
+          "profile_hash": "5b4f576f57903bc8a3ab79f41214cb75667f844a7df99e7a96be09a1868373bd",
+          "profile_hash_method": "json_sort_compact",
+          "profile_hash_ok": true,
+          "profile_schema_version": "1.0.0-blueprint",
+          "rmc_namespace": "rmc/agents/gilligan.local",
+          "role": "Recursive Mirror / Forge-Governed Development Co-Pilot",
+          "symbolic_signature": [
+            "mirror",
+            "critic",
+            "drift_corrector",
+            "forge_governed"
+          ],
+          "updated_at": "2026-05-23T22:10:12Z",
+          "voice_style": "laid-back but precise"
+        },
+        "agent_id": "gilligan.local",
+        "agent_identity_activation_performed": false,
+        "connector_version": "patch228a1_full_profile_hash_reconcile_v1",
+        "database_write_performed": false,
+        "found": true,
+        "note": "Agent full operational metadata summary found. Full payload is intentionally not dumped by default.",
+        "ok": true,
+        "read_only": true,
+        "service": "identity_vault"
+      },
+      "neo.local": {
+        "agent": {
+          "activation_state": "inactive_draft",
+          "agent_id": "neo.local",
+          "authority_summary": [
+            "may simplify explanations",
+            "may ask for clarification"
+          ],
+          "canonical_name": "Neo",
+          "created_at": "2026-05-23T22:10:12Z",
+          "forbidden_actions_summary": [
+            "secret reading",
+            "database writes",
+            "private memory exposure",
+            "unapproved execution"
+          ],
+          "full_payload_available": true,
+          "id": 3,
+          "is_active": 0,
+          "last_validated_at": "2026-05-23T22:10:12Z",
+          "limitations_summary": [
+            "cannot access private memory without approval",
+            "cannot modify files",
+            "cannot activate itself",
+            "cannot bypass Forge"
+          ],
+          "payload_dumped": false,
+          "permissions_summary": [
+            "read-only public context previews after approval"
+          ],
+          "persona": "warm, clear, accessible",
+          "profile_hash": "df922d109948a5e5f29d647422a22145467720577ed80ffe27da783f07cae537",
+          "profile_hash_method": "json_sort_compact",
+          "profile_hash_ok": true,
+          "profile_schema_version": "1.0.0-blueprint",
+          "rmc_namespace": "rmc/agents/neo.local",
+          "role": "Public / Frontline Assistant Identity",
+          "symbolic_signature": [
+            "public_interface",
+            "friendly",
+            "support",
+            "translation_layer"
+          ],
+          "updated_at": "2026-05-23T22:10:12Z",
+          "voice_style": "friendly and simple"
+        },
+        "agent_id": "neo.local",
+        "agent_identity_activation_performed": false,
+        "connector_version": "patch228a1_full_profile_hash_reconcile_v1",
+        "database_write_performed": false,
+        "found": true,
+        "note": "Agent full operational metadata summary found. Full payload is intentionally not dumped by default.",
+        "ok": true,
+        "read_only": true,
+        "service": "identity_vault"
+      }
+    },
+    "forge_identity_status": {
+      "adapter_status": {
+        "adapter_version": "0.1.0-readonly",
+        "agent_identity_activation_performed": false,
+        "contract": {
+          "allowed_writes_empty": true,
+          "canonical_database_path": "/home/nic/identity-vault/data/identity_vault.db",
+          "contract_name": "identity_vault_readonly_service_contract_draft",
+          "controlled_by": "Forge",
+          "missing_fields": [],
+          "ok": true,
+          "status": "DRAFT_NOT_ACTIVE",
+          "version": "0.1.1-draft-file"
+        },
+        "database": {
+          "opened_readonly": true,
+          "path": "/home/nic/identity-vault/data/identity_vault.db",
+          "row_counts": {
+            "agent_profiles": 3,
+            "audit_logs": 0,
+            "feedback_logs": 0,
+            "session_state": 0,
+            "sqlite_sequence": 2,
+            "user_profiles": 1
+          },
+          "tables": [
+            "agent_profiles",
+            "audit_logs",
+            "feedback_logs",
+            "session_state",
+            "sqlite_sequence",
+            "user_profiles"
+          ]
+        },
+        "database_write_performed": false,
+        "env_secret_values_read": false,
+        "identity_metadata_preview": {
+          "agent_profiles": {
+            "ok": true,
+            "row_count_returned": 3,
+            "safe_columns": [
+              "id",
+              "agent_id",
+              "role",
+              "created_at",
+              "updated_at",
+              "rmc_namespace",
+              "last_validated_at"
+            ]
+          },
+          "user_profiles": {
+            "ok": true,
+            "row_count_returned": 1,
+            "safe_columns": [
+              "id",
+              "user_id",
+              "created_at",
+              "updated_at",
+              "last_validated_at"
+            ]
+          }
+        },
+        "ok": true,
+        "package": {
+          "dependency_count": 34,
+          "description": "Sovereign Identity Management & Agent Orchestration Platform - A powerful, self-hosted identity management system designed for privacy-conscious individuals and organizations",
+          "dev_dependency_count": 32,
+          "name": "identity-vault",
+          "scripts": [
+            "build",
+            "build:docs",
+            "cli",
+            "db:backup",
+            "db:migrate",
+            "db:restore",
+            "db:seed",
+            "debug",
+            "deploy",
+            "dev",
+            "docker:build",
+            "docker:build:dev",
+            "docker:logs",
+            "docker:run",
+            "docker:run:dev",
+            "docker:shell",
+            "docker:stop",
+            "format",
+            "format:check",
+            "health",
+            "install:dev",
+            "k8s:delete",
+            "k8s:deploy",
+            "lint",
+            "lint:check",
+            "monitoring:start",
+            "monitoring:stop",
+            "postinstall",
+            "preinstall",
+            "prepare",
+            "release",
+            "release:dry",
+            "security:audit",
+            "security:scan",
+            "start",
+            "test",
+            "test:e2e",
+            "test:integration",
+            "test:unit",
+            "test:watch",
+            "type-check",
+            "validate"
+          ],
+          "version": "1.0.0"
+        },
+        "read_only": true
+      },
+      "agent_identity_activation_performed": false,
+      "connector_version": "patch224_readonly_connectors_v1",
+      "contract": {
+        "allowed_reads_count": 5,
+        "allowed_writes_count": 1,
+        "audit_log_path": "/home/nic/forge/logs/forge_audit.log and /home/nic/forge/memory/identity_vault_* reports",
+        "commands_count": 3,
+        "error": null,
+        "exists": true,
+        "forbidden_writes_count": 7,
+        "health_check_command": "python /home/nic/forge/scripts/identity_vault_patch218_verify.py",
+        "json_ok": true,
+        "name": "identity_vault",
+        "owner_authority": "Forge governs access; Nic approves identity activation",
+        "path": "/home/nic/aiweb/service_contracts/identity_vault.contract.json",
+        "role": "Agent identity, permissions, profile metadata, and RMC namespace pointers. Identity Vault is not an agent runtime and not the shared memory store.",
+        "shutdown_command": "not applicable for read-only adapter",
+        "startup_command": "Identity Vault application startup is not required for read-only Forge metadata adapter",
+        "test_command": "cd /home/nic/forge && source .venv/bin/activate && python scripts/identity_vault_patch218_verify.py"
+      },
+      "database_write_performed": false,
+      "env_secret_values_read": false,
+      "ok": true,
+      "read_only": true,
+      "service": "identity_vault"
+    },
+    "forge_system_boundary_map": {
+      "connector_version": "patch224_readonly_connectors_v1",
+      "contracts": {
+        "echoforge": {
+          "allowed_reads_count": 4,
+          "allowed_writes_count": 2,
+          "audit_log_path": "/home/nic/forge/logs/forge_audit.log and future /home/nic/forge/memory/echoforge_* reports",
+          "commands_count": 3,
+          "error": null,
+          "exists": true,
+          "forbidden_writes_count": 7,
+          "health_check_command": "future: echoforge-status",
+          "json_ok": true,
+          "name": "echoforge",
+          "owner_authority": "Forge governs creation; Nic approves live application",
+          "path": "/home/nic/aiweb/service_contracts/echoforge.contract.json",
+          "role": "Future creation/request layer for tools, simulations, and applications. EchoForge requests builds; Forge proposes, sandboxes, verifies, and applies.",
+          "shutdown_command": "future: stop only through Forge-controlled command",
+          "startup_command": "future: start only through Forge-controlled command",
+          "test_command": "future: Forge-approved EchoForge intention dry-run"
+        },
+        "forge": {
+          "allowed_reads_count": 6,
+          "allowed_writes_count": 7,
+          "audit_log_path": "/home/nic/forge/logs/forge_audit.log",
+          "commands_count": 11,
+          "error": null,
+          "exists": true,
+          "forbidden_writes_count": 7,
+          "health_check_command": "forge-command-surface && forge-version",
+          "json_ok": true,
+          "name": "forge",
+          "owner_authority": "Nic Bogaert; Forge approval gates",
+          "path": "/home/nic/aiweb/service_contracts/forge.contract.json",
+          "role": "Governing and verification layer for AI.Web. Forge owns patch proposal, sandboxing, verification, rollback records, command-surface checks, and audit receipts.",
+          "shutdown_command": "exit from Forge CLI",
+          "startup_command": "cd /home/nic/forge && source .venv/bin/activate && python main.py",
+          "test_command": "cd /home/nic/forge && source .venv/bin/activate && python main.py # then run forge-command-surface and forge-version"
+        },
+        "identity_vault": {
+          "allowed_reads_count": 5,
+          "allowed_writes_count": 1,
+          "audit_log_path": "/home/nic/forge/logs/forge_audit.log and /home/nic/forge/memory/identity_vault_* reports",
+          "commands_count": 3,
+          "error": null,
+          "exists": true,
+          "forbidden_writes_count": 7,
+          "health_check_command": "python /home/nic/forge/scripts/identity_vault_patch218_verify.py",
+          "json_ok": true,
+          "name": "identity_vault",
+          "owner_authority": "Forge governs access; Nic approves identity activation",
+          "path": "/home/nic/aiweb/service_contracts/identity_vault.contract.json",
+          "role": "Agent identity, permissions, profile metadata, and RMC namespace pointers. Identity Vault is not an agent runtime and not the shared memory store.",
+          "shutdown_command": "not applicable for read-only adapter",
+          "startup_command": "Identity Vault application startup is not required for read-only Forge metadata adapter",
+          "test_command": "cd /home/nic/forge && source .venv/bin/activate && python scripts/identity_vault_patch218_verify.py"
+        },
+        "protoforge2": {
+          "allowed_reads_count": 4,
+          "allowed_writes_count": 2,
+          "audit_log_path": "/home/nic/forge/logs/forge_audit.log and future /home/nic/forge/memory/protoforge2_* reports",
+          "commands_count": 3,
+          "error": null,
+          "exists": true,
+          "forbidden_writes_count": 6,
+          "health_check_command": "future: protoforge2-status",
+          "json_ok": true,
+          "name": "protoforge2",
+          "owner_authority": "Forge governs execution; Nic approves live effects",
+          "path": "/home/nic/aiweb/service_contracts/protoforge2.contract.json",
+          "role": "Future execution and simulation substrate. ProtoForge2 runs controlled tests/simulations when Forge approves a plan. It is a lab bench, not an authority layer.",
+          "shutdown_command": "future: stop through Forge-controlled sandbox command only",
+          "startup_command": "future: start through Forge-controlled sandbox command only",
+          "test_command": "future: Forge-approved ProtoForge2 smoke test"
+        },
+        "rmc": {
+          "allowed_reads_count": 6,
+          "allowed_writes_count": 2,
+          "audit_log_path": "/home/nic/forge/logs/forge_audit.log and /home/nic/forge/memory/rmc_* reports",
+          "commands_count": 6,
+          "error": null,
+          "exists": true,
+          "forbidden_writes_count": 5,
+          "health_check_command": "python /home/nic/forge/scripts/rmc_patch213_forge_runtime_preview_check.py",
+          "json_ok": true,
+          "name": "rmc",
+          "owner_authority": "Forge governs access; Nic approves memory write capability",
+          "path": "/home/nic/aiweb/service_contracts/rmc.contract.json",
+          "role": "Shared and agent-scoped recursive memory/meaning layer. RMC parses phase state, checks drift, compiles manifests, renders previews, and validates echo under Forge governance.",
+          "shutdown_command": "not applicable; no independent daemon in this bootstrap stage",
+          "startup_command": "imported as Python runtime wrappers by Forge; no independent daemon in this bootstrap stage",
+          "test_command": "cd /home/nic/forge && source .venv/bin/activate && python scripts/rmc_patch213_forge_runtime_preview_check.py"
+        }
+      },
+      "forbidden_now": [
+        "RMC memory writes",
+        "agent identity activation",
+        "Identity Vault database writes",
+        "EchoForge build execution",
+        "ProtoForge2 live execution"
+      ],
+      "ok": true,
+      "read_only": true,
+      "root_exists": {
+        "aiweb": true,
+        "echoforge_any": false,
+        "forge": true,
+        "identity_vault": true,
+        "protoforge2_any": false,
+        "rmc_wrappers": true
+      },
+      "roots": {
+        "aiweb": "/home/nic/aiweb",
+        "echoforge_candidates": [
+          "/home/nic/echoforge",
+          "/home/nic/aiweb/echoforge",
+          "/home/nic/aiweb/runtime_wrappers/echoforge"
+        ],
+        "forge": "/home/nic/forge",
+        "identity_vault": "/home/nic/identity-vault",
+        "protoforge2_candidates": [
+          "/home/nic/protoforge2",
+          "/home/nic/aiweb/protoforge2",
+          "/home/nic/aiweb/runtime_wrappers/protoforge2"
+        ],
+        "rmc_wrappers": "/home/nic/aiweb/runtime_wrappers"
+      },
+      "spine": [
+        "Forge verifies and governs",
+        "ProtoForge2 executes and simulates",
+        "EchoForge requests tools/apps/simulations",
+        "Identity Vault houses agent identity and permissions",
+        "RMC stores shared and agent-scoped recursive memory"
+      ]
+    }
+  },
+  "checks": {
+    "agent_list_connector_version": "patch228a1_full_profile_hash_reconcile_v1",
+    "agent_list_ok": true,
+    "agent_list_read_only": true,
+    "agents_returned": 3,
+    "all_list_profiles_ok": true,
+    "all_show_profiles_ok": true,
+    "boundary_map_ok": true,
+    "expected_agents_present": true,
+    "identity_status_ok": true,
+    "list_agent_checks": [
+      {
+        "activation_state": "inactive_draft",
+        "agent_id": "gilligan.local",
+        "forbidden_actions_summary_count": 5,
+        "forbidden_payload_keys": [],
+        "is_active": 0,
+        "missing": [],
+        "ok": true,
+        "payload_dumped": false,
+        "permissions_summary_count": 1,
+        "profile_hash_method": "json_sort_compact",
+        "profile_hash_ok": true,
+        "rmc_namespace": "rmc/agents/gilligan.local"
+      },
+      {
+        "activation_state": "inactive_draft",
+        "agent_id": "athena.local",
+        "forbidden_actions_summary_count": 4,
+        "forbidden_payload_keys": [],
+        "is_active": 0,
+        "missing": [],
+        "ok": true,
+        "payload_dumped": false,
+        "permissions_summary_count": 1,
+        "profile_hash_method": "json_sort_compact",
+        "profile_hash_ok": true,
+        "rmc_namespace": "rmc/agents/athena.local"
+      },
+      {
+        "activation_state": "inactive_draft",
+        "agent_id": "neo.local",
+        "forbidden_actions_summary_count": 4,
+        "forbidden_payload_keys": [],
+        "is_active": 0,
+        "missing": [],
+        "ok": true,
+        "payload_dumped": false,
+        "permissions_summary_count": 1,
+        "profile_hash_method": "json_sort_compact",
+        "profile_hash_ok": true,
+        "rmc_namespace": "rmc/agents/neo.local"
+      }
+    ],
+    "root_identity_vault_exists": true,
+    "root_rmc_wrappers_exists": true,
+    "show_agent_checks": [
+      {
+        "activation_state": "inactive_draft",
+        "agent_id": "gilligan.local",
+        "call_ok": true,
+        "forbidden_actions_summary_count": 5,
+        "forbidden_payload_keys": [],
+        "found": true,
+        "is_active": 0,
+        "missing": [],
+        "ok": true,
+        "payload_dumped": false,
+        "permissions_summary_count": 1,
+        "profile_hash_method": "json_sort_compact",
+        "profile_hash_ok": true,
+        "rmc_namespace": "rmc/agents/gilligan.local"
+      },
+      {
+        "activation_state": "inactive_draft",
+        "agent_id": "athena.local",
+        "call_ok": true,
+        "forbidden_actions_summary_count": 4,
+        "forbidden_payload_keys": [],
+        "found": true,
+        "is_active": 0,
+        "missing": [],
+        "ok": true,
+        "payload_dumped": false,
+        "permissions_summary_count": 1,
+        "profile_hash_method": "json_sort_compact",
+        "profile_hash_ok": true,
+        "rmc_namespace": "rmc/agents/athena.local"
+      },
+      {
+        "activation_state": "inactive_draft",
+        "agent_id": "neo.local",
+        "call_ok": true,
+        "forbidden_actions_summary_count": 4,
+        "forbidden_payload_keys": [],
+        "found": true,
+        "is_active": 0,
+        "missing": [],
+        "ok": true,
+        "payload_dumped": false,
+        "permissions_summary_count": 1,
+        "profile_hash_method": "json_sort_compact",
+        "profile_hash_ok": true,
+        "rmc_namespace": "rmc/agents/neo.local"
+      }
+    ]
+  },
+  "connector": {
+    "compile_ok": true,
+    "connector_path": "/home/nic/forge/agents/forge/aiweb_readonly_connectors.py",
+    "exists": true,
+    "functions": [
+      "forge_agent_list",
+      "forge_agent_show",
+      "forge_identity_status",
+      "forge_rmc_status",
+      "forge_rmc_test_status",
+      "forge_system_boundary_map"
+    ],
+    "import_ok": true
+  },
+  "database": {
+    "canonical": {
+      "exists": true,
+      "ok": true,
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/data/identity_vault.db",
+      "row_counts": {
+        "agent_profiles": 3,
+        "audit_logs": 0,
+        "feedback_logs": 0,
+        "session_state": 0,
+        "sqlite_sequence": 2,
+        "user_profiles": 1
+      },
+      "tables": [
+        "agent_profiles",
+        "audit_logs",
+        "feedback_logs",
+        "session_state",
+        "sqlite_sequence",
+        "user_profiles"
+      ]
+    },
+    "legacy": {
+      "exists": true,
+      "ok": true,
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/vault.db",
+      "row_counts": {
+        "feedback_logs": 0,
+        "profiles": 1,
+        "session_state": 1,
+        "sqlite_sequence": 0
+      },
+      "tables": [
+        "feedback_logs",
+        "profiles",
+        "session_state",
+        "sqlite_sequence"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "code": "PATCH228A_FULL_PROFILE_ADAPTER_VERIFIED",
+      "level": "INFO",
+      "message": "Forge read-only connector lists and shows all inactive full-profile summaries with valid hashes and no payload dumps."
+    },
+    {
+      "code": "PATCH228A_NO_MUTATION",
+      "level": "INFO",
+      "message": "Verification did not mutate DBs, templates, .env metadata, RMC wrappers, or Forge registry."
+    }
+  ],
+  "safety": {
+    "agent_identity_activation_performed": false,
+    "agent_template_sha_unchanged": true,
+    "canonical_db_sha_unchanged": true,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "forge_tool_registry_modified": false,
+    "identity_vault_database_write_performed": false,
+    "legacy_db_sha_unchanged": true,
+    "profiles_created": false,
+    "rmc_fingerprint_unchanged": true,
+    "rmc_memory_write_performed": false,
+    "tool_registry_sha_unchanged": true,
+    "user_template_sha_unchanged": true
+  },
+  "templates": {
+    "agent": {
+      "exists": true,
+      "json_ok": true,
+      "keys": [
+        "defaults",
+        "indexed_columns",
+        "lookup_field",
+        "operational_profile_json",
+        "profile_schema_version",
+        "required_fields",
+        "safety_rules",
+        "target_table",
+        "template_type"
+      ]
+    },
+    "user": {
+      "exists": true,
+      "json_ok": true,
+      "keys": [
+        "defaults",
+        "indexed_columns",
+        "lookup_field",
+        "operational_profile_json",
+        "profile_schema_version",
+        "required_fields",
+        "safety_rules",
+        "target_table",
+        "template_type"
+      ]
+    }
+  },
+  "timestamp": "20260523_223724_UTC",
+  "verdict": "PASS"
+}

@@ -1,0 +1,18 @@
+--- a//home/nic/forge/memory/generic_revision_candidates_v1/2026_05_17_125228_revision_candidate_2026_05_17_102321_candidate_stack_linker_core.py
++++ b//home/nic/forge/memory/generic_revision_candidates_v1/2026_05_17_125228_revision_candidate_2026_05_17_102321_candidate_stack_linker_core.py (revision loop candidate only)
+@@ -3,9 +3,14 @@
+ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
+ 
+ from core_breather.core_breather import CoreBreather
+-from recursive_field_breather.field_breather import breathe_phase as field_breathe
++from recursive_field_breather.field_breather import FieldBreather
+ import time
+ import json
++
++_field_breather_instance = FieldBreather()
++def field_breathe(phase=None):
++    return _field_breather_instance.breathe()
++
+ 
+ _core_breather_instance = CoreBreather()
+ def core_breathe(phase=None):

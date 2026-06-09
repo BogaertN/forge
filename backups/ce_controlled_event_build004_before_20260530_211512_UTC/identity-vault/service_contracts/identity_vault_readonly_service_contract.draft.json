@@ -1,0 +1,42 @@
+{
+  "activation_rule": "This contract is a draft file only. It becomes active only after a later Forge adapter patch explicitly loads and verifies it.",
+  "allowed_reads": [
+    "package.json metadata",
+    "README and documentation metadata",
+    "SQLite schema and row counts using read-only connections",
+    "agent profile metadata after explicit adapter approval",
+    "identity-to-RMC namespace pointers after explicit adapter approval"
+  ],
+  "allowed_writes": [],
+  "audit_requirement": "Every future Identity Vault read must be logged by Forge with timestamp, requested identity, purpose, and result metadata; never log secret values.",
+  "canonical_database_path": "/home/nic/identity-vault/data/identity_vault.db",
+  "contract_name": "identity_vault_readonly_service_contract_draft",
+  "controlled_by": "Forge",
+  "created_at_utc": "20260523_193648_UTC",
+  "created_by_patch": "patch216_identity_vault_hygiene_apply",
+  "forbidden_reads": [
+    ".env secret values",
+    "raw tokens, private keys, JWT secrets, API keys, passwords",
+    "full private memory payloads unless routed through approved RMC boundary"
+  ],
+  "forbidden_writes": [
+    "Identity Vault databases",
+    ".env",
+    "node_modules",
+    "agent identity state",
+    "RMC memory",
+    "Forge tool registry"
+  ],
+  "future_adapter_rules": [
+    "Forge may ask Identity Vault who an agent is.",
+    "Forge may ask what permissions an agent has.",
+    "Forge may ask which RMC namespace belongs to an agent.",
+    "Forge may not execute agents inside Identity Vault.",
+    "Forge may not let Identity Vault directly call tools or write memory."
+  ],
+  "root": "/home/nic/identity-vault",
+  "service": "Identity Vault",
+  "service_role": "Agent identity, permissions, profile metadata, and memory namespace pointers. It is not an agent runtime and not the shared memory store.",
+  "status": "DRAFT_NOT_ACTIVE",
+  "version": "0.1.1-draft-file"
+}

@@ -1,0 +1,36 @@
+Thinking...
+Okay, let's tackle this problem. The user is facing an ImportError because they're trying to import 'breathe_phase' from 'core_breather.core_breather', but that symbol doesn't exist. The core_breather module has a class CoreBreather with a method breathe(), not a standalone function called breathe_phase.
+
+First, I need to figure out why the import is failing. The candidate code is importing breathe_phase as core_breathe, but the actual module only has the CoreBreather class. So the candidate's import is incorrect. The minimal fix here would be to adjust the candidate's code to use the existing symbol, which is the breathe method of the CoreBreather class.
+
+But the user's constraints say not to propose live writes, so we can't directly modify the core_breather module. Instead, the solution should involve revising the candidate's code to reference the correct symbol. That means changing the import line in stack_linker_core.py from importing breathe_phase to using the CoreBreather class's breathe method.
+
+Wait, but the candidate is trying to import a function, not a class. So maybe the candidate's code is expecting a function, but the dependency provides a class. The correct approach would be to adjust the candidate's code to instantiate the CoreBreather class and call its breathe method instead of importing a function.
+
+However, the user's recommendation earlier suggested revising the candidate, which aligns with this. The minimal action here is to revise the sandbox dependency plan, but since the issue is in the candidate's import, the correct action is to adjust the candidate's code. However, the user's constraints say not to propose live writes, so we need to suggest changing the candidate's import to use the existing symbol.
+
+Wait, the user's prior recommendation was to REVISE_CANDIDATE, which is correct. The minimal next step is to update the candidate's import to reference the actual method. So the action should be REVISE_SANDBOX_DEPENDENCY_PLAN, but the user's constraints might require using the core breather wrapper. Alternatively, the correct action here is to use the core breather wrapper to handle the import correctly.
+
+Wait, the user's instructions say to include one of the three actions: USE_COREBREATHER_WRAPPER, REVISE_SANDBOX_DEPENDENCY_PLAN, or MANUAL_REVIEW. The prior recommendation was REVISE_CANDIDATE, but the user's constraints might require using the core breather wrapper. Let me check the problem again.
+
+The error is that the candidate is trying to import a non-existent symbol. The core_breather module has a class with a method, but the candidate is looking for a function. The minimal fix is to adjust the candidate's code to use the class's method. However, the user's constraints say not to propose live writes, so the solution is to revise the candidate's code to use the correct symbol. Therefore, the action should be REVISE_SANDBOX_DEPENDENCY_PLAN, but maybe the correct action is to use the core breather wrapper to handle the import.
+
+Wait, the user's example in the prior recommendation used REVISE_CANDIDATE, but the current instructions require one of the three actions. The correct action here is to use the core breather wrapper to wrap the import, but the problem is that the candidate is trying to import a non-existent symbol. So the minimal action is to revise the candidate's code to use the existing symbol, which would be a candidate revision. However, the user's constraints say not to propose live writes, so the action should be REVISE_SANDBOX_DEPENDENCY_PLAN, but that's not the case here. Alternatively, the correct action is to use the core breather wrapper to handle the import correctly.
+
+Hmm, perhaps the correct action is to use the core breather wrapper to adjust the import. The core breather wrapper would allow the candidate to access the CoreBreather class's methods. So the minimal action is to use the core breather wrapper to resolve the import issue. Therefore, the action is USE_COREBREATHER_WRAPPER. Then, the candidate's code would need to be adjusted to use the wrapper, which would involve changing the import line to use the wrapper's methods. The tests would need to be rerun to verify the fix. Since the issue is in the candidate's import, it's still sandbox-only because the dependency itself is correct, and the problem is the candidate's code.
+...done thinking.
+
+ACTION: USE_COREBREATHER_WRAPPER
+
+1. Why this is minimal: The core_breather module contains a class `CoreBreather` with a `breathe()` method, but the candidate is incorrectly importing a non-existent `breathe_phase` function. Using the core breather wrapper allows us to access the existing `breathe()` method without altering the dependency or live code.
+
+2. Candidate file changes needed: Update the import in `stack_linker_core.py` from `from core_breather.core_breather import breathe_phase as core_breathe` to use the `CoreBreather` class via the wrapper. For example:
+   ```python
+   from core_breather.core_breather import CoreBreather
+   core_breathe = CoreBreather().breathe
+   ```
+
+3. Tests to rerun: `test_stack_linker_core.py` must be rerun to verify that the revised import resolves the dependency mismatch.
+
+4. Why it remains sandbox-only: The issue is entirely within the candidate's import logic, not the sandbox dependency setup. The core_breather module is correctly implemented, and the wrapper allows us to align the candidate with the existing symbol without modifying live code.
+

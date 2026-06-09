@@ -1,0 +1,19 @@
+{
+  "authority": {
+    "live_self_write_authority": false,
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T06:43:47",
+  "next_commands": [
+    "forge-self-snapshot-export",
+    "forge-roadmap-status",
+    "Install Patch 122 when ready"
+  ],
+  "next_phase": "FORGE_SELF_UPDATE_SANDBOX",
+  "plain_english": "A verified Forge self-snapshot exists. The next safe move is sandboxing future self-updates before any live self-write can advance.",
+  "recommended_next_patch": "Patch 122 \u2014 Forge Self-Update Sandbox",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "schema_version": "forge_next_status_v1_patch121",
+  "status": "NEXT_PATCH_REQUIRED"
+}

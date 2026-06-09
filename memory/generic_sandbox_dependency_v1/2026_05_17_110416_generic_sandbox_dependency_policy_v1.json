@@ -1,0 +1,25 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "ledger_mutation_authority": false,
+    "model_generation_allowed_with_token": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "sandbox_memory_write_only": true
+  },
+  "confirmation_token": "CONFIRM_RUN_SANDBOX_DEPENDENCY_RESOLUTION",
+  "created_at": "2026-05-17T11:04:16",
+  "purpose": "Resolve missing sandbox-only Python dependencies for a generic repair candidate, rerun isolated tests, then call the local LLM to review the result.",
+  "report_type": "GENERIC_SANDBOX_DEPENDENCY_POLICY_V1",
+  "rules": [
+    "No live AI.Web file writes.",
+    "No patch apply authority.",
+    "No ledger mutation authority.",
+    "Copy dependencies only into Forge-owned sandbox memory.",
+    "Use subprocess argv with shell=False.",
+    "Do not include live engine paths in PYTHONPATH during dependency rerun.",
+    "If the rerun fails, preserve stdout/stderr and ask the local LLM for the next minimal revision route."
+  ],
+  "schema_version": "generic_sandbox_dependency_policy_v1_patch138",
+  "status": "GENERIC_SANDBOX_DEPENDENCY_POLICY_READY"
+}

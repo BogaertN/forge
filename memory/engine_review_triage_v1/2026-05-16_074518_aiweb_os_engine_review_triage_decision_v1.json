@@ -1,0 +1,48 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "ENGINE_REVIEW_TRIAGE_WORKSPACE",
+    "patch": "109",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "rule": "Patch 109 shows a triage workspace for cross-checked LLM engine reviews and may record Patch99-compatible queue decisions through the existing evidence-based approval path. It never commits the ledger or edits engines.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_triage_v1"
+  },
+  "counts": {
+    "recorded": 0,
+    "refused": 1,
+    "requested": 1
+  },
+  "created_at": "2026-05-16_074518",
+  "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+  "engines": [
+    "aiweb_os"
+  ],
+  "next_step": "Run engine-review-queue-export, then use the commit gate only after reviewing decisions.",
+  "report_type": "ENGINE_REVIEW_TRIAGE_DECISION_V1_PATCH109",
+  "rows": [
+    {
+      "blockers": [
+        "ledger_status_is_DEFERRED"
+      ],
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_aiweb_os_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "e76650186f863ba283081a1a3baf3aa456c70f2952ffe6c5f1b50d553222267f",
+      "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+      "engine_family": "aiweb_os",
+      "evidence_id": "EEB-7b29cb90ee5e540e",
+      "queue_receipt_status": null,
+      "status": "TRIAGE_DECISION_REFUSED",
+      "warnings": []
+    }
+  ],
+  "schema_version": "engine_review_triage_workspace_v1_patch109",
+  "status": "ENGINE_REVIEW_TRIAGE_DECISION_COMPLETED_WITH_REFUSALS"
+}

@@ -1,0 +1,22 @@
+{
+  "authority": {
+    "hard_blocking_active": false,
+    "read_only": true
+  },
+  "completed": [
+    "Final canonical engine lockfile",
+    "Read-only Forge dashboard",
+    "Forge mode registry",
+    "Mode permission matrix and check-only enforcement"
+  ],
+  "created_at": "2026-05-17T08:11:08",
+  "current_milestone": "Mode permission matrix/check layer ready; source-authority runtime binding next",
+  "next_patch_sequence": [
+    "Patch 131 \u2014 Source Authority Runtime Binder",
+    "Patch 132 \u2014 LLM Source-Grounded Patch Proposal",
+    "Patch 133 \u2014 Patch Lifecycle 2.0 Gate Matrix"
+  ],
+  "report_type": "FORGE_ROADMAP_STATUS_V1",
+  "schema_version": "forge_roadmap_status_v1_patch130",
+  "status": "ROADMAP_STATUS_READY"
+}

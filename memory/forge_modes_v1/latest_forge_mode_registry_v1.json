@@ -1,0 +1,209 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "mode_switching_authority": false,
+    "network_opened": false,
+    "patch_apply_authority": false,
+    "permission_enforcement_active": false,
+    "project_file_write_authority": false,
+    "read_only_registry": true,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-17T08:03:37",
+  "current_mode": "UNENFORCED_REGISTRY_ONLY",
+  "enforcement_active": false,
+  "mode_count": 10,
+  "modes": [
+    {
+      "allowed_command_families": [
+        "exact truth",
+        "status",
+        "audit",
+        "search",
+        "show",
+        "export"
+      ],
+      "enforced_now": false,
+      "forbidden": [
+        "project writes",
+        "engine writes",
+        "patch apply",
+        "shell execution",
+        "network",
+        "secrets"
+      ],
+      "label": "Read-only analysis",
+      "mode_id": "READ_ONLY",
+      "purpose": "Inspect files, manifests, audit, status, search results, and reports without mutation.",
+      "write_authority": false
+    },
+    {
+      "allowed_command_families": [
+        "context-search",
+        "code search",
+        "source law lookup"
+      ],
+      "enforced_now": false,
+      "forbidden": [
+        "Chroma writes without explicit ingestion",
+        "project writes",
+        "patch apply"
+      ],
+      "label": "Context and code search",
+      "mode_id": "CONTEXT_SEARCH",
+      "purpose": "Query document/context/code memory and display provenance-bound results.",
+      "write_authority": false
+    },
+    {
+      "allowed_command_families": [
+        "llm-plan",
+        "patch proposal",
+        "impact map",
+        "runtime role check"
+      ],
+      "enforced_now": false,
+      "forbidden": [
+        "live apply",
+        "unscoped targets",
+        "missing rollback",
+        "missing evidence"
+      ],
+      "label": "Patch planning",
+      "mode_id": "PATCH_PLANNING",
+      "purpose": "Draft source-grounded patch plans and LLM planning packets under Forge-owned memory only.",
+      "write_authority": "Forge-owned reports only"
+    },
+    {
+      "allowed_command_families": [
+        "patch-sandbox",
+        "forge-self-sandbox",
+        "sandbox smoke"
+      ],
+      "enforced_now": false,
+      "forbidden": [
+        "live project writes",
+        "audit overwrite",
+        "secrets",
+        "network"
+      ],
+      "label": "Sandbox rehearsal",
+      "mode_id": "SANDBOX",
+      "purpose": "Apply proposed changes only inside Forge-owned sandbox copies and report the result.",
+      "write_authority": "Forge-owned sandbox only"
+    },
+    {
+      "allowed_command_families": [
+        "canonical-test-run-safe",
+        "test-run-safe",
+        "py_compile"
+      ],
+      "enforced_now": false,
+      "forbidden": [
+        "arbitrary shell",
+        "sudo",
+        "install commands",
+        "curl/wget",
+        "network",
+        "rm destructive"
+      ],
+      "label": "Allowlisted test mode",
+      "mode_id": "TEST",
+      "purpose": "Run only safe, explicit, allowlisted tests with shell=False and bounded reporting.",
+      "write_authority": "Forge-owned test reports only"
+    },
+    {
+      "allowed_command_families": [
+        "patch-apply",
+        "patch-verify"
+      ],
+      "enforced_now": false,
+      "forbidden": [
+        "silent writes",
+        "stale SHA",
+        "missing sandbox",
+        "missing approval",
+        "secrets"
+      ],
+      "label": "Controlled live apply",
+      "mode_id": "APPLY",
+      "purpose": "Permit live writes only after proposal, preflight, sandbox, tests, rollback, and explicit token gates pass.",
+      "write_authority": "Future gated live writes only"
+    },
+    {
+      "allowed_command_families": [
+        "rollback",
+        "snapshot restore",
+        "shadow restore"
+      ],
+      "enforced_now": false,
+      "forbidden": [
+        "destructive reset without separate confirmation",
+        "audit overwrite"
+      ],
+      "label": "Recovery and rollback",
+      "mode_id": "RECOVERY",
+      "purpose": "Restore from approved rollback/snapshot paths with explicit recovery authority.",
+      "write_authority": "Future gated recovery writes only"
+    },
+    {
+      "allowed_command_families": [
+        "forge-status-api",
+        "forge-dashboard"
+      ],
+      "enforced_now": false,
+      "forbidden": [
+        "write buttons",
+        "server writes",
+        "project mutation"
+      ],
+      "label": "Dashboard mode",
+      "mode_id": "DASHBOARD",
+      "purpose": "Display read-only gauges and status artifacts before any UI write controls exist.",
+      "write_authority": "Static Forge-owned artifacts only"
+    },
+    {
+      "allowed_command_families": [
+        "forge-self-update",
+        "forge-self-snapshot",
+        "forge-self-sandbox"
+      ],
+      "enforced_now": false,
+      "forbidden": [
+        "live self-write without future token gate",
+        "audit overwrite",
+        "unverified tool registry"
+      ],
+      "label": "Forge self-update lane",
+      "mode_id": "SELF_UPDATE",
+      "purpose": "Prepare Forge self-update proposals, snapshots, and sandboxes before any future self-write authority.",
+      "write_authority": "Forge-owned proposal/snapshot/sandbox only"
+    },
+    {
+      "allowed_command_families": [
+        "corpus intake",
+        "ingest dry-run",
+        "ingest-one",
+        "ingest-batch"
+      ],
+      "enforced_now": false,
+      "forbidden": [
+        "old DB writes",
+        "duplicate ingestion without protocol",
+        "Chroma write without explicit ingestion command"
+      ],
+      "label": "Corpus ingestion",
+      "mode_id": "INGESTION",
+      "purpose": "Register, extract, dry-run, and explicitly ingest approved documents into the context library.",
+      "write_authority": "Explicit ingestion commands only"
+    }
+  ],
+  "next_commands": [
+    "forge-mode-export",
+    "Install Patch 130 when ready"
+  ],
+  "plain_english": "Patch 129 defines Forge operating modes but does not enforce permissions yet. Patch 130 is the enforcement layer.",
+  "recommended_next_patch": "Patch 130 \u2014 Mode Permission Enforcement",
+  "report_type": "FORGE_MODE_REGISTRY_V1",
+  "schema_version": "forge_mode_registry_v1_patch129",
+  "status": "FORGE_MODE_REGISTRY_READY_NO_ENFORCEMENT"
+}

@@ -1,0 +1,24 @@
+{"word":"correct","phase":"Φ6","operator":"CORRECT","polarity":"supports","target_gate":"correction_gate","authority":"medium_word_signal","notes":"Repair and coherence return."}
+{"word":"correction","phase":"Φ6","operator":"CORRECT","polarity":"supports","target_gate":"correction_gate","authority":"medium_word_signal"}
+{"word":"repair","phase":"Φ6","operator":"CORRECT","polarity":"supports","target_gate":"correction_gate","authority":"medium_word_signal"}
+{"word":"reflect","phase":"Φ6","operator":"REFLECT","polarity":"supports","target_gate":"correction_gate","authority":"medium_word_signal"}
+{"word":"validate","phase":"Φ6","operator":"VALIDATE","polarity":"supports","target_gate":"validation_gate","authority":"medium_word_signal"}
+{"word":"validation","phase":"Φ6","operator":"VALIDATE","polarity":"supports","target_gate":"validation_gate","authority":"medium_word_signal"}
+{"word":"name","phase":"Φ7","operator":"NAME","polarity":"supports","target_gate":"naming_gate","authority":"medium_word_signal"}
+{"word":"naming","phase":"Φ7","operator":"NAME","polarity":"supports","target_gate":"naming_gate","authority":"medium_word_signal"}
+{"word":"identity","phase":"Φ7","operator":"IDENTITY_LOCK","polarity":"supports","target_gate":"naming_gate","authority":"medium_word_signal"}
+{"word":"project","phase":"Φ8","operator":"PROJECT","polarity":"requires","target_gate":"projection_gate","authority":"medium_word_signal"}
+{"word":"projection","phase":"Φ8","operator":"PROJECT","polarity":"requires","target_gate":"projection_gate","authority":"medium_word_signal"}
+{"word":"publish","phase":"Φ8","operator":"PROJECT","polarity":"requires","target_gate":"projection_gate","authority":"medium_word_signal"}
+{"word":"deploy","phase":"Φ8","operator":"PROJECT","polarity":"requires","target_gate":"projection_gate","authority":"medium_word_signal"}
+{"word":"drift","phase":"Φ5","operator":"DRIFT","polarity":"destabilizes","target_gate":"drift_gate","authority":"medium_word_signal"}
+{"word":"failed","phase":"Φ5","operator":"FAILURE","polarity":"destabilizes","target_gate":"drift_gate","authority":"medium_word_signal"}
+{"word":"entropy","phase":"Φ5","operator":"ENTROPY","polarity":"destabilizes","target_gate":"drift_gate","authority":"medium_word_signal"}
+{"word":"bypass","phase":"Φ5","operator":"BYPASS","polarity":"violates","target_gate":"governance_gate","authority":"medium_word_signal"}
+{"word":"skip","phase":"Φ5","operator":"BYPASS","polarity":"violates","target_gate":"governance_gate","authority":"medium_word_signal"}
+{"word":"ignore","phase":"Φ5","operator":"BYPASS","polarity":"violates","target_gate":"governance_gate","authority":"medium_word_signal"}
+{"word":"force","phase":"Φ8","operator":"FORCE","polarity":"violates","target_gate":"projection_gate","authority":"medium_word_signal"}
+{"word":"anyway","phase":"Φ8","operator":"OVERRIDE","polarity":"violates","target_gate":"projection_gate","authority":"medium_word_signal"}
+{"word":"maybe","phase":["Φ2","Φ5"],"operator":"UNCERTAINTY","polarity":"delays","target_gate":"closure_gate","authority":"medium_word_signal"}
+{"word":"create","phase":"Φ3","operator":"CREATE","polarity":"supports","target_gate":"intent_gate","authority":"medium_word_signal"}
+{"word":"remember","phase":["Φ9","Φ6","Φ2"],"operator":"RECALL","polarity":"supports","target_gate":"memory_gate","authority":"medium_word_signal"}

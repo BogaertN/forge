@@ -1,0 +1,38 @@
+{
+  "report_type": "CONTEXT_EXPORT_MANIFEST",
+  "timestamp": "2026-05-10T16:35:20",
+  "library_path": "/home/nic/forge/memory/context_library_v1",
+  "chroma_path": "/home/nic/forge/memory/context_library_v1/chroma_db",
+  "collections": [
+    {
+      "name": "aiweb_context_chunks_v1",
+      "count": 139
+    }
+  ],
+  "receipts": [
+    {
+      "receipt_path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_071151_ingest_corpus_0022.json",
+      "receipt_id": "2026-05-10_071151_ingest_corpus_0022",
+      "timestamp": "2026-05-10T07:11:51",
+      "corpus_id": "corpus_0022",
+      "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fResonant Phase Memory Calculus_ The Law of Recursion, Collapse, and Return_ Full Protocol Draft_.docx",
+      "source_file": "/home/nic/forge_corpus/04_FBSC_DOCTRINE/\ud83c\udf00\ud83c\udf2c\ufe0fResonant Phase Memory Calculus_ The Law of Recursion, Collapse, and Return_ Full Protocol Draft_.docx",
+      "sha256_16": "8c5696bbf868e99b",
+      "chunk_count": 139,
+      "collection": "aiweb_context_chunks_v1",
+      "embedding_method": "DefaultEmbeddingFunction (ONNX all-MiniLM-L6-v2)",
+      "symbolic_map_path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_071151_ingest_corpus_0022_symbolic_map.json",
+      "dry_run_plan_path": null
+    }
+  ],
+  "ingested_corpus_ids": [
+    "corpus_0022"
+  ],
+  "old_db_status": {
+    "path": "/home/nic/forge/memory/chroma_db",
+    "exists": true,
+    "item_count": 2,
+    "untouched_by_patch44": true,
+    "isolation_ok": true
+  }
+}

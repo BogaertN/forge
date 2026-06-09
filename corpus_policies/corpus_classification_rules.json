@@ -1,0 +1,91 @@
+{
+  "_schema_version": "1.0",
+  "_description": "Folder routing rules for incoming corpus documents. Rules are data, not code. Unknown documents route to 09_ARCHIVE_REVIEW with index_eligible=false.",
+
+  "default_folder": "09_ARCHIVE_REVIEW",
+  "default_index_eligible": false,
+
+  "rules": [
+    {
+      "folder": "01_SYSTEM_LAW",
+      "priority": 10,
+      "description": "AI.Web system law, governance, sovereign structure, legal foundation",
+      "filename_terms": ["system_law", "system law", "governance", "sovereign", "kbic", "tribal", "constitution"],
+      "content_terms": ["system law", "sovereign", "governance", "KBIC", "tribal"],
+      "authority_terms": ["system_law", "legal"],
+      "default_index_eligible": true
+    },
+    {
+      "folder": "02_AIWEB_ARCHITECTURE",
+      "priority": 20,
+      "description": "AI.Web system architecture, ProtoForge, EchoForge, Gilligan, Genesis Node",
+      "filename_terms": ["architecture", "aiweb", "proforge", "echoforge", "genesis", "whitepaper", "white_paper"],
+      "content_terms": ["AI.Web architecture", "ProtoForge", "EchoForge", "Genesis Node"],
+      "authority_terms": ["architecture", "aiweb"],
+      "default_index_eligible": true
+    },
+    {
+      "folder": "03_GILLIGAN_AGENT_CORE",
+      "priority": 30,
+      "description": "Gilligan agent kernel, engine reference, phase state machine",
+      "filename_terms": ["gilligan", "agent_core", "engine_core", "codex"],
+      "content_terms": ["Gilligan System", "agent kernel", "Gilligan Codex"],
+      "authority_terms": ["gilligan"],
+      "default_index_eligible": true
+    },
+    {
+      "folder": "04_FBSC_DOCTRINE",
+      "priority": 40,
+      "description": "FBSC doctrine, RPMC, PCI, phase calculus, symbolic memory",
+      "filename_terms": ["fbsc", "rpmc", "pci", "phase", "resonant", "calculus", "symbolic", "drift", "blueprint", "protocol"],
+      "content_terms": ["FBSC", "RPMC", "Phase-Coherent Identity", "Resonant Phase Memory", "symbolic calculus"],
+      "authority_terms": ["fbsc", "rpmc", "pci"],
+      "default_index_eligible": true
+    },
+    {
+      "folder": "05_ENGINEERING_STANDARDS",
+      "priority": 50,
+      "description": "Engineering standards, build conventions, testing protocols",
+      "filename_terms": ["engineering", "standard", "spec", "protocol", "convention", "test_plan"],
+      "content_terms": ["engineering standard", "build convention", "test protocol"],
+      "authority_terms": ["engineering"],
+      "default_index_eligible": true
+    },
+    {
+      "folder": "06_PUBLIC_LANGUAGE",
+      "priority": 60,
+      "description": "Public-facing language, Substack essays, social posts, media",
+      "filename_terms": ["public", "essay", "substack", "blog", "social", "media", "compass"],
+      "content_terms": ["public", "essay", "Substack"],
+      "authority_terms": ["public"],
+      "default_index_eligible": true
+    },
+    {
+      "folder": "07_BUSINESS_LEGAL",
+      "priority": 70,
+      "description": "Business legal, contracts, grants, IP",
+      "filename_terms": ["legal", "contract", "grant", "ip", "patent", "license", "nda", "ai3"],
+      "content_terms": ["legal", "contract", "grant application", "intellectual property"],
+      "authority_terms": ["legal", "business"],
+      "default_index_eligible": true
+    },
+    {
+      "folder": "08_RESEARCH_FUTURE",
+      "priority": 80,
+      "description": "Research papers, future speculation, external references",
+      "filename_terms": ["research", "paper", "study", "future", "speculative", "reference"],
+      "content_terms": ["research", "paper", "academic"],
+      "authority_terms": ["research"],
+      "default_index_eligible": true
+    },
+    {
+      "folder": "09_ARCHIVE_REVIEW",
+      "priority": 99,
+      "description": "Archive review — held documents, uncertain classification, old versions",
+      "filename_terms": [],
+      "content_terms": [],
+      "authority_terms": [],
+      "default_index_eligible": false
+    }
+  ]
+}

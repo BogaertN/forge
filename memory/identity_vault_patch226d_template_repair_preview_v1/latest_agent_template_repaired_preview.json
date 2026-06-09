@@ -1,0 +1,92 @@
+{
+  "defaults": {
+    "activation_state": "inactive_draft",
+    "is_active": 0,
+    "version": "1.0.0-blueprint-draft"
+  },
+  "indexed_columns": [
+    "agent_id",
+    "canonical_name",
+    "role",
+    "version",
+    "is_active",
+    "activation_state",
+    "rmc_namespace",
+    "profile_schema_version",
+    "profile_hash",
+    "last_validated_at"
+  ],
+  "lookup_field": "agent_id",
+  "operational_profile_json": {
+    "agent_id": "{{agent_id}}",
+    "authority": [],
+    "canonical_name": "{{canonical_name}}",
+    "capabilities": [],
+    "description": "",
+    "enforcement_rules": [
+      "Forge approval gates control actions",
+      "RMC memory writes require explicit approval",
+      "Identity remains inactive until approved"
+    ],
+    "forbidden_actions": [
+      "self-activation",
+      "secret reading",
+      "database writes without approved migration",
+      "unapproved tool execution",
+      "memory mutation without approval"
+    ],
+    "last_action": null,
+    "last_feedback": null,
+    "last_updated": "2026-05-23T21:54:54Z",
+    "limitations": [
+      "cannot activate itself",
+      "cannot bypass Forge",
+      "cannot read secrets",
+      "cannot write memory without approval"
+    ],
+    "log_fields": [],
+    "permissions": [],
+    "persona": "",
+    "quotes_or_character_inspiration": [],
+    "rmc_namespace": "rmc/agents/{{agent_id}}",
+    "role": "{{role}}",
+    "session_state": "inactive_draft",
+    "special_style_notes": [],
+    "symbolic_signature": [],
+    "timestamp": "2026-05-23T21:54:54Z",
+    "version": "1.0.0-blueprint-draft",
+    "voice_style": ""
+  },
+  "profile_schema_version": "1.0.0-blueprint",
+  "required_fields": [
+    "agent_id",
+    "canonical_name",
+    "version",
+    "last_updated",
+    "role",
+    "symbolic_signature",
+    "description",
+    "capabilities",
+    "limitations",
+    "persona",
+    "voice_style",
+    "quotes_or_character_inspiration",
+    "special_style_notes",
+    "permissions",
+    "authority",
+    "enforcement_rules",
+    "forbidden_actions",
+    "session_state",
+    "last_action",
+    "last_feedback",
+    "log_fields",
+    "timestamp"
+  ],
+  "safety_rules": [
+    "Template must not contain secret values.",
+    "Template must not activate an agent.",
+    "Template must store memory pointers only, not live memory contents."
+  ],
+  "target_table": "agent_profiles",
+  "template_type": "agent_operational_identity_template"
+}

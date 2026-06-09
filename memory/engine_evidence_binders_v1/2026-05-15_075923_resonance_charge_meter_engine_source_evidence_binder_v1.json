@@ -1,0 +1,178 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/resonance_charge_meter",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/resonance_charge_meter",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "resonance_charge_meter",
+  "evidence_id": "EEB-980203111472c50f",
+  "file_count": 5,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "deaa1ec3608464058735d72cd5bdbf998dbff0814bdd15ad88c12b8d66291834",
+      "excerpt_start": "import json\nimport random\nimport time\n\nSTATE_FILE = \"charge_meter_state.json\"\n\ndef measure_charge():\n    \"\"\"Simulates reading symbolic system charge.\"\"\"\n    simulated_charge = random.randint(30, 100)\n    decay_rate = random.uniform(0.01, 0.15)\n\n    reading = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"charge_level\": simulated_charge,\n        \"decay_rate\": round(decay_rate, 3)\n    }\n\n    try:\n        with open(STATE_FILE, \"w\") as f:\n            json.dump(reading, f, indent=2)\n        print(f\"✔️ Charge measured: {reading}\")\n    except Exception as e:\n        print(f\"[!] Failed to write charge state: {e}\")\n\n    return reading\n",
+      "functions_sample": [
+        "measure_charge"
+      ],
+      "imports_sample": [
+        "import json",
+        "import random",
+        "import time"
+      ],
+      "line_count": 26,
+      "path": "/home/nic/aiweb/engines/resonance_charge_meter/charge_meter_core.py",
+      "relative_to_candidate": "charge_meter_core.py",
+      "sha256": "deaa1ec3608464058735d72cd5bdbf998dbff0814bdd15ad88c12b8d66291834",
+      "size_bytes": 675,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "4a147c4f5633e8bad92b77a276171b129523e2935b9336a13fcc4b1982033ed2",
+      "excerpt_start": "# Resonance Charge Meter\n\nSimulates and monitors symbolic charge level and decay rate.\n\nOutputs symbolic energy metrics for use by tone engine, drift correction, and system diagnostics.\n",
+      "functions_sample": [
+        "Resonance",
+        "Charge",
+        "Meter",
+        "Simulates",
+        "and",
+        "monitors",
+        "symbolic",
+        "charge",
+        "level",
+        "decay",
+        "rate",
+        "Outputs",
+        "energy",
+        "metrics",
+        "for",
+        "use",
+        "tone",
+        "engine",
+        "drift",
+        "correction",
+        "system",
+        "diagnostics"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/resonance_charge_meter/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "4a147c4f5633e8bad92b77a276171b129523e2935b9336a13fcc4b1982033ed2",
+      "size_bytes": 186,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "f4bd87fdff88f750dfc71beacef6a63c529667f91b4a2dd207d63d1cd24d0b1f",
+      "excerpt_start": "from charge_meter_core import measure_charge\n\ndef test_charge_measurement():\n    try:\n        result = measure_charge()\n        print(\"✅ Test Passed: Charge measured.\")\n        print(result)\n    except Exception as e:\n        print(f\"❌ Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_charge_measurement()\n",
+      "functions_sample": [
+        "test_charge_measurement"
+      ],
+      "imports_sample": [
+        "from charge_meter_core import measure_charge"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/resonance_charge_meter/test_charge_meter.py",
+      "relative_to_candidate": "test_charge_meter.py",
+      "sha256": "f4bd87fdff88f750dfc71beacef6a63c529667f91b4a2dd207d63d1cd24d0b1f",
+      "size_bytes": 317,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "c6c98a53ca319d8a0a11f70444cbf790036eb4ddc5130ecfafa4d446b96ca0f5",
+      "excerpt_start": "{\n  \"timestamp\": \"2025-04-25T22:28:20Z\",\n  \"charge_level\": 50,\n  \"decay_rate\": 0.107\n}",
+      "functions_sample": [
+        "timestamp",
+        "charge_level",
+        "decay_rate"
+      ],
+      "imports_sample": [],
+      "line_count": 5,
+      "path": "/home/nic/aiweb/engines/resonance_charge_meter/charge_meter_state.json",
+      "relative_to_candidate": "charge_meter_state.json",
+      "sha256": "c6c98a53ca319d8a0a11f70444cbf790036eb4ddc5130ecfafa4d446b96ca0f5",
+      "size_bytes": 86,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "a1a84c0e7007cbb3e3864117744ee9891f079f2edfb0d453cdcf6884bc995c79",
+      "excerpt_start": "{\n  \"engine\": \"resonance_charge_meter\",\n  \"version\": \"v1.0\",\n  \"status\": \"build_mode\",\n  \"description\": \"Measures symbolic charge level and decay rate for runtime analysis.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "resonance_charge_meter",
+        "version",
+        "status",
+        "build_mode",
+        "description",
+        "Measures",
+        "symbolic",
+        "charge",
+        "level",
+        "and",
+        "decay",
+        "rate",
+        "for",
+        "runtime",
+        "analysis"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/resonance_charge_meter/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "a1a84c0e7007cbb3e3864117744ee9891f079f2edfb0d453cdcf6884bc995c79",
+      "size_bytes": 176,
+      "suffix": ".json"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {
+    "config_or_manifest": 18,
+    "documentation_or_notes": 9,
+    "engine_source": 8,
+    "indexed_source": 5,
+    "runtime_wrapper": 14,
+    "test_or_validation": 46
+  },
+  "relationship_report_found": true,
+  "relationship_report_path": "/home/nic/forge/memory/code_library_v1/manifests/2026-05-14_200919_code_relationship_intelligence_report.json",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "APPROVED",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "measure_charge",
+    "test_charge_measurement"
+  ],
+  "warnings": []
+}

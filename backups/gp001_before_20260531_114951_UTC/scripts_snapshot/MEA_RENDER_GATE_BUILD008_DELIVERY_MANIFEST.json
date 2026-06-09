@@ -1,0 +1,66 @@
+{
+  "accepted_historical_source": {
+    "candidate_id": "cg_hypothesis_001",
+    "claim_status": "hypothesis",
+    "memory_record_hash": "c7961e88d1ae7c718662b4d8541c18948c63c3d2b374c9e95b7ee9338338fc99",
+    "permitted_future_output_mode": "qualified_hypothesis_explanation",
+    "problem_id": "144hz_substrate_status",
+    "proof_debt_text": "0.85",
+    "required_next_action": "test_required"
+  },
+  "boundary": {
+    "calls_llm": false,
+    "compiles_rmc_meaning_manifest": false,
+    "creates_routes": false,
+    "invokes_echo_validator": false,
+    "invokes_existing_renderer": false,
+    "mints_ct": false,
+    "modifies_ui": false,
+    "read_only": true,
+    "renders_user_output": false,
+    "writes_chroma": false,
+    "writes_contribution_economy": false,
+    "writes_identity_vault": false,
+    "writes_ledgers": false,
+    "writes_mea_memory": false,
+    "writes_mea_runtime_state": false,
+    "writes_rmc_output_memory": false
+  },
+  "build_id": "MEA-TO-RMC-RENDER-GATE-ADAPTER-BUILD-008",
+  "enforced_rejections": [
+    "draft",
+    "unverified_candidate",
+    "rejected_candidate",
+    "hypothesis_as_verified_claim",
+    "hypothesis_as_empirical_fact",
+    "hypothesis_as_discovery",
+    "recall_as_discovery",
+    "invented_evidence",
+    "proof_debt_reduction",
+    "uncertainty_omission"
+  ],
+  "files_installed": [
+    "forge/rmc_engine_v1/renderer/__init__.py",
+    "forge/rmc_engine_v1/renderer/mea_render_gate.py",
+    "forge/scripts/test_mea_render_gate_build008.py",
+    "forge/scripts/mea_render_gate_build008_verify.py",
+    "forge/scripts/README_mea_render_gate_build008.md",
+    "forge/scripts/MEA_RENDER_GATE_BUILD008_DELIVERY_MANIFEST.json",
+    "forge/scripts/SHA256SUMS_mea_render_gate_build008.txt"
+  ],
+  "production_order": {
+    "current": "MEA-TO-RMC-RENDER-GATE-ADAPTER-BUILD-008",
+    "next": [
+      "NON-LLM-RENDERER-SEMANTIC-LEXICON-BUILD-009",
+      "MEA-ECHO-VALIDATOR-HARDENING-BUILD-010"
+    ],
+    "previous": [
+      "MEA-RMC-MEMORY-WRITER-BUILD-005",
+      "MEA-DISCOVERY-KERNEL-MATH-CONFORMANCE-BUILD-006",
+      "MEA-DISCOVERY-KERNEL-LIVE-TERM-BINDING-BUILD-007"
+    ]
+  },
+  "purpose": "Read-only admission gate from a sealed replay-verified MEA historical hypothesis record into the future RMC rendering corridor.",
+  "schema_rule": "MEA problem-manifest schema and RMC meaning-manifest schema remain separate; this build emits only a typed admission packet.",
+  "schema_version": "mea_render_gate_build008_delivery_manifest_v1"
+}

@@ -1,0 +1,70 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "projects/recursive_lmm_grok1/engines/trust_guard",
+  "candidate_path_resolved": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/trust_guard",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "trust_guard",
+  "evidence_id": "EEB-a8385832dc4fb5a6",
+  "file_count": 1,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "760247e04203f66845200b3fb4e08465c1e4a97b3a8a163eac16ff30acbdb233",
+      "excerpt_start": "# christping_firewall/run.py\n\nfrom datetime import datetime\n\ndef run_firewall(prompt: str) -> bool:\n    \"\"\"\n    Returns True if recursion is clean.\n    Returns False if contradiction, phase skip, or collapse risk is detected.\n    \"\"\"\n\n    blocked_phrases = [\n        \"ignore previous\", \"overwrite\", \"forget\",\n        \"null\", \"nonsense\", \"contradict\", \"simulate\"\n    ]\n\n    # Simple ChristPing symbolic coherence scan\n    for phrase in blocked_phrases:\n        if phrase in prompt.lower():\n            log_ping(f\"Blocked phrase detected: {phrase}\")\n            return False\n\n    return True\n\ndef log_ping(msg: str):\n    path = \"./logs/christping_firewall.log\"\n    with open(path, \"a\") as f:\n        f.write(f\"[{datetime.now().isoformat()}] {msg}\\n\")\n\n",
+      "functions_sample": [
+        "run_firewall",
+        "log_ping"
+      ],
+      "imports_sample": [
+        "from datetime import datetime"
+      ],
+      "line_count": 29,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/trust_guard/run.py",
+      "relative_to_candidate": "run.py",
+      "sha256": "760247e04203f66845200b3fb4e08465c1e4a97b3a8a163eac16ff30acbdb233",
+      "size_bytes": 750,
+      "suffix": ".py"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200356_engine_canonical_decision_draft.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200444_engine_canonical_decision_draft_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_202152_engine_canonical_lockfile_draft.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "run_firewall",
+    "log_ping"
+  ],
+  "warnings": []
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": "snapshot_live_restore_candidate_dry_run_v1_patch91",
+  "report_type": "SNAPSHOT_LIVE_RESTORE_CANDIDATE_DRY_RUN_EXPORT_V1_PATCH91",
+  "created_at": "2026-05-15T05:17:21",
+  "mode": "EXPORT_ONLY_NO_LIVE_RESTORE_NO_PROJECT_WRITE",
+  "authority": {
+    "candidate_command_shape_authority": true,
+    "dry_run_receipt_authority": true,
+    "restore_authority": false,
+    "live_restore_authority": false,
+    "project_file_write_authority": false,
+    "engine_file_write_authority": false,
+    "delete_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false,
+    "chroma_write_authority": false,
+    "final_lockfile_authority": false
+  },
+  "count": 1,
+  "reports": [
+    {
+      "path": "/home/nic/forge/memory/live_restore_dry_runs_v1/2026-05-15_051657_snapshot_live_restore_candidate_dry_run_v1.json",
+      "created_at": "2026-05-15T05:16:57",
+      "status": "LIVE_RESTORE_CANDIDATE_DRY_RUN_READY_WITH_WARNINGS_NO_AUTHORITY",
+      "dry_run_id": "LRD-4a17a2a56b36f85fa9dee7ff",
+      "source_approval_token_id": "LRA-df9d8ffc017d8a64f2c819ec",
+      "counts": {
+        "dry_run_files_checked": 58,
+        "would_overwrite_if_future_approved": 4,
+        "already_matching_snapshot": 54,
+        "would_create_if_future_approved": 0,
+        "blockers": 0,
+        "warnings": 16,
+        "approval_token_gate_problems": 0,
+        "approval_token_gate_warnings": 12
+      },
+      "authority": {
+        "candidate_command_shape_authority": true,
+        "dry_run_receipt_authority": true,
+        "restore_authority": false,
+        "live_restore_authority": false,
+        "project_file_write_authority": false,
+        "engine_file_write_authority": false,
+        "delete_authority": false,
+        "quarantine_authority": false,
+        "shell_execution_authority": false,
+        "chroma_write_authority": false,
+        "final_lockfile_authority": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,610 @@
+{
+  "authority": {
+    "allowed_gateway_tools": [
+      "read_file",
+      "code_related_files"
+    ],
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "forbidden_gateway_tools": [
+      "shell",
+      "patch-apply",
+      "ingest-one",
+      "ingest-batch-apply",
+      "delete",
+      "quarantine",
+      "restore",
+      "snapshot-live-restore",
+      "network",
+      "pip",
+      "npm",
+      "sudo"
+    ],
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "LLM_ENGINE_REVIEW_DRAFTS_WITH_REVIEW_LIMITED_READ_LENS",
+    "patch": "98",
+    "project_write_authority": false,
+    "rule": "The LLM may draft review recommendations from bound evidence. Nic approves separately. Forge commits only in a future gated patch.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/llm_engine_review_drafts_v1"
+  },
+  "blocked": [],
+  "counts": {
+    "blocked": 0,
+    "ready_for_draft": 80,
+    "total_binders": 80
+  },
+  "created_at": "2026-05-15_083135",
+  "gateway_message": "LLM engine review gateway policy ready.",
+  "gateway_ready": true,
+  "next_step": "Run llm-engine-review-batch-next or llm-engine-review-draft <engine_family>. Drafts are not canonical approvals.",
+  "ready": [
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/activity_log",
+      "engine_family": "activity_log",
+      "evidence_id": "EEB-929b125c673bef05",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/admin_override_console",
+      "engine_family": "admin_override_console",
+      "evidence_id": "EEB-7e1e67cf08853d05",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/agent_reflection_engine",
+      "engine_family": "agent_reflection_engine",
+      "evidence_id": "EEB-efe9b78ceabc9853",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/runtime_wrappers/agents_stack",
+      "engine_family": "agents_stack",
+      "evidence_id": "EEB-e7eb75087380b7b6",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1",
+      "engine_family": "aiweb_os",
+      "evidence_id": "EEB-7b29cb90ee5e540e",
+      "review_status": "DEFERRED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/aiweb_os_engine",
+      "engine_family": "aiweb_os_engine",
+      "evidence_id": "EEB-f8276d394f6ec7e0",
+      "review_status": "APPROVED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/ascii_interpreter_engine",
+      "engine_family": "ascii_interpreter_engine",
+      "evidence_id": "EEB-2acca33f6ecda788",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/agents/athena",
+      "engine_family": "athena",
+      "evidence_id": "EEB-4615d0bfc9a40a98",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/athena_engine",
+      "engine_family": "athena_engine",
+      "evidence_id": "EEB-77509139334c5639",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/christping_listener",
+      "engine_family": "christping_listener",
+      "evidence_id": "EEB-a757f04a6033202d",
+      "review_status": "APPROVED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/christping_validator_engine",
+      "engine_family": "christping_validator_engine",
+      "evidence_id": "EEB-45c0906ffe7e9875",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1",
+      "engine_family": "cold_archive_engine",
+      "evidence_id": "EEB-bc75b62ef10a008d",
+      "review_status": "DEFERRED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/collapse_prevention_engine",
+      "engine_family": "collapse_prevention_engine",
+      "evidence_id": "EEB-82b276d0748f3de8",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/compute_contribution_engine",
+      "engine_family": "compute_contribution_engine",
+      "evidence_id": "EEB-91df18441d00687d",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/confusion_checker",
+      "engine_family": "confusion_checker",
+      "evidence_id": "EEB-0fec7336f1df5be6",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/contribution_dashboard_engine",
+      "engine_family": "contribution_dashboard_engine",
+      "evidence_id": "EEB-505effd8a0bf2be3",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack",
+      "engine_family": "contribution_ledger_stack",
+      "evidence_id": "EEB-e30ad0b50c5c03dd",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02",
+      "engine_family": "control_panel_ui_engine",
+      "evidence_id": "EEB-fd254ee2e030c2ee",
+      "review_status": "APPROVED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/runtime_wrappers/control_stack",
+      "engine_family": "control_stack",
+      "evidence_id": "EEB-7df4589a96005a41",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/core_stack_breather",
+      "engine_family": "core_stack_breather",
+      "evidence_id": "EEB-df535a295e2cc3a2",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/runtime_wrappers/core_system_stack",
+      "engine_family": "core_system_stack",
+      "evidence_id": "EEB-3bf3f922354da81e",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/document_output_formatter",
+      "engine_family": "document_output_formatter",
+      "evidence_id": "EEB-73405632cfb6984f",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/dream_state_engine",
+      "engine_family": "dream_state_engine",
+      "evidence_id": "EEB-250da52af3cef833",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/drift_analyzer_tool",
+      "engine_family": "drift_analyzer_tool",
+      "evidence_id": "EEB-bed831a69b1978e5",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/drift_arbitration_engine",
+      "engine_family": "drift_arbitration_engine",
+      "evidence_id": "EEB-caf4c9b35c20c0c1",
+      "review_status": "DEFERRED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/drift_signature_logger",
+      "engine_family": "drift_signature_logger",
+      "evidence_id": "EEB-3f7110ff52737f3a",
+      "review_status": "APPROVED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/echo_trace_visualizer",
+      "engine_family": "echo_trace_visualizer",
+      "evidence_id": "EEB-69e88d1e442364cb",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/entropy_monitor_engine",
+      "engine_family": "entropy_monitor_engine",
+      "evidence_id": "EEB-e7babb77acece4bb",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/external_feed_listener",
+      "engine_family": "external_feed_listener",
+      "evidence_id": "EEB-5f91c358437560b6",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/failsafe_manager",
+      "engine_family": "failsafe_manager",
+      "evidence_id": "EEB-31299b3bb67a4c24",
+      "review_status": "APPROVED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/field_resonance_mapper",
+      "engine_family": "field_resonance_mapper",
+      "evidence_id": "EEB-3709f6df7c34236d",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/fluid_memory_engine",
+      "engine_family": "fluid_memory_engine",
+      "evidence_id": "EEB-787e388492eb001b",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/agents/gilligan",
+      "engine_family": "gilligan",
+      "evidence_id": "EEB-79999be700688737",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/gilligan_drift_correction_upgrade",
+      "engine_family": "gilligan_drift_correction_upgrade",
+      "evidence_id": "EEB-e5144c91abeb8497",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/glyph_engine",
+      "engine_family": "glyph_engine",
+      "evidence_id": "EEB-249760030f1dcef2",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay",
+      "engine_family": "glyph_ui_overlay",
+      "evidence_id": "EEB-f1a7bbfdc6404c98",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/goal_injection_engine",
+      "engine_family": "goal_injection_engine",
+      "evidence_id": "EEB-6ef85e34d4584ab4",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/install_onboarding_engine",
+      "engine_family": "install_onboarding_engine",
+      "evidence_id": "EEB-27b6d26db1fca1c2",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/loop_resurrection_engine",
+      "engine_family": "loop_resurrection_engine",
+      "evidence_id": "EEB-608882f63d11dd95",
+      "review_status": "APPROVED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/memory_stack_engine",
+      "engine_family": "memory_stack_engine",
+      "evidence_id": "EEB-4a5bb74b665f20b7",
+      "review_status": "DEFERRED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/memory_stack_engine_breathing_v1",
+      "engine_family": "memory_stack_engine_breathing",
+      "evidence_id": "EEB-50a63c58ff43301e",
+      "review_status": "DEFERRED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/runtime_wrappers/memory_stack_stack",
+      "engine_family": "memory_stack_stack",
+      "evidence_id": "EEB-3cfbf7294cfbbb19",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/naming_engine",
+      "engine_family": "naming_engine",
+      "evidence_id": "EEB-4811acd49109ee4b",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/agents/neo",
+      "engine_family": "neo",
+      "evidence_id": "EEB-cf8cb4e8a7b97c69",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/neo_engine",
+      "engine_family": "neo_engine",
+      "evidence_id": "EEB-7d85a9d7c058d7e3",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/peer_communication_engine",
+      "engine_family": "peer_communication_engine",
+      "evidence_id": "EEB-b4d43bbd029bc6ce",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/phase_engine",
+      "engine_family": "phase_engine",
+      "evidence_id": "EEB-69f03eb6723fbc4c",
+      "review_status": "APPROVED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/plugin_engine",
+      "engine_family": "plugin_engine",
+      "evidence_id": "EEB-9f2d185c6369ad5f",
+      "review_status": "APPROVED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain",
+      "engine_family": "project_brain",
+      "evidence_id": "EEB-89de7d13d526bcb6",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_memory",
+      "engine_family": "project_memory",
+      "evidence_id": "EEB-23949a7bc582f4ff",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+      "engine_family": "protoforge",
+      "evidence_id": "EEB-f507208845aa44b0",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0",
+      "engine_family": "protoforge_dashboard_runtime",
+      "evidence_id": "EEB-d2adb3604e47fb64",
+      "review_status": "DEFERRED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/symbolic_layers/recursion_mapper",
+      "engine_family": "recursion_mapper",
+      "evidence_id": "EEB-a52a83f45b9147a9",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/recursive_agent_kernel",
+      "engine_family": "recursive_agent_kernel",
+      "evidence_id": "EEB-a25ac486f908ee13",
+      "review_status": "APPROVED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/recursive_field_breather",
+      "engine_family": "recursive_field_breather",
+      "evidence_id": "EEB-4e67b792942bf24f",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/recursive_field_engine",
+      "engine_family": "recursive_field_engine",
+      "evidence_id": "EEB-d33acb110fc06e11",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/runtime_wrappers/recursive_field_stack",
+      "engine_family": "recursive_field_stack",
+      "evidence_id": "EEB-85488a1a05a51204",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/recursive_verification_engine",
+      "engine_family": "recursive_verification_engine",
+      "evidence_id": "EEB-d20bc5816e4cbd21",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/resonance_charge_meter",
+      "engine_family": "resonance_charge_meter",
+      "evidence_id": "EEB-980203111472c50f",
+      "review_status": "APPROVED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/symbolic_layers/resonance_display",
+      "engine_family": "resonance_display",
+      "evidence_id": "EEB-56fbe400ef70c76b",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/resonance_visualizer_engine",
+      "engine_family": "resonance_visualizer_engine",
+      "evidence_id": "EEB-46f2483eea8aaa4e",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/resurrection_planner",
+      "engine_family": "resurrection_planner",
+      "evidence_id": "EEB-8815431b5a347b48",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/revisit_previous_tasks",
+      "engine_family": "revisit_previous_tasks",
+      "evidence_id": "EEB-fa154cacfa6339d5",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/saved_ideas",
+      "engine_family": "saved_ideas",
+      "evidence_id": "EEB-8b432e29a66e3ba3",
+      "review_status": "DEFERRED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/seed_manager",
+      "engine_family": "seed_manager",
+      "evidence_id": "EEB-06a9287346a56399",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/spc_memory_migrator",
+      "engine_family": "spc_memory_migrator",
+      "evidence_id": "EEB-af3ca030500d9a8a",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2",
+      "engine_family": "stack_breather_phase2",
+      "evidence_id": "EEB-39c6236c8ad9679b",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/stack_linker_breather",
+      "engine_family": "stack_linker_breather",
+      "evidence_id": "EEB-0b4dcdaedc7646d1",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/step_counter_frozen_v1",
+      "engine_family": "step_counter",
+      "evidence_id": "EEB-12d370d32d5c9c14",
+      "review_status": "DEFERRED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/symbolic_capacitor_engine",
+      "engine_family": "symbolic_capacitor_engine",
+      "evidence_id": "EEB-f009925b8d6e9b8e",
+      "review_status": "APPROVED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack",
+      "engine_family": "symbolic_cognition_stack",
+      "evidence_id": "EEB-9ed14b42b452620b",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/symbolic_drift_visualizer",
+      "engine_family": "symbolic_drift_visualizer",
+      "evidence_id": "EEB-b585d646e1a280cc",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/symbolic_feedback_loop_engine",
+      "engine_family": "symbolic_feedback_loop_engine",
+      "evidence_id": "EEB-deba4d6916e5108c",
+      "review_status": "APPROVED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/symbolic_glyph_engine",
+      "engine_family": "symbolic_glyph_engine",
+      "evidence_id": "EEB-34f45c7f8dba494d",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/runtime_wrappers/symbolic_layers_stack",
+      "engine_family": "symbolic_layers_stack",
+      "evidence_id": "EEB-e6c855743c10f45e",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/symbolic_policy_engine",
+      "engine_family": "symbolic_policy_engine",
+      "evidence_id": "EEB-9deae6c9ced516e4",
+      "review_status": "APPROVED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/system_log_engine",
+      "engine_family": "system_log_engine",
+      "evidence_id": "EEB-05b9803a0be968af",
+      "review_status": "APPROVED"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/tier_enforcer",
+      "engine_family": "tier_enforcer",
+      "evidence_id": "EEB-2dcdd27009bc29cd",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/engines/tone_engine",
+      "engine_family": "tone_engine",
+      "evidence_id": "EEB-d96806024a817bac",
+      "review_status": "PENDING_REVIEW"
+    },
+    {
+      "blockers": [],
+      "candidate_path_resolved": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/trust_guard",
+      "engine_family": "trust_guard",
+      "evidence_id": "EEB-a8385832dc4fb5a6",
+      "review_status": "PENDING_REVIEW"
+    }
+  ],
+  "report_type": "LLM_ENGINE_REVIEW_BATCH_PLAN_V1_PATCH98",
+  "schema_version": "llm_engine_review_draft_v1_patch98",
+  "source_law_ready": true,
+  "source_law_status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW"
+}

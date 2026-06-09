@@ -1,0 +1,152 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/agent_reflection_engine",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/agent_reflection_engine",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "agent_reflection_engine",
+  "evidence_id": "EEB-efe9b78ceabc9853",
+  "file_count": 4,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "3326826534de3f1ce537d01a8950118ad2c034860de16eb022d38434a4508a8e",
+      "excerpt_start": "# Agent Reflection Engine\n\nSimulates symbolic self-assessment by symbolic agents.\n\nReflects on recursion loop stability, symbolic charge health, and symbolic drift detection across time.\n\n",
+      "functions_sample": [
+        "Agent",
+        "Reflection",
+        "Engine",
+        "Simulates",
+        "symbolic",
+        "self",
+        "assessment",
+        "agents",
+        "Reflects",
+        "recursion",
+        "loop",
+        "stability",
+        "charge",
+        "health",
+        "and",
+        "drift",
+        "detection",
+        "across",
+        "time"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/agent_reflection_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "3326826534de3f1ce537d01a8950118ad2c034860de16eb022d38434a4508a8e",
+      "size_bytes": 188,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "e2124108c3bf4848c0b0e16ab1275f1dd083d7f3455a3245518b7d4d197266b7",
+      "excerpt_start": "{\n  \"engine\": \"Agent Reflection Engine\",\n  \"version\": \"v1\",\n  \"description\": \"Simulates symbolic agent self-assessment of recursion loop integrity and symbolic charge trends.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Agent",
+        "Reflection",
+        "Engine",
+        "version",
+        "description",
+        "Simulates",
+        "symbolic",
+        "agent",
+        "self",
+        "assessment",
+        "recursion",
+        "loop",
+        "integrity",
+        "and",
+        "charge",
+        "trends"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/agent_reflection_engine/reflection_manifest.json",
+      "relative_to_candidate": "reflection_manifest.json",
+      "sha256": "e2124108c3bf4848c0b0e16ab1275f1dd083d7f3455a3245518b7d4d197266b7",
+      "size_bytes": 178,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "2feabf3cbcde360cb6ebf6542190c61ebcf99e08cc03f0d9d44a11ec2fb3d51b",
+      "excerpt_start": "import json\nimport time\nimport random\n\nLOG_FILE = \"reflection_log.jsonl\"\n\ndef perform_self_reflection():\n    \"\"\"Simulates an agent reviewing its symbolic recursion history.\"\"\"\n    loop_integrity = random.choice([\"perfect\", \"minor drift\", \"unstable\"])\n    symbolic_charge = random.randint(30, 100)\n\n    reflection = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"loop_integrity\": loop_integrity,\n        \"symbolic_charge\": symbolic_charge\n    }\n\n    try:\n        with open(LOG_FILE, \"a\") as f:\n            f.write(json.dumps(reflection) + \"\\n\")\n        print(f\"✔️ Reflection event recorded: {reflection}\")\n    except Exception as e:\n        print(f\"[!] Failed to record reflection: {e}\")\n\n    return reflection\n",
+      "functions_sample": [
+        "perform_self_reflection"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time",
+        "import random"
+      ],
+      "line_count": 26,
+      "path": "/home/nic/aiweb/engines/agent_reflection_engine/reflection_core.py",
+      "relative_to_candidate": "reflection_core.py",
+      "sha256": "2feabf3cbcde360cb6ebf6542190c61ebcf99e08cc03f0d9d44a11ec2fb3d51b",
+      "size_bytes": 751,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "51597c796861770b0ad25e87537165a018540db936f9c7b06302b343ea52db5b",
+      "excerpt_start": "from reflection_core import perform_self_reflection\n\ndef test_reflection_cycle():\n    try:\n        result = perform_self_reflection()\n        assert \"loop_integrity\" in result\n        assert \"symbolic_charge\" in result\n        print(\"✅ Test Passed: Reflection recorded successfully.\")\n    except Exception as e:\n        print(f\"❌ Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_reflection_cycle()\n",
+      "functions_sample": [
+        "test_reflection_cycle"
+      ],
+      "imports_sample": [
+        "from reflection_core import perform_self_reflection"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/agent_reflection_engine/test_reflection.py",
+      "relative_to_candidate": "test_reflection.py",
+      "sha256": "51597c796861770b0ad25e87537165a018540db936f9c7b06302b343ea52db5b",
+      "size_bytes": 409,
+      "suffix": ".py"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "perform_self_reflection",
+    "test_reflection_cycle"
+  ],
+  "warnings": []
+}

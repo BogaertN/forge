@@ -1,0 +1,28 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "HUMAN_REVIEW_QUEUE_ONLY_NO_LEDGER_MUTATION",
+    "patch": "99",
+    "project_write_authority": false,
+    "rule": "Patch 99 queues LLM draft reviews for Nic. It records approve/defer/reject intent only. Patch 100 is required to commit ledger changes after SHA re-verification.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_queue_v1"
+  },
+  "counts": {
+    "approved_for_future_commit": 0,
+    "deferred_for_more_review": 0,
+    "drafts_in_queue": 0,
+    "rejected_from_canonical_review": 0,
+    "undecided": 0
+  },
+  "created_at": "2026-05-15_125106",
+  "items": [],
+  "next_step": "Nic may mark queue decisions. Patch 100 is required to commit approved decisions after live candidate SHA re-verification.",
+  "report_type": "ENGINE_REVIEW_QUEUE_V1_PATCH99",
+  "schema_version": "engine_review_queue_v1_patch99",
+  "status": "ENGINE_REVIEW_QUEUE_READY_NO_CANONICAL_AUTHORITY"
+}

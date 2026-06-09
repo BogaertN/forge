@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=AI.Web OS Desktop Launcher
+Comment=Launch AI.Web OS Operator Console as a clean single-window app
+Exec=/home/nic/forge/scripts/aiweb_os_appctl.py start
+Icon=/home/nic/.local/share/icons/aiweb/aiweb-os-desktop-launcher.png
+Terminal=false
+Categories=Development;Utility;
+StartupNotify=true

@@ -1,0 +1,741 @@
+{
+  "blueprint_baseline": {
+    "required_agent_profile_fields": [
+      "agent_id",
+      "canonical_name",
+      "version",
+      "last_updated",
+      "role",
+      "symbolic_signature",
+      "description",
+      "capabilities",
+      "limitations",
+      "persona",
+      "voice_style",
+      "quotes_or_character_inspiration",
+      "special_style_notes",
+      "permissions",
+      "authority",
+      "enforcement_rules",
+      "forbidden_actions",
+      "session_state",
+      "last_action",
+      "last_feedback",
+      "log_fields",
+      "timestamp"
+    ],
+    "required_user_profile_fields": [
+      "user_id",
+      "canonical_name",
+      "spirit_name",
+      "project_affiliations",
+      "identity_tags",
+      "version",
+      "last_updated",
+      "project_context",
+      "interaction_preferences",
+      "meta_rules",
+      "session_state"
+    ],
+    "source": "Self-Hosted Identity Vault manual, Operational Identity Profiles section"
+  },
+  "boundary": [
+    "This patch is a read-only migration planning pass.",
+    "It writes reports only under Forge memory.",
+    "It does not modify Identity Vault code, databases, .env, node_modules, Forge registry, service contracts, RMC memory, or agent identity activation state.",
+    "It does not read .env secret values.",
+    "It does not execute ALTER TABLE or create live agent profiles."
+  ],
+  "canonical_database": {
+    "error": null,
+    "exists": true,
+    "ok": true,
+    "opened_readonly": true,
+    "path": "/home/nic/identity-vault/data/identity_vault.db",
+    "row_counts": {
+      "agent_profiles": 0,
+      "audit_logs": 0,
+      "feedback_logs": 0,
+      "session_state": 0,
+      "sqlite_sequence": 0,
+      "user_profiles": 0
+    },
+    "schemas": {
+      "agent_profiles": [
+        {
+          "cid": 0,
+          "default": null,
+          "name": "id",
+          "notnull": false,
+          "pk": true,
+          "type": "INTEGER"
+        },
+        {
+          "cid": 1,
+          "default": null,
+          "name": "agent_id",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "default": null,
+          "name": "canonical_name",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "default": null,
+          "name": "role",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "default": "'{}'",
+          "name": "capabilities",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 5,
+          "default": "'{}'",
+          "name": "limits",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 6,
+          "default": "'{}'",
+          "name": "enforcement",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 7,
+          "default": "CURRENT_TIMESTAMP",
+          "name": "created_at",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        },
+        {
+          "cid": 8,
+          "default": "CURRENT_TIMESTAMP",
+          "name": "updated_at",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        },
+        {
+          "cid": 9,
+          "default": "1",
+          "name": "version",
+          "notnull": false,
+          "pk": false,
+          "type": "INTEGER"
+        },
+        {
+          "cid": 10,
+          "default": "1",
+          "name": "is_active",
+          "notnull": false,
+          "pk": false,
+          "type": "INTEGER"
+        }
+      ],
+      "audit_logs": [
+        {
+          "cid": 0,
+          "default": null,
+          "name": "id",
+          "notnull": false,
+          "pk": true,
+          "type": "INTEGER"
+        },
+        {
+          "cid": 1,
+          "default": null,
+          "name": "profile_id",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "default": null,
+          "name": "profile_type",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "default": null,
+          "name": "action",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "default": null,
+          "name": "details",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 5,
+          "default": "CURRENT_TIMESTAMP",
+          "name": "timestamp",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        },
+        {
+          "cid": 6,
+          "default": null,
+          "name": "ip_address",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 7,
+          "default": null,
+          "name": "user_agent",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        }
+      ],
+      "feedback_logs": [
+        {
+          "cid": 0,
+          "default": null,
+          "name": "id",
+          "notnull": false,
+          "pk": true,
+          "type": "INTEGER"
+        },
+        {
+          "cid": 1,
+          "default": null,
+          "name": "profile_id",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "default": null,
+          "name": "feedback_type",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "default": null,
+          "name": "message",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "default": "'{}'",
+          "name": "data",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 5,
+          "default": "CURRENT_TIMESTAMP",
+          "name": "timestamp",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        },
+        {
+          "cid": 6,
+          "default": "0",
+          "name": "resolved",
+          "notnull": false,
+          "pk": false,
+          "type": "INTEGER"
+        }
+      ],
+      "session_state": [
+        {
+          "cid": 0,
+          "default": null,
+          "name": "id",
+          "notnull": false,
+          "pk": true,
+          "type": "INTEGER"
+        },
+        {
+          "cid": 1,
+          "default": null,
+          "name": "profile_id",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "default": null,
+          "name": "profile_type",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "default": "'{}'",
+          "name": "session_data",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "default": "CURRENT_TIMESTAMP",
+          "name": "created_at",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        },
+        {
+          "cid": 5,
+          "default": "CURRENT_TIMESTAMP",
+          "name": "updated_at",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        },
+        {
+          "cid": 6,
+          "default": null,
+          "name": "expires_at",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        }
+      ],
+      "sqlite_sequence": [
+        {
+          "cid": 0,
+          "default": null,
+          "name": "name",
+          "notnull": false,
+          "pk": false,
+          "type": ""
+        },
+        {
+          "cid": 1,
+          "default": null,
+          "name": "seq",
+          "notnull": false,
+          "pk": false,
+          "type": ""
+        }
+      ],
+      "user_profiles": [
+        {
+          "cid": 0,
+          "default": null,
+          "name": "id",
+          "notnull": false,
+          "pk": true,
+          "type": "INTEGER"
+        },
+        {
+          "cid": 1,
+          "default": null,
+          "name": "user_id",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "default": null,
+          "name": "canonical_name",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "default": "'{}'",
+          "name": "interaction_preferences",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "default": "'{}'",
+          "name": "meta_rules",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 5,
+          "default": "'{}'",
+          "name": "session_defaults",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 6,
+          "default": "'{}'",
+          "name": "drift_tracking",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 7,
+          "default": "CURRENT_TIMESTAMP",
+          "name": "created_at",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        },
+        {
+          "cid": 8,
+          "default": "CURRENT_TIMESTAMP",
+          "name": "updated_at",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        },
+        {
+          "cid": 9,
+          "default": "1",
+          "name": "version",
+          "notnull": false,
+          "pk": false,
+          "type": "INTEGER"
+        },
+        {
+          "cid": 10,
+          "default": "1",
+          "name": "is_active",
+          "notnull": false,
+          "pk": false,
+          "type": "INTEGER"
+        }
+      ]
+    },
+    "tables": [
+      "agent_profiles",
+      "audit_logs",
+      "feedback_logs",
+      "session_state",
+      "sqlite_sequence",
+      "user_profiles"
+    ]
+  },
+  "contracts": {
+    "aiweb_identity_vault": {
+      "error": null,
+      "exists": true,
+      "json_ok": true,
+      "missing_required_fields": [],
+      "name": "identity_vault",
+      "ok": true,
+      "path": "/home/nic/aiweb/service_contracts/identity_vault.contract.json"
+    },
+    "identity_vault_draft": {
+      "error": null,
+      "exists": true,
+      "json_ok": true,
+      "missing_required_fields": [
+        "name",
+        "role",
+        "api_or_cli_commands_exposed",
+        "audit_log_path",
+        "test_command",
+        "startup_command",
+        "shutdown_command",
+        "health_check_command",
+        "owner_authority"
+      ],
+      "name": null,
+      "ok": false,
+      "path": "/home/nic/identity-vault/service_contracts/identity_vault_readonly_service_contract.draft.json"
+    }
+  },
+  "findings": [
+    {
+      "code": "IV_AGENT_PROFILE_JSON_PAYLOAD_REQUIRED",
+      "level": "INFO",
+      "message": "Live agent_profiles is missing 13 blueprint fields; plan chooses a full operational_profile_json payload column plus indexed core columns."
+    },
+    {
+      "code": "IV_USER_PROFILE_JSON_PAYLOAD_REQUIRED",
+      "level": "INFO",
+      "message": "Live user_profiles is missing 5 blueprint fields; plan chooses a full operational_profile_json payload column plus indexed core columns."
+    },
+    {
+      "code": "IV_NO_SCHEMA_MIGRATION_EXECUTED",
+      "level": "INFO",
+      "message": "Patch 225B writes a migration plan only; no ALTER TABLE statements were executed."
+    },
+    {
+      "code": "IV_SCHEMA_PLAN_BLOCKER",
+      "level": "FAIL",
+      "message": "contract baseline invalid"
+    },
+    {
+      "code": "IV_SCHEMA_PLAN_BLOCKER",
+      "level": "FAIL",
+      "message": "safety snapshot changed or forbidden action detected"
+    }
+  ],
+  "live_alignment": {
+    "agent_profiles": {
+      "columns": [
+        "id",
+        "agent_id",
+        "canonical_name",
+        "role",
+        "capabilities",
+        "limits",
+        "enforcement",
+        "created_at",
+        "updated_at",
+        "version",
+        "is_active"
+      ],
+      "missing": [
+        "symbolic_signature",
+        "description",
+        "persona",
+        "voice_style",
+        "quotes_or_character_inspiration",
+        "special_style_notes",
+        "permissions",
+        "authority",
+        "forbidden_actions",
+        "session_state",
+        "last_action",
+        "last_feedback",
+        "log_fields"
+      ],
+      "present_by_alias": [
+        "last_updated via updated_at",
+        "limitations via limits",
+        "enforcement_rules via enforcement",
+        "timestamp via created_at"
+      ],
+      "present_exact": [
+        "agent_id",
+        "canonical_name",
+        "version",
+        "role",
+        "capabilities"
+      ],
+      "required_fields": [
+        "agent_id",
+        "canonical_name",
+        "version",
+        "last_updated",
+        "role",
+        "symbolic_signature",
+        "description",
+        "capabilities",
+        "limitations",
+        "persona",
+        "voice_style",
+        "quotes_or_character_inspiration",
+        "special_style_notes",
+        "permissions",
+        "authority",
+        "enforcement_rules",
+        "forbidden_actions",
+        "session_state",
+        "last_action",
+        "last_feedback",
+        "log_fields",
+        "timestamp"
+      ]
+    },
+    "user_profiles": {
+      "columns": [
+        "id",
+        "user_id",
+        "canonical_name",
+        "interaction_preferences",
+        "meta_rules",
+        "session_defaults",
+        "drift_tracking",
+        "created_at",
+        "updated_at",
+        "version",
+        "is_active"
+      ],
+      "missing": [
+        "spirit_name",
+        "project_affiliations",
+        "identity_tags",
+        "project_context",
+        "session_state"
+      ],
+      "present_by_alias": [
+        "last_updated via updated_at"
+      ],
+      "present_exact": [
+        "user_id",
+        "canonical_name",
+        "version",
+        "interaction_preferences",
+        "meta_rules"
+      ],
+      "required_fields": [
+        "user_id",
+        "canonical_name",
+        "spirit_name",
+        "project_affiliations",
+        "identity_tags",
+        "version",
+        "last_updated",
+        "project_context",
+        "interaction_preferences",
+        "meta_rules",
+        "session_state"
+      ]
+    }
+  },
+  "migration_strategy": {
+    "agent_profiles_add_columns_plan": [
+      {
+        "name": "operational_profile_json",
+        "purpose": "Full Agent Operational Identity JSON payload matching the manual blueprint.",
+        "type": "TEXT"
+      },
+      {
+        "name": "profile_schema_version",
+        "purpose": "Version of the operational identity payload schema.",
+        "type": "TEXT"
+      },
+      {
+        "name": "rmc_namespace",
+        "purpose": "Read-only pointer to the agent-scoped RMC namespace. Not memory content.",
+        "type": "TEXT"
+      },
+      {
+        "name": "activation_state",
+        "purpose": "inactive/draft/active lifecycle marker. Default must be inactive.",
+        "type": "TEXT"
+      },
+      {
+        "name": "profile_hash",
+        "purpose": "Hash of operational_profile_json for tamper-evidence.",
+        "type": "TEXT"
+      },
+      {
+        "name": "last_validated_at",
+        "purpose": "Timestamp of last schema/profile validation.",
+        "type": "TEXT"
+      }
+    ],
+    "default_safety_values": {
+      "agent_profiles.activation_state": "inactive",
+      "agent_profiles.operational_profile_json": "{}",
+      "profile_schema_version": "1.0.0-blueprint",
+      "user_profiles.operational_profile_json": "{}"
+    },
+    "forbidden_in_migration": [
+      "Do not create live agent profiles.",
+      "Do not set activation_state to active.",
+      "Do not write RMC memory.",
+      "Do not read .env secret values.",
+      "Do not delete legacy vault.db.",
+      "Do not create EchoForge or ProtoForge2 live execution roots."
+    ],
+    "reasoning": [
+      "The live schema already has useful indexed core columns such as agent_id/user_id, canonical_name, role, version, is_active, created_at, and updated_at.",
+      "The manual blueprint contains many nested/list fields that fit poorly as separate scalar columns during bootstrap.",
+      "A JSON payload column preserves the full operational identity exactly while keeping a few indexed columns available for fast lookup and safe previews.",
+      "This avoids prematurely over-normalizing the schema before real agent usage patterns exist."
+    ],
+    "selected_strategy": "hybrid_json_payload_plus_indexed_core_columns",
+    "user_profiles_add_columns_plan": [
+      {
+        "name": "operational_profile_json",
+        "purpose": "Full User Operational Identity JSON payload matching the manual blueprint.",
+        "type": "TEXT"
+      },
+      {
+        "name": "profile_schema_version",
+        "purpose": "Version of the operational identity payload schema.",
+        "type": "TEXT"
+      },
+      {
+        "name": "profile_hash",
+        "purpose": "Hash of operational_profile_json for tamper-evidence.",
+        "type": "TEXT"
+      },
+      {
+        "name": "last_validated_at",
+        "purpose": "Timestamp of last schema/profile validation.",
+        "type": "TEXT"
+      }
+    ]
+  },
+  "next_safe_step": "Patch 226 should apply the schema migration after backup, adding JSON payload/profile metadata columns only. It must not create live agent profiles or activate identities.",
+  "roots": {
+    "aiweb_root": "/home/nic/aiweb",
+    "canonical_db": "/home/nic/identity-vault/data/identity_vault.db",
+    "forge_root": "/home/nic/forge",
+    "identity_vault_root": "/home/nic/identity-vault",
+    "legacy_db_preserved": "/home/nic/identity-vault/vault.db"
+  },
+  "safety_checks": {
+    "agent_identity_activation_performed": false,
+    "aiweb_identity_contract_unchanged": true,
+    "canonical_db_sha_unchanged": true,
+    "database_write_performed": false,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "forge_tool_registry_modified": false,
+    "identity_contract_draft_unchanged": true,
+    "legacy_db_sha_unchanged": true,
+    "schema_migration_executed": false
+  },
+  "sql_plan_preview": [
+    "-- Patch 226 candidate SQL plan only; do not execute in Patch 225B.",
+    "ALTER TABLE agent_profiles ADD COLUMN operational_profile_json TEXT NOT NULL DEFAULT '{}';",
+    "ALTER TABLE agent_profiles ADD COLUMN profile_schema_version TEXT NOT NULL DEFAULT '1.0.0-blueprint';",
+    "ALTER TABLE agent_profiles ADD COLUMN rmc_namespace TEXT;",
+    "ALTER TABLE agent_profiles ADD COLUMN activation_state TEXT NOT NULL DEFAULT 'inactive';",
+    "ALTER TABLE agent_profiles ADD COLUMN profile_hash TEXT;",
+    "ALTER TABLE agent_profiles ADD COLUMN last_validated_at TEXT;",
+    "ALTER TABLE user_profiles ADD COLUMN operational_profile_json TEXT NOT NULL DEFAULT '{}';",
+    "ALTER TABLE user_profiles ADD COLUMN profile_schema_version TEXT NOT NULL DEFAULT '1.0.0-blueprint';",
+    "ALTER TABLE user_profiles ADD COLUMN profile_hash TEXT;",
+    "ALTER TABLE user_profiles ADD COLUMN last_validated_at TEXT;",
+    "CREATE INDEX IF NOT EXISTS idx_agent_profiles_agent_id ON agent_profiles(agent_id);",
+    "CREATE INDEX IF NOT EXISTS idx_agent_profiles_activation_state ON agent_profiles(activation_state);",
+    "CREATE INDEX IF NOT EXISTS idx_agent_profiles_rmc_namespace ON agent_profiles(rmc_namespace);",
+    "CREATE INDEX IF NOT EXISTS idx_user_profiles_user_id ON user_profiles(user_id);"
+  ],
+  "timestamp": "20260523_203848_UTC",
+  "verdict": "FAIL"
+}

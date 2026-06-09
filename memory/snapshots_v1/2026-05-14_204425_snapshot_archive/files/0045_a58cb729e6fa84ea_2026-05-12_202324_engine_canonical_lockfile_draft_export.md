@@ -1,0 +1,92 @@
+# Canonical Engine Lockfile Draft — Patch 71
+
+This is a draft review artifact only. It is not canonical authority and does not move, delete, quarantine, or edit engine files.
+
+- Policy version: `patch71_canonical_engine_lockfile_draft_v1`
+- Included entries: **72**
+- Excluded/held entries: **8**
+- Status: **VALID_DRAFT**
+
+## Included Draft Entries
+- **activity_log** → `projects/recursive_lmm_grok1/engines/activity_log` (low)
+- **admin_override_console** → `aiweb/engines/admin_override_console` (medium)
+- **agent_reflection_engine** → `aiweb/engines/agent_reflection_engine` (medium)
+- **agents_stack** → `aiweb/runtime_wrappers/agents_stack` (medium)
+- **aiweb_os_engine** → `aiweb/engines/aiweb_os_engine` (medium_high)
+- **ascii_interpreter_engine** → `aiweb/engines/ascii_interpreter_engine` (medium)
+- **athena** → `agents/athena` (low)
+- **athena_engine** → `aiweb/engines/athena_engine` (medium)
+- **christping_listener** → `aiweb/engines/christping_listener` (medium_high)
+- **christping_validator_engine** → `aiweb/engines/christping_validator_engine` (medium)
+- **collapse_prevention_engine** → `aiweb/engines/collapse_prevention_engine` (medium)
+- **compute_contribution_engine** → `aiweb/engines/compute_contribution_engine` (medium)
+- **confusion_checker** → `projects/recursive_lmm_grok1/engines/confusion_checker` (low)
+- **contribution_dashboard_engine** → `aiweb/engines/contribution_dashboard_engine` (medium)
+- **contribution_ledger_stack** → `aiweb/runtime_wrappers/contribution_ledger_stack` (medium)
+- **control_panel_ui_engine** → `aiweb/engines/control_panel_ui_engine_v1.02` (medium_high)
+- **control_stack** → `aiweb/runtime_wrappers/control_stack` (medium)
+- **core_stack_breather** → `aiweb/engines/core_stack_breather` (medium)
+- **core_system_stack** → `aiweb/runtime_wrappers/core_system_stack` (medium)
+- **document_output_formatter** → `aiweb/engines/document_output_formatter` (medium)
+- **dream_state_engine** → `aiweb/engines/dream_state_engine` (medium)
+- **drift_analyzer_tool** → `aiweb/engines/drift_analyzer_tool` (medium)
+- **drift_signature_logger** → `aiweb/engines/drift_signature_logger` (medium_high)
+- **echo_trace_visualizer** → `aiweb/engines/echo_trace_visualizer` (medium)
+- **entropy_monitor_engine** → `aiweb/engines/entropy_monitor_engine` (medium)
+- **external_feed_listener** → `aiweb/engines/external_feed_listener` (medium)
+- **failsafe_manager** → `aiweb/engines/failsafe_manager` (medium_high)
+- **field_resonance_mapper** → `aiweb/engines/field_resonance_mapper` (medium)
+- **fluid_memory_engine** → `aiweb/engines/fluid_memory_engine` (medium)
+- **gilligan** → `agents/gilligan` (low)
+- **gilligan_drift_correction_upgrade** → `aiweb/engines/gilligan_drift_correction_upgrade` (medium)
+- **glyph_engine** → `aiweb/engines/glyph_engine` (medium)
+- **glyph_ui_overlay** → `aiweb/symbolic_layers/glyph_ui_overlay` (medium)
+- **goal_injection_engine** → `aiweb/engines/goal_injection_engine` (medium)
+- **install_onboarding_engine** → `aiweb/engines/install_onboarding_engine` (medium)
+- **loop_resurrection_engine** → `aiweb/engines/loop_resurrection_engine` (medium_high)
+- **memory_stack_stack** → `aiweb/runtime_wrappers/memory_stack_stack` (medium)
+- **naming_engine** → `aiweb/engines/naming_engine` (medium)
+- **neo** → `agents/neo` (low)
+- **neo_engine** → `aiweb/engines/neo_engine` (medium)
+- **peer_communication_engine** → `aiweb/engines/peer_communication_engine` (medium)
+- **phase_engine** → `aiweb/engines/phase_engine` (medium_high)
+- **plugin_engine** → `aiweb/engines/plugin_engine` (medium_high)
+- **project_brain** → `projects/recursive_lmm_grok1/engines/project_brain` (low)
+- **project_memory** → `projects/recursive_lmm_grok1/engines/project_memory` (low)
+- **protoforge** → `aiweb/runtime_wrappers/protoforge_v1.04_db_enabled` (medium)
+- **recursion_mapper** → `aiweb/symbolic_layers/recursion_mapper` (medium)
+- **recursive_agent_kernel** → `aiweb/engines/recursive_agent_kernel` (medium_high)
+- **recursive_field_breather** → `aiweb/engines/recursive_field_breather` (medium)
+- **recursive_field_engine** → `aiweb/engines/recursive_field_engine` (medium)
+- **recursive_field_stack** → `aiweb/runtime_wrappers/recursive_field_stack` (medium)
+- **recursive_verification_engine** → `engines/recursive_verification_engine` (low)
+- **resonance_charge_meter** → `aiweb/engines/resonance_charge_meter` (medium_high)
+- **resonance_display** → `aiweb/symbolic_layers/resonance_display` (medium)
+- **resonance_visualizer_engine** → `aiweb/engines/resonance_visualizer_engine` (medium)
+- **resurrection_planner** → `aiweb/engines/resurrection_planner` (medium)
+- **revisit_previous_tasks** → `projects/recursive_lmm_grok1/engines/revisit_previous_tasks` (low)
+- **seed_manager** → `aiweb/engines/seed_manager` (medium)
+- **spc_memory_migrator** → `aiweb/engines/spc_memory_migrator` (medium)
+- **stack_breather_phase2** → `aiweb/runtime_wrappers/stack_breather_phase2` (low)
+- **stack_linker_breather** → `aiweb/engines/stack_linker_breather` (medium)
+- **symbolic_capacitor_engine** → `aiweb/engines/symbolic_capacitor_engine` (medium_high)
+- **symbolic_cognition_stack** → `aiweb/runtime_wrappers/symbolic_cognition_stack` (medium)
+- **symbolic_drift_visualizer** → `aiweb/engines/symbolic_drift_visualizer` (medium)
+- **symbolic_feedback_loop_engine** → `aiweb/engines/symbolic_feedback_loop_engine` (medium_high)
+- **symbolic_glyph_engine** → `aiweb/engines/symbolic_glyph_engine` (medium)
+- **symbolic_layers_stack** → `aiweb/runtime_wrappers/symbolic_layers_stack` (medium)
+- **symbolic_policy_engine** → `aiweb/engines/symbolic_policy_engine` (medium_high)
+- **system_log_engine** → `aiweb/engines/system_log_engine` (medium_high)
+- **tier_enforcer** → `aiweb/engines/tier_enforcer` (medium)
+- **tone_engine** → `aiweb/engines/tone_engine` (medium)
+- **trust_guard** → `projects/recursive_lmm_grok1/engines/trust_guard` (low)
+
+## Excluded Holds
+- **aiweb_os** — `HOLD_TEST_ONLY_REVIEW` → `aiweb/runtime_wrappers/aiweb_os_v1`
+- **cold_archive_engine** — `HOLD_ARCHIVE_AMBIGUITY_REVIEW` → `aiweb/engines/cold_archive_engine_frozen_v1`
+- **drift_arbitration_engine** — `HOLD_FROZEN_CANDIDATE_REVIEW` → `aiweb/engines/drift_arbitration_engine`
+- **memory_stack_engine** — `HOLD_FROZEN_CANDIDATE_REVIEW` → `aiweb/engines/memory_stack_engine`
+- **memory_stack_engine_breathing** — `HOLD_FOR_MANUAL_ARCHITECT_REVIEW` → `aiweb/engines/memory_stack_engine_breathing_v1`
+- **protoforge_dashboard_runtime** — `HOLD_FOR_MANUAL_ARCHITECT_REVIEW` → `runtime_wrappers/protoforge_dashboard_runtime_v2.0`
+- **saved_ideas** — `HOLD_ARCHIVE_AMBIGUITY_REVIEW` → `projects/recursive_lmm_grok1/engines/saved_ideas`
+- **step_counter** — `HOLD_FROZEN_CANDIDATE_REVIEW` → `projects/recursive_lmm_grok1/engines/step_counter_frozen_v1`

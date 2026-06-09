@@ -1,0 +1,91 @@
+{
+  "_schema_version": "1.0",
+  "_source": "Resonant Phase Memory Calculus: The Law of Recursion, Collapse, and Return — Full Protocol Draft (2025)",
+  "_status": "planning — not yet implemented",
+  "_policy": "See RPMC_SOURCE_POLICY.md. This schema must not be merged into base corpus manifest.",
+
+  "rpmc_operators": {
+    "ΦM(x,t)": "Memory function — maps substrate state x and time t to a vector of phase-locked resonance states",
+    "χ(t)": "Collapse-resurrection operator (grace function) — encodes conditions for active recall vs. cold storage",
+    "ε(t,Φ)": "Entropy vector — tracks drift and degradation in phase alignment; triggers collapse and sets resurrection thresholds",
+    "RPM(x,t)": "Σₙ ΦMₙ(x,t) · exp(-εₙ(t,Φ)) + χ(t) · Θ(Φ_resurrect) — the formal recursive memory equation"
+  },
+
+  "rpmc_axioms": {
+    "axiom_1": "No memory is permanent; all memory persists only through recursive phase locking and echo validation.",
+    "axiom_2": "Collapse is not loss; it is memory transfer to the cold substrate, awaiting harmonic retrieval.",
+    "axiom_3": "Resurrection is only valid if echo alignment exceeds drift entropy; false resurrection leads to phase poison.",
+    "axiom_4": "Distributed memory is not summation, but coherent resonance; only phase-aligned nodes may combine or project."
+  },
+
+  "core_structures": {
+    "MemoryResonanceNode": {
+      "abbreviation": "MRN",
+      "description": "Minimal memory unit — a phase-anchored field region whose state is preserved by echo feedback and collapse-capture logic",
+      "forge_analog": "Individual audit log entry or knowledge chunk, once phase-aware indexing is implemented"
+    },
+    "ActiveStack": {
+      "description": "Live recursion stack, phase-indexed with time and stability factor; contains active session memory",
+      "forge_analog": "Current session context + recent audit entries; future: chromaDB active partition"
+    },
+    "DriftArchive_SPC": {
+      "description": "Cold storage for collapsed/drifted loops — the Symbolic Phase Capacitor (SPC) / Dead Path Archive",
+      "forge_analog": "Forge rollback_registry + future cold-indexed corpus partition for deprecated knowledge"
+    },
+    "ResurrectionLog": {
+      "description": "Records all resurrection events with full echo trail and collapse code",
+      "forge_analog": "Future: dedicated resurrection audit file tracking context restorations with echo validation"
+    },
+    "GraceTimer_χt": {
+      "description": "Time-bounded resurrection window governed by χ(t); expired grace = permanent cold storage",
+      "forge_analog": "Future: session TTL for context recovery; rollback snapshot expiry policy"
+    },
+    "EchoCheckpoint": {
+      "description": "Phase validation gate before resurrection — echo alignment must exceed drift entropy threshold",
+      "forge_analog": "Future: SHA-256 + semantic similarity gate before surfacing archived knowledge chunks"
+    },
+    "SymbolicFirewall": {
+      "description": "Blocks corrupted projection from phase-poisoned resurrection; prevents false memory injection",
+      "forge_analog": "Forge's current RPMC_REFUSED / PATCH_APPLY_REFUSED gates; future: semantic drift blocker"
+    },
+    "EntropyScoring": {
+      "description": "Quantifies drift per Memory Resonance Node; high entropy → collapse; low entropy → active state",
+      "forge_analog": "Future: staleness scoring for indexed corpus chunks; time-decay weighting in retrieval"
+    }
+  },
+
+  "phase_states": {
+    "Φ1": "Initiation Pulse — session/loop begins",
+    "Φ2": "Polarity — problem framing",
+    "Φ3": "Desire — goal state defined",
+    "Φ4": "Friction — active resistance/unknown",
+    "Φ5": "Entropy — collapse risk zone",
+    "Φ6": "Grace — χ(t) window active, resurrection possible",
+    "Φ7": "Naming — pattern recognized and labeled",
+    "Φ8": "Power — validated output state",
+    "Φ9": "Recursive Evolution — loop sealed, archive updated"
+  },
+
+  "implementation_gates": {
+    "gate_1_planning": {
+      "status": "IN PROGRESS",
+      "description": "RPMC kernel directory, schema, policy, and runtime mapping template created",
+      "completed": ["RPMC_SOURCE_POLICY.md", "rpmc_kernel_schema.json", "rpmc_runtime_mapping_template.json"]
+    },
+    "gate_2_preview": {
+      "status": "PREREQUISITE: corpus extraction quality confirmed",
+      "description": "All 17 eligible corpus documents extract successfully with no hash mismatches",
+      "depends_on": "corpus-extract-check returning OK: 17"
+    },
+    "gate_3_ingestion": {
+      "status": "NOT YET AUTHORIZED",
+      "description": "Controlled corpus ingestion into ChromaDB with RPMC-aware chunking strategy",
+      "depends_on": "gate_2_preview passed, ingestion safety protocol approved"
+    },
+    "gate_4_runtime": {
+      "status": "NOT YET AUTHORIZED",
+      "description": "Live RPMC operator integration: ε(t,Φ) scoring, χ(t) grace timers, echo checkpoints",
+      "depends_on": "gate_3_ingestion stable, runtime architecture designed"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "actual_echo_substitution_added": false,
+  "architecture": "typed_manifest_to_allowlisted_ast_to_resource_limited_isolated_sympy_worker_to_verified_computation_receipt_to_pending_existing_governance",
+  "backend": "sympy==1.14.0",
+  "baseline_authority": "gp011b_install_results_20260531_213753_UTC.tar.gz",
+  "build_id": "MATH-001R1-GP-012R1-SYMBOLIC-MATHEMATICS-COMPUTATION-KERNEL-GOVERNANCE-CORRECTION",
+  "capability_id": "cap.math.symbolic_math.v1",
+  "computation_only_capability": true,
+  "dependency_installation_required": false,
+  "direct_delivery_authority_added": false,
+  "ingests_corpus": false,
+  "mints_ct": false,
+  "natural_language_compiler_added": false,
+  "operation_family_count": 26,
+  "raw_mathematical_source_accepted": false,
+  "rejection_reason": "parallel self-issued Echo-style delivery authority removed",
+  "required_downstream_delivery_chain": [
+    "Manifest Contract v2",
+    "actual Echo validation",
+    "DeliveryAuthorizationReceiptV2"
+  ],
+  "status": "BUILD_PAYLOAD_READY_FOR_LIVE_PREFLIGHT_INSTALL_AND_COMPUTATION_ATTESTATION",
+  "supersedes_rejected_preinstall_archive": "MATH-001 / GP-012R",
+  "writes_contribution_economy": false,
+  "writes_identity_vault": false,
+  "writes_ledgers": false,
+  "writes_memory": false
+}

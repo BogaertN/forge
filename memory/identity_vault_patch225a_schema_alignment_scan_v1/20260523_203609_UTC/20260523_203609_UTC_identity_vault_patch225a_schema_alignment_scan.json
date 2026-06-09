@@ -1,0 +1,1032 @@
+{
+  "agent_alignment": {
+    "column_count": 11,
+    "columns": [
+      "id",
+      "agent_id",
+      "canonical_name",
+      "role",
+      "capabilities",
+      "limits",
+      "enforcement",
+      "created_at",
+      "updated_at",
+      "version",
+      "is_active"
+    ],
+    "exact_required_fields_present": [
+      "agent_id",
+      "canonical_name",
+      "version",
+      "role",
+      "capabilities"
+    ],
+    "exact_required_fields_present_count": 5,
+    "json_container_present": false,
+    "missing_required_fields": [
+      "last_updated",
+      "symbolic_signature",
+      "description",
+      "limitations",
+      "persona",
+      "voice_style",
+      "quotes_or_character_inspiration",
+      "special_style_notes",
+      "permissions",
+      "authority",
+      "enforcement_rules",
+      "forbidden_actions",
+      "session_state",
+      "last_action",
+      "last_feedback",
+      "log_fields",
+      "timestamp"
+    ],
+    "nested_preview": {},
+    "readiness_rule": "Ready if all blueprint fields exist as columns OR a clear JSON/profile payload container exists.",
+    "representation_strategy_ready": false,
+    "required_fields_count": 22,
+    "table": "agent_profiles"
+  },
+  "boundary": [
+    "This scan is read-only except for writing reports under Forge memory.",
+    "It compares the live Identity Vault SQLite schema to the Self-Hosted Identity Vault operational profile blueprint.",
+    "It does not modify Identity Vault code, databases, .env, node_modules, Forge registry, service contracts, RMC memory, or agent identity activation state.",
+    "It does not read .env secret values."
+  ],
+  "canonical_db": {
+    "error": null,
+    "exists": true,
+    "ok": true,
+    "opened_readonly": true,
+    "path": "/home/nic/identity-vault/data/identity_vault.db",
+    "row_counts": {
+      "agent_profiles": 0,
+      "audit_logs": 0,
+      "feedback_logs": 0,
+      "session_state": 0,
+      "sqlite_sequence": 0,
+      "user_profiles": 0
+    },
+    "schemas": {
+      "agent_profiles": [
+        {
+          "cid": 0,
+          "default": null,
+          "name": "id",
+          "notnull": false,
+          "pk": true,
+          "type": "INTEGER"
+        },
+        {
+          "cid": 1,
+          "default": null,
+          "name": "agent_id",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "default": null,
+          "name": "canonical_name",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "default": null,
+          "name": "role",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "default": "'{}'",
+          "name": "capabilities",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 5,
+          "default": "'{}'",
+          "name": "limits",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 6,
+          "default": "'{}'",
+          "name": "enforcement",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 7,
+          "default": "CURRENT_TIMESTAMP",
+          "name": "created_at",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        },
+        {
+          "cid": 8,
+          "default": "CURRENT_TIMESTAMP",
+          "name": "updated_at",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        },
+        {
+          "cid": 9,
+          "default": "1",
+          "name": "version",
+          "notnull": false,
+          "pk": false,
+          "type": "INTEGER"
+        },
+        {
+          "cid": 10,
+          "default": "1",
+          "name": "is_active",
+          "notnull": false,
+          "pk": false,
+          "type": "INTEGER"
+        }
+      ],
+      "audit_logs": [
+        {
+          "cid": 0,
+          "default": null,
+          "name": "id",
+          "notnull": false,
+          "pk": true,
+          "type": "INTEGER"
+        },
+        {
+          "cid": 1,
+          "default": null,
+          "name": "profile_id",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "default": null,
+          "name": "profile_type",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "default": null,
+          "name": "action",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "default": null,
+          "name": "details",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 5,
+          "default": "CURRENT_TIMESTAMP",
+          "name": "timestamp",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        },
+        {
+          "cid": 6,
+          "default": null,
+          "name": "ip_address",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 7,
+          "default": null,
+          "name": "user_agent",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        }
+      ],
+      "feedback_logs": [
+        {
+          "cid": 0,
+          "default": null,
+          "name": "id",
+          "notnull": false,
+          "pk": true,
+          "type": "INTEGER"
+        },
+        {
+          "cid": 1,
+          "default": null,
+          "name": "profile_id",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "default": null,
+          "name": "feedback_type",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "default": null,
+          "name": "message",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "default": "'{}'",
+          "name": "data",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 5,
+          "default": "CURRENT_TIMESTAMP",
+          "name": "timestamp",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        },
+        {
+          "cid": 6,
+          "default": "0",
+          "name": "resolved",
+          "notnull": false,
+          "pk": false,
+          "type": "INTEGER"
+        }
+      ],
+      "session_state": [
+        {
+          "cid": 0,
+          "default": null,
+          "name": "id",
+          "notnull": false,
+          "pk": true,
+          "type": "INTEGER"
+        },
+        {
+          "cid": 1,
+          "default": null,
+          "name": "profile_id",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "default": null,
+          "name": "profile_type",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "default": "'{}'",
+          "name": "session_data",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "default": "CURRENT_TIMESTAMP",
+          "name": "created_at",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        },
+        {
+          "cid": 5,
+          "default": "CURRENT_TIMESTAMP",
+          "name": "updated_at",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        },
+        {
+          "cid": 6,
+          "default": null,
+          "name": "expires_at",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        }
+      ],
+      "sqlite_sequence": [
+        {
+          "cid": 0,
+          "default": null,
+          "name": "name",
+          "notnull": false,
+          "pk": false,
+          "type": ""
+        },
+        {
+          "cid": 1,
+          "default": null,
+          "name": "seq",
+          "notnull": false,
+          "pk": false,
+          "type": ""
+        }
+      ],
+      "user_profiles": [
+        {
+          "cid": 0,
+          "default": null,
+          "name": "id",
+          "notnull": false,
+          "pk": true,
+          "type": "INTEGER"
+        },
+        {
+          "cid": 1,
+          "default": null,
+          "name": "user_id",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 2,
+          "default": null,
+          "name": "canonical_name",
+          "notnull": true,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 3,
+          "default": "'{}'",
+          "name": "interaction_preferences",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 4,
+          "default": "'{}'",
+          "name": "meta_rules",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 5,
+          "default": "'{}'",
+          "name": "session_defaults",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 6,
+          "default": "'{}'",
+          "name": "drift_tracking",
+          "notnull": false,
+          "pk": false,
+          "type": "TEXT"
+        },
+        {
+          "cid": 7,
+          "default": "CURRENT_TIMESTAMP",
+          "name": "created_at",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        },
+        {
+          "cid": 8,
+          "default": "CURRENT_TIMESTAMP",
+          "name": "updated_at",
+          "notnull": false,
+          "pk": false,
+          "type": "DATETIME"
+        },
+        {
+          "cid": 9,
+          "default": "1",
+          "name": "version",
+          "notnull": false,
+          "pk": false,
+          "type": "INTEGER"
+        },
+        {
+          "cid": 10,
+          "default": "1",
+          "name": "is_active",
+          "notnull": false,
+          "pk": false,
+          "type": "INTEGER"
+        }
+      ]
+    },
+    "tables": [
+      "agent_profiles",
+      "audit_logs",
+      "feedback_logs",
+      "session_state",
+      "sqlite_sequence",
+      "user_profiles"
+    ]
+  },
+  "code_reference_scan": {
+    "api_endpoint_hits": {
+      "/agent-identity": 5,
+      "/operational-identity": 8,
+      "agentProfile": 3
+    },
+    "dangerous_file_skipped": [],
+    "field_hit_counts": {
+      "active_collaborators": 5,
+      "agent_id": 32,
+      "always_explain_decisions": 5,
+      "authority": 6,
+      "beginner_friendly": 5,
+      "canonical_name": 14,
+      "capabilities": 22,
+      "confirmation_required": 6,
+      "contradiction_alerts": 6,
+      "critique_mandatory": 6,
+      "current_files": 5,
+      "current_project": 6,
+      "depth": 17,
+      "description": 25,
+      "drift_tracking": 6,
+      "enforcement_rules": 6,
+      "forbidden_actions": 9,
+      "formality": 10,
+      "formatting_rules": 5,
+      "goals": 12,
+      "identity_tags": 10,
+      "interaction_preferences": 17,
+      "last_action": 14,
+      "last_feedback": 11,
+      "last_updated": 18,
+      "limitations": 8,
+      "log_all_exchanges": 6,
+      "log_fields": 4,
+      "meta_rules": 12,
+      "no_boxes": 5,
+      "permissions": 27,
+      "persona": 33,
+      "phase": 19,
+      "plain_language": 5,
+      "preserve_session_memory": 5,
+      "project_affiliations": 11,
+      "project_context": 8,
+      "pushback": 12,
+      "quotes_or_character_inspiration": 3,
+      "recursive_feedback": 5,
+      "require_context_carryover": 5,
+      "require_honest_pushback": 5,
+      "role": 54,
+      "safe_words": 9,
+      "session_state": 24,
+      "special_style_notes": 4,
+      "spirit_name": 6,
+      "step_by_step": 7,
+      "subsystems": 6,
+      "symbolic_signature": 4,
+      "timestamp": 44,
+      "user_id": 36,
+      "version": 105,
+      "voice_style": 4,
+      "waiting_for": 8
+    },
+    "fields_not_referenced_in_scanned_files": [],
+    "files_scanned": [
+      "db.js",
+      "schemas.js",
+      "server.js",
+      "cli.js",
+      "routes/agents.js",
+      "routes/profiles.js",
+      "tests/server.test.js",
+      "tests/db.canonical.test.js",
+      "Design_Manual_System_Blueprint.md",
+      "Identity_Vault_Pro.md",
+      "README.md"
+    ],
+    "files_with_hits": {
+      "Design_Manual_System_Blueprint.md": {
+        "endpoint_hits": {
+          "/agent-identity": 5,
+          "/operational-identity": 8,
+          "agentProfile": 3
+        },
+        "field_hits": {
+          "active_collaborators": 3,
+          "agent_id": 8,
+          "always_explain_decisions": 3,
+          "authority": 6,
+          "beginner_friendly": 3,
+          "canonical_name": 8,
+          "capabilities": 15,
+          "confirmation_required": 3,
+          "contradiction_alerts": 3,
+          "critique_mandatory": 4,
+          "current_files": 3,
+          "current_project": 4,
+          "depth": 5,
+          "description": 4,
+          "drift_tracking": 3,
+          "enforcement_rules": 4,
+          "forbidden_actions": 7,
+          "formality": 3,
+          "formatting_rules": 3,
+          "goals": 9,
+          "identity_tags": 4,
+          "interaction_preferences": 5,
+          "last_action": 7,
+          "last_feedback": 7,
+          "last_updated": 10,
+          "limitations": 6,
+          "log_all_exchanges": 3,
+          "log_fields": 4,
+          "meta_rules": 4,
+          "no_boxes": 3,
+          "permissions": 22,
+          "persona": 29,
+          "phase": 11,
+          "plain_language": 3,
+          "preserve_session_memory": 3,
+          "project_affiliations": 4,
+          "project_context": 5,
+          "pushback": 8,
+          "quotes_or_character_inspiration": 3,
+          "recursive_feedback": 3,
+          "require_context_carryover": 3,
+          "require_honest_pushback": 3,
+          "role": 27,
+          "safe_words": 3,
+          "session_state": 8,
+          "special_style_notes": 4,
+          "spirit_name": 4,
+          "step_by_step": 3,
+          "subsystems": 4,
+          "symbolic_signature": 4,
+          "timestamp": 13,
+          "user_id": 8,
+          "version": 46,
+          "voice_style": 4,
+          "waiting_for": 3
+        }
+      },
+      "Identity_Vault_Pro.md": {
+        "endpoint_hits": {},
+        "field_hits": {
+          "agent_id": 2,
+          "canonical_name": 1,
+          "capabilities": 2,
+          "depth": 2,
+          "description": 2,
+          "formality": 1,
+          "interaction_preferences": 1,
+          "permissions": 1,
+          "persona": 2,
+          "role": 3,
+          "user_id": 1,
+          "version": 3
+        }
+      },
+      "README.md": {
+        "endpoint_hits": {},
+        "field_hits": {
+          "agent_id": 2,
+          "canonical_name": 1,
+          "capabilities": 3,
+          "depth": 3,
+          "description": 7,
+          "formality": 1,
+          "interaction_preferences": 2,
+          "permissions": 1,
+          "persona": 2,
+          "role": 4,
+          "user_id": 1,
+          "version": 10
+        }
+      },
+      "cli.js": {
+        "endpoint_hits": {},
+        "field_hits": {
+          "agent_id": 2,
+          "description": 10,
+          "user_id": 3,
+          "version": 4
+        }
+      },
+      "db.js": {
+        "endpoint_hits": {},
+        "field_hits": {
+          "agent_id": 1,
+          "last_action": 2,
+          "last_feedback": 2,
+          "last_updated": 3,
+          "phase": 3,
+          "session_state": 8,
+          "timestamp": 16,
+          "user_id": 1,
+          "version": 19,
+          "waiting_for": 2
+        }
+      },
+      "routes/agents.js": {
+        "endpoint_hits": {},
+        "field_hits": {
+          "agent_id": 8,
+          "last_action": 3,
+          "permissions": 1,
+          "phase": 1,
+          "role": 15,
+          "timestamp": 4,
+          "version": 1,
+          "waiting_for": 1
+        }
+      },
+      "routes/profiles.js": {
+        "endpoint_hits": {},
+        "field_hits": {
+          "agent_id": 2,
+          "confirmation_required": 1,
+          "contradiction_alerts": 1,
+          "drift_tracking": 1,
+          "last_updated": 1,
+          "meta_rules": 4,
+          "safe_words": 1,
+          "session_state": 2,
+          "user_id": 2,
+          "version": 10
+        }
+      },
+      "schemas.js": {
+        "endpoint_hits": {},
+        "field_hits": {
+          "active_collaborators": 2,
+          "agent_id": 3,
+          "always_explain_decisions": 2,
+          "beginner_friendly": 2,
+          "canonical_name": 3,
+          "capabilities": 2,
+          "confirmation_required": 2,
+          "contradiction_alerts": 2,
+          "critique_mandatory": 2,
+          "current_files": 2,
+          "current_project": 2,
+          "depth": 3,
+          "description": 2,
+          "drift_tracking": 2,
+          "enforcement_rules": 2,
+          "forbidden_actions": 2,
+          "formality": 2,
+          "formatting_rules": 2,
+          "goals": 3,
+          "identity_tags": 6,
+          "interaction_preferences": 6,
+          "last_action": 2,
+          "last_feedback": 2,
+          "last_updated": 4,
+          "limitations": 2,
+          "log_all_exchanges": 3,
+          "meta_rules": 4,
+          "no_boxes": 2,
+          "permissions": 2,
+          "phase": 4,
+          "plain_language": 2,
+          "preserve_session_memory": 2,
+          "project_affiliations": 7,
+          "project_context": 3,
+          "pushback": 4,
+          "recursive_feedback": 2,
+          "require_context_carryover": 2,
+          "require_honest_pushback": 2,
+          "role": 4,
+          "safe_words": 5,
+          "session_state": 3,
+          "spirit_name": 2,
+          "step_by_step": 4,
+          "subsystems": 2,
+          "timestamp": 3,
+          "user_id": 3,
+          "version": 9,
+          "waiting_for": 2
+        }
+      },
+      "server.js": {
+        "endpoint_hits": {},
+        "field_hits": {
+          "agent_id": 2,
+          "session_state": 2,
+          "timestamp": 8,
+          "user_id": 1,
+          "version": 1
+        }
+      },
+      "tests/server.test.js": {
+        "endpoint_hits": {},
+        "field_hits": {
+          "agent_id": 2,
+          "canonical_name": 1,
+          "depth": 4,
+          "formality": 3,
+          "interaction_preferences": 3,
+          "role": 1,
+          "session_state": 1,
+          "user_id": 16,
+          "version": 2
+        }
+      }
+    }
+  },
+  "contract_baseline": {
+    "aiweb_identity_contract_exists": true,
+    "aiweb_identity_contract_loaded": true,
+    "aiweb_identity_contract_name": "identity_vault",
+    "identity_contract_draft_exists": true,
+    "identity_contract_draft_loaded": true,
+    "identity_contract_draft_status": "DRAFT_NOT_ACTIVE",
+    "identity_contract_draft_version": "0.1.1-draft-file"
+  },
+  "findings": [
+    {
+      "code": "IV_AGENT_PROFILE_SCHEMA_THIN",
+      "level": "WARN",
+      "message": "agent_profiles cannot yet represent the full Agent Operational Identity blueprint as columns or a clear JSON payload container."
+    },
+    {
+      "code": "IV_USER_PROFILE_SCHEMA_THIN",
+      "level": "WARN",
+      "message": "user_profiles cannot yet represent the full User Operational Identity blueprint as columns or a clear JSON payload container."
+    },
+    {
+      "code": "IV_ENV_NOT_READ",
+      "level": "INFO",
+      "message": ".env exists locally if present, but this scan did not read secret values."
+    }
+  ],
+  "manual_blueprint_baseline": {
+    "agent_profile_fields": [
+      "agent_id",
+      "canonical_name",
+      "version",
+      "last_updated",
+      "role",
+      "symbolic_signature",
+      "description",
+      "capabilities",
+      "limitations",
+      "persona",
+      "voice_style",
+      "quotes_or_character_inspiration",
+      "special_style_notes",
+      "permissions",
+      "authority",
+      "enforcement_rules",
+      "forbidden_actions",
+      "session_state",
+      "last_action",
+      "last_feedback",
+      "log_fields",
+      "timestamp"
+    ],
+    "user_profile_fields": [
+      "user_id",
+      "canonical_name",
+      "spirit_name",
+      "project_affiliations",
+      "identity_tags",
+      "version",
+      "last_updated",
+      "project_context",
+      "interaction_preferences",
+      "meta_rules",
+      "session_state"
+    ],
+    "user_profile_nested_fields": {
+      "interaction_preferences": [
+        "formality",
+        "depth",
+        "step_by_step",
+        "beginner_friendly",
+        "plain_language",
+        "no_boxes",
+        "pushback",
+        "critique_mandatory",
+        "confirmation_required",
+        "formatting_rules"
+      ],
+      "meta_rules": [
+        "recursive_feedback",
+        "drift_tracking",
+        "contradiction_alerts",
+        "require_honest_pushback",
+        "preserve_session_memory",
+        "require_context_carryover",
+        "log_all_exchanges",
+        "always_explain_decisions",
+        "safe_words",
+        "forbidden_actions"
+      ],
+      "project_context": [
+        "current_project",
+        "phase",
+        "current_files",
+        "active_collaborators",
+        "subsystems",
+        "goals"
+      ],
+      "session_state": [
+        "phase",
+        "waiting_for",
+        "last_feedback",
+        "last_action",
+        "timestamp"
+      ]
+    }
+  },
+  "next_safe_step": "Create a schema migration plan patch before running the bootstrap handshake. The plan should decide whether Identity Vault should store full operational profiles as JSON payload columns, normalized profile tables, or both. Do not create live agent profiles or activate identities until the schema can represent the manual's profile structure.",
+  "patch_id": "patch225a_identity_vault_schema_alignment_scan",
+  "roots": {
+    "aiweb_identity_contract": "/home/nic/aiweb/service_contracts/identity_vault.contract.json",
+    "aiweb_root": "/home/nic/aiweb",
+    "canonical_db": "/home/nic/identity-vault/data/identity_vault.db",
+    "forge_root": "/home/nic/forge",
+    "identity_contract_draft": "/home/nic/identity-vault/service_contracts/identity_vault_readonly_service_contract.draft.json",
+    "identity_vault_root": "/home/nic/identity-vault",
+    "legacy_db_preserved": "/home/nic/identity-vault/vault.db"
+  },
+  "safety": {
+    "agent_identity_activation_performed": false,
+    "aiweb_identity_contract_unchanged": true,
+    "canonical_db_sha_unchanged": true,
+    "database_write_performed": false,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "forge_tool_registry_modified": false,
+    "identity_contract_draft_unchanged": true,
+    "legacy_db_sha_unchanged": true
+  },
+  "syntax_checks": {
+    "cli.js": {
+      "exists": true,
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": ""
+    },
+    "db.js": {
+      "exists": true,
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": ""
+    },
+    "schemas.js": {
+      "exists": true,
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": ""
+    },
+    "server.js": {
+      "exists": true,
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": ""
+    },
+    "tests/db.canonical.test.js": {
+      "exists": true,
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": ""
+    },
+    "tests/server.test.js": {
+      "exists": true,
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": ""
+    }
+  },
+  "timestamp": "20260523_203609_UTC",
+  "user_alignment": {
+    "column_count": 11,
+    "columns": [
+      "id",
+      "user_id",
+      "canonical_name",
+      "interaction_preferences",
+      "meta_rules",
+      "session_defaults",
+      "drift_tracking",
+      "created_at",
+      "updated_at",
+      "version",
+      "is_active"
+    ],
+    "exact_required_fields_present": [
+      "user_id",
+      "canonical_name",
+      "version",
+      "interaction_preferences",
+      "meta_rules"
+    ],
+    "exact_required_fields_present_count": 5,
+    "json_container_present": false,
+    "missing_required_fields": [
+      "spirit_name",
+      "project_affiliations",
+      "identity_tags",
+      "last_updated",
+      "project_context",
+      "session_state"
+    ],
+    "nested_preview": {
+      "interaction_preferences": {
+        "nested_fields": [
+          "formality",
+          "depth",
+          "step_by_step",
+          "beginner_friendly",
+          "plain_language",
+          "no_boxes",
+          "pushback",
+          "critique_mandatory",
+          "confirmation_required",
+          "formatting_rules"
+        ],
+        "note": "Nested fields may be represented in JSON only if a parent/container column exists.",
+        "parent_column_present": true
+      },
+      "meta_rules": {
+        "nested_fields": [
+          "recursive_feedback",
+          "drift_tracking",
+          "contradiction_alerts",
+          "require_honest_pushback",
+          "preserve_session_memory",
+          "require_context_carryover",
+          "log_all_exchanges",
+          "always_explain_decisions",
+          "safe_words",
+          "forbidden_actions"
+        ],
+        "note": "Nested fields may be represented in JSON only if a parent/container column exists.",
+        "parent_column_present": true
+      },
+      "project_context": {
+        "nested_fields": [
+          "current_project",
+          "phase",
+          "current_files",
+          "active_collaborators",
+          "subsystems",
+          "goals"
+        ],
+        "note": "Nested fields may be represented in JSON only if a parent/container column exists.",
+        "parent_column_present": false
+      },
+      "session_state": {
+        "nested_fields": [
+          "phase",
+          "waiting_for",
+          "last_feedback",
+          "last_action",
+          "timestamp"
+        ],
+        "note": "Nested fields may be represented in JSON only if a parent/container column exists.",
+        "parent_column_present": false
+      }
+    },
+    "readiness_rule": "Ready if all blueprint fields exist as columns OR a clear JSON/profile payload container exists.",
+    "representation_strategy_ready": false,
+    "required_fields_count": 11,
+    "table": "user_profiles"
+  },
+  "verdict": "WARN"
+}

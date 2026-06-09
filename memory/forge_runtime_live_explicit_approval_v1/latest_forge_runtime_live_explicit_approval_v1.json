@@ -1,0 +1,146 @@
+{
+  "active_patch": "Patch 171 \u2014 Runtime Live Build Explicit Approval Capture / Apply Hold",
+  "approval_capture_status": "TEMPLATE_READY_NOT_APPROVED",
+  "approval_token_entered": false,
+  "approval_token_template": {
+    "approval_present": false,
+    "candidate": "failsafe_manager",
+    "entry_captured": false,
+    "instructions": "Do not type this token unless Nic intentionally approves a future live runtime write in a separate approval step.",
+    "required_phrase": "APPROVE_RUNTIME_LIVE_BUILD_FAILSAFE_MANAGER_ac243190ee3a80c5",
+    "required_phrase_hash": "4a3331971186fdabb0d9a6b32d5340702007658e71a15e47a5a75ecdd487bb51",
+    "status": "TEMPLATE_READY_NOT_ENTERED",
+    "token_type": "HUMAN_APPROVAL_TOKEN_TEMPLATE"
+  },
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "runtime_file_write_authority": false,
+    "server_started": false,
+    "shell_execution_authority": false
+  },
+  "candidate": "failsafe_manager",
+  "created_at": "20260520_170725",
+  "current_phase": "S19Q \u2014 Runtime Live Build Explicit Approval Capture / Apply Hold",
+  "engine_writes": 0,
+  "entered_token_hash": "",
+  "execution_decision": "HOLD_FOR_HUMAN_APPROVAL",
+  "gate_summary": {
+    "fail": 0,
+    "locked": 3,
+    "pass": 6,
+    "warn": 1
+  },
+  "gates": [
+    {
+      "detail": "FORGE_RUNTIME_LIVE_TOKEN_VALIDATION_READY_GATE_LOCKED",
+      "id": "A01",
+      "name": "Patch 170 token-validation report exists",
+      "status": "PASS"
+    },
+    {
+      "detail": "TEMPLATE_READY_NOT_ENTERED",
+      "id": "A02",
+      "name": "Approval template exists",
+      "status": "PASS"
+    },
+    {
+      "detail": "not_entered",
+      "id": "A03",
+      "name": "Explicit approval token entered",
+      "status": "LOCKED"
+    },
+    {
+      "detail": "not_entered",
+      "id": "A04",
+      "name": "Entered token hash validates",
+      "status": "LOCKED"
+    },
+    {
+      "detail": "failsafe_manager",
+      "id": "A05",
+      "name": "Candidate known",
+      "status": "PASS"
+    },
+    {
+      "detail": "FORGE_RUNTIME_CANDIDATE_STATIC_VERIFICATION_READY_GATE_LOCKED",
+      "id": "A06",
+      "name": "Candidate static verification exists",
+      "status": "PASS"
+    },
+    {
+      "detail": "missing_or_not_bundled",
+      "id": "A07",
+      "name": "Backup/apply dry-run exists",
+      "status": "WARN"
+    },
+    {
+      "detail": "planned_files=4",
+      "id": "A08",
+      "name": "Planned files available",
+      "status": "PASS"
+    },
+    {
+      "detail": "HOLD_FOR_HUMAN_APPROVAL",
+      "id": "A09",
+      "name": "Apply hold remains active",
+      "status": "LOCKED"
+    },
+    {
+      "detail": "runtime_writes=0 project_writes=0 engine_writes=0",
+      "id": "A10",
+      "name": "No live writes performed",
+      "status": "PASS"
+    }
+  ],
+  "human_approval_present": false,
+  "live_build_ready": false,
+  "next_patch": "Patch 172 \u2014 Runtime Live Build Apply Hold Review / No-Write Receipt",
+  "plain_english": "Patch 171 captures explicit approval state and keeps apply held. Even a valid approval token does not execute runtime writes in this patch.",
+  "planned_file_count": 4,
+  "planned_files": [
+    {
+      "live_write_planned_now": false,
+      "relative_path": "governance_and_safety/failsafe_manager/README.md",
+      "sandbox_source": "final_gate",
+      "source": "final_gate",
+      "target_relative_path": "governance_and_safety/failsafe_manager/README.md"
+    },
+    {
+      "live_write_planned_now": false,
+      "relative_path": "governance_and_safety/failsafe_manager/runtime_manifest.json",
+      "sandbox_source": "final_gate",
+      "source": "final_gate",
+      "target_relative_path": "governance_and_safety/failsafe_manager/runtime_manifest.json"
+    },
+    {
+      "live_write_planned_now": false,
+      "relative_path": "governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py",
+      "sandbox_source": "final_gate",
+      "source": "final_gate",
+      "target_relative_path": "governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py"
+    },
+    {
+      "live_write_planned_now": false,
+      "relative_path": "governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py",
+      "sandbox_source": "final_gate",
+      "source": "final_gate",
+      "target_relative_path": "governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py"
+    }
+  ],
+  "planning_ready": true,
+  "problem_count": 0,
+  "problems": [],
+  "project_writes": 0,
+  "recommended_next_patch": "Patch 172 \u2014 Runtime Live Build Apply Hold Review / No-Write Receipt",
+  "report_type": "FORGE_RUNTIME_LIVE_EXPLICIT_APPROVAL_CAPTURE_APPLY_HOLD_V1",
+  "required_token_hash": "4a3331971186fdabb0d9a6b32d5340702007658e71a15e47a5a75ecdd487bb51",
+  "roadmap_mutation_policy": "APPEND_ONLY",
+  "runtime_writes": 0,
+  "schema_version": "forge_runtime_live_explicit_approval_v1_patch171",
+  "status": "FORGE_RUNTIME_LIVE_EXPLICIT_APPROVAL_READY_APPLY_HOLD",
+  "token_validation_status": "NOT_ENTERED"
+}

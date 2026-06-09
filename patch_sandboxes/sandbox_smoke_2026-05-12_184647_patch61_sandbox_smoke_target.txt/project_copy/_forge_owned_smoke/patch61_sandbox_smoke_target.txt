@@ -1,0 +1,3 @@
+Forge Patch 61 sandbox smoke target
+state: sandboxed
+purpose: prove sandbox rehearsal without modifying AI.Web project files

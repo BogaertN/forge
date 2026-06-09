@@ -1,0 +1,121 @@
+{
+  "authority": {
+    "allowed_gateway_tools": [
+      "read_file",
+      "code_related_files"
+    ],
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "forbidden_gateway_tools": [
+      "shell",
+      "patch-apply",
+      "ingest-one",
+      "ingest-batch-apply",
+      "delete",
+      "quarantine",
+      "restore",
+      "snapshot-live-restore",
+      "network",
+      "pip",
+      "npm",
+      "sudo"
+    ],
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "LLM_ENGINE_REVIEW_DRAFTS_WITH_REVIEW_LIMITED_READ_LENS",
+    "patch": "98",
+    "project_write_authority": false,
+    "rule": "The LLM may draft review recommendations from bound evidence. Nic approves separately. Forge commits only in a future gated patch.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/llm_engine_review_drafts_v1"
+  },
+  "blockers": [],
+  "candidate_path_recorded": "aiweb/engines/recursive_field_engine",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/recursive_field_engine",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-16_200300",
+  "draft_id": "LER-recursive_field_engine-2026-05-16_200300",
+  "engine_family": "recursive_field_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_recursive_field_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "db6f36c98ccc362e30cb2f77d1592cda666f3d857704d18aab6c052d1d672868",
+  "evidence_id": "EEB-d33acb110fc06e11",
+  "file_count": 12,
+  "gateway_policy_path": "/home/nic/forge/memory/llm_memory_v1/indexes/llm_engine_review_gateway_policy.json",
+  "gateway_policy_sha256": "d7aafb5368368a7ad4afbd79668a71607d640b1f24fbb197bb9b4308e06d4da5",
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 31.372,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "dcbab43c0b07fee05a0cb56bcd3ee504309d2f570b98d966037a7827199a83ec",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nManages a symbolic recursion field for AI operations, tracking parameters like charge, drift, and loop integrity to maintain symbolic coherence and process recursive inputs.  \n\nLikely System Role:  \nCore component of an AI.Web engine, handling state persistence, input parsing, and dynamic parameter updates for symbolic AI tasks.  \n\nEvidence Used:  \n- `test_recursive_field_core.py`: Tests field initialization and symbolic value injection.  \n- `run.py`: Implements state loading/saving, reset logic, and input-driven field updates.  \n- `README.md`: Describes the engine\u2019s role in managing symbolic charge, drift, and loop integrity.  \n- `field_state.json`: Stores persistent state variables (e.g., `loop_integrity`, `charge`).  \n- Test logs and sample state data validate operational behavior.  \n\nRisks / Uncertainties:  \n- Limited test coverage for edge cases (e.g., malformed inputs).  \n- Reliance on JSON serialization may introduce serialization errors.  \n- Ambiguity in how complex inputs (e.g., non-\"echo\" commands) affect field parameters.  \n\nRecommendation Draft:  \nApprove the review with caveats: validate edge cases, enhance input parsing robustness, and confirm integration with AI.Web\u2019s broader architecture.  \n\nSuggested Nic Action:  \nApprove review, but request additional testing for edge cases and serialization resilience. Prioritize integration with AI.Web\u2019s core systems."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nManages a symbolic recursion field for AI operations, tracking parameters like charge, drift, and loop integrity to maintain symbolic coherence and process recursive inputs.  \n\nLikely System Role:  \nCore component of an AI.Web engine, handling state persistence, input parsing, and dynamic parameter updates for symbolic AI tasks.  \n\nEvidence Used:  \n- `test_recursive_field_core.py`: Tests field initialization and symbolic value injection.  \n- `run.py`: Implements state loading/saving, reset logic, and input-driven field updates.  \n- `README.md`: Describes the engine\u2019s role in managing symbolic charge, drift, and loop integrity.  \n- `field_state.json`: Stores persistent state variables (e.g., `loop_integrity`, `charge`).  \n- Test logs and sample state data validate operational behavior.  \n\nRisks / Uncertainties:  \n- Limited test coverage for edge cases (e.g., malformed inputs).  \n- Reliance on JSON serialization may introduce serialization errors.  \n- Ambiguity in how complex inputs (e.g., non-\"echo\" commands) affect field parameters.  \n\nRecommendation Draft:  \nApprove the review with caveats: validate edge cases, enhance input parsing robustness, and confirm integration with AI.Web\u2019s broader architecture.  \n\nSuggested Nic Action:  \nApprove review, but request additional testing for edge cases and serialization resilience. Prioritize integration with AI.Web\u2019s core systems.",
+  "plain_english_brief": {
+    "classes_sample": [
+      "RecursiveFieldEngine"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Base",
+      "Designation",
+      "Field",
+      "Function",
+      "Manages",
+      "This",
+      "__init__",
+      "_log",
+      "active",
+      "almost",
+      "and",
+      "charge",
+      "construction",
+      "defines",
+      "description",
+      "drift",
+      "drift_factor",
+      "driver",
+      "echo",
+      "engine"
+    ],
+    "imports_sample": [
+      "from datetime import datetime",
+      "from pathlib import Path",
+      "from recursive_field_core import RecursiveFieldEngine",
+      "from run import reset_field_state, update_field, load_field_state",
+      "import json"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`recursive_field_engine` appears to be a local AI.Web engine/component. The bound source evidence includes 12 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# test_recursive_field_core.py ",
+      "# run.py \u2014 Recursive Field Engine (\u03c8-state driver) # Governs symbolic recursion field: charge, drift, loop coherence",
+      "# recursive_field_engine ",
+      "from run import reset_field_state, update_field, load_field_state "
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "report_type": "LLM_ENGINE_REVIEW_DRAFT_V1_PATCH98_2_REAL_LOCAL_LLM_ATTEMPT",
+  "review_status_at_draft_time": "PENDING_REVIEW",
+  "schema_version": "llm_engine_review_draft_v1_patch98",
+  "stale_evidence_rule": "Patch 100 must re-read candidate path and re-verify current SHA against this evidence binder before committing any canonical decision. If changed: REFUSED_STALE_ENGINE_EVIDENCE.",
+  "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+  "warnings": []
+}

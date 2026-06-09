@@ -1,0 +1,172 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/install_onboarding_engine",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/install_onboarding_engine",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "install_onboarding_engine",
+  "evidence_id": "EEB-27b6d26db1fca1c2",
+  "file_count": 5,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "0db1377a606bd017b5e3b03388aeed0ca6e548c341d03326ffebf7cc25d9224f",
+      "excerpt_start": "import os\nimport json\nimport time\n\nINSTALL_STATE = \"install_state.json\"\n\ndef setup_environment():\n    required_dirs = [\n        \"../symbolic_capacitor_engine_frozen_v1\",\n        \"../cold_archive_engine_frozen_v1\",\n        \"../loop_resurrection_engine_frozen_v1\",\n        \"../resonance_charge_meter_frozen_v1\",\n        \"../tone_engine_frozen_v1\",\n        \"../peer_communication_engine_frozen_v1\",\n        \"../compute_contribution_engine_frozen_v1\",\n        \"../awh_token_runtime_frozen_v1\",\n        \"../contribution_dashboard_engine_frozen_v1\"\n    ]\n\n    missing_dirs = []\n\n    for directory in required_dirs:\n        if not os.path.exists(directory):\n            try:\n                os.makedirs(directory)\n                missing_dirs.append(directory)\n            except Exception as e:\n                print(f\"[!] Failed to create {directory}: {e}\")\n\n    install_report = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"missing_directories_created\": missing_dirs,\n        \"status\": \"completed\"\n    }\n\n    with open(INSTALL_STATE, \"w\") as f:\n        json.dump(install_report, f, indent=2)\n\n    print(f\"✔️ Install check complete. Report: {install_report}\")\n    return install_report\n",
+      "functions_sample": [
+        "setup_environment"
+      ],
+      "imports_sample": [
+        "import os",
+        "import json",
+        "import time"
+      ],
+      "line_count": 41,
+      "path": "/home/nic/aiweb/engines/install_onboarding_engine/onboarding_core.py",
+      "relative_to_candidate": "onboarding_core.py",
+      "sha256": "0db1377a606bd017b5e3b03388aeed0ca6e548c341d03326ffebf7cc25d9224f",
+      "size_bytes": 1224,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "b6d5865a6d037cc64ca2ab8da15aff454921ca1f6657322c977d5d6e9b2a19d4",
+      "excerpt_start": "{\n  \"timestamp\": \"2025-04-25T23:14:34Z\",\n  \"missing_directories_created\": [],\n  \"status\": \"completed\"\n}",
+      "functions_sample": [
+        "timestamp",
+        "missing_directories_created",
+        "status",
+        "completed"
+      ],
+      "imports_sample": [],
+      "line_count": 5,
+      "path": "/home/nic/aiweb/engines/install_onboarding_engine/install_state.json",
+      "relative_to_candidate": "install_state.json",
+      "sha256": "b6d5865a6d037cc64ca2ab8da15aff454921ca1f6657322c977d5d6e9b2a19d4",
+      "size_bytes": 103,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "f0c20615c3469627d3325df49583628a742f709c1d12cd2b9ea0723851b4d0d4",
+      "excerpt_start": "from onboarding_core import setup_environment\n\ndef test_install_setup():\n    try:\n        result = setup_environment()\n        print(\"✅ Test Passed: Install environment checked.\")\n        print(\"Install Report:\", result)\n    except Exception as e:\n        print(f\"❌ Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_install_setup()\n",
+      "functions_sample": [
+        "test_install_setup"
+      ],
+      "imports_sample": [
+        "from onboarding_core import setup_environment"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/install_onboarding_engine/test_onboarding.py",
+      "relative_to_candidate": "test_onboarding.py",
+      "sha256": "f0c20615c3469627d3325df49583628a742f709c1d12cd2b9ea0723851b4d0d4",
+      "size_bytes": 342,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "6f9a9930fb58004d7fb24dcf27a314b520e3a03b50e56291f5d15eb052396b60",
+      "excerpt_start": "# Install + Onboarding Engine\n\nVerifies all required symbolic engine directories are present at runtime start.\n\nCreates missing folders if necessary and logs onboarding status to `install_state.json`.\n",
+      "functions_sample": [
+        "Install",
+        "Onboarding",
+        "Engine",
+        "Verifies",
+        "all",
+        "required",
+        "symbolic",
+        "engine",
+        "directories",
+        "are",
+        "present",
+        "runtime",
+        "start",
+        "Creates",
+        "missing",
+        "folders",
+        "necessary",
+        "and",
+        "logs",
+        "onboarding",
+        "status",
+        "install_state",
+        "json"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/install_onboarding_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "6f9a9930fb58004d7fb24dcf27a314b520e3a03b50e56291f5d15eb052396b60",
+      "size_bytes": 201,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "d70dcb8e4637e92a0ea194d593ebf9d4cc004fa4768b79a11ad7f7cf188736f6",
+      "excerpt_start": "{\n  \"engine\": \"install_onboarding_engine\",\n  \"version\": \"v1.0\",\n  \"status\": \"build_mode\",\n  \"description\": \"Sets up initial directory structures and validates symbolic runtime environment.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "install_onboarding_engine",
+        "version",
+        "status",
+        "build_mode",
+        "description",
+        "Sets",
+        "initial",
+        "directory",
+        "structures",
+        "and",
+        "validates",
+        "symbolic",
+        "runtime",
+        "environment"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/install_onboarding_engine/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "d70dcb8e4637e92a0ea194d593ebf9d4cc004fa4768b79a11ad7f7cf188736f6",
+      "size_bytes": 192,
+      "suffix": ".json"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200356_engine_canonical_decision_draft.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "setup_environment",
+    "test_install_setup"
+  ],
+  "warnings": []
+}

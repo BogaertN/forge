@@ -1,0 +1,38 @@
+{
+  "build_id": "GP-015-ASK-FORGE-OUTPUT-LIVE-MATH-TRACE-SURFACE",
+  "title": "Ask Forge / Forge Output Live Math Trace Surface",
+  "purpose": "Expose the installed governed mathematical transaction as a central professional conversation surface with auditable detail.",
+  "prior_authority": "LANG-EXPR-001 / GP-014",
+  "route": "/api/operator/ask-forge/math-trace",
+  "authority_chain": [
+    "GP-013 bounded natural-language compiler",
+    "MATH-001R1 governed symbolic computation",
+    "MEA evidence seal",
+    "GP-014 operator-guided expression selection",
+    "Manifest Contract v2",
+    "actual Echo validation",
+    "DeliveryAuthorizationReceiptV2"
+  ],
+  "ui_decisions": {
+    "center_conversation_surface": true,
+    "bottom_composer": true,
+    "dark_mode_centerpiece": true,
+    "evidence_below_answer": true,
+    "left_right_rails_preserved": true,
+    "existing_operator_tools_preserved_below": true
+  },
+  "boundaries": {
+    "ui_is_authority": false,
+    "delivery_authority_added": false,
+    "calls_llm": false,
+    "uses_corpus": false,
+    "executes_shell": false,
+    "writes_files_from_conversation_surface": false,
+    "writes_memory": false,
+    "writes_identity_vault": false,
+    "writes_contribution_economy": false,
+    "mints_ct": false,
+    "writes_ledgers": false,
+    "professional_decisions_require_human_review": true
+  }
+}

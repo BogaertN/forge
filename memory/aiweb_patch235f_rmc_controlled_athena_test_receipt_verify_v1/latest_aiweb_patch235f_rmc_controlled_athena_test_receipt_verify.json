@@ -1,0 +1,307 @@
+{
+  "agent_id": "athena.local",
+  "blockers": [],
+  "checks": [
+    {
+      "blocker": null,
+      "detail": "/home/nic/forge/memory/aiweb_patch235e_rmc_controlled_athena_test_receipt_write_v1/latest_aiweb_patch235e_rmc_controlled_athena_test_receipt_write.json",
+      "key": "patch235e_report_exists",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "parsed",
+      "key": "patch235e_report_parses",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "True",
+      "key": "patch235e_ok",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "RMC_TEST_RECEIPT_WRITTEN_GOVERNED_ATHENA",
+      "key": "patch235e_expected_verdict",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "athena.local",
+      "key": "target_agent_athena",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "test_receipt",
+      "key": "write_type_test_receipt",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "test_receipt",
+      "key": "forbidden_write_type_not_used",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local",
+      "key": "namespace_path_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/receipts/athena_handshake_test_20260524_112635_UTC.json",
+      "key": "receipt_path_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/receipts/athena_handshake_test_20260524_112635_UTC.json",
+      "key": "receipt_under_namespace",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/receipts/athena_handshake_test_20260524_112635_UTC.json",
+      "key": "receipt_under_receipts_dir",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "athena_handshake_test_20260524_112635_UTC.json",
+      "key": "receipt_filename_safe",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "parsed",
+      "key": "receipt_json_parses",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "athena.local",
+      "key": "receipt_agent_athena",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "governance_strategy_receipt_only",
+      "key": "receipt_role_boundary_governance",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "test_receipt",
+      "key": "receipt_write_type_test_receipt",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "e8fd29022c2faa658796b1055f7ea2f83690f4739417bb8e4b08955612e2f705",
+      "key": "receipt_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "file=e8fd29022c2faa658796b1055f7ea2f83690f4739417bb8e4b08955612e2f705 report=e8fd29022c2faa658796b1055f7ea2f83690f4739417bb8e4b08955612e2f705",
+      "key": "receipt_hash_matches_report",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "computed=e8fd29022c2faa658796b1055f7ea2f83690f4739417bb8e4b08955612e2f705 file=e8fd29022c2faa658796b1055f7ea2f83690f4739417bb8e4b08955612e2f705",
+      "key": "receipt_hash_valid",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "actual=c1f9428dc34a8e675d5beb0425695e65aac1e5147e4318c23d33dd9f5ab6d327 report=c1f9428dc34a8e675d5beb0425695e65aac1e5147e4318c23d33dd9f5ab6d327",
+      "key": "receipt_file_sha_matches_report",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "required minimal receipt keys",
+      "key": "receipt_has_required_minimal_fields",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "0.97",
+      "key": "receipt_echo_score_valid",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "50a3c320c41b034f51ae8e96d81980c5799750b84d872e688bfbd35d35a70016",
+      "key": "receipt_manifest_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "receipt=0dcaac6237d8222bf4b17d2e279dec9dcfd7bd162e96ff79548a8ebece4811df report=0dcaac6237d8222bf4b17d2e279dec9dcfd7bd162e96ff79548a8ebece4811df",
+      "key": "receipt_source_235c_hash_matches",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "receipt_boundary_identity_unchanged",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "receipt_boundary_rmc_memory_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "receipt_boundary_agent_memory_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "{'agent_memory_written': False, 'autonomous_tool_execution_performed': False, 'echoforge_creation_performed': False, 'full_chat_content_written': False, 'identity_vault_database_written': False, 'long_term_memory_written': False, 'private_memory_written': False, 'protoforge2_execution_performed': False, 'rmc_memory_written': False, 'secret_values_read': False, 'secret_values_written': False, 'shared_memory_written': False}",
+      "key": "receipt_boundary_long_private_shared_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "{'agent_memory_written': False, 'autonomous_tool_execution_performed': False, 'echoforge_creation_performed': False, 'full_chat_content_written': False, 'identity_vault_database_written': False, 'long_term_memory_written': False, 'private_memory_written': False, 'protoforge2_execution_performed': False, 'rmc_memory_written': False, 'secret_values_read': False, 'secret_values_written': False, 'shared_memory_written': False}",
+      "key": "receipt_boundary_secret_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "receipt_boundary_full_chat_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "receipt_boundary_autonomous_execution_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "patch235e_identity_vault_unchanged",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "patch235e_agent_memory_not_written",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "patch235e_shared_memory_not_written",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "{'agent_memory_written': False, 'autonomous_tool_execution_performed': False, 'echoforge_creation_performed': False, 'forge_owned_patch235e_report': True, 'full_chat_content_written': False, 'identity_vault_database_written': False, 'long_term_memory_written': False, 'private_memory_written': False, 'protoforge2_execution_performed': False, 'rmc_test_receipt_written': True, 'rmc_write_type': 'test_receipt', 'secret_values_read': False, 'secret_values_written': False, 'shared_memory_written': False}",
+      "key": "patch235e_secret_data_not_written",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "patch235e_autonomous_execution_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "state=active_governed active=True",
+      "key": "current_athena_profile_still_active_governed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "profile=073115d88626d43eacab4b0e0aa6ae20c79cbedfaf42befea52c44e0ad3c2b1b receipt=073115d88626d43eacab4b0e0aa6ae20c79cbedfaf42befea52c44e0ad3c2b1b",
+      "key": "current_athena_profile_hash_matches_receipt",
+      "ok": true
+    }
+  ],
+  "checks_passed": 38,
+  "checks_total": 38,
+  "generated_at_utc": "20260524_113226_UTC",
+  "identity_profile_state": {
+    "activation_state": "active_governed",
+    "agent_id": "athena.local",
+    "is_active": true,
+    "last_validated_at": "2026-05-24T11:00:21Z",
+    "profile_hash": "073115d88626d43eacab4b0e0aa6ae20c79cbedfaf42befea52c44e0ad3c2b1b"
+  },
+  "memory_pollution_snapshot": {
+    "agent_memory": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/agent_memory"
+    },
+    "long_term_memory": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/long_term_memory"
+    },
+    "memories": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/memories"
+    },
+    "memory": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/memory"
+    },
+    "private_memory": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/private_memory"
+    },
+    "shared_memory_local": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/shared_memory"
+    },
+    "shared_memory_root": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared_memory"
+    },
+    "shared_root": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared"
+    }
+  },
+  "name": "Controlled Athena RMC Test Receipt Verification",
+  "next_expected_step": "Patch 236 \u2014 Neo activation dry-run gate, still one agent at a time.",
+  "ok": true,
+  "patch": "235F",
+  "rmc_test_receipt_file_sha256_actual": "c1f9428dc34a8e675d5beb0425695e65aac1e5147e4318c23d33dd9f5ab6d327",
+  "rmc_test_receipt_file_sha256_reported": "c1f9428dc34a8e675d5beb0425695e65aac1e5147e4318c23d33dd9f5ab6d327",
+  "rmc_test_receipt_hash_computed": "e8fd29022c2faa658796b1055f7ea2f83690f4739417bb8e4b08955612e2f705",
+  "rmc_test_receipt_hash_reported": "e8fd29022c2faa658796b1055f7ea2f83690f4739417bb8e4b08955612e2f705",
+  "rmc_test_receipt_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/receipts/athena_handshake_test_20260524_112635_UTC.json",
+  "source_patch235e_report": "/home/nic/forge/memory/aiweb_patch235e_rmc_controlled_athena_test_receipt_write_v1/latest_aiweb_patch235e_rmc_controlled_athena_test_receipt_write.json",
+  "source_patch235e_verdict": "RMC_TEST_RECEIPT_WRITTEN_GOVERNED_ATHENA",
+  "verdict": "RMC_TEST_RECEIPT_VERIFIED_GOVERNED_ATHENA",
+  "write_type": "test_receipt",
+  "writes_performed": {
+    "agent_memory_written": false,
+    "autonomous_tool_execution_performed": false,
+    "echoforge_creation_performed": false,
+    "forge_owned_patch235f_report": true,
+    "full_chat_content_written": false,
+    "identity_vault_database_written": false,
+    "long_term_memory_written": false,
+    "private_memory_written": false,
+    "protoforge2_execution_performed": false,
+    "rmc_memory_written": false,
+    "rmc_test_receipt_written": false,
+    "secret_values_read": false,
+    "secret_values_written": false,
+    "shared_memory_written": false
+  }
+}

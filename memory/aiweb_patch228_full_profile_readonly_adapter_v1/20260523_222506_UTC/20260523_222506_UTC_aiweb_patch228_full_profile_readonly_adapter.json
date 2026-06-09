@@ -1,0 +1,163 @@
+{
+  "adapter_smoke": {
+    "agent_show": [
+      {
+        "activation_state": "inactive_draft",
+        "agent_id": "gilligan.local",
+        "found": true,
+        "has_forbidden_actions_summary": true,
+        "has_permissions_summary": true,
+        "is_active": 0,
+        "ok": true,
+        "payload_dumped": false,
+        "profile_hash_ok": false,
+        "rmc_namespace": "rmc/agents/gilligan.local"
+      },
+      {
+        "activation_state": "inactive_draft",
+        "agent_id": "athena.local",
+        "found": true,
+        "has_forbidden_actions_summary": true,
+        "has_permissions_summary": true,
+        "is_active": 0,
+        "ok": true,
+        "payload_dumped": false,
+        "profile_hash_ok": false,
+        "rmc_namespace": "rmc/agents/athena.local"
+      },
+      {
+        "activation_state": "inactive_draft",
+        "agent_id": "neo.local",
+        "found": true,
+        "has_forbidden_actions_summary": true,
+        "has_permissions_summary": true,
+        "is_active": 0,
+        "ok": true,
+        "payload_dumped": false,
+        "profile_hash_ok": false,
+        "rmc_namespace": "rmc/agents/neo.local"
+      }
+    ],
+    "agents_returned": 3,
+    "list_connector_version": "patch228_full_profile_readonly_adapter_v1",
+    "list_ok": true,
+    "list_safe_columns": [
+      "id",
+      "agent_id",
+      "canonical_name",
+      "role",
+      "activation_state",
+      "is_active",
+      "rmc_namespace",
+      "profile_schema_version",
+      "profile_hash",
+      "last_validated_at",
+      "created_at",
+      "updated_at",
+      "permissions_summary",
+      "forbidden_actions_summary"
+    ]
+  },
+  "database": {
+    "agent_columns": [
+      "id",
+      "agent_id",
+      "canonical_name",
+      "role",
+      "capabilities",
+      "limits",
+      "enforcement",
+      "created_at",
+      "updated_at",
+      "version",
+      "is_active",
+      "operational_profile_json",
+      "profile_schema_version",
+      "rmc_namespace",
+      "activation_state",
+      "profile_hash",
+      "last_validated_at"
+    ],
+    "agent_columns_full_profile_ok": true,
+    "canonical_ok": true,
+    "canonical_opened_readonly": true,
+    "canonical_rows": {
+      "agent_profiles": 3,
+      "audit_logs": 0,
+      "feedback_logs": 0,
+      "session_state": 0,
+      "sqlite_sequence": 2,
+      "user_profiles": 1
+    },
+    "legacy_ok": true,
+    "legacy_opened_readonly": true,
+    "legacy_rows": {
+      "feedback_logs": 0,
+      "profiles": 1,
+      "session_state": 1,
+      "sqlite_sequence": 0
+    }
+  },
+  "files": {
+    "backup_root": "/home/nic/forge/backups/patch228_full_profile_readonly_adapter_before/20260523_222506_UTC",
+    "connector_changed": true,
+    "connector_exists": true,
+    "final_connector_sha16": "941e908676478e6d",
+    "marker_present": true,
+    "restored_after_failure": false
+  },
+  "findings": [
+    {
+      "code": "PATCH228_FULL_PROFILE_ADAPTER_READY",
+      "level": "INFO",
+      "message": "Forge agent list/show helpers now expose safe full-profile summaries from Identity Vault."
+    },
+    {
+      "code": "PATCH228_NO_MUTATION",
+      "level": "INFO",
+      "message": "DBs, .env metadata, RMC memory, templates, and Forge registry stayed unchanged."
+    }
+  ],
+  "next_safe_step": "Start Forge and manually test forge-agent-list plus forge-agent-show for Gilligan, Athena, and Neo. Then run Patch 228A verification.",
+  "safety": {
+    "agent_identity_activation_performed": false,
+    "canonical_db_sha_unchanged": true,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "forge_tool_registry_modified": false,
+    "identity_vault_database_write_performed": false,
+    "legacy_db_sha_unchanged": true,
+    "profiles_created": false,
+    "rmc_memory_write_performed": false,
+    "tool_registry_sha_unchanged": true
+  },
+  "source_checks": {
+    "compile_ok": true,
+    "compile_returncode": 0,
+    "compile_stderr_tail": "",
+    "compile_stdout_tail": "",
+    "found_defs": [
+      "_home",
+      "_safe_json",
+      "_aiweb_root",
+      "_forge_root",
+      "_identity_root",
+      "_contracts_root",
+      "_runtime_wrappers_root",
+      "_contract",
+      "_ensure_rmc_import_path",
+      "_plain",
+      "forge_rmc_status",
+      "forge_rmc_test_status",
+      "_identity_adapter",
+      "forge_identity_status",
+      "forge_agent_list",
+      "forge_agent_show",
+      "forge_system_boundary_map"
+    ],
+    "import_ok": true,
+    "required_defs_present": true
+  },
+  "timestamp": "20260523_222506_UTC",
+  "verdict": "PASS"
+}

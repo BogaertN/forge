@@ -1,0 +1,90 @@
+{
+  "action": "appended_new_block",
+  "adapter_smoke": {
+    "agents_returned": 3,
+    "connector_version": "patch228a1_full_profile_hash_reconcile_v1",
+    "list_ok": true,
+    "show": {
+      "athena.local": {
+        "activation_state": "inactive_draft",
+        "found": true,
+        "is_active": 0,
+        "ok": true,
+        "payload_dumped": false,
+        "profile_hash_method": "json_sort_compact",
+        "profile_hash_ok": true
+      },
+      "gilligan.local": {
+        "activation_state": "inactive_draft",
+        "found": true,
+        "is_active": 0,
+        "ok": true,
+        "payload_dumped": false,
+        "profile_hash_method": "json_sort_compact",
+        "profile_hash_ok": true
+      },
+      "neo.local": {
+        "activation_state": "inactive_draft",
+        "found": true,
+        "is_active": 0,
+        "ok": true,
+        "payload_dumped": false,
+        "profile_hash_method": "json_sort_compact",
+        "profile_hash_ok": true
+      }
+    }
+  },
+  "backup_root": "/home/nic/forge/backups/patch228a1_full_profile_hash_reconcile_before/20260523_223229_UTC",
+  "changed": true,
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "stderr_tail": ""
+  },
+  "db": {
+    "canonical_rows": {
+      "agent_profiles": 3,
+      "audit_logs": 0,
+      "feedback_logs": 0,
+      "session_state": 0,
+      "sqlite_sequence": 2,
+      "user_profiles": 1
+    },
+    "legacy_rows": {
+      "feedback_logs": 0,
+      "profiles": 1,
+      "session_state": 1,
+      "sqlite_sequence": 0
+    }
+  },
+  "findings": [
+    {
+      "code": "PATCH228A1_PROFILE_HASH_RECONCILED",
+      "level": "INFO",
+      "message": "All three inactive agent profiles now report profile_hash_ok=True through the read-only connector."
+    },
+    {
+      "code": "PATCH228A1_NO_MUTATION",
+      "level": "INFO",
+      "message": "DBs, .env metadata, RMC memory, templates, and Forge registry stayed unchanged."
+    }
+  ],
+  "import_ok": true,
+  "restored_after_failure": false,
+  "safety": {
+    "agent_identity_activation_performed": false,
+    "all_agents_inactive": true,
+    "all_profile_hashes_ok": true,
+    "canonical_db_sha_unchanged": true,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "forge_tool_registry_modified": false,
+    "identity_vault_database_write_performed": false,
+    "legacy_db_sha_unchanged": true,
+    "profiles_created": false,
+    "rmc_memory_write_performed": false,
+    "tool_registry_sha_unchanged": true
+  },
+  "timestamp": "20260523_223229_UTC",
+  "verdict": "PASS"
+}

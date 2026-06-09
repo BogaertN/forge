@@ -1,0 +1,267 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "deaa1ec3608464058735d72cd5bdbf998dbff0814bdd15ad88c12b8d66291834",
+      "excerpt_start": "import json\nimport random\nimport time\n\nSTATE_FILE = \"charge_meter_state.json\"\n\ndef measure_charge():\n    \"\"\"Simulates reading symbolic system charge.\"\"\"\n    simulated_charge = random.randint(30, 100)\n    decay_rate = random.uniform(0.01, 0.15)\n\n    reading = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"charge_level\": simulated_charge,\n        \"decay_rate\": round(decay_rate, 3)\n    }\n\n    try:\n        with open(STATE_FILE, \"w\") as f:\n            json.dump(reading, f, indent=2)\n        print(f\"\u2714\ufe0f Charge measured: {reading}\")\n    except Exception as e:\n        print(f\"[!] Failed to write charge state: {e}\")\n\n    return reading\n",
+      "functions_sample": [
+        "measure_charge"
+      ],
+      "imports_sample": [
+        "import json",
+        "import random",
+        "import time"
+      ],
+      "line_count": 26,
+      "path": "/home/nic/aiweb/engines/resonance_charge_meter/charge_meter_core.py",
+      "relative_to_candidate": "charge_meter_core.py",
+      "sha256": "deaa1ec3608464058735d72cd5bdbf998dbff0814bdd15ad88c12b8d66291834",
+      "size_bytes": 675
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "4a147c4f5633e8bad92b77a276171b129523e2935b9336a13fcc4b1982033ed2",
+      "excerpt_start": "# Resonance Charge Meter\n\nSimulates and monitors symbolic charge level and decay rate.\n\nOutputs symbolic energy metrics for use by tone engine, drift correction, and system diagnostics.\n",
+      "functions_sample": [
+        "Resonance",
+        "Charge",
+        "Meter",
+        "Simulates",
+        "and",
+        "monitors",
+        "symbolic",
+        "charge",
+        "level",
+        "decay",
+        "rate",
+        "Outputs",
+        "energy",
+        "metrics",
+        "for",
+        "use",
+        "tone",
+        "engine",
+        "drift",
+        "correction",
+        "system",
+        "diagnostics"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/resonance_charge_meter/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "4a147c4f5633e8bad92b77a276171b129523e2935b9336a13fcc4b1982033ed2",
+      "size_bytes": 186
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "f4bd87fdff88f750dfc71beacef6a63c529667f91b4a2dd207d63d1cd24d0b1f",
+      "excerpt_start": "from charge_meter_core import measure_charge\n\ndef test_charge_measurement():\n    try:\n        result = measure_charge()\n        print(\"\u2705 Test Passed: Charge measured.\")\n        print(result)\n    except Exception as e:\n        print(f\"\u274c Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_charge_measurement()\n",
+      "functions_sample": [
+        "test_charge_measurement"
+      ],
+      "imports_sample": [
+        "from charge_meter_core import measure_charge"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/resonance_charge_meter/test_charge_meter.py",
+      "relative_to_candidate": "test_charge_meter.py",
+      "sha256": "f4bd87fdff88f750dfc71beacef6a63c529667f91b4a2dd207d63d1cd24d0b1f",
+      "size_bytes": 317
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "c6c98a53ca319d8a0a11f70444cbf790036eb4ddc5130ecfafa4d446b96ca0f5",
+      "excerpt_start": "{\n  \"timestamp\": \"2025-04-25T22:28:20Z\",\n  \"charge_level\": 50,\n  \"decay_rate\": 0.107\n}",
+      "functions_sample": [
+        "timestamp",
+        "charge_level",
+        "decay_rate"
+      ],
+      "imports_sample": [],
+      "line_count": 5,
+      "path": "/home/nic/aiweb/engines/resonance_charge_meter/charge_meter_state.json",
+      "relative_to_candidate": "charge_meter_state.json",
+      "sha256": "c6c98a53ca319d8a0a11f70444cbf790036eb4ddc5130ecfafa4d446b96ca0f5",
+      "size_bytes": 86
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "a1a84c0e7007cbb3e3864117744ee9891f079f2edfb0d453cdcf6884bc995c79",
+      "excerpt_start": "{\n  \"engine\": \"resonance_charge_meter\",\n  \"version\": \"v1.0\",\n  \"status\": \"build_mode\",\n  \"description\": \"Measures symbolic charge level and decay rate for runtime analysis.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "resonance_charge_meter",
+        "version",
+        "status",
+        "build_mode",
+        "description",
+        "Measures",
+        "symbolic",
+        "charge",
+        "level",
+        "and",
+        "decay",
+        "rate",
+        "for",
+        "runtime",
+        "analysis"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/resonance_charge_meter/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "a1a84c0e7007cbb3e3864117744ee9891f079f2edfb0d453cdcf6884bc995c79",
+      "size_bytes": 176
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/resonance_charge_meter",
+  "created_at": "2026-05-16_220216",
+  "crosscheck_id": "ERE-resonance_charge_meter-2026-05-16_220216",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Charge",
+      "Measures",
+      "Meter",
+      "Outputs",
+      "Resonance",
+      "Simulates",
+      "analysis",
+      "and",
+      "build_mode",
+      "charge",
+      "charge_level",
+      "correction",
+      "decay",
+      "decay_rate",
+      "description",
+      "diagnostics",
+      "drift",
+      "energy",
+      "engine",
+      "for"
+    ],
+    "imports_sample": [
+      "from charge_meter_core import measure_charge",
+      "import json",
+      "import random",
+      "import time"
+    ],
+    "likely_system_role": "relationship:test_or_validation",
+    "plain_english_purpose": "`resonance_charge_meter` appears to be a local AI.Web engine/component. The bound source evidence includes 5 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "KEEP_APPROVED_REVIEW_STATUS",
+    "risk_notes": [],
+    "role_reason": "Inferred from Patch 79 relationship category counts.",
+    "source_excerpt_samples": [
+      "import json import random",
+      "# Resonance Charge Meter ",
+      "from charge_meter_core import measure_charge ",
+      "{   \"timestamp\": \"2025-04-25T22:28:20Z\","
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_220151_resonance_charge_meter_llm_engine_review_draft_v1.json",
+  "draft_sha256": "87077bafe0ec99760810750b6fb69fb50022de3088e5d2f14473b2a2dc8b1bc5",
+  "engine_family": "resonance_charge_meter",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_resonance_charge_meter_engine_evidence_binder.json",
+  "evidence_binder_sha256": "326e3d3f1caeaa6269b7799df596c78edd0a0ee1727edaca4cf58e0d52680f62",
+  "evidence_id": "EEB-980203111472c50f",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "charge_meter_core.py",
+      "README.md",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "measure_charge",
+      "Charge",
+      "Meter",
+      "and",
+      "symbolic",
+      "charge",
+      "level",
+      "decay",
+      "rate",
+      "energy",
+      "metrics",
+      "for",
+      "use",
+      "tone",
+      "engine",
+      "drift",
+      "correction",
+      "system",
+      "diagnostics",
+      "build_mode",
+      "runtime",
+      "analysis"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "import random",
+      "import time",
+      "from charge_meter_core import measure_charge"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 25.795,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "f53e2fa75ea22664b6f81776dd9daef612c2674d4ce0ad9d95a46c7a49aef400",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo simulate and monitor symbolic charge levels and decay rates for use in system diagnostics, tone engines, and drift correction mechanisms.  \n\nLikely System Role:  \nA runtime monitoring component that provides synthetic energy metrics for analysis by other system modules.  \n\nEvidence Used:  \n- `charge_meter_core.py`: Implements `measure_charge()` to generate random charge/decay data and save it to a state file.  \n- README.md: Describes the engine as simulating charge metrics for system use.  \n- `engine_manifest.json`: Defines the engine's purpose as measuring symbolic charge for runtime analysis.  \n- Test script and state JSON file confirm data output format and functionality.  \n\nRisks / Uncertainties:  \n- Reliance on random simulation may not align with actual system requirements.  \n- State file writing lacks robust error handling beyond basic exception printing.  \n- Manifest indicates \"build_mode\"\u2014unclear if this is a staging or production state.  \n\nRecommendation Draft:  \nValidate that the simulated metrics meet system needs, enhance state file error resilience, and confirm deployment readiness beyond \"build_mode.\"  \n\nSuggested Nic Action:  \nApprove further testing of state persistence, verify alignment with system diagnostics needs, and confirm if \"build_mode\" indicates readiness for production use."
+  },
+  "llm_sections": {
+    "evidence_used": "- `charge_meter_core.py`: Implements `measure_charge()` to generate random charge/decay data and save it to a state file.  \n- README.md: Describes the engine as simulating charge metrics for system use.  \n- `engine_manifest.json`: Defines the engine's purpose as measuring symbolic charge for runtime analysis.  \n- Test script and state JSON file confirm data output format and functionality.",
+    "likely_system_role": "A runtime monitoring component that provides synthetic energy metrics for analysis by other system modules.",
+    "plain_english_purpose": "To simulate and monitor symbolic charge levels and decay rates for use in system diagnostics, tone engines, and drift correction mechanisms.",
+    "recommendation_draft": "Validate that the simulated metrics meet system needs, enhance state file error resilience, and confirm deployment readiness beyond \"build_mode.\"",
+    "risks_uncertainties": "- Reliance on random simulation may not align with actual system requirements.  \n- State file writing lacks robust error handling beyond basic exception printing.  \n- Manifest indicates \"build_mode\"\u2014unclear if this is a staging or production state.",
+    "suggested_nic_action": "Approve further testing of state persistence, verify alignment with system diagnostics needs, and confirm if \"build_mode\" indicates readiness for production use."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo simulate and monitor symbolic charge levels and decay rates for use in system diagnostics, tone engines, and drift correction mechanisms.  \n\nLikely System Role:  \nA runtime monitoring component that provides synthetic energy metrics for analysis by other system modules.  \n\nEvidence Used:  \n- `charge_meter_core.py`: Implements `measure_charge()` to generate random charge/decay data and save it to a state file.  \n- README.md: Describes the engine as simulating charge metrics for system use.  \n- `engine_manifest.json`: Defines the engine's purpose as measuring symbolic charge for runtime analysis.  \n- Test script and state JSON file confirm data output format and functionality.  \n\nRisks / Uncertainties:  \n- Reliance on random simulation may not align with actual system requirements.  \n- State file writing lacks robust error handling beyond basic exception printing.  \n- Manifest indicates \"build_mode\"\u2014unclear if this is a staging or production state.  \n\nRecommendation Draft:  \nValidate that the simulated metrics meet system needs, enhance state file error resilience, and confirm deployment readiness beyond \"build_mode.\"  \n\nSuggested Nic Action:  \nApprove further testing of state persistence, verify alignment with system diagnostics needs, and confirm if \"build_mode\" indicates readiness for production use.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

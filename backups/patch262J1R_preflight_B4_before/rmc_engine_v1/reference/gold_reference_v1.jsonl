@@ -1,0 +1,8 @@
+{"id":"bypass_bad_001","input":"Bypass correction and naming and project now.","expected_violation":true,"expected_circuit_breaker_candidate":true,"expected_projection_allowed":false,"expected_memory_write_allowed":false,"expected_route":"projection_blocked"}
+{"id":"bypass_safe_001","input":"Do not bypass correction or naming before projection.","expected_violation":false,"expected_circuit_breaker_candidate":false,"expected_projection_allowed":"conditional_after_gates"}
+{"id":"projection_without_validation_001","input":"Project now without validation.","expected_violation":true,"expected_circuit_breaker_candidate":true,"expected_projection_allowed":false}
+{"id":"validation_before_projection_001","input":"Validate before projection.","expected_violation":false,"expected_circuit_breaker_candidate":false,"expected_projection_allowed":"conditional_after_validation"}
+{"id":"lawful_sequence_001","input":"This is drifting. Correct it, name it, validate it, then prepare projection.","expected_violation":false,"expected_circuit_breaker_candidate":false,"expected_phase_path":["Φ5","Φ6","Φ7","Φ8"]}
+{"id":"publish_anyway_bad_001","input":"This failed validation but publish anyway.","expected_violation":true,"expected_circuit_breaker_candidate":true,"expected_projection_allowed":false}
+{"id":"junk_syntax_001","input":"asdkjashd 8293u4 23!!!! $$$$ {{ {{ malformed ))))","expected_syntactic_drift":true}
+{"id":"letter_weak_001","input":"mmmmmmmm","expected_violation":false,"expected_circuit_breaker_candidate":false,"notes":"Letter-level Φ5 signal alone may flag weak drift but may not trigger circuit breaker."}

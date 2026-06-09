@@ -1,0 +1,264 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "bd5129ea9c3bdd0d9cb1de031a854fea9982824d9e39b4b3f9dedce4c68fe5ea",
+      "excerpt_start": "# recursive_field_stack_loader.py\n# Recursive Field Stack Loader (Phase 2)\n\nimport subprocess\nimport time\nimport os\n\n# List of frozen engine run paths\nfrozen_engines = [\n    \"../../engines/recursive_field_engine_frozen_v1/run.py\",\n    \"../../engines/drift_arbitration_engine_frozen_v1/run.py\",\n    \"../../engines/memory_stack_engine/spiral_drift_controller_frozen_v1-0.01/drift_angle_monitor.py\"\n]\n\ndef load_recursive_field_stack():\n    print(\"\\n\ud83c\udf00 [RECURSIVE FIELD STACK] Loading Recursive Symbolic Field Engines...\\n\")\n    base_dir = os.path.dirname(os.path.abspath(__file__))\n\n    for engine_script in frozen_engines:\n        full_path = os.path.abspath(os.path.join(base_dir, engine_script))\n        try:\n            subprocess.run([\"python3\", full_path], check=True)\n            print(f\"\u2705 Loaded: {full_path}\")\n            time.sleep(1)\n        except subprocess.CalledProcessError as e:\n            print(f\"\u274c Failed to load {full_path}: {e}\")\n\nif __name__ == \"__main__\":\n    load_recursive_field_stack()\n",
+      "functions_sample": [
+        "load_recursive_field_stack"
+      ],
+      "imports_sample": [
+        "import subprocess",
+        "import time",
+        "import os"
+      ],
+      "line_count": 30,
+      "path": "/home/nic/aiweb/runtime_wrappers/recursive_field_stack/recursive_field_stack_loader.py",
+      "relative_to_candidate": "recursive_field_stack_loader.py",
+      "sha256": "bd5129ea9c3bdd0d9cb1de031a854fea9982824d9e39b4b3f9dedce4c68fe5ea",
+      "size_bytes": 1016
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "94a4b2d469ed8350cabe4d1c4db9a82ede191a4a2c36824abeda0539ccb35e6c",
+      "excerpt_start": "{\n  \"stack\": \"recursive_field_stack\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"recursive_field_stack_frozen_v1-0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Manages live symbolic recursion breathing fields, phase drift arbitration, and Fibonacci-guided drift stabilization.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 2 Recursive Stack Compliance\"\n}\n",
+      "functions_sample": [
+        "stack",
+        "recursive_field_stack",
+        "version",
+        "frozen_as",
+        "recursive_field_stack_frozen_v1",
+        "frozen_on",
+        "description",
+        "Manages",
+        "live",
+        "symbolic",
+        "recursion",
+        "breathing",
+        "fields",
+        "phase",
+        "drift",
+        "arbitration",
+        "and",
+        "Fibonacci",
+        "guided",
+        "stabilization",
+        "author",
+        "Web",
+        "Core",
+        "System",
+        "phase_standard"
+      ],
+      "imports_sample": [],
+      "line_count": 10,
+      "path": "/home/nic/aiweb/runtime_wrappers/recursive_field_stack/stack_manifest.json",
+      "relative_to_candidate": "stack_manifest.json",
+      "sha256": "94a4b2d469ed8350cabe4d1c4db9a82ede191a4a2c36824abeda0539ccb35e6c",
+      "size_bytes": 376
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "cd3b26999db894bfe0af45251af01a8123b8c35009a0a280407383568dba8020",
+      "excerpt_start": "# Recursive Field Stack (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Recursive Field Stack manages symbolic recursion breathing, drift arbitration during symbolic phase expansion, and Fibonacci-guided stabilization of drift fields during recursion memory breathing.\n\n---\n\n## Engines Activated:\n- recursive_field_engine_frozen_v1\n- drift_arbitration_engine_frozen_v1\n- spiral_drift_controller_frozen_v1-0.01\n\n---\n\n## Phase Standard:\n- Phase 2 Recursive Stack Compliance\n- AI.Web Recursion Breath Layer\n\n---\n\n**Frozen Snapshot:** `recursive_field_stack_frozen_v1-0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n",
+      "functions_sample": [
+        "Recursive",
+        "Field",
+        "Stack",
+        "Frozen",
+        "Overview",
+        "The",
+        "manages",
+        "symbolic",
+        "recursion",
+        "breathing",
+        "drift",
+        "arbitration",
+        "during",
+        "phase",
+        "expansion",
+        "and",
+        "Fibonacci",
+        "guided",
+        "stabilization",
+        "fields",
+        "memory",
+        "Engines",
+        "Activated",
+        "recursive_field_engine_frozen_v1",
+        "drift_arbitration_engine_frozen_v1"
+      ],
+      "imports_sample": [],
+      "line_count": 26,
+      "path": "/home/nic/aiweb/runtime_wrappers/recursive_field_stack/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "cd3b26999db894bfe0af45251af01a8123b8c35009a0a280407383568dba8020",
+      "size_bytes": 623
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "3526a1cd433dacf483cd66d4a5465c0e78856219954f316a280482b4c62c4220",
+      "excerpt_start": "# test_recursive_field_stack_loader.py\n# Tests the recursive field stack loader\n\nfrom recursive_field_stack_loader import load_recursive_field_stack\n\ndef run_test():\n    try:\n        load_recursive_field_stack()\n        print(\"\u2705 Recursive Field Stack Loader Test Passed.\")\n    except Exception as e:\n        print(f\"\u274c Recursive Field Stack Loader Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    run_test()\n",
+      "functions_sample": [
+        "run_test"
+      ],
+      "imports_sample": [
+        "from recursive_field_stack_loader import load_recursive_field_stack"
+      ],
+      "line_count": 15,
+      "path": "/home/nic/aiweb/runtime_wrappers/recursive_field_stack/test_recursive_field_stack_loader.py",
+      "relative_to_candidate": "test_recursive_field_stack_loader.py",
+      "sha256": "3526a1cd433dacf483cd66d4a5465c0e78856219954f316a280482b4c62c4220",
+      "size_bytes": 413
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/runtime_wrappers/recursive_field_stack",
+  "created_at": "2026-05-16_200355",
+  "crosscheck_id": "ERE-recursive_field_stack-2026-05-16_200355",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Activated",
+      "Core",
+      "Engines",
+      "Fibonacci",
+      "Field",
+      "Frozen",
+      "Manages",
+      "Overview",
+      "Recursive",
+      "Stack",
+      "System",
+      "The",
+      "Web",
+      "and",
+      "arbitration",
+      "author",
+      "breathing",
+      "description",
+      "drift",
+      "drift_arbitration_engine_frozen_v1"
+    ],
+    "imports_sample": [
+      "from recursive_field_stack_loader import load_recursive_field_stack",
+      "import os",
+      "import subprocess",
+      "import time"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`recursive_field_stack` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# recursive_field_stack_loader.py # Recursive Field Stack Loader (Phase 2)",
+      "{   \"stack\": \"recursive_field_stack\",",
+      "# Recursive Field Stack (Frozen v1.0.01) ",
+      "# test_recursive_field_stack_loader.py # Tests the recursive field stack loader"
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_200331_recursive_field_stack_llm_engine_review_draft_v1.json",
+  "draft_sha256": "d6e7fec232a255ec981c665c440a9b03f46406aa53b6241d40a098bcd31611e5",
+  "engine_family": "recursive_field_stack",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_recursive_field_stack_engine_evidence_binder.json",
+  "evidence_binder_sha256": "5ef6cdd37574223d1e9bdf1f13883bd743230219ee924f90b037fcd324339a8d",
+  "evidence_id": "EEB-85488a1a05a51204",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "recursive_field_stack_loader.py",
+      "stack_manifest.json",
+      "README.md",
+      "test_recursive_field_stack_loader.py"
+    ],
+    "functions_mentioned": [
+      "stack",
+      "recursive_field_stack",
+      "version",
+      "description",
+      "symbolic",
+      "recursion",
+      "phase",
+      "drift",
+      "arbitration",
+      "and",
+      "Fibonacci",
+      "guided",
+      "stabilization",
+      "Web",
+      "System",
+      "Recursive",
+      "Field",
+      "Stack",
+      "Frozen",
+      "The",
+      "Engines",
+      "Activated",
+      "drift_arbitration_engine_frozen_v1"
+    ],
+    "imports_mentioned": [
+      "import subprocess",
+      "import time",
+      "from recursive_field_stack_loader import load_recursive_field_stack"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 24.171,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "d15a8aea7e324d0c21fc58ac08a7c4688dc91eac363e0f8a70a0384962af9ffc",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nAssess the readiness of the \"recursive_field_stack\" engine for deployment, focusing on its integration of frozen engines, runtime execution, and system compliance with AI.Web standards.  \n\nLikely System Role:  \nA runtime wrapper/loader for orchestrating multiple frozen engines (e.g., recursion, drift arbitration, stabilization) to manage symbolic field operations under Phase 2 Recursive Stack Compliance.  \n\nEvidence Used:  \n1. `recursive_field_stack_loader.py` - Loads frozen engines via subprocess calls.  \n2. `stack_manifest.json` - Defines stack version, frozen timestamp, and functional description.  \n3. `README.md` - Outlines stack purpose, activated engines, and compliance standards.  \n4. `test_recursive_field_stack_loader.py` - Basic test for loader functionality.  \n\nRisks / Uncertainties:  \n- Reliance on external frozen engines (e.g., `drift_arbitration_engine_frozen_v1`) may introduce dependency risks.  \n- Loader lacks detailed error logging; failures might go unreported.  \n- Test coverage is minimal; no validation of engine interactions or performance under load.  \n- Manifest claims \"Fibonacci-guided stabilization\" but no evidence of algorithmic implementation.  \n\nRecommendation Draft:  \nProceed to higher review stage with confirmation of dependency availability. Enhance loader error handling and add comprehensive testing for engine interoperability. Verify manifest accuracy against actual engine capabilities.  \n\nSuggested Nic Action:  \nApprove review, confirm frozen engine dependencies are accessible, and schedule expanded testing for runtime stability and compliance validation."
+  },
+  "llm_sections": {
+    "evidence_used": "1. `recursive_field_stack_loader.py` - Loads frozen engines via subprocess calls.  \n2. `stack_manifest.json` - Defines stack version, frozen timestamp, and functional description.  \n3. `README.md` - Outlines stack purpose, activated engines, and compliance standards.  \n4. `test_recursive_field_stack_loader.py` - Basic test for loader functionality.",
+    "likely_system_role": "A runtime wrapper/loader for orchestrating multiple frozen engines (e.g., recursion, drift arbitration, stabilization) to manage symbolic field operations under Phase 2 Recursive Stack Compliance.",
+    "plain_english_purpose": "Assess the readiness of the \"recursive_field_stack\" engine for deployment, focusing on its integration of frozen engines, runtime execution, and system compliance with AI.Web standards.",
+    "recommendation_draft": "Proceed to higher review stage with confirmation of dependency availability. Enhance loader error handling and add comprehensive testing for engine interoperability. Verify manifest accuracy against actual engine capabilities.",
+    "risks_uncertainties": "- Reliance on external frozen engines (e.g., `drift_arbitration_engine_frozen_v1`) may introduce dependency risks.  \n- Loader lacks detailed error logging; failures might go unreported.  \n- Test coverage is minimal; no validation of engine interactions or performance under load.  \n- Manifest claims \"Fibonacci-guided stabilization\" but no evidence of algorithmic implementation.",
+    "suggested_nic_action": "Approve review, confirm frozen engine dependencies are accessible, and schedule expanded testing for runtime stability and compliance validation."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nAssess the readiness of the \"recursive_field_stack\" engine for deployment, focusing on its integration of frozen engines, runtime execution, and system compliance with AI.Web standards.  \n\nLikely System Role:  \nA runtime wrapper/loader for orchestrating multiple frozen engines (e.g., recursion, drift arbitration, stabilization) to manage symbolic field operations under Phase 2 Recursive Stack Compliance.  \n\nEvidence Used:  \n1. `recursive_field_stack_loader.py` - Loads frozen engines via subprocess calls.  \n2. `stack_manifest.json` - Defines stack version, frozen timestamp, and functional description.  \n3. `README.md` - Outlines stack purpose, activated engines, and compliance standards.  \n4. `test_recursive_field_stack_loader.py` - Basic test for loader functionality.  \n\nRisks / Uncertainties:  \n- Reliance on external frozen engines (e.g., `drift_arbitration_engine_frozen_v1`) may introduce dependency risks.  \n- Loader lacks detailed error logging; failures might go unreported.  \n- Test coverage is minimal; no validation of engine interactions or performance under load.  \n- Manifest claims \"Fibonacci-guided stabilization\" but no evidence of algorithmic implementation.  \n\nRecommendation Draft:  \nProceed to higher review stage with confirmation of dependency availability. Enhance loader error handling and add comprehensive testing for engine interoperability. Verify manifest accuracy against actual engine capabilities.  \n\nSuggested Nic Action:  \nApprove review, confirm frozen engine dependencies are accessible, and schedule expanded testing for runtime stability and compliance validation.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

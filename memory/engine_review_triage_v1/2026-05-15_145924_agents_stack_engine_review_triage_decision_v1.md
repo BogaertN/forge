@@ -1,0 +1,8 @@
+# Patch 109 Engine Review Triage Decision Receipt
+
+Status: `ENGINE_REVIEW_TRIAGE_DECISION_RECORDED_NO_LEDGER_MUTATION`
+Decision: `DEFERRED_FOR_MORE_REVIEW`
+Recorded: `1`
+Refused: `0`
+
+- `agents_stack` — `TRIAGE_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION` — queue_receipt=`PATCH106_QUEUE_DECISION_WRITTEN`

@@ -1,0 +1,74 @@
+{
+  "authority": {
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ledger_mutation": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only_analysis": true,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-17T07:15:49",
+  "next_recommended_patch": "Patch 126 \u2014 Patch Impact Map",
+  "plain_english": "Read-only patch impact analysis. It maps a requested engine/path to canonical role, relationship neighbors, latest safe-test status, and rollback needs. It does not write project files or apply patches.",
+  "report_type": "PATCH_RISK_SCORE_V1",
+  "rows": [
+    {
+      "authority": {
+        "engine_file_write_authority": false,
+        "ledger_mutation": false,
+        "patch_apply_authority": false,
+        "project_file_write_authority": false,
+        "read_only_impact_analysis": true,
+        "shell_execution_authority": false
+      },
+      "canonical_path": "aiweb/engines/stack_linker_breather",
+      "engine_base": "stack_linker_breather",
+      "latest_failures": [
+        {
+          "problem": null,
+          "status": "FAIL",
+          "stderr_tail": "Traceback (most recent call last):\n  File \"/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py\", line 3, in <module>\n    from stack_linker_breather.stack_linker_core import unified_breathe_cycle\nModuleNotFoundError: No module named 'stack_linker_breather'\n",
+          "test_path": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+        }
+      ],
+      "recommended_next_action": "require_patch_impact_review_before_patch_proposal",
+      "relationship_count": 2,
+      "risk_level": "MEDIUM",
+      "risk_reasons": [
+        "latest safe-test report has issues",
+        "multiple relationship neighbors",
+        "required human checks present"
+      ],
+      "risk_score": 65,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "test_status": "ISSUES"
+    }
+  ],
+  "schema_version": "patch_impact_map_v1_patch126",
+  "source_paths": {
+    "canonical_lockfile": "/home/nic/forge/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+    "relationship_map": "/home/nic/forge/memory/canonical_engine_relationships_v1/latest_canonical_engine_relationship_map_v1.json",
+    "test_run_report": "/home/nic/forge/memory/canonical_engine_test_runs_v1/latest_canonical_engine_test_run_report_v1.json"
+  },
+  "source_sha256": {
+    "canonical_lockfile": "b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab",
+    "relationship_map": "1f06340729a2c283e6db78924e4e3d96f85f7863813d8c4c2cbf92c8fe3aa1ca",
+    "test_run_report": "71d86bec9e179939ba6bd16833623f06c05db1458cbd436d809a5e85ee62ab9a"
+  },
+  "status": "PATCH_IMPACT_MAP_READY",
+  "summary": {
+    "high_risk": 0,
+    "low_risk": 0,
+    "matches": 1,
+    "medium_risk": 1,
+    "no_test_result": 0,
+    "targets_requested": "stack_linker_breather",
+    "test_issues": 1
+  },
+  "target": "stack_linker_breather"
+}

@@ -1,0 +1,95 @@
+You are Forge's local LLM reviewing a sandbox-only revision candidate test result.
+
+Hard rules:
+- Do not ask for live writes.
+- Do not propose broad rewrites.
+- Decide whether this sandbox result approves the candidate or requires revision.
+- Output one exact line near the end:
+  RECOMMENDATION: APPROVE_SANDBOX_RESULT
+  or RECOMMENDATION: REVISE_CANDIDATE
+  or RECOMMENDATION: REVISE_SANDBOX_DEPENDENCY_PLAN
+
+Target: stack_linker_breather
+Sandbox status: GENERIC_REVISION_SANDBOX_TESTS_PASS
+Live import leak detected: False
+Compile return code: 0
+Test return code: 0
+
+Candidate diff preview:
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
+
+from core_breather.core_breather import CoreBreather
+from recursive_field_breather.field_breather import FieldBreather
+import time
+import json
+
+_field_breather_instance = FieldBreather()
+def field_breathe(phase=None):
+    return _field_breather_instance.breathe()
+
+
+_core_breather_instance = CoreBreather()
+def core_breathe(phase=None):
+    return _core_breather_instance.breathe()
+
+def unified_breathe_cycle():
+    # simple combined breathing cycle
+    for phase in range(1, 10):  # Full 1-9 breathing
+        core_breathe(phase)
+        field_breathe(phase)
+        event = {
+            "timestamp": time.time(),
+            "phase": phase,
+            "stack": "core_and_field",
+            "status": "",
+        }
+
+
+Test stdout tail:
+eath Phase: 1 | Loop: 0 | Amplitude: 0.111
+Breath Phase: 2 | Loop: 0 | Time: 2026-05-18T21:16:50.814179Z
+Field Breath Phase: 2 | Loop: 0 | Amplitude: 0.222
+Breath Phase: 3 | Loop: 0 | Time: 2026-05-18T21:16:50.814236Z
+Field Breath Phase: 3 | Loop: 0 | Amplitude: 0.333
+Breath Phase: 4 | Loop: 0 | Time: 2026-05-18T21:16:50.814280Z
+Field Breath Phase: 4 | Loop: 0 | Amplitude: 0.444
+Breath Phase: 5 | Loop: 0 | Time: 2026-05-18T21:16:50.814320Z
+Field Breath Phase: 5 | Loop: 0 | Amplitude: 0.555
+Breath Phase: 6 | Loop: 0 | Time: 2026-05-18T21:16:50.814358Z
+Field Breath Phase: 6 | Loop: 0 | Amplitude: 0.666
+Breath Phase: 7 | Loop: 0 | Time: 2026-05-18T21:16:50.814400Z
+Field Breath Phase: 7 | Loop: 0 | Amplitude: 0.777
+Breath Phase: 8 | Loop: 0 | Time: 2026-05-18T21:16:50.814437Z
+Field Breath Phase: 8 | Loop: 0 | Amplitude: 0.888
+Breath Phase: 9 | Loop: 0 | Time: 2026-05-18T21:16:50.814472Z
+Field Breath Phase: 9 | Loop: 0 | Amplitude: 0.999
+✅ Unified Breather Test Starting...
+Breath Phase: 1 | Loop: 1 | Time: 2026-05-18T21:16:50.814511Z
+Field Breath Phase: 1 | Loop: 1 | Amplitude: 0.111
+Breath Phase: 2 | Loop: 1 | Time: 2026-05-18T21:16:50.814548Z
+Field Breath Phase: 2 | Loop: 1 | Amplitude: 0.222
+Breath Phase: 3 | Loop: 1 | Time: 2026-05-18T21:16:50.814584Z
+Field Breath Phase: 3 | Loop: 1 | Amplitude: 0.333
+Breath Phase: 4 | Loop: 1 | Time: 2026-05-18T21:16:50.814620Z
+Field Breath Phase: 4 | Loop: 1 | Amplitude: 0.444
+Breath Phase: 5 | Loop: 1 | Time: 2026-05-18T21:16:50.814655Z
+Field Breath Phase: 5 | Loop: 1 | Amplitude: 0.555
+Breath Phase: 6 | Loop: 1 | Time: 2026-05-18T21:16:50.814690Z
+Field Breath Phase: 6 | Loop: 1 | Amplitude: 0.666
+Breath Phase: 7 | Loop: 1 | Time: 2026-05-18T21:16:50.814724Z
+Field Breath Phase: 7 | Loop: 1 | Amplitude: 0.777
+Breath Phase: 8 | Loop: 1 | Time: 2026-05-18T21:16:50.814757Z
+Field Breath Phase: 8 | Loop: 1 | Amplitude: 0.888
+Breath Phase: 9 | Loop: 1 | Time: 2026-05-18T21:16:50.814791Z
+Field Breath Phase: 9 | Loop: 1 | Amplitude: 0.999
+
+
+Test stderr tail:
+
+
+Dependency actions:
+[{'requested_module': 'core_breather', 'chosen_dependency': {'kind': 'module_file', 'path': '/home/nic/aiweb/engines/core_stack_breather/core_breather.py', 'reason': 'bounded_rglob_module_file_match', 'requested_module': 'core_breather'}, 'install_result': {'strategy': 'copy_module_file_as_package', 'package_dir': '/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_18_171650_stack_linker_breather/sandbox_packages/core_breather', 'installed_paths': ['/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_18_171650_stack_linker_breather/sandbox_packages/core_breather/core_breather.py', '/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_18_171650_stack_linker_breather/sandbox_packages/core_breather/__init__.py']}}, {'requested_module': 'recursive_field_breather', 'chosen_dependency': {'kind': 'package_dir', 'path': '/home/nic/aiweb/engines/recursive_field_breather', 'reason': 'direct_engine_package_dir_match', 'requested_module': 'recursive_field_breather'}, 'install_result': {'strategy': 'copy_package_dir', 'package_dir': '/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_18_171650_stack_linker_breather/sandbox_packages/recursive_field_breather', 'installed_paths': ['/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_18_171650_stack_linker_breather/sandbox_packages/recursive_field_breather']}}]
+
+Give a short diagnosis and the required recommendation line.

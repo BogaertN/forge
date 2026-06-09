@@ -1,0 +1,32 @@
+{
+  "active_adapter": "adapter.math.fraction_change_capacity.pint_quantity.v1",
+  "active_domain": "fraction_change_capacity",
+  "allowed_dimensions": [
+    "[mass]",
+    "[length] ** 3"
+  ],
+  "boundaries": {
+    "adds_corpus_ingestion": false,
+    "adds_new_domain": false,
+    "mints_ct": false,
+    "modifies_mea": false,
+    "writes_contribution_economy": false,
+    "writes_identity_vault": false,
+    "writes_ledgers": false,
+    "writes_memory": false
+  },
+  "build_id": "GENERAL-PIPELINE-PINT-QUANTITY-CAPACITY-INTEGRATION-BUILD-GP-011B",
+  "forbidden_dimensions": [
+    "[length]",
+    "[mass] / [time]"
+  ],
+  "installed_dependencies": [
+    "Pint==0.25.3",
+    "flexcache==0.3",
+    "flexparser==0.4",
+    "platformdirs==4.10.0"
+  ],
+  "protected_preexisting_reused_dependency": "typing_extensions==4.15.0",
+  "schema_version": "general_pipeline_pint_quantity_capacity_integration_v1_build_gp011b",
+  "supersedes_for_capacity_execution": "Fraction-only capacity executor with unit metadata text"
+}

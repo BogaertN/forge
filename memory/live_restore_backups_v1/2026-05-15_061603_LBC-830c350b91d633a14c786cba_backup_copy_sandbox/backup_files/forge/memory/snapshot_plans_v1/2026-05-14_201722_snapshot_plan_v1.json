@@ -1,0 +1,292 @@
+{
+  "schema_version": "snapshot_plan_v1_patch80",
+  "report_type": "SNAPSHOT_PLAN_V1_PATCH80",
+  "created_at": "2026-05-14T20:17:22",
+  "mode": "PLAN_ONLY_NO_COPY_NO_RESTORE",
+  "authority": {
+    "snapshot_create_authority": false,
+    "restore_authority": false,
+    "shadow_restore_authority": false,
+    "project_file_write_authority": false,
+    "engine_file_write_authority": false,
+    "delete_authority": false,
+    "quarantine_authority": false,
+    "shell_access": false,
+    "chroma_write_authority": false
+  },
+  "scope": {
+    "forge_root": "/home/nic/forge",
+    "current_session_paths": [
+      "/home/nic/aiweb"
+    ],
+    "approved_paths_file": "/home/nic/forge/config/approved_paths.json"
+  },
+  "what_this_plan_would_cover_in_future_snapshot_create": {
+    "forge_control_files": [
+      {
+        "label": "forge_main_py",
+        "path": "/home/nic/forge/main.py",
+        "exists": true,
+        "is_file": true,
+        "is_dir": false,
+        "size_bytes": 950408,
+        "sha256_16": "7434de1afb4e1f89",
+        "note": "metadata only; file content was not copied"
+      },
+      {
+        "label": "tool_registry",
+        "path": "/home/nic/forge/config/tool_registry.json",
+        "exists": true,
+        "is_file": true,
+        "is_dir": false,
+        "size_bytes": 24742,
+        "sha256_16": "17cbb7a67de8f287",
+        "note": "metadata only; file content was not copied"
+      },
+      {
+        "label": "approved_paths",
+        "path": "/home/nic/forge/config/approved_paths.json",
+        "exists": true,
+        "is_file": true,
+        "is_dir": false,
+        "size_bytes": 265,
+        "sha256_16": "80c98f351a0ffe36",
+        "note": "metadata only; file content was not copied"
+      },
+      {
+        "label": "session_scope",
+        "path": "/home/nic/forge/config/session_scope.json",
+        "exists": true,
+        "is_file": true,
+        "is_dir": false,
+        "size_bytes": 197,
+        "sha256_16": "d238c084fcd8247d",
+        "note": "metadata only; file content was not copied"
+      },
+      {
+        "label": "audit_log",
+        "path": "/home/nic/forge/logs/forge_audit.log",
+        "exists": true,
+        "is_file": true,
+        "is_dir": false,
+        "size_bytes": 432561,
+        "sha256_16": "3c0a9c22a14ca105",
+        "note": "metadata only; file content was not copied"
+      }
+    ],
+    "critical_manifest_files": [
+      {
+        "label": "engine_review_ledger",
+        "path": "/home/nic/forge/memory/code_library_v1/manifests/engine_review_ledger_v1.json",
+        "exists": true,
+        "is_file": true,
+        "is_dir": false,
+        "size_bytes": 88626,
+        "sha256_16": "3f0af0874087943f",
+        "note": "metadata only; file content was not copied"
+      },
+      {
+        "label": "latest_readiness_report",
+        "path": "/home/nic/forge/memory/code_library_v1/manifests/2026-05-14_195958_engine_approved_candidate_readiness_report.json",
+        "exists": true,
+        "is_file": true,
+        "is_dir": false,
+        "size_bytes": 32054,
+        "sha256_16": "6136b92f81ffe5fe",
+        "note": "metadata only; file content was not copied"
+      },
+      {
+        "label": "latest_relationship_report",
+        "path": "/home/nic/forge/memory/code_library_v1/manifests/2026-05-14_200919_code_relationship_intelligence_report.json",
+        "exists": true,
+        "is_file": true,
+        "is_dir": false,
+        "size_bytes": 1442287,
+        "sha256_16": "ee6f80af744d6f84",
+        "note": "metadata only; file content was not copied"
+      }
+    ],
+    "memory_roots_metadata_only": [
+      {
+        "path": "/home/nic/forge/memory/llm_memory_v1",
+        "exists": true,
+        "file_count_sampled": 15,
+        "dir_count_sampled": 9,
+        "ignored_sampled": 0,
+        "truncated": false
+      },
+      {
+        "path": "/home/nic/forge/memory/code_library_v1",
+        "exists": true,
+        "file_count_sampled": 41,
+        "dir_count_sampled": 5,
+        "ignored_sampled": 1,
+        "truncated": false
+      },
+      {
+        "path": "/home/nic/forge/memory/patch_sandbox_reports",
+        "exists": true,
+        "file_count_sampled": 1,
+        "dir_count_sampled": 0,
+        "ignored_sampled": 0,
+        "truncated": false
+      },
+      {
+        "path": "/home/nic/forge/memory/test_run_reports",
+        "exists": true,
+        "file_count_sampled": 3,
+        "dir_count_sampled": 0,
+        "ignored_sampled": 0,
+        "truncated": false
+      },
+      {
+        "path": "/home/nic/forge/memory/patch_test_bindings",
+        "exists": true,
+        "file_count_sampled": 1,
+        "dir_count_sampled": 0,
+        "ignored_sampled": 0,
+        "truncated": false
+      }
+    ],
+    "candidate_engine_roots_from_readiness": [
+      {
+        "engine_base": "aiweb_os_engine",
+        "candidate_path": null,
+        "status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+        "final_authority": false
+      },
+      {
+        "engine_base": "christping_listener",
+        "candidate_path": null,
+        "status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+        "final_authority": false
+      },
+      {
+        "engine_base": "control_panel_ui_engine",
+        "candidate_path": null,
+        "status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+        "final_authority": false
+      },
+      {
+        "engine_base": "drift_signature_logger",
+        "candidate_path": null,
+        "status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+        "final_authority": false
+      },
+      {
+        "engine_base": "failsafe_manager",
+        "candidate_path": null,
+        "status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+        "final_authority": false
+      },
+      {
+        "engine_base": "loop_resurrection_engine",
+        "candidate_path": null,
+        "status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+        "final_authority": false
+      },
+      {
+        "engine_base": "phase_engine",
+        "candidate_path": null,
+        "status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+        "final_authority": false
+      },
+      {
+        "engine_base": "plugin_engine",
+        "candidate_path": null,
+        "status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+        "final_authority": false
+      },
+      {
+        "engine_base": "recursive_agent_kernel",
+        "candidate_path": null,
+        "status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+        "final_authority": false
+      },
+      {
+        "engine_base": "resonance_charge_meter",
+        "candidate_path": null,
+        "status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+        "final_authority": false
+      },
+      {
+        "engine_base": "symbolic_capacitor_engine",
+        "candidate_path": null,
+        "status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+        "final_authority": false
+      },
+      {
+        "engine_base": "symbolic_feedback_loop_engine",
+        "candidate_path": null,
+        "status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+        "final_authority": false
+      },
+      {
+        "engine_base": "symbolic_policy_engine",
+        "candidate_path": null,
+        "status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+        "final_authority": false
+      },
+      {
+        "engine_base": "system_log_engine",
+        "candidate_path": null,
+        "status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+        "final_authority": false
+      }
+    ],
+    "relationship_report_counts": {
+      "available": true,
+      "path": "/home/nic/forge/memory/code_library_v1/manifests/2026-05-14_200919_code_relationship_intelligence_report.json",
+      "engine_reports": 14,
+      "total_related_files": 1400,
+      "total_symbols": 840
+    }
+  },
+  "ignored_by_default": {
+    "names": [
+      ".git",
+      ".mypy_cache",
+      ".pytest_cache",
+      ".ruff_cache",
+      ".venv",
+      "__pycache__",
+      "chroma_db",
+      "node_modules",
+      "venv"
+    ],
+    "suffixes": [
+      ".bin",
+      ".db",
+      ".gz",
+      ".pyc",
+      ".pyo",
+      ".sqlite3",
+      ".tar",
+      ".zip"
+    ],
+    "secret_markers": [
+      ".env",
+      ".ssh",
+      "credential",
+      "id_ed25519",
+      "id_rsa",
+      "passwd",
+      "password",
+      "secret",
+      "token"
+    ]
+  },
+  "future_required_gates_before_snapshot_create": [
+    "explicit snapshot-create patch",
+    "path allowlist and secret-scan refusal",
+    "manifest hash list",
+    "verify command",
+    "shadow replay before any restore",
+    "explicit human approval for restore"
+  ],
+  "plain_english": {
+    "meaning": "This is only a forensic plan. It records what a future snapshot system should capture and what it must ignore.",
+    "why_now": "Patch 79 showed many related files around approved engines. Forge needs snapshot discipline before any future final authority or multi-file action.",
+    "next_safe_step": "Review this plan. A later patch may add snapshot-create, but this patch does not copy or restore project files."
+  }
+}

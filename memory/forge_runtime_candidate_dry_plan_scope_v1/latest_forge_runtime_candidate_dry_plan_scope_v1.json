@@ -1,0 +1,280 @@
+{
+  "approval_token_entered": false,
+  "created_at": "20260520_182207",
+  "dry_plan_allowed": true,
+  "dry_plan_scope_fingerprint": "bc741d4ea5149b1b86b8d111425f13881d7fff85a2576c23bb7073b1a63514a6",
+  "dry_plan_scope_ready": true,
+  "engine_writes": 0,
+  "file_scope": {
+    "candidate": "failsafe_manager",
+    "file_count_observed": 20,
+    "file_limit": 200,
+    "files": [
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager/README.md",
+        "relative_path": "README.md",
+        "sha256": "4b53cf65fbcda940c80b44187d36a9d25a55c9614971b7d33034a8b3ad71f249",
+        "size": 190
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager/failsafe_core.py",
+        "relative_path": "failsafe_core.py",
+        "sha256": "5b01786473d872609485ef2744ff9669efaa13c79ec788b6b165590caff273d9",
+        "size": 431
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager/failsafe_manifest.json",
+        "relative_path": "failsafe_manifest.json",
+        "sha256": "32356befa5ef8bd815babe6f2f9809f886bf889904891ab65c13643cc4e46bf8",
+        "size": 154
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager/failsafe_status.json",
+        "relative_path": "failsafe_status.json",
+        "sha256": "44b592913f2a0769c6f8eab4c40dfebb8ce9b2aba5a99cdcd35930b1818fd6aa",
+        "size": 146
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager/test_failsafe.py",
+        "relative_path": "test_failsafe.py",
+        "sha256": "fb2661677517ae8d840de8c70f135bf618b9917365f65b824d87310126a15976",
+        "size": 301
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager_frozen_v1/README.md",
+        "relative_path": "README.md",
+        "sha256": "4b53cf65fbcda940c80b44187d36a9d25a55c9614971b7d33034a8b3ad71f249",
+        "size": 190
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager_frozen_v1/failsafe_core.py",
+        "relative_path": "failsafe_core.py",
+        "sha256": "5b01786473d872609485ef2744ff9669efaa13c79ec788b6b165590caff273d9",
+        "size": 431
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager_frozen_v1/failsafe_manifest.json",
+        "relative_path": "failsafe_manifest.json",
+        "sha256": "32356befa5ef8bd815babe6f2f9809f886bf889904891ab65c13643cc4e46bf8",
+        "size": 154
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager_frozen_v1/failsafe_status.json",
+        "relative_path": "failsafe_status.json",
+        "sha256": "3a73b169667ebab2135e257663a7666ee14c2425a72066b1cbfa4b0ea8b807c6",
+        "size": 146
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager_frozen_v1/test_failsafe.py",
+        "relative_path": "test_failsafe.py",
+        "sha256": "fb2661677517ae8d840de8c70f135bf618b9917365f65b824d87310126a15976",
+        "size": 301
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/README.md",
+        "relative_path": "README.md",
+        "sha256": "4b53cf65fbcda940c80b44187d36a9d25a55c9614971b7d33034a8b3ad71f249",
+        "size": 190
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_core.py",
+        "relative_path": "failsafe_core.py",
+        "sha256": "5b01786473d872609485ef2744ff9669efaa13c79ec788b6b165590caff273d9",
+        "size": 431
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_manager/README.md",
+        "relative_path": "failsafe_manager/README.md",
+        "sha256": "4b53cf65fbcda940c80b44187d36a9d25a55c9614971b7d33034a8b3ad71f249",
+        "size": 190
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_manager/failsafe_core.py",
+        "relative_path": "failsafe_manager/failsafe_core.py",
+        "sha256": "5b01786473d872609485ef2744ff9669efaa13c79ec788b6b165590caff273d9",
+        "size": 431
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_manager/failsafe_manifest.json",
+        "relative_path": "failsafe_manager/failsafe_manifest.json",
+        "sha256": "32356befa5ef8bd815babe6f2f9809f886bf889904891ab65c13643cc4e46bf8",
+        "size": 154
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_manager/failsafe_status.json",
+        "relative_path": "failsafe_manager/failsafe_status.json",
+        "sha256": "3a73b169667ebab2135e257663a7666ee14c2425a72066b1cbfa4b0ea8b807c6",
+        "size": 146
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_manager/test_failsafe.py",
+        "relative_path": "failsafe_manager/test_failsafe.py",
+        "sha256": "fb2661677517ae8d840de8c70f135bf618b9917365f65b824d87310126a15976",
+        "size": 301
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_manifest.json",
+        "relative_path": "failsafe_manifest.json",
+        "sha256": "32356befa5ef8bd815babe6f2f9809f886bf889904891ab65c13643cc4e46bf8",
+        "size": 154
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_status.json",
+        "relative_path": "failsafe_status.json",
+        "sha256": "3a73b169667ebab2135e257663a7666ee14c2425a72066b1cbfa4b0ea8b807c6",
+        "size": 146
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/test_failsafe.py",
+        "relative_path": "test_failsafe.py",
+        "sha256": "fb2661677517ae8d840de8c70f135bf618b9917365f65b824d87310126a15976",
+        "size": 301
+      }
+    ],
+    "observed_root_count": 3,
+    "observed_roots": [
+      {
+        "exists": true,
+        "is_dir": true,
+        "is_file": false,
+        "path": "/home/nic/aiweb/engines/failsafe_manager"
+      },
+      {
+        "exists": true,
+        "is_dir": true,
+        "is_file": false,
+        "path": "/home/nic/aiweb/engines/failsafe_manager_frozen_v1"
+      },
+      {
+        "exists": true,
+        "is_dir": true,
+        "is_file": false,
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager"
+      }
+    ],
+    "root_candidates": [
+      "/home/nic/aiweb/engines/failsafe_manager",
+      "/home/nic/aiweb/engines/failsafe_manager_frozen_v1",
+      "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager",
+      "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager_frozen_v1"
+    ],
+    "skipped_count_estimate": 8
+  },
+  "forge_owned_receipt_writes_only": true,
+  "gates": [
+    {
+      "detail": "Dry-plan selection remains no-write; fallback does not authorize live apply.",
+      "id": "P176-G1",
+      "name": "Patch 175 dry-plan selector loaded or fallback safe",
+      "status": "OK"
+    },
+    {
+      "detail": "failsafe_manager",
+      "id": "P176-G2",
+      "name": "Selected candidate resolved as name only",
+      "status": "OK"
+    },
+    {
+      "detail": "roots=3 files=20",
+      "id": "P176-G3",
+      "name": "Candidate root/file set observed read-only",
+      "status": "OK"
+    },
+    {
+      "detail": "families=3 missing_families=0",
+      "id": "P176-G4",
+      "name": "Runtime module-map/build-plan command families tracked",
+      "status": "OK"
+    },
+    {
+      "detail": "No approval token capture; no runtime/project/engine writes.",
+      "id": "P176-G5",
+      "name": "Live apply remains forbidden",
+      "status": "OK"
+    },
+    {
+      "detail": "This command handles the selected runtime candidate only. Arbitrary file patching waits for exact-read, SHA, sandbox, test, and rollback gates.",
+      "id": "P176-G6",
+      "name": "General file handling boundary preserved",
+      "status": "OK"
+    }
+  ],
+  "generalization_boundary": {
+    "current_command_scope": "selected_runtime_candidate_only",
+    "future_general_path": "patch-impact-map/code-related-files/exact-read/sandbox/test/rollback gates before arbitrary file patching",
+    "not_arbitrary_file_patch_apply": true,
+    "reason": "Any-file support must be permissioned and evidence-bound, not a raw path writer."
+  },
+  "human_approval_present": false,
+  "live_apply_allowed": false,
+  "next_patch": "Patch 177 \u2014 Runtime Candidate Dry-Plan Dependency Review / No-Write Impact Notes",
+  "patch": "Patch 176.1 \u2014 Runtime Candidate Dry-Plan Scope Command Definition Hotfix",
+  "problems": [],
+  "project_writes": 0,
+  "recommended_next_patch": "Patch 177 \u2014 Runtime Candidate Dry-Plan Dependency Review / No-Write Impact Notes",
+  "repairs_patch": "Patch 176 \u2014 Runtime Candidate Dry-Plan Scope Builder / No-Write File Set Review",
+  "runtime_writes": 0,
+  "schema_version": "forge_runtime_candidate_dry_plan_scope_v1_patch176_1_hotfix",
+  "selected_candidate": "failsafe_manager",
+  "source_report": {
+    "dry_plan_selector_latest": "/home/nic/forge/memory/forge_runtime_candidate_dry_plan_selector_v1/latest_forge_runtime_candidate_dry_plan_selector_v1.json",
+    "dry_plan_selector_status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_SELECTOR_READY_NO_WRITE_PLANNING_GATE",
+    "runtime_build_plan_latest": "/home/nic/forge/memory/forge_runtime_build_plan_v1/latest_forge_runtime_build_plan_v1.json",
+    "runtime_build_plan_status": "FORGE_RUNTIME_BUILD_PLAN_READY_PLANNING_ONLY",
+    "runtime_module_map_latest": "/home/nic/forge/memory/forge_runtime_module_dependency_map_v1/latest_forge_runtime_module_dependency_map_v1.json",
+    "runtime_module_map_status": "FORGE_RUNTIME_MODULE_DEPENDENCY_MAP_READY_PLANNING_ONLY"
+  },
+  "status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_SCOPE_READY_NO_WRITE_FILE_SET_REVIEW",
+  "token_validation_status": "NOT_REQUESTED",
+  "tracking_command_families": [
+    {
+      "command_count": 6,
+      "family": "forge-runtime-module-map",
+      "found": [
+        "forge-runtime-module-map-policy",
+        "forge-runtime-module-map-build",
+        "forge-runtime-module-map-show",
+        "forge-runtime-module-map-list",
+        "forge-runtime-module-map-next",
+        "forge-runtime-module-map-export"
+      ],
+      "found_count": 6,
+      "missing": [],
+      "missing_count": 0,
+      "status": "OK"
+    },
+    {
+      "command_count": 6,
+      "family": "forge-runtime-build-plan",
+      "found": [
+        "forge-runtime-build-plan-policy",
+        "forge-runtime-build-plan-build",
+        "forge-runtime-build-plan-show",
+        "forge-runtime-build-plan-list",
+        "forge-runtime-build-plan-next",
+        "forge-runtime-build-plan-export"
+      ],
+      "found_count": 6,
+      "missing": [],
+      "missing_count": 0,
+      "status": "OK"
+    },
+    {
+      "command_count": 6,
+      "family": "forge-runtime-candidate-dry-plan",
+      "found": [
+        "forge-runtime-candidate-dry-plan-policy",
+        "forge-runtime-candidate-dry-plan-select",
+        "forge-runtime-candidate-dry-plan-show",
+        "forge-runtime-candidate-dry-plan-gates",
+        "forge-runtime-candidate-dry-plan-next",
+        "forge-runtime-candidate-dry-plan-export"
+      ],
+      "found_count": 6,
+      "missing": [],
+      "missing_count": 0,
+      "status": "OK"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,133 @@
+{
+  "adapter_readiness_preview": {
+    "agent_identity_activation_performed": false,
+    "canonical_db_readonly_ok": true,
+    "contract_ready_for_readonly_adapter": true,
+    "database_write_performed": false,
+    "env_secret_values_read": false,
+    "identity_tables_available": true,
+    "ignore_hygiene_ok": true
+  },
+  "boundary": {
+    "agent_identity_activation_performed": false,
+    "database_write_performed": false,
+    "env_secret_values_read": false,
+    "forge_registry_modified": false,
+    "read_only_except_report": true,
+    "rmc_memory_modified": false
+  },
+  "canonical_database_readonly_summary": {
+    "error": null,
+    "exists": true,
+    "ok": true,
+    "opened_readonly": true,
+    "path": "/home/nic/identity-vault/data/identity_vault.db",
+    "row_counts": {
+      "agent_profiles": 0,
+      "audit_logs": 0,
+      "feedback_logs": 0,
+      "session_state": 0,
+      "sqlite_sequence": 0,
+      "user_profiles": 0
+    },
+    "tables": [
+      "agent_profiles",
+      "audit_logs",
+      "feedback_logs",
+      "session_state",
+      "sqlite_sequence",
+      "user_profiles"
+    ]
+  },
+  "contract_checks": {
+    "allowed_writes_empty": true,
+    "canonical_database_path": "/home/nic/identity-vault/data/identity_vault.db",
+    "contract_exists": true,
+    "contract_loaded": true,
+    "contract_ready_for_readonly_adapter": true,
+    "controlled_by": "Forge",
+    "issues": [],
+    "status": "DRAFT_NOT_ACTIVE",
+    "version": "0.1.1-draft-file"
+  },
+  "findings": [
+    {
+      "code": "IV_CONTRACT_DRAFT_READY",
+      "level": "INFO",
+      "message": "Draft contract has all required read-only adapter boundary fields."
+    },
+    {
+      "code": "IV_IGNORE_RULES_READY",
+      "level": "INFO",
+      "message": "Ignore safety rules are present. Exact managed marker text is not required when full rule coverage exists."
+    },
+    {
+      "code": "IV_ENV_LOCAL_PRESENT_NOT_READ",
+      "level": "INFO",
+      "message": ".env exists locally=True; secret values were not read."
+    },
+    {
+      "code": "IV_PATCH217_WARN_RECONCILED",
+      "level": "INFO",
+      "message": "Patch 217 WARN appears to have been caused by a strict readiness/marker predicate if this report passes."
+    }
+  ],
+  "ignore_hygiene": {
+    "dockerignore": {
+      "exists": true,
+      "managed_block_or_equivalent": true,
+      "marker_present": true,
+      "path": "/home/nic/identity-vault/.dockerignore",
+      "required_rules_present": true,
+      "rules": {
+        "!.env.example": true,
+        "*.db": true,
+        "*.sqlite": true,
+        "*.sqlite3": true,
+        ".env": true,
+        ".env.*": true,
+        "backups/": true,
+        "coverage/": true,
+        "data/*.db": true,
+        "data/*.sqlite": true,
+        "data/*.sqlite3": true,
+        "dist/": true,
+        "logs/": true,
+        "node_modules/": true
+      }
+    },
+    "gitignore": {
+      "exists": true,
+      "managed_block_or_equivalent": true,
+      "marker_present": true,
+      "path": "/home/nic/identity-vault/.gitignore",
+      "required_rules_present": true,
+      "rules": {
+        "!.env.example": true,
+        "*.db": true,
+        "*.sqlite": true,
+        "*.sqlite3": true,
+        ".env": true,
+        ".env.*": true,
+        "backups/": true,
+        "coverage/": true,
+        "data/*.db": true,
+        "data/*.sqlite": true,
+        "data/*.sqlite3": true,
+        "dist/": true,
+        "logs/": true,
+        "node_modules/": true
+      }
+    },
+    "ignore_hygiene_ok": true,
+    "note": "Patch 217 may have expected a different exact marker. This reconciler accepts exact markers or full required rule coverage."
+  },
+  "next_safe_step": "If PASS, create the Forge Identity Vault read-only adapter file. Do not activate agent identities yet.",
+  "roots": {
+    "contract_path": "/home/nic/identity-vault/service_contracts/identity_vault_readonly_service_contract.draft.json",
+    "forge_root": "/home/nic/forge",
+    "identity_vault_root": "/home/nic/identity-vault"
+  },
+  "timestamp": "20260523_194234_UTC",
+  "verdict": "PASS"
+}

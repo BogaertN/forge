@@ -1,0 +1,174 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/contribution_dashboard_engine",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/contribution_dashboard_engine",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "contribution_dashboard_engine",
+  "evidence_id": "EEB-505effd8a0bf2be3",
+  "file_count": 5,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "9cdadc600cb2a84a4c928da8375db9fae0726565394db3e245bb448dd9f21066",
+      "excerpt_start": "import json\nimport os\nimport time\n\nCONTRIBUTION_LOG = \"../compute_contribution_engine_frozen_v1/contribution_log.jsonl\"\nTOKEN_LEDGER = \"../awh_token_runtime_frozen_v1/token_ledger.json\"\nDASHBOARD_OUTPUT = \"dashboard_output.json\"\n\ndef generate_dashboard():\n    contributions = []\n    tokens = []\n\n    # Read contribution events\n    try:\n        with open(CONTRIBUTION_LOG, \"r\") as f:\n            for line in f:\n                contributions.append(json.loads(line.strip()))\n    except Exception as e:\n        print(f\"[!] Failed to read contributions: {e}\")\n\n    # Read token ledger\n    try:\n        with open(TOKEN_LEDGER, \"r\") as f:\n            tokens = json.load(f)\n    except Exception as e:\n        print(f\"[!] Failed to read tokens: {e}\")\n\n    dashboard = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"total_contributions\": len(contributions),\n        \"total_tokens_earned\": sum(entry.get(\"tokens_earned\", 0) for entry in tokens),\n        \"recent_contributors\": [c.get(\"contributor_id\", \"unknown\") for c in contributions[-5:]]\n    }\n\n    try:\n        with open(DASHBOARD_OUTPUT, \"w\") as f:\n            json.dump(dashboard, f, indent=2)\n        print(f\"✔️ Dashboard generated: {dashboard}\")\n    except Exception as e:\n        print(f\"[!] Failed to write dashboard output: {e}\")\n\n    return dashboard\n",
+      "functions_sample": [
+        "generate_dashboard"
+      ],
+      "imports_sample": [
+        "import json",
+        "import os",
+        "import time"
+      ],
+      "line_count": 43,
+      "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/dashboard_core.py",
+      "relative_to_candidate": "dashboard_core.py",
+      "sha256": "9cdadc600cb2a84a4c928da8375db9fae0726565394db3e245bb448dd9f21066",
+      "size_bytes": 1345,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "788e3f47075e55c3ac20ec09c758a9f1b27b87ef50c7b270d11731789005d1bd",
+      "excerpt_start": "from dashboard_core import generate_dashboard\n\ndef test_dashboard_generation():\n    try:\n        result = generate_dashboard()\n        print(\"✅ Test Passed: Dashboard generated.\")\n        print(result)\n    except Exception as e:\n        print(f\"❌ Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_dashboard_generation()\n",
+      "functions_sample": [
+        "test_dashboard_generation"
+      ],
+      "imports_sample": [
+        "from dashboard_core import generate_dashboard"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/test_contribution_dashboard.py",
+      "relative_to_candidate": "test_contribution_dashboard.py",
+      "sha256": "788e3f47075e55c3ac20ec09c758a9f1b27b87ef50c7b270d11731789005d1bd",
+      "size_bytes": 330,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "604aa8576157225f44dc708d89e73a40767823e765be970cd5d3757be9ffab8a",
+      "excerpt_start": "# Contribution Dashboard Engine\n\nAggregates symbolic contributions and AWH token earnings into a human-readable dashboard output (`dashboard_output.json`).\n\nDesigned for integration with UI panels and reward systems.\n",
+      "functions_sample": [
+        "Contribution",
+        "Dashboard",
+        "Engine",
+        "Aggregates",
+        "symbolic",
+        "contributions",
+        "and",
+        "AWH",
+        "token",
+        "earnings",
+        "into",
+        "human",
+        "readable",
+        "dashboard",
+        "output",
+        "dashboard_output",
+        "json",
+        "Designed",
+        "for",
+        "integration",
+        "with",
+        "panels",
+        "reward",
+        "systems"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "604aa8576157225f44dc708d89e73a40767823e765be970cd5d3757be9ffab8a",
+      "size_bytes": 217,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "00a3ddfaa314ef9ffc1d4153dde548312bbf3b513bd0d68aa05cbc71663aff44",
+      "excerpt_start": "{\n  \"timestamp\": \"2025-04-25T23:08:22Z\",\n  \"total_contributions\": 0,\n  \"total_tokens_earned\": 0,\n  \"recent_contributors\": []\n}",
+      "functions_sample": [
+        "timestamp",
+        "total_contributions",
+        "total_tokens_earned",
+        "recent_contributors"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/dashboard_output.json",
+      "relative_to_candidate": "dashboard_output.json",
+      "sha256": "00a3ddfaa314ef9ffc1d4153dde548312bbf3b513bd0d68aa05cbc71663aff44",
+      "size_bytes": 126,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "7320ae4d759c466b26ce4b4fb2ab0d52641678033e5343e37f83602d4ecb099e",
+      "excerpt_start": "{\n  \"engine\": \"contribution_dashboard_engine\",\n  \"version\": \"v1.0\",\n  \"status\": \"build_mode\",\n  \"description\": \"Aggregates contributions and AWH token earnings into a single dashboard output.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "contribution_dashboard_engine",
+        "version",
+        "status",
+        "build_mode",
+        "description",
+        "Aggregates",
+        "contributions",
+        "and",
+        "AWH",
+        "token",
+        "earnings",
+        "into",
+        "single",
+        "dashboard",
+        "output"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "7320ae4d759c466b26ce4b4fb2ab0d52641678033e5343e37f83602d4ecb099e",
+      "size_bytes": 195,
+      "suffix": ".json"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "generate_dashboard",
+    "test_dashboard_generation"
+  ],
+  "warnings": []
+}

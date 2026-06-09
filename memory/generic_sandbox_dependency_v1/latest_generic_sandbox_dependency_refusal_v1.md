@@ -1,0 +1,16 @@
+# GENERIC_SANDBOX_DEPENDENCY_REFUSAL_V1
+
+```json
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "sandbox_memory_write_only": true
+  },
+  "created_at": "2026-05-17T11:13:06",
+  "reason": "missing_confirm_token",
+  "report_type": "GENERIC_SANDBOX_DEPENDENCY_REFUSAL_V1",
+  "required_token": "CONFIRM_RUN_SANDBOX_DEPENDENCY_RESOLUTION",
+  "schema_version": "generic_sandbox_dependency_refusal_v1_patch138R",
+  "status": "GENERIC_SANDBOX_DEPENDENCY_RUN_REFUSED"
+}
+```

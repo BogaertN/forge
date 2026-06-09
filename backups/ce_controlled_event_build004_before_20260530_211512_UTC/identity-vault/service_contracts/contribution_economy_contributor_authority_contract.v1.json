@@ -1,0 +1,46 @@
+{
+  "allowed_consent_scope": {
+    "capsule_candidate_reference_authorized": true,
+    "ct_minting_authorized": false,
+    "economic_processing_authorized": false,
+    "internal_attribution_reference_authorized": true,
+    "investment_processing_authorized": false,
+    "local_identity_storage_authorized": true,
+    "portability_authorized": false,
+    "public_display_authorized": false
+  },
+  "allowed_writes": [
+    "Create the three contribution-authority tables and append-only protection triggers in canonical Identity Vault database.",
+    "Insert one immutable contributor_principals binding for existing user_profiles.user_id=nic_bogaert when absent.",
+    "Insert one limited-internal consent event when absent.",
+    "Insert one identity-authority audit event when absent.",
+    "Install this contract, its SQL schema extension, and the local private authority manifest."
+  ],
+  "approval_token": "APPROVE_CE_IDENTITY_VAULT_AND_DUAL_LEDGER_FOUNDATION_BUILD001",
+  "authority_manifest_path": "/home/nic/identity-vault/contributor_authority/nic_bogaert_contributor_authority_manifest.v1.json",
+  "authority_manifest_sha256": "ace661851087d3070b59b6a7a8e7cdcbbf3e35c3749f2f85a1ba70a531e6bb90",
+  "build_id": "CE-IV-LEDGER-CAPSULE-BUILD-001",
+  "canonical_database_path": "/home/nic/identity-vault/data/identity_vault.db",
+  "contract_id": "identity_vault_contribution_economy_contributor_authority_contract_v1",
+  "controlled_by": "Forge",
+  "expected_existing_profile_binding": {
+    "is_active": 0,
+    "must_not_be_modified": true,
+    "profile_hash": "59412c799a127fbf78ea4abdba241b2cbadf5cad36e7adf7c13924f1507d32f0",
+    "user_id": "nic_bogaert"
+  },
+  "forbidden_writes": [
+    "No UPDATE or DELETE of existing user_profiles or agent_profiles.",
+    "No agent activation.",
+    "No public identity disclosure.",
+    "No CT minting authorization.",
+    "No investment processing authorization.",
+    "No RMC memory write.",
+    "No MEA state write.",
+    "No Chroma write."
+  ],
+  "schema_extension_path": "/home/nic/identity-vault/schema_extensions/contribution_economy_identity_authority_v1.sql",
+  "schema_extension_sha256": "ed265b56f67a201525d72e1bf946c9159624aa987f9a84aa99449e12fa6c3272",
+  "schema_version": "identity_vault_contribution_economy_write_contract_v1",
+  "status": "ACTIVE_ONLY_WHEN_EXPLICIT_INSTALL_APPROVAL_TOKEN_IS_SUPPLIED"
+}

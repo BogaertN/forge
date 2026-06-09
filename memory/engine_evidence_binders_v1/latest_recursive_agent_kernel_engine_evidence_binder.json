@@ -1,0 +1,183 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/recursive_agent_kernel",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/recursive_agent_kernel",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "recursive_agent_kernel",
+  "evidence_id": "EEB-a25ac486f908ee13",
+  "file_count": 5,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "389c66550a997458afb1e109db9b2f43336eea00a912a2eb705f24a6b06b5421",
+      "excerpt_start": "{\n  \"engine\": \"Recursive Agent Kernel\",\n  \"version\": \"v1\",\n  \"description\": \"Maintains recursive symbolic agent heartbeat and monitors symbolic drift cycles.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Recursive",
+        "Agent",
+        "Kernel",
+        "version",
+        "description",
+        "Maintains",
+        "recursive",
+        "symbolic",
+        "agent",
+        "heartbeat",
+        "and",
+        "monitors",
+        "drift",
+        "cycles"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/recursive_agent_kernel/agent_kernel_manifest.json",
+      "relative_to_candidate": "agent_kernel_manifest.json",
+      "sha256": "389c66550a997458afb1e109db9b2f43336eea00a912a2eb705f24a6b06b5421",
+      "size_bytes": 161,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "8ded1ca9c586f368a75871880f99514bab42694bd2e5c51f7ee2c093fbd372ac",
+      "excerpt_start": "import json\nimport time\n\nSTATE_FILE = \"recursion_state.json\"\n\ndef pulse_heartbeat():\n    \"\"\"Simulates a recursive heartbeat for symbolic agent stability.\"\"\"\n    state = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"heartbeat\": True,\n        \"loop_phase\": \"stable\",\n        \"drift_detected\": False\n    }\n    try:\n        with open(STATE_FILE, \"w\") as f:\n            json.dump(state, f, indent=2)\n        print(f\"✔️ Heartbeat pulse recorded: {state}\")\n    except Exception as e:\n        print(f\"[!] Failed to update recursion state: {e}\")\n    return state\n",
+      "functions_sample": [
+        "pulse_heartbeat"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time"
+      ],
+      "line_count": 21,
+      "path": "/home/nic/aiweb/engines/recursive_agent_kernel/agent_kernel_core.py",
+      "relative_to_candidate": "agent_kernel_core.py",
+      "sha256": "8ded1ca9c586f368a75871880f99514bab42694bd2e5c51f7ee2c093fbd372ac",
+      "size_bytes": 596,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "a72d6f812eafc3401f4c7f0e13c14a71628dbb2fcbf4bc0a6114d54f1c2c24eb",
+      "excerpt_start": "# Recursive Agent Kernel Engine\n\nThis engine provides a stable recursive \"heartbeat\" for symbolic agents.\n\nTracks phase stability, drift detection, and loop integrity signals across symbolic memory runtime.\n",
+      "functions_sample": [
+        "Recursive",
+        "Agent",
+        "Kernel",
+        "Engine",
+        "This",
+        "engine",
+        "provides",
+        "stable",
+        "recursive",
+        "heartbeat",
+        "for",
+        "symbolic",
+        "agents",
+        "Tracks",
+        "phase",
+        "stability",
+        "drift",
+        "detection",
+        "and",
+        "loop",
+        "integrity",
+        "signals",
+        "across",
+        "memory",
+        "runtime"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/recursive_agent_kernel/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "a72d6f812eafc3401f4c7f0e13c14a71628dbb2fcbf4bc0a6114d54f1c2c24eb",
+      "size_bytes": 207,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "d9b53e4fd8647808f0549d649de813d208c76503dc7f83ad4e16f9159c6998d8",
+      "excerpt_start": "from agent_kernel_core import pulse_heartbeat\n\ndef test_kernel_heartbeat():\n    try:\n        result = pulse_heartbeat()\n        assert result[\"heartbeat\"] == True\n        assert result[\"loop_phase\"] == \"stable\"\n        print(\"✅ Test Passed: Recursive heartbeat recorded successfully.\")\n    except Exception as e:\n        print(f\"❌ Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_kernel_heartbeat()\n",
+      "functions_sample": [
+        "test_kernel_heartbeat"
+      ],
+      "imports_sample": [
+        "from agent_kernel_core import pulse_heartbeat"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/recursive_agent_kernel/test_agent_kernel.py",
+      "relative_to_candidate": "test_agent_kernel.py",
+      "sha256": "d9b53e4fd8647808f0549d649de813d208c76503dc7f83ad4e16f9159c6998d8",
+      "size_bytes": 410,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "79786838902e110abde9fd8876a36eaa33c67ba6c84afa97476d7df5104bca75",
+      "excerpt_start": "{\n  \"timestamp\": \"2025-04-26T23:57:51Z\",\n  \"heartbeat\": true,\n  \"loop_phase\": \"stable\",\n  \"drift_detected\": false\n}",
+      "functions_sample": [
+        "timestamp",
+        "heartbeat",
+        "true",
+        "loop_phase",
+        "stable",
+        "drift_detected",
+        "false"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/recursive_agent_kernel/recursion_state.json",
+      "relative_to_candidate": "recursion_state.json",
+      "sha256": "79786838902e110abde9fd8876a36eaa33c67ba6c84afa97476d7df5104bca75",
+      "size_bytes": 115,
+      "suffix": ".json"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {
+    "config_or_manifest": 14,
+    "documentation_or_notes": 7,
+    "engine_source": 5,
+    "indexed_source": 2,
+    "runtime_wrapper": 11,
+    "test_or_validation": 61
+  },
+  "relationship_report_found": true,
+  "relationship_report_path": "/home/nic/forge/memory/code_library_v1/manifests/2026-05-14_200919_code_relationship_intelligence_report.json",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "APPROVED",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "pulse_heartbeat",
+    "test_kernel_heartbeat"
+  ],
+  "warnings": []
+}

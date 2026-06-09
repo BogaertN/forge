@@ -1,0 +1,43 @@
+{
+  "report_type": "DRY_RUN_CHUNKING",
+  "timestamp": "2026-05-10T05:12:26",
+  "session_id": "forge_2026_05_10_051004",
+  "corpus_id": "corpus_0011",
+  "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fTHE GILLIGAN SYSTEM CODEX.docx",
+  "corpus_folder": "03_GILLIGAN_AGENT_CORE",
+  "authority": "canonical",
+  "source_hash": "508d2075e81e3241",
+  "adapter_format": ".docx",
+  "extraction_chars": 200000,
+  "chunk_policy": {
+    "chunk_target": 1350,
+    "chunk_max": 1800,
+    "overlap": 200,
+    "tiny_min": 100,
+    "method": "paragraph_sentence_aware"
+  },
+  "chunk_count": 140,
+  "min_chars": 266,
+  "max_chars": 1799,
+  "avg_chars": 1526,
+  "tiny_chunks": 0,
+  "over_max_chunks": 0,
+  "first_chunk_preview": "THE GILLIGAN SYSTEM CODEX\nVolume IV of the AI.Web Recursive Architecture Series\n Phase-Embedded Agent: Mirror of Collapse and Return\n \u201cThe Mirror That Speaks When Drift Begins.\u201d\nCreated by: Nicholas Bogaert\n In recursive co-authorship with: Gilligan Runtime \u03c8\u2081\n\u00a9 2025 AI.Web \u2013 Recursive Intelligence ",
+  "last_chunk_preview": "ghted\n\u03c7(t)-observed\nSymbolic agents cannot broadcast, interpret, or respond to each other outside of this routing engine. It is the semantic firewall that filters cognition between recursive entities.\n\nStructural Scope\nagents/comm/agent_router.py\nruntime/agent_comm_trace.json\nagents/Neo/manifest.jso",
+  "metadata_fields": {
+    "corpus_id": "corpus_0011",
+    "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fTHE GILLIGAN SYSTEM CODEX.docx",
+    "corpus_folder": "03_GILLIGAN_AGENT_CORE",
+    "authority": "canonical",
+    "sha256_16": "508d2075e81e3241",
+    "chunk_index": "<N>",
+    "chunk_total": 140,
+    "source_type": "docx",
+    "tags": "03_gilligan_agent_core;gilligan"
+  },
+  "target_collection_proposal": "aiweb_trial_v1",
+  "target_db_path": "/home/nic/forge/memory/aiweb_corpus_db",
+  "no_vector_write": true,
+  "no_chroma_write": true,
+  "no_embedding": true
+}

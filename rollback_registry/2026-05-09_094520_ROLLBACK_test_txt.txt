@@ -1,0 +1,18 @@
+FORGE ROLLBACK SNAPSHOT
+══════════════════════════════════════════════════════════════════
+Target file     : /home/nic/forge_test_project/test.txt
+Snapshot time   : 2026-05-09T09:45:20
+File SHA-256    : fc0a6c04e779f517
+Proposal        : 2026-05-09_094029_PATCH_test_txt.txt
+Snapshot file   : /home/nic/forge/rollback_registry/2026-05-09_094520_ROLLBACK_test_txt.txt
+══════════════════════════════════════════════════════════════════
+
+This is a safe Forge test file.
+
+
+══════════════════════════════════════════════════════════════════
+RESTORE INSTRUCTION:
+  Copy the content above (between the two separator lines) back into
+  the target file verbatim to undo the applied change.
+  Verify with: sha256sum /home/nic/forge_test_project/test.txt   (should match fc0a6c04e779f517)
+══════════════════════════════════════════════════════════════════

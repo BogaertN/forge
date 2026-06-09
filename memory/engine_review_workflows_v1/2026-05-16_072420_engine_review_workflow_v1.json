@@ -1,0 +1,97 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "evidence_crosscheck_write_authority": true,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_draft_write_authority": true,
+    "mode": "EVIDENCE_REVIEW_BATCH_WORKFLOW",
+    "patch": "105",
+    "project_file_write_authority": false,
+    "queue_decision_authority": false,
+    "queue_rebuild_authority": true,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 105 may draft and cross-check a small batch, then rebuild queue visibility. It may not approve or commit anything.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_workflows_v1",
+      "llm_engine_review_drafts_v1",
+      "engine_review_evidence_crosschecks_v1",
+      "engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "counts": {
+    "crosschecked": 3,
+    "drafted": 3,
+    "errors": 0,
+    "selected": 3
+  },
+  "created_at": "2026-05-16_072420",
+  "next_step": "Inspect each full evidence cross-check, then use engine-review-approval-check/approve/defer/reject. No approval was recorded by Patch 105.",
+  "queue_rebuild_error": null,
+  "report_type": "ENGINE_REVIEW_WORKFLOW_RECEIPT_V1_PATCH105",
+  "requested_limit": 3,
+  "schema_version": "engine_review_workflow_v1_patch105",
+  "status": "ENGINE_REVIEW_WORKFLOW_COMPLETED_NO_APPROVAL_AUTHORITY",
+  "warnings": [
+    "aiweb_os: LLM role wording does not explicitly repeat deterministic role label.",
+    "aiweb_os_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "ascii_interpreter_engine: LLM role wording does not explicitly repeat deterministic role label."
+  ],
+  "workflow_rows": [
+    {
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_072442_aiweb_os_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "e76650186f863ba283081a1a3baf3aa456c70f2952ffe6c5f1b50d553222267f",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_072420_aiweb_os_llm_engine_review_draft_v1.json",
+      "draft_sha256": "ae5a62c35c07d17bcfc897b41477d8f5528ecbb4d5643f2481f9e986b67dd81d",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "aiweb_os",
+      "evidence_id": "EEB-7b29cb90ee5e540e",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nThis code serves as a system test harness for AI.Web's runtime environment, dynamically loading and executing frozen engine modules to verify their functionality (e.g., OS commands, phase initialization).  \n\nLikely System Role:  \nA runtime wrapper/loader for AI.Web's modularized engine components, enabling dynamic testing and integration of frozen engine implementations.  \n\nEvidence Used:  \n- Python script (`run_system_test.py`) dynamically loads and executes frozen engine modules (e.g., `os_engine`, `phase_engine`).  \n- Empty test log file (`test_log.txt`) likely capturing execution outputs.  \n- Code structure suggests testing, module loading, and system integration.  \n\nRisks / Uncertainties:  \n- Test results are not visible in the provided evidence (log file is empty).  \n- Dynamic module loading could introduce security risks if paths are tampered with.  \n- Dependencies on specific \"frozen\" engine files may lack versioning or stability guarantees.  \n\nRecommendation Draft:  \n- Execute the test harness to validate engine outputs and populate the log file.  \n- Verify module paths are secure and immutable to prevent runtime tampering.  \n- Confirm all referenced \"frozen\" engine files are stable and version-controlled.  \n\nSuggested Nic Action:  \nApprove review but request validation of test results and security hardening before deployment."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/aiweb_os_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_072505_aiweb_os_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "7fb971ca5743bff36ba004f67d75007dcfee85ffad05ffdcf8fd0c9b524b333c",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_072442_aiweb_os_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "5710f472a74e38d297fc68894c78dd3e19ed039996572334faecc4eb93861ab7",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "aiweb_os_engine",
+      "evidence_id": "EEB-f8276d394f6ec7e0",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nManages core runtime operations for AI.Web, including system status reporting, command execution, and initialization routines.  \n\nLikely System Role:  \nA core runtime module for AI.Web's operating system, handling symbolic execution, status checks, and system integrity validation.  \n\nEvidence Used:  \n- `run.py` defines key functions (`_log_event`, `get_status`, `execute_command`) for command execution and logging.  \n- `README.md` outlines features like ping validation, status reporting, and initialization.  \n- `test_log.txt` contains execution traces (e.g., `ping`, `init`, `get_status`).  \n- `status.json` stores system status metadata.  \n- `engine_manifest.json` specifies versioning, locked status, and operational constraints.  \n\nRisks / Uncertainties:  \n- The `launch_nuke` command in logs lacks documentation, raising security/functional ambiguity.  \n- The `init` command creates a mutable `status.json` file, which could be tampered with if not properly secured.  \n- The engine’s locked versioning policy may hinder necessary updates without explicit version increments.  \n\nRecommendation Draft:  \n- Document the `launch_nuke` command’s purpose and permissions to mitigate misuse risks.  \n- Implement read-only access controls for `status.json` to prevent unauthorized modifications.  \n- Verify that versioning locks align with organizational policies for system stability.  \n\nSuggested Nic Action:  \n- Review `launch_nuke`’s implementation and intended functionality.  \n- Confirm security measures for `status.json` and `init` process.  \n- Approve versioning policy alignment with system update protocols."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/ascii_interpreter_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_072529_ascii_interpreter_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "0b269d39cd6e4d926372225fad3c7b525bfe51b0e36faf38b12e0d34ad0a7345",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_072505_ascii_interpreter_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "0d431649ed394c48a7b2c910bab3bce0e5fdd1d8cba548fed61e3419053575e7",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "ascii_interpreter_engine",
+      "evidence_id": "EEB-2acca33f6ecda788",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nTo convert symbolic log events from AI.Web runtime into human-readable ASCII summaries for monitoring, drift tracking, and terminal overlays.  \n\nLikely System Role:  \nA logging and data interpretation component within the AI.Web runtime, responsible for parsing JSON/log files into structured, readable output for diagnostic and visualization purposes.  \n\nEvidence Used:  \n- `ascii_core.py`: Implements `interpret_log_file` and `write_ascii_summary` to parse JSON logs and generate ASCII summaries.  \n- `README.md`: Describes the engine's purpose, output file (`ascii_trace.log`), and supported file types (JSON/log).  \n- `engine_manifest.json`: Defines the engine's version, description, and phase (`Phase 1.5 Symbolic Runtime Decoding Layer`).  \n- `test_ascii_core.py`: Validates the engine's functionality with a basic test script.  \n\nRisks / Uncertainties:  \n- Minimal error handling in `interpret_log_file` (e.g., uncaught exceptions in JSON parsing).  \n- Hardcoded log directories in `LOG_DIRS` may limit flexibility.  \n- Phase `1.5` reference in manifest lacks contextual explanation.  \n- Test script is simplistic; no evidence of comprehensive testing.  \n\nRecommendation Draft:  \nApprove with caveats: Confirm robustness of error handling, validate phase `1.5` alignment with system architecture, and ensure log directory configuration is flexible. Suggest expanding test coverage.  \n\nSuggested Nic Action:  \nApprove the engine for integration but request additional validation of error resilience, phase standard clarification, and configurable log directory support before deployment."
+    }
+  ]
+}

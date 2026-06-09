@@ -1,0 +1,50 @@
+{
+  "artifact_manifest": {
+    "artifact_type": "protoforge_sandbox_result_manifest",
+    "created_at": "2026-05-24T19:05:53Z",
+    "files": [
+      "runs/simreq_683e152a2a124796/result.json",
+      "runs/simreq_683e152a2a124796/scenario.json",
+      "runs/simreq_683e152a2a124796/state_trace.json",
+      "runs/simreq_683e152a2a124796/metrics.json"
+    ],
+    "hash_policy": "result_hash=logical canonical payload excluding artifact paths; result_file_sha256=sha256 of saved result.json bytes",
+    "manifest_version": "0.8.0",
+    "request_id": "simreq_683e152a2a124796",
+    "result_file_sha256": "a1b689e2c5a46e3a70b5fb4d2bda5c3c9689141741571232ad8d8827a0e6e824",
+    "result_hash": "d557ac87ca324b3450c28b92c308750e39b70cfeff05911d89ee1c2e434668e0"
+  },
+  "files": [
+    "runs/simreq_683e152a2a124796/result.json",
+    "runs/simreq_683e152a2a124796/scenario.json",
+    "runs/simreq_683e152a2a124796/state_trace.json",
+    "runs/simreq_683e152a2a124796/metrics.json"
+  ],
+  "generated_at_utc": "20260525_003151_UTC",
+  "identity_vault_written": false,
+  "metrics": {
+    "client_mode": "DIRECT",
+    "cube_body_id": 1,
+    "fell_downward": true,
+    "final_z": 0.79091204,
+    "initial_z": 2.0,
+    "max_abs_linear_velocity": 4.70704812,
+    "min_z": 0.79091204,
+    "plane_body_id": 0,
+    "steps_recorded": 121,
+    "steps_requested": 120,
+    "time_step_s": 0.004166666666666667,
+    "wall_time_s": 0.02630064
+  },
+  "name": "ProtoForge Result Show",
+  "ok": true,
+  "patch": "239",
+  "requested_run_id": "",
+  "result_read_only": true,
+  "result_verdict": "SIMULATION_COMPLETED_WITHIN_BOUNDS",
+  "rmc_live_memory_written": false,
+  "run_dir": "/home/nic/aiweb/runtime_wrappers/protoforge_sandbox_substrate_v0/runs/simreq_683e152a2a124796",
+  "run_id": "simreq_683e152a2a124796",
+  "simulation_executed": false,
+  "verdict": "PROTOFORGE_RESULT_SHOW_OK"
+}

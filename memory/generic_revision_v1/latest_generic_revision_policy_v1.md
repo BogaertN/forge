@@ -1,0 +1,25 @@
+# GENERIC_REVISION_POLICY_V1
+
+```json
+{
+  "schema_version": "generic_revision_policy_v1_patch139",
+  "report_type": "GENERIC_REVISION_POLICY_V1",
+  "created_at": "2026-05-17T12:40:51",
+  "status": "GENERIC_REVISION_POLICY_READY",
+  "purpose": "Let the local Forge LLM review the latest isolated sandbox failure and propose the next generic candidate/dependency revision before any live write.",
+  "rules": [
+    "No live AI.Web writes.",
+    "No patch apply authority.",
+    "No ledger mutation authority.",
+    "Use sandbox/test stderr and concrete file snippets, not broad corpus metadata.",
+    "The LLM must choose APPROVE_EXISTING_CANDIDATE, REVISE_CANDIDATE, or REVISE_SANDBOX_DEPENDENCY_PLAN.",
+    "Forge records the LLM output and hashes it; later patches may transform the approved revision into a candidate diff."
+  ],
+  "confirmation_token": "CONFIRM_CALL_GENERIC_REVISION_LLM",
+  "authority": {
+    "project_file_write_authority": false,
+    "patch_apply_authority": false,
+    "model_generation_allowed_with_token": true
+  }
+}
+```

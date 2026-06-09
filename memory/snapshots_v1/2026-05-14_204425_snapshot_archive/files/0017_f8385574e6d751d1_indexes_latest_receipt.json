@@ -1,0 +1,7 @@
+{
+  "latest_receipt_id": "llm_tool_request_2026-05-14_194137_737eb8f2dc742d1e",
+  "latest_receipt_path": "/home/nic/forge/memory/llm_memory_v1/tool_requests/llm_tool_request_2026-05-14_194137_737eb8f2dc742d1e.json",
+  "latest_receipt_type": "LLM_TOOL_REQUEST_RECEIPT_V1",
+  "schema_version": "llm_memory_v1_patch75",
+  "updated_at": "2026-05-14T19:41:37"
+}

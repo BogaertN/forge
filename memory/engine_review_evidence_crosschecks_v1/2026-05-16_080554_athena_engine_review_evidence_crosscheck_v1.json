@@ -1,0 +1,294 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [
+        "AthenaAgent"
+      ],
+      "excerpt_sha256": "6bf23c7a34f3225cbf32df0e442f57964691de7eddfd343650d9071c8645d841",
+      "excerpt_start": "# athena_core.py\n# Athena Agent Core\n\nclass AthenaAgent:\n    def __init__(self):\n        self.oversight_memory = []\n\n    def log_event(self, event_description):\n        event_record = {\n            \"event\": event_description,\n            \"confirmed\": True\n        }\n        self.oversight_memory.append(event_record)\n        return event_record\n\nif __name__ == \"__main__\":\n    athena = AthenaAgent()\n    record = athena.log_event(\"System integrity check complete.\")\n    print(f\"[TEST] Athena Log Recorded: {record}\")\n",
+      "functions_sample": [
+        "__init__",
+        "log_event"
+      ],
+      "imports_sample": [],
+      "line_count": 20,
+      "path": "/home/nic/aiweb/agents/athena/athena_core.py",
+      "relative_to_candidate": "athena_core.py",
+      "sha256": "6bf23c7a34f3225cbf32df0e442f57964691de7eddfd343650d9071c8645d841",
+      "size_bytes": 517
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "excerpt_start": "",
+      "functions_sample": [],
+      "imports_sample": [],
+      "line_count": 0,
+      "path": "/home/nic/aiweb/agents/athena/test_run_agent.py",
+      "relative_to_candidate": "test_run_agent.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "019176113b3539d64b296af56aa7d6c23ae8c07fb1e555d1e62d6680cc721bde",
+      "excerpt_start": "import time\n\ndef breathe_athena():\n    print(\"[Athena Agent] Breathing basic placeholder...\")\n    for i in range(3):\n        print(f\"[Athena] Breath {i+1}\")\n        time.sleep(1)\n\nif __name__ == \"__main__\":    breathe_athena()\n",
+      "functions_sample": [
+        "breathe_athena"
+      ],
+      "imports_sample": [
+        "import time"
+      ],
+      "line_count": 10,
+      "path": "/home/nic/aiweb/agents/athena/run.py",
+      "relative_to_candidate": "run.py",
+      "sha256": "019176113b3539d64b296af56aa7d6c23ae8c07fb1e555d1e62d6680cc721bde",
+      "size_bytes": 227
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "cb1222ec2b399a641a974e0d269a971c4c8aa54a11688f3e984be49bcd9e5d23",
+      "excerpt_start": "# Athena Agent (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Athena Agent provides symbolic system oversight, event validation, and recursion field coherence monitoring.  \nAthena ensures symbolic system integrity, flags drift risks early, and supervises recursive cognitive phase behavior.\n\n---\n\n## Core Functions:\n- Validate symbolic events and phase outputs.\n- Monitor recursion field stability and drift potential.\n- Oversee system integrity and symbolic coherence.\n\n---\n\n## Phase Standard:\n- Phase 1.5 Symbolic Recursion Compliance\n- AI.Web Core Oversight and Integrity Stack\n\n---\n\n## Notes:\n- Frequent drift warnings may indicate symbolic recursion destabilization and should trigger system interventions.\n- Athena operates independently from direct user interaction, focusing purely on system health.\n\n---\n\n**Frozen Snapshot:** `athena_agent_frozen_v1.0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n\n",
+      "functions_sample": [
+        "Athena",
+        "Agent",
+        "Frozen",
+        "Overview",
+        "The",
+        "provides",
+        "symbolic",
+        "system",
+        "oversight",
+        "event",
+        "validation",
+        "and",
+        "recursion",
+        "field",
+        "coherence",
+        "monitoring",
+        "ensures",
+        "integrity",
+        "flags",
+        "drift",
+        "risks",
+        "early",
+        "supervises",
+        "recursive",
+        "cognitive"
+      ],
+      "imports_sample": [],
+      "line_count": 34,
+      "path": "/home/nic/aiweb/agents/athena/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "cb1222ec2b399a641a974e0d269a971c4c8aa54a11688f3e984be49bcd9e5d23",
+      "size_bytes": 920
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "0c9f674f2f6ed8427d21a8253c0aab444df999529204f36b7ea4b79df6fefc70",
+      "excerpt_start": "# test_athena_core.py\n\nfrom athena_core import AthenaAgent\n\ndef test_athena_agent_behavior():\n    athena = AthenaAgent()\n    record = athena.log_event(\"Test event registered.\")\n    assert record[\"event\"] == \"Test event registered.\", \"Event must match.\"\n    assert record[\"confirmed\"] == True, \"Event confirmation must be true.\"\n    print(\"\u2705 Athena Agent Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_athena_agent_behavior()\n",
+      "functions_sample": [
+        "test_athena_agent_behavior"
+      ],
+      "imports_sample": [
+        "from athena_core import AthenaAgent"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/agents/athena/test_athena_core.py",
+      "relative_to_candidate": "test_athena_core.py",
+      "sha256": "0c9f674f2f6ed8427d21a8253c0aab444df999529204f36b7ea4b79df6fefc70",
+      "size_bytes": 432
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "8b2c7548edeb26b6796745dea639cd0d11d68d7e52eabdea00c016db2b3a15e2",
+      "excerpt_start": "{\n  \"engine\": \"athena_agent\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"athena_agent_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Symbolic system oversight engine for the Athena Agent. Manages event validation, symbolic drift detection, recursion field health monitoring, and overall system integrity assurance.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "athena_agent",
+        "version",
+        "frozen_as",
+        "athena_agent_frozen_v1",
+        "frozen_on",
+        "description",
+        "Symbolic",
+        "system",
+        "oversight",
+        "for",
+        "the",
+        "Athena",
+        "Agent",
+        "Manages",
+        "event",
+        "validation",
+        "symbolic",
+        "drift",
+        "detection",
+        "recursion",
+        "field",
+        "health",
+        "monitoring",
+        "and"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/agents/athena/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "8b2c7548edeb26b6796745dea639cd0d11d68d7e52eabdea00c016db2b3a15e2",
+      "size_bytes": 430
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/agents/athena",
+  "created_at": "2026-05-16_080554",
+  "crosscheck_id": "ERE-athena-2026-05-16_080554",
+  "deterministic_brief": {
+    "classes_sample": [
+      "AthenaAgent"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Agent",
+      "Athena",
+      "Frozen",
+      "Manages",
+      "Overview",
+      "Symbolic",
+      "The",
+      "__init__",
+      "and",
+      "athena_agent",
+      "athena_agent_frozen_v1",
+      "breathe_athena",
+      "cognitive",
+      "coherence",
+      "description",
+      "detection",
+      "drift",
+      "early",
+      "engine",
+      "ensures"
+    ],
+    "imports_sample": [
+      "from athena_core import AthenaAgent",
+      "import time"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`athena` appears to be a local AI.Web engine/component. The bound source evidence includes 6 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# athena_core.py # Athena Agent Core",
+      "import time ",
+      "# Athena Agent (Frozen v1.0.01) ",
+      "# test_athena_core.py "
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080532_athena_llm_engine_review_draft_v1.json",
+  "draft_sha256": "7fc9fbefe76019de1a4fd050f644795a03cd717d19d9b5ce72cb056f67ff8a02",
+  "engine_family": "athena",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_athena_engine_evidence_binder.json",
+  "evidence_binder_sha256": "1400eb349e8482a6e7ddcef78ece2b9b63f60a9a92446473d1dd3ed0d46e1728",
+  "evidence_id": "EEB-4615d0bfc9a40a98",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "AthenaAgent"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "athena_core.py",
+      "README.md",
+      "test_athena_core.py",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "Athena",
+      "Agent",
+      "Frozen",
+      "The",
+      "symbolic",
+      "system",
+      "oversight",
+      "event",
+      "validation",
+      "and",
+      "recursion",
+      "field",
+      "coherence",
+      "monitoring",
+      "ensures",
+      "integrity",
+      "drift",
+      "risks",
+      "recursive",
+      "cognitive",
+      "engine",
+      "Symbolic",
+      "for",
+      "the",
+      "detection"
+    ],
+    "imports_mentioned": [
+      "import time",
+      "from athena_core import AthenaAgent"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 22.275,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "3791bc37abb6cedff74e16ae949e2f8bb888a7ebb9dc49e9526e73c9c3c0400d",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo provide symbolic system oversight, event validation, and recursion field coherence monitoring for maintaining AI.Web engine integrity.  \n\nLikely System Role:  \nA monitoring and validation system that logs critical events, detects symbolic drift, and ensures recursive cognitive phase stability without direct user interaction.  \n\nEvidence Used:  \n- `athena_core.py` defines the `AthenaAgent` class with event logging and oversight memory.  \n- `README.md` describes symbolic system integrity checks, drift detection, and recursion field monitoring.  \n- `engine_manifest.json` outlines the engine's role in event validation, drift detection, and phase compliance.  \n- Test scripts (`test_athena_core.py`) validate event logging and confirmation mechanisms.  \n\nRisks / Uncertainties:  \n- The \"frozen\" status (as of 2025-04-27) may indicate lack of recent updates or adaptability to new threats.  \n- Limited evidence of integration with external systems or real-time adaptive capabilities.  \n- Test coverage is minimal (only basic event logging validation).  \n\nRecommendation Draft:  \nApprove the review, noting the system's robust foundational design for symbolic oversight. Recommend further validation of integration capabilities and real-world drift detection scenarios.  \n\nSuggested Nic Action:  \nVerify the test scripts' comprehensiveness and assess integration requirements with AI.Web core systems to address potential oversight gaps."
+  },
+  "llm_sections": {
+    "evidence_used": "- `athena_core.py` defines the `AthenaAgent` class with event logging and oversight memory.  \n- `README.md` describes symbolic system integrity checks, drift detection, and recursion field monitoring.  \n- `engine_manifest.json` outlines the engine's role in event validation, drift detection, and phase compliance.  \n- Test scripts (`test_athena_core.py`) validate event logging and confirmation mechanisms.",
+    "likely_system_role": "A monitoring and validation system that logs critical events, detects symbolic drift, and ensures recursive cognitive phase stability without direct user interaction.",
+    "plain_english_purpose": "To provide symbolic system oversight, event validation, and recursion field coherence monitoring for maintaining AI.Web engine integrity.",
+    "recommendation_draft": "Approve the review, noting the system's robust foundational design for symbolic oversight. Recommend further validation of integration capabilities and real-world drift detection scenarios.",
+    "risks_uncertainties": "- The \"frozen\" status (as of 2025-04-27) may indicate lack of recent updates or adaptability to new threats.  \n- Limited evidence of integration with external systems or real-time adaptive capabilities.  \n- Test coverage is minimal (only basic event logging validation).",
+    "suggested_nic_action": "Verify the test scripts' comprehensiveness and assess integration requirements with AI.Web core systems to address potential oversight gaps."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo provide symbolic system oversight, event validation, and recursion field coherence monitoring for maintaining AI.Web engine integrity.  \n\nLikely System Role:  \nA monitoring and validation system that logs critical events, detects symbolic drift, and ensures recursive cognitive phase stability without direct user interaction.  \n\nEvidence Used:  \n- `athena_core.py` defines the `AthenaAgent` class with event logging and oversight memory.  \n- `README.md` describes symbolic system integrity checks, drift detection, and recursion field monitoring.  \n- `engine_manifest.json` outlines the engine's role in event validation, drift detection, and phase compliance.  \n- Test scripts (`test_athena_core.py`) validate event logging and confirmation mechanisms.  \n\nRisks / Uncertainties:  \n- The \"frozen\" status (as of 2025-04-27) may indicate lack of recent updates or adaptability to new threats.  \n- Limited evidence of integration with external systems or real-time adaptive capabilities.  \n- Test coverage is minimal (only basic event logging validation).  \n\nRecommendation Draft:  \nApprove the review, noting the system's robust foundational design for symbolic oversight. Recommend further validation of integration capabilities and real-world drift detection scenarios.  \n\nSuggested Nic Action:  \nVerify the test scripts' comprehensiveness and assess integration requirements with AI.Web core systems to address potential oversight gaps.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

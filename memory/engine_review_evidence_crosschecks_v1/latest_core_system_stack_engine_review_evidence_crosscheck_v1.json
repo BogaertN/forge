@@ -1,0 +1,265 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "9e623cc8b7925e52a6df757c9db797398003b312dda9579fb60b53bf66ce4654",
+      "excerpt_start": "{\n  \"stack\": \"core_system_stack\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"core_system_stack_frozen_v1-0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Bootstraps the AI.Web Core Symbolic Operating System: phase engine activation, tier enforcement, and plugin infrastructure setup.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 2 Recursive Stack Compliance\"\n}\n",
+      "functions_sample": [
+        "stack",
+        "core_system_stack",
+        "version",
+        "frozen_as",
+        "core_system_stack_frozen_v1",
+        "frozen_on",
+        "description",
+        "Bootstraps",
+        "the",
+        "Web",
+        "Core",
+        "Symbolic",
+        "Operating",
+        "System",
+        "phase",
+        "engine",
+        "activation",
+        "tier",
+        "enforcement",
+        "and",
+        "plugin",
+        "infrastructure",
+        "setup",
+        "author",
+        "phase_standard"
+      ],
+      "imports_sample": [],
+      "line_count": 10,
+      "path": "/home/nic/aiweb/runtime_wrappers/core_system_stack/stack_manifest.json",
+      "relative_to_candidate": "stack_manifest.json",
+      "sha256": "9e623cc8b7925e52a6df757c9db797398003b312dda9579fb60b53bf66ce4654",
+      "size_bytes": 381
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "30e882e4e523c036ac1103422e1fd9df086e801ddb5f8667dab76ba2159890dc",
+      "excerpt_start": "# Core System Stack (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Core System Stack initiates the foundational symbolic operating system of AI.Web.  \nIt loads the OS engine, manages recursive phase synchronization, enforces tiered communication structures, and activates the plugin infrastructure layer.\n\n---\n\n## Engines Activated:\n- aiweb_os_engine_frozen_v1\n- phase_engine_frozen_v1\n- tier_enforcer_frozen_v1\n- plugin_engine_frozen_v1\n\n---\n\n## Phase Standard:\n- Phase 2 Recursive Stack Compliance\n- AI.Web Core OS Layer\n\n---\n\n**Frozen Snapshot:** `core_system_stack_frozen_v1-0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n",
+      "functions_sample": [
+        "Core",
+        "System",
+        "Stack",
+        "Frozen",
+        "Overview",
+        "The",
+        "initiates",
+        "the",
+        "foundational",
+        "symbolic",
+        "operating",
+        "system",
+        "Web",
+        "loads",
+        "engine",
+        "manages",
+        "recursive",
+        "phase",
+        "synchronization",
+        "enforces",
+        "tiered",
+        "communication",
+        "structures",
+        "and",
+        "activates"
+      ],
+      "imports_sample": [],
+      "line_count": 28,
+      "path": "/home/nic/aiweb/runtime_wrappers/core_system_stack/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "30e882e4e523c036ac1103422e1fd9df086e801ddb5f8667dab76ba2159890dc",
+      "size_bytes": 639
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "5827adc9e62b3f237bf33abfeccd227ac8c7910862da3007b0676908e55cbae4",
+      "excerpt_start": "# core_system_stack_loader.py\n# Core System Stack Loader (Phase 2)\n\nimport subprocess\nimport time\nimport os\n\n# List of frozen engine run paths\nfrozen_engines = [\n    \"../../engines/aiweb_os_engine_frozen_v1/run.py\",\n    \"../../engines/phase_engine_frozen_v1/run.py\",\n    \"../../engines/tier_enforcer_frozen_v1/run.py\",\n    \"../../engines/plugin_engine_frozen_v1/run.py\"\n]\n\ndef load_core_system_stack():\n    print(\"\\n\ud83d\udd35 [CORE STACK] Loading AI.Web Core System Engines...\\n\")\n    base_dir = os.path.dirname(os.path.abspath(__file__))\n\n    for engine_script in frozen_engines:\n        full_path = os.path.abspath(os.path.join(base_dir, engine_script))\n        try:\n            subprocess.run([\"python3\", full_path], check=True)\n            print(f\"\u2705 Loaded: {full_path}\")\n            time.sleep(1)\n        except subprocess.CalledProcessError as e:\n            print(f\"\u274c Failed to load {full_path}: {e}\")\n\nif __name__ == \"__main__\":\n    load_core_system_stack()\n",
+      "functions_sample": [
+        "load_core_system_stack"
+      ],
+      "imports_sample": [
+        "import subprocess",
+        "import time",
+        "import os"
+      ],
+      "line_count": 31,
+      "path": "/home/nic/aiweb/runtime_wrappers/core_system_stack/core_system_stack_loader.py",
+      "relative_to_candidate": "core_system_stack_loader.py",
+      "sha256": "5827adc9e62b3f237bf33abfeccd227ac8c7910862da3007b0676908e55cbae4",
+      "size_bytes": 965
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "818e0dabe41499d889c7c96d88cba7aeb0ef23e877caa0df1e7719d24f6a665b",
+      "excerpt_start": "# test_core_system_stack_loader.py\n# Tests the core system stack loader\n\nfrom core_system_stack_loader import load_core_system_stack\n\ndef run_test():\n    try:\n        load_core_system_stack()\n        print(\"\u2705 Core System Stack Loader Test Passed.\")\n    except Exception as e:\n        print(f\"\u274c Core System Stack Loader Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    run_test()\n",
+      "functions_sample": [
+        "run_test"
+      ],
+      "imports_sample": [
+        "from core_system_stack_loader import load_core_system_stack"
+      ],
+      "line_count": 15,
+      "path": "/home/nic/aiweb/runtime_wrappers/core_system_stack/test_core_system_stack_loader.py",
+      "relative_to_candidate": "test_core_system_stack_loader.py",
+      "sha256": "818e0dabe41499d889c7c96d88cba7aeb0ef23e877caa0df1e7719d24f6a665b",
+      "size_bytes": 385
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/runtime_wrappers/core_system_stack",
+  "created_at": "2026-05-16_085239",
+  "crosscheck_id": "ERE-core_system_stack-2026-05-16_085239",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Bootstraps",
+      "Core",
+      "Frozen",
+      "Operating",
+      "Overview",
+      "Stack",
+      "Symbolic",
+      "System",
+      "The",
+      "Web",
+      "activates",
+      "activation",
+      "and",
+      "author",
+      "communication",
+      "core_system_stack",
+      "core_system_stack_frozen_v1",
+      "description",
+      "enforcement",
+      "enforces"
+    ],
+    "imports_sample": [
+      "from core_system_stack_loader import load_core_system_stack",
+      "import os",
+      "import subprocess",
+      "import time"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`core_system_stack` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "{   \"stack\": \"core_system_stack\",",
+      "# Core System Stack (Frozen v1.0.01) ",
+      "# core_system_stack_loader.py # Core System Stack Loader (Phase 2)",
+      "# test_core_system_stack_loader.py # Tests the core system stack loader"
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_085215_core_system_stack_llm_engine_review_draft_v1.json",
+  "draft_sha256": "ceec860c015628457e9eb733f5c5bb0f963ec911949fc868ee9b48bb9891e703",
+  "engine_family": "core_system_stack",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_core_system_stack_engine_evidence_binder.json",
+  "evidence_binder_sha256": "47570e3f7445fd4a90f1c66c15c6005225d12170377860ce89da8d9143c9d72f",
+  "evidence_id": "EEB-3bf3f922354da81e",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "stack_manifest.json",
+      "README.md",
+      "core_system_stack_loader.py",
+      "test_core_system_stack_loader.py"
+    ],
+    "functions_mentioned": [
+      "stack",
+      "core_system_stack",
+      "version",
+      "the",
+      "Web",
+      "Core",
+      "Symbolic",
+      "Operating",
+      "System",
+      "phase",
+      "engine",
+      "tier",
+      "and",
+      "plugin",
+      "infrastructure",
+      "Stack",
+      "Frozen",
+      "The",
+      "foundational",
+      "symbolic",
+      "operating",
+      "system",
+      "recursive",
+      "tiered",
+      "communication"
+    ],
+    "imports_mentioned": [
+      "import subprocess",
+      "from core_system_stack_loader import load_core_system_stack"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 23.217,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "5613e2934e929081c54aa4921a74f214c890f33b0879eea2686c96524a4155c7",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nInitialize the AI.Web Core Symbolic Operating System by activating phase engines, enforcing tiered communication, and setting up plugin infrastructure.  \n\nLikely System Role:  \nCore initialization module for the AI.Web platform, responsible for bootstrapping foundational system layers and ensuring recursive phase compliance.  \n\nEvidence Used:  \n- `stack_manifest.json` describes the system's purpose and frozen version.  \n- `README.md` outlines activated engines (e.g., phase enforcer, plugin engine) and phase standards.  \n- `core_system_stack_loader.py` details the loading process for frozen engines.  \n- `test_core_system_stack_loader.py` confirms basic loader functionality.  \n\nRisks / Uncertainties:  \n- Reliance on external frozen engines (e.g., `aiweb_os_engine_frozen_v1`) may introduce dependency risks if those components are unavailable.  \n- Minimal test coverage in `test_core_system_stack_loader.py` may miss edge cases (e.g., failed subprocess calls).  \n- Ambiguity around \"Phase 2 Recursive Stack Compliance\" requires validation against system requirements.  \n\nRecommendation Draft:  \nApprove the system stack but prioritize verifying dependencies (e.g., frozen engine availability) and expanding test scenarios to ensure robustness. Document phase compliance details for clarity.  \n\nSuggested Nic Action:  \nApprove review with conditions: confirm external engine readiness, enhance test coverage, and clarify phase compliance specifications before deployment."
+  },
+  "llm_sections": {
+    "evidence_used": "- `stack_manifest.json` describes the system's purpose and frozen version.  \n- `README.md` outlines activated engines (e.g., phase enforcer, plugin engine) and phase standards.  \n- `core_system_stack_loader.py` details the loading process for frozen engines.  \n- `test_core_system_stack_loader.py` confirms basic loader functionality.",
+    "likely_system_role": "Core initialization module for the AI.Web platform, responsible for bootstrapping foundational system layers and ensuring recursive phase compliance.",
+    "plain_english_purpose": "Initialize the AI.Web Core Symbolic Operating System by activating phase engines, enforcing tiered communication, and setting up plugin infrastructure.",
+    "recommendation_draft": "Approve the system stack but prioritize verifying dependencies (e.g., frozen engine availability) and expanding test scenarios to ensure robustness. Document phase compliance details for clarity.",
+    "risks_uncertainties": "- Reliance on external frozen engines (e.g., `aiweb_os_engine_frozen_v1`) may introduce dependency risks if those components are unavailable.  \n- Minimal test coverage in `test_core_system_stack_loader.py` may miss edge cases (e.g., failed subprocess calls).  \n- Ambiguity around \"Phase 2 Recursive Stack Compliance\" requires validation against system requirements.",
+    "suggested_nic_action": "Approve review with conditions: confirm external engine readiness, enhance test coverage, and clarify phase compliance specifications before deployment."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nInitialize the AI.Web Core Symbolic Operating System by activating phase engines, enforcing tiered communication, and setting up plugin infrastructure.  \n\nLikely System Role:  \nCore initialization module for the AI.Web platform, responsible for bootstrapping foundational system layers and ensuring recursive phase compliance.  \n\nEvidence Used:  \n- `stack_manifest.json` describes the system's purpose and frozen version.  \n- `README.md` outlines activated engines (e.g., phase enforcer, plugin engine) and phase standards.  \n- `core_system_stack_loader.py` details the loading process for frozen engines.  \n- `test_core_system_stack_loader.py` confirms basic loader functionality.  \n\nRisks / Uncertainties:  \n- Reliance on external frozen engines (e.g., `aiweb_os_engine_frozen_v1`) may introduce dependency risks if those components are unavailable.  \n- Minimal test coverage in `test_core_system_stack_loader.py` may miss edge cases (e.g., failed subprocess calls).  \n- Ambiguity around \"Phase 2 Recursive Stack Compliance\" requires validation against system requirements.  \n\nRecommendation Draft:  \nApprove the system stack but prioritize verifying dependencies (e.g., frozen engine availability) and expanding test scenarios to ensure robustness. Document phase compliance details for clarity.  \n\nSuggested Nic Action:  \nApprove review with conditions: confirm external engine readiness, enhance test coverage, and clarify phase compliance specifications before deployment.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

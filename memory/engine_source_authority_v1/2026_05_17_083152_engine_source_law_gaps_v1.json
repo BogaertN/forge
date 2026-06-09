@@ -1,0 +1,196 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T08:31:52",
+  "gap_count": 12,
+  "gaps": [
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/agent_reflection_engine",
+      "engine_base": "agent_reflection_engine",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "AGENT_IDENTITY_AND_GOVERNANCE"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "agents/athena",
+      "engine_base": "athena",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "AGENT_IDENTITY_AND_GOVERNANCE"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/athena_engine",
+      "engine_base": "athena_engine",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "AGENT_IDENTITY_AND_GOVERNANCE"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 28,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/christping_listener",
+      "engine_base": "christping_listener",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "CHRISTPING_CORRECTION_LAYER"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 58,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/christping_validator_engine",
+      "engine_base": "christping_validator_engine",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "CHRISTPING_CORRECTION_LAYER"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 15,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "projects/recursive_lmm_grok1/engines/confusion_checker",
+      "engine_base": "confusion_checker",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 45,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/drift_analyzer_tool",
+      "engine_base": "drift_analyzer_tool",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 30,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/failsafe_manager",
+      "engine_base": "failsafe_manager",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 25,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/peer_communication_engine",
+      "engine_base": "peer_communication_engine",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "EXTERNAL_BOUNDARY_AND_PLUGIN_TRUST"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/plugin_engine",
+      "engine_base": "plugin_engine",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "EXTERNAL_BOUNDARY_AND_PLUGIN_TRUST"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 25,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/tier_enforcer",
+      "engine_base": "tier_enforcer",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "projects/recursive_lmm_grok1/engines/trust_guard",
+      "engine_base": "trust_guard",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 45,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    }
+  ],
+  "recommended_next_patch": "Patch 132 \u2014 LLM Source-Grounded Patch Proposal",
+  "report_type": "ENGINE_SOURCE_LAW_GAPS_V1",
+  "schema_version": "engine_source_law_gaps_v1_patch131",
+  "source_map_path": "/home/nic/forge/memory/engine_source_authority_v1/latest_engine_source_law_map_v1.json",
+  "status": "ENGINE_SOURCE_AUTHORITY_GAPS_READY"
+}

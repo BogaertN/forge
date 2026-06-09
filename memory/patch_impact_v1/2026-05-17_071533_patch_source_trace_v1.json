@@ -1,0 +1,82 @@
+{
+  "authority": {
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ledger_mutation": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only_analysis": true,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-17T07:15:33",
+  "next_recommended_patch": "Patch 126 \u2014 Patch Impact Map",
+  "plain_english": "Read-only patch impact analysis. It maps a requested engine/path to canonical role, relationship neighbors, latest safe-test status, and rollback needs. It does not write project files or apply patches.",
+  "report_type": "PATCH_SOURCE_TRACE_V1",
+  "rows": [
+    {
+      "authority": {
+        "engine_file_write_authority": false,
+        "ledger_mutation": false,
+        "patch_apply_authority": false,
+        "project_file_write_authority": false,
+        "read_only_impact_analysis": true,
+        "shell_execution_authority": false
+      },
+      "canonical_path": "aiweb/engines/stack_linker_breather",
+      "cautions": [],
+      "engine_base": "stack_linker_breather",
+      "latest_failures": [
+        {
+          "problem": null,
+          "status": "FAIL",
+          "stderr_tail": "Traceback (most recent call last):\n  File \"/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py\", line 3, in <module>\n    from stack_linker_breather.stack_linker_core import unified_breathe_cycle\nModuleNotFoundError: No module named 'stack_linker_breather'\n",
+          "test_path": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+        }
+      ],
+      "related_files": [
+        {
+          "canonical_path": "aiweb/engines/recursive_field_breather",
+          "confidence": "strong",
+          "engine_base": "recursive_field_breather",
+          "reason": "python_import_reference"
+        },
+        {
+          "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+          "confidence": "medium",
+          "engine_base": "protoforge",
+          "reason": "source_text_reference"
+        }
+      ],
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "review_note_excerpt": "Patch107 batch evidence commit from Patch106 queue decision. Decision=APPROVED_FOR_FUTURE_COMMIT; evidence_id=EEB-0b4dcdaedc7646d1; batch_receipt_sha=0e283fcbb829c558e9a765472da911a4940d9494a567df4b638d99a0fbc73546; queue_decision_sha=73aa55228e826f49d3fbc7d6efa8dc44431f4a8a3c844200150e96c6c0840302; approval_helper_sha=a3e718ee9aebba600e1de97139cbaf14c03acee7c0f833ed625909d961159dcc; binder_sha=fbf961eeb74cb7d862124b12a969d56a883db12c82d90374a32d8eb6024c1e01; crosscheck_sha=2209c1362c5fd6c8fa2272e673403ec7d06a793df65d6f691c4ba73afb03d59a .",
+      "source_candidate_sha256": "a5ee63eda6aa8d0466a1eabb4799f0f16bc59dab452c95269288dbcba1ac11d6",
+      "test_paths": [
+        "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+      ]
+    }
+  ],
+  "schema_version": "patch_impact_map_v1_patch126",
+  "source_paths": {
+    "canonical_lockfile": "/home/nic/forge/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+    "relationship_map": "/home/nic/forge/memory/canonical_engine_relationships_v1/latest_canonical_engine_relationship_map_v1.json",
+    "test_run_report": "/home/nic/forge/memory/canonical_engine_test_runs_v1/latest_canonical_engine_test_run_report_v1.json"
+  },
+  "source_sha256": {
+    "canonical_lockfile": "b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab",
+    "relationship_map": "1f06340729a2c283e6db78924e4e3d96f85f7863813d8c4c2cbf92c8fe3aa1ca",
+    "test_run_report": "71d86bec9e179939ba6bd16833623f06c05db1458cbd436d809a5e85ee62ab9a"
+  },
+  "status": "PATCH_IMPACT_MAP_READY",
+  "summary": {
+    "high_risk": 0,
+    "low_risk": 0,
+    "matches": 1,
+    "medium_risk": 1,
+    "no_test_result": 0,
+    "targets_requested": "stack_linker_breather",
+    "test_issues": 1
+  },
+  "target": "stack_linker_breather"
+}

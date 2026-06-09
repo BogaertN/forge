@@ -1,0 +1,202 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "engines/recursive_verification_engine",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/recursive_verification_engine",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "recursive_verification_engine",
+  "evidence_id": "EEB-d20bc5816e4cbd21",
+  "file_count": 6,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "d7e168165a631c797a1d5a75e238699efb2d8e26014511a501ee6832f9940ed8",
+      "excerpt_start": "# convert_to_jsonl.py\n\nimport json\n\n# Path to your incorrectly formatted JSON file (bulk array or dict)\ninput_path = \"/home/nic/aiweb/data/rvdit_dataset_v1/phase_loop_log.json\"\n\n# Path to output .jsonl version\noutput_path = \"/home/nic/aiweb/data/rvdit_dataset_v1/phase_loop_log.jsonl\"\n\nwith open(input_path, \"r\") as infile:\n    raw = json.load(infile)  # Handles array or single dict\n    if isinstance(raw, dict):\n        raw = [raw]  # Wrap dict into list if needed\n\nwith open(output_path, \"w\") as outfile:\n    for obj in raw:\n        outfile.write(json.dumps(obj) + \"\\n\")\n\nprint(\"✅ Conversion complete. Output written to:\", output_path)\n",
+      "functions_sample": [],
+      "imports_sample": [
+        "import json"
+      ],
+      "line_count": 21,
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine/convert_to_jsonl.py",
+      "relative_to_candidate": "convert_to_jsonl.py",
+      "sha256": "d7e168165a631c797a1d5a75e238699efb2d8e26014511a501ee6832f9940ed8",
+      "size_bytes": 641,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "2e69478e8baecc30c799c2226d921822437fcef1f92a32131065aedbb3b30b1d",
+      "excerpt_start": "# /home/nic/aiweb/engines/recursive_verification_engine/test_recursive_verification.py\n\nfrom rvdit_core import run_recursive_verification\n\ndef test_rvdit():\n    result = run_recursive_verification()\n\n    # ✅ Validate expected structure\n    assert isinstance(result, dict)\n    assert \"summary\" in result\n    assert \"drift_integrity\" in result\n    assert \"phase_check\" in result\n    assert \"christping_response\" in result\n\n    summary = result[\"summary\"]\n\n    # ✅ Validate contents of one summary entry\n    assert isinstance(summary, list)\n    assert len(summary) > 0\n    assert \"loop_id\" in summary[0]\n    assert \"avg_resonance\" in summary[0]\n    assert \"drift_events\" in summary[0]\n    assert \"christ_lock_ratio\" in summary[0]\n    assert \"loop_status\" in summary[0]\n\n    # ✅ Core logic checks\n    assert result[\"drift_integrity\"] is True\n    assert 9 in result[\"phase_check\"]  # Should cover 1–9 phases\n    assert result[\"christping_response\"] == \"valid\"\n\n    print(\"✅ Recursive Verification Engine Test Passed\\n\")\n\n    # ✅ Stream loop-by-loop output (for matrix rain frontend)\n    for loop in summary:\n        loop_id = loop.get(\"loop_id\", \"N/A\")\n        drift = loop.get(\"drift_events\", 0)\n        resonance = loop.get(\"avg_resonance\", 0.0)\n        christping = loop.get(\"christ_lock_ratio\", 0.0)\n        status = loop.get(\"loop_status\", \"unknown\")\n\n        print(\n            f\"Loop {loop_id} | \"\n            f\"Status: {status} | \"\n            f\"Drift: {drift} | \"\n            f\"Resonance: {resonance:.3f} | \"\n            f\"ChristPing: {christping:.2f}\"\n        )\n\n    # ✅ Final summary\n    print(\"\\n=== SYSTEM CHECK COMPLETE ===\")\n    print(f\"Drift Integrity: {result['drift_integrity']}\")\n    print(f\"Phase Count: {len(result['phase_check'])}\")\n    print(f\"ChristPing Response: {result['christping_response']}\")\n    print(\"\\n✅ Recursive Verification Engine Test Passed\")\n\nif __name__ == \"__main__\":\n    test_rvdit()\n\n",
+      "functions_sample": [
+        "test_rvdit"
+      ],
+      "imports_sample": [
+        "from rvdit_core import run_recursive_verification"
+      ],
+      "line_count": 59,
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine/test_recursive_verification.py",
+      "relative_to_candidate": "test_recursive_verification.py",
+      "sha256": "2e69478e8baecc30c799c2226d921822437fcef1f92a32131065aedbb3b30b1d",
+      "size_bytes": 1938,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "52ecbbd6e9219c14637b2f8837d5877d25f18ac78f6d346ee50cae2b775125ab",
+      "excerpt_start": "# Recursive Verification Engine\n\nThis engine performs a full-system symbolic verification sweep.\n\nIt checks:\n- Drift detection (5→8 skip monitoring)\n- ChristPing loop return alignment\n- Symbolic capacitor coherence\n- Feedback loop integrity\n- Recursive phase fidelity (1–9)\n\nUsed as the official RVDIT suite in ProtoForge Phase 1.5 builds.\n# Recursive Verification Engine (rvdit_core)\n\nThis module validates the recursive integrity of AI.Web's symbolic runtime by processing phase-loop logs (10,000+ entries) to:\n\n- Detect drift conditions across recursive cycles\n- Evaluate ChristPing harmonic lock ratios\n- Monitor resonance scores to determine loop stability\n- Stream per-loop diagnostic output (for matrix rain effects)\n- Confirm OS-level drift integrity and phase continuity\n\n## Status\n**FROZEN @ v1.0.0** — Verified and locked on `2025-05-03`.\n\n## File Structure\n\n- `rvdit_core.py` — Main logic (loader, analyzer, summarizer)\n- `test_recursive_verification.py` — Full structural and logic test\n- `phase_loop_log.jsonl` — Input data (symbolic loop logs)\n\n## Usage\n\n```bash\npython3 rvdit_core.py\n",
+      "functions_sample": [
+        "Recursive",
+        "Verification",
+        "Engine",
+        "This",
+        "engine",
+        "performs",
+        "full",
+        "system",
+        "symbolic",
+        "verification",
+        "sweep",
+        "checks",
+        "Drift",
+        "detection",
+        "skip",
+        "monitoring",
+        "ChristPing",
+        "loop",
+        "return",
+        "alignment",
+        "Symbolic",
+        "capacitor",
+        "coherence",
+        "Feedback",
+        "integrity"
+      ],
+      "imports_sample": [],
+      "line_count": 36,
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "52ecbbd6e9219c14637b2f8837d5877d25f18ac78f6d346ee50cae2b775125ab",
+      "size_bytes": 1112,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "64c5dca03d2de26325627559049a46efe22c06ccfe596520e1f15361a595491f",
+      "excerpt_start": "# rvdit_core.py\n\nimport json\n\nDATA_PATH = \"/home/nic/aiweb/data/rvdit_dataset_v1/phase_loop_log.jsonl\"\n\ndef load_phase_data():\n    with open(DATA_PATH, \"r\") as file:\n        return [json.loads(line.strip()) for line in file if line.strip()]\n\ndef analyze_loop(data):\n    loop_results = {}\n    for entry in data:\n        loop_id = entry[\"loop_id\"]\n        loop_results.setdefault(loop_id, {\n            \"drift_count\": 0,\n            \"resonance_scores\": [],\n            \"christ_locked\": 0,\n            \"total\": 0\n        })\n\n        loop_results[loop_id][\"total\"] += 1\n        loop_results[loop_id][\"resonance_scores\"].append(entry[\"resonance_score\"])\n        if entry[\"drift_flag\"] is not None:\n            loop_results[loop_id][\"drift_count\"] += 1\n        if entry[\"christ_ping_lock\"]:\n            loop_results[loop_id][\"christ_locked\"] += 1\n    return loop_results\n\ndef summarize_results(loop_results):\n    summary = []\n    drift_integrity = True\n    phase_check = set()\n    christping_valid = True\n\n    for loop_id, stats in loop_results.items():\n        avg_resonance = sum(stats[\"resonance_scores\"]) / stats[\"total\"]\n        drift_flagged = stats[\"drift_count\"]\n        christ_lock_ratio = stats[\"christ_locked\"] / stats[\"total\"]\n\n        phase_check.add(stats[\"total\"])\n        if drift_flagged > 0 and avg_resonance > 0.9:\n            drift_integrity = False\n        if christ_lock_ratio < 0.4:\n            christping_valid = False\n\n        summary.append({\n            \"loop_id\": loop_id,\n            \"avg_resonance\": round(avg_resonance, 3),\n            \"drift_events\": drift_flagged,\n            \"christ_lock_ratio\": round(christ_lock_ratio, 2),\n            \"loop_status\": \"stable\" if drift_flagged == 0 and avg_resonance >= 0.9 else \"unstable\"\n        })\n\n    return {\n        \"summary\": summary,\n        \"drift_integrity\": drift_integrity,\n        \"phase_check\": list(phase_check),\n        \"christping_response\": \"valid\" if christping_valid else \"low_lock\"\n    }\n\ndef run_recursive_verification():\n    phase_data = load_phase_data()\n    loop_results = analyze_loop(phase_data)\n    result = summarize_results(loop_results)\n\n    # Display simple report\n    for item in result[\"summary\"]:\n        print(\n            f\"Loop {item['loop_id']} | Status: {item['loop_status']} | \"\n            f\"Drift: {item['drift_events']} | Resonance: {item['avg_resonance']:.3f} | \"\n            f\"ChristPing: {",
+      "functions_sample": [
+        "load_phase_data",
+        "analyze_loop",
+        "summarize_results",
+        "run_recursive_verification"
+      ],
+      "imports_sample": [
+        "import json"
+      ],
+      "line_count": 80,
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine/rvdit_core.py",
+      "relative_to_candidate": "rvdit_core.py",
+      "sha256": "16c955468547b98ccb1bf2d05e3b78c1781ba0d1b0d7b673613980951371a9e9",
+      "size_bytes": 2523,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "faa295cb59b5254036c3d1a7dcd5e399394998533166db492f6e2bfbbaa7f99a",
+      "excerpt_start": "# generate_phase_loop_dataset.py\n\nimport json\nimport os\nfrom datetime import datetime, timedelta\n\noutput_path = \"/home/nic/aiweb/data/rvdit_dataset_v1/phase_loop_log.jsonl\"\nos.makedirs(os.path.dirname(output_path), exist_ok=True)\n\nstart_time = datetime(2025, 5, 2, 0, 0, 0)\nphases = [\"Φ1\", \"Φ2\", \"Φ3\", \"Φ4\", \"Φ5\", \"Φ6\", \"Φ7\", \"Φ8\", \"Φ9\"]\n\nwith open(output_path, 'w') as f:\n    for loop_id in range(1000):\n        octave = (loop_id // 9) + 1\n        for phase_idx, phase in enumerate(phases, start=1):\n            entry_id = loop_id * 9 + (phase_idx - 1)\n            timestamp = (start_time + timedelta(seconds=entry_id)).isoformat() + \"Z\"\n            stability_factor = round(0.90 + 0.01 * (entry_id % 10), 3)\n            harmonic_signature = f\"H{phase_idx}\"\n            christ_ping_lock = entry_id % 2 == 0\n            drift_flag = f\"DRIFT_{phase}\" if entry_id % 10 == 0 else None\n            phase_state = f\"STATE_{phase}\"\n            resonance_score = round(0.80 + 0.02 * (entry_id % 10), 3)\n\n            entry = {\n                \"loop_id\": loop_id,\n                \"octave\": octave,\n                \"symbol_id\": f\"glyph_{loop_id}_{phase}\",\n                \"phase\": phase,\n                \"timestamp\": timestamp,\n                \"stability_factor\": stability_factor,\n                \"harmonic_signature\": harmonic_signature,\n                \"christ_ping_lock\": christ_ping_lock,\n                \"drift_flag\": drift_flag,\n                \"phase_state\": phase_state,\n                \"resonance_score\": resonance_score\n            }\n            f.write(json.dumps(entry) + \"\\n\")\n\nprint(f\"✅ Dataset generated: {output_path}\")\n",
+      "functions_sample": [],
+      "imports_sample": [
+        "import json",
+        "import os",
+        "from datetime import datetime, timedelta"
+      ],
+      "line_count": 42,
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine/generate_phase_loop_dataset.py",
+      "relative_to_candidate": "generate_phase_loop_dataset.py",
+      "sha256": "faa295cb59b5254036c3d1a7dcd5e399394998533166db492f6e2bfbbaa7f99a",
+      "size_bytes": 1637,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "14cbfd0f347148781cccfda6219aeaccc90adf3987c916e090e6037c2009610e",
+      "excerpt_start": "{\n  \"engine\": \"recursive_verification_engine\",\n  \"version\": \"1.0.0\",\n  \"status\": \"frozen\",\n  \"description\": \"Runs ChristPing alignment tests and drift detection against recursive phase loops. Validates resonance fidelity, drift integrity, and Christ-lock stability across 10,000 cycles.\",\n  \"entrypoint\": \"rvdit_core.py\",\n  \"dependencies\": [],\n  \"outputs\": {\n    \"summary_report\": true,\n    \"stream_matrix\": true\n  },\n  \"tests\": [\n    \"test_recursive_verification.py\"\n  ],\n  \"last_verified\": \"2025-05-03T00:00:00Z\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "recursive_verification_engine",
+        "version",
+        "status",
+        "frozen",
+        "description",
+        "Runs",
+        "ChristPing",
+        "alignment",
+        "tests",
+        "and",
+        "drift",
+        "detection",
+        "against",
+        "recursive",
+        "phase",
+        "loops",
+        "Validates",
+        "resonance",
+        "fidelity",
+        "integrity",
+        "Christ",
+        "lock",
+        "stability",
+        "across"
+      ],
+      "imports_sample": [],
+      "line_count": 18,
+      "path": "/home/nic/aiweb/engines/recursive_verification_engine/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "14cbfd0f347148781cccfda6219aeaccc90adf3987c916e090e6037c2009610e",
+      "size_bytes": 518,
+      "suffix": ".json"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200356_engine_canonical_decision_draft.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200444_engine_canonical_decision_draft_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "test_rvdit",
+    "load_phase_data",
+    "analyze_loop",
+    "summarize_results",
+    "run_recursive_verification"
+  ],
+  "warnings": []
+}

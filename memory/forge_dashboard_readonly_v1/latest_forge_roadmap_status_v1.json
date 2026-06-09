@@ -1,0 +1,33 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "completed": [
+    "Final canonical engine lockfile",
+    "Deferred/excluded engine disposition report",
+    "Forge master status report",
+    "LLM planning packet schema/template",
+    "Forge self-update proposal gate",
+    "Forge self-snapshot gate",
+    "Forge self-update sandbox",
+    "Canonical engine test inventory",
+    "Canonical engine safe test runner",
+    "Canonical engine relationship map",
+    "Patch impact map",
+    "Forge status API snapshot",
+    "Dashboard read-only view"
+  ],
+  "created_at": "2026-05-17T07:58:31",
+  "current_milestone": "Read-only dashboard view ready",
+  "next_patch_sequence": [
+    "Patch 129 \u2014 Mode Registry",
+    "Patch 130 \u2014 Mode Permission Enforcement",
+    "Patch 131 \u2014 Source Authority Runtime Binder",
+    "Patch 132 \u2014 LLM Source-Grounded Patch Proposal",
+    "Patch 133 \u2014 Patch Lifecycle 2.0 Gate Matrix"
+  ],
+  "report_type": "FORGE_ROADMAP_STATUS_V1",
+  "schema_version": "forge_roadmap_status_v1_patch128",
+  "status": "ROADMAP_STATUS_READY"
+}

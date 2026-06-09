@@ -1,0 +1,20 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "export_only": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "roadmap_append_only": true
+  },
+  "created_at": "2026-05-19T18:55:00",
+  "live_build_ready": false,
+  "next_patch": "Patch 156 \u2014 Runtime Module Dependency Map",
+  "planning_ready": true,
+  "readiness_path": "/home/nic/forge/memory/forge_aiweb_runtime_build_readiness_v1/latest_forge_aiweb_runtime_build_readiness_v1.json",
+  "readiness_sha256": "5c9f2c27dad5a8128234138a1209279c8e577c8d161b269ba71eca566f2a5aaf",
+  "readiness_status": "AIWEB_RUNTIME_BUILD_READINESS_MAP_READY_PLANNING_ONLY",
+  "recommended_next_patch": "Patch 156 \u2014 Runtime Module Dependency Map",
+  "report_type": "FORGE_AIWEB_RUNTIME_BUILD_READINESS_EXPORT_V1",
+  "schema_version": "forge_aiweb_runtime_build_readiness_export_v1_patch155",
+  "status": "AIWEB_RUNTIME_BUILD_READINESS_EXPORT_READY"
+}

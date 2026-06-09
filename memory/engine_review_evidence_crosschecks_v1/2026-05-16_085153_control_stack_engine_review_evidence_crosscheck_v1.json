@@ -1,0 +1,252 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "08af7f7b6a0ea715a20ecc289d8f6f04f9e8b83dc4223181fd20df6f363597b6",
+      "excerpt_start": "{\n  \"stack\": \"Control Stack\",\n  \"version\": \"v1.0\",\n  \"description\": \"Bootstraps and breathes core AI.Web runtime control phases.\"\n}\n",
+      "functions_sample": [
+        "stack",
+        "Control",
+        "Stack",
+        "version",
+        "description",
+        "Bootstraps",
+        "and",
+        "breathes",
+        "core",
+        "Web",
+        "runtime",
+        "control",
+        "phases"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/runtime_wrappers/control_stack/stack_manifest.json",
+      "relative_to_candidate": "stack_manifest.json",
+      "sha256": "08af7f7b6a0ea715a20ecc289d8f6f04f9e8b83dc4223181fd20df6f363597b6",
+      "size_bytes": 132
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "8a1ddb6707e1e5e9680c22a7bdb022982367a7404f0c981f41ad5f7bd090afa4",
+      "excerpt_start": "# control_stack_loader.py\n# Phase 1.5 Real Breathing Control Stack Loader\n\nimport time\nimport json\nfrom datetime import datetime\n\ncontrol_trace_file = \"control_trace.jsonl\"\n\ndef record_control_phase(phase_number, phase_name):\n    entry = {\n        \"timestamp\": datetime.utcnow().isoformat(),\n        \"phase\": phase_number,\n        \"description\": phase_name\n    }\n    with open(control_trace_file, \"a\") as f:\n        f.write(json.dumps(entry) + \"\\n\")\n    print(f\"\ud83d\udd35 Control Phase {phase_number}: {phase_name} \u2014 Logged.\")\n\ndef symbolic_control_breath():\n    print(\"\\n\ud83d\udd35 [CONTROL STACK] Initiating Real Core Control Breath...\\n\")\n\n    control_phases = [\n        (1, \"Initiation Pulse\"),\n        (2, \"Memory Anchoring\"),\n        (3, \"Drift Precheck\"),\n        (4, \"Phase Binding\"),\n        (5, \"System Launch\")\n    ]\n\n    for phase_number, phase_name in control_phases:\n        record_control_phase(phase_number, phase_name)\n        time.sleep(0.5)\n\n    print(\"\\n\u2705 [CONTROL STACK] Core System Control Breathing Complete.\")\n\nif __name__ == \"__main__\":\n    symbolic_control_breath()\n",
+      "functions_sample": [
+        "record_control_phase",
+        "symbolic_control_breath"
+      ],
+      "imports_sample": [
+        "import time",
+        "import json",
+        "from datetime import datetime"
+      ],
+      "line_count": 39,
+      "path": "/home/nic/aiweb/runtime_wrappers/control_stack/control_stack_loader.py",
+      "relative_to_candidate": "control_stack_loader.py",
+      "sha256": "8a1ddb6707e1e5e9680c22a7bdb022982367a7404f0c981f41ad5f7bd090afa4",
+      "size_bytes": 1085
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "5dedb6cd29a233e54ef68be774f68ecf37322381f40d913f056b7e2d1ca557db",
+      "excerpt_start": "# Control Stack\n\nThe Control Stack breathes AI.Web's core system control phases.\n\nIt initializes basic runtime orchestration, phase ordering, and symbolic phase awareness at startup.\n\nPart of Phase 1.5 of the ProtoForge Recursive Architecture Series.\n",
+      "functions_sample": [
+        "Control",
+        "Stack",
+        "The",
+        "breathes",
+        "Web",
+        "core",
+        "system",
+        "control",
+        "phases",
+        "initializes",
+        "basic",
+        "runtime",
+        "orchestration",
+        "phase",
+        "ordering",
+        "and",
+        "symbolic",
+        "awareness",
+        "startup",
+        "Part",
+        "Phase",
+        "the",
+        "ProtoForge",
+        "Recursive",
+        "Architecture"
+      ],
+      "imports_sample": [],
+      "line_count": 8,
+      "path": "/home/nic/aiweb/runtime_wrappers/control_stack/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "5dedb6cd29a233e54ef68be774f68ecf37322381f40d913f056b7e2d1ca557db",
+      "size_bytes": 251
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "ada57821f97f2855fd043f29788c5502eb36c17342f95078e844ee96b3a323bc",
+      "excerpt_start": "# test_control_stack_loader.py\n# Test for Real Control Stack Loader\n\nfrom control_stack_loader import symbolic_control_breath\n\nif __name__ == \"__main__\":\n    print(\"\\n\ud83e\udde0 Testing Real Control Stack Breather...\")\n    symbolic_control_breath()\n    print(\"\\n\u2705 Real Control Stack Breather Test Passed.\\n\")\n",
+      "functions_sample": [],
+      "imports_sample": [
+        "from control_stack_loader import symbolic_control_breath"
+      ],
+      "line_count": 10,
+      "path": "/home/nic/aiweb/runtime_wrappers/control_stack/test_control_stack_loader.py",
+      "relative_to_candidate": "test_control_stack_loader.py",
+      "sha256": "ada57821f97f2855fd043f29788c5502eb36c17342f95078e844ee96b3a323bc",
+      "size_bytes": 305
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/runtime_wrappers/control_stack",
+  "created_at": "2026-05-16_085153",
+  "crosscheck_id": "ERE-control_stack-2026-05-16_085153",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Architecture",
+      "Bootstraps",
+      "Control",
+      "Part",
+      "Phase",
+      "ProtoForge",
+      "Recursive",
+      "Stack",
+      "The",
+      "Web",
+      "and",
+      "awareness",
+      "basic",
+      "breathes",
+      "control",
+      "core",
+      "description",
+      "initializes",
+      "orchestration",
+      "ordering"
+    ],
+    "imports_sample": [
+      "from control_stack_loader import symbolic_control_breath",
+      "from datetime import datetime",
+      "import json",
+      "import time"
+    ],
+    "likely_system_role": "ui_control_panel",
+    "plain_english_purpose": "`control_stack` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "Inferred from engine family keyword `control` plus bound code evidence.",
+    "source_excerpt_samples": [
+      "{   \"stack\": \"Control Stack\",",
+      "# control_stack_loader.py # Phase 1.5 Real Breathing Control Stack Loader",
+      "# Control Stack ",
+      "# test_control_stack_loader.py # Test for Real Control Stack Loader"
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_085128_control_stack_llm_engine_review_draft_v1.json",
+  "draft_sha256": "0c6303458c8c647e835a49aab458d543f0b33f7d91e5eeb3880fd7dc53912e7f",
+  "engine_family": "control_stack",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_control_stack_engine_evidence_binder.json",
+  "evidence_binder_sha256": "511cd71e6a4413f537dd4913e0d91914e927992607a95b39769c9acb4be75b2d",
+  "evidence_id": "EEB-7df4589a96005a41",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "stack_manifest.json",
+      "control_stack_loader.py",
+      "README.md",
+      "test_control_stack_loader.py"
+    ],
+    "functions_mentioned": [
+      "stack",
+      "Control",
+      "Stack",
+      "and",
+      "core",
+      "Web",
+      "runtime",
+      "control",
+      "phases",
+      "The",
+      "system",
+      "orchestration",
+      "phase",
+      "ordering",
+      "symbolic",
+      "awareness",
+      "startup",
+      "Part",
+      "Phase",
+      "the",
+      "ProtoForge",
+      "Recursive",
+      "Architecture"
+    ],
+    "imports_mentioned": [
+      "import time",
+      "import json",
+      "from datetime import datetime",
+      "from control_stack_loader import symbolic_control_breath"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 25.091,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "21be7db67a5a772df2b0cae80907227bbcac6de412cffbeb35fe894e6ef30323",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nManages the initialization and orchestration of AI.Web's core runtime control phases during system startup, ensuring structured phase execution and logging.  \n\nLikely System Role:  \nServes as the control stack for Phase 1.5 of the ProtoForge architecture, handling phase ordering, symbolic awareness, and runtime orchestration for AI.Web systems.  \n\nEvidence Used:  \n- `stack_manifest.json` defines the \"Control Stack\" with phases like \"Initiation Pulse\" and \"System Launch.\"  \n- `control_stack_loader.py` implements phase logging, symbolic control breathing, and phase sequence execution.  \n- `README.md` contextualizes it as part of the ProtoForge Recursive Architecture Series.  \n- `test_control_stack_loader.py` validates the loader's functionality.  \n\nRisks / Uncertainties:  \n- Dependency on external modules (e.g., `datetime`, `json`) may introduce runtime errors.  \n- Phase logging reliability depends on `control_trace.jsonl` file accessibility and permissions.  \n- Unclear if all 6 target phases (from `source_law_counts`) are fully implemented.  \n\nRecommendation Draft:  \nApprove the control stack for integration, but prioritize validating phase logging robustness and ensuring all 6 target phases are implemented. Confirm test coverage for edge cases (e.g., phase failures).  \n\nSuggested Nic Action:  \nApprove the review with conditions: verify phase completeness, test adequacy, and logging reliability before deployment."
+  },
+  "llm_sections": {
+    "evidence_used": "- `stack_manifest.json` defines the \"Control Stack\" with phases like \"Initiation Pulse\" and \"System Launch.\"  \n- `control_stack_loader.py` implements phase logging, symbolic control breathing, and phase sequence execution.  \n- `README.md` contextualizes it as part of the ProtoForge Recursive Architecture Series.  \n- `test_control_stack_loader.py` validates the loader's functionality.",
+    "likely_system_role": "Serves as the control stack for Phase 1.5 of the ProtoForge architecture, handling phase ordering, symbolic awareness, and runtime orchestration for AI.Web systems.",
+    "plain_english_purpose": "Manages the initialization and orchestration of AI.Web's core runtime control phases during system startup, ensuring structured phase execution and logging.",
+    "recommendation_draft": "Approve the control stack for integration, but prioritize validating phase logging robustness and ensuring all 6 target phases are implemented. Confirm test coverage for edge cases (e.g., phase failures).",
+    "risks_uncertainties": "- Dependency on external modules (e.g., `datetime`, `json`) may introduce runtime errors.  \n- Phase logging reliability depends on `control_trace.jsonl` file accessibility and permissions.  \n- Unclear if all 6 target phases (from `source_law_counts`) are fully implemented.",
+    "suggested_nic_action": "Approve the review with conditions: verify phase completeness, test adequacy, and logging reliability before deployment."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nManages the initialization and orchestration of AI.Web's core runtime control phases during system startup, ensuring structured phase execution and logging.  \n\nLikely System Role:  \nServes as the control stack for Phase 1.5 of the ProtoForge architecture, handling phase ordering, symbolic awareness, and runtime orchestration for AI.Web systems.  \n\nEvidence Used:  \n- `stack_manifest.json` defines the \"Control Stack\" with phases like \"Initiation Pulse\" and \"System Launch.\"  \n- `control_stack_loader.py` implements phase logging, symbolic control breathing, and phase sequence execution.  \n- `README.md` contextualizes it as part of the ProtoForge Recursive Architecture Series.  \n- `test_control_stack_loader.py` validates the loader's functionality.  \n\nRisks / Uncertainties:  \n- Dependency on external modules (e.g., `datetime`, `json`) may introduce runtime errors.  \n- Phase logging reliability depends on `control_trace.jsonl` file accessibility and permissions.  \n- Unclear if all 6 target phases (from `source_law_counts`) are fully implemented.  \n\nRecommendation Draft:  \nApprove the control stack for integration, but prioritize validating phase logging robustness and ensuring all 6 target phases are implemented. Confirm test coverage for edge cases (e.g., phase failures).  \n\nSuggested Nic Action:  \nApprove the review with conditions: verify phase completeness, test adequacy, and logging reliability before deployment.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

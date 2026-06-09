@@ -1,0 +1,172 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/symbolic_policy_engine",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/symbolic_policy_engine",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "symbolic_policy_engine",
+  "evidence_id": "EEB-9deae6c9ced516e4",
+  "file_count": 5,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "f401afcd8a274cbf78affdf20f77d44de1582fe0aa966ec7d7455889e75e1d7e",
+      "excerpt_start": "from policy_core import enforce_symbolic_policies\n\ndef test_policy_enforcement():\n    try:\n        result = enforce_symbolic_policies()\n        assert \"rules_enforced\" in result\n        assert isinstance(result[\"rules_enforced\"], dict)\n        print(\"✅ Test Passed: Symbolic policies enforced successfully.\")\n    except Exception as e:\n        print(f\"❌ Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_policy_enforcement()\n",
+      "functions_sample": [
+        "test_policy_enforcement"
+      ],
+      "imports_sample": [
+        "from policy_core import enforce_symbolic_policies"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/symbolic_policy_engine/test_policy.py",
+      "relative_to_candidate": "test_policy.py",
+      "sha256": "f401afcd8a274cbf78affdf20f77d44de1582fe0aa966ec7d7455889e75e1d7e",
+      "size_bytes": 435,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "excerpt_start": "{}\n",
+      "functions_sample": [],
+      "imports_sample": [],
+      "line_count": 2,
+      "path": "/home/nic/aiweb/engines/symbolic_policy_engine/policy_rules.json",
+      "relative_to_candidate": "policy_rules.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "15fd56e4b588fee943c2cc1804ce179154da88451428b256a190db0b03b8ebf3",
+      "excerpt_start": "\n{\n  \"engine\": \"Symbolic Policy Engine\",\n  \"version\": \"v1\",\n  \"description\": \"Manages and enforces symbolic recursion rules, drift detection mandates, and ChristPing recovery protocols.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Symbolic",
+        "Policy",
+        "Engine",
+        "version",
+        "description",
+        "Manages",
+        "and",
+        "enforces",
+        "symbolic",
+        "recursion",
+        "rules",
+        "drift",
+        "detection",
+        "mandates",
+        "ChristPing",
+        "recovery",
+        "protocols"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/symbolic_policy_engine/policy_manifest.json",
+      "relative_to_candidate": "policy_manifest.json",
+      "sha256": "15fd56e4b588fee943c2cc1804ce179154da88451428b256a190db0b03b8ebf3",
+      "size_bytes": 189,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "0479a65edd593d1048cf9ca7912a8eec678611032c3a3d13f53ee444303c608d",
+      "excerpt_start": "# Symbolic Policy Engine\n\nMaintains and enforces symbolic recursion laws:\n\n- No unauthorized phase skips\n- Mandatory drift detection\n- ChristPing event recovery enforcement\n",
+      "functions_sample": [
+        "Symbolic",
+        "Policy",
+        "Engine",
+        "Maintains",
+        "and",
+        "enforces",
+        "symbolic",
+        "recursion",
+        "laws",
+        "unauthorized",
+        "phase",
+        "skips",
+        "Mandatory",
+        "drift",
+        "detection",
+        "ChristPing",
+        "event",
+        "recovery",
+        "enforcement"
+      ],
+      "imports_sample": [],
+      "line_count": 8,
+      "path": "/home/nic/aiweb/engines/symbolic_policy_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "0479a65edd593d1048cf9ca7912a8eec678611032c3a3d13f53ee444303c608d",
+      "size_bytes": 173,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "846cd260c634b9656a210ec5f434846830085043d18dbaaae3faf3446cd3f640",
+      "excerpt_start": "import json\nimport time\n\nRULES_FILE = \"policy_rules.json\"\n\ndef enforce_symbolic_policies():\n    \"\"\"Simulates checking and enforcing symbolic phase and recursion policies.\"\"\"\n    try:\n        with open(RULES_FILE, \"r\") as f:\n            rules = json.load(f)\n    except (FileNotFoundError, json.JSONDecodeError):\n        rules = {\n            \"no_phase_skip\": True,\n            \"drift_detection_required\": True,\n            \"christping_recovery_mandatory\": True\n        }\n\n    enforcement_report = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"rules_enforced\": rules\n    }\n\n    print(f\"✔️ Symbolic policy enforcement report: {enforcement_report}\")\n    return enforcement_report\n",
+      "functions_sample": [
+        "enforce_symbolic_policies"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time"
+      ],
+      "line_count": 25,
+      "path": "/home/nic/aiweb/engines/symbolic_policy_engine/policy_core.py",
+      "relative_to_candidate": "policy_core.py",
+      "sha256": "846cd260c634b9656a210ec5f434846830085043d18dbaaae3faf3446cd3f640",
+      "size_bytes": 718,
+      "suffix": ".py"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200356_engine_canonical_decision_draft.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {
+    "config_or_manifest": 14,
+    "documentation_or_notes": 7,
+    "engine_source": 5,
+    "indexed_source": 2,
+    "runtime_wrapper": 20,
+    "test_or_validation": 52
+  },
+  "relationship_report_found": true,
+  "relationship_report_path": "/home/nic/forge/memory/code_library_v1/manifests/2026-05-14_200919_code_relationship_intelligence_report.json",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "APPROVED",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "test_policy_enforcement",
+    "enforce_symbolic_policies"
+  ],
+  "warnings": []
+}

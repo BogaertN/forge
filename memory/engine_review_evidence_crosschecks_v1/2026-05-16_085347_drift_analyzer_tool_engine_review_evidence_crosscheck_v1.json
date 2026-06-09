@@ -1,0 +1,258 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "a837b9374ea8cdb353af0684c3c2c28977d236d5a447204181579474e48d4fff",
+      "excerpt_start": "# test_drift_analyzer_core.py\n\nfrom drift_analyzer_core import DriftAnalyzerTool\n\ndef test_drift_analyzer_behavior():\n    analyzer = DriftAnalyzerTool()\n    record = analyzer.analyze_drift(\"test_field\", 0.2)\n    assert record[\"field_id\"] == \"test_field\", \"Field ID must match.\"\n    assert record[\"drift_amount\"] == 0.2, \"Drift amount must match.\"\n    print(\"\u2705 Drift Analyzer Tool Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_drift_analyzer_behavior()\n",
+      "functions_sample": [
+        "test_drift_analyzer_behavior"
+      ],
+      "imports_sample": [
+        "from drift_analyzer_core import DriftAnalyzerTool"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/drift_analyzer_tool/test_drift_analyzer_core.py",
+      "relative_to_candidate": "test_drift_analyzer_core.py",
+      "sha256": "a837b9374ea8cdb353af0684c3c2c28977d236d5a447204181579474e48d4fff",
+      "size_bytes": 460
+    },
+    {
+      "classes_sample": [
+        "DriftAnalyzerTool"
+      ],
+      "excerpt_sha256": "e8dcfbcba7e115a607d93a50e16baa9e0078ca4bbc39c4e8a9c29b46908e138f",
+      "excerpt_start": "# drift_analyzer_core.py\n# Drift Analyzer Tool Core\n\nclass DriftAnalyzerTool:\n    def __init__(self):\n        self.drift_records = []\n\n    def analyze_drift(self, field_id, drift_amount):\n        drift_record = {\n            \"field_id\": field_id,\n            \"drift_amount\": drift_amount\n        }\n        self.drift_records.append(drift_record)\n        return drift_record\n\nif __name__ == \"__main__\":\n    analyzer = DriftAnalyzerTool()\n    record = analyzer.analyze_drift(\"\u03c8-anchor\", 0.12)\n    print(f\"[TEST] Drift Record: {record}\")\n",
+      "functions_sample": [
+        "__init__",
+        "analyze_drift"
+      ],
+      "imports_sample": [],
+      "line_count": 20,
+      "path": "/home/nic/aiweb/engines/drift_analyzer_tool/drift_analyzer_core.py",
+      "relative_to_candidate": "drift_analyzer_core.py",
+      "sha256": "e8dcfbcba7e115a607d93a50e16baa9e0078ca4bbc39c4e8a9c29b46908e138f",
+      "size_bytes": 536
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "6f9b8d7f76b480ba702623f2bae141830b2a59f4ec40f2994fbc636cdb0c9bc8",
+      "excerpt_start": "# Drift Analyzer Tool (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Drift Analyzer Tool monitors and quantifies symbolic drift patterns across recursion fields.  \nIt measures drift magnitude, identifies destabilization trends, and provides input for field stabilization and symbolic phase correction protocols.\n\n---\n\n## Core Functions:\n- Track and record symbolic drift events.\n- Quantify drift impact by field and recursion cycle.\n- Support symbolic phase stabilization planning.\n\n---\n\n## Phase Standard:\n- Phase 1.5 Symbolic Recursion Compliance\n- AI.Web Core Drift Remediation Stack\n\n---\n\n## Notes:\n- Repeated high-drift fields may require quarantine or phase re-initialization.\n- Drift analysis trends can be integrated into predictive recursion health metrics.\n\n---\n\n**Frozen Snapshot:** `drift_analyzer_tool_frozen_v1.0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n\n",
+      "functions_sample": [
+        "Drift",
+        "Analyzer",
+        "Tool",
+        "Frozen",
+        "Overview",
+        "The",
+        "monitors",
+        "and",
+        "quantifies",
+        "symbolic",
+        "drift",
+        "patterns",
+        "across",
+        "recursion",
+        "fields",
+        "measures",
+        "magnitude",
+        "identifies",
+        "destabilization",
+        "trends",
+        "provides",
+        "input",
+        "for",
+        "field",
+        "stabilization"
+      ],
+      "imports_sample": [],
+      "line_count": 34,
+      "path": "/home/nic/aiweb/engines/drift_analyzer_tool/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "6f9b8d7f76b480ba702623f2bae141830b2a59f4ec40f2994fbc636cdb0c9bc8",
+      "size_bytes": 886
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "709a09acdc34b606af755823780e0f212ba52452d32402d471c021d84e1827ca",
+      "excerpt_start": "{\n  \"engine\": \"drift_analyzer_tool\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"drift_analyzer_tool_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Analyzes symbolic field drift patterns during recursion cycles. Quantifies drift magnitude, identifies field instability signatures, and supports symbolic stabilization planning.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "drift_analyzer_tool",
+        "version",
+        "frozen_as",
+        "drift_analyzer_tool_frozen_v1",
+        "frozen_on",
+        "description",
+        "Analyzes",
+        "symbolic",
+        "field",
+        "drift",
+        "patterns",
+        "during",
+        "recursion",
+        "cycles",
+        "Quantifies",
+        "magnitude",
+        "identifies",
+        "instability",
+        "signatures",
+        "and",
+        "supports",
+        "stabilization",
+        "planning",
+        "author"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/drift_analyzer_tool/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "709a09acdc34b606af755823780e0f212ba52452d32402d471c021d84e1827ca",
+      "size_bytes": 441
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/drift_analyzer_tool",
+  "created_at": "2026-05-16_085347",
+  "crosscheck_id": "ERE-drift_analyzer_tool-2026-05-16_085347",
+  "deterministic_brief": {
+    "classes_sample": [
+      "DriftAnalyzerTool"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Analyzer",
+      "Analyzes",
+      "Drift",
+      "Frozen",
+      "Overview",
+      "Quantifies",
+      "The",
+      "Tool",
+      "__init__",
+      "across",
+      "analyze_drift",
+      "and",
+      "author",
+      "cycles",
+      "description",
+      "destabilization",
+      "drift",
+      "drift_analyzer_tool",
+      "drift_analyzer_tool_frozen_v1",
+      "during"
+    ],
+    "imports_sample": [
+      "from drift_analyzer_core import DriftAnalyzerTool"
+    ],
+    "likely_system_role": "drift_collapse",
+    "plain_english_purpose": "`drift_analyzer_tool` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "Inferred from engine family keyword `drift` plus bound code evidence.",
+    "source_excerpt_samples": [
+      "# test_drift_analyzer_core.py ",
+      "# drift_analyzer_core.py # Drift Analyzer Tool Core",
+      "# Drift Analyzer Tool (Frozen v1.0.01) ",
+      "{   \"engine\": \"drift_analyzer_tool\","
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_085323_drift_analyzer_tool_llm_engine_review_draft_v1.json",
+  "draft_sha256": "91dd4409116f184bf06b2e7bd1b8f8d6373c20ff84ff57d8c3c2f598e7321315",
+  "engine_family": "drift_analyzer_tool",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_drift_analyzer_tool_engine_evidence_binder.json",
+  "evidence_binder_sha256": "80b89dcaaa2cf1c30b39e47f9c3e8575520afd98163f6551e694200baca3245c",
+  "evidence_id": "EEB-bed831a69b1978e5",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "DriftAnalyzerTool"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "test_drift_analyzer_core.py",
+      "drift_analyzer_core.py",
+      "README.md",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "Drift",
+      "Analyzer",
+      "Tool",
+      "Frozen",
+      "The",
+      "and",
+      "symbolic",
+      "drift",
+      "patterns",
+      "recursion",
+      "fields",
+      "trends",
+      "provides",
+      "for",
+      "field",
+      "stabilization",
+      "engine",
+      "version",
+      "planning"
+    ],
+    "imports_mentioned": [
+      "from drift_analyzer_core import DriftAnalyzerTool"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 24.05,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "e25855254083a9bef1f5fe191a923352bb2b18a42d1d53bd9f0859b590586822",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo monitor and quantify symbolic drift patterns in recursion fields, supporting stabilization and phase correction protocols.  \n\nLikely System Role:  \nA core diagnostic tool for tracking drift events, quantifying their impact, and enabling symbolic phase stabilization planning within AI.Web systems.  \n\nEvidence Used:  \n- Test script (`test_drift_analyzer_core.py`) validates `DriftAnalyzerTool` functionality.  \n- Core code (`drift_analyzer_core.py`) defines the tool's logic for recording drift records.  \n- README.md outlines its role in monitoring drift, identifying trends, and supporting stabilization.  \n- `engine_manifest.json` provides metadata, including its purpose and integration with Phase 1.5 standards.  \n\nRisks / Uncertainties:  \n- \"Frozen v1.0.01\" status implies limited update flexibility; no evidence of recent testing or integration with newer systems.  \n- Phase 1.5 \"Symbolic Recursion Compliance\" is referenced but not explained in context.  \n- No evidence of external system interoperability or error-handling mechanisms.  \n\nRecommendation Draft:  \nApprove the tool as a functional core component, but request clarification on Phase 1.5 standards and integration requirements. Confirm that the \"frozen\" status aligns with current system needs.  \n\nSuggested Nic Action:  \nApprove review with conditions:  \n1. Clarify Phase 1.5 compliance details.  \n2. Verify compatibility with AI.Web's current architecture.  \n3. Confirm that the frozen version remains supported."
+  },
+  "llm_sections": {
+    "evidence_used": "- Test script (`test_drift_analyzer_core.py`) validates `DriftAnalyzerTool` functionality.  \n- Core code (`drift_analyzer_core.py`) defines the tool's logic for recording drift records.  \n- README.md outlines its role in monitoring drift, identifying trends, and supporting stabilization.  \n- `engine_manifest.json` provides metadata, including its purpose and integration with Phase 1.5 standards.",
+    "likely_system_role": "A core diagnostic tool for tracking drift events, quantifying their impact, and enabling symbolic phase stabilization planning within AI.Web systems.",
+    "plain_english_purpose": "To monitor and quantify symbolic drift patterns in recursion fields, supporting stabilization and phase correction protocols.",
+    "recommendation_draft": "Approve the tool as a functional core component, but request clarification on Phase 1.5 standards and integration requirements. Confirm that the \"frozen\" status aligns with current system needs.",
+    "risks_uncertainties": "- \"Frozen v1.0.01\" status implies limited update flexibility; no evidence of recent testing or integration with newer systems.  \n- Phase 1.5 \"Symbolic Recursion Compliance\" is referenced but not explained in context.  \n- No evidence of external system interoperability or error-handling mechanisms.",
+    "suggested_nic_action": "Approve review with conditions:  \n1. Clarify Phase 1.5 compliance details.  \n2. Verify compatibility with AI.Web's current architecture.  \n3. Confirm that the frozen version remains supported."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo monitor and quantify symbolic drift patterns in recursion fields, supporting stabilization and phase correction protocols.  \n\nLikely System Role:  \nA core diagnostic tool for tracking drift events, quantifying their impact, and enabling symbolic phase stabilization planning within AI.Web systems.  \n\nEvidence Used:  \n- Test script (`test_drift_analyzer_core.py`) validates `DriftAnalyzerTool` functionality.  \n- Core code (`drift_analyzer_core.py`) defines the tool's logic for recording drift records.  \n- README.md outlines its role in monitoring drift, identifying trends, and supporting stabilization.  \n- `engine_manifest.json` provides metadata, including its purpose and integration with Phase 1.5 standards.  \n\nRisks / Uncertainties:  \n- \"Frozen v1.0.01\" status implies limited update flexibility; no evidence of recent testing or integration with newer systems.  \n- Phase 1.5 \"Symbolic Recursion Compliance\" is referenced but not explained in context.  \n- No evidence of external system interoperability or error-handling mechanisms.  \n\nRecommendation Draft:  \nApprove the tool as a functional core component, but request clarification on Phase 1.5 standards and integration requirements. Confirm that the \"frozen\" status aligns with current system needs.  \n\nSuggested Nic Action:  \nApprove review with conditions:  \n1. Clarify Phase 1.5 compliance details.  \n2. Verify compatibility with AI.Web's current architecture.  \n3. Confirm that the frozen version remains supported.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

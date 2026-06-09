@@ -1,0 +1,170 @@
+{
+  "active_patch": "Patch 151 \u2014 Snapshot / Forensic Replay Plan",
+  "audit_policy": {
+    "capture_mode": "tail_copy_or_read_only_hash_only",
+    "forge_audit_log_must_not_be_overwritten": true
+  },
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "live_restore_authority": false,
+    "network_or_server_start_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "shadow_restore_authority": false,
+    "shell_execution_authority": false,
+    "snapshot_create_authority": false
+  },
+  "created_at": "2026-05-19T17:55:01",
+  "current_phase": "S16 \u2014 Snapshot / forensic replay plan",
+  "forbidden_paths": [
+    "~/.ssh",
+    "*.pem",
+    "*.key",
+    "*.env",
+    "secrets",
+    "credentials",
+    "token files",
+    "old Chroma DB write paths",
+    "node_modules",
+    ".venv",
+    "__pycache__"
+  ],
+  "live_eligibility_context": {
+    "eligible_for_live_apply": false,
+    "expected_remaining_failures": [
+      "snapshot freshness",
+      "sandbox/test binding",
+      "rollback readiness",
+      "human approval"
+    ],
+    "gate_fail_count": 4,
+    "gate_pass_count": 8,
+    "status": "FORGE_LIVE_APPLY_ELIGIBILITY_V2_READY_NOT_ELIGIBLE"
+  },
+  "live_restore_authority": false,
+  "next_commands": [
+    "forge-snapshot-plan-build next",
+    "forge-snapshot-plan-export",
+    "forge-build-sequence",
+    "forge-status-api-build",
+    "forge-dashboard-build",
+    "Install Patch 152 when ready"
+  ],
+  "next_patch": "Patch 152 \u2014 Snapshot Create / Verify",
+  "plan_steps": [
+    {
+      "detail": "Patch 151 defines what must be snapshotted before future live apply eligibility can pass.",
+      "status": "READY",
+      "step_id": "P01",
+      "title": "Plan snapshot domain set"
+    },
+    {
+      "detail": "Patch 152 should copy allowed files into Forge-owned snapshot memory and hash every artifact.",
+      "status": "FUTURE_PATCH_152",
+      "step_id": "P02",
+      "title": "Create snapshot manifest"
+    },
+    {
+      "detail": "Snapshot creation must be followed by independent file/hash readback.",
+      "status": "FUTURE_PATCH_152",
+      "step_id": "P03",
+      "title": "Verify snapshot manifest"
+    },
+    {
+      "detail": "Restoration must first occur into a Forge-owned shadow directory, not live paths.",
+      "status": "FUTURE_PATCH_153",
+      "step_id": "P04",
+      "title": "Shadow restore rehearsal"
+    },
+    {
+      "detail": "Shadow restore output must be compared against source snapshot and live state.",
+      "status": "FUTURE_PATCH_153",
+      "step_id": "P05",
+      "title": "Forensic diff report"
+    },
+    {
+      "detail": "No live write authority exists in Patch 151.",
+      "status": "LOCKED",
+      "step_id": "P06",
+      "title": "Live restore / live apply remains locked"
+    }
+  ],
+  "plan_summary": [
+    "Patch 151 is a plan-only safety layer.",
+    "It defines what Forge must snapshot before future live apply gates can pass.",
+    "It does not copy live project files, restore files, run shell commands, or grant write authority.",
+    "Live apply remains blocked until snapshot creation, shadow restore, rollback binding, sandbox/test binding, and human approval exist."
+  ],
+  "plan_target": "next",
+  "recommended_next_patch": "Patch 152 \u2014 Snapshot Create / Verify",
+  "report_type": "FORGE_SNAPSHOT_FORENSIC_REPLAY_PLAN",
+  "schema_version": "forge_snapshot_forensic_replay_plan_v1_patch151",
+  "sequence_context": {
+    "current_phase": "S15 \u2014 Live apply eligibility gate v2",
+    "next_patch": "Patch 151 \u2014 Snapshot / Forensic Replay Plan",
+    "status": "FORGE_BUILD_SEQUENCE_READY"
+  },
+  "snapshot_domains": [
+    {
+      "domain_id": "D01",
+      "include_patterns": [
+        "/home/nic/forge/main.py",
+        "/home/nic/forge/config/tool_registry.json",
+        "/home/nic/forge/config/session_scope.json",
+        "/home/nic/forge/config/approved_paths.json"
+      ],
+      "purpose": "Capture the exact Forge executable/control surface before future write-capable gates.",
+      "status": "PLAN_ONLY",
+      "title": "Forge runtime core"
+    },
+    {
+      "domain_id": "D02",
+      "include_patterns": [
+        "/home/nic/forge/memory/forge_build_sequence_v1",
+        "/home/nic/forge/memory/forge_build_phase_gates_v1",
+        "/home/nic/forge/memory/forge_live_apply_eligibility_v2",
+        "/home/nic/forge/memory/forge_snapshot_forensic_replay_plan_v1"
+      ],
+      "purpose": "Preserve the map, gates, and live-apply refusal state that governs future writes.",
+      "status": "PLAN_ONLY",
+      "title": "Build governance memory"
+    },
+    {
+      "domain_id": "D03",
+      "include_patterns": [
+        "/home/nic/forge/memory/code_library_v1/manifests",
+        "/home/nic/forge/memory/canonical_engine_tests_v1",
+        "/home/nic/forge/memory/canonical_engine_test_runs_v1",
+        "/home/nic/forge/memory/engine_disposition_v1",
+        "/home/nic/forge/memory/engine_source_authority_v1"
+      ],
+      "purpose": "Preserve canonical engine authority, test state, deferred state, and source-authority evidence.",
+      "status": "PLAN_ONLY",
+      "title": "Engine authority and test evidence"
+    },
+    {
+      "domain_id": "D04",
+      "include_patterns": [
+        "/home/nic/forge/memory/forge_status_api_v1",
+        "/home/nic/forge/memory/forge_dashboard_readonly_v1",
+        "/home/nic/forge/memory/forge_dashboard_roadmap_panel_v1"
+      ],
+      "purpose": "Preserve the read-only surfaces Nic uses to verify what Forge thinks is true.",
+      "status": "PLAN_ONLY",
+      "title": "Operator visibility surfaces"
+    },
+    {
+      "domain_id": "D05",
+      "include_patterns": [
+        "tail/read-only copy of /home/nic/forge/logs/forge_audit.log"
+      ],
+      "purpose": "Capture evidence without modifying or overwriting the live audit log.",
+      "status": "PLAN_ONLY_NEVER_OVERWRITE_AUDIT_LOG",
+      "title": "Audit tail capture"
+    }
+  ],
+  "snapshot_evidence_created": false,
+  "status": "FORGE_SNAPSHOT_FORENSIC_REPLAY_PLAN_READY"
+}

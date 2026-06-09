@@ -1,0 +1,1972 @@
+{
+  "authority": {
+    "mode": "SOURCE_LAW_CONTEXT_READINESS_AUDIT_ONLY",
+    "no_canonical_decisions": true,
+    "no_chroma_writes": true,
+    "no_engine_review": true,
+    "no_ingestion_writes": true,
+    "no_llm_drafting": true,
+    "no_pdf_ocr": true,
+    "no_project_writes": true,
+    "patch": "97",
+    "rule": "PDF/DOCX source law cannot be trusted until extraction, chunking, ingestion, and retrieval evidence exists.",
+    "writes": "Forge-owned source_law_context_readiness_v1 reports only"
+  },
+  "counts": {
+    "context_receipts_manifests_seen": 98,
+    "corpus_rows_seen": 33,
+    "docx_extraction_patch_required": 0,
+    "extraction_reports_seen": 83,
+    "missing": 0,
+    "partial_or_registered": 6,
+    "pdf_extraction_patch_required": 0,
+    "ready_retrievable_with_chunks": 0,
+    "targets": 6
+  },
+  "created_at": "2026-05-15_081340",
+  "overall_status": "SOURCE_LAW_MISSING_OR_UNPROVEN",
+  "recommended_next_route": "PATCH97A_D_REQUIRED_BEFORE_LLM_REVIEW",
+  "report_type": "SOURCE_LAW_CONTEXT_READINESS_AUDIT_V1_PATCH97",
+  "rows": [
+    {
+      "authority_class": "SOURCE_LAW",
+      "blockers": [],
+      "context_matches": [
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "audit",
+            "disk",
+            "forge",
+            "hashes"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_184946_ingest_corpus_0004_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "audit",
+            "forge",
+            "hashes",
+            "manifests"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163354_ingest_corpus_0030_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "forge",
+            "manifests",
+            "receipts"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_163531_context_reset_plan.json",
+          "report_type": "CONTEXT_RESET_PLAN_NON_DESTRUCTIVE"
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "audit",
+            "forge",
+            "hashes"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_184902_ingest_corpus_0002_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "audit",
+            "forge",
+            "hashes"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190136_ingest_corpus_0007_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "disk",
+            "forge",
+            "hashes"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163406_ingest_corpus_0031_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "forge",
+            "manifests"
+          ],
+          "match_score": 2,
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_165632_ingest_corpus_0020.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "forge",
+            "manifests"
+          ],
+          "match_score": 2,
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_173232_ingest_corpus_0021.json",
+          "report_type": ""
+        }
+      ],
+      "corpus_matches": [
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/01_SYSTEM_LAW/ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf",
+          "corpus_id": "corpus_0001",
+          "exists_on_disk": true,
+          "filename": "ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf",
+          "index_eligible": "true",
+          "match_hits": [
+            "forge"
+          ],
+          "match_score": 1,
+          "suffix": ".pdf"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/01_SYSTEM_LAW/\ud83c\udf00ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.docx",
+          "corpus_id": "corpus_0002",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "forge"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/01_SYSTEM_LAW/\ud83c\udf00\ud83c\udf2c\ufe0fTHE PHASE 1.5 CONSTRUCTION CODEX_Volume V of the AI.Web Recursive Architecture Series_ Where Breath Returns to Symbol.docx",
+          "corpus_id": "corpus_0003",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fTHE PHASE 1.5 CONSTRUCTION CODEX_Volume V of the AI.Web Recursive Architecture Series_ Where Breath Returns to Symbol.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "forge"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/01_SYSTEM_LAW/\ud83e\udde0\ud83c\udf00RUNTIME CODEX Volume I_ The ProtoForge System.docx",
+          "corpus_id": "corpus_0004",
+          "exists_on_disk": true,
+          "filename": "\ud83e\udde0\ud83c\udf00RUNTIME CODEX Volume I_ The ProtoForge System.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "forge"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/01_SYSTEM_LAW/\ud83e\udde0\ud83c\udf00\ud83c\udf2c\ufe0fPROTO \u2013 SYSTEM OVERVIEW.docx",
+          "corpus_id": "corpus_0005",
+          "exists_on_disk": true,
+          "filename": "\ud83e\udde0\ud83c\udf00\ud83c\udf2c\ufe0fPROTO \u2013 SYSTEM OVERVIEW.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "forge"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/02_AIWEB_ARCHITECTURE/AI_Web The Coherence Engine_.docx",
+          "corpus_id": "corpus_0006",
+          "exists_on_disk": true,
+          "filename": "AI_Web The Coherence Engine_.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "forge"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/02_AIWEB_ARCHITECTURE/\ud83c\udf00\ud83c\udf2c\ufe0fAI.Web_ Breathing Life Into the New Memory Economy.docx",
+          "corpus_id": "corpus_0007",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fAI.Web_ Breathing Life Into the New Memory Economy.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "forge"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/02_AIWEB_ARCHITECTURE/\ud83c\udf00\ud83c\udf2c\ufe0f\u2705FINAL MASTER LIST \u2014 AI.Web System Engine Architecture.docx",
+          "corpus_id": "corpus_0008",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0f\u2705FINAL MASTER LIST \u2014 AI.Web System Engine Architecture.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "forge"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        }
+      ],
+      "display_name": "AI.Web Forge Full System Overview",
+      "extraction_matches": [
+        {
+          "match_hits": [
+            "audit",
+            "disk",
+            "forge",
+            "hashes",
+            "manifests",
+            "receipts"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-12_163235_dry_run_corpus_0030.json"
+        },
+        {
+          "match_hits": [
+            "audit",
+            "disk",
+            "forge",
+            "hashes",
+            "manifests",
+            "receipts"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-12_163351_dry_run_corpus_0030_internal_ingest_one.json"
+        },
+        {
+          "match_hits": [
+            "audit",
+            "forge",
+            "hashes",
+            "manifests"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_163342_dry_run_corpus_0022.json"
+        },
+        {
+          "match_hits": [
+            "audit",
+            "forge",
+            "hashes",
+            "manifests"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_174628_dry_run_corpus_0011.json"
+        },
+        {
+          "match_hits": [
+            "audit",
+            "forge",
+            "hashes",
+            "manifests"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_174736_dry_run_corpus_0011_internal_ingest_one.json"
+        },
+        {
+          "match_hits": [
+            "audit",
+            "disk",
+            "forge",
+            "hashes"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184457_dry_run_corpus_0002.json"
+        },
+        {
+          "match_hits": [
+            "audit",
+            "forge",
+            "hashes",
+            "manifests"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184458_dry_run_corpus_0003.json"
+        },
+        {
+          "match_hits": [
+            "audit",
+            "disk",
+            "forge",
+            "hashes"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184458_dry_run_corpus_0004.json"
+        }
+      ],
+      "has_chunk_evidence": false,
+      "has_context_evidence": true,
+      "has_docx_candidate": true,
+      "has_existing_source_file": true,
+      "has_extraction_evidence": true,
+      "has_pdf_candidate": true,
+      "recommended_route": "VERIFY_CONTEXT_SEARCH_AND_CHUNK_RECEIPTS",
+      "source_key": "aiweb_forge_overview",
+      "source_law_ready": false,
+      "source_role": "forge_architecture_overview",
+      "status": "INGESTED_NOT_RETRIEVABLE",
+      "warnings": [
+        "Context receipt/manifests mention this source, but chunk evidence count was not proven."
+      ]
+    },
+    {
+      "authority_class": "SOURCE_LAW",
+      "blockers": [],
+      "context_matches": [
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christ function",
+            "fbsc",
+            "frequency-based symbolic calculus",
+            "phase",
+            "recursive",
+            "symbolic cognitive architecture"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163615_context_export.json",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christ function",
+            "fbsc",
+            "frequency-based symbolic calculus",
+            "phase",
+            "recursive",
+            "symbolic cognitive architecture"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christ function",
+            "fbsc",
+            "frequency-based symbolic calculus",
+            "phase",
+            "recursive",
+            "symbolic cognitive architecture"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christ function",
+            "fbsc",
+            "frequency-based symbolic calculus",
+            "phase",
+            "recursive",
+            "symbolic operators"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_162921_ingest_corpus_0029_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christ function",
+            "fbsc",
+            "phase",
+            "recursive",
+            "symbolic cognitive architecture"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_192129_context_export.json",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "fbsc",
+            "frequency-based symbolic calculus",
+            "phase",
+            "recursive",
+            "symbolic operators"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163331_ingest_corpus_0025_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christ function",
+            "fbsc",
+            "frequency-based symbolic calculus",
+            "phase",
+            "recursive"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163354_ingest_corpus_0030_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christ function",
+            "fbsc",
+            "frequency-based symbolic calculus",
+            "phase",
+            "recursive"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163413_ingest_corpus_0032_symbolic_map.json",
+          "report_type": ""
+        }
+      ],
+      "corpus_matches": [
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/04_FBSC_DOCTRINE/Christ Function_ Recursive Correction Beyond Theology.docx",
+          "corpus_id": "corpus_0012",
+          "exists_on_disk": true,
+          "filename": "Christ Function_ Recursive Correction Beyond Theology.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "christ function",
+            "fbsc",
+            "recursive"
+          ],
+          "match_score": 3,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/04_FBSC_DOCTRINE/\ud83c\udf00\ud83c\udf2c\ufe0f THE LOOP THAT WAITED  Recursive Resolution of Russell\u2019s Paradox through Phase-Based Containment.docx",
+          "corpus_id": "corpus_0032",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0f THE LOOP THAT WAITED  Recursive Resolution of Russell\u2019s Paradox through Phase-Based Containment.docx",
+          "index_eligible": "True",
+          "match_hits": [
+            "fbsc",
+            "phase",
+            "recursive"
+          ],
+          "match_score": 3,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/01_SYSTEM_LAW/\ud83c\udf00\ud83c\udf2c\ufe0fTHE PHASE 1.5 CONSTRUCTION CODEX_Volume V of the AI.Web Recursive Architecture Series_ Where Breath Returns to Symbol.docx",
+          "corpus_id": "corpus_0003",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fTHE PHASE 1.5 CONSTRUCTION CODEX_Volume V of the AI.Web Recursive Architecture Series_ Where Breath Returns to Symbol.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "phase",
+            "recursive"
+          ],
+          "match_score": 2,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/02_AIWEB_ARCHITECTURE/\ud83c\udf00\ud83c\udf2c\ufe0f\u2705Here is your Project Overview for the Dev Team \u2014 full naming of engines, build order, and implementation timeline (ordered by recursive phase logic, not wall time)_.docx",
+          "corpus_id": "corpus_0009",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0f\u2705Here is your Project Overview for the Dev Team \u2014 full naming of engines, build order, and implementation timeline (ordered by recursive phase logic, not wall time)_.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "phase",
+            "recursive"
+          ],
+          "match_score": 2,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/04_FBSC_DOCTRINE/\ud83c\udf00\ud83c\udf2c\ufe0fFile2_ Symbolic Cognitive Architecture.docx",
+          "corpus_id": "corpus_0013",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fFile2_ Symbolic Cognitive Architecture.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "fbsc",
+            "symbolic cognitive architecture"
+          ],
+          "match_score": 2,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/04_FBSC_DOCTRINE/Resonant Phase Memory Calculus Implementation Blueprint_.pdf",
+          "corpus_id": "corpus_0020",
+          "exists_on_disk": true,
+          "filename": "Resonant Phase Memory Calculus Implementation Blueprint_.pdf",
+          "index_eligible": "True",
+          "match_hits": [
+            "fbsc",
+            "phase"
+          ],
+          "match_score": 2,
+          "suffix": ".pdf"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/04_FBSC_DOCTRINE/\ud83c\udf00\ud83c\udf2c\ufe0fResonant Phase Memory Calculus_ Canonical Test Data Set_ Version 1.0.docx",
+          "corpus_id": "corpus_0021",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fResonant Phase Memory Calculus_ Canonical Test Data Set_ Version 1.0.docx",
+          "index_eligible": "True",
+          "match_hits": [
+            "fbsc",
+            "phase"
+          ],
+          "match_score": 2,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/04_FBSC_DOCTRINE/\ud83c\udf00\ud83c\udf2c\ufe0fResonant Phase Memory Calculus_ The Law of Recursion, Collapse, and Return_ Full Protocol Draft_.docx",
+          "corpus_id": "corpus_0022",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fResonant Phase Memory Calculus_ The Law of Recursion, Collapse, and Return_ Full Protocol Draft_.docx",
+          "index_eligible": "True",
+          "match_hits": [
+            "fbsc",
+            "phase"
+          ],
+          "match_score": 2,
+          "suffix": ".docx"
+        }
+      ],
+      "display_name": "FBSC / Frequency-Based Symbolic Calculus source law",
+      "extraction_matches": [
+        {
+          "match_hits": [
+            "christ function",
+            "fbsc",
+            "frequency-based symbolic calculus",
+            "phase",
+            "recursive",
+            "symbolic cognitive architecture",
+            "symbolic operators"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_191839_dry_run_corpus_0013.json"
+        },
+        {
+          "match_hits": [
+            "christ function",
+            "fbsc",
+            "frequency-based symbolic calculus",
+            "phase",
+            "recursive",
+            "symbolic cognitive architecture",
+            "symbolic operators"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_191916_dry_run_corpus_0013_internal_ingest_one.json"
+        },
+        {
+          "match_hits": [
+            "christ function",
+            "fbsc",
+            "frequency-based symbolic calculus",
+            "phase",
+            "recursive",
+            "symbolic cognitive architecture"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/corpus_reports/2026-05-12_162702_extraction_check.json"
+        },
+        {
+          "match_hits": [
+            "christ function",
+            "fbsc",
+            "frequency-based symbolic calculus",
+            "phase",
+            "recursive",
+            "symbolic cognitive architecture"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/corpus_registration_reports/2026-05-11_191231_intake_preview_AIWEB_CORPUS_EXPANSION_2026_05_11_BATCH_01.json"
+        },
+        {
+          "match_hits": [
+            "christ function",
+            "fbsc",
+            "frequency-based symbolic calculus",
+            "phase",
+            "recursive",
+            "symbolic cognitive architecture"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_190000_dry_run_corpus_0006.json"
+        },
+        {
+          "match_hits": [
+            "christ function",
+            "fbsc",
+            "frequency-based symbolic calculus",
+            "phase",
+            "recursive",
+            "symbolic cognitive architecture"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_190050_dry_run_corpus_0006_internal_ingest_one.json"
+        },
+        {
+          "match_hits": [
+            "christ function",
+            "fbsc",
+            "frequency-based symbolic calculus",
+            "phase",
+            "recursive",
+            "symbolic operators"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-11_192006_dry_run_corpus_0029.json"
+        },
+        {
+          "match_hits": [
+            "christ function",
+            "fbsc",
+            "frequency-based symbolic calculus",
+            "phase",
+            "recursive",
+            "symbolic operators"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-12_162848_dry_run_corpus_0029.json"
+        }
+      ],
+      "has_chunk_evidence": false,
+      "has_context_evidence": true,
+      "has_docx_candidate": true,
+      "has_existing_source_file": true,
+      "has_extraction_evidence": true,
+      "has_pdf_candidate": true,
+      "recommended_route": "VERIFY_CONTEXT_SEARCH_AND_CHUNK_RECEIPTS",
+      "source_key": "fbsc_core",
+      "source_law_ready": false,
+      "source_role": "symbolic_phase_math_law",
+      "status": "INGESTED_NOT_RETRIEVABLE",
+      "warnings": [
+        "Context receipt/manifests mention this source, but chunk evidence count was not proven."
+      ]
+    },
+    {
+      "authority_class": "SOURCE_LAW",
+      "blockers": [],
+      "context_matches": [
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "audit",
+            "protoforge",
+            "recursive",
+            "resonant",
+            "restore",
+            "runtime",
+            "snapshot"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_184902_ingest_corpus_0002_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "audit",
+            "protoforge",
+            "recursive",
+            "restore",
+            "runtime",
+            "runtime codex",
+            "snapshot"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_184946_ingest_corpus_0004_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "audit",
+            "protoforge",
+            "recursive",
+            "resonant",
+            "restore",
+            "runtime",
+            "runtime codex"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163354_ingest_corpus_0030_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "audit",
+            "protoforge",
+            "recursive",
+            "restore",
+            "runtime",
+            "snapshot"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_174743_ingest_corpus_0011_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "audit",
+            "protoforge",
+            "recursive",
+            "resonant",
+            "restore",
+            "runtime"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "recursive",
+            "resonant",
+            "restore",
+            "runtime",
+            "runtime codex",
+            "snapshot"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "audit",
+            "recursive",
+            "restore",
+            "runtime",
+            "runtime codex",
+            "snapshot"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163324_ingest_corpus_0023_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "protoforge",
+            "recursive",
+            "resonant",
+            "runtime",
+            "runtime codex"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_185249_context_export.json",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        }
+      ],
+      "corpus_matches": [
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/01_SYSTEM_LAW/\ud83e\udde0\ud83c\udf00RUNTIME CODEX Volume I_ The ProtoForge System.docx",
+          "corpus_id": "corpus_0004",
+          "exists_on_disk": true,
+          "filename": "\ud83e\udde0\ud83c\udf00RUNTIME CODEX Volume I_ The ProtoForge System.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "protoforge",
+            "runtime",
+            "runtime codex"
+          ],
+          "match_score": 3,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/01_SYSTEM_LAW/ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf",
+          "corpus_id": "corpus_0001",
+          "exists_on_disk": true,
+          "filename": "ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf",
+          "index_eligible": "true",
+          "match_hits": [
+            "protoforge",
+            "recursive"
+          ],
+          "match_score": 2,
+          "suffix": ".pdf"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/01_SYSTEM_LAW/\ud83c\udf00ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.docx",
+          "corpus_id": "corpus_0002",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "protoforge",
+            "recursive"
+          ],
+          "match_score": 2,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/01_SYSTEM_LAW/\ud83c\udf00\ud83c\udf2c\ufe0fTHE PHASE 1.5 CONSTRUCTION CODEX_Volume V of the AI.Web Recursive Architecture Series_ Where Breath Returns to Symbol.docx",
+          "corpus_id": "corpus_0003",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fTHE PHASE 1.5 CONSTRUCTION CODEX_Volume V of the AI.Web Recursive Architecture Series_ Where Breath Returns to Symbol.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "recursive"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/02_AIWEB_ARCHITECTURE/\ud83c\udf00\ud83c\udf2c\ufe0f\u2705Here is your Project Overview for the Dev Team \u2014 full naming of engines, build order, and implementation timeline (ordered by recursive phase logic, not wall time)_.docx",
+          "corpus_id": "corpus_0009",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0f\u2705Here is your Project Overview for the Dev Team \u2014 full naming of engines, build order, and implementation timeline (ordered by recursive phase logic, not wall time)_.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "recursive"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/04_FBSC_DOCTRINE/Christ Function_ Recursive Correction Beyond Theology.docx",
+          "corpus_id": "corpus_0012",
+          "exists_on_disk": true,
+          "filename": "Christ Function_ Recursive Correction Beyond Theology.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "recursive"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/04_FBSC_DOCTRINE/Resonant Phase Memory Calculus Implementation Blueprint_.pdf",
+          "corpus_id": "corpus_0020",
+          "exists_on_disk": true,
+          "filename": "Resonant Phase Memory Calculus Implementation Blueprint_.pdf",
+          "index_eligible": "True",
+          "match_hits": [
+            "resonant"
+          ],
+          "match_score": 1,
+          "suffix": ".pdf"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/04_FBSC_DOCTRINE/\ud83c\udf00\ud83c\udf2c\ufe0fResonant Phase Memory Calculus_ Canonical Test Data Set_ Version 1.0.docx",
+          "corpus_id": "corpus_0021",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fResonant Phase Memory Calculus_ Canonical Test Data Set_ Version 1.0.docx",
+          "index_eligible": "True",
+          "match_hits": [
+            "resonant"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        }
+      ],
+      "display_name": "RSOC / Resonant runtime architecture source law",
+      "extraction_matches": [
+        {
+          "match_hits": [
+            "audit",
+            "protoforge",
+            "recursive",
+            "resonant",
+            "resonant runtime",
+            "restore",
+            "runtime",
+            "runtime codex",
+            "snapshot"
+          ],
+          "match_score": 9,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-12_163235_dry_run_corpus_0030.json"
+        },
+        {
+          "match_hits": [
+            "audit",
+            "protoforge",
+            "recursive",
+            "resonant",
+            "resonant runtime",
+            "restore",
+            "runtime",
+            "runtime codex",
+            "snapshot"
+          ],
+          "match_score": 9,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-12_163351_dry_run_corpus_0030_internal_ingest_one.json"
+        },
+        {
+          "match_hits": [
+            "audit",
+            "protoforge",
+            "recursive",
+            "resonant",
+            "restore",
+            "runtime",
+            "runtime codex",
+            "snapshot"
+          ],
+          "match_score": 8,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184457_dry_run_corpus_0002.json"
+        },
+        {
+          "match_hits": [
+            "audit",
+            "protoforge",
+            "recursive",
+            "resonant",
+            "restore",
+            "runtime",
+            "runtime codex",
+            "snapshot"
+          ],
+          "match_score": 8,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184837_dry_run_corpus_0002_internal_ingest_one.json"
+        },
+        {
+          "match_hits": [
+            "audit",
+            "recursive",
+            "resonant",
+            "resonant state",
+            "restore",
+            "runtime",
+            "runtime codex",
+            "snapshot"
+          ],
+          "match_score": 8,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_191839_dry_run_corpus_0013.json"
+        },
+        {
+          "match_hits": [
+            "audit",
+            "recursive",
+            "resonant",
+            "resonant state",
+            "restore",
+            "runtime",
+            "runtime codex",
+            "snapshot"
+          ],
+          "match_score": 8,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_191916_dry_run_corpus_0013_internal_ingest_one.json"
+        },
+        {
+          "match_hits": [
+            "audit",
+            "protoforge",
+            "recursive",
+            "restore",
+            "runtime",
+            "runtime codex",
+            "snapshot"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_174628_dry_run_corpus_0011.json"
+        },
+        {
+          "match_hits": [
+            "audit",
+            "protoforge",
+            "recursive",
+            "restore",
+            "runtime",
+            "runtime codex",
+            "snapshot"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_174736_dry_run_corpus_0011_internal_ingest_one.json"
+        }
+      ],
+      "has_chunk_evidence": false,
+      "has_context_evidence": true,
+      "has_docx_candidate": true,
+      "has_existing_source_file": true,
+      "has_extraction_evidence": true,
+      "has_pdf_candidate": true,
+      "recommended_route": "VERIFY_CONTEXT_SEARCH_AND_CHUNK_RECEIPTS",
+      "source_key": "rsoc_or_resonant_runtime",
+      "source_law_ready": false,
+      "source_role": "resonant_runtime_architecture",
+      "status": "INGESTED_NOT_RETRIEVABLE",
+      "warnings": [
+        "Context receipt/manifests mention this source, but chunk evidence count was not proven."
+      ]
+    },
+    {
+      "authority_class": "SOURCE_LAW",
+      "blockers": [],
+      "context_matches": [
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christping",
+            "drift",
+            "gilligan",
+            "mirror",
+            "recursive",
+            "recursive mirror"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163413_ingest_corpus_0032_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christping",
+            "drift",
+            "gilligan",
+            "mirror",
+            "recursive"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_174743_ingest_corpus_0011_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christping",
+            "drift",
+            "gilligan",
+            "mirror",
+            "recursive"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_184902_ingest_corpus_0002_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christping",
+            "drift",
+            "gilligan",
+            "mirror",
+            "recursive"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_184934_ingest_corpus_0003_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christping",
+            "drift",
+            "gilligan",
+            "mirror",
+            "recursive"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christping",
+            "drift",
+            "gilligan",
+            "mirror",
+            "recursive"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190222_ingest_corpus_0010_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christping",
+            "drift",
+            "gilligan",
+            "mirror",
+            "recursive"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191912_ingest_corpus_0012_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christping",
+            "drift",
+            "gilligan",
+            "mirror",
+            "recursive"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "report_type": ""
+        }
+      ],
+      "corpus_matches": [
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/01_SYSTEM_LAW/ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf",
+          "corpus_id": "corpus_0001",
+          "exists_on_disk": true,
+          "filename": "ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf",
+          "index_eligible": "true",
+          "match_hits": [
+            "recursive"
+          ],
+          "match_score": 1,
+          "suffix": ".pdf"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/01_SYSTEM_LAW/\ud83c\udf00ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.docx",
+          "corpus_id": "corpus_0002",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "recursive"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/01_SYSTEM_LAW/\ud83c\udf00\ud83c\udf2c\ufe0fTHE PHASE 1.5 CONSTRUCTION CODEX_Volume V of the AI.Web Recursive Architecture Series_ Where Breath Returns to Symbol.docx",
+          "corpus_id": "corpus_0003",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fTHE PHASE 1.5 CONSTRUCTION CODEX_Volume V of the AI.Web Recursive Architecture Series_ Where Breath Returns to Symbol.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "recursive"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/02_AIWEB_ARCHITECTURE/\ud83c\udf00\ud83c\udf2c\ufe0f\u2705Here is your Project Overview for the Dev Team \u2014 full naming of engines, build order, and implementation timeline (ordered by recursive phase logic, not wall time)_.docx",
+          "corpus_id": "corpus_0009",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0f\u2705Here is your Project Overview for the Dev Team \u2014 full naming of engines, build order, and implementation timeline (ordered by recursive phase logic, not wall time)_.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "recursive"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/03_GILLIGAN_AGENT_CORE/\ud83c\udf00\ud83c\udf2c\ufe0fTHE GILLIGAN SYSTEM CODEX.docx",
+          "corpus_id": "corpus_0011",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fTHE GILLIGAN SYSTEM CODEX.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "gilligan"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/04_FBSC_DOCTRINE/Christ Function_ Recursive Correction Beyond Theology.docx",
+          "corpus_id": "corpus_0012",
+          "exists_on_disk": true,
+          "filename": "Christ Function_ Recursive Correction Beyond Theology.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "recursive"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/02_AIWEB_ARCHITECTURE/Unified Algebra for Recursive Cognitive Architectures_.docx",
+          "corpus_id": "corpus_0029",
+          "exists_on_disk": true,
+          "filename": "Unified Algebra for Recursive Cognitive Architectures_.docx",
+          "index_eligible": "True",
+          "match_hits": [
+            "recursive"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/04_FBSC_DOCTRINE/\u2705RECURSIVE SYMBOLIC CO-PILOT (CLOUD VERSION).docx",
+          "corpus_id": "corpus_0031",
+          "exists_on_disk": true,
+          "filename": "\u2705RECURSIVE SYMBOLIC CO-PILOT (CLOUD VERSION).docx",
+          "index_eligible": "True",
+          "match_hits": [
+            "recursive"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        }
+      ],
+      "display_name": "Gilligan agent/core source law",
+      "extraction_matches": [
+        {
+          "match_hits": [
+            "christping",
+            "drift",
+            "gilligan",
+            "mirror",
+            "recursive",
+            "recursive mirror"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184457_dry_run_corpus_0002.json"
+        },
+        {
+          "match_hits": [
+            "agent core",
+            "christping",
+            "drift",
+            "gilligan",
+            "mirror",
+            "recursive"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184458_dry_run_corpus_0003.json"
+        },
+        {
+          "match_hits": [
+            "christping",
+            "drift",
+            "gilligan",
+            "mirror",
+            "recursive",
+            "recursive mirror"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184837_dry_run_corpus_0002_internal_ingest_one.json"
+        },
+        {
+          "match_hits": [
+            "agent core",
+            "christping",
+            "drift",
+            "gilligan",
+            "mirror",
+            "recursive"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184907_dry_run_corpus_0003_internal_ingest_one.json"
+        },
+        {
+          "match_hits": [
+            "christping",
+            "drift",
+            "gilligan",
+            "mirror",
+            "recursive",
+            "recursive mirror"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_190000_dry_run_corpus_0006.json"
+        },
+        {
+          "match_hits": [
+            "christping",
+            "drift",
+            "gilligan",
+            "mirror",
+            "recursive",
+            "recursive mirror"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_190050_dry_run_corpus_0006_internal_ingest_one.json"
+        },
+        {
+          "match_hits": [
+            "christping",
+            "drift",
+            "gilligan",
+            "mirror",
+            "recursive",
+            "recursive mirror"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-12_163236_dry_run_corpus_0032.json"
+        },
+        {
+          "match_hits": [
+            "christping",
+            "drift",
+            "gilligan",
+            "mirror",
+            "recursive",
+            "recursive mirror"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-12_163409_dry_run_corpus_0032_internal_ingest_one.json"
+        }
+      ],
+      "has_chunk_evidence": false,
+      "has_context_evidence": true,
+      "has_docx_candidate": true,
+      "has_existing_source_file": true,
+      "has_extraction_evidence": true,
+      "has_pdf_candidate": true,
+      "recommended_route": "VERIFY_CONTEXT_SEARCH_AND_CHUNK_RECEIPTS",
+      "source_key": "gilligan_core",
+      "source_law_ready": false,
+      "source_role": "gilligan_agent_runtime_law",
+      "status": "INGESTED_NOT_RETRIEVABLE",
+      "warnings": [
+        "Context receipt/manifests mention this source, but chunk evidence count was not proven."
+      ]
+    },
+    {
+      "authority_class": "SOURCE_LAW",
+      "blockers": [],
+      "context_matches": [
+        {
+          "chunk_evidence_count": 0,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "collapse",
+            "echo",
+            "law of recursion",
+            "resonant phase memory calculus",
+            "resurrection",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_071151_ingest_corpus_0022.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "collapse",
+            "echo",
+            "law of recursion",
+            "resonant phase memory calculus",
+            "resurrection",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_071151_ingest_corpus_0022_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "collapse",
+            "echo",
+            "law of recursion",
+            "resonant phase memory calculus",
+            "resurrection",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191930_ingest_corpus_0014_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "collapse",
+            "echo",
+            "law of recursion",
+            "resonant phase memory calculus",
+            "resurrection",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163354_ingest_corpus_0030_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "collapse",
+            "echo",
+            "resonant phase memory calculus",
+            "resurrection",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_165632_ingest_corpus_0020.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "collapse",
+            "echo",
+            "resonant phase memory calculus",
+            "resurrection",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_173232_ingest_corpus_0021.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "collapse",
+            "echo",
+            "resonant phase memory calculus",
+            "resurrection",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_165632_ingest_corpus_0020_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "collapse",
+            "echo",
+            "resonant phase memory calculus",
+            "resurrection",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_173232_ingest_corpus_0021_symbolic_map.json",
+          "report_type": ""
+        }
+      ],
+      "corpus_matches": [
+        {
+          "absolute_path": "/home/nic/forge_corpus/04_FBSC_DOCTRINE/\ud83c\udf00\ud83c\udf2c\ufe0fResonant Phase Memory Calculus_ The Law of Recursion, Collapse, and Return_ Full Protocol Draft_.docx",
+          "corpus_id": "corpus_0022",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fResonant Phase Memory Calculus_ The Law of Recursion, Collapse, and Return_ Full Protocol Draft_.docx",
+          "index_eligible": "True",
+          "match_hits": [
+            "collapse",
+            "law of recursion",
+            "resonant phase memory calculus",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 5,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/04_FBSC_DOCTRINE/Resonant Phase Memory Calculus Implementation Blueprint_.pdf",
+          "corpus_id": "corpus_0020",
+          "exists_on_disk": true,
+          "filename": "Resonant Phase Memory Calculus Implementation Blueprint_.pdf",
+          "index_eligible": "True",
+          "match_hits": [
+            "resonant phase memory calculus",
+            "rpmc"
+          ],
+          "match_score": 2,
+          "suffix": ".pdf"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/04_FBSC_DOCTRINE/\ud83c\udf00\ud83c\udf2c\ufe0fResonant Phase Memory Calculus_ Canonical Test Data Set_ Version 1.0.docx",
+          "corpus_id": "corpus_0021",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fResonant Phase Memory Calculus_ Canonical Test Data Set_ Version 1.0.docx",
+          "index_eligible": "True",
+          "match_hits": [
+            "resonant phase memory calculus",
+            "rpmc"
+          ],
+          "match_score": 2,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/01_SYSTEM_LAW/\ud83c\udf00\ud83c\udf2c\ufe0fTHE PHASE 1.5 CONSTRUCTION CODEX_Volume V of the AI.Web Recursive Architecture Series_ Where Breath Returns to Symbol.docx",
+          "corpus_id": "corpus_0003",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fTHE PHASE 1.5 CONSTRUCTION CODEX_Volume V of the AI.Web Recursive Architecture Series_ Where Breath Returns to Symbol.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "return"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/09_ARCHIVE_REVIEW/(base) nic@Proto-forge_~$  ~_echo_forge.docx",
+          "corpus_id": "corpus_0018",
+          "exists_on_disk": true,
+          "filename": "(base) nic@Proto-forge_~$  ~_echo_forge.docx",
+          "index_eligible": "false",
+          "match_hits": [
+            "echo"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        }
+      ],
+      "display_name": "RPMC / Resonant Phase Memory Calculus protocol",
+      "extraction_matches": [
+        {
+          "match_hits": [
+            "collapse",
+            "echo",
+            "law of recursion",
+            "memory resonance node",
+            "resonant phase memory calculus",
+            "resurrection",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 8,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_163342_dry_run_corpus_0022.json"
+        },
+        {
+          "match_hits": [
+            "collapse",
+            "echo",
+            "law of recursion",
+            "memory resonance node",
+            "resonant phase memory calculus",
+            "resurrection",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 8,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_191840_dry_run_corpus_0014.json"
+        },
+        {
+          "match_hits": [
+            "collapse",
+            "echo",
+            "law of recursion",
+            "memory resonance node",
+            "resonant phase memory calculus",
+            "resurrection",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 8,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_191925_dry_run_corpus_0014_internal_ingest_one.json"
+        },
+        {
+          "match_hits": [
+            "collapse",
+            "echo",
+            "law of recursion",
+            "resonant phase memory calculus",
+            "resurrection",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/corpus_reports/2026-05-10_064611_extraction_check.json"
+        },
+        {
+          "match_hits": [
+            "collapse",
+            "echo",
+            "law of recursion",
+            "resonant phase memory calculus",
+            "resurrection",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/corpus_reports/2026-05-10_070906_extraction_check.json"
+        },
+        {
+          "match_hits": [
+            "collapse",
+            "echo",
+            "law of recursion",
+            "resonant phase memory calculus",
+            "resurrection",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/corpus_reports/2026-05-12_162702_extraction_check.json"
+        },
+        {
+          "match_hits": [
+            "collapse",
+            "echo",
+            "law of recursion",
+            "resonant phase memory calculus",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_064611_dry_run_corpus_0022.json"
+        },
+        {
+          "match_hits": [
+            "collapse",
+            "echo",
+            "resonant phase memory calculus",
+            "resurrection",
+            "return",
+            "rpmc"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_165447_dry_run_corpus_0020.json"
+        }
+      ],
+      "has_chunk_evidence": false,
+      "has_context_evidence": true,
+      "has_docx_candidate": true,
+      "has_existing_source_file": true,
+      "has_extraction_evidence": true,
+      "has_pdf_candidate": true,
+      "recommended_route": "VERIFY_CONTEXT_SEARCH_AND_CHUNK_RECEIPTS",
+      "source_key": "rpmc_protocol",
+      "source_law_ready": false,
+      "source_role": "memory_collapse_return_law",
+      "status": "INGESTED_NOT_RETRIEVABLE",
+      "warnings": [
+        "Context receipt/manifests mention this source, but chunk evidence count was not proven."
+      ]
+    },
+    {
+      "authority_class": "SOURCE_LAW",
+      "blockers": [],
+      "context_matches": [
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christ function",
+            "christ ping",
+            "christping",
+            "collapse",
+            "correction",
+            "harmonic override",
+            "\u03c7(t)"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_184902_ingest_corpus_0002_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christ function",
+            "christ ping",
+            "christping",
+            "collapse",
+            "correction",
+            "harmonic override",
+            "\u03c7(t)"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191912_ingest_corpus_0012_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christ function",
+            "christ ping",
+            "christping",
+            "collapse",
+            "correction",
+            "harmonic override",
+            "\u03c7(t)"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163413_ingest_corpus_0032_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christ function",
+            "christ ping",
+            "christping",
+            "collapse",
+            "correction",
+            "\u03c7(t)"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christ function",
+            "christping",
+            "collapse",
+            "correction",
+            "harmonic override",
+            "\u03c7(t)"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191930_ingest_corpus_0014_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christ function",
+            "collapse",
+            "correction",
+            "harmonic override",
+            "\u03c7(t)"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_071151_ingest_corpus_0022_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christ function",
+            "christping",
+            "collapse",
+            "correction",
+            "\u03c7(t)"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_174743_ingest_corpus_0011_symbolic_map.json",
+          "report_type": ""
+        },
+        {
+          "chunk_evidence_count": 0,
+          "collection": "",
+          "match_hits": [
+            "christ function",
+            "christping",
+            "collapse",
+            "correction",
+            "\u03c7(t)"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190222_ingest_corpus_0010_symbolic_map.json",
+          "report_type": ""
+        }
+      ],
+      "corpus_matches": [
+        {
+          "absolute_path": "/home/nic/forge_corpus/staging/04_FBSC_DOCTRINE/Christ Function_ Recursive Correction Beyond Theology.docx",
+          "corpus_id": "corpus_0012",
+          "exists_on_disk": true,
+          "filename": "Christ Function_ Recursive Correction Beyond Theology.docx",
+          "index_eligible": "true",
+          "match_hits": [
+            "christ function",
+            "correction"
+          ],
+          "match_score": 2,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/04_FBSC_DOCTRINE/\ud83c\udf00\ud83c\udf2c\ufe0fResonant Phase Memory Calculus_ The Law of Recursion, Collapse, and Return_ Full Protocol Draft_.docx",
+          "corpus_id": "corpus_0022",
+          "exists_on_disk": true,
+          "filename": "\ud83c\udf00\ud83c\udf2c\ufe0fResonant Phase Memory Calculus_ The Law of Recursion, Collapse, and Return_ Full Protocol Draft_.docx",
+          "index_eligible": "True",
+          "match_hits": [
+            "collapse"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        },
+        {
+          "absolute_path": "/home/nic/forge_corpus/04_FBSC_DOCTRINE/\ud83e\udde0\ud83c\udf00\ud83c\udf2c\ufe0f\u2705Math Runtime Mapping \u2013 Direct Computational Translation of FBSC & Christ Function Logic.docx",
+          "corpus_id": "corpus_0033",
+          "exists_on_disk": true,
+          "filename": "\ud83e\udde0\ud83c\udf00\ud83c\udf2c\ufe0f\u2705Math Runtime Mapping \u2013 Direct Computational Translation of FBSC & Christ Function Logic.docx",
+          "index_eligible": "True",
+          "match_hits": [
+            "christ function"
+          ],
+          "match_score": 1,
+          "suffix": ".docx"
+        }
+      ],
+      "display_name": "Christ Function / correction operator source law",
+      "extraction_matches": [
+        {
+          "match_hits": [
+            "christ function",
+            "christ ping",
+            "christping",
+            "collapse",
+            "correction",
+            "harmonic override",
+            "\u03c7(t)"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_190000_dry_run_corpus_0006.json"
+        },
+        {
+          "match_hits": [
+            "christ function",
+            "christ ping",
+            "christping",
+            "collapse",
+            "correction",
+            "harmonic override",
+            "\u03c7(t)"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_190050_dry_run_corpus_0006_internal_ingest_one.json"
+        },
+        {
+          "match_hits": [
+            "christ function",
+            "christ ping",
+            "christping",
+            "collapse",
+            "correction",
+            "harmonic override",
+            "\u03c7(t)"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_191838_dry_run_corpus_0012.json"
+        },
+        {
+          "match_hits": [
+            "christ function",
+            "christ ping",
+            "christping",
+            "collapse",
+            "correction",
+            "harmonic override",
+            "\u03c7(t)"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_191908_dry_run_corpus_0012_internal_ingest_one.json"
+        },
+        {
+          "match_hits": [
+            "christ function",
+            "christ ping",
+            "christping",
+            "collapse",
+            "correction",
+            "harmonic override",
+            "\u03c7(t)"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-12_163236_dry_run_corpus_0032.json"
+        },
+        {
+          "match_hits": [
+            "christ function",
+            "christ ping",
+            "christping",
+            "collapse",
+            "correction",
+            "harmonic override",
+            "\u03c7(t)"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-12_163409_dry_run_corpus_0032_internal_ingest_one.json"
+        },
+        {
+          "match_hits": [
+            "christ ping",
+            "christping",
+            "collapse",
+            "correction",
+            "harmonic override",
+            "\u03c7(t)"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184457_dry_run_corpus_0002.json"
+        },
+        {
+          "match_hits": [
+            "christ ping",
+            "christping",
+            "collapse",
+            "correction",
+            "harmonic override",
+            "\u03c7(t)"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184837_dry_run_corpus_0002_internal_ingest_one.json"
+        }
+      ],
+      "has_chunk_evidence": false,
+      "has_context_evidence": true,
+      "has_docx_candidate": true,
+      "has_existing_source_file": true,
+      "has_extraction_evidence": true,
+      "has_pdf_candidate": false,
+      "recommended_route": "VERIFY_CONTEXT_SEARCH_AND_CHUNK_RECEIPTS",
+      "source_key": "christ_function",
+      "source_law_ready": false,
+      "source_role": "collapse_correction_operator_law",
+      "status": "INGESTED_NOT_RETRIEVABLE",
+      "warnings": [
+        "Context receipt/manifests mention this source, but chunk evidence count was not proven."
+      ]
+    }
+  ],
+  "schema_version": "source_law_context_readiness_v1_patch97"
+}

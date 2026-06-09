@@ -1,0 +1,60 @@
+{
+  "baseline_proofs": {
+    "baseline_packet_sha256": "6beb9400143d61d4ca7410380a6d60d15118180a659e8f0ea9adca6bbe38e171",
+    "pre_build005_contribution_core_snapshot_sha256": "29c69d5098fd8ae89bd66eeb2f568a4be631564d326340465bb50306cfee9354",
+    "pre_build005_dual_ledgers_snapshot_sha256": "7761fc74f2e95b806b869d42bcfbc13b62eb58682d89c68bbd08af3a56cc8530",
+    "pre_build005_identity_vault_snapshot_sha256": "cbe4dbdaf0574f40f5e069ce0eed36da933424ebf3b66d6e3faa7a437633d061",
+    "pre_build005_main_py_sha256": "39ea766d27bf5d29d33577ad1fa469f30843717c2834f75a9ad1a919d8bfec23",
+    "pre_build005_mea_package_init_sha256": "5be473353fc991bab0f4a1e26bc5aa4d7bbda5c64eb524980beb061ad64d125a",
+    "pre_build005_mea_state_tree_digest": "5c56daeb4af84f0ac1d8605677cfd21b84a2ab0e3aeb00220d8fd7b6ee0c10f3"
+  },
+  "build_id": "MEA-RMC-MEMORY-WRITER-BUILD-005",
+  "forbidden_runtime_effects": [
+    "no MEA runtime_state write",
+    "no Identity Vault write",
+    "no Contribution Economy write",
+    "no CT mint",
+    "no Influence Ledger write",
+    "no Investment Ledger write",
+    "no RMC rendered-output memory write",
+    "no renderer invocation",
+    "no Echo Validator invocation",
+    "no Chroma write",
+    "no LLM call",
+    "no network operation",
+    "no shell execution",
+    "no UI mutation control"
+  ],
+  "install_overlay_roots": [
+    "forge/"
+  ],
+  "live_write_activation": "terminal_apply_script_only_no_http_write_route_no_ui_write_button",
+  "live_write_target": "forge/memory/mea_manifest_memory_v1/hypothesis_test_required_records.jsonl",
+  "locked_record_boundary": {
+    "candidate_id": "cg_hypothesis_001",
+    "claim_status": "hypothesis",
+    "memory_tier": "hypothesis_test_required_record",
+    "problem_id": "144hz_substrate_status",
+    "proof_debt": 0.85
+  },
+  "modified_existing_files": [
+    "forge/rmc_engine_v1/mea/__init__.py"
+  ],
+  "new_files": [
+    "forge/rmc_engine_v1/mea/controlled_manifest_memory_writer.py",
+    "forge/scripts/mea_rmc_memory_writer_build005_apply.py",
+    "forge/scripts/mea_rmc_memory_writer_build005_verify.py",
+    "forge/scripts/test_mea_rmc_memory_writer_build005.py",
+    "forge/scripts/README_mea_rmc_memory_writer_build005.md",
+    "forge/scripts/MEA_RMC_MEMORY_WRITER_BUILD005_DELIVERY_MANIFEST.json",
+    "forge/scripts/SHA256SUMS_mea_rmc_memory_writer_build005.txt"
+  ],
+  "purpose": "Controlled Forge-owned append-only JSONL persistence of one sealed replay-verified MEA hypothesis manifest memory record.",
+  "required_write_inputs": {
+    "approval_token_required": true,
+    "memory_writer_preview_hash": "4cc7f39eb2c2110c282ab1ef43183826c7ea6d27b7f68b78164d708cfaa92115",
+    "seal_receipt_hash": "1066fac6e124cb1300a50f39aaaf42c987f310184902dee303615d897e843e52",
+    "sealed_manifest_hash": "852feb2c1491683bca39d89ee3d86e43e4f8fe9aecad2c403c9be70018c95a83"
+  },
+  "schema_version": "mea_rmc_memory_writer_build005_delivery_manifest_v1"
+}

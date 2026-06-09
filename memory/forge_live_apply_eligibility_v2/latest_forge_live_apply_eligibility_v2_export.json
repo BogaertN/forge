@@ -1,0 +1,27 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "export_only": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "shell_execution_authority": false
+  },
+  "blocking_reasons": [
+    "G09: No Patch 150+ live apply may be eligible until snapshot/shadow-restore evidence exists.",
+    "G10: No target-specific fresh sandbox pass is bound to this live-apply request.",
+    "G11: No target-specific rollback artifact is bound to this live-apply request.",
+    "G12: No explicit human live-apply approval token is present. This is correct for read-only Patch 150."
+  ],
+  "created_at": "2026-05-19T17:48:45",
+  "eligibility_status": "FORGE_LIVE_APPLY_ELIGIBILITY_V2_READY_NOT_ELIGIBLE",
+  "eligible_for_live_apply": false,
+  "gate_fail_count": 4,
+  "gate_pass_count": 8,
+  "gate_warn_count": 0,
+  "next_patch": "Patch 151 \u2014 Snapshot / Forensic Replay Plan",
+  "report_type": "FORGE_LIVE_APPLY_ELIGIBILITY_V2_EXPORT",
+  "schema_version": "forge_live_apply_eligibility_v2_patch150R",
+  "source_report_sha256": "61d87c80efe2f3e36a3ec00b3604364a0d930f4bb6ae8bd0ad5a4d84dc021bc0",
+  "status": "FORGE_LIVE_APPLY_ELIGIBILITY_V2_EXPORT_READY",
+  "target": "next"
+}

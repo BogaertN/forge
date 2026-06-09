@@ -1,0 +1,60 @@
+You are Forge's local LLM reviewing a sandbox-only revision candidate test result.
+
+Hard rules:
+- Do not ask for live writes.
+- Do not propose broad rewrites.
+- Decide whether this sandbox result approves the candidate or requires revision.
+- Output one exact line near the end:
+  RECOMMENDATION: APPROVE_SANDBOX_RESULT
+  or RECOMMENDATION: REVISE_CANDIDATE
+  or RECOMMENDATION: REVISE_SANDBOX_DEPENDENCY_PLAN
+
+Target: stack_linker_breather
+Sandbox status: GENERIC_REVISION_SANDBOX_TESTS_ISSUES
+Live import leak detected: False
+Compile return code: 0
+Test return code: 1
+
+Candidate diff preview:
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
+
+from core_breather.core_breather import CoreBreather
+from recursive_field_breather.field_breather import breathe_phase as field_breathe
+import time
+import json
+
+_core_breather_instance = CoreBreather()
+def core_breathe(phase=None):
+    return _core_breather_instance.breathe()
+
+def unified_breathe_cycle():
+    # simple combined breathing cycle
+    for phase in range(1, 10):  # Full 1-9 breathing
+        core_breathe(phase)
+        field_breathe(phase)
+        event = {
+            "timestamp": time.time(),
+            "phase": phase,
+            "stack": "core_and_field",
+            "status": "",
+        }
+
+
+Test stdout tail:
+
+
+Test stderr tail:
+Traceback (most recent call last):
+  File "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/stack_linker_breather/test_stack_linker_core.py", line 3, in <module>
+    from stack_linker_breather.stack_linker_core import unified_breathe_cycle
+  File "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/stack_linker_breather/stack_linker_core.py", line 6, in <module>
+    from recursive_field_breather.field_breather import breathe_phase as field_breathe
+ImportError: cannot import name 'breathe_phase' from 'recursive_field_breather.field_breather' (/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/recursive_field_breather/field_breather.py)
+
+
+Dependency actions:
+[{'requested_module': 'core_breather', 'chosen_dependency': {'kind': 'module_file', 'path': '/home/nic/aiweb/engines/core_stack_breather/core_breather.py', 'reason': 'bounded_rglob_module_file_match', 'requested_module': 'core_breather'}, 'install_result': {'strategy': 'copy_module_file_as_package', 'package_dir': '/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/core_breather', 'installed_paths': ['/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/core_breather/core_breather.py', '/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/core_breather/__init__.py']}}, {'requested_module': 'recursive_field_breather', 'chosen_dependency': {'kind': 'package_dir', 'path': '/home/nic/aiweb/engines/recursive_field_breather', 'reason': 'direct_engine_package_dir_match', 'requested_module': 'recursive_field_breather'}, 'install_result': {'strategy': 'copy_package_dir', 'package_dir': '/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/recursive_field_breather', 'installed_paths': ['/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/recursive_field_breather']}}]
+
+Give a short diagnosis and the required recommendation line.

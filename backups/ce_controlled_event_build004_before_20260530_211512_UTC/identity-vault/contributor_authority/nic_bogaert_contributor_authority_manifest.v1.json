@@ -1,0 +1,33 @@
+{
+  "authority_status": "internal_contribution_authority_active",
+  "authorization_basis": "owner_requested_local_identity_vault_contributor_record_and_contribution_ledger_foundation",
+  "canonical_name": "Nic Bogaert",
+  "disclosure_class": "private_identity_vault_only",
+  "initial_consent_scope": {
+    "capsule_candidate_reference_authorized": true,
+    "consent_event_id": "iv_consent_event_nic_bogaert_initial_internal_v1",
+    "consent_record_id": "iv_consent_nic_bogaert_contribution_internal_v1",
+    "ct_minting_authorized": false,
+    "economic_processing_authorized": false,
+    "internal_attribution_reference_authorized": true,
+    "investment_processing_authorized": false,
+    "local_identity_storage_authorized": true,
+    "meaning": "Nic authorizes a private local contributor identity binding and internal capsule-candidate reference only. Public display, portability, money processing, CT minting, and investment processing remain blocked.",
+    "portability_authorized": false,
+    "public_display_authorized": false,
+    "status": "active_limited_internal_consent"
+  },
+  "issued_at_utc": "2026-05-30T18:00:00Z",
+  "manifest_id": "iv_manifest_nic_bogaert_contribution_authority_v1",
+  "principal_id": "ivp_nic_bogaert_contribution_owner_v1",
+  "principal_type": "human_owner_builder",
+  "privacy_boundary": {
+    "forge_may_reference_only_opaque_principal_id_and_consent_hash": true,
+    "public_capsule_identity_disclosure_authorized": false,
+    "raw_private_identity_may_leave_identity_vault": false
+  },
+  "pseudonymous_alias_id": null,
+  "schema_version": "identity_vault_contributor_authority_manifest_v1",
+  "scope": "aiweb_contribution_economy",
+  "user_profile_reference": "nic_bogaert"
+}

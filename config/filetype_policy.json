@@ -1,0 +1,48 @@
+{
+  "_comment": "Controls what file types Forge may read. Exclusions override inclusions.",
+  "allowed_extensions": [
+    ".py", ".js", ".ts", ".jsx", ".tsx",
+    ".json", ".jsonl",
+    ".md", ".txt", ".rst",
+    ".sh", ".bash",
+    ".yaml", ".yml",
+    ".toml", ".ini", ".cfg",
+    ".html", ".css",
+    ".sql",
+    ".log",
+    ".csv",
+    ".xml",
+    ".dockerfile", "dockerfile",
+    ".gitignore", ".gitattributes",
+    "makefile", "makefile",
+    "requirements.txt",
+    "readme", "readme.md"
+  ],
+  "excluded_extensions": [
+    ".env",
+    ".key", ".pem", ".p12", ".pfx", ".crt", ".cer",
+    ".pyc", ".pyo",
+    ".so", ".dll", ".exe", ".bin",
+    ".zip", ".tar", ".gz", ".bz2", ".xz", ".7z",
+    ".jpg", ".jpeg", ".png", ".gif", ".bmp", ".ico", ".svg", ".webp",
+    ".mp3", ".mp4", ".wav", ".avi", ".mkv",
+    ".pdf", ".docx", ".xlsx", ".pptx",
+    ".db", ".sqlite", ".sqlite3",
+    ".pkl", ".pickle",
+    ".npz", ".npy",
+    ".whl", ".egg"
+  ],
+  "max_file_size_kb": 512,
+  "max_lines_per_read": 500,
+  "excluded_filenames": [
+    ".env",
+    ".env.local",
+    ".env.production",
+    ".env.development",
+    "secrets.json",
+    "credentials.json",
+    "token.json",
+    "service_account.json",
+    ".htpasswd"
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "checks": {
+    "all_dispatch_smoke_pass": true,
+    "all_expected_definitions_present": true,
+    "dependency_stub_used": [],
+    "missing_definitions": [],
+    "tool_registry_rmc_mentions": 0,
+    "tools_compile": true,
+    "tools_import": true
+  },
+  "definition_names": [
+    "list_allowed_folders",
+    "list_files",
+    "read_file",
+    "search_text",
+    "propose_command",
+    "analyze_command_output",
+    "run_safe_command",
+    "write_proposed_patch",
+    "rmc_phase_parse_preview",
+    "rmc_drift_check_preview",
+    "rmc_echo_validate_preview",
+    "rmc_pipeline_preview"
+  ],
+  "dispatch_smoke": {
+    "rmc_drift_check_preview": {
+      "ok": true,
+      "pass": true,
+      "read_only": true,
+      "summary": {
+        "keys": [
+          "function",
+          "ok",
+          "read_only",
+          "result",
+          "wrapper_version"
+        ],
+        "result_keys": [
+          "chi_t_required",
+          "circuit_breaker_open",
+          "correction_recommended",
+          "drift_detected",
+          "entropy",
+          "epsilon_s",
+          "events",
+          "max_severity",
+          "phase_deviation",
+          "projection_ready",
+          "recommended_action",
+          "semantic_distance",
+          "structural_distance",
+          "structure_status",
+          "timestamp",
+          "transition_validity",
+          "verdict"
+        ],
+        "verdict": "ALLOW"
+      }
+    },
+    "rmc_echo_validate_preview": {
+      "ok": true,
+      "pass": true,
+      "read_only": true,
+      "summary": {
+        "accepted": true,
+        "keys": [
+          "function",
+          "ok",
+          "read_only",
+          "result",
+          "wrapper_version"
+        ],
+        "result_keys": [
+          "accepted",
+          "note",
+          "score"
+        ],
+        "score": 0.9833333333333334
+      }
+    },
+    "rmc_phase_parse_preview": {
+      "ok": true,
+      "pass": true,
+      "read_only": true,
+      "summary": {
+        "keys": [
+          "function",
+          "ok",
+          "read_only",
+          "result",
+          "wrapper_version"
+        ],
+        "phase": "grace",
+        "phase_name": "Grace",
+        "phase_number": 6,
+        "result_keys": [
+          "confidence",
+          "cues",
+          "phase",
+          "phase_id",
+          "phase_name",
+          "phase_number",
+          "phase_path_hypothesis",
+          "phase_role",
+          "routing",
+          "secondary_phases",
+          "timestamp",
+          "warnings"
+        ]
+      }
+    },
+    "rmc_pipeline_preview": {
+      "ok": true,
+      "pass": true,
+      "read_only": true,
+      "summary": {
+        "accepted": true,
+        "echo_score": 0.9833333333333334,
+        "keys": [
+          "function",
+          "ok",
+          "read_only",
+          "result",
+          "wrapper_version"
+        ],
+        "phase": 6,
+        "phase_name": "Grace",
+        "result_keys": [
+          "accepted",
+          "drift_detected",
+          "drift_verdict",
+          "echo_accepted",
+          "echo_passed",
+          "echo_score",
+          "failed_record",
+          "input_text",
+          "manifest_id",
+          "memory_stored",
+          "metadata",
+          "modality",
+          "output",
+          "phase",
+          "phase_name",
+          "projection_status",
+          "timestamp"
+        ]
+      }
+    }
+  },
+  "errors": [],
+  "timestamp": "20260523_191835_UTC",
+  "tools_path": "/home/nic/forge/agents/forge/tools.py",
+  "verdict": "PASS"
+}

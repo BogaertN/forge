@@ -1,0 +1,147 @@
+{
+  "boundary": "verify repaired templates only; write reports only; no DB/template/profile/activation/RMC mutations",
+  "databases": {
+    "canonical": {
+      "error": null,
+      "exists": true,
+      "ok": true,
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/data/identity_vault.db",
+      "rows": {
+        "agent_profiles": 0,
+        "audit_logs": 0,
+        "feedback_logs": 0,
+        "session_state": 0,
+        "sqlite_sequence": 0,
+        "user_profiles": 0
+      },
+      "tables": [
+        "agent_profiles",
+        "audit_logs",
+        "feedback_logs",
+        "session_state",
+        "sqlite_sequence",
+        "user_profiles"
+      ]
+    },
+    "legacy": {
+      "error": null,
+      "exists": true,
+      "ok": true,
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/vault.db",
+      "rows": {
+        "feedback_logs": 0,
+        "profiles": 1,
+        "session_state": 1,
+        "sqlite_sequence": 0
+      },
+      "tables": [
+        "feedback_logs",
+        "profiles",
+        "session_state",
+        "sqlite_sequence"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "code": "IV_TEMPLATES_BLUEPRINT_VALID",
+      "level": "INFO",
+      "message": "Both repaired Identity Vault templates satisfy required operational identity structure."
+    },
+    {
+      "code": "IV_NODE_JSON_PARSE_OK",
+      "level": "INFO",
+      "message": "Both templates parse successfully through Node JSON.parse."
+    },
+    {
+      "code": "IV_NO_MUTATION_CHECK_FAILED",
+      "level": "FAIL",
+      "message": "One or more no-mutation checks failed."
+    },
+    {
+      "code": "IV_DATABASES_READONLY_OK",
+      "level": "INFO",
+      "message": "Canonical and legacy Identity Vault databases opened read-only for verification."
+    }
+  ],
+  "generated_at_utc": "2026-05-23T22:02:44Z",
+  "safety": {
+    "agent_identity_activation_performed": false,
+    "agent_template_sha_unchanged_during_verify": true,
+    "canonical_db_sha_unchanged": true,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "forge_tool_registry_modified": false,
+    "identity_vault_database_write_performed": false,
+    "identity_vault_template_write_performed": false,
+    "legacy_db_sha_unchanged": true,
+    "profiles_created": false,
+    "rmc_memory_write_performed": false,
+    "tool_registry_sha_unchanged": true,
+    "user_template_sha_unchanged_during_verify": true
+  },
+  "templates": {
+    "agent": {
+      "node_parse": {
+        "attempted": true,
+        "available": true,
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": "",
+        "stdout_tail": "NODE_JSON_PARSE_OK /home/nic/identity-vault/templates/agent-template.json\n"
+      },
+      "parsed": {
+        "error": null,
+        "exists": true,
+        "json_ok": true,
+        "path": "/home/nic/identity-vault/templates/agent-template.json",
+        "sha16": "2449b3a0f0c190bb"
+      },
+      "validation": {
+        "forbidden_token_hits": [],
+        "inactive_defaults_ok": true,
+        "indexed_columns_present": true,
+        "lookup_field_ok": true,
+        "ok": true,
+        "operational_missing": [],
+        "profile_schema_version_ok": true,
+        "required_fields_list_ok": true,
+        "root_missing": [],
+        "target_table_ok": true
+      }
+    },
+    "user": {
+      "node_parse": {
+        "attempted": true,
+        "available": true,
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": "",
+        "stdout_tail": "NODE_JSON_PARSE_OK /home/nic/identity-vault/templates/user-template.json\n"
+      },
+      "parsed": {
+        "error": null,
+        "exists": true,
+        "json_ok": true,
+        "path": "/home/nic/identity-vault/templates/user-template.json",
+        "sha16": "e02dd7a6f0d5b26d"
+      },
+      "validation": {
+        "forbidden_token_hits": [],
+        "inactive_defaults_ok": true,
+        "indexed_columns_present": true,
+        "lookup_field_ok": true,
+        "ok": true,
+        "operational_missing": [],
+        "profile_schema_version_ok": true,
+        "required_fields_list_ok": true,
+        "root_missing": [],
+        "target_table_ok": true
+      }
+    }
+  },
+  "timestamp": "20260523_220244_UTC",
+  "verdict": "FAIL"
+}

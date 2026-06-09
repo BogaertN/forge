@@ -1,0 +1,35 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "export_only": true,
+    "patch_apply_authority": false
+  },
+  "created_at": "2026-05-17T08:31:56",
+  "domain_counts": {
+    "AGENT_IDENTITY_AND_GOVERNANCE": 4,
+    "AUDIT_LEDGER_AND_PROVENANCE": 3,
+    "CHRISTPING_CORRECTION_LAYER": 2,
+    "DASHBOARD_AND_OBSERVABILITY": 5,
+    "EXTERNAL_BOUNDARY_AND_PLUGIN_TRUST": 3,
+    "FBSC_RPMC_SYMBOLIC_RUNTIME": 23,
+    "GENERAL_AIWEB_RUNTIME": 13,
+    "MEMORY_STATE_AND_SPC_AUTHORITY": 8,
+    "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL": 7
+  },
+  "recommended_next_patch": "Patch 132 \u2014 LLM Source-Grounded Patch Proposal",
+  "report_type": "ENGINE_SOURCE_LAW_EXPORT_V1",
+  "schema_version": "engine_source_law_export_v1_patch131",
+  "source_map_path": "/home/nic/forge/memory/engine_source_authority_v1/latest_engine_source_law_map_v1.json",
+  "source_map_sha256": "841710e052716d4be4c03c9599f0e4d55b4ac5670ef0075f7c473650748965bd",
+  "status": "ENGINE_SOURCE_AUTHORITY_EXPORT_READY",
+  "summary": {
+    "canonical_engines": 55,
+    "domain_count": 9,
+    "engine_file_writes": 0,
+    "engines_with_candidate_source_documents": 43,
+    "engines_with_source_authority_gaps": 12,
+    "llm_decision_authority": false,
+    "patch_apply_authority": false,
+    "source_candidate_files_seen": 240
+  }
+}

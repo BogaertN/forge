@@ -1,0 +1,92 @@
+# Engine Review Ledger — Patch 72
+
+This is a human review ledger only. It is not canonical authority and does not move, delete, quarantine, promote, or edit engine files.
+
+- Entries: **80**
+- Pending: **78**
+- Approved: **1**
+- Deferred: **1**
+- Rejected: **0**
+- Eligible candidates: **1**
+
+## Ledger Rows
+- **activity_log** — `PENDING_REVIEW` → `projects/recursive_lmm_grok1/engines/activity_log`; hold=False; eligible=False
+- **admin_override_console** — `PENDING_REVIEW` → `aiweb/engines/admin_override_console`; hold=False; eligible=False
+- **agent_reflection_engine** — `PENDING_REVIEW` → `aiweb/engines/agent_reflection_engine`; hold=False; eligible=False
+- **agents_stack** — `PENDING_REVIEW` → `aiweb/runtime_wrappers/agents_stack`; hold=False; eligible=False
+- **aiweb_os** — `PENDING_REVIEW` → `aiweb/runtime_wrappers/aiweb_os_v1`; hold=True; eligible=False
+- **aiweb_os_engine** — `PENDING_REVIEW` → `aiweb/engines/aiweb_os_engine`; hold=False; eligible=False
+- **ascii_interpreter_engine** — `PENDING_REVIEW` → `aiweb/engines/ascii_interpreter_engine`; hold=False; eligible=False
+- **athena** — `PENDING_REVIEW` → `agents/athena`; hold=False; eligible=False
+- **athena_engine** — `PENDING_REVIEW` → `aiweb/engines/athena_engine`; hold=False; eligible=False
+- **christping_listener** — `PENDING_REVIEW` → `aiweb/engines/christping_listener`; hold=False; eligible=False
+- **christping_validator_engine** — `PENDING_REVIEW` → `aiweb/engines/christping_validator_engine`; hold=False; eligible=False
+- **cold_archive_engine** — `DEFERRED` → `aiweb/engines/cold_archive_engine_frozen_v1`; hold=True; eligible=False
+- **collapse_prevention_engine** — `PENDING_REVIEW` → `aiweb/engines/collapse_prevention_engine`; hold=False; eligible=False
+- **compute_contribution_engine** — `PENDING_REVIEW` → `aiweb/engines/compute_contribution_engine`; hold=False; eligible=False
+- **confusion_checker** — `PENDING_REVIEW` → `projects/recursive_lmm_grok1/engines/confusion_checker`; hold=False; eligible=False
+- **contribution_dashboard_engine** — `PENDING_REVIEW` → `aiweb/engines/contribution_dashboard_engine`; hold=False; eligible=False
+- **contribution_ledger_stack** — `PENDING_REVIEW` → `aiweb/runtime_wrappers/contribution_ledger_stack`; hold=False; eligible=False
+- **control_panel_ui_engine** — `PENDING_REVIEW` → `aiweb/engines/control_panel_ui_engine_v1.02`; hold=False; eligible=False
+- **control_stack** — `PENDING_REVIEW` → `aiweb/runtime_wrappers/control_stack`; hold=False; eligible=False
+- **core_stack_breather** — `PENDING_REVIEW` → `aiweb/engines/core_stack_breather`; hold=False; eligible=False
+- **core_system_stack** — `PENDING_REVIEW` → `aiweb/runtime_wrappers/core_system_stack`; hold=False; eligible=False
+- **document_output_formatter** — `PENDING_REVIEW` → `aiweb/engines/document_output_formatter`; hold=False; eligible=False
+- **dream_state_engine** — `PENDING_REVIEW` → `aiweb/engines/dream_state_engine`; hold=False; eligible=False
+- **drift_analyzer_tool** — `PENDING_REVIEW` → `aiweb/engines/drift_analyzer_tool`; hold=False; eligible=False
+- **drift_arbitration_engine** — `PENDING_REVIEW` → `aiweb/engines/drift_arbitration_engine`; hold=True; eligible=False
+- **drift_signature_logger** — `PENDING_REVIEW` → `aiweb/engines/drift_signature_logger`; hold=False; eligible=False
+- **echo_trace_visualizer** — `PENDING_REVIEW` → `aiweb/engines/echo_trace_visualizer`; hold=False; eligible=False
+- **entropy_monitor_engine** — `PENDING_REVIEW` → `aiweb/engines/entropy_monitor_engine`; hold=False; eligible=False
+- **external_feed_listener** — `PENDING_REVIEW` → `aiweb/engines/external_feed_listener`; hold=False; eligible=False
+- **failsafe_manager** — `PENDING_REVIEW` → `aiweb/engines/failsafe_manager`; hold=False; eligible=False
+- **field_resonance_mapper** — `PENDING_REVIEW` → `aiweb/engines/field_resonance_mapper`; hold=False; eligible=False
+- **fluid_memory_engine** — `PENDING_REVIEW` → `aiweb/engines/fluid_memory_engine`; hold=False; eligible=False
+- **gilligan** — `PENDING_REVIEW` → `agents/gilligan`; hold=False; eligible=False
+- **gilligan_drift_correction_upgrade** — `PENDING_REVIEW` → `aiweb/engines/gilligan_drift_correction_upgrade`; hold=False; eligible=False
+- **glyph_engine** — `PENDING_REVIEW` → `aiweb/engines/glyph_engine`; hold=False; eligible=False
+- **glyph_ui_overlay** — `PENDING_REVIEW` → `aiweb/symbolic_layers/glyph_ui_overlay`; hold=False; eligible=False
+- **goal_injection_engine** — `PENDING_REVIEW` → `aiweb/engines/goal_injection_engine`; hold=False; eligible=False
+- **install_onboarding_engine** — `PENDING_REVIEW` → `aiweb/engines/install_onboarding_engine`; hold=False; eligible=False
+- **loop_resurrection_engine** — `PENDING_REVIEW` → `aiweb/engines/loop_resurrection_engine`; hold=False; eligible=False
+- **memory_stack_engine** — `PENDING_REVIEW` → `aiweb/engines/memory_stack_engine`; hold=True; eligible=False
+- **memory_stack_engine_breathing** — `PENDING_REVIEW` → `aiweb/engines/memory_stack_engine_breathing_v1`; hold=True; eligible=False
+- **memory_stack_stack** — `PENDING_REVIEW` → `aiweb/runtime_wrappers/memory_stack_stack`; hold=False; eligible=False
+- **naming_engine** — `PENDING_REVIEW` → `aiweb/engines/naming_engine`; hold=False; eligible=False
+- **neo** — `PENDING_REVIEW` → `agents/neo`; hold=False; eligible=False
+- **neo_engine** — `PENDING_REVIEW` → `aiweb/engines/neo_engine`; hold=False; eligible=False
+- **peer_communication_engine** — `PENDING_REVIEW` → `aiweb/engines/peer_communication_engine`; hold=False; eligible=False
+- **phase_engine** — `APPROVED` → `aiweb/engines/phase_engine`; hold=False; eligible=True
+- **plugin_engine** — `PENDING_REVIEW` → `aiweb/engines/plugin_engine`; hold=False; eligible=False
+- **project_brain** — `PENDING_REVIEW` → `projects/recursive_lmm_grok1/engines/project_brain`; hold=False; eligible=False
+- **project_memory** — `PENDING_REVIEW` → `projects/recursive_lmm_grok1/engines/project_memory`; hold=False; eligible=False
+- **protoforge** — `PENDING_REVIEW` → `aiweb/runtime_wrappers/protoforge_v1.04_db_enabled`; hold=False; eligible=False
+- **protoforge_dashboard_runtime** — `PENDING_REVIEW` → `runtime_wrappers/protoforge_dashboard_runtime_v2.0`; hold=True; eligible=False
+- **recursion_mapper** — `PENDING_REVIEW` → `aiweb/symbolic_layers/recursion_mapper`; hold=False; eligible=False
+- **recursive_agent_kernel** — `PENDING_REVIEW` → `aiweb/engines/recursive_agent_kernel`; hold=False; eligible=False
+- **recursive_field_breather** — `PENDING_REVIEW` → `aiweb/engines/recursive_field_breather`; hold=False; eligible=False
+- **recursive_field_engine** — `PENDING_REVIEW` → `aiweb/engines/recursive_field_engine`; hold=False; eligible=False
+- **recursive_field_stack** — `PENDING_REVIEW` → `aiweb/runtime_wrappers/recursive_field_stack`; hold=False; eligible=False
+- **recursive_verification_engine** — `PENDING_REVIEW` → `engines/recursive_verification_engine`; hold=False; eligible=False
+- **resonance_charge_meter** — `PENDING_REVIEW` → `aiweb/engines/resonance_charge_meter`; hold=False; eligible=False
+- **resonance_display** — `PENDING_REVIEW` → `aiweb/symbolic_layers/resonance_display`; hold=False; eligible=False
+- **resonance_visualizer_engine** — `PENDING_REVIEW` → `aiweb/engines/resonance_visualizer_engine`; hold=False; eligible=False
+- **resurrection_planner** — `PENDING_REVIEW` → `aiweb/engines/resurrection_planner`; hold=False; eligible=False
+- **revisit_previous_tasks** — `PENDING_REVIEW` → `projects/recursive_lmm_grok1/engines/revisit_previous_tasks`; hold=False; eligible=False
+- **saved_ideas** — `PENDING_REVIEW` → `projects/recursive_lmm_grok1/engines/saved_ideas`; hold=True; eligible=False
+- **seed_manager** — `PENDING_REVIEW` → `aiweb/engines/seed_manager`; hold=False; eligible=False
+- **spc_memory_migrator** — `PENDING_REVIEW` → `aiweb/engines/spc_memory_migrator`; hold=False; eligible=False
+- **stack_breather_phase2** — `PENDING_REVIEW` → `aiweb/runtime_wrappers/stack_breather_phase2`; hold=False; eligible=False
+- **stack_linker_breather** — `PENDING_REVIEW` → `aiweb/engines/stack_linker_breather`; hold=False; eligible=False
+- **step_counter** — `PENDING_REVIEW` → `projects/recursive_lmm_grok1/engines/step_counter_frozen_v1`; hold=True; eligible=False
+- **symbolic_capacitor_engine** — `PENDING_REVIEW` → `aiweb/engines/symbolic_capacitor_engine`; hold=False; eligible=False
+- **symbolic_cognition_stack** — `PENDING_REVIEW` → `aiweb/runtime_wrappers/symbolic_cognition_stack`; hold=False; eligible=False
+- **symbolic_drift_visualizer** — `PENDING_REVIEW` → `aiweb/engines/symbolic_drift_visualizer`; hold=False; eligible=False
+- **symbolic_feedback_loop_engine** — `PENDING_REVIEW` → `aiweb/engines/symbolic_feedback_loop_engine`; hold=False; eligible=False
+- **symbolic_glyph_engine** — `PENDING_REVIEW` → `aiweb/engines/symbolic_glyph_engine`; hold=False; eligible=False
+- **symbolic_layers_stack** — `PENDING_REVIEW` → `aiweb/runtime_wrappers/symbolic_layers_stack`; hold=False; eligible=False
+- **symbolic_policy_engine** — `PENDING_REVIEW` → `aiweb/engines/symbolic_policy_engine`; hold=False; eligible=False
+- **system_log_engine** — `PENDING_REVIEW` → `aiweb/engines/system_log_engine`; hold=False; eligible=False
+- **tier_enforcer** — `PENDING_REVIEW` → `aiweb/engines/tier_enforcer`; hold=False; eligible=False
+- **tone_engine** — `PENDING_REVIEW` → `aiweb/engines/tone_engine`; hold=False; eligible=False
+- **trust_guard** — `PENDING_REVIEW` → `projects/recursive_lmm_grok1/engines/trust_guard`; hold=False; eligible=False

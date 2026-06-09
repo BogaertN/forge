@@ -1,0 +1,71 @@
+FORGE DIAGNOSTIC PROPOSAL
+══════════════════════════════════════════════════════════════════
+Title           : Verify Ollama is installed and check for any version-specific issues.
+Status          : REFUSED
+Timestamp       : 2026-05-08T21:09:56
+Session ID      : forge_2026_05_08_210818
+Forge Level     : 0.6 — Diagnostic Proposal Mode
+Proposal File   : /home/nic/forge/proposals/2026-05-08_210956_REFUSED_ollama_version.txt
+══════════════════════════════════════════════════════════════════
+
+USER QUESTION
+─────────────
+What commands should I run to check why Ollama isn't using the GPU?
+
+
+PROPOSED COMMAND
+────────────────
+  ollama version
+
+
+PURPOSE
+───────
+Verify Ollama is installed and check for any version-specific issues.
+
+
+WHY IT IS REFUSED
+─────────────────
+This command only retrieves version information without altering system state.
+
+
+RISK LEVEL
+──────────
+LOW
+
+
+VALIDATION CHECK
+────────────────
+REFUSED — Command does not match any Level 0.6 allowed diagnostic pattern. Allowed examples: pwd, ls, git status, grep, find -maxdepth, cat <file>, df -h, free -h, nvidia-smi, systemctl status <service>.
+
+Blocked operators checked : &&  ;  |  $()  >  >>  ` (checked)
+Sensitive paths checked   : .ssh  .gnupg  credentials  secrets  (checked)
+Composition check         : single command only, no chaining
+
+
+APPROVED PATHS INVOLVED
+───────────────────────
+  (no approved paths explicitly referenced)
+
+
+EXPECTED OUTPUT
+───────────────
+Displays Ollama version and build information.
+
+
+WHAT COULD GO WRONG
+───────────────────
+May not show detailed GPU usage metrics directly.
+
+
+══════════════════════════════════════════════════════════════════
+MANUAL INSTRUCTION
+──────────────────
+THIS COMMAND WAS REFUSED BY FORGE LEVEL 0.6 SAFETY RULES.
+DO NOT RUN THIS COMMAND.
+
+Consult Forge for a safe inspection alternative.
+
+Forge refused this proposal to protect your system.
+The refusal has been logged to the audit trail.
+══════════════════════════════════════════════════════════════════
+Audit entry hash : 7fb1e538d579904b

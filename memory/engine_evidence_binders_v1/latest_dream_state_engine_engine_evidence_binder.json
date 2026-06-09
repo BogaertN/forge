@@ -1,0 +1,154 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/dream_state_engine",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/dream_state_engine",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "dream_state_engine",
+  "evidence_id": "EEB-250da52af3cef833",
+  "file_count": 4,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "26e7ede2b0e5498758db4b709a2a623303c56a1eb035cefdfb4a043029bda744",
+      "excerpt_start": "{\n  \"engine\": \"Dream State Engine\",\n  \"version\": \"v1\",\n  \"description\": \"Simulates drift-phase symbolic recursion dream events during instability.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Dream",
+        "State",
+        "Engine",
+        "version",
+        "description",
+        "Simulates",
+        "drift",
+        "phase",
+        "symbolic",
+        "recursion",
+        "dream",
+        "events",
+        "during",
+        "instability"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/dream_state_engine/dream_manifest.json",
+      "relative_to_candidate": "dream_manifest.json",
+      "sha256": "26e7ede2b0e5498758db4b709a2a623303c56a1eb035cefdfb4a043029bda744",
+      "size_bytes": 150,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "f07c26f2b6ff89ceaa03c91880cc870505e4a0bde65b151e9050776d7a8a9358",
+      "excerpt_start": "from dream_core import simulate_dream_state\n\ndef test_dream_generation():\n    try:\n        result = simulate_dream_state()\n        assert \"drift_intensity\" in result\n        assert \"dream_signature\" in result\n        print(\"✅ Test Passed: Dream state event recorded successfully.\")\n    except Exception as e:\n        print(f\"❌ Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_dream_generation()\n",
+      "functions_sample": [
+        "test_dream_generation"
+      ],
+      "imports_sample": [
+        "from dream_core import simulate_dream_state"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/dream_state_engine/test_dream.py",
+      "relative_to_candidate": "test_dream.py",
+      "sha256": "f07c26f2b6ff89ceaa03c91880cc870505e4a0bde65b151e9050776d7a8a9358",
+      "size_bytes": 406,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "691435ed6ca1593170ceae6ce3a033414034ca7002d7b7e9c9794f95b498735d",
+      "excerpt_start": "# Dream State Engine\n\nSimulates symbolic recursion dream states during periods of drift and instability.\n\nLogs dream events for potential cold archive transition, resurrection triggers, or symbolic repair.\n",
+      "functions_sample": [
+        "Dream",
+        "State",
+        "Engine",
+        "Simulates",
+        "symbolic",
+        "recursion",
+        "dream",
+        "states",
+        "during",
+        "periods",
+        "drift",
+        "and",
+        "instability",
+        "Logs",
+        "events",
+        "for",
+        "potential",
+        "cold",
+        "archive",
+        "transition",
+        "resurrection",
+        "triggers",
+        "repair"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/dream_state_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "691435ed6ca1593170ceae6ce3a033414034ca7002d7b7e9c9794f95b498735d",
+      "size_bytes": 206,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "93261746084bbd124ff674b45f89139ff0537232f08cd2b7fa07ac08163cc0b7",
+      "excerpt_start": "import json\nimport time\nimport random\n\nLOG_FILE = \"dream_log.jsonl\"\n\ndef simulate_dream_state():\n    \"\"\"Simulates a symbolic drift-phase 'dream' event during unstable recursion.\"\"\"\n    drift_intensity = random.choice([\"low\", \"medium\", \"high\"])\n    dream_signature = f\"dream-{random.randint(1000,9999)}\"\n\n    dream_event = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"drift_intensity\": drift_intensity,\n        \"dream_signature\": dream_signature\n    }\n\n    try:\n        with open(LOG_FILE, \"a\") as f:\n            f.write(json.dumps(dream_event) + \"\\n\")\n        print(f\"✔️ Dream state event recorded: {dream_event}\")\n    except Exception as e:\n        print(f\"[!] Failed to record dream state event: {e}\")\n\n    return dream_event\n",
+      "functions_sample": [
+        "simulate_dream_state"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time",
+        "import random"
+      ],
+      "line_count": 26,
+      "path": "/home/nic/aiweb/engines/dream_state_engine/dream_core.py",
+      "relative_to_candidate": "dream_core.py",
+      "sha256": "93261746084bbd124ff674b45f89139ff0537232f08cd2b7fa07ac08163cc0b7",
+      "size_bytes": 771,
+      "suffix": ".py"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "test_dream_generation",
+    "simulate_dream_state"
+  ],
+  "warnings": []
+}

@@ -1,0 +1,36 @@
+{
+  "patch": "64",
+  "report_name": "test_run",
+  "source": "smoke",
+  "status": "PASS",
+  "run_type": "python_py_compile",
+  "target": "/home/nic/forge/test_runner_smoke/patch64_smoke_compile.py",
+  "target_sha256_16": "29db5b66825003be",
+  "forge_owned_target": true,
+  "argv": [
+    "/home/nic/forge/.venv/bin/python",
+    "-m",
+    "py_compile",
+    "/home/nic/forge/test_runner_smoke/patch64_smoke_compile.py"
+  ],
+  "shell": false,
+  "cwd": "/home/nic/forge/test_runner_smoke",
+  "timeout_seconds": 45,
+  "timed_out": false,
+  "exit_code": 0,
+  "started_at": "2026-05-12T19:12:21",
+  "ended_at": "2026-05-12T19:12:21",
+  "duration_seconds": 0.023,
+  "stdout": "",
+  "stderr": "",
+  "combined_output": "",
+  "policy": {
+    "no_shell": true,
+    "explicit_file_only": true,
+    "no_install_commands": true,
+    "no_network_commands": true,
+    "no_model_generated_command_execution": true
+  },
+  "report_path": "/home/nic/forge/memory/test_run_reports/2026-05-12_191221_test_run.json",
+  "smoke_target": "/home/nic/forge/test_runner_smoke/patch64_smoke_compile.py"
+}

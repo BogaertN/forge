@@ -1,0 +1,19 @@
+{
+  "authority": {
+    "live_self_write_authority": false,
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T00:02:53",
+  "next_commands": [
+    "forge-self-update-export",
+    "forge-roadmap-status",
+    "Install Patch 121 when ready"
+  ],
+  "next_phase": "FORGE_SELF_SNAPSHOT_GATE",
+  "plain_english": "The Forge self-update proposal lane exists. The next safe move is requiring a fresh self-snapshot before any self-update can advance.",
+  "recommended_next_patch": "Patch 121 \u2014 Forge Self-Snapshot Gate",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "schema_version": "forge_next_status_v1_patch120",
+  "status": "NEXT_PATCH_REQUIRED"
+}

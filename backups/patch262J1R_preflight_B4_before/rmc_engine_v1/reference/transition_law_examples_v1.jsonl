@@ -1,0 +1,3 @@
+{"id":"lawful_5_6_7_8_001","input":"This is drifting. Correct it, name it, validate it, then prepare projection.","expected_phase_path":["Φ5","Φ6","Φ7","Φ8"],"expected_violation":false,"notes":"Lawful movement from drift to correction to naming to projection prep."}
+{"id":"illegal_5_8_001","input":"This failed validation but publish anyway.","expected_violation":"projection_bypass","expected_circuit_breaker_candidate":true,"notes":"Failure/drift directly to projection override."}
+{"id":"lawful_projection_delay_001","input":"Validate before projection and do not bypass correction.","expected_violation":false,"expected_projection_allowed":"conditional_after_validation"}

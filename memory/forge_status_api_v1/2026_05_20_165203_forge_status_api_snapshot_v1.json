@@ -1,0 +1,184 @@
+{
+  "api_mode": "READ_ONLY_FILE_BACKED_CONTRACT_NO_SERVER",
+  "audit": {
+    "chain_breaks": 0,
+    "entries_checked": 2500,
+    "exists": true,
+    "latest_entry_hash": "2e4f64e6683f9d3d"
+  },
+  "authority": {
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ledger_mutation": false,
+    "network_opened": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "server_started": false,
+    "shell_execution_authority": false
+  },
+  "build_phase_gate": {
+    "gate_fail_count": 0,
+    "gate_pass_count": 8,
+    "gate_warn_count": 0,
+    "status": "FORGE_BUILD_PHASE_GATE_READY"
+  },
+  "build_sequence": {
+    "blocked_count": 0,
+    "current_phase": "S19O \u2014 Runtime Live Build Human Approval Token Entry Gate",
+    "deferred_count": 2,
+    "latest_sequence_path": "/home/nic/forge/memory/forge_build_sequence_v1/latest_forge_build_sequence_v1.json",
+    "next_patch": "Patch 170 \u2014 Runtime Live Build Approval Token Validation / Final Execution Preflight",
+    "status": "FORGE_BUILD_SEQUENCE_READY"
+  },
+  "canonical_engine_lockfile": {
+    "canonical_authority": true,
+    "excluded": 26,
+    "exists": true,
+    "included": 54,
+    "path": "/home/nic/forge/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+    "sha256": "379b6ef9852ce288b2b3551ba89aa809adac495312e62602edf5ac6fb9a3b604"
+  },
+  "created_at": "2026-05-20T16:52:03",
+  "dashboard_roadmap_panel": {
+    "latest_panel_path": "/home/nic/forge/memory/forge_dashboard_roadmap_panel_v1/latest_forge_dashboard_roadmap_panel_v1.json",
+    "panel_count": 4,
+    "status": "FORGE_DASHBOARD_ROADMAP_PANEL_READY"
+  },
+  "endpoints": {
+    "/audit": "Audit-tail continuity status.",
+    "/disposition": "Deferred/excluded engine disposition summary.",
+    "/engines": "Canonical engine lockfile summary and SHA.",
+    "/impact": "Latest patch impact map summary.",
+    "/relationships": "Latest canonical relationship map summary.",
+    "/roadmap": "Current phase and recommended next patch.",
+    "/status": "Complete read-only Forge status snapshot.",
+    "/tests": "Latest canonical safe-test run summary."
+  },
+  "latest_disposition": {
+    "path": "/home/nic/forge/memory/engine_disposition_v1/latest_engine_disposition_report_v1.json",
+    "status": "ENGINE_DISPOSITION_REPORT_READY",
+    "summary": {
+      "approved_hold_excluded": 2,
+      "by_bucket": {
+        "agent_identity_deferred": 3,
+        "approved_hold_family_excluded": 2,
+        "authority_or_external_control_deferred": 3,
+        "deferred_hold_family": 6,
+        "general_deferred_review": 3,
+        "memory_archive_or_state_deferred": 2,
+        "runtime_wrapper_or_stack_deferred": 7
+      },
+      "by_review_status": {
+        "APPROVED": 2,
+        "DEFERRED": 24
+      },
+      "deferred_total": 24,
+      "excluded_total": 26,
+      "safe_to_delete_now": 0,
+      "safe_to_promote_now": 0,
+      "safe_to_quarantine_now": 0
+    }
+  },
+  "latest_master_status": {
+    "path": "/home/nic/forge/memory/forge_master_status_v1/latest_forge_master_status_report_v1.json",
+    "status": "FORGE_MASTER_STATUS_READY"
+  },
+  "latest_patch_impact": {
+    "path": "/home/nic/forge/memory/patch_impact_v1/latest_patch_impact_map_v1.json",
+    "status": "PATCH_IMPACT_MAP_READY",
+    "summary": {
+      "high_risk": 0,
+      "low_risk": 37,
+      "matches": 54,
+      "medium_risk": 17,
+      "no_test_result": 5,
+      "targets_requested": "all",
+      "test_issues": 0
+    }
+  },
+  "latest_relationship_map": {
+    "path": "/home/nic/forge/memory/canonical_engine_relationships_v1/latest_canonical_engine_relationship_map_v1.json",
+    "status": "CANONICAL_ENGINE_RELATIONSHIP_MAP_READY",
+    "summary": {
+      "canonical_engines": 54,
+      "engines_with_test_issues": 0,
+      "engines_without_test_result": 5,
+      "high_risk_neighbors": 0,
+      "medium_risk_neighbors": 5,
+      "relationship_rows": 54,
+      "total_detected_edges": 86
+    }
+  },
+  "latest_self_sandbox": {
+    "path": "/home/nic/forge/memory/forge_self_sandboxes_v1/latest_forge_self_sandbox_report_v1.json",
+    "status": "FORGE_SELF_SANDBOX_APPLIED_AND_CHECKED"
+  },
+  "latest_self_snapshot": {
+    "path": null,
+    "status": null
+  },
+  "latest_test_run": {
+    "path": "/home/nic/forge/memory/canonical_engine_test_runs_v1/latest_canonical_engine_test_run_report_v1.json",
+    "status": "CANONICAL_TEST_RUN_COMPLETED_ALL_PASS",
+    "summary": {
+      "blocked": 0,
+      "error": 0,
+      "fail": 0,
+      "pass": 67,
+      "targets": 67,
+      "timeout": 0
+    }
+  },
+  "ledger_summary": {
+    "approved": 56,
+    "deferred": 24,
+    "future_lockfile_eligible": 54,
+    "pending": 0,
+    "rejected": 0,
+    "total": 80
+  },
+  "next_commands": [
+    "forge-runtime-live-approval-plan",
+    "forge-runtime-live-approval-token",
+    "forge-runtime-live-approval-show gates",
+    "forge-runtime-live-approval-export",
+    "forge-dashboard-roadmap-build",
+    "forge-status-api-build",
+    "forge-dashboard-build",
+    "Install Patch 164 when ready"
+  ],
+  "plain_english": "Read-only local status API snapshot. This writes Forge-owned status JSON only; it does not start a server, open a port, mutate project files, run shell commands, or apply patches.",
+  "recommended_next_patch": "Patch 170 \u2014 Runtime Live Build Approval Token Validation / Final Execution Preflight",
+  "report_type": "FORGE_STATUS_API_SNAPSHOT_V1",
+  "schema_version": "forge_status_api_snapshot_v1_patch147",
+  "status": "FORGE_STATUS_API_SNAPSHOT_READY",
+  "summary": {
+    "audit_chain_breaks_tail": 0,
+    "build_sequence_status": "FORGE_BUILD_SEQUENCE_READY",
+    "canonical_excluded": 26,
+    "canonical_included": 54,
+    "canonical_lockfile_exists": true,
+    "dashboard_roadmap_panel_status": "FORGE_DASHBOARD_ROADMAP_PANEL_READY",
+    "expected_commands": 652,
+    "latest_impact_high_risk": 0,
+    "latest_impact_medium_risk": 17,
+    "latest_impact_status": "PATCH_IMPACT_MAP_READY",
+    "latest_test_fail": 0,
+    "latest_test_status": "CANONICAL_TEST_RUN_COMPLETED_ALL_PASS",
+    "ledger_approved": 56,
+    "ledger_deferred": 24,
+    "ledger_pending": 0,
+    "ledger_total": 80,
+    "recommended_next_patch": "Patch 170 \u2014 Runtime Live Build Approval Token Validation / Final Execution Preflight",
+    "tools": 588,
+    "trust_level": 5.0
+  },
+  "tool_state": {
+    "expected_command_count": 652,
+    "registry_path": "/home/nic/forge/config/tool_registry.json",
+    "registry_sha256": "99abfe021d7270ec7c5c3e5eeff31d0b6b07d74a9ddf3d199cd64ff851fb8ad5",
+    "tool_count": 588,
+    "trust_level": 5.0
+  }
+}

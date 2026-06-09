@@ -1,0 +1,341 @@
+You are Forge's local repair proposal LLM. You are not allowed to edit files. You must use only the evidence packet below. Do not invent source authority. Your job is to propose the smallest safe repair plan for the probed target. Return structured JSON only with these keys: diagnosis, root_cause, minimal_repair_strategy, proposed_file_changes, files_to_inspect_before_apply, tests_to_run_after_change, rollback_plan, risk_level, uncertainties, evidence_used, human_approval_questions, forbidden_actions. For proposed_file_changes, include path, reason, exact_region, and proposed_edit_summary. Do not claim that you applied the fix. Do not propose broad rewrites if a tiny syntax/import repair is enough.
+
+EVIDENCE_PACKET:
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "ledger_mutation_authority": false,
+    "llm_call_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "shell_execution_authority": false,
+    "writes_forge_memory_only": true
+  },
+  "code_context_snippets": [
+    {
+      "exists": true,
+      "line_end": 15,
+      "line_start": 1,
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py",
+      "scope_ok": true,
+      "sha256": "2297b612ec1a6c6edb63a9959dea57d7b22d9d35472f9741bd671b261b0b0951",
+      "text": "0001: # test_stack_linker_core.py\n0002: \n0003: from stack_linker_breather.stack_linker_core import unified_breathe_cycle\n0004: \n0005: if __name__ == \"__main__\":\n0006:     unified_breathe_cycle()\n0007: \n0008: \n0009: def test_unified_breathe_cycle():\n0010:     print(\"✅ Unified Breather Test Starting...\")\n0011:     try:\n0012:         unified_breathe_cycle()\n0013:     except KeyboardInterrupt:\n0014:         print(\"✅ Unified Breather Test Completed (Manual Stop)\")\n0015: "
+    },
+    {
+      "exists": true,
+      "line_end": 19,
+      "line_start": 7,
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py",
+      "scope_ok": true,
+      "sha256": "f34d77a31cdd9a5cc551aa922626eec469c665c2f85e7cd4d06fe6866721736f",
+      "text": "0007: import time\n0008: import json\n0009: \n0010: def unified_breathe_cycle():\n0011:     # simple combined breathing cycle\n0012:     for phase in range(1, 10):  # Full 1-9 breathing\n0013:         core_breathe(phase)\n0014:         field_breathe(phase)\n0015:         event = {\n0016:             \"timestamp\": time.time(),\n0017:             \"phase\": phase,\n0018:             \"stack\": \"core_and_field\",\n0019:             \"status\": \""
+    }
+  ],
+  "created_at": "2026-05-17T09:27:44",
+  "error_locations": [
+    {
+      "line": 3,
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+    },
+    {
+      "line": 19,
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py"
+    }
+  ],
+  "import_probe": {
+    "argv": [
+      "/home/nic/forge/.venv/bin/python3",
+      "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+    ],
+    "authority": {
+      "engine_file_write_authority": false,
+      "ledger_mutation_authority": false,
+      "patch_apply_authority": false,
+      "project_file_write_authority": false,
+      "read_only": true,
+      "subprocess_shell_false": true,
+      "writes_forge_memory_only": true
+    },
+    "command_kind": "engine_test_file",
+    "created_at": "2026-05-17T09:11:39",
+    "cwd": "/home/nic/aiweb/engines/stack_linker_breather",
+    "duration_seconds": 0.011,
+    "env_additions": {
+      "PYTHONPATH_prefix": "/home/nic/aiweb/engines/stack_linker_breather:/home/nic/aiweb/engines:/home/nic/aiweb"
+    },
+    "plain_english": "Generic import/path probe result. A passing probe means this target can run under the scoped diagnostic environment. A failing probe means the target needs either test-runner path adjustment or file/package repair review.",
+    "probe_passed": false,
+    "problems": [],
+    "recommendation": "Do not alter live files yet; inspect package structure, imports, and test assumptions through a separate repair proposal.",
+    "report_type": "IMPORT_PROBE_RUN_V1",
+    "resolved_target": {
+      "engine_name": "stack_linker_breather",
+      "raw": "stack_linker_breather",
+      "scope_ok": true,
+      "target": "stack_linker_breather",
+      "target_exists": true,
+      "target_kind": "canonical_or_engine_name",
+      "target_path": "/home/nic/aiweb/engines/stack_linker_breather",
+      "test_candidates": [
+        "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+      ]
+    },
+    "returncode": 1,
+    "schema_version": "import_probe_run_v1_patch134",
+    "status": "IMPORT_PROBE_FAIL",
+    "stderr_tail": "Traceback (most recent call last):\n  File \"/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py\", line 3, in <module>\n    from stack_linker_breather.stack_linker_core import unified_breathe_cycle\n  File \"/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py\", line 19\n    \"status\": \"\n              ^\nSyntaxError: unterminated string literal (detected at line 19)\n",
+    "stdout_tail": "",
+    "target": "stack_linker_breather",
+    "target_engine": "stack_linker_breather"
+  },
+  "inferred_issue": "PYTHON_SYNTAX_ERROR",
+  "latest_test_report_summary": {},
+  "next_commands": [
+    "generic-repair-llm latest CONFIRM_CALL_GENERIC_REPAIR_LLM",
+    "generic-repair-show llm",
+    "generic-repair-export"
+  ],
+  "patch_impact_row": {
+    "authority": {
+      "engine_file_write_authority": false,
+      "ledger_mutation": false,
+      "patch_apply_authority": false,
+      "project_file_write_authority": false,
+      "read_only_impact_analysis": true,
+      "shell_execution_authority": false
+    },
+    "canonical_path": "aiweb/engines/stack_linker_breather",
+    "cautions": [],
+    "decision_confidence": "medium",
+    "engine_base": "stack_linker_breather",
+    "latest_failures": [
+      {
+        "problem": null,
+        "status": "FAIL",
+        "stderr_tail": "Traceback (most recent call last):\n  File \"/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py\", line 3, in <module>\n    from stack_linker_breather.stack_linker_core import unified_breathe_cycle\nModuleNotFoundError: No module named 'stack_linker_breather'\n",
+        "test_path": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+      }
+    ],
+    "recommended_next_action": "require_patch_impact_review_before_patch_proposal",
+    "related_files": [
+      {
+        "canonical_path": "aiweb/engines/recursive_field_breather",
+        "confidence": "strong",
+        "engine_base": "recursive_field_breather",
+        "reason": "python_import_reference"
+      },
+      {
+        "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+        "confidence": "medium",
+        "engine_base": "protoforge",
+        "reason": "source_text_reference"
+      }
+    ],
+    "relationship_count": 2,
+    "required_human_checks": [
+      "compare_multiple_active_variants"
+    ],
+    "resolved_path_guess": "/home/nic/aiweb/engines/stack_linker_breather",
+    "review_note_excerpt": "Patch107 batch evidence commit from Patch106 queue decision. Decision=APPROVED_FOR_FUTURE_COMMIT; evidence_id=EEB-0b4dcdaedc7646d1; batch_receipt_sha=0e283fcbb829c558e9a765472da911a4940d9494a567df4b638d99a0fbc73546; queue_decision_sha=73aa55228e826f49d3fbc7d6efa8dc44431f4a8a3c844200150e96c6c0840302; approval_helper_sha=a3e718ee9aebba600e1de97139cbaf14c03acee7c0f833ed625909d961159dcc; binder_sha=fbf961eeb74cb7d862124b12a969d56a883db12c82d90374a32d8eb6024c1e01; crosscheck_sha=2209c1362c5fd6c8fa2272e673403ec7d06a793df65d6f691c4ba73afb03d59a .",
+    "review_status": "APPROVED",
+    "risk_level": "MEDIUM",
+    "risk_reasons": [
+      "latest safe-test report has issues",
+      "multiple relationship neighbors",
+      "required human checks present"
+    ],
+    "risk_score": 65,
+    "rollback_needs": [
+      "snapshot_or_file_backup_before_live_patch",
+      "current_sha_readback_before_apply",
+      "post_write_disk_verification"
+    ],
+    "source_candidate_sha256": "a5ee63eda6aa8d0466a1eabb4799f0f16bc59dab452c95269288dbcba1ac11d6",
+    "test_paths": [
+      "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+    ],
+    "test_status": "ISSUES",
+    "variant_count": 2
+  },
+  "plain_english": "Generic repair evidence packet compiled from the latest import probe, code snippets, source-authority candidates, impact/risk map, relationship map, and test run data. This does not edit files or apply patches.",
+  "problems": [],
+  "recommendation": "Call the local LLM with the confirm token to draft a repair proposal from this compiled evidence. Do not apply any repair yet.",
+  "relationship_row": {
+    "canonical_path": "aiweb/engines/stack_linker_breather",
+    "engine_base": "stack_linker_breather",
+    "import_modules": [
+      "core_breather",
+      "recursive_field_breather",
+      "stack_linker_breather"
+    ],
+    "metadata_files": [
+      "README.md",
+      "engine_manifest.json"
+    ],
+    "neighbors": [
+      {
+        "canonical_path": "aiweb/engines/recursive_field_breather",
+        "confidence": "strong",
+        "engine_base": "recursive_field_breather",
+        "reason": "python_import_reference"
+      },
+      {
+        "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+        "confidence": "medium",
+        "engine_base": "protoforge",
+        "reason": "source_text_reference"
+      }
+    ],
+    "path_exists": true,
+    "python_files": [
+      "stack_linker_core.py",
+      "test_stack_linker_core.py"
+    ],
+    "relationship_count": 2,
+    "resolved_path": "/home/nic/aiweb/engines/stack_linker_breather",
+    "risk_level": "MEDIUM",
+    "risk_reason": "test_status=ISSUES; relationship_count=2",
+    "test_counts": {
+      "blocked": 0,
+      "error": 0,
+      "fail": 1,
+      "pass": 0,
+      "statuses": [
+        "FAIL"
+      ],
+      "summary": "ISSUES",
+      "timeout": 0
+    },
+    "test_status": "ISSUES",
+    "tokens": [
+      "breather",
+      "linker"
+    ]
+  },
+  "report_type": "GENERIC_REPAIR_EVIDENCE_PACKET_V1",
+  "schema_version": "generic_repair_evidence_packet_v1_patch135",
+  "source_authority_row": {
+    "authority_claimed": false,
+    "candidate_source_documents": [
+      {
+        "authority_claimed": false,
+        "candidate_only": true,
+        "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+        "name": "2026-05-10_190136_ingest_corpus_0007.md",
+        "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+        "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+        "size_bytes": 250,
+        "suffix": ".md"
+      },
+      {
+        "authority_claimed": false,
+        "candidate_only": true,
+        "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+        "name": "2026-05-10_191056_ingest_corpus_0015.json",
+        "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+        "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+        "size_bytes": 4566,
+        "suffix": ".json"
+      },
+      {
+        "authority_claimed": false,
+        "candidate_only": true,
+        "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+        "name": "2026-05-10_184836_ingest_corpus_0001.md",
+        "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+        "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+        "size_bytes": 303,
+        "suffix": ".md"
+      },
+      {
+        "authority_claimed": false,
+        "candidate_only": true,
+        "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+        "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+        "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+        "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+        "size_bytes": 194115,
+        "suffix": ".json"
+      },
+      {
+        "authority_claimed": false,
+        "candidate_only": true,
+        "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+        "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+        "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+        "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+        "size_bytes": 5441,
+        "suffix": ".json"
+      },
+      {
+        "authority_claimed": false,
+        "candidate_only": true,
+        "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+        "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+        "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+        "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+        "size_bytes": 127483,
+        "suffix": ".json"
+      }
+    ],
+    "canonical_path": "aiweb/engines/stack_linker_breather",
+    "engine_base": "stack_linker_breather",
+    "next_required_action": "human_confirm_source_binding",
+    "required_source_domains": [
+      "MEMORY_STATE_AND_SPC_AUTHORITY",
+      "FBSC_RPMC_SYMBOLIC_RUNTIME"
+    ],
+    "review_status": "APPROVED",
+    "risk_level": "MEDIUM",
+    "risk_score": 65,
+    "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+    "test_status": "NO_TEST_RESULT"
+  },
+  "source_document_samples": [
+    {
+      "metadata": {
+        "authority_claimed": false,
+        "candidate_only": true,
+        "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+        "name": "2026-05-10_190136_ingest_corpus_0007.md",
+        "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+        "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+        "size_bytes": 250,
+        "suffix": ".md"
+      },
+      "snippet": "# Ingestion Receipt: 2026-05-10_190136_ingest_corpus_0007\n**corpus_id**: corpus_0007  **file**: 🌀🌬️AI.Web_ Breathing Life Into the New Memory Economy.docx  \n**chunks**: 1258/91  **embedding**: DefaultEmbeddingFunction (ONNX all-MiniLM-L6-v2)\n",
+      "snippet_scope_ok": true
+    },
+    {
+      "metadata": {
+        "authority_claimed": false,
+        "candidate_only": true,
+        "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+        "name": "2026-05-10_191056_ingest_corpus_0015.json",
+        "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+        "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+        "size_bytes": 4566,
+        "suffix": ".json"
+      },
+      "snippet": "{\n  \"receipt_id\": \"2026-05-10_191056_ingest_corpus_0015\",\n  \"timestamp\": \"2026-05-10T19:10:56\",\n  \"session_id\": \"forge_2026_05_10_190916\",\n  \"corpus_id\": \"corpus_0015\",\n  \"filename\": \"0) Environment Setup.docx\",\n  \"absolute_path\": \"/home/nic/forge_corpus/staging/05_ENGINEERING_STANDARDS/0) Environment Setup.docx\",\n  \"corpus_folder\": \"05_ENGINEERING_STANDARDS\",\n  \"authority\": \"engineering_standard\",\n  \"sha256_16\": \"5352c71d9bbfc08e\",\n  \"collection\": \"aiweb_context_chunks_v1\",\n  \"chroma_path\": \"/home/nic/forge/memory/context_library_v1/chroma_db\",\n  \"chunk_count_planned\": 36,\n  \"chunk_count_verified\": 36,\n  \"document_chunk_count\": 36,\n  \"collection_count_after\": 1704,\n  \"chunk_ids\": [\n    \"corpus_0015_chunk_0000\",\n    \"corpus_0015_chunk_0001\",\n    \"corpus_0015_chunk_0002\",\n    \"corpus_0015_chunk_0003\",\n    \"corpus_0015_chunk_0004\",\n    \"corpus_0015_chunk_0005\",\n    \"corpus_0015_chunk_0006\",\n    \"corpus_0015_chunk_0007\",\n    \"corpus_0015_chunk_0008\",\n    \"corpus_0015_chunk_0009\",\n    \"corpus_0015_chunk_0010\",\n    \"corpus_0015_chunk_0011\",\n    \"corpus_0015_chunk_0012\",\n    \"corpus_0015_chunk_0013\",\n    \"corpus_0015_chunk_0014\",\n    \"corpus_0015_chunk_0015\",\n    \"corpus_0015_chunk_0016\",\n    \"corpus_0015_chunk_0017\",\n    \"corpus_0015_chunk_0018\",\n    \"corpus_0015_chunk_0019\",\n    \"corpus_0015_chunk_0020\",\n    \"corpus_0015_chunk_0021\",\n    \"corpus_0015_chunk_0022\",\n    \"corpus_0015_chunk_0023\",\n    \"corpus_0015_chunk_0024\",\n    \"corpus_0015_chunk_0025\",\n    \"corpus_0015_chunk_0026\",\n    \"corpus_0015_chunk_0027\",\n    \"corpus_0015_chunk_0028\",\n    \"corpus_0015_chunk_0029\",\n    \"corpus_0015_chunk_0030\",\n    \"corpus_0015_chunk_0031\",\n    \"corpus_0015_chunk_0032\",\n    \"corpus_0015_chunk_0033\",\n    \"corpus_0015_chunk_0034\",\n    \"corpus_0015_chunk_0035\"\n  ],\n  \"chunk_sha256_16\": [\n    \"0566f7bf66159e9d\",\n    \"a56b1492778b4919\",\n    \"f4a967f60177ee47\",\n    \"cf2692236942c7aa\",\n    \"6402f10f8bb0355e\",\n    \"0f8999fe4cc8da31\",\n    \"f285ceddbf7de73f\",\n    \"aee3e2c3288ec4d6\",\n    \"71906f6502f063d9\",\n    \"e63db5df663e0f6d\",\n    \"d5be86e418d9549b\",\n    \"56a554f89ae51df6\",\n    \"cb0b835b50fa3fae\",\n    \"af75606535703c46\",\n    \"c95fa265f049df6e\",\n    \"38385bb9acaa6a6b\",\n    \"519a44a6a5b09f62\",\n    \"83e1c28a73038498\",\n    \"8feab5874e2bef2d\",\n    \"602145e774452863\",\n    \"14460433b004ffc4\",\n    \"4cf166125437bdb3\",\n    \"d19f17d0f8aa8655\",\n    \"0bd35bb3b2ddcec3\",\n    \"0dd4471a5691ab21\",\n    \"74a5e9748c2c19f5\",\n    \"9752bcae38e62979\",\n    \"b8359068ff2c5e01\",\n    \"ce4640b4e52f4465\",\n    \"",
+      "snippet_scope_ok": true
+    },
+    {
+      "metadata": {
+        "authority_claimed": false,
+        "candidate_only": true,
+        "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+        "name": "2026-05-10_184836_ingest_corpus_0001.md",
+        "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+        "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+        "size_bytes": 303,
+        "suffix": ".md"
+      },
+      "snippet": "# Ingestion Receipt: 2026-05-10_184836_ingest_corpus_0001\n**corpus_id**: corpus_0001  **file**: ProtoForge Volume II – The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf  \n**chunks**: 404/2  **embedding**: DefaultEmbeddingFunction (ONNX all-MiniLM-L6-v2)\n",
+      "snippet_scope_ok": true
+    }
+  ],
+  "status": "GENERIC_REPAIR_EVIDENCE_PACKET_READY",
+  "target": "stack_linker_breather"
+}

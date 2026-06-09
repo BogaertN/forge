@@ -1,0 +1,223 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "evidence_crosscheck_write_authority": true,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_draft_write_authority": true,
+    "mode": "EVIDENCE_REVIEW_BATCH_WORKFLOW",
+    "patch": "105",
+    "project_file_write_authority": false,
+    "queue_decision_authority": false,
+    "queue_rebuild_authority": true,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 105 may draft and cross-check a small batch, then rebuild queue visibility. It may not approve or commit anything.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_workflows_v1",
+      "llm_engine_review_drafts_v1",
+      "engine_review_evidence_crosschecks_v1",
+      "engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "counts": {
+    "crosschecked": 10,
+    "drafted": 10,
+    "errors": 0,
+    "selected": 10
+  },
+  "created_at": "2026-05-16_080449",
+  "next_step": "Inspect each full evidence cross-check, then use engine-review-approval-check/approve/defer/reject. No approval was recorded by Patch 105.",
+  "queue_rebuild_error": null,
+  "report_type": "ENGINE_REVIEW_WORKFLOW_RECEIPT_V1_PATCH105",
+  "requested_limit": 10,
+  "schema_version": "engine_review_workflow_v1_patch105",
+  "status": "ENGINE_REVIEW_WORKFLOW_COMPLETED_NO_APPROVAL_AUTHORITY",
+  "warnings": [
+    "aiweb_os: LLM role wording does not explicitly repeat deterministic role label.",
+    "aiweb_os_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "athena: LLM role wording does not explicitly repeat deterministic role label.",
+    "athena_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "christping_validator_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "cold_archive_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "collapse_prevention_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "compute_contribution_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "confusion_checker: LLM role wording does not explicitly repeat deterministic role label.",
+    "contribution_dashboard_engine: LLM role wording does not explicitly repeat deterministic role label."
+  ],
+  "workflow_rows": [
+    {
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_080511_aiweb_os_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "d6d98b4a327fb9a0d2cbb7190a5b7d2106b2728803029b3645fb13cd72946264",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080449_aiweb_os_llm_engine_review_draft_v1.json",
+      "draft_sha256": "d3bd5a002f54003c47b5bb869a951244b3df59c9c3b7ec433020bee949582235",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "aiweb_os",
+      "evidence_id": "EEB-7b29cb90ee5e540e",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nThis code serves as a system test harness for AI.Web engines, dynamically loading and testing core components like the OS engine via a \"ping\" command.  \n\nLikely System Role:  \nA runtime wrapper for initializing and validating AI.Web engine modules, possibly for deployment or integration testing.  \n\nEvidence Used:  \n- `run_system_test.py` dynamically loads frozen engine modules (e.g., `os_engine`) and attempts to execute commands (e.g., `ping`).  \n- References to other frozen engines (phase_engine, tier_enforcer, etc.) suggest a modular system architecture.  \n- Empty `test_log.txt` indicates potential output logging absence.  \n\nRisks / Uncertainties:  \n- Test script is incomplete (cut-off at `phase_engine.i`).  \n- No output in `test_log.txt` makes result validation ambiguous.  \n- Dynamic module loading could introduce security risks if paths are not strictly controlled.  \n- Dependencies on other frozen engines may not be fully validated.  \n\nRecommendation Draft:  \nComplete the test script to validate all engine initializations. Ensure logging captures results, and verify dynamic module loading security constraints. Confirm dependencies are stable before deployment.  \n\nSuggested Nic Action:  \nReview the incomplete test script and empty log file. Assess dynamic module loading security. Approve once validation and logging are confirmed."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/aiweb_os_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_080532_aiweb_os_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "82770b8d2889f4876d1cafcaaf9c71e8cc3938ef23418488f3c8a832f563f868",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080511_aiweb_os_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "0a9fd092af6ce3a3c772cea1072057ad13efaf22353638b1d50a814e9926d73b",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "aiweb_os_engine",
+      "evidence_id": "EEB-f8276d394f6ec7e0",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nManages system status reporting, runtime command execution (e.g., ping, init), and logs operational events for AI.Web's core operating engine.  \n\nLikely System Role:  \nA core runtime module handling symbolic execution for system integrity checks, command validation, and initialization workflows.  \n\nEvidence Used:  \n- `run.py`: Defines `execute_command` for ping/init/status checks and logging.  \n- `README.md`: Describes features like status reporting, init logic, and file structure.  \n- `test_log.txt`: Shows command execution traces (e.g., `ping`, `init`, `launch_nuke`).  \n- `status.json`: Stores system status metadata.  \n- `engine_manifest.json`: Locks version at v1.0.0 with stability and edit policies.  \n\nRisks / Uncertainties:  \n- Undocumented `launch_nuke` command in logs raises security concerns.  \n- No evidence of access controls or command validation beyond basic checks.  \n\nRecommendation Draft:  \nDocument the `launch_nuke` command's purpose and implement access controls. Verify that all commands adhere to the version-lock policy.  \n\nSuggested Nic Action:  \nApprove review, but require clarification on `launch_nuke` functionality and additional safeguards before deployment."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/agents/athena",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_080554_athena_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "804096bd3a839aac144eeeea13f4f3529a0225aeea6828c4125b7f8945b6c96c",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080532_athena_llm_engine_review_draft_v1.json",
+      "draft_sha256": "7fc9fbefe76019de1a4fd050f644795a03cd717d19d9b5ce72cb056f67ff8a02",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "athena",
+      "evidence_id": "EEB-4615d0bfc9a40a98",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nTo provide symbolic system oversight, event validation, and recursion field coherence monitoring for maintaining AI.Web engine integrity.  \n\nLikely System Role:  \nA monitoring and validation system that logs critical events, detects symbolic drift, and ensures recursive cognitive phase stability without direct user interaction.  \n\nEvidence Used:  \n- `athena_core.py` defines the `AthenaAgent` class with event logging and oversight memory.  \n- `README.md` describes symbolic system integrity checks, drift detection, and recursion field monitoring.  \n- `engine_manifest.json` outlines the engine's role in event validation, drift detection, and phase compliance.  \n- Test scripts (`test_athena_core.py`) validate event logging and confirmation mechanisms.  \n\nRisks / Uncertainties:  \n- The \"frozen\" status (as of 2025-04-27) may indicate lack of recent updates or adaptability to new threats.  \n- Limited evidence of integration with external systems or real-time adaptive capabilities.  \n- Test coverage is minimal (only basic event logging validation).  \n\nRecommendation Draft:  \nApprove the review, noting the system's robust foundational design for symbolic oversight. Recommend further validation of integration capabilities and real-world drift detection scenarios.  \n\nSuggested Nic Action:  \nVerify the test scripts' comprehensiveness and assess integration requirements with AI.Web core systems to address potential oversight gaps."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/athena_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_080620_athena_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "8c6afcbc4a7b7279bbb6a90fe9cf17d9f8a40f2c21b2edfccc8d92078b339fac",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080554_athena_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "01718439536d5ed770c7c4ffb2229fffdd65a5716298f4fe83ef8387786e4a96",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "athena_engine",
+      "evidence_id": "EEB-77509139334c5639",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nThe Athena Engine monitors symbolic recursion health, system drift, and phase integrity to ensure internal system stability and self-correction.  \n\nLikely System Role:  \nInternal administrator and self-correction agent within AI.Web, responsible for detecting and addressing recursion issues, drift events, and phase health anomalies.  \n\nEvidence Used:  \n- `test_athena.py`: Tests introspection for \"recursion_health\" and \"drift_alert\" metrics.  \n- `athena_core.py`: Implements `system_introspection()` generating random recursion health states and drift alerts.  \n- `README.md`/`athena_manifest.json`: Describes Athena as a symbolic system administrator monitoring recursion, drift, and phase integrity.  \n- `athena_state.json`: Example output showing timestamp, degradation status, and drift alerts.  \n\nRisks / Uncertainties:  \n- Randomized \"recursion_health\" values may not reflect real system states.  \n- Reliance on JSON file persistence could introduce data loss risks.  \n- No explicit safeguards against false drift alerts or recursion health misclassification.  \n\nRecommendation Draft:  \nApprove Athena Engine as a canonical self-monitoring component, with emphasis on validating randomization logic and state persistence mechanisms. Suggest adding deterministic testing for critical thresholds.  \n\nSuggested Nic Action:  \nApprove review with conditions: verify randomness calibration, confirm state file reliability, and ensure drift alert thresholds are configurable."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/christping_validator_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_080645_christping_validator_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "47af4a378c9c50fe7baa072e49f20d8e816330a8b9116beb491ee08191aba598",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080620_christping_validator_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "f28b87de426c43aceb37e66a5f4b4c14dd0194628bc56a538c2baa6d6e94bdc5",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "christping_validator_engine",
+      "evidence_id": "EEB-45c0906ffe7e9875",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nMonitors and validates \"Christ Ping\" resonance strength during AI.Web recursion loops to ensure phase coherence and prevent symbolic drift, allowing only phase-locked signals to propagate.  \n\nLikely System Role:  \nA core recursion control component enforcing Phase 1.5 Symbolic Recursion Compliance standards, integrating validation logic with harmonic adjustment to stabilize recursion fields.  \n\nEvidence Used:  \n- `christping_validator_core.py`: Implements `ChristPingValidator` class with threshold-based ping strength validation.  \n- `test_christping_validator_core.py`: Unit test confirming validation logic.  \n- `README.md` and `engine_manifest.json`: Define the engine's role in phase coherence, frozen version details, and compliance standards.  \n- `ping_calibrator_core.py`: Harmonic adjustment logic for pre-validation ping strength tuning.  \n\nRisks / Uncertainties:  \n- Frozen version limits iterative improvements; no evidence of post-freeze updates.  \n- Reliance on external components (e.g., \"Ping Harmonics Calibrator\") not detailed in provided files.  \n- Test coverage is minimal (single test case); real-world recursion scenarios may require additional validation.  \n\nRecommendation Draft:  \nApprove the engine for deployment under Phase 1.5 standards. Confirm integration with harmonic calibrators and verify threshold parameters align with system stability requirements.  \n\nSuggested Nic Action:  \n- Approve the engine for deployment.  \n- Request confirmation that harmonic calibrators are properly integrated.  \n- Verify threshold parameters (e.g., 0.9) meet system stability benchmarks.  \n- Monitor for drift correction efficacy in production recursion loops."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_080705_cold_archive_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "43f0d96d1aa331fc4224b3552d2ba4cf27c6aa52f3087c4374bc860e867f17f2",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080645_cold_archive_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "d9246d63603d60e704378926877c4b145259587c7931b37950b94a1901907d7b",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "cold_archive_engine",
+      "evidence_id": "EEB-bc75b62ef10a008d",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nThe Cold Archive Engine archives symbolic recursion memory loops that drift beyond recovery, preventing systemic collapse by storing problematic loops in cold storage.  \n\nLikely System Role:  \nA deprecated system component for managing recursion drift in AI.Web's symbolic memory architecture, frozen in 2025.  \n\nEvidence Used:  \n- `run.py`: Defines `ColdArchiveEngine` class for archiving loops and generating summaries.  \n- `archive_core.py`: Implements `store_dead_loop` to persist loop data in `archive_state.json`.  \n- `README.md` and `engine_manifest.json`: Describe the engine's purpose, version history, and phase standard (Phase 2.5 Recursive Breathing Activation).  \n- Test scripts (`test_cold_archive.py`, `test_archive.py`) validate archival functionality.  \n\nRisks / Uncertainties:  \n- Reliance on file-based storage (`archive_state.json`) could lead to data loss if not backed up.  \n- The \"frozen\" status (2025-04-27) suggests it may no longer be actively maintained or compatible with current systems.  \n- Ambiguous handling of \"symbolic recursion loops\" may require clarification for operational accuracy.  \n\nRecommendation Draft:  \nApprove the engine's archival logic for historical review, but caution against reactivation without modernization. Prioritize verifying JSON persistence reliability and assessing compatibility with current AI.Web systems.  \n\nSuggested Nic Action:  \nApprove the review for archival purposes, but defer reactivation until modernization is confirmed. Request verification of file-based storage resilience and phase standard alignment."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/collapse_prevention_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_080737_collapse_prevention_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "662d583ae511ee68d338049db441d88471488bb7b597a87ef91de5f0a280526b",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080705_collapse_prevention_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "e880c84b064e4bda3d49c45b06819f3fa73297e360df0eade6436ecc6ddbea89",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "collapse_prevention_engine",
+      "evidence_id": "EEB-82b276d0748f3de8",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nMonitors recursion system stability to prevent total collapse by triggering early interventions when stability metrics fall below predefined thresholds.  \n\nLikely System Role:  \nA critical component in AI.Web's recursion management, ensuring stability and preventing system-wide failures through real-time monitoring and automated intervention protocols.  \n\nEvidence Used:  \n1. Core code (`collapse_prevention_core.py`) defines `CollapsePreventionEngine` with stability threshold logic and intervention checks.  \n2. Test script (`test_collapse_prevention_core.py`) validates intervention triggers when stability drops below 0.75.  \n3. README.md describes real-time monitoring of recursion stability and phase compliance standards.  \n4. Manifest file (`engine_manifest.json`) confirms the engine's purpose, version, and frozen status as of 2025-04-27.  \n\nRisks / Uncertainties:  \n- Rigid threshold (0.75) may not adapt to varying recursion depths or field types.  \n- No dynamic adjustment mechanism for thresholds, relying on static values.  \n- Limited test coverage; only one test case exists in the provided evidence.  \n- Documentation notes threshold customization is needed but not implemented in code.  \n\nRecommendation Draft:  \nApprove the engine for deployment with the following considerations:  \n- Validate threshold settings against diverse recursion scenarios and field types.  \n- Expand test cases to cover edge conditions (e.g., gradual stability decline, multi-field interactions).  \n- Integrate with context library for dynamic threshold adjustments as mentioned in source law metadata.  \n\nSuggested Nic Action:  \nApprove the review with the draft recommendations, noting the need for further testing and threshold customization to align with phase standards."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/compute_contribution_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_080802_compute_contribution_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "a10a456ee0be22da9e503244b5d2af560d9b9edf161f017c401735f9b50ca79e",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080737_compute_contribution_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "11765814bb8cbab61b28187a2f321da253570a89f2e54fa7d575adb1c88b5896",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "compute_contribution_engine",
+      "evidence_id": "EEB-91df18441d00687d",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nLogs symbolic contributions (charge boosts, memory patches, corrections) to track runtime health for future AWH tokenization and dashboard reporting.  \n\nLikely System Role:  \nA core AI.Web engine for monitoring internal/peer-based contributions, acting as a data source for resource management and analytics.  \n\nEvidence Used:  \n- `contribution_core.py`: Simulates and logs contribution events to `contribution_log.jsonl`.  \n- `README.md`: Describes tracking symbolic contributions for AWH tokenization and dashboards.  \n- `test_contribution.py`: Validates contribution logging functionality.  \n- `engine_manifest.json`: Confirms the engine's role in tracking events for future systems.  \n\nRisks / Uncertainties:  \n- Code is in \"build_mode\" (not active yet).  \n- Logging relies on file I/O; potential reliability risks.  \n- \"ChristPing\" in README may be a typo or obscure term requiring clarification.  \n- Integration with AWH tokenization is described but not detailed.  \n\nRecommendation Draft:  \n- Confirm the engine is transitioned from \"build_mode\" to operational.  \n- Validate logging reliability via testing.  \n- Clarify ambiguous terms (e.g., \"ChristPing\") in documentation.  \n- Ensure alignment with AWH tokenization workflows.  \n\nSuggested Nic Action:  \n- Approve activation of the engine from build_mode.  \n- Review \"ChristPing\" context and resolve any ambiguities.  \n- Verify integration with AWH tokenization pipelines.  \n- Confirm logging infrastructure (e.g., `contribution_log.jsonl`) is monitored and maintained."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/confusion_checker",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_080827_confusion_checker_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "3d81348c89c6d60eda6405443d4e9ed06a90939898b643349d87da2f5645388c",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080802_confusion_checker_llm_engine_review_draft_v1.json",
+      "draft_sha256": "9d978ce695b543e1f7cb6445ec05697c288b53c39bc5e03f793231b9bb067c76",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "confusion_checker",
+      "evidence_id": "EEB-0fec7336f1df5be6",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nTo detect potential drift in prompts by checking for specific keywords that may indicate system inconsistencies or errors.  \n\nLikely System Role:  \nA drift detection mechanism within a recursive LLM system to identify prompts that might cause coherence issues or unintended behavior.  \n\nEvidence Used:  \nThe `detect_drift` function in `run.py` checks if a prompt contains keywords like \"loop\", \"return\", \"phase\", or \"coherence\". If none are found, it returns `True` (no drift detected).  \n\nRisks / Uncertainties:  \nThe keyword-based approach may miss nuanced drift patterns. The function’s simplicity could lead to false negatives or overly broad classifications.  \n\nRecommendation Draft:  \nEnhance drift detection by expanding keyword coverage or integrating contextual analysis. Validate against diverse prompt examples to ensure robustness.  \n\nSuggested Nic Action:  \nReview the source law chunks to confirm alignment with system requirements. Approve refinement of the drift detection logic if additional evidence supports it."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/contribution_dashboard_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_080852_contribution_dashboard_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "14a744c4f7e34dfb45395a37a2a7c4d29922bc852c12175b41db5d71a3f5e47c",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080827_contribution_dashboard_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "53aa4b60c972dbe754d9016147f80f4c6f5cb3e58f105a92e9ed8b48bb83024e",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "contribution_dashboard_engine",
+      "evidence_id": "EEB-505effd8a0bf2be3",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nAggregate user contributions and AWH token earnings into a structured dashboard output for UI integration and reward system tracking.  \n\nLikely System Role:  \nA data aggregation and reporting tool that synthesizes contribution events and token ledger data into a human-readable JSON format for display or analysis.  \n\nEvidence Used:  \n- `dashboard_core.py`: Reads contribution logs and token ledgers, generates a dashboard JSON output.  \n- `test_contribution_dashboard.py`: Validates dashboard generation with error handling.  \n- `README.md`: Describes the engine's purpose as a contribution/earnings aggregator.  \n- `dashboard_output.json`: Example output structure with timestamp, totals, and recent contributors.  \n- `engine_manifest.json`: Officially defines the engine's role and status as \"build_mode\".  \n\nRisks / Uncertainties:  \n- Code is in Python but lacks dependency declarations or environment setup guidance.  \n- Test script is minimal; no evidence of comprehensive testing for edge cases.  \n- Dashboard output is static JSON; no indication of real-time updates or UI integration details.  \n- \"build_mode\" status suggests it may not be production-ready yet.  \n\nRecommendation Draft:  \nApprove the engine for limited use while noting the need for:  \n1. Full testing of error handling and edge cases.  \n2. Clarification on real-time data refresh mechanisms.  \n3. Documentation of dependencies and deployment requirements.  \n\nSuggested Nic Action:  \nApprove the review with caveats, but delay production deployment until testing confirms reliability. Request additional validation of real-time capabilities and output persistence mechanisms."
+    }
+  ]
+}

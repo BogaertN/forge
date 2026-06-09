@@ -1,0 +1,110 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "evidence_crosscheck_write_authority": true,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_draft_write_authority": true,
+    "mode": "EVIDENCE_REVIEW_BATCH_WORKFLOW",
+    "patch": "105",
+    "project_file_write_authority": false,
+    "queue_decision_authority": false,
+    "queue_rebuild_authority": true,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 105 may draft and cross-check a small batch, then rebuild queue visibility. It may not approve or commit anything.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_workflows_v1",
+      "llm_engine_review_drafts_v1",
+      "engine_review_evidence_crosschecks_v1",
+      "engine_review_queue_v1"
+    ]
+  },
+  "counts": {
+    "ready_for_workflow": 77,
+    "skipped_or_blocked": 3,
+    "total_candidates": 80
+  },
+  "created_at": "2026-05-15_140959",
+  "next_batch_preview": [
+    {
+      "blockers": [],
+      "candidate_path": null,
+      "crosscheck_exists": true,
+      "engine_family": "agent_reflection_engine",
+      "evidence_id": "EEB-efe9b78ceabc9853",
+      "ready_for_workflow": true,
+      "skipped_reason": null
+    },
+    {
+      "blockers": [],
+      "candidate_path": null,
+      "crosscheck_exists": true,
+      "engine_family": "agents_stack",
+      "evidence_id": "EEB-e7eb75087380b7b6",
+      "ready_for_workflow": true,
+      "skipped_reason": null
+    },
+    {
+      "blockers": [],
+      "candidate_path": null,
+      "crosscheck_exists": true,
+      "engine_family": "aiweb_os",
+      "evidence_id": "EEB-7b29cb90ee5e540e",
+      "ready_for_workflow": true,
+      "skipped_reason": null
+    },
+    {
+      "blockers": [],
+      "candidate_path": null,
+      "crosscheck_exists": false,
+      "engine_family": "aiweb_os_engine",
+      "evidence_id": "EEB-f8276d394f6ec7e0",
+      "ready_for_workflow": true,
+      "skipped_reason": null
+    },
+    {
+      "blockers": [],
+      "candidate_path": null,
+      "crosscheck_exists": false,
+      "engine_family": "ascii_interpreter_engine",
+      "evidence_id": "EEB-2acca33f6ecda788",
+      "ready_for_workflow": true,
+      "skipped_reason": null
+    }
+  ],
+  "report_type": "ENGINE_REVIEW_WORKFLOW_PLAN_V1_PATCH105",
+  "schema_version": "engine_review_workflow_v1_patch105",
+  "skipped_preview": [
+    {
+      "blockers": [],
+      "candidate_path": null,
+      "crosscheck_exists": true,
+      "engine_family": "activity_log",
+      "evidence_id": "EEB-929b125c673bef05",
+      "ready_for_workflow": false,
+      "skipped_reason": "already_has_human_queue_decision"
+    },
+    {
+      "blockers": [],
+      "candidate_path": null,
+      "crosscheck_exists": true,
+      "engine_family": "admin_override_console",
+      "evidence_id": "EEB-7e1e67cf08853d05",
+      "ready_for_workflow": false,
+      "skipped_reason": "already_has_human_queue_decision"
+    },
+    {
+      "blockers": [],
+      "candidate_path": null,
+      "crosscheck_exists": false,
+      "engine_family": "christping_listener",
+      "evidence_id": "EEB-a757f04a6033202d",
+      "ready_for_workflow": false,
+      "skipped_reason": "already_committed_by_patch100"
+    }
+  ],
+  "status": "ENGINE_REVIEW_WORKFLOW_PLAN_READY"
+}

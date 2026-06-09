@@ -1,0 +1,20 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "read_only": true,
+    "test_execution_authority": false
+  },
+  "created_at": "2026-05-17T06:56:51",
+  "next_commands": [
+    "canonical-test-show latest",
+    "canonical-test-gaps",
+    "canonical-test-export",
+    "Install Patch 124 when ready"
+  ],
+  "next_phase": "CANONICAL_ENGINE_SAFE_TEST_RUNNER",
+  "plain_english": "Canonical engine test inventory exists. The next safe move is a strictly allowlisted test runner that can run only approved tests.",
+  "recommended_next_patch": "Patch 124 — Canonical Engine Safe Test Runner",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "schema_version": "forge_next_status_v1_patch123",
+  "status": "NEXT_PATCH_REQUIRED"
+}

@@ -1,0 +1,8 @@
+{
+  "command_name": "read-and-extract-text-from-a-pdf-file",
+  "function_name": "cmd_read_and_extract_text_from_a_pdf_file",
+  "description": "read and extract text from a PDF file",
+  "installed_at": "20260522_063558",
+  "backup_dir": "/home/nic/forge/backups/before_install_read-and-extract-text-from-a-pdf-file_20260522_063558",
+  "proposal_id": "20260522_062901_cmd_read_and_extract_text_from_a_pdf_file"
+}

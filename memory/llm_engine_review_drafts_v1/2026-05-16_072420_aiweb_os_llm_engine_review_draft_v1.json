@@ -1,0 +1,95 @@
+{
+  "authority": {
+    "allowed_gateway_tools": [
+      "read_file",
+      "code_related_files"
+    ],
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "forbidden_gateway_tools": [
+      "shell",
+      "patch-apply",
+      "ingest-one",
+      "ingest-batch-apply",
+      "delete",
+      "quarantine",
+      "restore",
+      "snapshot-live-restore",
+      "network",
+      "pip",
+      "npm",
+      "sudo"
+    ],
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "LLM_ENGINE_REVIEW_DRAFTS_WITH_REVIEW_LIMITED_READ_LENS",
+    "patch": "98",
+    "project_write_authority": false,
+    "rule": "The LLM may draft review recommendations from bound evidence. Nic approves separately. Forge commits only in a future gated patch.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/llm_engine_review_drafts_v1"
+  },
+  "blockers": [],
+  "candidate_path_recorded": "aiweb/runtime_wrappers/aiweb_os_v1",
+  "candidate_path_resolved": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-16_072420",
+  "draft_id": "LER-aiweb_os-2026-05-16_072420",
+  "engine_family": "aiweb_os",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_aiweb_os_engine_evidence_binder.json",
+  "evidence_binder_sha256": "67b457092a01cf10e174cb8f45b3497b3e7ced9a47857b00e944a69a7ac7a409",
+  "evidence_id": "EEB-7b29cb90ee5e540e",
+  "file_count": 2,
+  "gateway_policy_path": "/home/nic/forge/memory/llm_memory_v1/indexes/llm_engine_review_gateway_policy.json",
+  "gateway_policy_sha256": "d7aafb5368368a7ad4afbd79668a71607d640b1f24fbb197bb9b4308e06d4da5",
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 22.349,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "68b42d7d7a815052553ae861ca02b108180893d69d9748ef54a9ba58ec9e8847",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nThis code serves as a system test harness for AI.Web's runtime environment, dynamically loading and executing frozen engine modules to verify their functionality (e.g., OS commands, phase initialization).  \n\nLikely System Role:  \nA runtime wrapper/loader for AI.Web's modularized engine components, enabling dynamic testing and integration of frozen engine implementations.  \n\nEvidence Used:  \n- Python script (`run_system_test.py`) dynamically loads and executes frozen engine modules (e.g., `os_engine`, `phase_engine`).  \n- Empty test log file (`test_log.txt`) likely capturing execution outputs.  \n- Code structure suggests testing, module loading, and system integration.  \n\nRisks / Uncertainties:  \n- Test results are not visible in the provided evidence (log file is empty).  \n- Dynamic module loading could introduce security risks if paths are tampered with.  \n- Dependencies on specific \"frozen\" engine files may lack versioning or stability guarantees.  \n\nRecommendation Draft:  \n- Execute the test harness to validate engine outputs and populate the log file.  \n- Verify module paths are secure and immutable to prevent runtime tampering.  \n- Confirm all referenced \"frozen\" engine files are stable and version-controlled.  \n\nSuggested Nic Action:  \nApprove review but request validation of test results and security hardening before deployment."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nThis code serves as a system test harness for AI.Web's runtime environment, dynamically loading and executing frozen engine modules to verify their functionality (e.g., OS commands, phase initialization).  \n\nLikely System Role:  \nA runtime wrapper/loader for AI.Web's modularized engine components, enabling dynamic testing and integration of frozen engine implementations.  \n\nEvidence Used:  \n- Python script (`run_system_test.py`) dynamically loads and executes frozen engine modules (e.g., `os_engine`, `phase_engine`).  \n- Empty test log file (`test_log.txt`) likely capturing execution outputs.  \n- Code structure suggests testing, module loading, and system integration.  \n\nRisks / Uncertainties:  \n- Test results are not visible in the provided evidence (log file is empty).  \n- Dynamic module loading could introduce security risks if paths are tampered with.  \n- Dependencies on specific \"frozen\" engine files may lack versioning or stability guarantees.  \n\nRecommendation Draft:  \n- Execute the test harness to validate engine outputs and populate the log file.  \n- Verify module paths are secure and immutable to prevent runtime tampering.  \n- Confirm all referenced \"frozen\" engine files are stable and version-controlled.  \n\nSuggested Nic Action:  \nApprove review but request validation of test results and security hardening before deployment.",
+  "plain_english_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "load_module"
+    ],
+    "imports_sample": [
+      "import importlib.util",
+      "import os",
+      "import sys"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`aiweb_os` appears to be a local AI.Web engine/component. The bound source evidence includes 2 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DEFER_PENDING_COMPARISON",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "import sys import os"
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "report_type": "LLM_ENGINE_REVIEW_DRAFT_V1_PATCH98_2_REAL_LOCAL_LLM_ATTEMPT",
+  "review_status_at_draft_time": "DEFERRED",
+  "schema_version": "llm_engine_review_draft_v1_patch98",
+  "stale_evidence_rule": "Patch 100 must re-read candidate path and re-verify current SHA against this evidence binder before committing any canonical decision. If changed: REFUSED_STALE_ENGINE_EVIDENCE.",
+  "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+  "warnings": []
+}

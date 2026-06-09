@@ -1,0 +1,45 @@
+{
+  "backup_path": "/home/nic/forge/backups/patch226c2_dashboard_roadmap_surgical_reconcile_before/20260523_214224_UTC/main.py",
+  "changed": true,
+  "changes": [
+    "literal_replace:Dashboard Roadmap Panel Status \u2014 Patch 226C.1 count=1",
+    "literal_replace:Dashboard Roadmap Panel List \u2014 Patch 226C.1 count=1",
+    "literal_replace:Dashboard Roadmap Panel Build \u2014 Patch 147 count=1",
+    "literal_replace:Forge Roadmap Status \u2014 Build Sequence / Patch 146 count=1"
+  ],
+  "compile": {
+    "attempted": true,
+    "ok": true,
+    "returncode": 0,
+    "stderr_tail": "",
+    "stdout_tail": ""
+  },
+  "findings": [
+    {
+      "code": "STATIC_OR_SAFETY_VERIFICATION_FAILED",
+      "level": "FAIL",
+      "message": "Static verification or safety checks failed. Review before running Forge."
+    }
+  ],
+  "main_exists": true,
+  "safety": {
+    "canonical_db_sha_unchanged": true,
+    "env_stat_unchanged": true,
+    "forge_tool_registry_modified": false,
+    "identity_vault_db_write_performed": false,
+    "legacy_db_sha_unchanged": true,
+    "main_py_modified": true,
+    "tool_registry_sha_unchanged": true
+  },
+  "static_verification": {
+    "canonical_current_present": false,
+    "canonical_next_present": false,
+    "patch_label_226c2_present": true,
+    "s19ac_done_present": true,
+    "s19at_active_present": false,
+    "s19au_next_present": false,
+    "s19bp_future_present": false
+  },
+  "timestamp": "20260523_214224_UTC",
+  "verdict": "FAIL"
+}

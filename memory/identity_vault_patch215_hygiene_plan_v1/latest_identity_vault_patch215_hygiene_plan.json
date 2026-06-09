@@ -1,0 +1,840 @@
+{
+  "boundary": {
+    "does_not_modify": [
+      "Identity Vault files",
+      "Identity Vault databases",
+      ".env",
+      "node_modules",
+      "Forge tools",
+      "Forge registry",
+      "RMC memory",
+      "AI.Web wrappers",
+      "agent identity configuration"
+    ],
+    "read_only": true,
+    "writes": [
+      "/home/nic/forge/memory/identity_vault_patch215_hygiene_plan_v1"
+    ]
+  },
+  "canonical_database_decision": {
+    "canonical_database_path": "/home/nic/identity-vault/data/identity_vault.db",
+    "legacy_database_path": "/home/nic/identity-vault/vault.db",
+    "migration_rule": "Do not delete or move `vault.db`; treat it as a legacy migration candidate until a later backup + schema migration patch is approved.",
+    "reasons": [
+      "`data/identity_vault.db` already exists under the app data directory.",
+      "It contains explicit `agent_profiles` and `user_profiles` tables needed for future agent identity boundaries.",
+      "`vault.db` appears to be a legacy root-level runtime database and should not be selected as the forward canonical path without migration review.",
+      "The legacy database schema is narrower and lacks the newer identity tables visible in the data-directory database."
+    ],
+    "selection": "data/identity_vault.db",
+    "status": "PLAN_ONLY_NOT_APPLIED"
+  },
+  "database_files": [
+    {
+      "exists": true,
+      "mode": "0o644",
+      "path": "/home/nic/identity-vault/data/identity_vault.db",
+      "relative_path": "identity-vault/data/identity_vault.db",
+      "sha256": "d185eb83a37a9be907ff6525deb241778772fbc7fcc51794efc4c94ab6ecf32f",
+      "size": 57344
+    },
+    {
+      "exists": true,
+      "mode": "0o644",
+      "path": "/home/nic/identity-vault/vault.db",
+      "relative_path": "identity-vault/vault.db",
+      "sha256": "1bfcaca815f7149d32b30e261c20d0679d7182191fe55cfa63ce830c287d87b9",
+      "size": 36864
+    }
+  ],
+  "database_summaries": {
+    "/home/nic/identity-vault/data/identity_vault.db": {
+      "error": null,
+      "exists": true,
+      "ok": true,
+      "path": "/home/nic/identity-vault/data/identity_vault.db",
+      "row_counts": {
+        "agent_profiles": 0,
+        "audit_logs": 0,
+        "feedback_logs": 0,
+        "session_state": 0,
+        "sqlite_sequence": 0,
+        "user_profiles": 0
+      },
+      "schemas": {
+        "agent_profiles": [
+          {
+            "cid": 0,
+            "default": null,
+            "name": "id",
+            "notnull": 0,
+            "pk": 1,
+            "type": "INTEGER"
+          },
+          {
+            "cid": 1,
+            "default": null,
+            "name": "agent_id",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 2,
+            "default": null,
+            "name": "canonical_name",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 3,
+            "default": null,
+            "name": "role",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 4,
+            "default": "'{}'",
+            "name": "capabilities",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 5,
+            "default": "'{}'",
+            "name": "limits",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 6,
+            "default": "'{}'",
+            "name": "enforcement",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 7,
+            "default": "CURRENT_TIMESTAMP",
+            "name": "created_at",
+            "notnull": 0,
+            "pk": 0,
+            "type": "DATETIME"
+          },
+          {
+            "cid": 8,
+            "default": "CURRENT_TIMESTAMP",
+            "name": "updated_at",
+            "notnull": 0,
+            "pk": 0,
+            "type": "DATETIME"
+          },
+          {
+            "cid": 9,
+            "default": "1",
+            "name": "version",
+            "notnull": 0,
+            "pk": 0,
+            "type": "INTEGER"
+          },
+          {
+            "cid": 10,
+            "default": "1",
+            "name": "is_active",
+            "notnull": 0,
+            "pk": 0,
+            "type": "INTEGER"
+          }
+        ],
+        "audit_logs": [
+          {
+            "cid": 0,
+            "default": null,
+            "name": "id",
+            "notnull": 0,
+            "pk": 1,
+            "type": "INTEGER"
+          },
+          {
+            "cid": 1,
+            "default": null,
+            "name": "profile_id",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 2,
+            "default": null,
+            "name": "profile_type",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 3,
+            "default": null,
+            "name": "action",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 4,
+            "default": null,
+            "name": "details",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 5,
+            "default": "CURRENT_TIMESTAMP",
+            "name": "timestamp",
+            "notnull": 0,
+            "pk": 0,
+            "type": "DATETIME"
+          },
+          {
+            "cid": 6,
+            "default": null,
+            "name": "ip_address",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 7,
+            "default": null,
+            "name": "user_agent",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          }
+        ],
+        "feedback_logs": [
+          {
+            "cid": 0,
+            "default": null,
+            "name": "id",
+            "notnull": 0,
+            "pk": 1,
+            "type": "INTEGER"
+          },
+          {
+            "cid": 1,
+            "default": null,
+            "name": "profile_id",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 2,
+            "default": null,
+            "name": "feedback_type",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 3,
+            "default": null,
+            "name": "message",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 4,
+            "default": "'{}'",
+            "name": "data",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 5,
+            "default": "CURRENT_TIMESTAMP",
+            "name": "timestamp",
+            "notnull": 0,
+            "pk": 0,
+            "type": "DATETIME"
+          },
+          {
+            "cid": 6,
+            "default": "0",
+            "name": "resolved",
+            "notnull": 0,
+            "pk": 0,
+            "type": "INTEGER"
+          }
+        ],
+        "session_state": [
+          {
+            "cid": 0,
+            "default": null,
+            "name": "id",
+            "notnull": 0,
+            "pk": 1,
+            "type": "INTEGER"
+          },
+          {
+            "cid": 1,
+            "default": null,
+            "name": "profile_id",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 2,
+            "default": null,
+            "name": "profile_type",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 3,
+            "default": "'{}'",
+            "name": "session_data",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 4,
+            "default": "CURRENT_TIMESTAMP",
+            "name": "created_at",
+            "notnull": 0,
+            "pk": 0,
+            "type": "DATETIME"
+          },
+          {
+            "cid": 5,
+            "default": "CURRENT_TIMESTAMP",
+            "name": "updated_at",
+            "notnull": 0,
+            "pk": 0,
+            "type": "DATETIME"
+          },
+          {
+            "cid": 6,
+            "default": null,
+            "name": "expires_at",
+            "notnull": 0,
+            "pk": 0,
+            "type": "DATETIME"
+          }
+        ],
+        "sqlite_sequence": [
+          {
+            "cid": 0,
+            "default": null,
+            "name": "name",
+            "notnull": 0,
+            "pk": 0,
+            "type": ""
+          },
+          {
+            "cid": 1,
+            "default": null,
+            "name": "seq",
+            "notnull": 0,
+            "pk": 0,
+            "type": ""
+          }
+        ],
+        "user_profiles": [
+          {
+            "cid": 0,
+            "default": null,
+            "name": "id",
+            "notnull": 0,
+            "pk": 1,
+            "type": "INTEGER"
+          },
+          {
+            "cid": 1,
+            "default": null,
+            "name": "user_id",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 2,
+            "default": null,
+            "name": "canonical_name",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 3,
+            "default": "'{}'",
+            "name": "interaction_preferences",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 4,
+            "default": "'{}'",
+            "name": "meta_rules",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 5,
+            "default": "'{}'",
+            "name": "session_defaults",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 6,
+            "default": "'{}'",
+            "name": "drift_tracking",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 7,
+            "default": "CURRENT_TIMESTAMP",
+            "name": "created_at",
+            "notnull": 0,
+            "pk": 0,
+            "type": "DATETIME"
+          },
+          {
+            "cid": 8,
+            "default": "CURRENT_TIMESTAMP",
+            "name": "updated_at",
+            "notnull": 0,
+            "pk": 0,
+            "type": "DATETIME"
+          },
+          {
+            "cid": 9,
+            "default": "1",
+            "name": "version",
+            "notnull": 0,
+            "pk": 0,
+            "type": "INTEGER"
+          },
+          {
+            "cid": 10,
+            "default": "1",
+            "name": "is_active",
+            "notnull": 0,
+            "pk": 0,
+            "type": "INTEGER"
+          }
+        ]
+      },
+      "tables": [
+        "agent_profiles",
+        "audit_logs",
+        "feedback_logs",
+        "session_state",
+        "sqlite_sequence",
+        "user_profiles"
+      ]
+    },
+    "/home/nic/identity-vault/vault.db": {
+      "error": null,
+      "exists": true,
+      "ok": true,
+      "path": "/home/nic/identity-vault/vault.db",
+      "row_counts": {
+        "feedback_logs": 0,
+        "profiles": 1,
+        "session_state": 1,
+        "sqlite_sequence": 0
+      },
+      "schemas": {
+        "feedback_logs": [
+          {
+            "cid": 0,
+            "default": null,
+            "name": "id",
+            "notnull": 0,
+            "pk": 1,
+            "type": "INTEGER"
+          },
+          {
+            "cid": 1,
+            "default": null,
+            "name": "profile_id",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 2,
+            "default": null,
+            "name": "type",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 3,
+            "default": null,
+            "name": "data",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 4,
+            "default": "CURRENT_TIMESTAMP",
+            "name": "timestamp",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          }
+        ],
+        "profiles": [
+          {
+            "cid": 0,
+            "default": null,
+            "name": "id",
+            "notnull": 0,
+            "pk": 1,
+            "type": "TEXT"
+          },
+          {
+            "cid": 1,
+            "default": null,
+            "name": "type",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 2,
+            "default": null,
+            "name": "data",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 3,
+            "default": "'1.0.0'",
+            "name": "version",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 4,
+            "default": "CURRENT_TIMESTAMP",
+            "name": "last_updated",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 5,
+            "default": null,
+            "name": "ipfs_hash",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 6,
+            "default": null,
+            "name": "zkp_metadata",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          }
+        ],
+        "session_state": [
+          {
+            "cid": 0,
+            "default": null,
+            "name": "id",
+            "notnull": 0,
+            "pk": 1,
+            "type": "TEXT"
+          },
+          {
+            "cid": 1,
+            "default": null,
+            "name": "phase",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 2,
+            "default": null,
+            "name": "waiting_for",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 3,
+            "default": null,
+            "name": "last_feedback",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 4,
+            "default": null,
+            "name": "last_action",
+            "notnull": 0,
+            "pk": 0,
+            "type": "TEXT"
+          },
+          {
+            "cid": 5,
+            "default": "CURRENT_TIMESTAMP",
+            "name": "timestamp",
+            "notnull": 1,
+            "pk": 0,
+            "type": "TEXT"
+          }
+        ],
+        "sqlite_sequence": [
+          {
+            "cid": 0,
+            "default": null,
+            "name": "name",
+            "notnull": 0,
+            "pk": 0,
+            "type": ""
+          },
+          {
+            "cid": 1,
+            "default": null,
+            "name": "seq",
+            "notnull": 0,
+            "pk": 0,
+            "type": ""
+          }
+        ]
+      },
+      "tables": [
+        "feedback_logs",
+        "profiles",
+        "session_state",
+        "sqlite_sequence"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "code": "IV_NODE_MODULES_PRESENT",
+      "level": "WARN",
+      "message": "node_modules is present. Do not package it into patches or archives."
+    },
+    {
+      "code": "IV_ENV_PRESENT",
+      "level": "WARN",
+      "message": ".env exists. Do not package it. Rotate secrets if it was shared outside the local machine."
+    },
+    {
+      "code": "IV_MULTIPLE_DATABASES",
+      "level": "WARN",
+      "message": "Multiple SQLite databases exist. Use the plan-selected canonical DB and preserve the other as legacy until migration review."
+    }
+  ],
+  "git_status": {
+    "is_git_repo": true,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "M .env.example\n M package.json\n M server.js\n M utils/encryption.js\n?? .dockerignore\n?? Dockerfile\n?? data/\n?? docker-compose.dev.yml\n?? docker-compose.yml\n?? install.sh\n?? nginx.conf\n?? scripts/\n?? security.config.js"
+  },
+  "hygiene_plan": [
+    {
+      "action": "Create timestamped backup of package.json, .gitignore, .dockerignore, database metadata, and both database files before any hygiene patch modifies files.",
+      "name": "Freeze Identity Vault before changes",
+      "step": 1,
+      "write_status": "future patch only"
+    },
+    {
+      "action": "Update archive/patch packaging policy so `.env`, `node_modules/`, SQLite databases, logs, coverage, and runtime backups are never included in future patch tarballs.",
+      "name": "Lock packaging exclusions",
+      "step": 2,
+      "write_status": "future patch only"
+    },
+    {
+      "action": "Treat `identity-vault/data/identity_vault.db` as canonical because it has the newer agent/user profile schema; keep `identity-vault/vault.db` as legacy migration candidate.",
+      "name": "Select canonical database path",
+      "step": 3,
+      "write_status": "plan decision only"
+    },
+    {
+      "action": "Compare rows/schemas, export a migration preview if data exists, and refuse deletion until backup + verification exists.",
+      "name": "Prepare database migration review",
+      "step": 4,
+      "write_status": "future patch only"
+    },
+    {
+      "action": "Use the generated draft contract as the boundary for the future Forge Identity Vault adapter.",
+      "name": "Create read-only service contract",
+      "step": 5,
+      "write_status": "this script writes draft only under Forge memory"
+    },
+    {
+      "action": "Forge may read identity metadata and RMC namespace pointers, but cannot activate identities or write Identity Vault state until a later approval gate.",
+      "name": "Build read-only adapter after hygiene",
+      "step": 6,
+      "write_status": "future patch only"
+    }
+  ],
+  "ignore_analysis": {
+    "dockerignore_exists": true,
+    "gitignore_exists": true,
+    "has_db_rule": true,
+    "has_env_rule": true,
+    "has_node_modules_rule": true,
+    "recommended_rules": [
+      ".env",
+      ".env.*",
+      "!.env.example",
+      "node_modules/",
+      "*.db",
+      "*.sqlite",
+      "*.sqlite3",
+      "data/*.db",
+      "data/*.sqlite",
+      "data/*.sqlite3",
+      "backups/",
+      "logs/",
+      "coverage/",
+      "dist/"
+    ]
+  },
+  "next_safe_step": "Create a future hygiene patch that backs up Identity Vault, adds ignore/packaging rules, and writes the service contract as a draft file only. Do not activate agent identities yet.",
+  "package": {
+    "name": "identity-vault",
+    "scripts": [
+      "build",
+      "build:docs",
+      "cli",
+      "db:backup",
+      "db:migrate",
+      "db:restore",
+      "db:seed",
+      "debug",
+      "deploy",
+      "dev",
+      "docker:build",
+      "docker:build:dev",
+      "docker:logs",
+      "docker:run",
+      "docker:run:dev",
+      "docker:shell",
+      "docker:stop",
+      "format",
+      "format:check",
+      "health",
+      "install:dev",
+      "k8s:delete",
+      "k8s:deploy",
+      "lint",
+      "lint:check",
+      "monitoring:start",
+      "monitoring:stop",
+      "postinstall",
+      "preinstall",
+      "prepare",
+      "release",
+      "release:dry",
+      "security:audit",
+      "security:scan",
+      "start",
+      "test",
+      "test:e2e",
+      "test:integration",
+      "test:unit",
+      "test:watch",
+      "type-check",
+      "validate"
+    ],
+    "version": "1.0.0"
+  },
+  "root": {
+    "exists": true,
+    "path": "/home/nic/identity-vault"
+  },
+  "sensitive_files": [
+    {
+      "exists": true,
+      "mode": "0o664",
+      "path": "/home/nic/identity-vault/.env",
+      "relative_path": "identity-vault/.env",
+      "sha256": "cf889320efcfdfa308b810d435219af658dc1ff33bb4f9229a8d9c33ca8dc2f2",
+      "size": 1605
+    },
+    {
+      "exists": true,
+      "mode": "0o664",
+      "path": "/home/nic/identity-vault/.env.example",
+      "relative_path": "identity-vault/.env.example",
+      "sha256": "7a03ca41c258f7d900899466561662c58e60158f490d9a220ac47467ac8f5274",
+      "size": 6787
+    }
+  ],
+  "service_contract_draft": {
+    "allowed_reads": [
+      "package.json metadata",
+      "README and documentation metadata",
+      "SQLite schema and row counts using read-only connections",
+      "agent profile metadata after explicit adapter approval",
+      "identity-to-RMC namespace pointers after explicit adapter approval"
+    ],
+    "allowed_writes": [],
+    "audit_requirement": "Every future Identity Vault read must be logged by Forge with timestamp, requested identity, purpose, and result metadata; never log secret values.",
+    "canonical_database_path": "/home/nic/identity-vault/data/identity_vault.db",
+    "contract_name": "identity_vault_readonly_service_contract_draft",
+    "controlled_by": "Forge",
+    "forbidden_reads": [
+      ".env secret values",
+      "raw tokens, private keys, JWT secrets, API keys, passwords",
+      "full private memory payloads unless routed through approved RMC boundary"
+    ],
+    "forbidden_writes": [
+      "Identity Vault databases",
+      ".env",
+      "node_modules",
+      "agent identity state",
+      "RMC memory",
+      "Forge tool registry"
+    ],
+    "future_adapter_rules": [
+      "Forge may ask Identity Vault who an agent is.",
+      "Forge may ask what permissions an agent has.",
+      "Forge may ask which RMC namespace belongs to an agent.",
+      "Forge may not execute agents inside Identity Vault.",
+      "Forge may not let Identity Vault directly call tools or write memory."
+    ],
+    "root": "/home/nic/identity-vault",
+    "service": "Identity Vault",
+    "service_role": "Agent identity, permissions, profile metadata, and memory namespace pointers. It is not an agent runtime and not the shared memory store.",
+    "status": "DRAFT_NOT_ACTIVE",
+    "version": "0.1.0-plan-only"
+  },
+  "timestamp": "20260523_193303_UTC",
+  "verdict": "PASS"
+}

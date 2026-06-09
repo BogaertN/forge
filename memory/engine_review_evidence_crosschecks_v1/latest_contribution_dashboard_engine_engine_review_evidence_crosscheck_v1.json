@@ -1,0 +1,272 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "9cdadc600cb2a84a4c928da8375db9fae0726565394db3e245bb448dd9f21066",
+      "excerpt_start": "import json\nimport os\nimport time\n\nCONTRIBUTION_LOG = \"../compute_contribution_engine_frozen_v1/contribution_log.jsonl\"\nTOKEN_LEDGER = \"../awh_token_runtime_frozen_v1/token_ledger.json\"\nDASHBOARD_OUTPUT = \"dashboard_output.json\"\n\ndef generate_dashboard():\n    contributions = []\n    tokens = []\n\n    # Read contribution events\n    try:\n        with open(CONTRIBUTION_LOG, \"r\") as f:\n            for line in f:\n                contributions.append(json.loads(line.strip()))\n    except Exception as e:\n        print(f\"[!] Failed to read contributions: {e}\")\n\n    # Read token ledger\n    try:\n        with open(TOKEN_LEDGER, \"r\") as f:\n            tokens = json.load(f)\n    except Exception as e:\n        print(f\"[!] Failed to read tokens: {e}\")\n\n    dashboard = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"total_contributions\": len(contributions),\n        \"total_tokens_earned\": sum(entry.get(\"tokens_earned\", 0) for entry in tokens),\n        \"recent_contributors\": [c.get(\"contributor_id\", \"unknown\") for c in contributions[-5:]]\n    }\n\n    try:\n        with open(DASHBOARD_OUTPUT, \"w\") as f:\n            json.dump(dashboard, f, indent=2)\n        print(f\"\u2714\ufe0f Dashboard generated: {dashboard}\")\n    except Exception as e:\n        print(f\"[!] Failed to write dashboard output: {e}\")\n\n    return dashboard\n",
+      "functions_sample": [
+        "generate_dashboard"
+      ],
+      "imports_sample": [
+        "import json",
+        "import os",
+        "import time"
+      ],
+      "line_count": 43,
+      "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/dashboard_core.py",
+      "relative_to_candidate": "dashboard_core.py",
+      "sha256": "9cdadc600cb2a84a4c928da8375db9fae0726565394db3e245bb448dd9f21066",
+      "size_bytes": 1345
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "788e3f47075e55c3ac20ec09c758a9f1b27b87ef50c7b270d11731789005d1bd",
+      "excerpt_start": "from dashboard_core import generate_dashboard\n\ndef test_dashboard_generation():\n    try:\n        result = generate_dashboard()\n        print(\"\u2705 Test Passed: Dashboard generated.\")\n        print(result)\n    except Exception as e:\n        print(f\"\u274c Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_dashboard_generation()\n",
+      "functions_sample": [
+        "test_dashboard_generation"
+      ],
+      "imports_sample": [
+        "from dashboard_core import generate_dashboard"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/test_contribution_dashboard.py",
+      "relative_to_candidate": "test_contribution_dashboard.py",
+      "sha256": "788e3f47075e55c3ac20ec09c758a9f1b27b87ef50c7b270d11731789005d1bd",
+      "size_bytes": 330
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "604aa8576157225f44dc708d89e73a40767823e765be970cd5d3757be9ffab8a",
+      "excerpt_start": "# Contribution Dashboard Engine\n\nAggregates symbolic contributions and AWH token earnings into a human-readable dashboard output (`dashboard_output.json`).\n\nDesigned for integration with UI panels and reward systems.\n",
+      "functions_sample": [
+        "Contribution",
+        "Dashboard",
+        "Engine",
+        "Aggregates",
+        "symbolic",
+        "contributions",
+        "and",
+        "AWH",
+        "token",
+        "earnings",
+        "into",
+        "human",
+        "readable",
+        "dashboard",
+        "output",
+        "dashboard_output",
+        "json",
+        "Designed",
+        "for",
+        "integration",
+        "with",
+        "panels",
+        "reward",
+        "systems"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "604aa8576157225f44dc708d89e73a40767823e765be970cd5d3757be9ffab8a",
+      "size_bytes": 217
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "00a3ddfaa314ef9ffc1d4153dde548312bbf3b513bd0d68aa05cbc71663aff44",
+      "excerpt_start": "{\n  \"timestamp\": \"2025-04-25T23:08:22Z\",\n  \"total_contributions\": 0,\n  \"total_tokens_earned\": 0,\n  \"recent_contributors\": []\n}",
+      "functions_sample": [
+        "timestamp",
+        "total_contributions",
+        "total_tokens_earned",
+        "recent_contributors"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/dashboard_output.json",
+      "relative_to_candidate": "dashboard_output.json",
+      "sha256": "00a3ddfaa314ef9ffc1d4153dde548312bbf3b513bd0d68aa05cbc71663aff44",
+      "size_bytes": 126
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "7320ae4d759c466b26ce4b4fb2ab0d52641678033e5343e37f83602d4ecb099e",
+      "excerpt_start": "{\n  \"engine\": \"contribution_dashboard_engine\",\n  \"version\": \"v1.0\",\n  \"status\": \"build_mode\",\n  \"description\": \"Aggregates contributions and AWH token earnings into a single dashboard output.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "contribution_dashboard_engine",
+        "version",
+        "status",
+        "build_mode",
+        "description",
+        "Aggregates",
+        "contributions",
+        "and",
+        "AWH",
+        "token",
+        "earnings",
+        "into",
+        "single",
+        "dashboard",
+        "output"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "7320ae4d759c466b26ce4b4fb2ab0d52641678033e5343e37f83602d4ecb099e",
+      "size_bytes": 195
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/contribution_dashboard_engine",
+  "created_at": "2026-05-16_080852",
+  "crosscheck_id": "ERE-contribution_dashboard_engine-2026-05-16_080852",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "AWH",
+      "Aggregates",
+      "Contribution",
+      "Dashboard",
+      "Designed",
+      "Engine",
+      "and",
+      "build_mode",
+      "contribution_dashboard_engine",
+      "contributions",
+      "dashboard",
+      "dashboard_output",
+      "description",
+      "earnings",
+      "engine",
+      "for",
+      "generate_dashboard",
+      "human",
+      "integration",
+      "into"
+    ],
+    "imports_sample": [
+      "from dashboard_core import generate_dashboard",
+      "import json",
+      "import os",
+      "import time"
+    ],
+    "likely_system_role": "ui_control_panel",
+    "plain_english_purpose": "`contribution_dashboard_engine` appears to be a local AI.Web engine/component. The bound source evidence includes 5 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "Inferred from engine family keyword `dashboard` plus bound code evidence.",
+    "source_excerpt_samples": [
+      "import json import os",
+      "from dashboard_core import generate_dashboard ",
+      "# Contribution Dashboard Engine ",
+      "{   \"timestamp\": \"2025-04-25T23:08:22Z\","
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080827_contribution_dashboard_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "53aa4b60c972dbe754d9016147f80f4c6f5cb3e58f105a92e9ed8b48bb83024e",
+  "engine_family": "contribution_dashboard_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_contribution_dashboard_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "6486643ffc1d2df2f376fe9841c2fd1230b94096fd7fe4cd9e3bfa5f5996bb03",
+  "evidence_id": "EEB-505effd8a0bf2be3",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "dashboard_core.py",
+      "test_contribution_dashboard.py",
+      "README.md",
+      "dashboard_output.json",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "Contribution",
+      "Dashboard",
+      "Engine",
+      "contributions",
+      "and",
+      "AWH",
+      "token",
+      "earnings",
+      "into",
+      "human",
+      "readable",
+      "dashboard",
+      "output",
+      "dashboard_output",
+      "json",
+      "for",
+      "integration",
+      "with",
+      "reward",
+      "timestamp",
+      "engine",
+      "status",
+      "build_mode"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "import time",
+      "from dashboard_core import generate_dashboard"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 24.665,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "08af64a0ca8e7109cbf002000233985626f7520bcfb60b29a2bf733a3c836176",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nAggregate user contributions and AWH token earnings into a structured dashboard output for UI integration and reward system tracking.  \n\nLikely System Role:  \nA data aggregation and reporting tool that synthesizes contribution events and token ledger data into a human-readable JSON format for display or analysis.  \n\nEvidence Used:  \n- `dashboard_core.py`: Reads contribution logs and token ledgers, generates a dashboard JSON output.  \n- `test_contribution_dashboard.py`: Validates dashboard generation with error handling.  \n- `README.md`: Describes the engine's purpose as a contribution/earnings aggregator.  \n- `dashboard_output.json`: Example output structure with timestamp, totals, and recent contributors.  \n- `engine_manifest.json`: Officially defines the engine's role and status as \"build_mode\".  \n\nRisks / Uncertainties:  \n- Code is in Python but lacks dependency declarations or environment setup guidance.  \n- Test script is minimal; no evidence of comprehensive testing for edge cases.  \n- Dashboard output is static JSON; no indication of real-time updates or UI integration details.  \n- \"build_mode\" status suggests it may not be production-ready yet.  \n\nRecommendation Draft:  \nApprove the engine for limited use while noting the need for:  \n1. Full testing of error handling and edge cases.  \n2. Clarification on real-time data refresh mechanisms.  \n3. Documentation of dependencies and deployment requirements.  \n\nSuggested Nic Action:  \nApprove the review with caveats, but delay production deployment until testing confirms reliability. Request additional validation of real-time capabilities and output persistence mechanisms."
+  },
+  "llm_sections": {
+    "evidence_used": "- `dashboard_core.py`: Reads contribution logs and token ledgers, generates a dashboard JSON output.  \n- `test_contribution_dashboard.py`: Validates dashboard generation with error handling.  \n- `README.md`: Describes the engine's purpose as a contribution/earnings aggregator.  \n- `dashboard_output.json`: Example output structure with timestamp, totals, and recent contributors.  \n- `engine_manifest.json`: Officially defines the engine's role and status as \"build_mode\".",
+    "likely_system_role": "A data aggregation and reporting tool that synthesizes contribution events and token ledger data into a human-readable JSON format for display or analysis.",
+    "plain_english_purpose": "Aggregate user contributions and AWH token earnings into a structured dashboard output for UI integration and reward system tracking.",
+    "recommendation_draft": "Approve the engine for limited use while noting the need for:  \n1. Full testing of error handling and edge cases.  \n2. Clarification on real-time data refresh mechanisms.  \n3. Documentation of dependencies and deployment requirements.",
+    "risks_uncertainties": "- Code is in Python but lacks dependency declarations or environment setup guidance.  \n- Test script is minimal; no evidence of comprehensive testing for edge cases.  \n- Dashboard output is static JSON; no indication of real-time updates or UI integration details.  \n- \"build_mode\" status suggests it may not be production-ready yet.",
+    "suggested_nic_action": "Approve the review with caveats, but delay production deployment until testing confirms reliability. Request additional validation of real-time capabilities and output persistence mechanisms."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nAggregate user contributions and AWH token earnings into a structured dashboard output for UI integration and reward system tracking.  \n\nLikely System Role:  \nA data aggregation and reporting tool that synthesizes contribution events and token ledger data into a human-readable JSON format for display or analysis.  \n\nEvidence Used:  \n- `dashboard_core.py`: Reads contribution logs and token ledgers, generates a dashboard JSON output.  \n- `test_contribution_dashboard.py`: Validates dashboard generation with error handling.  \n- `README.md`: Describes the engine's purpose as a contribution/earnings aggregator.  \n- `dashboard_output.json`: Example output structure with timestamp, totals, and recent contributors.  \n- `engine_manifest.json`: Officially defines the engine's role and status as \"build_mode\".  \n\nRisks / Uncertainties:  \n- Code is in Python but lacks dependency declarations or environment setup guidance.  \n- Test script is minimal; no evidence of comprehensive testing for edge cases.  \n- Dashboard output is static JSON; no indication of real-time updates or UI integration details.  \n- \"build_mode\" status suggests it may not be production-ready yet.  \n\nRecommendation Draft:  \nApprove the engine for limited use while noting the need for:  \n1. Full testing of error handling and edge cases.  \n2. Clarification on real-time data refresh mechanisms.  \n3. Documentation of dependencies and deployment requirements.  \n\nSuggested Nic Action:  \nApprove the review with caveats, but delay production deployment until testing confirms reliability. Request additional validation of real-time capabilities and output persistence mechanisms.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "report_type": "ENGINE_REVIEW_CYCLE_EXPORT_V1_PATCH110",
+  "created_at": "2026-05-15_152013",
+  "reports": [
+    "/home/nic/forge/memory/engine_review_cycle_v1/2026-05-15_151939_engine_review_cycle_report_v1.json",
+    "/home/nic/forge/memory/engine_review_cycle_v1/2026-05-15_151959_engine_review_cycle_report_v1.json",
+    "/home/nic/forge/memory/engine_review_cycle_v1/latest_engine_review_cycle_report_v1.json"
+  ],
+  "latest": "/home/nic/forge/memory/engine_review_cycle_v1/latest_engine_review_cycle_report_v1.json",
+  "authority": {
+    "read_only": true,
+    "ledger_mutation": false,
+    "engine_file_writes": false,
+    "lockfile_authority": false
+  }
+}

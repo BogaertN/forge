@@ -1,0 +1,53 @@
+{
+  "_comment": "These paths are ALWAYS blocked. No approval overrides them.",
+  "blocked_exact": [
+    "/home/nic/.ssh",
+    "/home/nic/.gnupg",
+    "/home/nic/.git-credentials",
+    "/home/nic/.npmrc",
+    "/home/nic/.ollama",
+    "/home/nic/.config",
+    "/home/nic/.cache",
+    "/home/nic/.local",
+    "/home/nic/.pki",
+    "/home/nic/.nv",
+    "/home/nic/.streamlit",
+    "/home/nic/identity-vault",
+    "/home/nic/identity-vault-aiwebhq"
+  ],
+  "blocked_patterns": [
+    "*.env",
+    "*.key",
+    "*.pem",
+    "*.p12",
+    "*.pfx",
+    "*token*",
+    "*secret*",
+    "*credential*",
+    "*password*",
+    "*passwd*",
+    "*.git-credentials",
+    "*id_rsa*",
+    "*id_ed25519*",
+    "*authorized_keys*",
+    "*.npmrc",
+    "*.pypirc",
+    "*wallet*",
+    "*keystore*",
+    "shadow",
+    "passwd",
+    "*.ovpn"
+  ],
+  "blocked_directories": [
+    ".ssh",
+    ".gnupg",
+    ".config/google-chrome",
+    ".config/chromium",
+    ".mozilla",
+    ".cache",
+    ".git-credentials",
+    "node_modules",
+    "__pycache__",
+    ".venv/lib"
+  ]
+}

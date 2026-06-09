@@ -1,0 +1,27 @@
+FORGE PATCH DIFF PREVIEW
+══════════════════════════════════════════════════════════════════
+Proposal file   : /home/nic/forge/proposed_patches/2026-05-09_150857_PATCH_README_md.txt
+Target file     : /home/nic/aiweb/README.md
+Timestamp       : 2026-05-09T15:09:47
+Session ID      : forge_2026_05_09_150557
+Snippet found   : YES
+══════════════════════════════════════════════════════════════════
+
+--- a/README.md  (current)
++++ b/README.md  (proposed)
+@@ -25,3 +25,5 @@
+ **Author:** AI.Web Core System
+
+ 
+
+ **Maintenance:** Future changes should move through Forge's audited patch lifecycle before application.
+
++
+
++**Field Test:** Level 4.4 fresh readback confirmed through Forge.
+
+
+══════════════════════════════════════════════════════════════════
+No project files were modified by this diff preview.
+Apply the change manually by editing the target file.
+══════════════════════════════════════════════════════════════════

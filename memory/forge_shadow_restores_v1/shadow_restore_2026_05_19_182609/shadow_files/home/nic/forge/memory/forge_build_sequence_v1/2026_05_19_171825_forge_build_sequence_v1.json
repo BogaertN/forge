@@ -1,0 +1,193 @@
+{
+  "active_patch": "Patch 147 \u2014 Dashboard Roadmap Panel",
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "server_started": false,
+    "shell_execution_authority": false
+  },
+  "blocked_items": [],
+  "build_phase_gate": {
+    "gate_fail_count": 0,
+    "gate_pass_count": 8,
+    "gate_warn_count": 0,
+    "status": "FORGE_BUILD_PHASE_GATE_READY"
+  },
+  "build_sequence": [
+    {
+      "id": "S01",
+      "purpose": "Base command surface, scoped reads, patch gates, audit chain, rollback discipline.",
+      "status": "DONE",
+      "title": "Patch law / audit / exact truth"
+    },
+    {
+      "id": "S02",
+      "purpose": "Document intake, source-gap reports, dry-run ingestion, receipts, and context library.",
+      "status": "DONE",
+      "title": "Corpus and source authority foundations"
+    },
+    {
+      "id": "S03",
+      "purpose": "Index code, identify engine families, map runtime roles, and separate code memory from document memory.",
+      "status": "DONE",
+      "title": "Codebase index and symbolic runtime map"
+    },
+    {
+      "id": "S04",
+      "purpose": "Sandbox planning/runs, safe test inventory, canonical test run, and test binding gates.",
+      "status": "DONE",
+      "title": "Sandbox and test harness"
+    },
+    {
+      "id": "S05",
+      "purpose": "Human review ledger, final lockfile, deferral handling, disposition report, and canonical test pass.",
+      "status": "DONE",
+      "title": "Canonical engine authority"
+    },
+    {
+      "id": "S06",
+      "purpose": "Related-file map, risk neighbors, patch impact map, runtime role risk scoring.",
+      "status": "DONE",
+      "title": "Relationship / impact intelligence"
+    },
+    {
+      "id": "S07",
+      "purpose": "Machine-readable status and static dashboard gauges before any dashboard levers.",
+      "status": "DONE",
+      "title": "Status API and read-only dashboard"
+    },
+    {
+      "id": "S08",
+      "purpose": "Define command modes and check allowed commands before hard blocking.",
+      "status": "DONE",
+      "title": "Mode registry and permission matrix"
+    },
+    {
+      "id": "S09",
+      "purpose": "Make Forge show the full build path with current, next, deferred, and blocked work.",
+      "status": "DONE",
+      "title": "Roadmap-grounded build sequence"
+    },
+    {
+      "id": "S10",
+      "purpose": "Keep deferred repair targets visible without letting them hijack the main roadmap.",
+      "status": "DONE",
+      "title": "Deferred engine repair queue"
+    },
+    {
+      "id": "S11",
+      "purpose": "Decide whether the next patch family is eligible based on required state, artifacts, tests, and stale-report checks.",
+      "status": "DONE",
+      "title": "Build phase gate checker"
+    },
+    {
+      "id": "S12",
+      "purpose": "Expose the full roadmap, gate status, deferred queue, and next patch as dashboard panels without adding write controls.",
+      "status": "ACTIVE",
+      "title": "Dashboard roadmap panel"
+    },
+    {
+      "id": "S13",
+      "purpose": "Bind canonical engines to source-law / implementation / validation documents with stronger gap reporting.",
+      "status": "NEXT",
+      "title": "Source Authority Runtime Binder hardening"
+    },
+    {
+      "id": "S14",
+      "purpose": "Allow local LLM proposals only inside verified source, scope, tests, rollback, and readiness structure.",
+      "status": "READY",
+      "title": "LLM patch proposal v2"
+    },
+    {
+      "id": "S15",
+      "purpose": "One readiness surface for source grounding, scope, snapshot, sandbox, tests, rollback, and human approval.",
+      "status": "READY",
+      "title": "Live apply eligibility gate v2"
+    },
+    {
+      "id": "S16",
+      "purpose": "Project-state snapshots, shadow restore, diffs, and replay before multi-file writes.",
+      "status": "READY",
+      "title": "Snapshot / forensic replay"
+    },
+    {
+      "id": "S17",
+      "purpose": "Turn read-only dashboard gauges into clearer operator panels before any levers exist.",
+      "status": "FUTURE",
+      "title": "Dashboard v2 / operator control panel"
+    },
+    {
+      "id": "S18",
+      "purpose": "Use Forge to safely build Gilligan, Athena, Neo, memory stack, ChristPing listener, drift arbitration, SPC, loop resurrection, plugin loader, and UI.",
+      "status": "FUTURE",
+      "title": "AI.Web runtime build through Forge"
+    },
+    {
+      "id": "S19",
+      "purpose": "Installer, recovery script, user/dev/audit guides, export tool, GitHub release, and offline restore package.",
+      "status": "FUTURE",
+      "title": "Freeze / release / recovery package"
+    }
+  ],
+  "created_at": "2026-05-19T17:18:25",
+  "current_phase": "S12 \u2014 Dashboard roadmap panel",
+  "dashboard_roadmap_panel": {
+    "latest_path": "/home/nic/forge/memory/forge_dashboard_roadmap_panel_v1/latest_forge_dashboard_roadmap_panel_v1.json",
+    "panel_count": 4,
+    "status": "FORGE_DASHBOARD_ROADMAP_PANEL_READY"
+  },
+  "deferred_items": [
+    {
+      "name": "stack_linker_breather",
+      "reason": "Deferred and excluded from canonical lockfile; visible in deferred repair queue for later dependency/sandbox repair."
+    },
+    {
+      "name": "excluded/deferred engine set",
+      "reason": "26 queue rows tracked; no delete/quarantine/promote action authorized."
+    }
+  ],
+  "deferred_queue": {
+    "next_repair_target": "stack_linker_breather",
+    "queue_total": 26,
+    "repair_ready_count": 1,
+    "status": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY"
+  },
+  "next_commands": [
+    "forge-dashboard-roadmap-build",
+    "forge-status-api-build",
+    "forge-dashboard-build",
+    "Install Patch 148 when ready"
+  ],
+  "next_patch": "Patch 148 \u2014 Source Authority Runtime Binder Hardening",
+  "plain_english": "Forge now exposes the roadmap, gate status, and deferred queue as a dashboard roadmap panel and advances the main build to source-authority binder hardening.",
+  "recommended_next_patch": "Patch 148 \u2014 Source Authority Runtime Binder Hardening",
+  "report_type": "FORGE_BUILD_SEQUENCE_V1",
+  "schema_version": "forge_build_sequence_v1_patch147",
+  "status": "FORGE_BUILD_SEQUENCE_READY",
+  "verified_state": {
+    "build_gate_fail_count": 0,
+    "build_gate_pass_count": 8,
+    "build_gate_status": "FORGE_BUILD_PHASE_GATE_READY",
+    "build_gate_warn_count": 0,
+    "canonical_excluded": 26,
+    "canonical_included": 54,
+    "dashboard_next_patch": "Patch 147 \u2014 Dashboard Roadmap Panel",
+    "dashboard_roadmap_panel_count": 4,
+    "dashboard_roadmap_panel_status": "FORGE_DASHBOARD_ROADMAP_PANEL_READY",
+    "deferred_queue_status": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY",
+    "deferred_queue_total": 26,
+    "expected_commands": 532,
+    "latest_test_fail": 0,
+    "latest_test_pass": 67,
+    "latest_test_status": "CANONICAL_TEST_RUN_COMPLETED_ALL_PASS",
+    "patch_impact_high_risk": 0,
+    "patch_impact_status": "PATCH_IMPACT_MAP_READY",
+    "patch_impact_test_issues": 0,
+    "status_api_next_patch": "Patch 147 \u2014 Dashboard Roadmap Panel",
+    "tools": 456,
+    "trust_level": 5.0
+  }
+}

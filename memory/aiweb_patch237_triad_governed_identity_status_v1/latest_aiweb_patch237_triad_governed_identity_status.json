@@ -1,0 +1,347 @@
+{
+  "agents": {
+    "athena.local": {
+      "activation_report": "/home/nic/forge/memory/aiweb_patch235b_athena_activation_verify_v1/latest_aiweb_patch235b_athena_activation_verify.json",
+      "activation_verdict": "ATHENA_ACTIVATION_VERIFIED_ACTIVE_GOVERNED",
+      "activation_verified": true,
+      "agent_id": "athena.local",
+      "boundary_flags": {
+        "autonomous_execution": false,
+        "identity_written_in_verification_reports": false,
+        "private_memory_exposure": false,
+        "rmc_memory_written_in_verification_reports": false,
+        "secret_reads_granted": false
+      },
+      "handshake_report": "/home/nic/forge/memory/aiweb_patch235d_athena_governed_handshake_receipt_verify_v1/latest_aiweb_patch235d_athena_governed_handshake_receipt_verify.json",
+      "handshake_verdict": "ATHENA_GOVERNED_HANDSHAKE_RECEIPT_VERIFIED",
+      "handshake_verified": true,
+      "profile": {
+        "activation_state": "active_governed",
+        "is_active": true,
+        "last_validated_at": "2026-05-24T11:00:21Z",
+        "profile_hash": "073115d88626d43eacab4b0e0aa6ae20c79cbedfaf42befea52c44e0ad3c2b1b"
+      },
+      "receipt_hash": "e8fd29022c2faa658796b1055f7ea2f83690f4739417bb8e4b08955612e2f705",
+      "receipt_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/receipts/athena_handshake_test_20260524_112635_UTC.json",
+      "role_boundary": "governance_strategy_review_only",
+      "test_receipt_report": "/home/nic/forge/memory/aiweb_patch235f_rmc_controlled_athena_test_receipt_verify_v1/latest_aiweb_patch235f_rmc_controlled_athena_test_receipt_verify.json",
+      "test_receipt_verdict": "RMC_TEST_RECEIPT_VERIFIED_GOVERNED_ATHENA",
+      "test_receipt_verified": true
+    },
+    "gilligan.local": {
+      "activation_report": "/home/nic/forge/memory/aiweb_patch232c_gilligan_activation_verify_v1/latest_aiweb_patch232c_gilligan_activation_verify.json",
+      "activation_verdict": "GILLIGAN_ACTIVATION_VERIFIED_ACTIVE_GOVERNED",
+      "activation_verified": true,
+      "agent_id": "gilligan.local",
+      "boundary_flags": {
+        "autonomous_execution": false,
+        "identity_written_in_verification_reports": false,
+        "private_memory_exposure": false,
+        "rmc_memory_written_in_verification_reports": false,
+        "secret_reads_granted": false
+      },
+      "handshake_report": "/home/nic/forge/memory/aiweb_patch233a_gilligan_governed_handshake_receipt_verify_v1/latest_aiweb_patch233a_gilligan_governed_handshake_receipt_verify.json",
+      "handshake_verdict": "GILLIGAN_GOVERNED_HANDSHAKE_RECEIPT_VERIFIED",
+      "handshake_verified": true,
+      "profile": {
+        "activation_state": "active_governed",
+        "is_active": true,
+        "last_validated_at": "2026-05-24T01:11:03Z",
+        "profile_hash": "5b4f576f57903bc8a3ab79f41214cb75667f844a7df99e7a96be09a1868373bd"
+      },
+      "receipt_hash": "ffaa2e2dc1ac21007e9b41873d64b92ab51370ce12a05ba87deb70c8f4f98c28",
+      "receipt_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/receipts/handshake_test_20260524_101634_UTC.json",
+      "role_boundary": "development_copilot_governed_context",
+      "test_receipt_report": "/home/nic/forge/memory/aiweb_patch234a_rmc_controlled_test_receipt_verify_v1/latest_aiweb_patch234a_rmc_controlled_test_receipt_verify.json",
+      "test_receipt_verdict": "RMC_TEST_RECEIPT_VERIFIED_GOVERNED_GILLIGAN",
+      "test_receipt_verified": true
+    },
+    "neo.local": {
+      "activation_report": "/home/nic/forge/memory/aiweb_patch236b_neo_activation_verify_v1/latest_aiweb_patch236b_neo_activation_verify.json",
+      "activation_verdict": "NEO_ACTIVATION_VERIFIED_ACTIVE_GOVERNED",
+      "activation_verified": true,
+      "agent_id": "neo.local",
+      "boundary_flags": {
+        "autonomous_execution": false,
+        "identity_written_in_verification_reports": false,
+        "private_memory_exposure": false,
+        "rmc_memory_written_in_verification_reports": false,
+        "secret_reads_granted": false
+      },
+      "handshake_report": "/home/nic/forge/memory/aiweb_patch236d_neo_governed_handshake_receipt_verify_v1/latest_aiweb_patch236d_neo_governed_handshake_receipt_verify.json",
+      "handshake_verdict": "NEO_GOVERNED_HANDSHAKE_RECEIPT_VERIFIED",
+      "handshake_verified": true,
+      "profile": {
+        "activation_state": "active_governed",
+        "is_active": true,
+        "last_validated_at": "2026-05-24T11:56:38Z",
+        "profile_hash": "df922d109948a5e5f29d647422a22145467720577ed80ffe27da783f07cae537"
+      },
+      "receipt_hash": "174adc1c00d0354dd954e1db000f482969d90bf238c5615be4bdce233c07104e",
+      "receipt_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/receipts/neo_handshake_test_20260524_121937_UTC.json",
+      "role_boundary": "public_frontline_support_context_only",
+      "test_receipt_report": "/home/nic/forge/memory/aiweb_patch236f_rmc_controlled_neo_test_receipt_verify_v1/latest_aiweb_patch236f_rmc_controlled_neo_test_receipt_verify.json",
+      "test_receipt_verdict": "RMC_TEST_RECEIPT_VERIFIED_GOVERNED_NEO",
+      "test_receipt_verified": true
+    }
+  },
+  "blockers": [],
+  "checks": [
+    {
+      "blocker": null,
+      "detail": "state=active_governed active=True",
+      "key": "gilligan_local_profile_active_governed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "5b4f576f57903bc8a3ab79f41214cb75667f844a7df99e7a96be09a1868373bd",
+      "key": "gilligan_local_profile_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "verdict=GILLIGAN_ACTIVATION_VERIFIED_ACTIVE_GOVERNED ok=True path=/home/nic/forge/memory/aiweb_patch232c_gilligan_activation_verify_v1/latest_aiweb_patch232c_gilligan_activation_verify.json",
+      "key": "gilligan_local_activation_verified",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "verdict=GILLIGAN_GOVERNED_HANDSHAKE_RECEIPT_VERIFIED ok=True path=/home/nic/forge/memory/aiweb_patch233a_gilligan_governed_handshake_receipt_verify_v1/latest_aiweb_patch233a_gilligan_governed_handshake_receipt_verify.json",
+      "key": "gilligan_local_handshake_verified",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "verdict=RMC_TEST_RECEIPT_VERIFIED_GOVERNED_GILLIGAN ok=True path=/home/nic/forge/memory/aiweb_patch234a_rmc_controlled_test_receipt_verify_v1/latest_aiweb_patch234a_rmc_controlled_test_receipt_verify.json",
+      "key": "gilligan_local_test_receipt_verified",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "gilligan_local_verification_reports_no_identity_write",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "gilligan_local_verification_reports_no_rmc_memory_write",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "gilligan_local_no_autonomous_execution",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "gilligan_local_no_secret_reads",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "gilligan_local_no_private_memory_exposure",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "state=active_governed active=True",
+      "key": "athena_local_profile_active_governed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "073115d88626d43eacab4b0e0aa6ae20c79cbedfaf42befea52c44e0ad3c2b1b",
+      "key": "athena_local_profile_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "verdict=ATHENA_ACTIVATION_VERIFIED_ACTIVE_GOVERNED ok=True path=/home/nic/forge/memory/aiweb_patch235b_athena_activation_verify_v1/latest_aiweb_patch235b_athena_activation_verify.json",
+      "key": "athena_local_activation_verified",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "verdict=ATHENA_GOVERNED_HANDSHAKE_RECEIPT_VERIFIED ok=True path=/home/nic/forge/memory/aiweb_patch235d_athena_governed_handshake_receipt_verify_v1/latest_aiweb_patch235d_athena_governed_handshake_receipt_verify.json",
+      "key": "athena_local_handshake_verified",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "verdict=RMC_TEST_RECEIPT_VERIFIED_GOVERNED_ATHENA ok=True path=/home/nic/forge/memory/aiweb_patch235f_rmc_controlled_athena_test_receipt_verify_v1/latest_aiweb_patch235f_rmc_controlled_athena_test_receipt_verify.json",
+      "key": "athena_local_test_receipt_verified",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "athena_local_verification_reports_no_identity_write",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "athena_local_verification_reports_no_rmc_memory_write",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "athena_local_no_autonomous_execution",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "athena_local_no_secret_reads",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "athena_local_no_private_memory_exposure",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "state=active_governed active=True",
+      "key": "neo_local_profile_active_governed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "df922d109948a5e5f29d647422a22145467720577ed80ffe27da783f07cae537",
+      "key": "neo_local_profile_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "verdict=NEO_ACTIVATION_VERIFIED_ACTIVE_GOVERNED ok=True path=/home/nic/forge/memory/aiweb_patch236b_neo_activation_verify_v1/latest_aiweb_patch236b_neo_activation_verify.json",
+      "key": "neo_local_activation_verified",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "verdict=NEO_GOVERNED_HANDSHAKE_RECEIPT_VERIFIED ok=True path=/home/nic/forge/memory/aiweb_patch236d_neo_governed_handshake_receipt_verify_v1/latest_aiweb_patch236d_neo_governed_handshake_receipt_verify.json",
+      "key": "neo_local_handshake_verified",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "verdict=RMC_TEST_RECEIPT_VERIFIED_GOVERNED_NEO ok=True path=/home/nic/forge/memory/aiweb_patch236f_rmc_controlled_neo_test_receipt_verify_v1/latest_aiweb_patch236f_rmc_controlled_neo_test_receipt_verify.json",
+      "key": "neo_local_test_receipt_verified",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "neo_local_verification_reports_no_identity_write",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "neo_local_verification_reports_no_rmc_memory_write",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "neo_local_no_autonomous_execution",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "neo_local_no_secret_reads",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "neo_local_no_private_memory_exposure",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "True",
+      "key": "triad_all_active_governed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "True",
+      "key": "triad_all_activation_verified",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "True",
+      "key": "triad_all_handshakes_verified",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "True",
+      "key": "triad_all_test_receipts_verified",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "True",
+      "key": "triad_boundary_not_crossed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "Phase 11 not started in Patch 237",
+      "key": "protoforge2_not_executed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "Phase 12 not started in Patch 237",
+      "key": "echoforge_not_executed",
+      "ok": true
+    }
+  ],
+  "checks_passed": 37,
+  "checks_total": 37,
+  "generated_at_utc": "20260524_123308_UTC",
+  "name": "Triad Governed Identity Status + Boundary Summary",
+  "ok": true,
+  "patch": "237",
+  "phase_11_next_plan": {
+    "boundary": "read-only filesystem discovery; no execution; no service contract update yet",
+    "expected_roots": [
+      "/home/nic/protoforge2",
+      "/home/nic/ProtoForge2",
+      "/home/nic/aiweb/protoforge2",
+      "/home/nic/forge/protoforge2"
+    ],
+    "name": "ProtoForge2 Discovery Scan",
+    "next_patch": "238"
+  },
+  "verdict": "TRIAD_GOVERNED_IDENTITY_BOUNDARY_VERIFIED",
+  "writes_performed": {
+    "agent_memory_written": false,
+    "autonomous_tool_execution_performed": false,
+    "echoforge_creation_performed": false,
+    "forge_owned_patch237_report": true,
+    "full_chat_content_written": false,
+    "identity_vault_database_written": false,
+    "long_term_memory_written": false,
+    "private_memory_written": false,
+    "protoforge2_execution_performed": false,
+    "rmc_memory_written": false,
+    "rmc_test_receipt_written": false,
+    "secret_values_read": false,
+    "secret_values_written": false,
+    "shared_memory_written": false
+  }
+}

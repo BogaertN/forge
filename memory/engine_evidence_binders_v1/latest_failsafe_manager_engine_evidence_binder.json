@@ -1,0 +1,183 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/failsafe_manager",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/failsafe_manager",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "failsafe_manager",
+  "evidence_id": "EEB-31299b3bb67a4c24",
+  "file_count": 5,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "4b53cf65fbcda940c80b44187d36a9d25a55c9614971b7d33034a8b3ad71f249",
+      "excerpt_start": "# Failsafe Manager Engine\n\nThis engine monitors symbolic system stability and can trigger emergency actions during critical faults.\nCurrently running basic simulations for integrity checks.\n",
+      "functions_sample": [
+        "Failsafe",
+        "Manager",
+        "Engine",
+        "This",
+        "engine",
+        "monitors",
+        "symbolic",
+        "system",
+        "stability",
+        "and",
+        "can",
+        "trigger",
+        "emergency",
+        "actions",
+        "during",
+        "critical",
+        "faults",
+        "Currently",
+        "running",
+        "basic",
+        "simulations",
+        "for",
+        "integrity",
+        "checks"
+      ],
+      "imports_sample": [],
+      "line_count": 5,
+      "path": "/home/nic/aiweb/engines/failsafe_manager/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "4b53cf65fbcda940c80b44187d36a9d25a55c9614971b7d33034a8b3ad71f249",
+      "size_bytes": 190,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "32356befa5ef8bd815babe6f2f9809f886bf889904891ab65c13643cc4e46bf8",
+      "excerpt_start": "{\n  \"engine\": \"Failsafe Manager\",\n  \"version\": \"v1\",\n  \"description\": \"Monitors basic system health and triggers emergency failsafe actions if needed.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Failsafe",
+        "Manager",
+        "version",
+        "description",
+        "Monitors",
+        "basic",
+        "system",
+        "health",
+        "and",
+        "triggers",
+        "emergency",
+        "failsafe",
+        "actions",
+        "needed"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/failsafe_manager/failsafe_manifest.json",
+      "relative_to_candidate": "failsafe_manifest.json",
+      "sha256": "32356befa5ef8bd815babe6f2f9809f886bf889904891ab65c13643cc4e46bf8",
+      "size_bytes": 154,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "fb2661677517ae8d840de8c70f135bf618b9917365f65b824d87310126a15976",
+      "excerpt_start": "# test_failsafe.py\n\nfrom failsafe_core import check_system_integrity\n\ndef test_failsafe_check():\n    result = check_system_integrity()\n    assert \"failsafe_triggered\" in result\n    assert result[\"system_health\"] == \"stable\"\n    print(\"✅ Test Passed: Failsafe system stable.\")\n\ntest_failsafe_check()\n",
+      "functions_sample": [
+        "test_failsafe_check"
+      ],
+      "imports_sample": [
+        "from failsafe_core import check_system_integrity"
+      ],
+      "line_count": 12,
+      "path": "/home/nic/aiweb/engines/failsafe_manager/test_failsafe.py",
+      "relative_to_candidate": "test_failsafe.py",
+      "sha256": "fb2661677517ae8d840de8c70f135bf618b9917365f65b824d87310126a15976",
+      "size_bytes": 301,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "3a73b169667ebab2135e257663a7666ee14c2425a72066b1cbfa4b0ea8b807c6",
+      "excerpt_start": "{\n  \"timestamp\": \"2025-04-26T23:40:13.399309Z\",\n  \"failsafe_triggered\": false,\n  \"system_health\": \"stable\",\n  \"notes\": \"No intervention needed.\"\n}",
+      "functions_sample": [
+        "timestamp",
+        "failsafe_triggered",
+        "false",
+        "system_health",
+        "stable",
+        "notes",
+        "intervention",
+        "needed"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/failsafe_manager/failsafe_status.json",
+      "relative_to_candidate": "failsafe_status.json",
+      "sha256": "3a73b169667ebab2135e257663a7666ee14c2425a72066b1cbfa4b0ea8b807c6",
+      "size_bytes": 146,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "5b01786473d872609485ef2744ff9669efaa13c79ec788b6b165590caff273d9",
+      "excerpt_start": "# failsafe_core.py\n\nimport json\nimport datetime\n\ndef check_system_integrity():\n    \"\"\"Simulate a basic failsafe check.\"\"\"\n    status = {\n        \"timestamp\": datetime.datetime.utcnow().isoformat() + \"Z\",\n        \"failsafe_triggered\": False,\n        \"system_health\": \"stable\",\n        \"notes\": \"No intervention needed.\"\n    }\n    with open(\"failsafe_status.json\", \"w\") as f:\n        json.dump(status, f, indent=2)\n    return status\n",
+      "functions_sample": [
+        "check_system_integrity"
+      ],
+      "imports_sample": [
+        "import json",
+        "import datetime"
+      ],
+      "line_count": 17,
+      "path": "/home/nic/aiweb/engines/failsafe_manager/failsafe_core.py",
+      "relative_to_candidate": "failsafe_core.py",
+      "sha256": "5b01786473d872609485ef2744ff9669efaa13c79ec788b6b165590caff273d9",
+      "size_bytes": 431,
+      "suffix": ".py"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {
+    "config_or_manifest": 14,
+    "documentation_or_notes": 7,
+    "engine_source": 5,
+    "indexed_source": 2,
+    "runtime_wrapper": 12,
+    "test_or_validation": 60
+  },
+  "relationship_report_found": true,
+  "relationship_report_path": "/home/nic/forge/memory/code_library_v1/manifests/2026-05-14_200919_code_relationship_intelligence_report.json",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "APPROVED",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "test_failsafe_check",
+    "check_system_integrity"
+  ],
+  "warnings": []
+}

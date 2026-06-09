@@ -1,0 +1,183 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/neo_engine",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/neo_engine",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "neo_engine",
+  "evidence_id": "EEB-7d85a9d7c058d7e3",
+  "file_count": 5,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "2aa81d02f822a9bb0cf3ff25adff5dbc13e1d77a4f1bc6cf23865cfbbf5e2e74",
+      "excerpt_start": "{\n  \"timestamp\": \"2025-04-27T00:04:52Z\",\n  \"tone\": \"critical\",\n  \"message\": \"Warning: Symbolic drift detected. Recalibration recommended.\"\n}",
+      "functions_sample": [
+        "timestamp",
+        "tone",
+        "critical",
+        "message",
+        "Warning",
+        "Symbolic",
+        "drift",
+        "detected",
+        "Recalibration",
+        "recommended"
+      ],
+      "imports_sample": [],
+      "line_count": 5,
+      "path": "/home/nic/aiweb/engines/neo_engine/neo_state.json",
+      "relative_to_candidate": "neo_state.json",
+      "sha256": "2aa81d02f822a9bb0cf3ff25adff5dbc13e1d77a4f1bc6cf23865cfbbf5e2e74",
+      "size_bytes": 140,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "b11a45383e369c7932110e5f10011bb513cfd4fc8f767c43467534987ee6efe4",
+      "excerpt_start": "{\n  \"engine\": \"Neo Engine\",\n  \"version\": \"v1\",\n  \"description\": \"Primary user-facing symbolic agent. Outputs system state messages based on symbolic recursion layers.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Neo",
+        "Engine",
+        "version",
+        "description",
+        "Primary",
+        "user",
+        "facing",
+        "symbolic",
+        "agent",
+        "Outputs",
+        "system",
+        "state",
+        "messages",
+        "based",
+        "recursion",
+        "layers"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/neo_engine/neo_manifest.json",
+      "relative_to_candidate": "neo_manifest.json",
+      "sha256": "b11a45383e369c7932110e5f10011bb513cfd4fc8f767c43467534987ee6efe4",
+      "size_bytes": 170,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "fa55ab70e751086fe50d930b4ac1fd30e7a4bcdebb2975da41e71dd0356c7449",
+      "excerpt_start": "from neo_core import generate_symbolic_response\n\ndef test_neo_response():\n    try:\n        result = generate_symbolic_response()\n        assert \"tone\" in result\n        assert \"message\" in result\n        print(\"✅ Test Passed: Neo generated a symbolic response.\")\n    except Exception as e:\n        print(f\"❌ Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_neo_response()\n",
+      "functions_sample": [
+        "test_neo_response"
+      ],
+      "imports_sample": [
+        "from neo_core import generate_symbolic_response"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/neo_engine/test_neo.py",
+      "relative_to_candidate": "test_neo.py",
+      "sha256": "fa55ab70e751086fe50d930b4ac1fd30e7a4bcdebb2975da41e71dd0356c7449",
+      "size_bytes": 383,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "960c326155649900dbc35d96630191e7c2e4f5af8900403ebfc21ea208b5bd09",
+      "excerpt_start": "# Neo Engine\n\nNeo is the primary symbolic agent responsible for communicating AI.Web system status externally.\n\nGenerates user-facing messages based on internal symbolic charge, tone, and recursion health.\n",
+      "functions_sample": [
+        "Neo",
+        "Engine",
+        "the",
+        "primary",
+        "symbolic",
+        "agent",
+        "responsible",
+        "for",
+        "communicating",
+        "Web",
+        "system",
+        "status",
+        "externally",
+        "Generates",
+        "user",
+        "facing",
+        "messages",
+        "based",
+        "internal",
+        "charge",
+        "tone",
+        "and",
+        "recursion",
+        "health"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/neo_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "960c326155649900dbc35d96630191e7c2e4f5af8900403ebfc21ea208b5bd09",
+      "size_bytes": 206,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "cd363e9048c2afc7db678b8e636e809e21121db8310cfc97fdd6514317155cf7",
+      "excerpt_start": "import json\nimport time\nimport random\n\nNEO_STATE_FILE = \"neo_state.json\"\n\ndef generate_symbolic_response():\n    tones = [\"calm\", \"focused\", \"critical\"]\n    chosen_tone = random.choice(tones)\n\n    response = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"tone\": chosen_tone,\n        \"message\": create_message_for_tone(chosen_tone)\n    }\n\n    try:\n        with open(NEO_STATE_FILE, \"w\") as f:\n            json.dump(response, f, indent=2)\n        print(f\"✔️ Neo generated symbolic response: {response}\")\n    except Exception as e:\n        print(f\"[!] Failed to update Neo state: {e}\")\n\n    return response\n\ndef create_message_for_tone(tone):\n    if tone == \"calm\":\n        return \"System operating normally. All symbolic loops are stable.\"\n    elif tone == \"focused\":\n        return \"System is adjusting. Symbolic load detected.\"\n    elif tone == \"critical\":\n        return \"Warning: Symbolic drift detected. Recalibration recommended.\"\n    else:\n        return \"Status unknown.\"\n",
+      "functions_sample": [
+        "generate_symbolic_response",
+        "create_message_for_tone"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time",
+        "import random"
+      ],
+      "line_count": 35,
+      "path": "/home/nic/aiweb/engines/neo_engine/neo_core.py",
+      "relative_to_candidate": "neo_core.py",
+      "sha256": "cd363e9048c2afc7db678b8e636e809e21121db8310cfc97fdd6514317155cf7",
+      "size_bytes": 1018,
+      "suffix": ".py"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "test_neo_response",
+    "generate_symbolic_response",
+    "create_message_for_tone"
+  ],
+  "warnings": []
+}

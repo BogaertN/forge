@@ -1,0 +1,4448 @@
+{
+  "_comment": "Patch 233 adds governed active-agent handshake for gilligan.local only; Forge-owned receipt only, no RMC memory write or Identity Vault mutation.",
+  "current_trust_level": 5.0,
+  "tools": {
+    "analyze_command_output": {
+      "description": "Receive and store terminal output pasted by Nic for analysis. Never executes anything.",
+      "executes": false,
+      "trust_level": 0.7,
+      "writes": false
+    },
+    "apply_patch": {
+      "description": "Apply an approved patch to a file. Requires explicit Nic approval.",
+      "executes": false,
+      "trust_level": 4.0,
+      "writes": true
+    },
+    "canonical_related_files": {
+      "description": "Read-only display of relationship row and neighboring files for a canonical engine.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "canonical_relationship_export": {
+      "description": "Export latest canonical engine relationship map summary. Forge-owned write only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "canonical_relationship_map": {
+      "description": "Write Forge-owned read-only relationship map for final canonical engines; no project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "canonical_risk_neighbors": {
+      "description": "Read-only display of risky canonical neighbors from the latest relationship map.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "canonical_test_export": {
+      "description": "Export latest canonical engine test inventory summary. Forge-owned write only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "canonical_test_gaps": {
+      "description": "Show canonical engines that lack test files or safe test candidates. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "canonical_test_inventory": {
+      "description": "Inventory test files for canonical engine lockfile entries. Writes Forge-owned report only; does not execute tests or modify engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "canonical_test_run_export": {
+      "description": "Export latest canonical safe test runner artifacts summary.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "canonical_test_run_plan": {
+      "description": "Create a Forge-owned safe test run plan from canonical test inventory. Does not execute tests.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "canonical_test_run_policy": {
+      "description": "Show Patch 124 strictly allowlisted canonical engine test runner policy. Does not execute tests.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "canonical_test_run_safe": {
+      "description": "Execute only safe candidates from latest canonical test run plan with confirm token. Uses subprocess argv with shell=False and writes reports only.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "canonical_test_run_show": {
+      "description": "Read-only display of latest canonical safe test run plan/report/history.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "canonical_test_show": {
+      "description": "Show latest canonical engine test inventory summary, gaps, or one engine row. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "cmd_list_all_python_files_in_the_current_sc": {
+      "description": "\"list all Python files in the current scope\"",
+      "executes": false,
+      "generated_at": "20260521_203811",
+      "generated_by": "forge-command-propose",
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "cmd_read_and_extract_text_from_a_pdf_file": {
+      "description": "read and extract text from a PDF file",
+      "executes": false,
+      "generated_at": "20260522_062901",
+      "generated_by": "forge-command-propose",
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "cmd_use_rich": {
+      "description": "Forge wrapper for rich 15.0.0",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "code_related_files": {
+      "description": "List related indexed files for one engine family. Read-only; does not touch project files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "code_relationship_export": {
+      "description": "Export relationship intelligence reports as Forge-owned JSON/Markdown manifests. Does not modify engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "code_relationship_map": {
+      "description": "Build a read-only relationship map for one engine family, connecting indexed files, symbols, tests, runtime roles, variants, and readiness status.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "code_relationship_policy": {
+      "description": "Show Patch 79 read-only code relationship intelligence policy. No engine file writes, no authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "code_risk_neighbors": {
+      "description": "Show read-only risk neighbors for one engine family, including variants, test/validation neighbors, and patch history hints.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_approved_lockfile_candidate": {
+      "description": "Create a Forge-owned non-authoritative lockfile candidate from approved eligible review ledger rows only. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_approved_lockfile_export": {
+      "description": "Export the human-approved lockfile candidate as JSON and Markdown under Forge-owned manifests. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_approved_lockfile_policy": {
+      "description": "Show Patch 74 human-approved lockfile candidate policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_approved_lockfile_show": {
+      "description": "Show one exact engine_base row from the approved lockfile candidate or exclusions. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_approved_lockfile_validate": {
+      "description": "Validate approved-candidate invariants: approved eligible rows only, no holds, no pending/deferred/rejected rows, no authority. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_brief": {
+      "description": "Generate a plain-English read-only brief for one engine family.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_brief_core": {
+      "description": "Show plain-English read-only briefs for core runtime engine families.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_brief_export": {
+      "description": "Export engine briefs as Forge-owned JSON/Markdown reports. Does not modify engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_brief_holds": {
+      "description": "Show plain-English read-only briefs for held/deferred engine families.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_brief_policy": {
+      "description": "Show Patch 77 read-only engine brief policy.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_canonical_export": {
+      "description": "Export the canonical engine review as JSON and Markdown under Forge-owned manifests. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_canonical_policy": {
+      "description": "Show the Patch 68 canonical engine review policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_canonical_review": {
+      "description": "Create a Forge-owned review-only canonical engine candidate report. Does not move/delete/quarantine/lock engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_canonical_show": {
+      "description": "Show one canonical engine family and its variants from the review layer. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_decision_core": {
+      "description": "Show decision rows for core runtime engine bases that require symbolic-runtime review before lockfile. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_decision_draft": {
+      "description": "Create a Forge-owned review-only draft of keep/hold decisions for canonical engine candidates. Does not lock/move/delete/quarantine engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_decision_exact": {
+      "description": "Show exactly one engine_base decision row without fuzzy variant-path matches. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_decision_export": {
+      "description": "Export the canonical engine decision draft as JSON and Markdown under Forge-owned manifests. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_decision_holds": {
+      "description": "Show only canonical engine decision rows that are on manual hold. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_decision_list": {
+      "description": "List Patch 69 decision draft rows by HOLD, DRAFT, ALL, or exact decision type. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_decision_policy": {
+      "description": "Show the Patch 69 canonical engine decision-draft policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_decision_show": {
+      "description": "Show one canonical engine decision draft row and its required human checks. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_decision_summary": {
+      "description": "Show Patch 70 read-only summary of decision counts, holds, confidence, and high-variant families.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_disposition_export": {
+      "description": "Export latest deferred/excluded engine disposition report summary.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_disposition_policy": {
+      "description": "Patch 117 policy for read-only deferred/excluded engine disposition reports.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_disposition_report": {
+      "description": "Write Forge-owned read-only disposition report for final-lockfile excluded/deferred engines.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_disposition_show": {
+      "description": "Read-only display of latest disposition summary, one engine, or one bucket.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_evidence_batch_bind_ready": {
+      "description": "Bind source evidence for all Patch 95-ready engine families into Forge-owned receipts. No engine decisions.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_evidence_batch_plan": {
+      "description": "Plan binding source evidence for all Patch 95-ready engine families. Forge-owned report write only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_evidence_bind": {
+      "description": "Bind readable source evidence for one engine family into Forge-owned JSON/Markdown receipts. No engine decisions.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_evidence_export": {
+      "description": "Export Patch 96 engine source evidence binder index as JSON/Markdown. Forge-owned report write only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_evidence_policy": {
+      "description": "Show Patch 96 engine source evidence binder policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_evidence_show": {
+      "description": "Show latest Patch 96 evidence binder for an engine family. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_final_lockfile_apply": {
+      "description": "Write the Forge-owned final canonical engine lockfile only with explicit confirmation token. Does not edit engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_final_lockfile_export": {
+      "description": "Export final engine lockfile proposal/apply/final summary. Forge-owned reports only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_final_lockfile_policy": {
+      "description": "Patch 115 policy for final approved engine lockfile. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_final_lockfile_proposal": {
+      "description": "Build a Forge-owned final engine lockfile proposal from the validated approved candidate and readiness report. No final lockfile write.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_final_lockfile_show": {
+      "description": "Read-only display of latest final engine lockfile proposal or written final lockfile summary.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_final_lockfile_verify": {
+      "description": "Verify final engine lockfile proposal against current candidate, readiness, and ledger SHAs. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_lockfile_draft": {
+      "description": "Create a Forge-owned draft canonical engine lockfile from DRAFT decisions only. Excludes HOLD families. Does not move/delete/quarantine/lock engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_lockfile_export": {
+      "description": "Export draft canonical engine lockfile JSON and Markdown under Forge-owned manifests. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_lockfile_policy": {
+      "description": "Show Patch 71 draft canonical engine lockfile policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_lockfile_show": {
+      "description": "Show one exact engine_base row from the draft lockfile payload, including held/excluded status. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_lockfile_validate": {
+      "description": "Validate draft lockfile invariants: no HOLD rows included, no destructive claims, no duplicate included bases. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_readiness_export": {
+      "description": "Export approved candidate readiness report as JSON and Markdown under Forge-owned manifests. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_readiness_policy": {
+      "description": "Show Patch 78 approved candidate readiness report policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_readiness_report": {
+      "description": "Summarize human-approved candidate readiness before final authority. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_readiness_risks": {
+      "description": "Summarize remaining blockers before any final engine authority. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_readiness_show": {
+      "description": "Show one approved candidate readiness row. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_approval_approve": {
+      "description": "Record a Patch99-compatible APPROVED queue decision only if Patch102 evidence cross-check passes. No ledger mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_approval_check": {
+      "description": "Build a Forge-owned evidence-based approval readiness receipt for one engine. Does not approve or mutate ledger.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_approval_defer": {
+      "description": "Record a Patch99-compatible DEFERRED queue decision after evidence check. No ledger mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_approval_export": {
+      "description": "Export Patch103 evidence-based approval helper receipts as JSON/Markdown. No ledger mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_approval_plan": {
+      "description": "List Patch 102 evidence cross-checks available for evidence-based approval review. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_approval_policy": {
+      "description": "Show Patch 103 evidence-based approval helper policy. Read-only display.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_approval_reject": {
+      "description": "Record a Patch99-compatible REJECTED queue decision after evidence check. No ledger mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_approval_show": {
+      "description": "Show latest Patch103 evidence-based approval helper receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_batch_approval_approve": {
+      "description": "Record APPROVED queue decisions for explicitly named engines only after Patch102 evidence cross-check readiness. No ledger mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_approval_defer": {
+      "description": "Record DEFERRED queue decisions for explicitly named engines. No ledger mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_approval_export": {
+      "description": "Export Patch106 evidence-based batch approval receipts. No ledger mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_approval_plan": {
+      "description": "List engines with Patch102 evidence cross-checks available for explicit batch approval/defer/reject decisions.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_approval_policy": {
+      "description": "Show Patch 106 evidence-based batch approval helper policy. No ledger mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_batch_approval_reject": {
+      "description": "Record REJECTED queue decisions for explicitly named engines. No ledger mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_approval_show": {
+      "description": "Show latest Patch106 batch decision receipt or readiness for one engine, with evidence-review reminder.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_approve_core": {
+      "description": "Batch-approve non-held core runtime candidates in the review ledger only. Does not create canonical authority or touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_commit_apply": {
+      "description": "Commit eligible Patch106 evidence-based batch decisions into the human review ledger only with explicit confirm token and stale-evidence recheck. Does not edit engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_commit_export": {
+      "description": "Export Patch 107 batch commit plans and receipts as Forge-owned JSON/Markdown.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_commit_plan": {
+      "description": "Build a Patch 107 plan to commit Patch106 evidence-based batch queue decisions after SHA and scope checks. Writes Forge-owned plan receipts only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_commit_policy": {
+      "description": "Show Patch 107 evidence-based batch commit policy. No writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_batch_commit_show": {
+      "description": "Show Patch 107 batch commit plan or receipt.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_batch_commit_verify": {
+      "description": "Verify Patch 107 batch commit plan or receipt.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_batch_defer_holds": {
+      "description": "Batch-defer all held engine families in the review ledger only. Held families remain excluded.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_export": {
+      "description": "Export Patch 73 batch review ledger/status as JSON and Markdown. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_plan": {
+      "description": "Create a Forge-owned batch review plan for core approvals and held-family deferrals. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_batch_policy": {
+      "description": "Show Patch 73 engine review batch policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_batch_status": {
+      "description": "Summarize Patch 73 batch review progress for core rows and held families. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_commit_apply": {
+      "description": "Apply ready Patch 99 queue decisions into engine_review_ledger_v1 after explicit confirm token and SHA re-verification. Ledger write only; no engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_commit_export": {
+      "description": "Export Patch 100 commit plans/receipts. Forge-owned reports only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_commit_plan": {
+      "description": "Build a commit plan from Patch 99 queue decisions with stale-evidence recheck. Writes Forge-owned plan only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_commit_policy": {
+      "description": "Show Patch 100 human review ledger commit policy. No engine file writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_commit_show": {
+      "description": "Show latest Patch 100 commit plan or receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_commit_verify": {
+      "description": "Verify latest Patch 100 commit plan or receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_completion_status": {
+      "description": "Write/read a Forge-owned status report proving whether engine review is complete and final canonical lockfile exists. No engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_cycle_export": {
+      "description": "Patch 110 engine review cycle command for engine-review-cycle-export. Writes only Forge-owned reports when applicable; no ledger mutation, engine edits, lockfile authority, shell, or Chroma writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_cycle_next": {
+      "description": "Patch 110 engine review cycle command for engine-review-cycle-next. Writes only Forge-owned reports when applicable; no ledger mutation, engine edits, lockfile authority, shell, or Chroma writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_cycle_policy": {
+      "description": "Patch 110 engine review cycle command for engine-review-cycle-policy. Writes only Forge-owned reports when applicable; no ledger mutation, engine edits, lockfile authority, shell, or Chroma writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_cycle_report": {
+      "description": "Patch 110 engine review cycle command for engine-review-cycle-report. Writes only Forge-owned reports when applicable; no ledger mutation, engine edits, lockfile authority, shell, or Chroma writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_cycle_show": {
+      "description": "Patch 110 engine review cycle command for engine-review-cycle-show. Writes only Forge-owned reports when applicable; no ledger mutation, engine edits, lockfile authority, shell, or Chroma writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_evidence_batch_plan": {
+      "description": "List LLM review drafts that can be cross-checked against bound evidence.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_evidence_check": {
+      "description": "Write and display a side-by-side LLM review/evidence cross-check for one engine. Does not approve or mutate ledger.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_evidence_commit_apply": {
+      "description": "Apply Patch 103 evidence-based approved/deferred/rejected queue decisions into engine_review_ledger_v1 only with confirm token and live SHA recheck. No engine file writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_evidence_commit_export": {
+      "description": "Export Patch 104 evidence-based commit plans/receipts to Forge-owned JSON/Markdown. No ledger mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_evidence_commit_plan": {
+      "description": "Build Patch 104 evidence-based commit plan from Patch 103 decisions after Patch 102 cross-check verification. Writes Forge-owned plan only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_evidence_commit_policy": {
+      "description": "Show Patch 104 evidence-based review commit policy. Read-only display.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_evidence_commit_show": {
+      "description": "Show Patch 104 evidence-based commit plan or receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_evidence_commit_verify": {
+      "description": "Verify Patch 104 evidence-based commit plan or receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_evidence_export": {
+      "description": "Export Patch 102 evidence cross-check receipts.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_evidence_policy": {
+      "description": "Show Patch 102 policy for comparing LLM review text against bound engine evidence.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_evidence_show": {
+      "description": "Show the latest evidence cross-check for an engine or latest item.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_export": {
+      "description": "Export the engine review ledger as JSON and Markdown under Forge-owned manifests. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_ledger_init": {
+      "description": "Initialize a Forge-owned human review ledger from the draft canonical engine lockfile. Does not touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_ledger_policy": {
+      "description": "Show Patch 72 human review ledger policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_mark": {
+      "description": "Record human review status for one engine family in the Forge-owned review ledger. Does not grant canonical authority or touch engine files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_progress_export": {
+      "description": "Export Patch 108 engine review progress reports from Forge-owned memory.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_progress_gaps": {
+      "description": "Show remaining engine review workflow gaps and recommended next route.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_progress_policy": {
+      "description": "Show Patch 108 read-only engine review progress dashboard policy.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_progress_report": {
+      "description": "Write a Forge-owned progress report summarizing engine review ledger, queue, drafts, crosschecks, approvals, commits, and gaps.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_progress_show": {
+      "description": "Show the latest or selected Patch 108 engine review progress report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_queue_build": {
+      "description": "Build a Forge-owned human review queue from LLM engine review drafts. Does not mutate review ledger.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_queue_export": {
+      "description": "Export Patch 99 human review queue and decision receipts.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_queue_mark_approved": {
+      "description": "Record Nic's queue approval intent for a draft. Does not commit canonical ledger.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_queue_mark_deferred": {
+      "description": "Record Nic's queue defer intent for a draft. Does not commit canonical ledger.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_queue_mark_rejected": {
+      "description": "Record Nic's queue rejection intent for a draft. Does not commit canonical ledger.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_queue_next": {
+      "description": "Show the next undecided engine review item for Nic to review.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_queue_policy": {
+      "description": "Show the Patch 99 human review queue policy. No canonical authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_queue_show": {
+      "description": "Show the latest review queue summary or a full engine review queue item.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_show": {
+      "description": "Show one exact engine review ledger row. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_source_audit": {
+      "description": "Audit whether engine review rows have real readable/indexed source evidence. Writes Forge-owned readiness reports only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_source_export": {
+      "description": "Export latest Patch 95 engine-review source readiness report as JSON/Markdown. Forge-owned report write only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_source_gaps": {
+      "description": "List engines not ready for LLM review and route to ingestion/extraction patches. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_source_policy": {
+      "description": "Show Patch 95 engine-review source readiness policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_source_show": {
+      "description": "Show one engine family source-readiness row from latest Patch 95 report. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_source_status": {
+      "description": "Show latest Patch 95 engine-review source readiness summary. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_status": {
+      "description": "Summarize the engine review ledger approval/deferred/rejected/pending state. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_triage_approve": {
+      "description": "Record evidence-based queue approval intent for named engines through existing queue decision path. No ledger mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_triage_defer": {
+      "description": "Record evidence-based queue defer intent for named engines through existing queue decision path. No ledger mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_triage_export": {
+      "description": "Export Patch 109 triage reports and decision receipts. Read-only export from Forge-owned memory.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_triage_plan": {
+      "description": "Build Forge-owned triage plan for crosschecked LLM engine reviews ready for human decision. Writes report only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_triage_policy": {
+      "description": "Show Patch 109 engine review triage policy. Read-only; no ledger mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_triage_reject": {
+      "description": "Record evidence-based queue reject intent for named engines through existing queue decision path. No ledger mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_triage_show": {
+      "description": "Show triage plan or full evidence-visible triage panel for one engine. Read-only display.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_workflow_export": {
+      "description": "Export Patch 105 workflow receipts. No approval or ledger mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_workflow_plan": {
+      "description": "Plan the next small evidence review workflow batch. Writes Forge-owned plan only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_workflow_policy": {
+      "description": "Show Patch 105 evidence review batch workflow policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_review_workflow_run": {
+      "description": "Run a small evidence review workflow: LLM draft, evidence cross-check, queue rebuild. No approvals or ledger mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_review_workflow_show": {
+      "description": "Show latest Patch 105 workflow receipt with visible LLM review text. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_source_law_export": {
+      "description": "Export latest source-authority runtime binding summary.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_source_law_gaps": {
+      "description": "Write/display a source-authority gap report for canonical engines needing stronger source evidence.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_source_law_map": {
+      "description": "Build Forge-owned source-authority runtime map for canonical engines; no engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "engine_source_law_policy": {
+      "description": "Show read-only policy for binding canonical engines to source-authority domains.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "engine_source_law_show": {
+      "description": "Display latest source-authority map summary, domains, gaps, or one engine.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge-master-status": {
+      "description": "Write consolidated Forge-owned master status report. Read-only over project state.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge-master-status-export": {
+      "description": "Export latest Forge master status report summary.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge-master-status-policy": {
+      "description": "Read-only policy for Forge master status reports. Does not write project files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge-master-status-show": {
+      "description": "Show latest Forge master status report or selected section.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge-runtime-live-preflight-check": {
+      "description": "Build Forge-owned runtime live build preflight report; no live runtime writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge-runtime-live-preflight-export": {
+      "description": "Export Patch 162 live preflight evidence bundle into Forge memory.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge-runtime-live-preflight-gates": {
+      "description": "Show Patch 162 live preflight gate rows.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge-runtime-live-preflight-next": {
+      "description": "Show next step after Patch 162 live preflight.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge-runtime-live-preflight-policy": {
+      "description": "Read-only policy for Patch 162 runtime live build preflight and human approval gate.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge-runtime-live-preflight-show": {
+      "description": "Show Patch 162 live preflight status, gates, or human approval state.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge-runtime-live-token-entry-export": {
+      "description": "Export Patch 169 token entry gate report from Forge-owned memory. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge-runtime-live-token-entry-gates": {
+      "description": "Show Patch 169 runtime live token entry gate checklist.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge-runtime-live-token-entry-next": {
+      "description": "Show next step after Patch 169 token entry gate.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge-runtime-live-token-entry-plan": {
+      "description": "Create Forge-owned human approval token entry template/report for runtime live build path. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge-runtime-live-token-entry-policy": {
+      "description": "Show Patch 169 human approval token entry gate policy. Read-only; no live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge-runtime-live-token-entry-show": {
+      "description": "Show Patch 169 token entry gate report views such as latest, gates, token, files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge-self-sandbox-apply": {
+      "description": "Create sandbox copy and run safe deterministic checks; no live self-write.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge-self-sandbox-clean": {
+      "description": "Remove latest Forge-owned sandbox directory; no live self-write.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge-self-sandbox-export": {
+      "description": "Export latest Forge self-update sandbox summary.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge-self-sandbox-plan": {
+      "description": "Create Forge-owned self-update sandbox plan from latest verified proposal and snapshot.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge-self-sandbox-policy": {
+      "description": "Read-only policy for Forge self-update sandboxing.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge-self-sandbox-show": {
+      "description": "Show latest Forge self-update sandbox plan/report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_agent_activate_gilligan_dry_run": {
+      "description": "Run Patch 232A Gilligan-only manual activation dry-run gate. Preview only; no activation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_agent_activate_gilligan_dry_run_report": {
+      "description": "Show latest Patch 232A Gilligan manual activation dry-run report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_agent_activate_manual": {
+      "description": "Patch 232B: token-gated manual activation apply for gilligan.local only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_agent_activate_manual_report": {
+      "description": "Show latest Patch 232B Gilligan manual activation apply report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_agent_activation_command_plan": {
+      "description": "Write Patch 232 manual activation command design/preflight plan only. Does not install or run activation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_agent_activation_command_plan_report": {
+      "description": "Show latest Patch 232 manual activation command design/preflight plan report. No activation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_agent_activation_plan": {
+      "description": "Write Patch 231 Forge-owned identity activation approval plan only. Does not install/run activation or mutate Identity Vault/RMC.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_agent_activation_plan_report": {
+      "description": "Read latest Patch 231 identity activation approval plan report. Read-only display.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_agent_activation_preflight": {
+      "description": "Read-only activation preflight for an explicit Identity Vault agent profile. Writes Forge-owned report only; no activation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_agent_activation_preflight_all": {
+      "description": "Run read-only activation preflight for all Patch 231 target agents and write Forge-owned batch report only. No activation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_agent_activation_preflight_all_report": {
+      "description": "Show latest Patch 231B all-agent activation preflight report. No writes except audit read receipt.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_agent_activation_preflight_report": {
+      "description": "Show latest read-only identity activation preflight report. No writes except audit read receipt.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_agent_verify_gilligan_activation": {
+      "description": "Verify Gilligan is active_governed after Patch 232B while Athena and Neo remain inactive; read-only verification report only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true,
+      "writes_detail": "Writes Forge-owned verification report only under /home/nic/forge/memory; does not mutate Identity Vault or RMC memory."
+    },
+    "forge_agent_verify_gilligan_activation_report": {
+      "description": "Show latest Patch 232C Gilligan activation verification report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_aiweb_runtime_readiness_build": {
+      "description": "Build Forge-owned AI.Web runtime readiness map; no project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_aiweb_runtime_readiness_export": {
+      "description": "Export AI.Web runtime readiness summary. Forge-owned write only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_aiweb_runtime_readiness_list": {
+      "description": "List AI.Web runtime readiness reports.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_aiweb_runtime_readiness_next": {
+      "description": "Show next step after AI.Web runtime readiness map.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_aiweb_runtime_readiness_policy": {
+      "description": "Read-only policy for AI.Web runtime build readiness map.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_aiweb_runtime_readiness_show": {
+      "description": "Show latest AI.Web runtime readiness map, domain rows, or blockers.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_audit_repair": {
+      "description": "Scan audit log for multi-line entries and collapse them into single lines. Run when audit reports broken chain.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_bootstrap_handshake_dry_run": {
+      "description": "Run Forge \u2192 Identity Vault \u2192 RMC namespace bootstrap handshake dry-run. Writes Forge-owned report only and stops at inactive agent gate.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_bootstrap_handshake_report": {
+      "description": "Read latest Patch 230 bootstrap handshake dry-run report. Read-only display.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_bootstrap_handshake_verify": {
+      "description": "Verify Patch 230 bootstrap handshake dry-run receipt/report and inactive-agent gate. Writes Forge-owned verification report only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_bootstrap_handshake_verify_report": {
+      "description": "Read latest Patch 230A bootstrap handshake verification report. Read-only display.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_build_current": {
+      "description": "Show the current active Forge build phase from the latest build sequence.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_build_deferred": {
+      "description": "Show deferred build items and reasons from the latest build sequence.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_build_gate_check": {
+      "description": "Build a Forge-owned build phase gate report checking command surface, lockfile, tests, patch impact, deferred queue, build sequence, status API, and dashboard.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_build_gate_export": {
+      "description": "Export latest build phase gate summary as Forge-owned JSON/Markdown. No project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_build_gate_list": {
+      "description": "List build phase gate rows and blocking state. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_build_gate_next": {
+      "description": "Show whether the next patch may proceed according to latest build phase gate. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_build_gate_policy": {
+      "description": "Show Patch 146 build phase gate policy. Read-only; no project writes or patch apply authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_build_gate_show": {
+      "description": "Show latest build phase gate summary or one gate row. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_build_next": {
+      "description": "Show the next Forge build patch from the latest build sequence.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_build_phase_show": {
+      "description": "Show one or more build sequence phases by id, title, or status.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_build_sequence": {
+      "description": "Build Forge-owned roadmap-grounded build sequence JSON/Markdown from current disk state.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_build_sequence_export": {
+      "description": "Export the latest roadmap-grounded build sequence as Forge-owned JSON/Markdown.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_build_sequence_policy": {
+      "description": "Show Patch 144 roadmap-grounded build sequence policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_capabilities": {
+      "description": "Alias for forge-what-can-i-do",
+      "executes": false,
+      "patch": "P200",
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_command_approve_proposal": {
+      "description": "Approve a proposal and create a patch file in proposed_patches/. Does NOT edit main.py \u2014 that happens only when you run patch-apply.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_command_implement": {
+      "description": "Ask local Qwen3 via Ollama to write a real implementation for an installed scaffold command. Saves for review. Does not modify main.py.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_command_implement_install": {
+      "description": "Replace the TODO scaffold in main.py with the LLM implementation. Requires IMPLEMENT confirmation. Backs up first.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_command_implement_review": {
+      "description": "Review the LLM-generated implementation before installing it into main.py.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_command_implement_write": {
+      "description": "Generate a real implementation for an installed command using local keyword templates. No Ollama required \u2014 works instantly.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_command_install": {
+      "description": "Install an approved command proposal into main.py. Requires typing INSTALL to confirm. Backs up first, restores if py_compile fails.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_command_install_dry_run": {
+      "description": "Show exactly what will change if you install a command proposal. No files written. Review this before forge-command-install.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_command_install_verify": {
+      "description": "Verify a command was fully installed: checks function in main.py, routing, tool_registry, and install record.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_command_list_active": {
+      "description": "List all LLM-generated commands that have been installed via patch-apply.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_command_list_proposals": {
+      "description": "List all command proposals \u2014 both pending and approved \u2014 with their slugs and status.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_command_propose": {
+      "description": "Propose a new Forge command by description. Forge generates Python code and saves a proposal for review. No code is written to main.py until you run patch-apply.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_command_regen_proposal": {
+      "description": "Regenerate function code for an existing proposal using safe string handling. Fixes quote-in-description bugs. Does not modify main.py.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_command_show_proposal": {
+      "description": "Show the full detail of a command proposal including the exact Python code that will be installed if approved.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_command_template": {
+      "description": "Show the code template used when generating new commands. Explains what forge-command-propose will produce.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_dashboard_build": {
+      "description": "Build a static file-backed read-only dashboard HTML/JSON artifact from Forge status API snapshot; no server.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_dashboard_export": {
+      "description": "Export latest dashboard read-only artifact summary.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_dashboard_policy": {
+      "description": "Read-only policy for Patch 128 dashboard artifacts; no server and no project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_dashboard_roadmap_build": {
+      "description": "Build a Forge-owned read-only dashboard roadmap panel artifact from build sequence, gate, deferred queue, status API, and dashboard state.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_dashboard_roadmap_export": {
+      "description": "Export latest dashboard roadmap panel summary as Forge-owned JSON/Markdown. No project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_dashboard_roadmap_list": {
+      "description": "List dashboard roadmap build sequence rows from latest panel. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_dashboard_roadmap_policy": {
+      "description": "Show Patch 147 dashboard roadmap panel policy. Read-only; no server, no project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_dashboard_roadmap_show": {
+      "description": "Show latest dashboard roadmap panel summary, panels, or sequence. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_dashboard_roadmap_status": {
+      "description": "Show concise dashboard roadmap panel readiness and next patch. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_dashboard_show": {
+      "description": "Read-only display of latest dashboard summary, panels, or HTML path.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_dashboard_v2_build": {
+      "description": "Build the read-only Dashboard v2 operator panel from current Forge evidence surfaces. Writes Forge-owned report artifacts only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_dashboard_v2_export": {
+      "description": "Export the latest Dashboard v2 operator panel summary as Forge-owned JSON/Markdown/HTML artifacts. No project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_dashboard_v2_list": {
+      "description": "List recent Dashboard v2 operator panel reports. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_dashboard_v2_policy": {
+      "description": "Show Patch 154 Dashboard v2 operator control panel policy. Read-only; no levers or server.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_dashboard_v2_show": {
+      "description": "Show the latest Dashboard v2 operator panel or one named panel. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_dashboard_v2_status": {
+      "description": "Show Dashboard v2 operator panel status and authority summary. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_deferred_engine_queue_build": {
+      "description": "Build a Forge-owned deferred engine repair queue from disposition, lockfile, tests, patch impact, and preserved repair evidence. No engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_deferred_engine_queue_export": {
+      "description": "Export latest deferred engine repair queue summary as Forge-owned JSON/Markdown. No engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_deferred_engine_queue_list": {
+      "description": "List deferred engine repair queue rows by priority. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_deferred_engine_queue_next": {
+      "description": "Show next visible repair target without authorizing repair or project writes. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_deferred_engine_queue_policy": {
+      "description": "Show Patch 145 deferred engine repair queue policy. Read-only; no engine writes or repair authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_deferred_engine_queue_show": {
+      "description": "Show latest deferred engine repair queue summary or one engine row. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_gilligan_governed_handshake": {
+      "description": "Run first governed active-agent handshake for gilligan.local; writes Forge-owned receipt only; no RMC memory write, no Identity Vault mutation, no autonomous execution.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true,
+      "writes_detail": "Writes Forge-owned handshake report under /home/nic/forge/memory/aiweb_patch233_gilligan_governed_handshake_v1 only."
+    },
+    "forge_gilligan_governed_handshake_report": {
+      "description": "Show latest Patch 233 Gilligan governed handshake report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_live_eligibility_v2_check": {
+      "description": "Build a read-only go/no-go live-apply eligibility report from proposal, source, tests, sandbox/snapshot/rollback/human approval evidence.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_live_eligibility_v2_export": {
+      "description": "Export Patch 150 live-apply eligibility report as Forge-owned JSON/Markdown. No apply authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_live_eligibility_v2_list": {
+      "description": "List Patch 150 live-apply eligibility gate rows. Read-only display.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_live_eligibility_v2_next": {
+      "description": "Show next action after Patch 150 eligibility check. Read-only display.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_live_eligibility_v2_policy": {
+      "description": "Show Patch 150 live-apply eligibility v2 policy. Read-only; no apply/write authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_live_eligibility_v2_show": {
+      "description": "Show the latest Patch 150 live-apply eligibility report or its gate rows. Read-only display.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_llm_patch_v2_draft": {
+      "description": "Build a Forge-owned source-grounded LLM patch proposal v2 packet for the next patch or target. No project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_llm_patch_v2_export": {
+      "description": "Export Patch 149 proposal and verification summary as Forge-owned JSON/Markdown. No project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_llm_patch_v2_next": {
+      "description": "Show whether Patch 149 proposal v2 is verified and what next patch is recommended. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_llm_patch_v2_policy": {
+      "description": "Show Patch 149 LLM patch proposal v2 policy. Read-only; no project writes, patch apply, shell execution, or authority claims.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_llm_patch_v2_show": {
+      "description": "Show latest Patch 149 proposal, verification, or LLM prompt packet. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_llm_patch_v2_verify": {
+      "description": "Verify the Patch 149 proposal packet against authority, source evidence, current state, target files, tests, and gate requirements.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_mode_enforcement_build": {
+      "description": "Build Forge-owned command-to-mode permission matrix; does not hard-block commands yet.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_mode_enforcement_check": {
+      "description": "Check whether a command is allowed in a selected mode without executing it.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_mode_enforcement_export": {
+      "description": "Export latest mode permission matrix summary.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_mode_enforcement_policy": {
+      "description": "Read-only policy for Patch 130 mode permission enforcement matrix.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_mode_enforcement_show": {
+      "description": "Read-only display of latest mode permission matrix, modes, coverage, or command rule.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_mode_export": {
+      "description": "Export latest Forge mode registry summary.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_mode_policy": {
+      "description": "Read-only policy for Patch 129 Forge mode registry. Does not enforce permissions.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_mode_registry_build": {
+      "description": "Write Forge-owned mode registry report defining Forge operating modes. No permission enforcement yet.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_mode_show": {
+      "description": "Read-only display of latest Forge mode registry, list, or one mode.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_mode_status": {
+      "description": "Write Forge-owned mode status report showing registry state and enforcement inactive.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_next": {
+      "description": "Show the next lawful Forge move from disk state, final lockfile state, and review completion state. Read-only/status receipt only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_orchestrate": {
+      "description": "Natural language command orchestrator \u2014 maps plain English to Forge command plans and executes them with approval gates",
+      "executes": true,
+      "patch": "P199",
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_plan": {
+      "description": "Preview what the orchestrator would do for a request \u2014 shows plan without executing",
+      "executes": false,
+      "patch": "P199",
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_restart": {
+      "description": "Show all session changes, ask RESTART confirmation, then relaunch Forge in place. Full audit. One final chance to cancel.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_rmc_namespace_scaffold_apply": {
+      "description": "Apply the reviewed Patch 229 RMC namespace scaffold preview by creating directories only under the preview-selected RMC root. Writes Forge-owned apply report; does not write RMC memory, mutate Identity Vault, read .env, or activate agents.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_rmc_namespace_scaffold_apply_report": {
+      "description": "Display the latest Patch 229A RMC namespace scaffold apply report. Read-only display only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_rmc_namespace_scaffold_preview": {
+      "description": "Preview RMC shared and agent namespace scaffolds and write Forge-owned report only. Does not create RMC folders, write RMC memory, mutate Identity Vault, or activate agents.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_rmc_namespace_scaffold_report": {
+      "description": "Display the latest Patch 229 RMC namespace scaffold preview report. Read-only display only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_roadmap_append": {
+      "description": "Append a new item to the roadmap sequence with ID, status, and title. Persists across sessions.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_roadmap_mark": {
+      "description": "Change the status of any roadmap item (DONE/ACTIVE/NEXT/FUTURE/BLOCKED/DEFERRED).",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_roadmap_status": {
+      "description": "Write/read a Forge-owned roadmap status report showing completed milestone and recommended next patch sequence. No project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_roadmap_sync": {
+      "description": "Inject Patch 198 extra sequence items and rebuild dashboard roadmap in one command.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_build_candidate_file_plan": {
+      "description": "Build a Forge-owned future candidate file plan for the selected runtime module. Does not create live runtime files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_build_plan_build": {
+      "description": "Patch 157 read-only runtime build plan command: forge-runtime-build-plan-build. Writes only Forge-owned planning reports; no project or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_build_plan_export": {
+      "description": "Patch 157 read-only runtime build plan command: forge-runtime-build-plan-export. Writes only Forge-owned planning reports; no project or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_build_plan_list": {
+      "description": "Patch 157 read-only runtime build plan command: forge-runtime-build-plan-list. Writes only Forge-owned planning reports; no project or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_build_plan_next": {
+      "description": "Patch 157 read-only runtime build plan command: forge-runtime-build-plan-next. Writes only Forge-owned planning reports; no project or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_build_plan_policy": {
+      "description": "Patch 157 read-only runtime build plan command: forge-runtime-build-plan-policy. Writes only Forge-owned planning reports; no project or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_build_plan_show": {
+      "description": "Patch 157 read-only runtime build plan command: forge-runtime-build-plan-show. Writes only Forge-owned planning reports; no project or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_build_sandbox_dry_run": {
+      "description": "Patch 158 creates Forge-owned dry-run preview files under memory/forge_runtime_build_sandboxes_v1 only. No project/runtime writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_build_sandbox_export": {
+      "description": "Patch 158 exports runtime build sandbox plan/dry-run evidence. Forge-owned write only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_build_sandbox_next": {
+      "description": "Patch 158 shows next route after runtime build sandbox dry-run. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_build_sandbox_plan": {
+      "description": "Patch 158 builds a Forge-owned runtime build sandbox/dry-run plan. No AI.Web runtime files are written.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_build_sandbox_policy": {
+      "description": "Patch 158 runtime build sandbox policy. Read-only; no project, engine, runtime, patch apply, or live restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_build_sandbox_show": {
+      "description": "Patch 158 shows runtime build sandbox plan, gates, future paths, or dry-run files. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_build_sandbox_verify": {
+      "description": "Verify Patch 158 runtime build sandbox dry-run files from disk and write Forge-owned verification reports only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_build_sandbox_verify_export": {
+      "description": "Export Patch 159 runtime sandbox verification and candidate file plan as Forge-owned JSON/Markdown only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_build_sandbox_verify_next": {
+      "description": "Show the next roadmap step after Patch 159 runtime sandbox verification. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_build_sandbox_verify_policy": {
+      "description": "Show Patch 159 runtime build sandbox verification policy. Read-only; no project/runtime writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_build_sandbox_verify_show": {
+      "description": "Show Patch 159 runtime build sandbox verification, gates, files, or candidate file plan. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_draft_build": {
+      "description": "Draft first runtime candidate files in Forge-owned sandbox memory only. No live AI.Web runtime writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_draft_export": {
+      "description": "Export Patch 160 runtime candidate draft and verification as Forge-owned JSON/Markdown only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_draft_next": {
+      "description": "Show next roadmap step after Patch 160 runtime candidate draft. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_draft_policy": {
+      "description": "Show Patch 160 runtime candidate draft policy. Read-only; no live runtime writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_draft_show": {
+      "description": "Show Patch 160 runtime candidate draft, files, gates, warnings, or verification. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_draft_verify": {
+      "description": "Verify Patch 160 sandbox candidate files and adapter compile from disk. Forge-owned report writes only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_dry_plan_dependency_build": {
+      "description": "Write Forge-owned Patch 177 runtime candidate dependency/impact receipt. No AI.Web runtime, project, or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_dry_plan_dependency_export": {
+      "description": "Export Patch 177 dependency review as Forge-owned JSON/Markdown. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_dry_plan_dependency_gates": {
+      "description": "Show Patch 177 dependency review gates. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_dependency_next": {
+      "description": "Show next routing after Patch 177 dependency review. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_dependency_policy": {
+      "description": "Show Patch 177 runtime candidate dry-plan dependency review policy. Read-only; no live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_dependency_show": {
+      "description": "Show latest Patch 177 runtime candidate dependency/impact review. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_export": {
+      "description": "Export Patch 175 runtime candidate dry-plan selector report as Forge-owned JSON/Markdown. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_dry_plan_gates": {
+      "description": "Show Patch 175 runtime candidate dry-plan gates. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_next": {
+      "description": "Show next routing after Patch 175 runtime candidate dry-plan selector. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_policy": {
+      "description": "Show Patch 175 runtime candidate dry-plan selector policy. Read-only; no live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_rollback_build": {
+      "description": "Write Forge-owned Patch 180 rollback matrix/restore plan receipt. No backup creation, restore, runtime, project, or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_dry_plan_rollback_export": {
+      "description": "Export Patch 180 rollback matrix as Forge-owned JSON/Markdown. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_dry_plan_rollback_gates": {
+      "description": "Show Patch 180 rollback matrix gates. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_rollback_next": {
+      "description": "Show next routing after Patch 180 rollback matrix. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_rollback_policy": {
+      "description": "Show Patch 180 runtime candidate dry-plan rollback/restore policy. Read-only; no live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_rollback_show": {
+      "description": "Show latest Patch 180 rollback matrix/restore plan. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_sandbox_build": {
+      "description": "Write Forge-owned Patch 179 sandbox readiness/rehearsal plan receipt. No sandbox execution, runtime, project, or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_dry_plan_sandbox_export": {
+      "description": "Export Patch 179 sandbox readiness plan as Forge-owned JSON/Markdown. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_dry_plan_sandbox_gates": {
+      "description": "Show Patch 179 sandbox readiness gates. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_sandbox_next": {
+      "description": "Show next routing after Patch 179 sandbox readiness. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_sandbox_policy": {
+      "description": "Show Patch 179 runtime candidate dry-plan sandbox-readiness policy. Read-only; no live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_sandbox_show": {
+      "description": "Show latest Patch 179 sandbox readiness/rehearsal plan. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_scope_build": {
+      "description": "Write Forge-owned Patch 176 runtime candidate dry-plan file-set scope receipt. No AI.Web runtime, project, or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_dry_plan_scope_export": {
+      "description": "Export Patch 176 runtime candidate dry-plan scope report as Forge-owned JSON/Markdown. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_dry_plan_scope_gates": {
+      "description": "Show Patch 176 runtime candidate dry-plan scope gates. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_scope_next": {
+      "description": "Show next routing after Patch 176 runtime candidate dry-plan scope review. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_scope_policy": {
+      "description": "Show Patch 176 runtime candidate dry-plan scope policy. Read-only; no live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_scope_show": {
+      "description": "Show latest Patch 176 runtime candidate dry-plan scope/file-set review. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_select": {
+      "description": "Write Forge-owned Patch 175 runtime candidate dry-plan selector receipt. No AI.Web runtime, project, or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_dry_plan_show": {
+      "description": "Show latest Patch 175 runtime candidate dry-plan selector report. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_validation_build": {
+      "description": "Write Forge-owned Patch 178 validation matrix and no-write test plan. No runtime, project, or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_dry_plan_validation_export": {
+      "description": "Export Patch 178 validation matrix/test plan as Forge-owned JSON/Markdown. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_dry_plan_validation_gates": {
+      "description": "Show Patch 178 validation gates. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_validation_next": {
+      "description": "Show next routing after Patch 178 validation matrix. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_validation_policy": {
+      "description": "Show Patch 178 runtime candidate dry-plan validation/test-plan policy. Read-only; no live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_dry_plan_validation_show": {
+      "description": "Show latest Patch 178 validation matrix/test plan. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_queue_export": {
+      "description": "Export Patch 174 runtime candidate queue review report as Forge-owned JSON/Markdown. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_queue_gates": {
+      "description": "Show Patch 174 runtime candidate queue review gates. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_queue_next": {
+      "description": "Show next routing after Patch 174 runtime candidate queue review. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_queue_policy": {
+      "description": "Show Patch 174 runtime candidate queue review / next selection policy. Read-only; no live runtime writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_queue_review": {
+      "description": "Write Forge-owned Patch 174 runtime candidate queue review receipt. No AI.Web runtime, project, or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_queue_show": {
+      "description": "Show latest Patch 174 runtime candidate queue review report. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_sandbox_preflight_build": {
+      "description": "Write Forge-owned Patch 181 sandbox execution preflight receipt. No sandbox creation, file copy, tests, runtime, project, or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_sandbox_preflight_export": {
+      "description": "Export Patch 181 sandbox execution preflight receipt as Forge-owned JSON/Markdown. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_sandbox_preflight_gates": {
+      "description": "Show Patch 181 sandbox preflight gates. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_sandbox_preflight_next": {
+      "description": "Show next routing after Patch 181 sandbox preflight. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_sandbox_preflight_policy": {
+      "description": "Show Patch 181 sandbox execution preflight policy. Read-only; no live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_sandbox_preflight_show": {
+      "description": "Show latest Patch 181 sandbox execution preflight receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_sandbox_stage_build": {
+      "description": "Write Forge-owned Patch 182 sandbox stage manifest/copy plan receipt. No sandbox creation, file copy, tests, runtime, project, or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_sandbox_stage_create_build": {
+      "description": "Create Forge-owned sandbox stage and copy selected runtime candidate files only after exact path/SHA precheck. No project, engine, runtime, test, or live apply writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_sandbox_stage_create_export": {
+      "description": "Export Patch 183 sandbox stage create/verify receipt as Forge-owned JSON/Markdown. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_sandbox_stage_create_gates": {
+      "description": "Show Patch 183 sandbox stage create/verify gates. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_sandbox_stage_create_next": {
+      "description": "Show next routing after Patch 183 sandbox stage create/verify. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_sandbox_stage_create_policy": {
+      "description": "Show Patch 183 sandbox stage create/verify policy. Read-only; no live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_sandbox_stage_create_show": {
+      "description": "Show latest Patch 183 sandbox stage create/verify receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_sandbox_stage_export": {
+      "description": "Export Patch 182 sandbox stage manifest receipt as Forge-owned JSON/Markdown. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_sandbox_stage_gates": {
+      "description": "Show Patch 182 sandbox stage manifest gates. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_sandbox_stage_next": {
+      "description": "Show next routing after Patch 182 sandbox stage manifest. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_sandbox_stage_policy": {
+      "description": "Show Patch 182 runtime candidate sandbox stage manifest policy. Read-only; no live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_sandbox_stage_show": {
+      "description": "Show latest Patch 182 sandbox stage manifest/copy plan receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_static_export": {
+      "description": "Export Patch 161 runtime candidate static verification evidence as Forge-owned JSON/Markdown only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_candidate_static_gates": {
+      "description": "Show Patch 161 live-build gate status and static verification gates. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_static_next": {
+      "description": "Show next roadmap step after Patch 161 runtime candidate static verification. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_static_policy": {
+      "description": "Show Patch 161 runtime candidate static verification policy. Read-only; no live runtime writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_static_show": {
+      "description": "Show Patch 161 runtime candidate static verification, gates, files, warnings, or problems. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_candidate_static_verify": {
+      "description": "Statically verify Patch 160 sandbox candidate files and write Forge-owned verification reports only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_live_apply_hold_export": {
+      "description": "Export Patch 172 apply-hold review/no-write receipt as Forge-owned JSON/Markdown. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_live_apply_hold_gates": {
+      "description": "Show Patch 172 apply-hold review gates. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_apply_hold_next": {
+      "description": "Show next routing after Patch 172 apply-hold review. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_apply_hold_policy": {
+      "description": "Show Patch 172 runtime live apply-hold review/no-write receipt policy. Read-only; no live runtime writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_apply_hold_review": {
+      "description": "Review Patch 171 apply-hold evidence and write a Forge-owned no-write receipt. No AI.Web runtime, project, or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_live_apply_hold_show": {
+      "description": "Show latest Patch 172 apply-hold review/no-write receipt report. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_approval_capture_export": {
+      "description": "Export Patch 167 approval capture evidence into Forge memory.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_approval_capture_gates": {
+      "description": "Show Patch 167 approval capture gate rows.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_approval_capture_next": {
+      "description": "Show next roadmap step after Patch 167.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_approval_capture_plan": {
+      "description": "Build Forge-owned approval capture gate report. No live runtime writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_approval_capture_policy": {
+      "description": "Show Patch 167 runtime live approval capture / execution gate policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_approval_capture_show": {
+      "description": "Show latest Patch 167 approval capture report, gates, token, approval state, or files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_approval_export": {
+      "description": "Export Patch 163 runtime approval/apply plan as Forge-owned JSON/Markdown. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_live_approval_next": {
+      "description": "Show next step after Patch 163 runtime approval/apply plan. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_approval_plan": {
+      "description": "Build Forge-owned runtime live approval/apply plan draft. No live runtime writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_live_approval_policy": {
+      "description": "Show Patch 163 runtime live build approval policy. Read-only; no live runtime writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_approval_show": {
+      "description": "Show Patch 163 runtime approval plan, gates, files, or token template. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_approval_token": {
+      "description": "Create a Forge-owned approval token template only; does not grant approval or write live files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_live_backup_dry_run": {
+      "description": "Run no-write live runtime apply dry-run evidence. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_live_backup_export": {
+      "description": "Export Patch 164 backup/apply dry-run evidence into Forge memory.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_live_backup_next": {
+      "description": "Show next step after Patch 164 backup/apply dry-run.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_backup_plan": {
+      "description": "Build Forge-owned live runtime backup/apply dry-run plan. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_live_backup_policy": {
+      "description": "Show Patch 164 live runtime backup/apply dry-run policy. Read-only; no live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_backup_show": {
+      "description": "Show Patch 164 backup/apply dry-run report, gates, or files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_decision_check": {
+      "description": "Build Forge-owned approval receipt / execution decision report. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_decision_export": {
+      "description": "Export Patch 168 approval decision evidence into Forge memory.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_decision_gates": {
+      "description": "Show Patch 168 approval decision gate rows.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_decision_next": {
+      "description": "Show next roadmap step after Patch 168.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_decision_policy": {
+      "description": "Show Patch 168 runtime live approval receipt / execution decision policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_decision_show": {
+      "description": "Show latest Patch 168 approval decision report, gates, receipt, approval state, or files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_execution_export": {
+      "description": "Export Patch 166 execution plan evidence bundle into Forge memory.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_execution_gates": {
+      "description": "Show Patch 166 execution gate rows.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_execution_next": {
+      "description": "Show next roadmap step after Patch 166.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_execution_plan": {
+      "description": "Build Forge-owned execution plan and receipt template. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_execution_policy": {
+      "description": "Show Patch 166 execution plan / receipt gate policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_execution_show": {
+      "description": "Show latest Patch 166 execution plan, gates, files, receipt, or approval state.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_explicit_approval_capture": {
+      "description": "Write Forge-owned explicit approval capture/apply-hold report. Does not execute live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_live_explicit_approval_export": {
+      "description": "Export latest explicit approval/apply-hold report. Forge-owned write only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_live_explicit_approval_gates": {
+      "description": "Show explicit approval/apply-hold gates. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_explicit_approval_next": {
+      "description": "Show next step after explicit approval/apply-hold gate. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_explicit_approval_policy": {
+      "description": "Show Patch 171 explicit approval capture/apply hold policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_explicit_approval_show": {
+      "description": "Show latest explicit approval/apply-hold report. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_final_check": {
+      "description": "Build Forge-owned final live-apply gate report. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_final_export": {
+      "description": "Export Patch 165 final gate evidence bundle into Forge memory.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_final_gates": {
+      "description": "Show Patch 165 final gate rows.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_final_next": {
+      "description": "Show next roadmap step after Patch 165.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_final_policy": {
+      "description": "Show Patch 165 final approval/live apply gate policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_final_show": {
+      "description": "Show latest Patch 165 final gate report, gates, files, or approval state.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_hold_continuation_export": {
+      "description": "Export Patch 173 hold-continuation queue-return report as Forge-owned JSON/Markdown. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_live_hold_continuation_gates": {
+      "description": "Show Patch 173 hold-continuation queue-return gates. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_hold_continuation_next": {
+      "description": "Show next routing after Patch 173 hold-continuation queue return. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_hold_continuation_policy": {
+      "description": "Show Patch 173 runtime live hold-continuation / candidate queue-return policy. Read-only; no live runtime writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_hold_continuation_return": {
+      "description": "Write Forge-owned Patch 173 hold-continuation candidate queue-return receipt. No AI.Web runtime, project, or engine writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_live_hold_continuation_show": {
+      "description": "Show latest Patch 173 hold-continuation / queue-return report. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_token_validate_check": {
+      "description": "Build Forge-owned approval-token validation/final preflight report; no live runtime writes.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_live_token_validate_export": {
+      "description": "Export Patch 170 token validation report to Forge memory; no live runtime writes.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_live_token_validate_gates": {
+      "description": "Display Patch 170 token validation gates.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_token_validate_next": {
+      "description": "Display next recommended step after Patch 170 validation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_token_validate_policy": {
+      "description": "Read-only policy for Patch 170 runtime live approval token validation/final preflight gate.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_live_token_validate_show": {
+      "description": "Display latest Patch 170 token validation/final preflight report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_module_map_build": {
+      "description": "Patch 156 forge-runtime-module-map-build command. Runtime module dependency map; Forge-owned reports only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_module_map_export": {
+      "description": "Patch 156 forge-runtime-module-map-export command. Runtime module dependency map; Forge-owned reports only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_runtime_module_map_list": {
+      "description": "Patch 156 forge-runtime-module-map-list command. Runtime module dependency map; Forge-owned reports only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_module_map_next": {
+      "description": "Patch 156 forge-runtime-module-map-next command. Runtime module dependency map; Forge-owned reports only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_module_map_policy": {
+      "description": "Patch 156 forge-runtime-module-map-policy command. Runtime module dependency map; Forge-owned reports only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_runtime_module_map_show": {
+      "description": "Patch 156 forge-runtime-module-map-show command. Runtime module dependency map; Forge-owned reports only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_self_gaps": {
+      "description": "Compare Forge capabilities against expected coverage. Show which capability categories are weak or missing.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_self_report": {
+      "description": "Display the self-inspection report: all commands by patch, by category, most recently added.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_self_scan": {
+      "description": "Read main.py and build a full map of every command Forge knows. Saves structured JSON with functions, docstrings, patches.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_self_snapshot_create": {
+      "description": "Create a Forge-owned self-snapshot of critical Forge files before future self-update. Writes only under memory/forge_self_snapshots_v1.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_self_snapshot_export": {
+      "description": "Export latest Forge self-snapshot gate summary. Writes only Forge-owned export report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_self_snapshot_policy": {
+      "description": "Read-only policy for the Forge self-snapshot gate. Does not mutate live files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_self_snapshot_show": {
+      "description": "Read-only display of latest Forge self-snapshot manifest or verification report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_self_snapshot_verify": {
+      "description": "Verify a Forge self-snapshot manifest and copied file hashes. Writes only verification report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_self_suggest": {
+      "description": "Ask Qwen3 to suggest new Forge commands based on the gap analysis. Saves suggestions as proposals.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_self_update_export": {
+      "description": "Export Forge self-update proposal gate state. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_self_update_policy": {
+      "description": "Show Patch 120 proposal-only policy for Forge self-updates. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_self_update_propose": {
+      "description": "Create a Forge-owned self-update proposal shell for allowed Forge files only. Does not modify live files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_self_update_show": {
+      "description": "Show the latest Forge self-update proposal or verification report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_self_update_verify": {
+      "description": "Verify a Forge self-update proposal target list against allowed paths and current SHA. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_session_diff": {
+      "description": "Show every change made this session: commands installed, tools wrapped, files written. No restart \u2014 just a review.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_shadow_restore_diff": {
+      "description": "Create forensic diff between snapshot, shadow copy, and current live source hashes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_shadow_restore_export": {
+      "description": "Export latest shadow restore / forensic diff summary. Export only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_shadow_restore_plan": {
+      "description": "Build a shadow-restore plan from latest verified Forge snapshot. Writes Forge-owned plan evidence only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_shadow_restore_policy": {
+      "description": "Show Patch 153 shadow restore / forensic diff policy. Read-only display; no live restore.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_shadow_restore_run": {
+      "description": "Copy verified snapshot files into Forge-owned shadow restore directory only; no live restore.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_shadow_restore_show": {
+      "description": "Show Patch 153 shadow restore and forensic diff reports.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_snapshot_create_build": {
+      "description": "Create Forge-owned snapshot evidence under memory/forge_snapshots_v1 and write manifest.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_snapshot_create_export": {
+      "description": "Export latest snapshot create/verify summary.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_snapshot_create_next": {
+      "description": "Show next step after snapshot create/verify.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_snapshot_create_policy": {
+      "description": "Show Patch 152 snapshot create/verify policy. Read-only display; no live restore.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_snapshot_create_show": {
+      "description": "Show latest Patch 152 snapshot create/verify report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_snapshot_create_verify": {
+      "description": "Verify copied snapshot files by hash readback.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_snapshot_plan_build": {
+      "description": "Build a Forge-owned snapshot / forensic replay plan report. No snapshot copy, no restore, no project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_snapshot_plan_export": {
+      "description": "Export Patch 151 snapshot / forensic replay plan as Forge-owned JSON/Markdown. No restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_snapshot_plan_list": {
+      "description": "List Patch 151 planned snapshot domains. Read-only display.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_snapshot_plan_next": {
+      "description": "Show next action after Patch 151 snapshot planning. Read-only display.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_snapshot_plan_policy": {
+      "description": "Show Patch 151 snapshot / forensic replay plan policy. Plan-only; no snapshot copy or restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_snapshot_plan_show": {
+      "description": "Show latest Patch 151 snapshot / forensic replay plan or its domains/steps. Read-only display.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_source_authority_hardening_build": {
+      "description": "Refresh source-authority binding for current canonical engines and write Forge-owned hardening report only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_source_authority_hardening_export": {
+      "description": "Export Patch 148 source-authority hardening summary. Forge-owned report only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_source_authority_hardening_gaps": {
+      "description": "List source-authority binding gaps from latest Patch 148 hardening report. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_source_authority_hardening_next": {
+      "description": "Show next safe commands after source-authority hardening. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_source_authority_hardening_policy": {
+      "description": "Show Patch 148 source-authority runtime binder hardening policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_source_authority_hardening_show": {
+      "description": "Show latest source-authority hardening summary, domains, gaps, or one engine. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_status_api_build": {
+      "description": "Write Forge-owned read-only status API snapshot and endpoint contract JSON. No server, no project mutation.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_status_api_export": {
+      "description": "Export latest Forge status API snapshot summary.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_status_api_policy": {
+      "description": "Show Patch 127 read-only Forge status API snapshot policy. Does not start a server or mutate project files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_status_api_show": {
+      "description": "Read-only display of latest Forge status API snapshot or endpoints.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_tool_info": {
+      "description": "Get PyPI package details: version, summary, license, author, dependencies.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_tool_install": {
+      "description": "Install a PyPI package into Forge's Python venv. Requires INSTALL confirmation. Audited.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_tool_list": {
+      "description": "List all packages installed via forge-tool-install with wrap status.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_tool_search": {
+      "description": "Search PyPI for packages matching a query. Shows name, description, install status.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_tool_wrap": {
+      "description": "Generate a Forge command wrapper for an installed package using Qwen3.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_tool_wrap_install": {
+      "description": "Install a generated tool wrapper as a live Forge command. Requires WRAP-INSTALL confirmation. Backs up and compiles.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "forge_tool_wrap_list": {
+      "description": "List all generated tool wrappers and their install status.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_ui_plan": {
+      "description": "Shows structured plan for building the Forge web dashboard UI",
+      "executes": false,
+      "patch": "P200",
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_ui_start": {
+      "description": "Launch Terminus web dashboard at localhost:7477 \u2014 browser viewport, live Forge data, page memory",
+      "executes": true,
+      "patch": "P201",
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_ui_status": {
+      "description": "Check Terminus server state and page memory count",
+      "executes": true,
+      "patch": "P201",
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_ui_stop": {
+      "description": "Stop the Terminus web server",
+      "executes": true,
+      "patch": "P201",
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "forge_what_can_i_do": {
+      "description": "Shows real Forge capability summary from installed data \u2014 not from agent chatbot",
+      "executes": false,
+      "patch": "P200",
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "generic-revision-export": {
+      "authority": "no_live_project_write_no_patch_apply",
+      "description": "Patch 139 generic LLM sandbox failure revision command",
+      "trust_level": 5.0,
+      "write_scope": "forge_memory_only"
+    },
+    "generic-revision-llm": {
+      "authority": "no_live_project_write_no_patch_apply",
+      "description": "Patch 139 generic LLM sandbox failure revision command",
+      "trust_level": 5.0,
+      "write_scope": "forge_memory_only"
+    },
+    "generic-revision-plan": {
+      "authority": "no_live_project_write_no_patch_apply",
+      "description": "Patch 139 generic LLM sandbox failure revision command",
+      "trust_level": 5.0,
+      "write_scope": "forge_memory_only"
+    },
+    "generic-revision-policy": {
+      "authority": "no_live_project_write_no_patch_apply",
+      "description": "Patch 139 generic LLM sandbox failure revision command",
+      "trust_level": 5.0,
+      "write_scope": "forge_memory_only"
+    },
+    "generic-revision-show": {
+      "authority": "no_live_project_write_no_patch_apply",
+      "description": "Patch 139 generic LLM sandbox failure revision command",
+      "trust_level": 5.0,
+      "write_scope": "forge_memory_only"
+    },
+    "generic_repair_candidate_build": {
+      "description": "Build a Forge-memory-only repair candidate and unified diff from latest generic LLM repair proposal and current target file contents.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_repair_candidate_export": {
+      "description": "Export Patch 136 generic repair candidate and verification receipts for packet verification.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_repair_candidate_policy": {
+      "description": "Show Patch 136 generic repair candidate policy. No project writes; no patch apply authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "generic_repair_candidate_show": {
+      "description": "Show latest generic repair candidate, diff preview, compile status, or verification problems.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "generic_repair_candidate_verify": {
+      "description": "Verify candidate diff/compiled memory copy/current SHA state before sandboxing. No live apply authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_repair_export": {
+      "description": "Export Patch 135 generic LLM repair proposal evidence for packet verification.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_repair_llm": {
+      "description": "Call the local LLM through fixed Ollama argv to draft a generic repair proposal from compiled evidence. Writes Forge memory only.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "generic_repair_plan": {
+      "description": "Build a generic repair evidence packet from latest import probe, source authority, code snippets, test output, and impact maps.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "generic_repair_policy": {
+      "description": "Show Patch 135 generic LLM repair proposal policy. No writes outside Forge memory.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "generic_repair_review_export": {
+      "description": "Export Patch 136L LLM candidate review receipts for packet verification.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_repair_review_llm": {
+      "description": "Call local Ollama model to review the generated repair candidate diff before sandboxing. Writes Forge memory only.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_repair_review_policy": {
+      "description": "Show Patch 136L local LLM repair-candidate review policy. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_repair_review_show": {
+      "description": "Show latest local LLM candidate review, prompt, raw response, or verification report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "generic_repair_review_verify": {
+      "description": "Verify local LLM candidate review approves the same candidate before sandboxing. No apply authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_repair_sandbox_export": {
+      "description": "Export latest generic repair sandbox summary. Forge-owned write only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_repair_sandbox_plan": {
+      "description": "Build Forge-owned sandbox plan for latest LLM-reviewed repair candidate. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_repair_sandbox_policy": {
+      "description": "Show policy for generic repair sandbox: sandbox copy/test/local LLM review only; no live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_repair_sandbox_run": {
+      "description": "With confirmation token, apply candidate in sandbox copy, run safe Python checks/tests, call local LLM on results. No live writes.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_repair_sandbox_show": {
+      "description": "Read-only display of latest generic repair sandbox policy/plan/run/LLM review.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "generic_repair_show": {
+      "description": "Show latest Patch 135 repair evidence packet, LLM proposal, prompt, or response preview.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "generic_revision_candidate_build": {
+      "description": "Calls local LLM for exact revision candidate plan and builds Forge-memory-only candidate diff; no live project writes.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_revision_candidate_export": {
+      "description": "Export latest generic revision candidate report bundle metadata. Forge-owned write only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_revision_candidate_policy": {
+      "description": "Read-only policy for building a sandbox-only revision candidate from the latest LLM sandbox failure review.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_revision_candidate_show": {
+      "description": "Read-only display of latest generic revision candidate, LLM plan, diff, or verification.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "generic_revision_candidate_verify": {
+      "description": "Verify latest revision candidate is compile-clean, LLM-planned, and ready for sandbox rerun; no live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_revision_loop_candidate": {
+      "description": "Patch 142 command generic-revision-loop-candidate: LLM-driven generic revision loop; Forge memory only, no live project writes.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_revision_loop_export": {
+      "description": "Patch 142 command generic-revision-loop-export: LLM-driven generic revision loop; Forge memory only, no live project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_revision_loop_llm": {
+      "description": "Patch 142 command generic-revision-loop-llm: LLM-driven generic revision loop; Forge memory only, no live project writes.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_revision_loop_policy": {
+      "description": "Patch 142 command generic-revision-loop-policy: LLM-driven generic revision loop; Forge memory only, no live project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_revision_loop_show": {
+      "description": "Patch 142 command generic-revision-loop-show: LLM-driven generic revision loop; Forge memory only, no live project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "generic_revision_sandbox_export": {
+      "description": "Export latest generic revision sandbox rerun summary. Forge-owned write only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_revision_sandbox_plan": {
+      "description": "Build a sandbox rerun plan for the latest generic revision candidate, including scoped dependencies.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_revision_sandbox_policy": {
+      "description": "Read-only policy for sandboxing the latest LLM-built revision candidate with no live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "generic_revision_sandbox_run": {
+      "description": "Run the latest revision candidate in a Forge-owned sandbox with shell=False tests and local LLM review; requires explicit confirmation token.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_revision_sandbox_show": {
+      "description": "Show latest generic revision sandbox plan/run/LLM review artifacts.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "generic_sandbox_dependency_export": {
+      "description": "Export latest generic sandbox dependency resolution reports from Forge memory. No live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_sandbox_dependency_plan": {
+      "description": "Plan sandbox-only dependency augmentation from the latest generic repair sandbox failure. Writes Forge-owned plan only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_sandbox_dependency_policy": {
+      "description": "Show Patch 138 generic sandbox dependency resolution policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "generic_sandbox_dependency_run": {
+      "description": "Copy missing dependency into Forge-owned sandbox, rerun isolated compile/test, and call local LLM for review. No live project writes.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "generic_sandbox_dependency_show": {
+      "description": "Show latest generic sandbox dependency plan/run/LLM review. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "import_probe_export": {
+      "description": "Export Patch 134 generic import/path probe summary.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "import_probe_plan": {
+      "description": "Create a Forge-owned no-apply generic import/path probe plan for a scoped engine or Python file.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "import_probe_policy": {
+      "description": "Show Patch 134 generic import/path probe policy. No writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "import_probe_run": {
+      "description": "Run a controlled generic import/path probe with confirm token using subprocess argv and shell=False.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "import_probe_show": {
+      "description": "Show the latest Patch 134 generic import/path probe plan or run report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "list_allowed_folders": {
+      "description": "List the currently approved and session-scoped folders Forge can access.",
+      "executes": false,
+      "trust_level": 0.5,
+      "writes": false
+    },
+    "list_files": {
+      "description": "List files inside an approved directory up to a given depth.",
+      "executes": false,
+      "trust_level": 0.5,
+      "writes": false
+    },
+    "llm_engine_review_batch_next": {
+      "description": "Patch 98 command: llm-engine-review-batch-next. LLM engine review draft workflow with review-limited read lens; no canonical authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_engine_review_batch_plan": {
+      "description": "Patch 98 command: llm-engine-review-batch-plan. LLM engine review draft workflow with review-limited read lens; no canonical authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_engine_review_batch_run": {
+      "description": "Run a small bounded local LLM engine-review draft batch from existing evidence binders. Writes draft receipts only.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_engine_review_batch_run_export": {
+      "description": "Export Patch 101 LLM engine review batch-run receipts. Forge-owned reports only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_engine_review_batch_run_plan": {
+      "description": "Show/write a read-only plan of next engines eligible for small LLM draft batches.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_engine_review_batch_run_policy": {
+      "description": "Show Patch 101 LLM engine review batch-run policy. No canonical authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_engine_review_batch_run_show": {
+      "description": "Show latest Patch 101 LLM engine review batch-run receipt.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_engine_review_draft": {
+      "description": "Patch 98.2 command: llm-engine-review-draft. Calls local Ollama for a visible draft review using bound evidence; falls back deterministically if unavailable. No canonical authority.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_engine_review_export": {
+      "description": "Patch 98 command: llm-engine-review-export. LLM engine review draft workflow with review-limited read lens; no canonical authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_engine_review_gateway_init": {
+      "description": "Patch 98 command: llm-engine-review-gateway-init. LLM engine review draft workflow with review-limited read lens; no canonical authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_engine_review_gateway_show": {
+      "description": "Patch 98 command: llm-engine-review-gateway-show. LLM engine review draft workflow with review-limited read lens; no canonical authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_engine_review_model_test": {
+      "description": "Smoke-test local Ollama model response for engine review drafting. Executes local Ollama only; no shell, network, or project writes.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_engine_review_policy": {
+      "description": "Patch 98 command: llm-engine-review-policy. LLM engine review draft workflow with review-limited read lens; no canonical authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_engine_review_provider": {
+      "description": "Show Patch 98.2 local LLM provider/model status for engine review drafting. Read-only; no project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_engine_review_show": {
+      "description": "Patch 98 command: llm-engine-review-show. LLM engine review draft workflow with review-limited read lens; no canonical authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_live_draft": {
+      "description": "Call the local LLM through fixed Ollama argv to draft a visible source-grounded patch plan; no write/apply authority.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_live_export": {
+      "description": "Export latest live LLM invocation evidence for packet verification.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_live_policy": {
+      "description": "Read-only policy for visible local LLM invocation proofs; fixed Ollama call only, no file edits.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_live_probe": {
+      "description": "Check fixed local Ollama provider availability and write a proof report; no model generation required.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_live_show": {
+      "description": "Show the latest live LLM draft/probe/export report and raw model output path.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_memory_correction": {
+      "description": "Write a safe correction receipt so future LLM-facing work can reference prior mistakes and fixes. No project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_memory_export": {
+      "description": "Export LLM memory ledger summary as JSON and Markdown under Forge-owned memory only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_memory_init": {
+      "description": "Initialize Forge-owned LLM memory ledger folders and policy receipts. Does not touch project files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_memory_log_turn": {
+      "description": "Write a safe LLM turn receipt containing summaries, recommendations, outcomes, and next command context. No hidden chain-of-thought.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_memory_policy": {
+      "description": "Show Patch 75 LLM memory ledger policy. Read-only; no hidden chain-of-thought storage.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_memory_search": {
+      "description": "Search Forge-owned LLM memory receipts by plain text. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_memory_session": {
+      "description": "Summarize LLM memory ledger/session state. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_memory_show": {
+      "description": "Show latest or selected LLM memory receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_patch_export": {
+      "description": "Export latest LLM source-grounded patch proposal and verification summary.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_patch_policy": {
+      "description": "Read-only policy for LLM source-grounded patch proposal packets; no file writes outside Forge memory.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_patch_propose": {
+      "description": "Create a Forge-owned source-grounded patch proposal packet for an engine or target; no project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_patch_show": {
+      "description": "Read-only display of latest LLM patch proposal, verification, or proposal for one engine.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_patch_verify": {
+      "description": "Validate a source-grounded LLM patch proposal against scope, evidence, risk, and authority rules; no apply authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_plan_export": {
+      "description": "Export latest LLM planning schema/template/validation status. No project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_plan_policy": {
+      "description": "Show Patch 119 LLM planning packet schema policy. Read-only; no patch authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_plan_show": {
+      "description": "Read-only display of latest LLM planning template or validation report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_plan_template": {
+      "description": "Write a Forge-owned LLM planning packet template under memory/llm_plans_v1. No project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_plan_validate": {
+      "description": "Validate an LLM planning packet against Patch 119 schema. Writes validation report only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_tool_check": {
+      "description": "Check whether a requested Forge tool is allowed through the LLM gateway. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_tool_init": {
+      "description": "Initialize Forge-owned LLM tool gateway policy/index receipts. Does not touch project files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "llm_tool_list": {
+      "description": "List read-only gateway-eligible tools. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_tool_mode": {
+      "description": "Show current LLM tool gateway mode and authority limits. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_tool_policy": {
+      "description": "Show Patch 76 LLM tool gateway policy. Read-only; no tool execution.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_tool_report": {
+      "description": "Show latest or selected LLM tool request receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "llm_tool_request": {
+      "description": "Write an audited LLM tool request receipt under Forge-owned llm_memory_v1/tool_requests. Does not execute tools.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "patch_apply_gate_matrix": {
+      "description": "Read-only full matrix showing whether an apply plan passes disk, sandbox, test, and relevance gates.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_apply_gate_show": {
+      "description": "Detailed read-only full apply gate matrix for one apply plan.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_apply_gate_status": {
+      "description": "Read-only summary of recent apply plans and which gate blocks them.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_impact_export": {
+      "description": "Export latest patch impact map summary. Forge-owned write only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "patch_impact_map": {
+      "description": "Create a read-only patch impact map for a target engine/path or all canonical engines.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_live_readiness": {
+      "description": "Build read-only live-apply readiness matrix from evidence, tests, snapshot, sandbox, and approval gates.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "patch_live_readiness_export": {
+      "description": "Export latest Patch Lifecycle 2.0 readiness evidence.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "patch_live_readiness_policy": {
+      "description": "Show Patch Lifecycle 2.0 live-readiness gate policy; no apply authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_live_readiness_show": {
+      "description": "Show latest Patch Lifecycle 2.0 readiness matrix or verification.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_live_readiness_verify": {
+      "description": "Verify latest readiness matrix; writes Forge-owned verification only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "patch_risk_score": {
+      "description": "Score target patch risk using test status, relationship neighbors, cautions, and required checks.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_runtime_role_check": {
+      "description": "Check canonical runtime role basis for a target engine/path.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_sandbox_apply": {
+      "description": "Apply a patch plan to a Forge-owned sandbox copy only. Never modifies project files.",
+      "executes": false,
+      "trust_level": 4.5,
+      "writes": true
+    },
+    "patch_sandbox_clean": {
+      "description": "Delete a Forge-owned sandbox copy after explicit CLEAN confirmation. Reports are preserved.",
+      "executes": false,
+      "trust_level": 4.5,
+      "writes": true
+    },
+    "patch_sandbox_gate_check": {
+      "description": "Read-only check that an apply plan has a matching SANDBOX_APPLIED report before real patch-apply.",
+      "executes": false,
+      "trust_level": 4.8,
+      "writes": false
+    },
+    "patch_sandbox_gate_status": {
+      "description": "Read-only summary of sandbox reports that can satisfy the Patch 62 apply gate.",
+      "executes": false,
+      "trust_level": 4.8,
+      "writes": false
+    },
+    "patch_sandbox_plan": {
+      "description": "Create a Forge-owned sandbox rehearsal plan from an approved apply plan. Does not modify project files.",
+      "executes": false,
+      "trust_level": 4.5,
+      "writes": true
+    },
+    "patch_sandbox_report": {
+      "description": "Show the current sandbox plan/report state.",
+      "executes": false,
+      "trust_level": 4.5,
+      "writes": false
+    },
+    "patch_sandbox_smoke_apply": {
+      "description": "Apply the Patch 61 smoke plan through sandbox mode only. Writes only under Forge-owned sandbox folders.",
+      "executes": false,
+      "trust_level": 4.5,
+      "writes": true
+    },
+    "patch_sandbox_smoke_clean": {
+      "description": "Delete the Forge-owned smoke sandbox copy after explicit CLEAN confirmation. Reports are preserved.",
+      "executes": false,
+      "trust_level": 4.5,
+      "writes": true
+    },
+    "patch_sandbox_smoke_plan": {
+      "description": "Create a Forge-owned smoke target plus matching apply/sandbox plan to prove the sandbox success path. Never modifies AI.Web project files.",
+      "executes": false,
+      "trust_level": 4.5,
+      "writes": true
+    },
+    "patch_sandbox_smoke_report": {
+      "description": "Show the Patch 61 smoke sandbox plan/report state.",
+      "executes": false,
+      "trust_level": 4.5,
+      "writes": false
+    },
+    "patch_source_trace": {
+      "description": "Create a read-only source trace for a target from final lockfile, relationship map, and safe-test reports.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_test_bind": {
+      "description": "Bind one apply plan to one successful Patch 64 safe test report. Writes only Forge-owned patch_test_bindings JSON.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "patch_test_binding_report": {
+      "description": "Read one Forge-owned patch/test binding receipt.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_test_gate_check": {
+      "description": "Read-only check that an apply plan has a matching TEST_BOUND safe test receipt before real patch-apply.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_test_gate_status": {
+      "description": "Read-only summary of safe test bindings eligible for the Patch 65 apply gate.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_test_relevance_check": {
+      "description": "Read-only check that a patch/test binding uses a relevant safe test, not an unrelated PASS report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_test_relevance_policy": {
+      "description": "Show Patch 66 rules for relevant safe test binding. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "patch_test_relevance_status": {
+      "description": "Summarize TEST_BOUND receipts by relevance status.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "propose_command": {
+      "description": "Propose a safe diagnostic shell command for Nic to run manually. Forge never executes it.",
+      "executes": false,
+      "trust_level": 0.6,
+      "writes": false
+    },
+    "read_file": {
+      "description": "Read the contents of a file inside an approved path.",
+      "executes": false,
+      "trust_level": 0.5,
+      "writes": false
+    },
+    "run_safe_command": {
+      "description": "Execute a command from the Level 1.0 hard-coded allowlist. No shell. No user input in argv.",
+      "executes": true,
+      "trust_level": 1.0,
+      "writes": false
+    },
+    "run_tests": {
+      "description": "Run the project test suite and return output.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "search_knowledge_base": {
+      "description": "Search the local ChromaDB knowledge base. Only available after indexing.",
+      "executes": false,
+      "trust_level": 0.5,
+      "writes": false
+    },
+    "search_text": {
+      "description": "Search for a text string across files in an approved path.",
+      "executes": false,
+      "trust_level": 0.5,
+      "writes": false
+    },
+    "show_diff": {
+      "description": "Show the diff between current file and a proposed change.",
+      "executes": false,
+      "trust_level": 2.0,
+      "writes": false
+    },
+    "snapshot_archive_policy": {
+      "description": "Show Patch 83 snapshot-create/no-restore policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_create": {
+      "description": "Create a Forge-owned snapshot archive from the latest validated manifest/readiness receipts. No restore or project-write authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_create_export": {
+      "description": "Export snapshot create receipt index as Forge-owned JSON/Markdown. No restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_create_policy": {
+      "description": "Show Patch 81 snapshot manifest dry-run policy. Read-only; no snapshot creation or restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_create_show": {
+      "description": "Show a snapshot create receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_create_verify": {
+      "description": "Verify a snapshot create receipt and copied files. Read-only verification; no restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_diff": {
+      "description": "Compare snapshot create receipts. Writes Forge-owned diff report only; no restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_diff_export": {
+      "description": "Export snapshot diff/index reports. Writes Forge-owned export only; no restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_diff_plan": {
+      "description": "Compare latest snapshot plan metadata only. No file diff and no restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_diff_policy": {
+      "description": "Show Patch 84 snapshot diff / verify-index policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_diff_show": {
+      "description": "Show latest snapshot diff/index report. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_export": {
+      "description": "Export snapshot plan index as Forge-owned JSON/Markdown. Does not copy project files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_live_approval_export": {
+      "description": "Export Patch 90 live restore approval token receipt index. Writes Forge-owned export only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_live_approval_gate": {
+      "description": "Validate a Patch 90 live restore approval token gate. Read-only; no restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_approval_policy": {
+      "description": "Show Patch 90 live restore approval token policy. Token-only; no restore, no project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_approval_show": {
+      "description": "Show a Patch 90 live restore approval token receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_approval_token": {
+      "description": "Create a Forge-owned live restore approval token receipt bound to the latest Patch 89 preflight. No restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_live_backup_copy": {
+      "description": "Copy current live files bound by the Patch 92 backup gate into Forge-owned backup memory only. No live restore.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_live_backup_copy_export": {
+      "description": "Export Patch 93 backup copy receipts as Forge-owned JSON/Markdown reports.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_live_backup_copy_policy": {
+      "description": "Show Patch 93 backup-copy sandbox policy. No restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_backup_copy_show": {
+      "description": "Show the latest Patch 93 live restore backup copy sandbox receipt.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_backup_copy_verify": {
+      "description": "Verify Patch 93 backup copies and hashes. No live restore.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_backup_export": {
+      "description": "Export Patch 92 live restore backup gate receipts as JSON and Markdown index files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_live_backup_gate": {
+      "description": "Validate the latest or selected Patch 92 backup gate receipt. No backup copy or live restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_backup_plan": {
+      "description": "Create a Forge-owned live restore backup gate receipt from the latest Patch 91 dry-run. No backup copy or live restore.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_live_backup_policy": {
+      "description": "Show Patch 92 live restore backup gate policy. Gate receipt only; no backup copy, restore, or project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_backup_show": {
+      "description": "Show the latest or selected Patch 92 live restore backup gate receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_execute": {
+      "description": "Execute strictly bound live restore only with explicit confirmation and prior verified backup copy. Writes only chain-bound live files; audit log protected.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_live_execute_export": {
+      "description": "Export Patch 94 live restore execution receipts as Forge-owned JSON/Markdown.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_live_execute_gate": {
+      "description": "Check Patch 94 live restore execution gates without live writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_live_execute_policy": {
+      "description": "Show Patch 94 strictly-bound live restore execute policy. No shell/delete/quarantine; audit log protected.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_execute_show": {
+      "description": "Show the latest Patch 94 live restore execution receipt.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_preflight": {
+      "description": "Create a Forge-owned read-only live restore preflight report checking current target hashes without restoring anything.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_live_preflight_export": {
+      "description": "Export live restore preflight reports as Forge-owned JSON/Markdown. No restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_live_preflight_gate": {
+      "description": "Validate the live restore preflight gate. No restore authority; checks report safety only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_preflight_policy": {
+      "description": "Show Patch 89 live restore preflight policy. No restore, no copy, no project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_preflight_show": {
+      "description": "Show a live restore preflight report. Read-only display of Forge-owned report.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_proposal": {
+      "description": "Create a Forge-owned live-restore proposal gate report from a Patch 87 inspection. No restore or project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_live_proposal_export": {
+      "description": "Export Patch 88 live-restore proposal index as Forge-owned JSON/Markdown. No live restore.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_live_proposal_gate": {
+      "description": "Validate Patch 88 live-restore proposal invariants. Read-only; no restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_proposal_policy": {
+      "description": "Show Patch 88 live restore proposal gate policy. Proposal-only; no live restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_proposal_show": {
+      "description": "Show latest or selected Patch 88 live-restore proposal report. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_restore_dry_run": {
+      "description": "Create a Forge-owned live restore candidate dry-run receipt bound to the latest Patch 90 approval token. No restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_live_restore_export": {
+      "description": "Export Patch 91 live restore candidate dry-run receipts as JSON and Markdown index files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_live_restore_gate": {
+      "description": "Validate the latest or specified Patch 91 live restore candidate dry-run receipt. No restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_restore_policy": {
+      "description": "Show Patch 91 live restore candidate command dry-run policy. Dry-run only; no restore, no project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_live_restore_show": {
+      "description": "Show the latest or specified Patch 91 live restore candidate dry-run receipt.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_manifest_dry_run": {
+      "description": "Write a Forge-owned dry-run hash manifest receipt for future snapshots. Does not copy project files or grant restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_manifest_export": {
+      "description": "Export the snapshot manifest dry-run index as JSON and Markdown under Forge-owned memory. Does not copy project files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_manifest_show": {
+      "description": "Show a snapshot manifest dry-run receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_manifest_validate": {
+      "description": "Validate dry-run snapshot manifest invariants: no copy, no restore, hashes present. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_plan": {
+      "description": "Write a Forge-owned forensic snapshot plan receipt. Does not copy project files and does not restore anything.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_policy": {
+      "description": "Show Patch 80 snapshot planning policy. Plan/export only; no snapshot creation or restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_readiness_blockers": {
+      "description": "Show blockers/warnings from a snapshot readiness receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_readiness_check": {
+      "description": "Verify latest dry-run snapshot manifest and write Forge-owned readiness receipt. No snapshot creation or restore.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_readiness_export": {
+      "description": "Export snapshot readiness receipt index as JSON and Markdown under Forge-owned memory. No snapshot creation or restore.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_readiness_policy": {
+      "description": "Show Patch 82 snapshot manifest verify / snapshot-create readiness gate policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_readiness_show": {
+      "description": "Show a snapshot readiness receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_shadow_copy": {
+      "description": "Copy verified snapshot archive files into a Forge-owned shadow sandbox under memory/shadow_restores_v1. No live restore or project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_shadow_copy_export": {
+      "description": "Export Patch 86 shadow copy receipt index as Forge-owned JSON/Markdown. No live restore.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_shadow_copy_policy": {
+      "description": "Show Patch 86 shadow restore copy sandbox policy. Forge-owned shadow copy only; no live restore.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_shadow_copy_show": {
+      "description": "Show the latest or selected Patch 86 shadow copy receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_shadow_copy_verify": {
+      "description": "Verify copied shadow files against snapshot receipt hashes. Read-only verification; no restore.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_shadow_export": {
+      "description": "Export shadow restore plan index as Forge-owned JSON/Markdown. No copy or restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_shadow_inspect": {
+      "description": "Inspect a verified Patch 86 shadow copy and write a live-restore readiness report. No restore or project writes.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_shadow_inspect_export": {
+      "description": "Export Patch 87 shadow restore inspection index as Forge-owned JSON/Markdown. No live restore.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_shadow_inspect_policy": {
+      "description": "Show Patch 87 shadow restore inspection policy. Report-only; no live restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_shadow_inspect_readiness": {
+      "description": "Show readiness blockers/warnings from a Patch 87 inspection report. Read-only; no live restore.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_shadow_inspect_show": {
+      "description": "Show the latest or selected Patch 87 shadow restore inspection report. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_shadow_plan": {
+      "description": "Write a Forge-owned shadow restore plan from a snapshot create receipt. Does not copy or restore files.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "snapshot_shadow_policy": {
+      "description": "Show Patch 85 shadow restore plan policy. Plan-only; no copy or restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_shadow_show": {
+      "description": "Show a shadow restore plan receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_shadow_validate": {
+      "description": "Validate a shadow restore plan receipt and confirm no copy/restore authority. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_show": {
+      "description": "Show one snapshot plan receipt. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "snapshot_verify_index": {
+      "description": "Verify all snapshot create receipts and copied snapshot files. Writes Forge-owned verification index only; no restore authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "source_law_chunk_export": {
+      "description": "Export latest Patch 97A source-law chunk/retrieval probe report. Forge-owned report write only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "source_law_chunk_gaps": {
+      "description": "List source-law chunk/retrieval proof gaps and next routes. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "source_law_chunk_policy": {
+      "description": "Show Patch 97A source-law chunk/retrieval probe policy. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "source_law_chunk_probe": {
+      "description": "Probe existing context receipts/manifests/indexes and local Chroma sqlite metadata for source-law chunk/retrieval proof. Writes Forge-owned report only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "source_law_chunk_show": {
+      "description": "Show one Patch 97A source-law chunk/retrieval probe row. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "source_law_review_audit": {
+      "description": "Audit whether source-law documents are registered, extracted, chunked, ingested, and retrievable before LLM review. Writes Forge-owned reports only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "source_law_review_export": {
+      "description": "Export Patch 97 source-law readiness report as Forge-owned JSON/Markdown. No ingestion or engine review.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "source_law_review_gaps": {
+      "description": "List source-law readiness gaps and route to extraction/ingestion branches. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "source_law_review_policy": {
+      "description": "Show Patch 97 source-law context readiness policy. Read-only; no ingestion, OCR, or engine review authority.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "source_law_review_show": {
+      "description": "Show one source-law readiness row from the latest Patch 97 report. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "source_law_review_status": {
+      "description": "Show the latest source-law context readiness report summary. Read-only.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "test_inventory": {
+      "description": "Read-only inventory of indexed test files, configs, logs, and engine test coverage. Does not execute tests.",
+      "executes": false,
+      "trust_level": 4.8,
+      "writes": false
+    },
+    "test_policy": {
+      "description": "Show the safe-test policy and future execution allowlist rules. Does not execute tests.",
+      "executes": false,
+      "trust_level": 4.8,
+      "writes": false
+    },
+    "test_readiness": {
+      "description": "Read-only readiness summary for future safe test runner integration.",
+      "executes": false,
+      "trust_level": 4.8,
+      "writes": false
+    },
+    "test_run_history": {
+      "description": "List recent safe test run reports.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "test_run_policy": {
+      "description": "Show Patch 64 allowlisted safe test runner policy. Does not execute tests.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "test_run_report": {
+      "description": "Read one safe test run report from Forge-owned memory/test_run_reports.",
+      "executes": false,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "test_run_safe": {
+      "description": "Run one explicit allowlisted Python test target using subprocess argv with shell=False. Writes only test run reports.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": false
+    },
+    "test_run_smoke": {
+      "description": "Create a Forge-owned smoke Python file and compile it through the Patch 64 safe runner.",
+      "executes": true,
+      "trust_level": 5.0,
+      "writes": true
+    },
+    "test_show": {
+      "description": "Read-only display of test inventory rows by path, framework, or engine.",
+      "executes": false,
+      "trust_level": 4.8,
+      "writes": false
+    },
+    "write_proposed_patch": {
+      "description": "Write a patch proposal to ~/forge/proposed_patches/. NEVER modifies project files. Nic applies manually.",
+      "executes": false,
+      "trust_level": 2.0,
+      "writes": false
+    }
+  }
+}

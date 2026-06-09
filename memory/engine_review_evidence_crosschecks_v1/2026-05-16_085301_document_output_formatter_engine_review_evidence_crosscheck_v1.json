@@ -1,0 +1,256 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "611b4b7ac445bc687c4aedf271a9b12e48dd42bc3895cb6fa4e38ca3480752bb",
+      "excerpt_start": "# formatter_core.py\nimport json\nfrom datetime import datetime\n\ndef format_output(data):\n    timestamp = datetime.utcnow().isoformat() + \"Z\"\n    return {\n        \"timestamp\": timestamp,\n        \"formatted\": f\"[{timestamp}] :: {data}\"\n    }\n",
+      "functions_sample": [
+        "format_output"
+      ],
+      "imports_sample": [
+        "import json",
+        "from datetime import datetime"
+      ],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/document_output_formatter/formatter_core.py",
+      "relative_to_candidate": "formatter_core.py",
+      "sha256": "611b4b7ac445bc687c4aedf271a9b12e48dd42bc3895cb6fa4e38ca3480752bb",
+      "size_bytes": 239
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "f5a86f5e7af9035386a0ad222194492b0ee1f8731373fef61a445166a8410b48",
+      "excerpt_start": "# Document Output Formatter\n\nFormats system messages into structured, timestamped log entries.\n\nUsed for readable output of logs and UI exports.\n",
+      "functions_sample": [
+        "Document",
+        "Output",
+        "Formatter",
+        "Formats",
+        "system",
+        "messages",
+        "into",
+        "structured",
+        "timestamped",
+        "log",
+        "entries",
+        "Used",
+        "for",
+        "readable",
+        "output",
+        "logs",
+        "and",
+        "exports"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/document_output_formatter/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "f5a86f5e7af9035386a0ad222194492b0ee1f8731373fef61a445166a8410b48",
+      "size_bytes": 145
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "b97521bc753093782c07f554aac3f6cf2654ae11feb83ec7924acd4bb7289cc0",
+      "excerpt_start": "{\n  \"engine\": \"document_output_formatter\",\n  \"version\": \"v1\",\n  \"description\": \"Formats and timestamps system-level output for logs, records, and exports.\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "document_output_formatter",
+        "version",
+        "description",
+        "Formats",
+        "and",
+        "timestamps",
+        "system",
+        "level",
+        "output",
+        "for",
+        "logs",
+        "records",
+        "exports"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/document_output_formatter/formatter_manifest.json",
+      "relative_to_candidate": "formatter_manifest.json",
+      "sha256": "b97521bc753093782c07f554aac3f6cf2654ae11feb83ec7924acd4bb7289cc0",
+      "size_bytes": 159
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "d53279bd2989c9a918d2c6dcb81e5b09b59a91a3de83628656f41b3d950b551a",
+      "excerpt_start": "# test_formatter.py\nfrom formatter_core import format_output\n\ndef test_format():\n    sample = \"System initialized.\"\n    result = format_output(sample)\n    assert \"formatted\" in result\n    assert \"System initialized.\" in result[\"formatted\"]\n    print(\"\u2705 Test Passed: Formatter working.\")\n\ntest_format()\n",
+      "functions_sample": [
+        "test_format"
+      ],
+      "imports_sample": [
+        "from formatter_core import format_output"
+      ],
+      "line_count": 12,
+      "path": "/home/nic/aiweb/engines/document_output_formatter/test_formatter.py",
+      "relative_to_candidate": "test_formatter.py",
+      "sha256": "d53279bd2989c9a918d2c6dcb81e5b09b59a91a3de83628656f41b3d950b551a",
+      "size_bytes": 304
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "excerpt_start": "[]\n",
+      "functions_sample": [],
+      "imports_sample": [],
+      "line_count": 2,
+      "path": "/home/nic/aiweb/engines/document_output_formatter/output_log.json",
+      "relative_to_candidate": "output_log.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "size_bytes": 3
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/document_output_formatter",
+  "created_at": "2026-05-16_085301",
+  "crosscheck_id": "ERE-document_output_formatter-2026-05-16_085301",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Document",
+      "Formats",
+      "Formatter",
+      "Output",
+      "Used",
+      "and",
+      "description",
+      "document_output_formatter",
+      "engine",
+      "entries",
+      "exports",
+      "for",
+      "format_output",
+      "into",
+      "level",
+      "log",
+      "logs",
+      "messages",
+      "output",
+      "readable"
+    ],
+    "imports_sample": [
+      "from datetime import datetime",
+      "from formatter_core import format_output",
+      "import json"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`document_output_formatter` appears to be a local AI.Web engine/component. The bound source evidence includes 5 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# formatter_core.py import json",
+      "# Document Output Formatter ",
+      "{   \"engine\": \"document_output_formatter\",",
+      "# test_formatter.py from formatter_core import format_output"
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_085239_document_output_formatter_llm_engine_review_draft_v1.json",
+  "draft_sha256": "18c6c7708236026e8107b9488a78e34ff53036a361b9db9029e7b40313a2f99f",
+  "engine_family": "document_output_formatter",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_document_output_formatter_engine_evidence_binder.json",
+  "evidence_binder_sha256": "e990f451282bc565dd86d246a447579f73e87e30d5a4d6a83266ddeff59816de",
+  "evidence_id": "EEB-73405632cfb6984f",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "formatter_core.py",
+      "README.md",
+      "formatter_manifest.json",
+      "test_formatter.py",
+      "output_log.json"
+    ],
+    "functions_mentioned": [
+      "format_output",
+      "Document",
+      "Output",
+      "Formatter",
+      "Formats",
+      "system",
+      "messages",
+      "into",
+      "structured",
+      "timestamped",
+      "log",
+      "entries",
+      "Used",
+      "for",
+      "readable",
+      "output",
+      "logs",
+      "and",
+      "exports",
+      "engine",
+      "timestamps",
+      "level",
+      "test_format"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "from formatter_core import format_output"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 22.109,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "754ba22fd7eaf1e91ca759d653783fb763c82ab0f5f395aee4f913a84d34866a",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nFormats system messages into structured, timestamped log entries for readable output in logs and exports.  \n\nLikely System Role:  \nA logging/utility engine for processing and timestamping system-level output within AI.Web applications.  \n\nEvidence Used:  \n- `formatter_core.py`: Defines `format_output` function adding timestamps to data.  \n- `README.md`: Describes purpose as structuring system messages into timestamped logs.  \n- `formatter_manifest.json`: Explicitly states the engine's role in formatting and timestamping system output.  \n- `test_formatter.py`: Validates basic functionality of the formatter.  \n- `output_log.json`: Empty file suggesting potential use for storing formatted logs.  \n\nRisks / Uncertainties:  \n- `output_log.json` is empty; unclear if it\u2019s actively used or a placeholder.  \n- Test coverage is minimal (only basic assertion); may not account for edge cases.  \n- Role inference relies on documentation; actual usage could differ.  \n\nRecommendation Draft:  \nApprove review with noted evidence. Recommend verifying `output_log.json` usage and expanding test coverage for robustness.  \n\nSuggested Nic Action:  \nApprove review, but request confirmation on `output_log.json` status and additional testing requirements before deployment."
+  },
+  "llm_sections": {
+    "evidence_used": "- `formatter_core.py`: Defines `format_output` function adding timestamps to data.  \n- `README.md`: Describes purpose as structuring system messages into timestamped logs.  \n- `formatter_manifest.json`: Explicitly states the engine's role in formatting and timestamping system output.  \n- `test_formatter.py`: Validates basic functionality of the formatter.  \n- `output_log.json`: Empty file suggesting potential use for storing formatted logs.",
+    "likely_system_role": "A logging/utility engine for processing and timestamping system-level output within AI.Web applications.",
+    "plain_english_purpose": "Formats system messages into structured, timestamped log entries for readable output in logs and exports.",
+    "recommendation_draft": "Approve review with noted evidence. Recommend verifying `output_log.json` usage and expanding test coverage for robustness.",
+    "risks_uncertainties": "- `output_log.json` is empty; unclear if it\u2019s actively used or a placeholder.  \n- Test coverage is minimal (only basic assertion); may not account for edge cases.  \n- Role inference relies on documentation; actual usage could differ.",
+    "suggested_nic_action": "Approve review, but request confirmation on `output_log.json` status and additional testing requirements before deployment."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nFormats system messages into structured, timestamped log entries for readable output in logs and exports.  \n\nLikely System Role:  \nA logging/utility engine for processing and timestamping system-level output within AI.Web applications.  \n\nEvidence Used:  \n- `formatter_core.py`: Defines `format_output` function adding timestamps to data.  \n- `README.md`: Describes purpose as structuring system messages into timestamped logs.  \n- `formatter_manifest.json`: Explicitly states the engine's role in formatting and timestamping system output.  \n- `test_formatter.py`: Validates basic functionality of the formatter.  \n- `output_log.json`: Empty file suggesting potential use for storing formatted logs.  \n\nRisks / Uncertainties:  \n- `output_log.json` is empty; unclear if it\u2019s actively used or a placeholder.  \n- Test coverage is minimal (only basic assertion); may not account for edge cases.  \n- Role inference relies on documentation; actual usage could differ.  \n\nRecommendation Draft:  \nApprove review with noted evidence. Recommend verifying `output_log.json` usage and expanding test coverage for robustness.  \n\nSuggested Nic Action:  \nApprove review, but request confirmation on `output_log.json` status and additional testing requirements before deployment.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

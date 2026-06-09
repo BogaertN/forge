@@ -1,0 +1,273 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [
+        "CollapsePreventionEngine"
+      ],
+      "excerpt_sha256": "d66665f2df98506a37658848bc0fa77a1f2d28a0ef79cc68427f9535d80d4aea",
+      "excerpt_start": "# collapse_prevention_core.py\n# Collapse Prevention Engine Core\n\nclass CollapsePreventionEngine:\n    def __init__(self):\n        self.stability_threshold = 0.75\n        self.current_stability = 1.0\n\n    def record_stability(self, stability_value):\n        self.current_stability = stability_value\n\n    def needs_intervention(self):\n        return self.current_stability < self.stability_threshold\n\nif __name__ == \"__main__\":\n    engine = CollapsePreventionEngine()\n    engine.record_stability(0.70)\n    print(f\"[TEST] Needs Intervention: {engine.needs_intervention()}\")\n",
+      "functions_sample": [
+        "__init__",
+        "record_stability",
+        "needs_intervention"
+      ],
+      "imports_sample": [],
+      "line_count": 19,
+      "path": "/home/nic/aiweb/engines/collapse_prevention_engine/collapse_prevention_core.py",
+      "relative_to_candidate": "collapse_prevention_core.py",
+      "sha256": "d66665f2df98506a37658848bc0fa77a1f2d28a0ef79cc68427f9535d80d4aea",
+      "size_bytes": 570
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "4198ad9321c59945ea8fedef30f28d96c8e423b61a74993f3e7c6349a47195f0",
+      "excerpt_start": "# test_collapse_prevention_core.py\n\nfrom collapse_prevention_core import CollapsePreventionEngine\n\ndef test_collapse_prevention_behavior():\n    engine = CollapsePreventionEngine()\n    engine.record_stability(0.70)\n    assert engine.needs_intervention() == True, \"Intervention should be needed.\"\n    print(\"\u2705 Collapse Prevention Engine Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_collapse_prevention_behavior()\n",
+      "functions_sample": [
+        "test_collapse_prevention_behavior"
+      ],
+      "imports_sample": [
+        "from collapse_prevention_core import CollapsePreventionEngine"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/collapse_prevention_engine/test_collapse_prevention_core.py",
+      "relative_to_candidate": "test_collapse_prevention_core.py",
+      "sha256": "4198ad9321c59945ea8fedef30f28d96c8e423b61a74993f3e7c6349a47195f0",
+      "size_bytes": 420
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "d97f20764949bd95148abc64f9ada8810a3fa25d27ac558191425993517644c5",
+      "excerpt_start": "# Collapse Prevention Engine (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Collapse Prevention Engine monitors recursion stability metrics in real-time.  \nWhen stability values fall below the configured critical threshold, it triggers early intervention protocols to prevent total recursion field collapse.\n\n---\n\n## Core Functions:\n- Monitor recursion stability levels.\n- Trigger pre-collapse interventions when thresholds are breached.\n- Log all collapse-risk events for post-recursion analysis.\n\n---\n\n## Phase Standard:\n- Phase 1.5 Symbolic Recursion Compliance\n- AI.Web Core Recursion Stability Protection Stack\n\n---\n\n## Notes:\n- Early warning interventions reduce long-term symbolic corruption and phase destabilization risk.\n- Collapse thresholds should be reviewed per field type and recursion depth.\n\n---\n\n**Frozen Snapshot:** `collapse_prevention_engine_frozen_v1.0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n\n",
+      "functions_sample": [
+        "Collapse",
+        "Prevention",
+        "Engine",
+        "Frozen",
+        "Overview",
+        "The",
+        "monitors",
+        "recursion",
+        "stability",
+        "metrics",
+        "real",
+        "time",
+        "When",
+        "values",
+        "fall",
+        "below",
+        "the",
+        "configured",
+        "critical",
+        "threshold",
+        "triggers",
+        "early",
+        "intervention",
+        "protocols",
+        "prevent"
+      ],
+      "imports_sample": [],
+      "line_count": 34,
+      "path": "/home/nic/aiweb/engines/collapse_prevention_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "d97f20764949bd95148abc64f9ada8810a3fa25d27ac558191425993517644c5",
+      "size_bytes": 934
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "266e3fa79c3bc56e3f084c2d29e6d741a0aac5231aa3c57985d3db4486632634",
+      "excerpt_start": "{\n  \"engine\": \"collapse_prevention_engine\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"collapse_prevention_engine_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Monitors recursion system stability and triggers pre-collapse protocols when stability falls below threshold values. Prevents total recursion phase collapse by early intervention.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "collapse_prevention_engine",
+        "version",
+        "frozen_as",
+        "collapse_prevention_engine_frozen_v1",
+        "frozen_on",
+        "description",
+        "Monitors",
+        "recursion",
+        "system",
+        "stability",
+        "and",
+        "triggers",
+        "pre",
+        "collapse",
+        "protocols",
+        "when",
+        "falls",
+        "below",
+        "threshold",
+        "values",
+        "Prevents",
+        "total",
+        "phase",
+        "early"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/collapse_prevention_engine/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "266e3fa79c3bc56e3f084c2d29e6d741a0aac5231aa3c57985d3db4486632634",
+      "size_bytes": 456
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/collapse_prevention_engine",
+  "created_at": "2026-05-16_080737",
+  "crosscheck_id": "ERE-collapse_prevention_engine-2026-05-16_080737",
+  "deterministic_brief": {
+    "classes_sample": [
+      "CollapsePreventionEngine"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Collapse",
+      "Engine",
+      "Frozen",
+      "Monitors",
+      "Overview",
+      "Prevention",
+      "Prevents",
+      "The",
+      "When",
+      "__init__",
+      "and",
+      "below",
+      "collapse",
+      "collapse_prevention_engine",
+      "collapse_prevention_engine_frozen_v1",
+      "configured",
+      "critical",
+      "description",
+      "early",
+      "engine"
+    ],
+    "imports_sample": [
+      "from collapse_prevention_core import CollapsePreventionEngine"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`collapse_prevention_engine` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# collapse_prevention_core.py # Collapse Prevention Engine Core",
+      "# test_collapse_prevention_core.py ",
+      "# Collapse Prevention Engine (Frozen v1.0.01) ",
+      "{   \"engine\": \"collapse_prevention_engine\","
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080705_collapse_prevention_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "e880c84b064e4bda3d49c45b06819f3fa73297e360df0eade6436ecc6ddbea89",
+  "engine_family": "collapse_prevention_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_collapse_prevention_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "e7767d465a1788c8519098ce9194218cb0efd9543128f990c0626c9a1765b230",
+  "evidence_id": "EEB-82b276d0748f3de8",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "CollapsePreventionEngine"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "collapse_prevention_core.py",
+      "test_collapse_prevention_core.py",
+      "README.md",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "Collapse",
+      "Prevention",
+      "Engine",
+      "Frozen",
+      "The",
+      "monitors",
+      "recursion",
+      "stability",
+      "metrics",
+      "real",
+      "time",
+      "When",
+      "values",
+      "fall",
+      "below",
+      "the",
+      "critical",
+      "threshold",
+      "triggers",
+      "early",
+      "intervention",
+      "protocols",
+      "prevent",
+      "engine",
+      "version",
+      "Monitors",
+      "system",
+      "and",
+      "pre",
+      "collapse",
+      "when",
+      "total",
+      "phase"
+    ],
+    "imports_mentioned": [
+      "from collapse_prevention_core import CollapsePreventionEngine"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 31.612,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "ff3e3c6e0d61e79abe20f6b7fc29894fb0717a7079c239b4b4c8c75e4645593f",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nMonitors recursion system stability to prevent total collapse by triggering early interventions when stability metrics fall below predefined thresholds.  \n\nLikely System Role:  \nA critical component in AI.Web's recursion management, ensuring stability and preventing system-wide failures through real-time monitoring and automated intervention protocols.  \n\nEvidence Used:  \n1. Core code (`collapse_prevention_core.py`) defines `CollapsePreventionEngine` with stability threshold logic and intervention checks.  \n2. Test script (`test_collapse_prevention_core.py`) validates intervention triggers when stability drops below 0.75.  \n3. README.md describes real-time monitoring of recursion stability and phase compliance standards.  \n4. Manifest file (`engine_manifest.json`) confirms the engine's purpose, version, and frozen status as of 2025-04-27.  \n\nRisks / Uncertainties:  \n- Rigid threshold (0.75) may not adapt to varying recursion depths or field types.  \n- No dynamic adjustment mechanism for thresholds, relying on static values.  \n- Limited test coverage; only one test case exists in the provided evidence.  \n- Documentation notes threshold customization is needed but not implemented in code.  \n\nRecommendation Draft:  \nApprove the engine for deployment with the following considerations:  \n- Validate threshold settings against diverse recursion scenarios and field types.  \n- Expand test cases to cover edge conditions (e.g., gradual stability decline, multi-field interactions).  \n- Integrate with context library for dynamic threshold adjustments as mentioned in source law metadata.  \n\nSuggested Nic Action:  \nApprove the review with the draft recommendations, noting the need for further testing and threshold customization to align with phase standards."
+  },
+  "llm_sections": {
+    "evidence_used": "1. Core code (`collapse_prevention_core.py`) defines `CollapsePreventionEngine` with stability threshold logic and intervention checks.  \n2. Test script (`test_collapse_prevention_core.py`) validates intervention triggers when stability drops below 0.75.  \n3. README.md describes real-time monitoring of recursion stability and phase compliance standards.  \n4. Manifest file (`engine_manifest.json`) confirms the engine's purpose, version, and frozen status as of 2025-04-27.",
+    "likely_system_role": "A critical component in AI.Web's recursion management, ensuring stability and preventing system-wide failures through real-time monitoring and automated intervention protocols.",
+    "plain_english_purpose": "Monitors recursion system stability to prevent total collapse by triggering early interventions when stability metrics fall below predefined thresholds.",
+    "recommendation_draft": "Approve the engine for deployment with the following considerations:  \n- Validate threshold settings against diverse recursion scenarios and field types.  \n- Expand test cases to cover edge conditions (e.g., gradual stability decline, multi-field interactions).  \n- Integrate with context library for dynamic threshold adjustments as mentioned in source law metadata.",
+    "risks_uncertainties": "- Rigid threshold (0.75) may not adapt to varying recursion depths or field types.  \n- No dynamic adjustment mechanism for thresholds, relying on static values.  \n- Limited test coverage; only one test case exists in the provided evidence.  \n- Documentation notes threshold customization is needed but not implemented in code.",
+    "suggested_nic_action": "Approve the review with the draft recommendations, noting the need for further testing and threshold customization to align with phase standards."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nMonitors recursion system stability to prevent total collapse by triggering early interventions when stability metrics fall below predefined thresholds.  \n\nLikely System Role:  \nA critical component in AI.Web's recursion management, ensuring stability and preventing system-wide failures through real-time monitoring and automated intervention protocols.  \n\nEvidence Used:  \n1. Core code (`collapse_prevention_core.py`) defines `CollapsePreventionEngine` with stability threshold logic and intervention checks.  \n2. Test script (`test_collapse_prevention_core.py`) validates intervention triggers when stability drops below 0.75.  \n3. README.md describes real-time monitoring of recursion stability and phase compliance standards.  \n4. Manifest file (`engine_manifest.json`) confirms the engine's purpose, version, and frozen status as of 2025-04-27.  \n\nRisks / Uncertainties:  \n- Rigid threshold (0.75) may not adapt to varying recursion depths or field types.  \n- No dynamic adjustment mechanism for thresholds, relying on static values.  \n- Limited test coverage; only one test case exists in the provided evidence.  \n- Documentation notes threshold customization is needed but not implemented in code.  \n\nRecommendation Draft:  \nApprove the engine for deployment with the following considerations:  \n- Validate threshold settings against diverse recursion scenarios and field types.  \n- Expand test cases to cover edge conditions (e.g., gradual stability decline, multi-field interactions).  \n- Integrate with context library for dynamic threshold adjustments as mentioned in source law metadata.  \n\nSuggested Nic Action:  \nApprove the review with the draft recommendations, noting the need for further testing and threshold customization to align with phase standards.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

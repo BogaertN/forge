@@ -1,0 +1,88 @@
+# Patch 98 LLM Engine Review Batch Plan
+
+Ready: `80`
+Blocked: `0`
+Gateway ready: `True`
+Source-law ready: `True`
+
+## Ready Engines
+- `activity_log` — `PENDING_REVIEW` — `EEB-929b125c673bef05`
+- `admin_override_console` — `PENDING_REVIEW` — `EEB-7e1e67cf08853d05`
+- `agent_reflection_engine` — `PENDING_REVIEW` — `EEB-efe9b78ceabc9853`
+- `agents_stack` — `PENDING_REVIEW` — `EEB-e7eb75087380b7b6`
+- `aiweb_os` — `DEFERRED` — `EEB-7b29cb90ee5e540e`
+- `aiweb_os_engine` — `APPROVED` — `EEB-f8276d394f6ec7e0`
+- `ascii_interpreter_engine` — `PENDING_REVIEW` — `EEB-2acca33f6ecda788`
+- `athena` — `PENDING_REVIEW` — `EEB-4615d0bfc9a40a98`
+- `athena_engine` — `PENDING_REVIEW` — `EEB-77509139334c5639`
+- `christping_listener` — `APPROVED` — `EEB-a757f04a6033202d`
+- `christping_validator_engine` — `PENDING_REVIEW` — `EEB-45c0906ffe7e9875`
+- `cold_archive_engine` — `DEFERRED` — `EEB-bc75b62ef10a008d`
+- `collapse_prevention_engine` — `PENDING_REVIEW` — `EEB-82b276d0748f3de8`
+- `compute_contribution_engine` — `PENDING_REVIEW` — `EEB-91df18441d00687d`
+- `confusion_checker` — `PENDING_REVIEW` — `EEB-0fec7336f1df5be6`
+- `contribution_dashboard_engine` — `PENDING_REVIEW` — `EEB-505effd8a0bf2be3`
+- `contribution_ledger_stack` — `PENDING_REVIEW` — `EEB-e30ad0b50c5c03dd`
+- `control_panel_ui_engine` — `APPROVED` — `EEB-fd254ee2e030c2ee`
+- `control_stack` — `PENDING_REVIEW` — `EEB-7df4589a96005a41`
+- `core_stack_breather` — `PENDING_REVIEW` — `EEB-df535a295e2cc3a2`
+- `core_system_stack` — `PENDING_REVIEW` — `EEB-3bf3f922354da81e`
+- `document_output_formatter` — `PENDING_REVIEW` — `EEB-73405632cfb6984f`
+- `dream_state_engine` — `PENDING_REVIEW` — `EEB-250da52af3cef833`
+- `drift_analyzer_tool` — `PENDING_REVIEW` — `EEB-bed831a69b1978e5`
+- `drift_arbitration_engine` — `DEFERRED` — `EEB-caf4c9b35c20c0c1`
+- `drift_signature_logger` — `APPROVED` — `EEB-3f7110ff52737f3a`
+- `echo_trace_visualizer` — `PENDING_REVIEW` — `EEB-69e88d1e442364cb`
+- `entropy_monitor_engine` — `PENDING_REVIEW` — `EEB-e7babb77acece4bb`
+- `external_feed_listener` — `PENDING_REVIEW` — `EEB-5f91c358437560b6`
+- `failsafe_manager` — `APPROVED` — `EEB-31299b3bb67a4c24`
+- `field_resonance_mapper` — `PENDING_REVIEW` — `EEB-3709f6df7c34236d`
+- `fluid_memory_engine` — `PENDING_REVIEW` — `EEB-787e388492eb001b`
+- `gilligan` — `PENDING_REVIEW` — `EEB-79999be700688737`
+- `gilligan_drift_correction_upgrade` — `PENDING_REVIEW` — `EEB-e5144c91abeb8497`
+- `glyph_engine` — `PENDING_REVIEW` — `EEB-249760030f1dcef2`
+- `glyph_ui_overlay` — `PENDING_REVIEW` — `EEB-f1a7bbfdc6404c98`
+- `goal_injection_engine` — `PENDING_REVIEW` — `EEB-6ef85e34d4584ab4`
+- `install_onboarding_engine` — `PENDING_REVIEW` — `EEB-27b6d26db1fca1c2`
+- `loop_resurrection_engine` — `APPROVED` — `EEB-608882f63d11dd95`
+- `memory_stack_engine` — `DEFERRED` — `EEB-4a5bb74b665f20b7`
+- `memory_stack_engine_breathing` — `DEFERRED` — `EEB-50a63c58ff43301e`
+- `memory_stack_stack` — `PENDING_REVIEW` — `EEB-3cfbf7294cfbbb19`
+- `naming_engine` — `PENDING_REVIEW` — `EEB-4811acd49109ee4b`
+- `neo` — `PENDING_REVIEW` — `EEB-cf8cb4e8a7b97c69`
+- `neo_engine` — `PENDING_REVIEW` — `EEB-7d85a9d7c058d7e3`
+- `peer_communication_engine` — `PENDING_REVIEW` — `EEB-b4d43bbd029bc6ce`
+- `phase_engine` — `APPROVED` — `EEB-69f03eb6723fbc4c`
+- `plugin_engine` — `APPROVED` — `EEB-9f2d185c6369ad5f`
+- `project_brain` — `PENDING_REVIEW` — `EEB-89de7d13d526bcb6`
+- `project_memory` — `PENDING_REVIEW` — `EEB-23949a7bc582f4ff`
+- `protoforge` — `PENDING_REVIEW` — `EEB-f507208845aa44b0`
+- `protoforge_dashboard_runtime` — `DEFERRED` — `EEB-d2adb3604e47fb64`
+- `recursion_mapper` — `PENDING_REVIEW` — `EEB-a52a83f45b9147a9`
+- `recursive_agent_kernel` — `APPROVED` — `EEB-a25ac486f908ee13`
+- `recursive_field_breather` — `PENDING_REVIEW` — `EEB-4e67b792942bf24f`
+- `recursive_field_engine` — `PENDING_REVIEW` — `EEB-d33acb110fc06e11`
+- `recursive_field_stack` — `PENDING_REVIEW` — `EEB-85488a1a05a51204`
+- `recursive_verification_engine` — `PENDING_REVIEW` — `EEB-d20bc5816e4cbd21`
+- `resonance_charge_meter` — `APPROVED` — `EEB-980203111472c50f`
+- `resonance_display` — `PENDING_REVIEW` — `EEB-56fbe400ef70c76b`
+- `resonance_visualizer_engine` — `PENDING_REVIEW` — `EEB-46f2483eea8aaa4e`
+- `resurrection_planner` — `PENDING_REVIEW` — `EEB-8815431b5a347b48`
+- `revisit_previous_tasks` — `PENDING_REVIEW` — `EEB-fa154cacfa6339d5`
+- `saved_ideas` — `DEFERRED` — `EEB-8b432e29a66e3ba3`
+- `seed_manager` — `PENDING_REVIEW` — `EEB-06a9287346a56399`
+- `spc_memory_migrator` — `PENDING_REVIEW` — `EEB-af3ca030500d9a8a`
+- `stack_breather_phase2` — `PENDING_REVIEW` — `EEB-39c6236c8ad9679b`
+- `stack_linker_breather` — `PENDING_REVIEW` — `EEB-0b4dcdaedc7646d1`
+- `step_counter` — `DEFERRED` — `EEB-12d370d32d5c9c14`
+- `symbolic_capacitor_engine` — `APPROVED` — `EEB-f009925b8d6e9b8e`
+- `symbolic_cognition_stack` — `PENDING_REVIEW` — `EEB-9ed14b42b452620b`
+- `symbolic_drift_visualizer` — `PENDING_REVIEW` — `EEB-b585d646e1a280cc`
+- `symbolic_feedback_loop_engine` — `APPROVED` — `EEB-deba4d6916e5108c`
+- `symbolic_glyph_engine` — `PENDING_REVIEW` — `EEB-34f45c7f8dba494d`
+- `symbolic_layers_stack` — `PENDING_REVIEW` — `EEB-e6c855743c10f45e`
+- `symbolic_policy_engine` — `APPROVED` — `EEB-9deae6c9ced516e4`
+- `system_log_engine` — `APPROVED` — `EEB-05b9803a0be968af`
+- `tier_enforcer` — `PENDING_REVIEW` — `EEB-2dcdd27009bc29cd`
+- `tone_engine` — `PENDING_REVIEW` — `EEB-d96806024a817bac`
+- `trust_guard` — `PENDING_REVIEW` — `EEB-a8385832dc4fb5a6`

@@ -1,0 +1,173 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "projects/recursive_lmm_grok1/engines/revisit_previous_tasks",
+  "candidate_path_resolved": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/revisit_previous_tasks",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "revisit_previous_tasks",
+  "evidence_id": "EEB-fa154cacfa6339d5",
+  "file_count": 5,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "306453111ab36e31187cd339f51c08d574aa6c8daf68bb4d24644d726dd27957",
+      "excerpt_start": "import json\nfrom datetime import datetime\n\nQUEUE_FILE = \"resurrection_queue.json\"\n\ndef resurrect_loop(loop_id):\n    try:\n        with open(QUEUE_FILE, \"r\") as f:\n            queue = json.load(f)\n    except (FileNotFoundError, json.JSONDecodeError):\n        queue = []\n\n    event = {\n        \"timestamp\": datetime.utcnow().isoformat(),\n        \"loop_id\": loop_id,\n        \"resurrected\": True\n    }\n    queue.append(event)\n\n    with open(QUEUE_FILE, \"w\") as f:\n        json.dump(queue, f, indent=2)\n\n    return event\n",
+      "functions_sample": [
+        "resurrect_loop"
+      ],
+      "imports_sample": [
+        "import json",
+        "from datetime import datetime"
+      ],
+      "line_count": 24,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/revisit_previous_tasks/resurrection_core.py",
+      "relative_to_candidate": "resurrection_core.py",
+      "sha256": "306453111ab36e31187cd339f51c08d574aa6c8daf68bb4d24644d726dd27957",
+      "size_bytes": 515,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "1a2a1a193b5c75796d76ca8b84d3fbe6b4e6aefc7d1096f31217fbe43fa0d757",
+      "excerpt_start": "\nfrom resurrection_core import resurrect_loop\n\ndef test_resurrection_process():\n    result = resurrect_loop(\"loop_φ8a\")\n    print(\"✅ Test Passed: Loop resurrection queued.\")\n    print(\"Queued:\", result)\n\nif __name__ == \"__main__\":\n    test_resurrection_process()\n",
+      "functions_sample": [
+        "test_resurrection_process"
+      ],
+      "imports_sample": [
+        "from resurrection_core import resurrect_loop"
+      ],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/revisit_previous_tasks/test_resurrection.py",
+      "relative_to_candidate": "test_resurrection.py",
+      "sha256": "1a2a1a193b5c75796d76ca8b84d3fbe6b4e6aefc7d1096f31217fbe43fa0d757",
+      "size_bytes": 266,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "5448e10b3b615e3e18e476d1029b0a4ef7e38158440c8621a95a7d5f96536282",
+      "excerpt_start": "[\n  {\n    \"timestamp\": \"2025-04-25T22:24:03.584322\",\n    \"loop_id\": \"loop_\\u03c68a\",\n    \"resurrected\": true\n  }\n]",
+      "functions_sample": [
+        "timestamp",
+        "loop_id",
+        "loop_",
+        "u03c68a",
+        "resurrected",
+        "true"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/revisit_previous_tasks/resurrection_queue.json",
+      "relative_to_candidate": "resurrection_queue.json",
+      "sha256": "5448e10b3b615e3e18e476d1029b0a4ef7e38158440c8621a95a7d5f96536282",
+      "size_bytes": 114,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "83a8a3b01009a4d6ece3884144db05652a3c8fc3acaaea6582dd0c1adb0cda8d",
+      "excerpt_start": "# Loop Resurrection Engine\n\nThis engine restores unresolved loops from symbolic cold archive into active runtime queue for attempted reintegration.\n\n- resurrection_core.py → Logic\n- resurrection_queue.json → Queue file\n- test_resurrection.py → Validation script\n",
+      "functions_sample": [
+        "Loop",
+        "Resurrection",
+        "Engine",
+        "This",
+        "engine",
+        "restores",
+        "unresolved",
+        "loops",
+        "from",
+        "symbolic",
+        "cold",
+        "archive",
+        "into",
+        "active",
+        "runtime",
+        "queue",
+        "for",
+        "attempted",
+        "reintegration",
+        "resurrection_core",
+        "Logic",
+        "resurrection_queue",
+        "json",
+        "Queue",
+        "file"
+      ],
+      "imports_sample": [],
+      "line_count": 8,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/revisit_previous_tasks/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "83a8a3b01009a4d6ece3884144db05652a3c8fc3acaaea6582dd0c1adb0cda8d",
+      "size_bytes": 268,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "d4047152e88ec997d88213c0d23b11bd70d9efbb54955449eeb1819c96473528",
+      "excerpt_start": "{\n  \"engine\": \"loop_resurrection_engine\",\n  \"version\": \"v1.0\",\n  \"status\": \"build_mode\",\n  \"description\": \"Queues previously archived loops for resurrection attempts.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "loop_resurrection_engine",
+        "version",
+        "status",
+        "build_mode",
+        "description",
+        "Queues",
+        "previously",
+        "archived",
+        "loops",
+        "for",
+        "resurrection",
+        "attempts"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/revisit_previous_tasks/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "d4047152e88ec997d88213c0d23b11bd70d9efbb54955449eeb1819c96473528",
+      "size_bytes": 170,
+      "suffix": ".json"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200356_engine_canonical_decision_draft.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200444_engine_canonical_decision_draft_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_202152_engine_canonical_lockfile_draft.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_202324_engine_canonical_lockfile_draft_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "resurrect_loop",
+    "test_resurrection_process"
+  ],
+  "warnings": []
+}

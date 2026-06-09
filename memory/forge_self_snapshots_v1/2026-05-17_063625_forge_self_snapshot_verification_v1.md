@@ -1,0 +1,33 @@
+# FORGE_SELF_SNAPSHOT_VERIFICATION_V1
+
+- **schema_version:** forge_self_snapshot_verification_v1_patch121
+- **report_type:** FORGE_SELF_SNAPSHOT_VERIFICATION_V1
+- **created_at:** 2026-05-17T06:36:25
+- **status:** FORGE_SELF_SNAPSHOT_VERIFIED
+- **snapshot_id:** FSS-2026-05-17_063610
+- **manifest_path:** /home/nic/forge/memory/forge_self_snapshots_v1/latest_forge_self_snapshot_manifest_v1.json
+- **manifest_sha256:** c4cbc0b85dfe8528874575f3aec62b509c033aab80438c9b1a065e1eb55efbc2
+- **verified_count:** 9
+- **entries:** 9 item(s)
+  - `{'relative_path': 'main.py', 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/main.py', 'manifest_source_sha256': '7e61e2129abbcadedf4d3e36fb9a5214f6a0e28d78cffa50777dbf44641f89d8', 'manifest_snapshot_sha256': '7e61e2129abbcadedf4d3e36fb9a5214f6a0e28d78cffa50777dbf44641f89d8', 'current_snapshot_sha256': '7e61e2129abbcadedf4d3e36fb9a5214f6a0e28d78cffa50777dbf44641f89d8', 'ok': True}`
+  - `{'relative_path': 'config/tool_registry.json', 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/config/tool_registry.json', 'manifest_source_sha256': '7a83fa1a69176510793ad8a042253cb860b2eb00bbc5b9e5410cac1f6fc9686e', 'manifest_snapshot_sha256': '7a83fa1a69176510793ad8a042253cb860b2eb00bbc5b9e5410cac1f6fc9686e', 'current_snapshot_sha256': '7a83fa1a69176510793ad8a042253cb860b2eb00bbc5b9e5410cac1f6fc9686e', 'ok': True}`
+  - `{'relative_path': 'config/session_scope.json', 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/config/session_scope.json', 'manifest_source_sha256': '2f8412e6e37eafa09c334d79aa5f23d3a6d93d6dbe83e441e7fa860788a49d1a', 'manifest_snapshot_sha256': '2f8412e6e37eafa09c334d79aa5f23d3a6d93d6dbe83e441e7fa860788a49d1a', 'current_snapshot_sha256': '2f8412e6e37eafa09c334d79aa5f23d3a6d93d6dbe83e441e7fa860788a49d1a', 'ok': True}`
+  - `{'relative_path': 'config/approved_paths.json', 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/config/approved_paths.json', 'manifest_source_sha256': '80c98f351a0ffe369ac7acd08c4390e8901dd003b7ce1448cdc3d1093b06f7c6', 'manifest_snapshot_sha256': '80c98f351a0ffe369ac7acd08c4390e8901dd003b7ce1448cdc3d1093b06f7c6', 'current_snapshot_sha256': '80c98f351a0ffe369ac7acd08c4390e8901dd003b7ce1448cdc3d1093b06f7c6', 'ok': True}`
+  - `{'relative_path': 'memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json', 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json', 'manifest_source_sha256': 'b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab', 'manifest_snapshot_sha256': 'b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab', 'current_snapshot_sha256': 'b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab', 'ok': True}`
+  - `{'relative_path': 'memory/forge_self_updates_v1/latest_forge_self_update_proposal_v1.json', 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/memory/forge_self_updates_v1/latest_forge_self_update_proposal_v1.json', 'manifest_source_sha256': 'daafb01638b38bc9d885e1c6d766cca8e8ff13d060264faadb4d1d7dbd92cdf3', 'manifest_snapshot_sha256': 'daafb01638b38bc9d885e1c6d766cca8e8ff13d060264faadb4d1d7dbd92cdf3', 'current_snapshot_sha256': 'daafb01638b38bc9d885e1c6d766cca8e8ff13d060264faadb4d1d7dbd92cdf3', 'ok': True}`
+  - `{'relative_path': 'memory/forge_self_updates_v1/latest_forge_self_update_verification_v1.json', 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/memory/forge_self_updates_v1/latest_forge_self_update_verification_v1.json', 'manifest_source_sha256': '8e3991b3488b52481d4718cfcd05b6a681ab40e1ec923b132a25cbe9065e7a32', 'manifest_snapshot_sha256': '8e3991b3488b52481d4718cfcd05b6a681ab40e1ec923b132a25cbe9065e7a32', 'current_snapshot_sha256': '8e3991b3488b52481d4718cfcd05b6a681ab40e1ec923b132a25cbe9065e7a32', 'ok': True}`
+  - `{'relative_path': 'memory/llm_plans_v1/latest_llm_plan_template_v1.json', 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/memory/llm_plans_v1/latest_llm_plan_template_v1.json', 'manifest_source_sha256': 'cb0d0eb158550670447d1eb47e0cdc2c12b3c88b5590488ccf9ff96bee91a18e', 'manifest_snapshot_sha256': 'cb0d0eb158550670447d1eb47e0cdc2c12b3c88b5590488ccf9ff96bee91a18e', 'current_snapshot_sha256': 'cb0d0eb158550670447d1eb47e0cdc2c12b3c88b5590488ccf9ff96bee91a18e', 'ok': True}`
+  - `{'relative_path': 'memory/forge_master_status_v1/latest_forge_master_status_report_v1.json', 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/memory/forge_master_status_v1/latest_forge_master_status_report_v1.json', 'manifest_source_sha256': '8539bf216a389d99208f391fe112bb657bb55d5429736f1ce2e9a04bf3ed4fb8', 'manifest_snapshot_sha256': '8539bf216a389d99208f391fe112bb657bb55d5429736f1ce2e9a04bf3ed4fb8', 'current_snapshot_sha256': '8539bf216a389d99208f391fe112bb657bb55d5429736f1ce2e9a04bf3ed4fb8', 'ok': True}`
+- **problems:** 0 item(s)
+- **live_apply_eligible:** False
+- **live_apply_reason:** Patch 121 only creates/verifies a self-snapshot. Future Patch 122 must sandbox before any self-update can advance.
+- **authority:**
+  - `mode`: `VERIFY_ONLY`
+  - `live_self_write_authority`: `False`
+  - `project_file_write_authority`: `False`
+  - `patch_apply_authority`: `False`
+  - `shell_execution_authority`: `False`
+- **next_commands:** 3 item(s)
+  - `forge-self-snapshot-show verification`
+  - `forge-self-snapshot-export`
+  - `forge-next`

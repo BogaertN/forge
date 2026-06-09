@@ -1,0 +1,46 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "ENGINE_REVIEW_TRIAGE_WORKSPACE",
+    "patch": "109",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": true,
+    "rule": "Patch 109 shows a triage workspace for cross-checked LLM engine reviews and may record Patch99-compatible queue decisions through the existing evidence-based approval path. It never commits the ledger or edits engines.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_triage_v1"
+  },
+  "counts": {
+    "recorded": 1,
+    "refused": 0,
+    "requested": 1
+  },
+  "created_at": "2026-05-16_074606",
+  "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+  "engines": [
+    "ascii_interpreter_engine"
+  ],
+  "next_step": "Run engine-review-queue-export, then use the commit gate only after reviewing decisions.",
+  "report_type": "ENGINE_REVIEW_TRIAGE_DECISION_V1_PATCH109",
+  "rows": [
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/ascii_interpreter_engine",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_ascii_interpreter_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "0b269d39cd6e4d926372225fad3c7b525bfe51b0e36faf38b12e0d34ad0a7345",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "engine_family": "ascii_interpreter_engine",
+      "evidence_id": "EEB-2acca33f6ecda788",
+      "queue_receipt_status": "PATCH106_QUEUE_DECISION_WRITTEN",
+      "status": "TRIAGE_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": []
+    }
+  ],
+  "schema_version": "engine_review_triage_workspace_v1_patch109",
+  "status": "ENGINE_REVIEW_TRIAGE_DECISION_RECORDED_NO_LEDGER_MUTATION"
+}

@@ -1,0 +1,212 @@
+{
+  "active_patch": "Patch 149 \u2014 LLM Patch Proposal v2",
+  "authority": {
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "forge_self_write_authority": false,
+    "ledger_mutation_authority": false,
+    "network_or_server_start_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "proposal_only": true,
+    "read_only_planning": true,
+    "requires_human_approval": true,
+    "shell_execution_authority": false,
+    "source_authority_claimed_automatically": false
+  },
+  "created_at": "2026-05-19T17:32:38",
+  "current_phase": "S14 \u2014 LLM patch proposal v2",
+  "expected_changes": [
+    "Add read-only live-apply eligibility v2 reports.",
+    "Require source evidence, scope, current SHA, sandbox/test status, rollback readiness, deferred queue state, and human approval field before marking any target eligible.",
+    "Keep all write/apply authority false until a later explicit human-approved patch apply flow."
+  ],
+  "goal": "Create a source-grounded plan for the next live-apply eligibility gate without modifying any project or engine files.",
+  "llm_prompt_packet": {
+    "current_verified_state": {
+      "build_gate_fail": null,
+      "build_gate_status": "FORGE_BUILD_PHASE_GATE_READY",
+      "canonical_excluded": 26,
+      "canonical_included": 54,
+      "deferred_queue_status": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY",
+      "expected_commands": 544,
+      "latest_test_fail": 0,
+      "latest_test_pass": null,
+      "latest_test_status": "CANONICAL_TEST_RUN_COMPLETED_ALL_PASS",
+      "patch_impact_high_risk": 0,
+      "repair_ready": null,
+      "source_authority_candidates": 42,
+      "source_authority_gaps": 12,
+      "source_authority_status": "FORGE_SOURCE_AUTHORITY_HARDENING_READY",
+      "tools": 462,
+      "trust_level": 5.0
+    },
+    "forbidden": [
+      "project_file_write",
+      "engine_file_write",
+      "patch_apply",
+      "shell_execution",
+      "network_or_server_start",
+      "source_authority_claim",
+      "human_approval_simulation"
+    ],
+    "instruction": "Draft a structured patch plan only. Do not claim authority, do not edit files, do not run shell commands, and do not bypass Forge gates.",
+    "must_use_evidence": [
+      "source_authority_hardening",
+      "build_sequence",
+      "build_gate",
+      "status_api",
+      "dashboard",
+      "patch_impact",
+      "canonical_test_report"
+    ],
+    "required_output_schema": {
+      "expected_changes": [
+        "smallest_safe_change"
+      ],
+      "goal": "string",
+      "requires_human_approval": true,
+      "risk_level": "LOW|MEDIUM|HIGH",
+      "rollback_plan": [
+        "backup_or_restore_step"
+      ],
+      "runtime_roles": [
+        "role",
+        "risk_if_wrong"
+      ],
+      "source_evidence": [
+        "artifact",
+        "sha256",
+        "what_it_supports"
+      ],
+      "target_files": [
+        "path",
+        "current_sha256",
+        "why_needed"
+      ],
+      "test_plan": [
+        "allowlisted_test_or_gap"
+      ]
+    },
+    "role": "local_llm_patch_planner",
+    "target": "Patch 150 \u2014 Live Apply Eligibility Gate v2"
+  },
+  "next_commands": [
+    "forge-llm-patch-v2-verify",
+    "forge-llm-patch-v2-export",
+    "forge-build-sequence",
+    "forge-status-api-build",
+    "forge-dashboard-build",
+    "Install Patch 150 when ready"
+  ],
+  "next_patch": "Patch 150 \u2014 Live Apply Eligibility Gate v2",
+  "plain_english": "Forge has prepared a stricter LLM patch proposal packet using current source-authority, build-sequence, gate, status, dashboard, impact, and test evidence. This is proposal-only and grants no write authority.",
+  "recommended_next_patch": "Patch 150 \u2014 Live Apply Eligibility Gate v2",
+  "report_type": "FORGE_LLM_PATCH_PROPOSAL_V2",
+  "rollback_plan": [
+    "Back up main.py and config/tool_registry.json before install.",
+    "Preserve result bundle under ~/Downloads.",
+    "If command surface mismatches, restore preinstall backup and stop."
+  ],
+  "runtime_roles": [
+    {
+      "risk_if_wrong": "Unsafe patch could appear eligible without complete source/sandbox/test/rollback proof.",
+      "role": "patch_lifecycle_go_no_go"
+    },
+    {
+      "risk_if_wrong": "Dashboard, status API, and build sequence could disagree about live-apply readiness.",
+      "role": "dashboard_status_alignment"
+    },
+    {
+      "risk_if_wrong": "Forge could confuse a model draft with authorization.",
+      "role": "human_approval_boundary"
+    }
+  ],
+  "schema_version": "forge_llm_patch_proposal_v2_patch149",
+  "source_evidence": {
+    "candidate_only": true,
+    "evidence_hashes": {
+      "build_gate": "b3a73e08e94a7798b6369992a7385f53a373a4005aeb75ca5b8ecf26cb1dbe27",
+      "build_sequence": "aeb55700aa836622529d2d80c20cd67f00feb215c91fc5d75a7d52be988b219c",
+      "canonical_lockfile": "379b6ef9852ce288b2b3551ba89aa809adac495312e62602edf5ac6fb9a3b604",
+      "canonical_test_report": "93c49433a79df338cd824244911a0f47299f20b7fe77a25492953bf451dad489",
+      "dashboard": "856d6b973d12cfb50576c942d9765352fd96c842bd35c88dde99a07697cab785",
+      "dashboard_roadmap_panel": "633da89b2b28c81917eb81fcdbd3356f9381979e961c037891a72aa32ccacc14",
+      "deferred_engine_queue": "9ea2ed8dd8b58e0a0d50ba58ed68c72840088dafe79d16c94c5a91a8bfd93218",
+      "patch_impact": "add11d9881240e21983cc2e80238e81c9c6b4865fdafb2ecf0966dac79c31cbd",
+      "source_authority_hardening": "a39d6b29415ba086ebb48d8aa758c7fe41ce06764bce4e88cad4241c64112c1f",
+      "source_authority_hardening_export": "55fd3424bc9b1a93e90ff7e35d9297e246f3941f2ba9bbb4fdced36182fdf9b8",
+      "status_api": "cd59b70b92e9677bec4776193e3f2ead9468e8e07da6b34f2af32d8e8ec73407"
+    },
+    "evidence_paths": {
+      "build_gate": "/home/nic/forge/memory/forge_build_phase_gates_v1/latest_forge_build_phase_gate_v1.json",
+      "build_sequence": "/home/nic/forge/memory/forge_build_sequence_v1/latest_forge_build_sequence_v1.json",
+      "canonical_lockfile": "/home/nic/forge/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+      "canonical_test_report": "/home/nic/forge/memory/canonical_engine_test_runs_v1/latest_canonical_engine_test_run_report_v1.json",
+      "dashboard": "/home/nic/forge/memory/forge_dashboard_readonly_v1/latest_forge_dashboard_readonly_v1.json",
+      "dashboard_roadmap_panel": "/home/nic/forge/memory/forge_dashboard_roadmap_panel_v1/latest_forge_dashboard_roadmap_panel_v1.json",
+      "deferred_engine_queue": "/home/nic/forge/memory/forge_deferred_engine_repair_queue_v1/latest_forge_deferred_engine_repair_queue_v1.json",
+      "patch_impact": "/home/nic/forge/memory/patch_impact_v1/latest_patch_impact_map_v1.json",
+      "source_authority_hardening": "/home/nic/forge/memory/forge_source_authority_hardening_v1/latest_forge_source_authority_hardening_v1.json",
+      "source_authority_hardening_export": "/home/nic/forge/memory/forge_source_authority_hardening_v1/latest_forge_source_authority_hardening_export_v1.json",
+      "status_api": "/home/nic/forge/memory/forge_status_api_v1/latest_forge_status_api_snapshot_v1.json"
+    },
+    "evidence_summary": {
+      "build_gate_fail": null,
+      "build_gate_status": "FORGE_BUILD_PHASE_GATE_READY",
+      "canonical_excluded": 26,
+      "canonical_included": 54,
+      "deferred_queue_status": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY",
+      "expected_commands": 544,
+      "latest_test_fail": 0,
+      "latest_test_pass": null,
+      "latest_test_status": "CANONICAL_TEST_RUN_COMPLETED_ALL_PASS",
+      "patch_impact_high_risk": 0,
+      "repair_ready": null,
+      "source_authority_candidates": 42,
+      "source_authority_gaps": 12,
+      "source_authority_status": "FORGE_SOURCE_AUTHORITY_HARDENING_READY",
+      "tools": 462,
+      "trust_level": 5.0
+    },
+    "source_authority_claimed": false
+  },
+  "status": "FORGE_LLM_PATCH_PROPOSAL_V2_DRAFT_READY_NO_WRITE_AUTHORITY",
+  "summary": {
+    "build_gate_status": "FORGE_BUILD_PHASE_GATE_READY",
+    "canonical_excluded": 26,
+    "canonical_included": 54,
+    "deferred_queue_status": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY",
+    "expected_commands": 544,
+    "source_authority_gaps": 12,
+    "source_authority_status": "FORGE_SOURCE_AUTHORITY_HARDENING_READY",
+    "target": "Patch 150 \u2014 Live Apply Eligibility Gate v2",
+    "test_fail": 0,
+    "tests": "CANONICAL_TEST_RUN_COMPLETED_ALL_PASS",
+    "tools": 462,
+    "write_authority": false
+  },
+  "target": "Patch 150 \u2014 Live Apply Eligibility Gate v2",
+  "target_files": [
+    {
+      "exists": true,
+      "is_file": true,
+      "path": "/home/nic/forge/main.py",
+      "sha256": "b69f976a7e50e6dfaf2304976d442455ecb17414d4892fc306e0c09c00baf677",
+      "under_forge_root": true
+    },
+    {
+      "exists": true,
+      "is_file": true,
+      "path": "/home/nic/forge/config/tool_registry.json",
+      "sha256": "4c187c7b84f1f67713490456e4c6a4548418bb6c6743d49544fb3df1fe56ae99",
+      "under_forge_root": true
+    }
+  ],
+  "test_plan": [
+    "python3 -m py_compile main.py after installation",
+    "forge-command-surface must match expected count",
+    "forge-live-apply-v2-check must produce no false eligibility for missing gates",
+    "forge-status-api-build and forge-dashboard-build must point to the same next patch"
+  ]
+}

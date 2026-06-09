@@ -1,0 +1,42 @@
+{
+  "schema_version": "import_probe_plan_v1_patch134",
+  "report_type": "IMPORT_PROBE_PLAN_V1",
+  "created_at": "2026-05-17T09:11:20",
+  "status": "IMPORT_PROBE_PLAN_READY",
+  "target": "stack_linker_breather",
+  "target_engine": "stack_linker_breather",
+  "resolved_target": {
+    "raw": "stack_linker_breather",
+    "target": "stack_linker_breather",
+    "target_kind": "canonical_or_engine_name",
+    "engine_name": "stack_linker_breather",
+    "scope_ok": true,
+    "target_exists": true,
+    "target_path": "/home/nic/aiweb/engines/stack_linker_breather",
+    "test_candidates": [
+      "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+    ]
+  },
+  "plain_english": "This is a generic import/path diagnostic. It can target any scoped engine name or Python file path. It does not edit files; it only probes whether imports/tests fail because of environment path behavior or file/package structure.",
+  "probe_strategy": {
+    "if_python_file": "run py_compile on the file; if file is a test file, run it with scoped PYTHONPATH additions",
+    "if_engine_or_directory": "run the first discovered test-like Python file with cwd at the engine directory and PYTHONPATH including engine dir, engines root, and AI.Web root"
+  },
+  "problems": [],
+  "recommendation": "Run import-probe-run latest CONFIRM_RUN_IMPORT_PROBE. Use stack_linker_breather as the first target, but this tool is generic.",
+  "next_commands": [
+    "import-probe-run latest CONFIRM_RUN_IMPORT_PROBE",
+    "import-probe-show run",
+    "import-probe-export"
+  ],
+  "authority": {
+    "read_only": true,
+    "project_file_write_authority": false,
+    "engine_file_write_authority": false,
+    "patch_apply_authority": false,
+    "ledger_mutation_authority": false,
+    "shell_execution_authority": false,
+    "subprocess_shell_false": true,
+    "writes_forge_memory_only": true
+  }
+}

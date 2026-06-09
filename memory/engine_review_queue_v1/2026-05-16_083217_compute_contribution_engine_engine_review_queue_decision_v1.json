@@ -1,0 +1,39 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": true,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "candidate_path": "/home/nic/aiweb/engines/compute_contribution_engine",
+  "created_at": "2026-05-16_083217",
+  "decision_id": "ERQ103-compute_contribution_engine-2026-05-16_083217",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080737_compute_contribution_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "11765814bb8cbab61b28187a2f321da253570a89f2e54fa7d575adb1c88b5896",
+  "engine_family": "compute_contribution_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_compute_contribution_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "be73631e1ce112d73ed35803f24a4ad2a777c43388da38f704144ca8c347aa4a",
+  "evidence_id": "EEB-91df18441d00687d",
+  "human_queue_decision": "APPROVED_FOR_FUTURE_COMMIT",
+  "manual_verification_rule": "Approve only if the LLM-visible claims are supported by the bound evidence shown in the Patch 102 cross-check. If unsure, defer.",
+  "patch102_crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_compute_contribution_engine_engine_review_evidence_crosscheck_v1.json",
+  "patch102_crosscheck_sha256": "a10a456ee0be22da9e503244b5d2af560d9b9edf161f017c401735f9b50ca79e",
+  "patch103_check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+  "report_type": "ENGINE_REVIEW_QUEUE_DECISION_V1_PATCH103_EVIDENCE_BASED",
+  "schema_version": "engine_review_queue_v1_patch99",
+  "stale_evidence_rule": "Patch 100 must re-read candidate path and confirm live file SHA matches the evidence binder before ledger commit.",
+  "status": "EVIDENCE_BASED_HUMAN_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION"
+}

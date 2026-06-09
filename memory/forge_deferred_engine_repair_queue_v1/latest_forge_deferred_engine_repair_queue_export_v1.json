@@ -1,0 +1,43 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-19T17:02:26",
+  "next_patch": "Patch 146 \u2014 Build Phase Gate Checker",
+  "next_repair_target": {
+    "engine_base": "stack_linker_breather",
+    "note": "Visible repair target only. Main build sequence still advances to Patch 146 before reopening repair work.",
+    "queue_status": "REPAIR_EVIDENCE_PRESERVED_SANDBOX_REQUIRED",
+    "safe_next_action": "Use deferred repair queue later to reopen the preserved candidate, run dependency probe, sandbox, safe tests, then human approval before any live write."
+  },
+  "queue_status": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY",
+  "queue_total": 26,
+  "repair_blocked_count": 2,
+  "repair_ready_count": 1,
+  "report_type": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_EXPORT_V1",
+  "schema_version": "forge_deferred_engine_repair_queue_v1_patch145",
+  "source_paths": {
+    "canonical_lockfile": "/home/nic/forge/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+    "canonical_test_run": "/home/nic/forge/memory/canonical_engine_test_runs_v1/latest_canonical_engine_test_run_report_v1.json",
+    "engine_disposition": "/home/nic/forge/memory/engine_disposition_v1/latest_engine_disposition_report_v1.json",
+    "patch_impact": "/home/nic/forge/memory/patch_impact_v1/latest_patch_impact_map_v1.json",
+    "relationship_map": "/home/nic/forge/memory/canonical_engine_relationships_v1/latest_canonical_engine_relationship_map_v1.json",
+    "revision_candidate": "/home/nic/forge/memory/generic_revision_loop_v1/latest_generic_revision_loop_candidate_v1.json",
+    "revision_sandbox_run": "/home/nic/forge/memory/generic_revision_sandboxes_v1/latest_generic_revision_sandbox_run_v1.json"
+  },
+  "source_sha256": {
+    "canonical_lockfile": "379b6ef9852ce288b2b3551ba89aa809adac495312e62602edf5ac6fb9a3b604",
+    "canonical_test_run": "93c49433a79df338cd824244911a0f47299f20b7fe77a25492953bf451dad489",
+    "engine_disposition": "e3124be8354e52d9c372b271007fffecdc0bccd838a38d2aef6475e928317586",
+    "patch_impact": "add11d9881240e21983cc2e80238e81c9c6b4865fdafb2ecf0966dac79c31cbd",
+    "relationship_map": "4c13c40c50dfa91e5fb8f0455f953b7204231f39c223aafdfebf897a372ea9cc",
+    "revision_candidate": "239d3b6b75a17c2ea2aab70715a8d3c59604103f596cb40007e8cc42fb432bef",
+    "revision_sandbox_run": "a66bd64f276da06eaea687f19e3607dd98225bc392d1f8d45633924f30c2581c"
+  },
+  "status": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_EXPORT_READY"
+}

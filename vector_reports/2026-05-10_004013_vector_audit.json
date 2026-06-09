@@ -1,0 +1,80 @@
+{
+  "timestamp": "2026-05-10T00:40:13",
+  "session_id": "forge_2026_05_10_003916",
+  "chroma_path": "/home/nic/forge/memory/chroma_db",
+  "exists": true,
+  "filesystem": {
+    "b04a6e67-8c25-4bf6-aab4-3defb80e336f": {
+      "size_bytes": 4096,
+      "is_dir": true,
+      "mtime": "2026-05-08T17:30:26"
+    },
+    "b04a6e67-8c25-4bf6-aab4-3defb80e336f/data_level0.bin": {
+      "size_bytes": 3212000,
+      "is_dir": false,
+      "mtime": "2026-05-08T17:30:26"
+    },
+    "b04a6e67-8c25-4bf6-aab4-3defb80e336f/header.bin": {
+      "size_bytes": 100,
+      "is_dir": false,
+      "mtime": "2026-05-08T17:30:26"
+    },
+    "b04a6e67-8c25-4bf6-aab4-3defb80e336f/index_metadata.pickle": {
+      "size_bytes": 43108,
+      "is_dir": false,
+      "mtime": "2026-05-08T17:30:26"
+    },
+    "b04a6e67-8c25-4bf6-aab4-3defb80e336f/length.bin": {
+      "size_bytes": 4000,
+      "is_dir": false,
+      "mtime": "2026-05-08T17:30:26"
+    },
+    "b04a6e67-8c25-4bf6-aab4-3defb80e336f/link_lists.bin": {
+      "size_bytes": 8624,
+      "is_dir": false,
+      "mtime": "2026-05-08T17:30:26"
+    },
+    "chroma.sqlite3": {
+      "size_bytes": 14495744,
+      "is_dir": false,
+      "mtime": "2026-05-08T17:51:52"
+    }
+  },
+  "collections": [
+    {
+      "name": "forge_kb",
+      "count": 1153,
+      "metadata": {
+        "description": "Forge local knowledge base"
+      },
+      "peek_ids": [
+        "3a2f856f_c0",
+        "86d2c8b7_c0",
+        "2c57ef22_c0"
+      ],
+      "peek_meta_keys": [
+        [
+          "project",
+          "chunk_idx",
+          "source",
+          "ext"
+        ],
+        [
+          "source",
+          "chunk_idx",
+          "project",
+          "ext"
+        ],
+        [
+          "chunk_idx",
+          "source",
+          "ext",
+          "project"
+        ]
+      ]
+    }
+  ],
+  "chromadb_available": true,
+  "errors": [],
+  "chromadb_version": "1.5.9"
+}

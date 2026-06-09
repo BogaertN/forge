@@ -1,0 +1,277 @@
+{
+  "alignment": {
+    "agent_profiles": {
+      "columns": [
+        "id",
+        "agent_id",
+        "canonical_name",
+        "role",
+        "capabilities",
+        "limits",
+        "enforcement",
+        "created_at",
+        "updated_at",
+        "version",
+        "is_active"
+      ],
+      "exact_present": 5,
+      "missing_fields": [
+        "last_updated",
+        "symbolic_signature",
+        "description",
+        "limitations",
+        "persona",
+        "voice_style",
+        "quotes_or_character_inspiration",
+        "special_style_notes",
+        "permissions",
+        "authority",
+        "enforcement_rules",
+        "forbidden_actions",
+        "session_state",
+        "last_action",
+        "last_feedback",
+        "log_fields",
+        "timestamp"
+      ],
+      "payload_column_present": false
+    },
+    "user_profiles": {
+      "columns": [
+        "id",
+        "user_id",
+        "canonical_name",
+        "interaction_preferences",
+        "meta_rules",
+        "session_defaults",
+        "drift_tracking",
+        "created_at",
+        "updated_at",
+        "version",
+        "is_active"
+      ],
+      "exact_present": 5,
+      "missing_fields": [
+        "spirit_name",
+        "project_affiliations",
+        "identity_tags",
+        "last_updated",
+        "project_context",
+        "session_state"
+      ],
+      "payload_column_present": false
+    }
+  },
+  "boundary": {
+    "agent_identity_activation_performed": false,
+    "env_secret_values_read": false,
+    "read_only": true,
+    "schema_migration_executed": false,
+    "writes_only_reports_under_forge_memory": true
+  },
+  "contract_reconcile": {
+    "aiweb_identity_vault": {
+      "error": null,
+      "exists": true,
+      "json_ok": true,
+      "name": "identity_vault",
+      "ok": true
+    },
+    "identity_vault_draft": {
+      "controlled_by": "Forge",
+      "error": null,
+      "exists": true,
+      "json_ok": true,
+      "name_or_contract_name": "identity_vault_readonly_service_contract_draft",
+      "ok": true,
+      "status": "DRAFT_NOT_ACTIVE",
+      "version": "0.1.1-draft-file"
+    },
+    "overall_ok": true
+  },
+  "current_schema": {
+    "columns": {
+      "agent_profiles": [
+        "id",
+        "agent_id",
+        "canonical_name",
+        "role",
+        "capabilities",
+        "limits",
+        "enforcement",
+        "created_at",
+        "updated_at",
+        "version",
+        "is_active"
+      ],
+      "audit_logs": [
+        "id",
+        "profile_id",
+        "profile_type",
+        "action",
+        "details",
+        "timestamp",
+        "ip_address",
+        "user_agent"
+      ],
+      "feedback_logs": [
+        "id",
+        "profile_id",
+        "feedback_type",
+        "message",
+        "data",
+        "timestamp",
+        "resolved"
+      ],
+      "session_state": [
+        "id",
+        "profile_id",
+        "profile_type",
+        "session_data",
+        "created_at",
+        "updated_at",
+        "expires_at"
+      ],
+      "sqlite_sequence": [
+        "name",
+        "seq"
+      ],
+      "user_profiles": [
+        "id",
+        "user_id",
+        "canonical_name",
+        "interaction_preferences",
+        "meta_rules",
+        "session_defaults",
+        "drift_tracking",
+        "created_at",
+        "updated_at",
+        "version",
+        "is_active"
+      ]
+    },
+    "error": null,
+    "exists": true,
+    "ok": true,
+    "opened_readonly": true,
+    "path": "/home/nic/identity-vault/data/identity_vault.db",
+    "row_counts": {
+      "agent_profiles": 0,
+      "audit_logs": 0,
+      "feedback_logs": 0,
+      "session_state": 0,
+      "sqlite_sequence": 0,
+      "user_profiles": 0
+    },
+    "tables": [
+      "agent_profiles",
+      "audit_logs",
+      "feedback_logs",
+      "session_state",
+      "sqlite_sequence",
+      "user_profiles"
+    ]
+  },
+  "findings": [
+    {
+      "code": "IV_SCHEMA_PLAN_RECONCILED",
+      "level": "INFO",
+      "message": "Patch 225B contract baseline failure is reconciled by accepting contract_name in the draft Identity Vault contract."
+    },
+    {
+      "code": "IV_HYBRID_JSON_PAYLOAD_STRATEGY_CONFIRMED",
+      "level": "INFO",
+      "message": "Hybrid JSON payload plus indexed core columns remains the safest migration strategy."
+    },
+    {
+      "code": "IV_NO_SCHEMA_MIGRATION_EXECUTED",
+      "level": "INFO",
+      "message": "This reconcile wrote reports only; no ALTER TABLE statements were executed."
+    }
+  ],
+  "planned_agent_profile_additions": [
+    [
+      "operational_profile_json",
+      "TEXT",
+      "Full Agent Operational Identity JSON payload matching the manual blueprint."
+    ],
+    [
+      "profile_schema_version",
+      "TEXT",
+      "Version of the operational identity payload schema."
+    ],
+    [
+      "rmc_namespace",
+      "TEXT",
+      "Read-only pointer to the agent-scoped RMC namespace. Not memory content."
+    ],
+    [
+      "activation_state",
+      "TEXT",
+      "inactive/draft/active lifecycle marker. Default must be inactive."
+    ],
+    [
+      "profile_hash",
+      "TEXT",
+      "Hash of operational_profile_json for tamper-evidence."
+    ],
+    [
+      "last_validated_at",
+      "TEXT",
+      "Timestamp of last schema/profile validation."
+    ]
+  ],
+  "planned_user_profile_additions": [
+    [
+      "operational_profile_json",
+      "TEXT",
+      "Full User Operational Identity JSON payload matching the manual blueprint."
+    ],
+    [
+      "profile_schema_version",
+      "TEXT",
+      "Version of the operational identity payload schema."
+    ],
+    [
+      "profile_hash",
+      "TEXT",
+      "Hash of operational_profile_json for tamper-evidence."
+    ],
+    [
+      "last_validated_at",
+      "TEXT",
+      "Timestamp of last schema/profile validation."
+    ]
+  ],
+  "roots": {
+    "aiweb_identity_contract": "/home/nic/aiweb/service_contracts/identity_vault.contract.json",
+    "aiweb_root": "/home/nic/aiweb",
+    "canonical_db": "/home/nic/identity-vault/data/identity_vault.db",
+    "forge_root": "/home/nic/forge",
+    "identity_contract_draft": "/home/nic/identity-vault/service_contracts/identity_vault_readonly_service_contract.draft.json",
+    "identity_vault_root": "/home/nic/identity-vault",
+    "legacy_db_preserved": "/home/nic/identity-vault/vault.db"
+  },
+  "safety_checks": {
+    "agent_identity_activation_performed": false,
+    "aiweb_identity_contract_unchanged": true,
+    "canonical_db_sha_unchanged": true,
+    "database_write_performed": false,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "forge_tool_registry_modified": false,
+    "identity_contract_draft_unchanged": true,
+    "legacy_db_sha_unchanged": true,
+    "schema_migration_executed": false
+  },
+  "selected_strategy": "hybrid_json_payload_plus_indexed_core_columns",
+  "sql_plan_preview": "-- Patch 226 candidate SQL plan only; do not execute in Patch 225C.\nALTER TABLE agent_profiles ADD COLUMN operational_profile_json TEXT NOT NULL DEFAULT '{}';\nALTER TABLE agent_profiles ADD COLUMN profile_schema_version TEXT NOT NULL DEFAULT '1.0.0-blueprint';\nALTER TABLE agent_profiles ADD COLUMN rmc_namespace TEXT;\nALTER TABLE agent_profiles ADD COLUMN activation_state TEXT NOT NULL DEFAULT 'inactive';\nALTER TABLE agent_profiles ADD COLUMN profile_hash TEXT;\nALTER TABLE agent_profiles ADD COLUMN last_validated_at TEXT;\nALTER TABLE user_profiles ADD COLUMN operational_profile_json TEXT NOT NULL DEFAULT '{}';\nALTER TABLE user_profiles ADD COLUMN profile_schema_version TEXT NOT NULL DEFAULT '1.0.0-blueprint';\nALTER TABLE user_profiles ADD COLUMN profile_hash TEXT;\nALTER TABLE user_profiles ADD COLUMN last_validated_at TEXT;\nCREATE INDEX IF NOT EXISTS idx_agent_profiles_agent_id ON agent_profiles(agent_id);\nCREATE INDEX IF NOT EXISTS idx_agent_profiles_activation_state ON agent_profiles(activation_state);\nCREATE INDEX IF NOT EXISTS idx_agent_profiles_rmc_namespace ON agent_profiles(rmc_namespace);\nCREATE INDEX IF NOT EXISTS idx_user_profiles_user_id ON user_profiles(user_id);",
+  "strategy_reasons": [
+    "The live schema already has useful indexed core columns such as agent_id/user_id, canonical_name, role, version, is_active, created_at, and updated_at.",
+    "The manual blueprint contains many nested/list fields that fit poorly as separate scalar columns during bootstrap.",
+    "A JSON payload column preserves the full operational identity exactly while keeping a few indexed columns available for fast lookup and safe previews.",
+    "This avoids prematurely over-normalizing the schema before real agent usage patterns exist."
+  ],
+  "timestamp": "20260523_204144_UTC",
+  "verdict": "PASS"
+}

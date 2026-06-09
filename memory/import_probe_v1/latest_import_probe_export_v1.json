@@ -1,0 +1,20 @@
+{
+  "schema_version": "import_probe_export_v1_patch134",
+  "report_type": "IMPORT_PROBE_EXPORT_V1",
+  "created_at": "2026-05-17T09:11:59",
+  "status": "IMPORT_PROBE_EXPORT_READY",
+  "target": "stack_linker_breather",
+  "plan_path": "/home/nic/forge/memory/import_probe_v1/latest_import_probe_plan_v1.json",
+  "plan_sha256": "0bf610a9bcbdd2f7a187a7d14e63c8725e4268e3481ae1ac2f3a49094f5760ec",
+  "run_path": "/home/nic/forge/memory/import_probe_v1/latest_import_probe_run_v1.json",
+  "run_sha256": "e6dc10b9f6c39962e608b94115615a80b882c4cbbfecb679d550ca3a212d02c1",
+  "plan_status": "IMPORT_PROBE_PLAN_READY",
+  "run_status": "IMPORT_PROBE_FAIL",
+  "probe_passed": false,
+  "recommended_next_patch": "Patch 135 — Generic repair proposal for probed target",
+  "authority": {
+    "export_only": true,
+    "project_file_write_authority": false,
+    "patch_apply_authority": false
+  }
+}

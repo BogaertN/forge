@@ -1,0 +1,8 @@
+{
+  "command_name": "list-all-python-files-in-the-current-sc",
+  "function_name": "cmd_list_all_python_files_in_the_current_sc",
+  "description": "list all Python files in the current scope",
+  "installed_at": "20260522_041407",
+  "backup_dir": "/home/nic/forge/backups/before_install_list-all-python-files-in-the-current-sc_20260522_041407",
+  "proposal_id": "20260521_203811_cmd_list_all_python_files_in_the_current_sc"
+}

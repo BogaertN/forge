@@ -1,0 +1,255 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "933e4994fa84ba92951b3a92550f62abe9d91588e10e20060360fe9dc8ca2086",
+      "excerpt_start": "{\n  \"engine\": \"Goal Injection Engine\",\n  \"version\": \"v1\",\n  \"description\": \"Injects symbolic recursion phase stabilization goals into the runtime environment.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Goal",
+        "Injection",
+        "Engine",
+        "version",
+        "description",
+        "Injects",
+        "symbolic",
+        "recursion",
+        "phase",
+        "stabilization",
+        "goals",
+        "into",
+        "the",
+        "runtime",
+        "environment"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/goal_injection_engine/goal_manifest.json",
+      "relative_to_candidate": "goal_manifest.json",
+      "sha256": "933e4994fa84ba92951b3a92550f62abe9d91588e10e20060360fe9dc8ca2086",
+      "size_bytes": 162
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "5ce92e3c874f8b4c7daff233d60e1d2c0e97ce6ed9376c4fd0e1fb61e5a96c53",
+      "excerpt_start": "# Goal Injection Engine\n\nInjects symbolic stabilization or expansion goals into the active recursion loop.\n\nStabilizes system evolution, corrects drift, and enhances phase transitions in the AI.Web runtime.\n",
+      "functions_sample": [
+        "Goal",
+        "Injection",
+        "Engine",
+        "Injects",
+        "symbolic",
+        "stabilization",
+        "expansion",
+        "goals",
+        "into",
+        "the",
+        "active",
+        "recursion",
+        "loop",
+        "Stabilizes",
+        "system",
+        "evolution",
+        "corrects",
+        "drift",
+        "and",
+        "enhances",
+        "phase",
+        "transitions",
+        "Web",
+        "runtime"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/goal_injection_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "5ce92e3c874f8b4c7daff233d60e1d2c0e97ce6ed9376c4fd0e1fb61e5a96c53",
+      "size_bytes": 207
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "bf232d89e73e217e17bb09b33c838912868b9481ed6397ca1eab4dd5b8b91823",
+      "excerpt_start": "from goal_core import inject_symbolic_goal\n\ndef test_goal_injection():\n    try:\n        result = inject_symbolic_goal()\n        assert \"goal\" in result\n        print(\"\u2705 Test Passed: Symbolic goal injected successfully.\")\n    except Exception as e:\n        print(f\"\u274c Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_goal_injection()\n",
+      "functions_sample": [
+        "test_goal_injection"
+      ],
+      "imports_sample": [
+        "from goal_core import inject_symbolic_goal"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/goal_injection_engine/test_goal.py",
+      "relative_to_candidate": "test_goal.py",
+      "sha256": "bf232d89e73e217e17bb09b33c838912868b9481ed6397ca1eab4dd5b8b91823",
+      "size_bytes": 343
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "ae3ab4adeafe439f7b02fdd4e85586d6eb1b36acd8829c599c8cd27824493442",
+      "excerpt_start": "import json\nimport time\nimport random\n\nLOG_FILE = \"goal_log.jsonl\"\n\ndef inject_symbolic_goal():\n    \"\"\"Simulates injecting a symbolic recursion stabilization goal.\"\"\"\n    goal = random.choice([\"increase_charge\", \"reduce_drift\", \"stabilize_phase\", \"expand_seed\", \"consolidate_memory\"])\n\n    goal_event = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"goal\": goal\n    }\n\n    try:\n        with open(LOG_FILE, \"a\") as f:\n            f.write(json.dumps(goal_event) + \"\\n\")\n        print(f\"\u2714\ufe0f Symbolic goal injected: {goal_event}\")\n    except Exception as e:\n        print(f\"[!] Failed to record goal injection: {e}\")\n\n    return goal_event\n\n",
+      "functions_sample": [
+        "inject_symbolic_goal"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time",
+        "import random"
+      ],
+      "line_count": 25,
+      "path": "/home/nic/aiweb/engines/goal_injection_engine/goal_core.py",
+      "relative_to_candidate": "goal_core.py",
+      "sha256": "ae3ab4adeafe439f7b02fdd4e85586d6eb1b36acd8829c599c8cd27824493442",
+      "size_bytes": 677
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/goal_injection_engine",
+  "created_at": "2026-05-16_095417",
+  "crosscheck_id": "ERE-goal_injection_engine-2026-05-16_095417",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Engine",
+      "Goal",
+      "Injection",
+      "Injects",
+      "Stabilizes",
+      "Web",
+      "active",
+      "and",
+      "corrects",
+      "description",
+      "drift",
+      "engine",
+      "enhances",
+      "environment",
+      "evolution",
+      "expansion",
+      "goals",
+      "inject_symbolic_goal",
+      "into",
+      "loop"
+    ],
+    "imports_sample": [
+      "from goal_core import inject_symbolic_goal",
+      "import json",
+      "import random",
+      "import time"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`goal_injection_engine` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "{   \"engine\": \"Goal Injection Engine\",",
+      "# Goal Injection Engine ",
+      "from goal_core import inject_symbolic_goal ",
+      "import json import time"
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095350_goal_injection_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "b41a4d5be4ad4afb37d00e9de1ecabe636eb68cb54d97cfaf6344071676fb223",
+  "engine_family": "goal_injection_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_goal_injection_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "f5d7712606253ff0126c1f72db9481bd28f083b5c9bbfe96cb952c8b21ace10e",
+  "evidence_id": "EEB-6ef85e34d4584ab4",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "goal_manifest.json",
+      "README.md",
+      "test_goal.py",
+      "goal_core.py"
+    ],
+    "functions_mentioned": [
+      "engine",
+      "Goal",
+      "Injection",
+      "Engine",
+      "Injects",
+      "symbolic",
+      "recursion",
+      "phase",
+      "stabilization",
+      "goals",
+      "into",
+      "the",
+      "runtime",
+      "environment",
+      "active",
+      "loop",
+      "system",
+      "evolution",
+      "drift",
+      "and",
+      "transitions",
+      "Web",
+      "inject_symbolic_goal"
+    ],
+    "imports_mentioned": [
+      "from goal_core import inject_symbolic_goal",
+      "import json",
+      "import time",
+      "import random"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 27.654,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "c9b7b8e126a4d5a00121108c2996635f153af2814824136a4148b70a67382789",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nInjects symbolic goals (e.g., \"stabilize_phase,\" \"reduce_drift\") into AI.Web's runtime environment to stabilize system behavior, correct drift, and enhance recursion phase transitions.  \n\nLikely System Role:  \nA core runtime component for managing AI.Web's symbolic recursion stabilization, acting as a goal injection mechanism to maintain system coherence during dynamic processes.  \n\nEvidence Used:  \n- `goal_manifest.json`: Defines the engine's purpose as injecting \"symbolic recursion phase stabilization goals.\"  \n- `README.md`: Describes injecting goals into \"active recursion loop\" to \"stabilize system evolution\" and \"enhance phase transitions.\"  \n- `goal_core.py`: Implements `inject_symbolic_goal()` which logs goals like \"increase_charge\" or \"stabilize_phase\" to a JSON file.  \n- `test_goal.py`: Validates goal injection via a test script.  \n\nRisks / Uncertainties:  \n- Random goal selection may lead to unpredictable system behavior.  \n- Reliance on logging for tracking injections could fail if the log file is inaccessible.  \n- No explicit error handling for failed injections beyond logging.  \n\nRecommendation Draft:  \nApprove the engine but recommend:  \n1. Adding deterministic goal selection or prioritization logic.  \n2. Ensuring log file persistence and accessibility.  \n3. Enhancing error handling for injection failures.  \n\nSuggested Nic Action:  \nApprove the engine with the above recommendations. Verify log file reliability and confirm if deterministic goal selection is required for production use."
+  },
+  "llm_sections": {
+    "evidence_used": "- `goal_manifest.json`: Defines the engine's purpose as injecting \"symbolic recursion phase stabilization goals.\"  \n- `README.md`: Describes injecting goals into \"active recursion loop\" to \"stabilize system evolution\" and \"enhance phase transitions.\"  \n- `goal_core.py`: Implements `inject_symbolic_goal()` which logs goals like \"increase_charge\" or \"stabilize_phase\" to a JSON file.  \n- `test_goal.py`: Validates goal injection via a test script.",
+    "likely_system_role": "A core runtime component for managing AI.Web's symbolic recursion stabilization, acting as a goal injection mechanism to maintain system coherence during dynamic processes.",
+    "plain_english_purpose": "Injects symbolic goals (e.g., \"stabilize_phase,\" \"reduce_drift\") into AI.Web's runtime environment to stabilize system behavior, correct drift, and enhance recursion phase transitions.",
+    "recommendation_draft": "Approve the engine but recommend:  \n1. Adding deterministic goal selection or prioritization logic.  \n2. Ensuring log file persistence and accessibility.  \n3. Enhancing error handling for injection failures.",
+    "risks_uncertainties": "- Random goal selection may lead to unpredictable system behavior.  \n- Reliance on logging for tracking injections could fail if the log file is inaccessible.  \n- No explicit error handling for failed injections beyond logging.",
+    "suggested_nic_action": "Approve the engine with the above recommendations. Verify log file reliability and confirm if deterministic goal selection is required for production use."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nInjects symbolic goals (e.g., \"stabilize_phase,\" \"reduce_drift\") into AI.Web's runtime environment to stabilize system behavior, correct drift, and enhance recursion phase transitions.  \n\nLikely System Role:  \nA core runtime component for managing AI.Web's symbolic recursion stabilization, acting as a goal injection mechanism to maintain system coherence during dynamic processes.  \n\nEvidence Used:  \n- `goal_manifest.json`: Defines the engine's purpose as injecting \"symbolic recursion phase stabilization goals.\"  \n- `README.md`: Describes injecting goals into \"active recursion loop\" to \"stabilize system evolution\" and \"enhance phase transitions.\"  \n- `goal_core.py`: Implements `inject_symbolic_goal()` which logs goals like \"increase_charge\" or \"stabilize_phase\" to a JSON file.  \n- `test_goal.py`: Validates goal injection via a test script.  \n\nRisks / Uncertainties:  \n- Random goal selection may lead to unpredictable system behavior.  \n- Reliance on logging for tracking injections could fail if the log file is inaccessible.  \n- No explicit error handling for failed injections beyond logging.  \n\nRecommendation Draft:  \nApprove the engine but recommend:  \n1. Adding deterministic goal selection or prioritization logic.  \n2. Ensuring log file persistence and accessibility.  \n3. Enhancing error handling for injection failures.  \n\nSuggested Nic Action:  \nApprove the engine with the above recommendations. Verify log file reliability and confirm if deterministic goal selection is required for production use.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

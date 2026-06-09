@@ -1,0 +1,115 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_BATCH_APPROVAL_HELPER",
+    "patch": "106",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": true,
+    "rule": "Patch 106 may record Patch99-compatible queue decisions for explicitly named engines, but only after Patch102 evidence cross-check readiness. It never commits ledger changes.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_batch_approvals_v1"
+  },
+  "blockers": [],
+  "counts": {
+    "blockers": 0,
+    "recorded": 4,
+    "refused_or_error": 0,
+    "requested": 4,
+    "warnings": 4
+  },
+  "created_at": "2026-05-16_094533",
+  "decision_label": "DEFER",
+  "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+  "manual_verification_rule": "This helper assumes Nic has already read engine-review-evidence-show for each named engine. It records queue intent only and never mutates the ledger.",
+  "report_type": "ENGINE_REVIEW_BATCH_APPROVAL_RECEIPT_V1_PATCH106",
+  "requested_engines": [
+    "external_feed_listener",
+    "fluid_memory_engine",
+    "gilligan",
+    "gilligan_drift_correction_upgrade"
+  ],
+  "rows": [
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/external_feed_listener",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_094533_external_feed_listener_engine_review_approval_helper_v1.json",
+      "check_sha256": "a0851eeb6b6dfb9f63bc68bb152edea84d6e87a589e9fb2991837d9e94603b0c",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-external_feed_listener-2026-05-16_094533",
+      "engine_family": "external_feed_listener",
+      "evidence_id": "EEB-5f91c358437560b6",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_094533_external_feed_listener_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "a481b6ed765d009041874a2730c37098e42d072599d190da992fc8f96a56b0fc",
+      "requested_decision": "DEFERRED_FOR_MORE_REVIEW",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/fluid_memory_engine",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_094533_fluid_memory_engine_engine_review_approval_helper_v1.json",
+      "check_sha256": "7c05a7a3ffe188bc953d5cbf91e0de4275831749843c1cc267f388faa72bbf1f",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-fluid_memory_engine-2026-05-16_094533",
+      "engine_family": "fluid_memory_engine",
+      "evidence_id": "EEB-787e388492eb001b",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_094533_fluid_memory_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "658bd2dec161418ccb18b205e21d65ed8d227684b751cf093573df6f8508003e",
+      "requested_decision": "DEFERRED_FOR_MORE_REVIEW",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/agents/gilligan",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_094533_gilligan_engine_review_approval_helper_v1.json",
+      "check_sha256": "b54de1332a4f99134d30d8ef1c525692e3f9c3172acf4ed6078f56f3a9d796c2",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-gilligan-2026-05-16_094533",
+      "engine_family": "gilligan",
+      "evidence_id": "EEB-79999be700688737",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_094533_gilligan_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "154af011851ed63f3f8750d698ec83efb41fc3b66a2a8c852f5c7522227f819d",
+      "requested_decision": "DEFERRED_FOR_MORE_REVIEW",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/gilligan_drift_correction_upgrade",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_094533_gilligan_drift_correction_upgrade_engine_review_approval_helper_v1.json",
+      "check_sha256": "7240275ab2e1d4568f0eecd7be4014f3c43ae10fe6af4a1e4c7bcb5ee6b1bc73",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-gilligan_drift_correction_upgrade-2026-05-16_094533",
+      "engine_family": "gilligan_drift_correction_upgrade",
+      "evidence_id": "EEB-e5144c91abeb8497",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_094533_gilligan_drift_correction_upgrade_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "d6b025519bb89957562190f0ce25870e1445482c45140a8a64eb3bc09708c37d",
+      "requested_decision": "DEFERRED_FOR_MORE_REVIEW",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    }
+  ],
+  "schema_version": "engine_review_batch_approval_v1_patch106",
+  "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION",
+  "warnings": [
+    "external_feed_listener: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "fluid_memory_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "gilligan: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "gilligan_drift_correction_upgrade: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

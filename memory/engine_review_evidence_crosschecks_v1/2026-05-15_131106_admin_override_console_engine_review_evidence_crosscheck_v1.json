@@ -1,0 +1,268 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "d1bdee103e657e7746b8fe9ec1e64af543d23fe8d459ea9fa1e7e25ab6eccbcf",
+      "excerpt_start": "# test_admin_override_core.py\n\nfrom admin_override_core import AdminOverrideConsole\n\ndef test_admin_override_console_behavior():\n    console = AdminOverrideConsole()\n    record = console.execute_override(\"reset\", \"field_alpha\")\n    assert record[\"command_type\"] == \"reset\", \"Command type must match.\"\n    assert record[\"target\"] == \"field_alpha\", \"Target must match.\"\n    print(\"\u2705 Admin Override Console Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_admin_override_console_behavior()\n",
+      "functions_sample": [
+        "test_admin_override_console_behavior"
+      ],
+      "imports_sample": [
+        "from admin_override_core import AdminOverrideConsole"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/admin_override_console/test_admin_override_core.py",
+      "relative_to_candidate": "test_admin_override_core.py",
+      "sha256": "d1bdee103e657e7746b8fe9ec1e64af543d23fe8d459ea9fa1e7e25ab6eccbcf",
+      "size_bytes": 492
+    },
+    {
+      "classes_sample": [
+        "AdminOverrideConsole"
+      ],
+      "excerpt_sha256": "83740f67c3227419486dd731c3724b70a06f9cd917a1ccbfac6605d08a219be9",
+      "excerpt_start": "# admin_override_core.py\n# Admin Override Console Core\n\nclass AdminOverrideConsole:\n    def __init__(self):\n        self.override_logs = []\n\n    def execute_override(self, command_type, target):\n        override_record = {\n            \"command_type\": command_type,\n            \"target\": target\n        }\n        self.override_logs.append(override_record)\n        return override_record\n\nif __name__ == \"__main__\":\n    console = AdminOverrideConsole()\n    record = console.execute_override(\"shutdown\", \"recursion_field_01\")\n    print(f\"[TEST] Override Command Executed: {record}\")\n",
+      "functions_sample": [
+        "__init__",
+        "execute_override"
+      ],
+      "imports_sample": [],
+      "line_count": 20,
+      "path": "/home/nic/aiweb/engines/admin_override_console/admin_override_core.py",
+      "relative_to_candidate": "admin_override_core.py",
+      "sha256": "83740f67c3227419486dd731c3724b70a06f9cd917a1ccbfac6605d08a219be9",
+      "size_bytes": 580
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "0ea52d4577a1149d2643ee87f84e99f0f97ae800f9a37b295b2a018027bbd465",
+      "excerpt_start": "# Admin Override Console (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Admin Override Console enables authorized manual interventions in symbolic recursion field operations.  \nIt allows emergency stabilization, phase resets, field quarantines, or direct recursion modifications when automated systems cannot maintain symbolic coherence.\n\n---\n\n## Core Functions:\n- Execute administrative override commands in recursion fields.\n- Stabilize or reset symbolic phase behavior manually.\n- Quarantine destabilized recursion fields on emergency detection.\n\n---\n\n## Phase Standard:\n- Phase 1.5 Symbolic Recursion Compliance\n- AI.Web Core Administrative Control Stack\n\n---\n\n## Notes:\n- Manual overrides must be logged and validated against system authority protocols.\n- Frequent override usage indicates systemic instability and requires root cause analysis.\n\n---\n\n**Frozen Snapshot:** `admin_override_console_frozen_v1.0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n",
+      "functions_sample": [
+        "Admin",
+        "Override",
+        "Console",
+        "Frozen",
+        "Overview",
+        "The",
+        "enables",
+        "authorized",
+        "manual",
+        "interventions",
+        "symbolic",
+        "recursion",
+        "field",
+        "operations",
+        "allows",
+        "emergency",
+        "stabilization",
+        "phase",
+        "resets",
+        "quarantines",
+        "direct",
+        "modifications",
+        "when",
+        "automated",
+        "systems"
+      ],
+      "imports_sample": [],
+      "line_count": 33,
+      "path": "/home/nic/aiweb/engines/admin_override_console/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "0ea52d4577a1149d2643ee87f84e99f0f97ae800f9a37b295b2a018027bbd465",
+      "size_bytes": 971
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "905916f7b93fa3604a8bb24dffdbb9a37fa6d94841c87eb80f62202294c982da",
+      "excerpt_start": "{\n  \"engine\": \"admin_override_console\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"admin_override_console_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Provides administrative override capabilities for manual intervention in recursion field operations. Allows emergency stabilization, resets, quarantines, and direct symbolic recursion field manipulation under critical conditions.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "admin_override_console",
+        "version",
+        "frozen_as",
+        "admin_override_console_frozen_v1",
+        "frozen_on",
+        "description",
+        "Provides",
+        "administrative",
+        "override",
+        "capabilities",
+        "for",
+        "manual",
+        "intervention",
+        "recursion",
+        "field",
+        "operations",
+        "Allows",
+        "emergency",
+        "stabilization",
+        "resets",
+        "quarantines",
+        "and",
+        "direct",
+        "symbolic"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/admin_override_console/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "905916f7b93fa3604a8bb24dffdbb9a37fa6d94841c87eb80f62202294c982da",
+      "size_bytes": 498
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/admin_override_console",
+  "created_at": "2026-05-15_131106",
+  "crosscheck_id": "ERE-admin_override_console-2026-05-15_131106",
+  "deterministic_brief": {
+    "classes_sample": [
+      "AdminOverrideConsole"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Admin",
+      "Allows",
+      "Console",
+      "Frozen",
+      "Override",
+      "Overview",
+      "Provides",
+      "The",
+      "__init__",
+      "admin_override_console",
+      "admin_override_console_frozen_v1",
+      "administrative",
+      "allows",
+      "and",
+      "authorized",
+      "automated",
+      "capabilities",
+      "description",
+      "direct",
+      "emergency"
+    ],
+    "imports_sample": [
+      "from admin_override_core import AdminOverrideConsole"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`admin_override_console` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# test_admin_override_core.py ",
+      "# admin_override_core.py # Admin Override Console Core",
+      "# Admin Override Console (Frozen v1.0.01) ",
+      "{   \"engine\": \"admin_override_console\","
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_124956_admin_override_console_llm_engine_review_draft_v1.json",
+  "draft_sha256": "865d3eb4b7b2c6df18e9bcc4b973b8b7dcf3f4c39a99d323a00209342c8cacde",
+  "engine_family": "admin_override_console",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_admin_override_console_engine_evidence_binder.json",
+  "evidence_binder_sha256": "216bf8587e441a40305be77b174b4a945efdec163c933067d6fd44dc5bcb354b",
+  "evidence_id": "EEB-7e1e67cf08853d05",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "AdminOverrideConsole"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "test_admin_override_core.py",
+      "admin_override_core.py",
+      "README.md",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "Admin",
+      "Override",
+      "Console",
+      "Frozen",
+      "The",
+      "authorized",
+      "manual",
+      "interventions",
+      "symbolic",
+      "recursion",
+      "field",
+      "operations",
+      "emergency",
+      "stabilization",
+      "phase",
+      "resets",
+      "quarantines",
+      "direct",
+      "when",
+      "automated",
+      "systems",
+      "engine",
+      "version",
+      "Provides",
+      "administrative",
+      "override",
+      "for",
+      "intervention",
+      "and"
+    ],
+    "imports_mentioned": [
+      "from admin_override_core import AdminOverrideConsole"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 12.849,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "55e842eff28ce0bbf59fb20cf244a1719d89c6fc1fbc5a9975ddca90cdb7ccd2",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo enable authorized manual interventions in recursion field operations, allowing emergency stabilization, phase resets, quarantines, and direct manipulation of symbolic recursion fields under critical conditions.  \n\nLikely System Role:  \nA core administrative control system for emergency overrides in AI.Web's symbolic recursion field management, acting as a safety net when automated systems fail.  \n\nEvidence Used:  \n1. `test_admin_override_core.py` validates command execution and logging.  \n2. `admin_override_core.py` implements the `AdminOverrideConsole` class with override execution and logging.  \n3. `README.md` outlines the system's purpose, functions, and compliance standards.  \n4. `engine_manifest.json` provides metadata confirming its role as an administrative override tool.  \n\nRisks / Uncertainties:  \n- Critical system with potential for severe operational impact if misused.  \n- Reliance on logging and validation protocols (documented but not explicitly verified in code).  \n- \"Frozen\" version may lack flexibility for future updates or bug fixes.  \n\nRecommendation Draft:  \nApprove the review, but recommend:  \n- Confirming robustness of logging/validation protocols.  \n- Ensuring test coverage for edge cases (e.g., repeated overrides, invalid commands).  \n- Evaluating the implications of the \"frozen\" version's update restrictions.  \n\nSuggested Nic Action:  \n- Approve the review with the above caveats.  \n- Schedule a security audit of the logging and authorization workflows.  \n- Review the \"frozen\" version's maintenance plan to ensure long-term viability."
+  },
+  "llm_sections": {
+    "evidence_used": "1. `test_admin_override_core.py` validates command execution and logging.  \n2. `admin_override_core.py` implements the `AdminOverrideConsole` class with override execution and logging.  \n3. `README.md` outlines the system's purpose, functions, and compliance standards.  \n4. `engine_manifest.json` provides metadata confirming its role as an administrative override tool.",
+    "likely_system_role": "A core administrative control system for emergency overrides in AI.Web's symbolic recursion field management, acting as a safety net when automated systems fail.",
+    "plain_english_purpose": "To enable authorized manual interventions in recursion field operations, allowing emergency stabilization, phase resets, quarantines, and direct manipulation of symbolic recursion fields under critical conditions.",
+    "recommendation_draft": "Approve the review, but recommend:  \n- Confirming robustness of logging/validation protocols.  \n- Ensuring test coverage for edge cases (e.g., repeated overrides, invalid commands).  \n- Evaluating the implications of the \"frozen\" version's update restrictions.",
+    "risks_uncertainties": "- Critical system with potential for severe operational impact if misused.  \n- Reliance on logging and validation protocols (documented but not explicitly verified in code).  \n- \"Frozen\" version may lack flexibility for future updates or bug fixes.",
+    "suggested_nic_action": "- Approve the review with the above caveats.  \n- Schedule a security audit of the logging and authorization workflows.  \n- Review the \"frozen\" version's maintenance plan to ensure long-term viability."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo enable authorized manual interventions in recursion field operations, allowing emergency stabilization, phase resets, quarantines, and direct manipulation of symbolic recursion fields under critical conditions.  \n\nLikely System Role:  \nA core administrative control system for emergency overrides in AI.Web's symbolic recursion field management, acting as a safety net when automated systems fail.  \n\nEvidence Used:  \n1. `test_admin_override_core.py` validates command execution and logging.  \n2. `admin_override_core.py` implements the `AdminOverrideConsole` class with override execution and logging.  \n3. `README.md` outlines the system's purpose, functions, and compliance standards.  \n4. `engine_manifest.json` provides metadata confirming its role as an administrative override tool.  \n\nRisks / Uncertainties:  \n- Critical system with potential for severe operational impact if misused.  \n- Reliance on logging and validation protocols (documented but not explicitly verified in code).  \n- \"Frozen\" version may lack flexibility for future updates or bug fixes.  \n\nRecommendation Draft:  \nApprove the review, but recommend:  \n- Confirming robustness of logging/validation protocols.  \n- Ensuring test coverage for edge cases (e.g., repeated overrides, invalid commands).  \n- Evaluating the implications of the \"frozen\" version's update restrictions.  \n\nSuggested Nic Action:  \n- Approve the review with the above caveats.  \n- Schedule a security audit of the logging and authorization workflows.  \n- Review the \"frozen\" version's maintenance plan to ensure long-term viability.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

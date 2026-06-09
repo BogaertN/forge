@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forge Read-Only Dashboard</title>
+<style>
+body { font-family: system-ui, -apple-system, Segoe UI, sans-serif; margin: 2rem; background: #111; color: #eee; }
+header { border-bottom: 1px solid #444; margin-bottom: 1rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.card { border: 1px solid #333; border-radius: 12px; padding: 1rem; background: #181818; }
+.status { font-weight: 700; color: #bde; }
+li { margin: 0.35rem 0; }
+.notice { color: #ddd; background: #202020; padding: 0.75rem; border-radius: 8px; }
+</style>
+</head>
+<body>
+<header>
+<h1>Forge Read-Only Dashboard</h1>
+<p>Created: 2026-05-20T16:40:06</p>
+<p class="notice">Static local artifact only. No server started. No write buttons. Gauges before levers.</p>
+</header>
+<main class="grid">
+
+        <section class="card">
+          <h2>System Status</h2>
+          <p class="status">FORGE_STATUS_API_SNAPSHOT_READY</p>
+          <ul><li>Tools: 582</li><li>Trust: 5.0</li><li>Expected commands: 646</li><li>API mode: READ_ONLY_FILE_BACKED_CONTRACT_NO_SERVER</li></ul>
+        </section>
+        
+        <section class="card">
+          <h2>Canonical Engines</h2>
+          <p class="status">CANONICAL_LOCKFILE_PRESENT</p>
+          <ul><li>Ledger: total=80 approved=56 deferred=24 pending=0</li><li>Included: 54</li><li>Excluded: 26</li><li>SHA: 379b6ef9852ce288b2b3551ba89aa809adac495312e62602edf5ac6fb9a3b604</li></ul>
+        </section>
+        
+        <section class="card">
+          <h2>Canonical Safe Tests</h2>
+          <p class="status">CANONICAL_TEST_RUN_COMPLETED_ALL_PASS</p>
+          <ul><li>Targets: 67</li><li>Pass: 67</li><li>Fail: 0</li><li>Blocked: 0 Timeout: 0 Error: 0</li></ul>
+        </section>
+        
+        <section class="card">
+          <h2>Patch Impact / Risk</h2>
+          <p class="status">PATCH_IMPACT_MAP_READY</p>
+          <ul><li>Matches: 54</li><li>Low: 37</li><li>Medium: 17</li><li>High: 0</li><li>Test issues: 0</li></ul>
+        </section>
+        
+        <section class="card">
+          <h2>Runtime Relationships</h2>
+          <p class="status">CANONICAL_ENGINE_RELATIONSHIP_MAP_READY</p>
+          <ul><li>Rows: 54</li><li>Edges: 86</li><li>Medium-risk neighbors: 5</li><li>High-risk neighbors: 0</li></ul>
+        </section>
+        
+        <section class="card">
+          <h2>Excluded / Deferred Engines</h2>
+          <p class="status">ENGINE_DISPOSITION_REPORT_READY</p>
+          <ul><li>Excluded total: 26</li><li>Deferred total: 24</li><li>Safe to delete now: 0</li><li>Safe to quarantine now: 0</li><li>Safe to promote now: 0</li></ul>
+        </section>
+        
+        <section class="card">
+          <h2>Audit Chain</h2>
+          <p class="status">AUDIT_OK</p>
+          <ul><li>Exists: True</li><li>Entries checked: 2500</li><li>Chain breaks: 0</li><li>Latest entry hash: 0e884338bf9e2ed5</li></ul>
+        </section>
+        
+        <section class="card">
+          <h2>Authority / Permissions</h2>
+          <p class="status">READ_ONLY</p>
+          <ul><li>Read only: True</li><li>Project writes: False</li><li>Engine writes: False</li><li>Patch apply: False</li><li>Shell execution: False</li><li>Server started: False</li></ul>
+        </section>
+        
+        <section class="card">
+          <h2>Dashboard Roadmap Panel</h2>
+          <p class="status">FORGE_DASHBOARD_ROADMAP_PANEL_READY</p>
+          <ul><li>Current: S19N — Runtime Live Build Approval Receipt / Execution Decision Gate</li><li>Next: Patch 169 — Runtime Live Build Human Approval Token Entry Gate</li><li>Panel count: 4</li><li>Panel path: /home/nic/forge/memory/forge_dashboard_roadmap_panel_v1/latest_forge_dashboard_roadmap_panel_v1.json</li></ul>
+        </section>
+        
+        <section class="card">
+          <h2>Build Sequence</h2>
+          <p class="status">FORGE_BUILD_SEQUENCE_READY</p>
+          <ul><li>Current: S19N — Runtime Live Build Approval Receipt / Execution Decision Gate</li><li>Next: Patch 169 — Runtime Live Build Human Approval Token Entry Gate</li><li>Deferred items: 2</li><li>Blocked items: 0</li><li>Roadmap source: forge_build_sequence_v1</li></ul>
+        </section>
+        
+        <section class="card">
+          <h2>Build Phase Gate</h2>
+          <p class="status">FORGE_BUILD_PHASE_GATE_READY</p>
+          <ul><li>Pass: 8</li><li>Warn: 0</li><li>Fail: 0</li><li>Next: Patch 169 — Runtime Live Build Human Approval Token Entry Gate</li><li>Gate source: forge_build_phase_gates_v1</li></ul>
+        </section>
+        
+</main>
+</body>
+</html>

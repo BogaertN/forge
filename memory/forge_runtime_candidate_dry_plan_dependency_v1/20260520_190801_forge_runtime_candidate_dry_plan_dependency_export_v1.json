@@ -1,0 +1,246 @@
+{
+  "created_at": "20260520_190801",
+  "export_type": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_DEPENDENCY_EXPORT_V1",
+  "payload": {
+    "approval_token_entered": false,
+    "created_at": "20260520_190422",
+    "dependency_review_fingerprint": "5d90b46ad10bf3ece8f71fa80af6190e0695a9883f122ee7ebb28c2d86d4e875",
+    "dependency_review_ready": true,
+    "dependency_scan": {
+      "analysis_note": "Static read-only dependency scan. It does not execute imports, run tests, modify files, or infer live readiness.",
+      "config_file_count": 8,
+      "config_files_preview": [
+        "failsafe_manifest.json",
+        "failsafe_status.json",
+        "failsafe_manifest.json",
+        "failsafe_status.json",
+        "failsafe_manager/failsafe_manifest.json",
+        "failsafe_manager/failsafe_status.json",
+        "failsafe_manifest.json",
+        "failsafe_status.json"
+      ],
+      "duplicate_basenames": [
+        {
+          "basename": "README.md",
+          "count": 4
+        },
+        {
+          "basename": "failsafe_core.py",
+          "count": 4
+        },
+        {
+          "basename": "failsafe_manifest.json",
+          "count": 4
+        },
+        {
+          "basename": "failsafe_status.json",
+          "count": 4
+        },
+        {
+          "basename": "test_failsafe.py",
+          "count": 4
+        }
+      ],
+      "extension_counts": {
+        ".json": 8,
+        ".md": 4,
+        ".py": 8
+      },
+      "file_count": 20,
+      "import_edges_preview": [
+        {
+          "file": "failsafe_core.py",
+          "import_count": 2,
+          "imports": [
+            "json",
+            "datetime"
+          ]
+        },
+        {
+          "file": "test_failsafe.py",
+          "import_count": 1,
+          "imports": [
+            "failsafe_core"
+          ]
+        },
+        {
+          "file": "failsafe_core.py",
+          "import_count": 2,
+          "imports": [
+            "json",
+            "datetime"
+          ]
+        },
+        {
+          "file": "test_failsafe.py",
+          "import_count": 1,
+          "imports": [
+            "failsafe_core"
+          ]
+        },
+        {
+          "file": "failsafe_core.py",
+          "import_count": 2,
+          "imports": [
+            "json",
+            "datetime"
+          ]
+        },
+        {
+          "file": "failsafe_manager/failsafe_core.py",
+          "import_count": 2,
+          "imports": [
+            "json",
+            "datetime"
+          ]
+        },
+        {
+          "file": "failsafe_manager/test_failsafe.py",
+          "import_count": 1,
+          "imports": [
+            "failsafe_core"
+          ]
+        },
+        {
+          "file": "test_failsafe.py",
+          "import_count": 1,
+          "imports": [
+            "failsafe_core"
+          ]
+        }
+      ],
+      "local_import_name_hits": [
+        {
+          "file": "test_failsafe.py",
+          "import": "failsafe_core",
+          "local_name_match": "failsafe_core"
+        },
+        {
+          "file": "test_failsafe.py",
+          "import": "failsafe_core",
+          "local_name_match": "failsafe_core"
+        },
+        {
+          "file": "failsafe_manager/test_failsafe.py",
+          "import": "failsafe_core",
+          "local_name_match": "failsafe_core"
+        },
+        {
+          "file": "test_failsafe.py",
+          "import": "failsafe_core",
+          "local_name_match": "failsafe_core"
+        }
+      ],
+      "python_file_count": 8,
+      "python_files_preview": [
+        "failsafe_core.py",
+        "test_failsafe.py",
+        "failsafe_core.py",
+        "test_failsafe.py",
+        "failsafe_core.py",
+        "failsafe_manager/failsafe_core.py",
+        "failsafe_manager/test_failsafe.py",
+        "test_failsafe.py"
+      ],
+      "unreadable_files": []
+    },
+    "engine_writes": 0,
+    "forge_owned_receipt_writes_only": true,
+    "gates": [
+      {
+        "detail": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_SCOPE_READY_NO_WRITE_FILE_SET_REVIEW",
+        "id": "P177-G1",
+        "name": "Patch 176 scope receipt loaded or safe fallback used",
+        "status": "OK"
+      },
+      {
+        "detail": "failsafe_manager",
+        "id": "P177-G2",
+        "name": "Selected candidate preserved",
+        "status": "OK"
+      },
+      {
+        "detail": "files=20 python=8 configs=8",
+        "id": "P177-G3",
+        "name": "Dependency scan is read-only static analysis",
+        "status": "OK"
+      },
+      {
+        "detail": "duplicates=5",
+        "id": "P177-G4",
+        "name": "Duplicate basename review recorded",
+        "status": "WARN"
+      },
+      {
+        "detail": "No approval token capture; no runtime/project/engine writes.",
+        "id": "P177-G5",
+        "name": "Live apply remains forbidden",
+        "status": "OK"
+      },
+      {
+        "detail": "General support must route through exact-read, SHA, sandbox, tests, rollback, and approval gates.",
+        "id": "P177-G6",
+        "name": "Any-file generalization remains gated",
+        "status": "OK"
+      }
+    ],
+    "generalization_boundary": {
+      "any_file_support_future": true,
+      "current_scope": "selected_runtime_candidate_dependency_review_only",
+      "not_arbitrary_path_execution": true,
+      "required_before_any_file_patch": "approved scope + exact-read + sha256 + sandbox + tests + rollback + explicit approval + post-write verification"
+    },
+    "human_approval_present": false,
+    "impact_notes": {
+      "candidate": "failsafe_manager",
+      "duplicate_basename_count": 5,
+      "future_required_gates": [
+        "exact-read target file from approved scope",
+        "record current sha256",
+        "build structured no-write plan",
+        "sandbox apply on copied file set",
+        "safe test runner / py_compile where applicable",
+        "rollback artifact available",
+        "fresh human approval token in a separate live execution patch",
+        "post-write disk readback and audit verification"
+      ],
+      "impact_level": "REVIEW_REQUIRED",
+      "observed_config_file_count": 8,
+      "observed_file_count": 20,
+      "observed_python_file_count": 8,
+      "summary": "No live impact. This patch creates dependency/impact notes only. Any future real change still requires exact-read, SHA matching, sandbox, tests, rollback, and explicit approval.",
+      "warnings": [
+        "Duplicate basenames exist in the candidate file set; review before any future live apply.",
+        "Configuration files are present; future patching must verify exact SHA and rollback files."
+      ]
+    },
+    "live_apply_allowed": false,
+    "next_patch": "Patch 178 \u2014 Runtime Candidate Dry-Plan Validation Matrix / No-Write Test Plan",
+    "patch": "Patch 177.1 \u2014 Runtime Candidate Dry-Plan Dependency Command Definition Hotfix",
+    "problems": [],
+    "project_writes": 0,
+    "recommended_next_patch": "Patch 178 \u2014 Runtime Candidate Dry-Plan Validation Matrix / No-Write Test Plan",
+    "repairs_patch": "Patch 177 \u2014 Runtime Candidate Dry-Plan Dependency Review / No-Write Impact Notes",
+    "runtime_writes": 0,
+    "schema_version": "forge_runtime_candidate_dry_plan_dependency_v1_patch177_1_hotfix",
+    "selected_candidate": "failsafe_manager",
+    "source_report": {
+      "runtime_build_plan_latest": "/home/nic/forge/memory/forge_runtime_build_plan_v1/latest_forge_runtime_build_plan_v1.json",
+      "runtime_build_plan_status": "FORGE_RUNTIME_BUILD_PLAN_READY_PLANNING_ONLY",
+      "runtime_module_map_latest": "/home/nic/forge/memory/forge_runtime_module_dependency_map_v1/latest_forge_runtime_module_dependency_map_v1.json",
+      "runtime_module_map_status": "FORGE_RUNTIME_MODULE_DEPENDENCY_MAP_READY_PLANNING_ONLY",
+      "scope_latest": "/home/nic/forge/memory/forge_runtime_candidate_dry_plan_scope_v1/latest_forge_runtime_candidate_dry_plan_scope_v1.json",
+      "scope_status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_SCOPE_READY_NO_WRITE_FILE_SET_REVIEW",
+      "selector_latest": "/home/nic/forge/memory/forge_runtime_candidate_dry_plan_selector_v1/latest_forge_runtime_candidate_dry_plan_selector_v1.json",
+      "selector_status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_SELECTOR_READY_NO_WRITE_PLANNING_GATE"
+    },
+    "status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_DEPENDENCY_READY_NO_WRITE_IMPACT_NOTES",
+    "token_validation_status": "NOT_REQUESTED",
+    "warnings": [
+      "Duplicate basenames exist in the candidate file set; review before any future live apply.",
+      "Configuration files are present; future patching must verify exact SHA and rollback files."
+    ]
+  },
+  "source_report": "/home/nic/forge/memory/forge_runtime_candidate_dry_plan_dependency_v1/latest_forge_runtime_candidate_dry_plan_dependency_v1.json",
+  "source_status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_DEPENDENCY_READY_NO_WRITE_IMPACT_NOTES"
+}

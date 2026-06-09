@@ -1,0 +1,142 @@
+{
+  "authority": {
+    "allowed_gateway_tools": [
+      "read_file",
+      "code_related_files"
+    ],
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "forbidden_gateway_tools": [
+      "shell",
+      "patch-apply",
+      "ingest-one",
+      "ingest-batch-apply",
+      "delete",
+      "quarantine",
+      "restore",
+      "snapshot-live-restore",
+      "network",
+      "pip",
+      "npm",
+      "sudo"
+    ],
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "LLM_ENGINE_REVIEW_DRAFTS_WITH_REVIEW_LIMITED_READ_LENS",
+    "patch": "98",
+    "project_write_authority": false,
+    "rule": "The LLM may draft review recommendations from bound evidence. Nic approves separately. Forge commits only in a future gated patch.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/llm_engine_review_drafts_v1"
+  },
+  "counts": {
+    "drafts": 11
+  },
+  "created_at": "2026-05-15_125052",
+  "drafts": [
+    {
+      "draft_id": "LER-phase_engine-2026-05-15_083144",
+      "engine_family": "phase_engine",
+      "evidence_id": "EEB-69f03eb6723fbc4c",
+      "path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_083144_phase_engine_llm_engine_review_draft_v1.json",
+      "recommendation": "KEEP_APPROVED_REVIEW_STATUS",
+      "sha256": "0b14998c62f90f200c3094a99bb5d01212170b359e1686159aebc3758a5454ad",
+      "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY"
+    },
+    {
+      "draft_id": "LER-activity_log-2026-05-15_083417",
+      "engine_family": "activity_log",
+      "evidence_id": "EEB-929b125c673bef05",
+      "path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_083417_activity_log_llm_engine_review_draft_v1.json",
+      "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+      "sha256": "77bec2b87a2acfcec6d54eebaedd7183814cc1d6eed1c5c936c83b0c8bfad064",
+      "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY"
+    },
+    {
+      "draft_id": "LER-christping_listener-2026-05-15_084104",
+      "engine_family": "christping_listener",
+      "evidence_id": "EEB-a757f04a6033202d",
+      "path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_084104_christping_listener_llm_engine_review_draft_v1.json",
+      "recommendation": "KEEP_APPROVED_REVIEW_STATUS",
+      "sha256": "a9089de6f97057384881f5f29d428154ed9da6efc6df569728b3bf80e5f9702f",
+      "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY"
+    },
+    {
+      "draft_id": "LER-christping_listener-2026-05-15_084951",
+      "engine_family": "christping_listener",
+      "evidence_id": "EEB-a757f04a6033202d",
+      "path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_084951_christping_listener_llm_engine_review_draft_v1.json",
+      "recommendation": "KEEP_APPROVED_REVIEW_STATUS",
+      "sha256": "4ee4ba63642742698aa2a5077b1632071a5312cb317ffae0f098fb9ac0a2fd54",
+      "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY"
+    },
+    {
+      "draft_id": "LER-christping_listener-2026-05-15_085820",
+      "engine_family": "christping_listener",
+      "evidence_id": "EEB-a757f04a6033202d",
+      "path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_085820_christping_listener_llm_engine_review_draft_v1.json",
+      "recommendation": "KEEP_APPROVED_REVIEW_STATUS",
+      "sha256": "a81c99382837d58bae2ea5119578df8a790d8a26b9291fc29108e5047ef9754d",
+      "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY"
+    },
+    {
+      "draft_id": "LER-activity_log-2026-05-15_124846",
+      "engine_family": "activity_log",
+      "evidence_id": "EEB-929b125c673bef05",
+      "path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_124846_activity_log_llm_engine_review_draft_v1.json",
+      "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+      "sha256": "80d7be143ef5fef6738e0115b6c439248b03ac8ea7afc4544686c3e6f0922396",
+      "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY"
+    },
+    {
+      "draft_id": "LER-admin_override_console-2026-05-15_124856",
+      "engine_family": "admin_override_console",
+      "evidence_id": "EEB-7e1e67cf08853d05",
+      "path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_124856_admin_override_console_llm_engine_review_draft_v1.json",
+      "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+      "sha256": "4414f76490cd6fac489856c29474c2fd1821cf67ebea9fabe288aed76e23bd7d",
+      "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY"
+    },
+    {
+      "draft_id": "LER-agent_reflection_engine-2026-05-15_124908",
+      "engine_family": "agent_reflection_engine",
+      "evidence_id": "EEB-efe9b78ceabc9853",
+      "path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_124908_agent_reflection_engine_llm_engine_review_draft_v1.json",
+      "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+      "sha256": "3e10144d88b26e9bd4d531e359114d46140d120b18e5c38b2203e9c1fcfe5dd4",
+      "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY"
+    },
+    {
+      "draft_id": "LER-activity_log-2026-05-15_124949",
+      "engine_family": "activity_log",
+      "evidence_id": "EEB-929b125c673bef05",
+      "path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_124949_activity_log_llm_engine_review_draft_v1.json",
+      "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+      "sha256": "882b2ebac591e0a2dfa2d9e0966d2719c693b176247c451c1e6bba28a8b53016",
+      "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY"
+    },
+    {
+      "draft_id": "LER-admin_override_console-2026-05-15_124956",
+      "engine_family": "admin_override_console",
+      "evidence_id": "EEB-7e1e67cf08853d05",
+      "path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_124956_admin_override_console_llm_engine_review_draft_v1.json",
+      "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+      "sha256": "865d3eb4b7b2c6df18e9bcc4b973b8b7dcf3f4c39a99d323a00209342c8cacde",
+      "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY"
+    },
+    {
+      "draft_id": "LER-agent_reflection_engine-2026-05-15_125009",
+      "engine_family": "agent_reflection_engine",
+      "evidence_id": "EEB-efe9b78ceabc9853",
+      "path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_125009_agent_reflection_engine_llm_engine_review_draft_v1.json",
+      "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+      "sha256": "46e9fd044047ce1b2a840f9557479c025710e62e9957ba871c7a00e50869b0a4",
+      "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY"
+    }
+  ],
+  "next_step": "Patch 99 human review queue. Patch 100 commits only after human approval and SHA re-verification.",
+  "report_type": "LLM_ENGINE_REVIEW_EXPORT_V1_PATCH98",
+  "schema_version": "llm_engine_review_draft_v1_patch98"
+}

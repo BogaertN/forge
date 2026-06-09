@@ -1,0 +1,97 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "bound_file_count": 4,
+  "candidate_path": "/home/nic/aiweb/engines/resurrection_planner",
+  "created_at": "2026-05-16_224408",
+  "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_resurrection_planner_engine_review_evidence_crosscheck_v1.json",
+  "crosscheck_sha256": "99080258d969a099ae51ba04424e3ce974290b713d75a8d054634507d8664519",
+  "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_221958_resurrection_planner_llm_engine_review_draft_v1.json",
+  "draft_sha256": "047c4aa25f8fbe6758422742ec9b5df150da8990be9e3f9427fbde71190df47f",
+  "engine_family": "resurrection_planner",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_resurrection_planner_engine_evidence_binder.json",
+  "evidence_binder_sha256": "fd17c38b25899d3e46f3edc4705d646e5869d4dbbc523567cc72c88eb98993fd",
+  "evidence_id": "EEB-8815431b5a347b48",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "ResurrectionPlanner"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "test_resurrection_planner_core.py",
+      "README.md",
+      "resurrection_planner_core.py",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "Resurrection",
+      "Planner",
+      "The",
+      "symbolic",
+      "resurrection",
+      "operations",
+      "for",
+      "collapsed",
+      "recursion",
+      "fields",
+      "and",
+      "drifted",
+      "ghost",
+      "loops",
+      "recovery",
+      "based",
+      "phase",
+      "stability",
+      "metrics",
+      "drift",
+      "engine",
+      "resurrection_planner",
+      "version",
+      "field"
+    ],
+    "imports_mentioned": [
+      "from resurrection_planner_core import ResurrectionPlanner"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 29.059,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "9a2b564b5a02caa9c3fa4de4df18ab4818050f9e46ce11fdce6c73939bb211b4",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo schedule and prioritize symbolic resurrection operations for collapsed recursion fields and drifted ghost loops, ensuring system stability through phase-aligned recovery protocols.  \n\nLikely System Role:  \nA core AI.Web engine responsible for managing recovery of unstable recursion fields and loops, integrating with symbolic execution frameworks for system resilience.  \n\nEvidence Used:  \n- Test script (`test_resurrection_planner_core.py`) validates scheduling and prioritization logic.  \n- README.md describes recovery prioritization based on field integrity and drift severity.  \n- Core code (`resurrection_planner_core.py`) defines the `ResurrectionPlanner` class for queue management.  \n- Manifest file (`engine_manifest.json`) specifies engine purpose, version, and phase compliance standards.  \n\nRisks / Uncertainties:  \n- Unverified real-world performance of prioritization algorithms under load.  \n- Lack of explicit error handling for repeated resurrection failures (quarantine protocols mentioned in README but not implemented in code).  \n- Dependencies on external symbolic execution frameworks not explicitly documented.  \n\nRecommendation Draft:  \nApprove review with conditions: confirm implementation of quarantine protocols for failed resurrection attempts, validate prioritization metrics with stress tests, and ensure alignment with Phase 1.5 compliance standards.  \n\nSuggested Nic Action:  \n- Approve review with the above conditions.  \n- Schedule validation testing for prioritization logic and failure recovery protocols.  \n- Verify documentation updates to reflect the latest implementation details."
+  },
+  "llm_visible_review_excerpt": "Plain-English Purpose:  \nTo schedule and prioritize symbolic resurrection operations for collapsed recursion fields and drifted ghost loops, ensuring system stability through phase-aligned recovery protocols.  \n\nLikely System Role:  \nA core AI.Web engine responsible for managing recovery of unstable recursion fields and loops, integrating with symbolic execution frameworks for system resilience.  \n\nEvidence Used:  \n- Test script (`test_resurrection_planner_core.py`) validates scheduling and prioritization logic.  \n- README.md describes recovery prioritization based on field integrity and drift severity.  \n- Core code (`resurrection_planner_core.py`) defines the `ResurrectionPlanner` class for queue management.  \n- Manifest file (`engine_manifest.json`) specifies engine purpose, version, and phase compliance standards.  \n\nRisks / Uncertainties:  \n- Unverified real-world performance of prioritization algorithms under load.  \n- Lack of explicit error handling for repeated resurrection failures (quarantine protocols mentioned in README but not implemented in code).  \n- Dependencies on external symbolic execution frameworks not explicitly documented.  \n\nRecommendation Draft:  \nApprove review with conditions: confirm implementation of quarantine protocols for failed resurrection attempts, validate prioritization metrics with stress tests, and ensure alignment with Phase 1.5 compliance standards.  \n\nSuggested Nic Action:  \n- Approve review with the above conditions.  \n- Schedule validation testing for prioritization logic and failure recovery protocols.  \n- Verify documentation updates to reflect the latest implementation details.",
+  "manual_verification_rule": "Approve only if the LLM-visible claims are supported by the bound evidence shown in the Patch 102 cross-check. If unsure, defer.",
+  "ready_for_evidence_based_queue_decision": true,
+  "report_type": "ENGINE_REVIEW_APPROVAL_CHECK_V1_PATCH103",
+  "schema_version": "engine_review_approval_helper_v1_patch103",
+  "status": "EVIDENCE_APPROVAL_CHECK_READY",
+  "warnings": [
+    "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

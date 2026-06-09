@@ -1,0 +1,271 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "306453111ab36e31187cd339f51c08d574aa6c8daf68bb4d24644d726dd27957",
+      "excerpt_start": "import json\nfrom datetime import datetime\n\nQUEUE_FILE = \"resurrection_queue.json\"\n\ndef resurrect_loop(loop_id):\n    try:\n        with open(QUEUE_FILE, \"r\") as f:\n            queue = json.load(f)\n    except (FileNotFoundError, json.JSONDecodeError):\n        queue = []\n\n    event = {\n        \"timestamp\": datetime.utcnow().isoformat(),\n        \"loop_id\": loop_id,\n        \"resurrected\": True\n    }\n    queue.append(event)\n\n    with open(QUEUE_FILE, \"w\") as f:\n        json.dump(queue, f, indent=2)\n\n    return event\n",
+      "functions_sample": [
+        "resurrect_loop"
+      ],
+      "imports_sample": [
+        "import json",
+        "from datetime import datetime"
+      ],
+      "line_count": 24,
+      "path": "/home/nic/aiweb/engines/loop_resurrection_engine/resurrection_core.py",
+      "relative_to_candidate": "resurrection_core.py",
+      "sha256": "306453111ab36e31187cd339f51c08d574aa6c8daf68bb4d24644d726dd27957",
+      "size_bytes": 515
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "1a2a1a193b5c75796d76ca8b84d3fbe6b4e6aefc7d1096f31217fbe43fa0d757",
+      "excerpt_start": "\nfrom resurrection_core import resurrect_loop\n\ndef test_resurrection_process():\n    result = resurrect_loop(\"loop_\u03c68a\")\n    print(\"\u2705 Test Passed: Loop resurrection queued.\")\n    print(\"Queued:\", result)\n\nif __name__ == \"__main__\":\n    test_resurrection_process()\n",
+      "functions_sample": [
+        "test_resurrection_process"
+      ],
+      "imports_sample": [
+        "from resurrection_core import resurrect_loop"
+      ],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/loop_resurrection_engine/test_resurrection.py",
+      "relative_to_candidate": "test_resurrection.py",
+      "sha256": "1a2a1a193b5c75796d76ca8b84d3fbe6b4e6aefc7d1096f31217fbe43fa0d757",
+      "size_bytes": 266
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "5448e10b3b615e3e18e476d1029b0a4ef7e38158440c8621a95a7d5f96536282",
+      "excerpt_start": "[\n  {\n    \"timestamp\": \"2025-04-25T22:24:03.584322\",\n    \"loop_id\": \"loop_\\u03c68a\",\n    \"resurrected\": true\n  }\n]",
+      "functions_sample": [
+        "timestamp",
+        "loop_id",
+        "loop_",
+        "u03c68a",
+        "resurrected",
+        "true"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/loop_resurrection_engine/resurrection_queue.json",
+      "relative_to_candidate": "resurrection_queue.json",
+      "sha256": "5448e10b3b615e3e18e476d1029b0a4ef7e38158440c8621a95a7d5f96536282",
+      "size_bytes": 114
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "83a8a3b01009a4d6ece3884144db05652a3c8fc3acaaea6582dd0c1adb0cda8d",
+      "excerpt_start": "# Loop Resurrection Engine\n\nThis engine restores unresolved loops from symbolic cold archive into active runtime queue for attempted reintegration.\n\n- resurrection_core.py \u2192 Logic\n- resurrection_queue.json \u2192 Queue file\n- test_resurrection.py \u2192 Validation script\n",
+      "functions_sample": [
+        "Loop",
+        "Resurrection",
+        "Engine",
+        "This",
+        "engine",
+        "restores",
+        "unresolved",
+        "loops",
+        "from",
+        "symbolic",
+        "cold",
+        "archive",
+        "into",
+        "active",
+        "runtime",
+        "queue",
+        "for",
+        "attempted",
+        "reintegration",
+        "resurrection_core",
+        "Logic",
+        "resurrection_queue",
+        "json",
+        "Queue",
+        "file"
+      ],
+      "imports_sample": [],
+      "line_count": 8,
+      "path": "/home/nic/aiweb/engines/loop_resurrection_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "83a8a3b01009a4d6ece3884144db05652a3c8fc3acaaea6582dd0c1adb0cda8d",
+      "size_bytes": 268
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "d4047152e88ec997d88213c0d23b11bd70d9efbb54955449eeb1819c96473528",
+      "excerpt_start": "{\n  \"engine\": \"loop_resurrection_engine\",\n  \"version\": \"v1.0\",\n  \"status\": \"build_mode\",\n  \"description\": \"Queues previously archived loops for resurrection attempts.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "loop_resurrection_engine",
+        "version",
+        "status",
+        "build_mode",
+        "description",
+        "Queues",
+        "previously",
+        "archived",
+        "loops",
+        "for",
+        "resurrection",
+        "attempts"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/loop_resurrection_engine/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "d4047152e88ec997d88213c0d23b11bd70d9efbb54955449eeb1819c96473528",
+      "size_bytes": 170
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/loop_resurrection_engine",
+  "created_at": "2026-05-16_214454",
+  "crosscheck_id": "ERE-loop_resurrection_engine-2026-05-16_214454",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Engine",
+      "Logic",
+      "Loop",
+      "Queue",
+      "Queues",
+      "Resurrection",
+      "This",
+      "active",
+      "archive",
+      "archived",
+      "attempted",
+      "attempts",
+      "build_mode",
+      "cold",
+      "description",
+      "engine",
+      "file",
+      "for",
+      "from",
+      "into"
+    ],
+    "imports_sample": [
+      "from datetime import datetime",
+      "from resurrection_core import resurrect_loop",
+      "import json"
+    ],
+    "likely_system_role": "loop_resurrection",
+    "plain_english_purpose": "`loop_resurrection_engine` appears to be a local AI.Web engine/component. The bound source evidence includes 5 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "KEEP_APPROVED_REVIEW_STATUS",
+    "risk_notes": [],
+    "role_reason": "Inferred from engine family keyword `resurrection` plus bound code evidence.",
+    "source_excerpt_samples": [
+      "import json from datetime import datetime",
+      "from resurrection_core import resurrect_loop ",
+      "[   {",
+      "# Loop Resurrection Engine "
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_214425_loop_resurrection_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "ea13624b1eedfd75a8172847c9923508328a4d3a61973e1cfeae581b4ae2aa12",
+  "engine_family": "loop_resurrection_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_loop_resurrection_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "193d50d6325c9e60a88bcbf7a77aa75f1beadee0a9fbef5bf9b462164a48caf9",
+  "evidence_id": "EEB-608882f63d11dd95",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "resurrection_core.py",
+      "test_resurrection.py",
+      "resurrection_queue.json",
+      "README.md",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "resurrect_loop",
+      "Loop",
+      "Resurrection",
+      "Engine",
+      "engine",
+      "unresolved",
+      "loops",
+      "from",
+      "symbolic",
+      "cold",
+      "archive",
+      "into",
+      "active",
+      "runtime",
+      "queue",
+      "for",
+      "reintegration",
+      "resurrection_core",
+      "Logic",
+      "resurrection_queue",
+      "json",
+      "Queue",
+      "file",
+      "resurrection",
+      "attempts"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "from resurrection_core import resurrect_loop"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 29.414,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "b520209f3a971d01a6a25a02d6322007c1146401287b69f4e1058c50df4828bb",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo restore unresolved loops from a symbolic cold archive into an active runtime queue for reintegration.  \n\nLikely System Role:  \nA resurrection service that manages loop reactivation in an AI system, handling queued loops via a JSON-based storage mechanism.  \n\nEvidence Used:  \n- `resurrection_core.py`: Core logic for queueing loops and logging resurrection events.  \n- `test_resurrection.py`: Validation script to test resurrection functionality.  \n- `resurrection_queue.json`: JSON file storing resurrection events.  \n- `README.md` and `engine_manifest.json`: Documentation describing the engine's purpose and operation.  \n\nRisks / Uncertainties:  \n- Minimal error handling in `resurrect_loop` (e.g., no retries for file I/O failures).  \n- Test script is simplistic (only prints results, no assertions).  \n- No safeguards against duplicate loop IDs or data corruption in the queue file.  \n\nRecommendation Draft:  \nApprove the engine but recommend adding:  \n1. Comprehensive error handling for edge cases (e.g., concurrent writes to the queue file).  \n2. Unit tests for edge cases (e.g., invalid loop IDs, empty queue).  \n3. Logging for failed resurrection attempts.  \n\nSuggested Nic Action:  \nApprove the review with the above recommendations. Verify that the resurrection process does not interfere with active loops or cause resource leaks."
+  },
+  "llm_sections": {
+    "evidence_used": "- `resurrection_core.py`: Core logic for queueing loops and logging resurrection events.  \n- `test_resurrection.py`: Validation script to test resurrection functionality.  \n- `resurrection_queue.json`: JSON file storing resurrection events.  \n- `README.md` and `engine_manifest.json`: Documentation describing the engine's purpose and operation.",
+    "likely_system_role": "A resurrection service that manages loop reactivation in an AI system, handling queued loops via a JSON-based storage mechanism.",
+    "plain_english_purpose": "To restore unresolved loops from a symbolic cold archive into an active runtime queue for reintegration.",
+    "recommendation_draft": "Approve the engine but recommend adding:  \n1. Comprehensive error handling for edge cases (e.g., concurrent writes to the queue file).  \n2. Unit tests for edge cases (e.g., invalid loop IDs, empty queue).  \n3. Logging for failed resurrection attempts.",
+    "risks_uncertainties": "- Minimal error handling in `resurrect_loop` (e.g., no retries for file I/O failures).  \n- Test script is simplistic (only prints results, no assertions).  \n- No safeguards against duplicate loop IDs or data corruption in the queue file.",
+    "suggested_nic_action": "Approve the review with the above recommendations. Verify that the resurrection process does not interfere with active loops or cause resource leaks."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo restore unresolved loops from a symbolic cold archive into an active runtime queue for reintegration.  \n\nLikely System Role:  \nA resurrection service that manages loop reactivation in an AI system, handling queued loops via a JSON-based storage mechanism.  \n\nEvidence Used:  \n- `resurrection_core.py`: Core logic for queueing loops and logging resurrection events.  \n- `test_resurrection.py`: Validation script to test resurrection functionality.  \n- `resurrection_queue.json`: JSON file storing resurrection events.  \n- `README.md` and `engine_manifest.json`: Documentation describing the engine's purpose and operation.  \n\nRisks / Uncertainties:  \n- Minimal error handling in `resurrect_loop` (e.g., no retries for file I/O failures).  \n- Test script is simplistic (only prints results, no assertions).  \n- No safeguards against duplicate loop IDs or data corruption in the queue file.  \n\nRecommendation Draft:  \nApprove the engine but recommend adding:  \n1. Comprehensive error handling for edge cases (e.g., concurrent writes to the queue file).  \n2. Unit tests for edge cases (e.g., invalid loop IDs, empty queue).  \n3. Logging for failed resurrection attempts.  \n\nSuggested Nic Action:  \nApprove the review with the above recommendations. Verify that the resurrection process does not interfere with active loops or cause resource leaks.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "_schema_version": "1.0",
+  "_description": "Known source document requirements for corpus authority. RPMC is the first set. Add future source keys as needed. This is policy data, not code. Forge reads this at runtime.",
+  "_policy": "A source is not registered because it is listed here. It is registered only when a local manifest row has filename/path evidence matching strong_filename_terms.",
+
+  "sources": [
+    {
+      "source_key": "RPMC_FULL_PROTOCOL",
+      "expected_titles": [
+        "Resonant Phase Memory Calculus: The Law of Recursion, Collapse, and Return — Full Protocol Draft",
+        "Resonant Phase Memory Calculus Full Protocol Draft"
+      ],
+      "required_role": "Primary RPMC law document — defines all operators (ΦM, χ(t), ε(t,Φ)), axioms, and structure",
+      "authority_group": "RPMC_CORE",
+      "required_for_trial": false,
+      "required_for_full_authority": true,
+      "strong_filename_terms": ["resonant", "rpmc", "protocol", "calculus", "recursion", "collapse"],
+      "strong_filename_threshold": 2,
+      "strong_content_terms": ["resonant phase memory calculus", "full protocol draft", "law of recursion"],
+      "target_folder_preference": "04_FBSC_DOCTRINE",
+      "drive_id": "1eN6in0lUcGY9RdHcAPFlJOHJNpN6ny1M",
+      "notes": "Core law document. Required for full RPMC memory authority in the runtime."
+    },
+    {
+      "source_key": "RPMC_IMPLEMENTATION_BLUEPRINT",
+      "expected_titles": [
+        "RPMC Implementation Blueprint",
+        "ProtoForge Development Book: Live Canonical Log Resonant Phase Memory Calculus Implementation Blueprint"
+      ],
+      "required_role": "Engineering guide for RPMC runtime — Memory Stack Engine, Collapse Handler, Resurrection Log",
+      "authority_group": "RPMC_CORE",
+      "required_for_trial": false,
+      "required_for_full_authority": true,
+      "strong_filename_terms": ["blueprint", "implementation", "protoforge"],
+      "strong_filename_threshold": 2,
+      "strong_content_terms": ["implementation blueprint", "protoforge development", "memory stack engine"],
+      "target_folder_preference": "04_FBSC_DOCTRINE",
+      "drive_id": "1L_f5I2InqyMiGKX7ERs0et9jY9-gzpVgvqmZ-VAl46E",
+      "notes": "Engineering implementation guide. Paired with RPMC_FULL_PROTOCOL for runtime development."
+    },
+    {
+      "source_key": "RPMC_CANONICAL_TEST_DATASET",
+      "expected_titles": [
+        "RPMC Canonical Test Data Set v1.0",
+        "Resonant Phase Memory Calculus Canonical Test Data Set Version 1.0"
+      ],
+      "required_role": "Benchmark for recursive memory, echo integrity, drift, and resurrection validation",
+      "authority_group": "RPMC_VALIDATION",
+      "required_for_trial": false,
+      "required_for_full_authority": false,
+      "strong_filename_terms": ["canonical", "dataset", "benchmark", "rpmc"],
+      "strong_filename_threshold": 2,
+      "strong_content_terms": ["canonical test data", "rpmc canonical", "phase-locked benchmark"],
+      "target_folder_preference": "04_FBSC_DOCTRINE",
+      "drive_id": "1b8JAc-aATjD7h1Ed4KYA2kxxPkxHaX5-lDO5V5qsXsM",
+      "notes": "Validation dataset. Not required for trial but needed for full RPMC validation suite."
+    }
+  ]
+}

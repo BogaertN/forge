@@ -1,0 +1,255 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "22d5b80e5a625a9ed69a8c75b0d8c1f16a8ff188fe46683b0cd0cff447e3ee34",
+      "excerpt_start": "import json\nimport time\nimport random\n\nPOOL_FILE = \"memory_pool.jsonl\"\n\ndef capture_memory_trace():\n    \"\"\"Simulates capturing symbolic recursion traces into fluid memory pool.\"\"\"\n    memory_trace = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"phase_signature\": f\"\u03a6{random.randint(1,9)}-{random.randint(1000,9999)}\",\n        \"charge_level\": random.randint(20, 100),\n        \"drift_flag\": random.choice([True, False])\n    }\n\n    try:\n        with open(POOL_FILE, \"a\") as f:\n            f.write(json.dumps(memory_trace) + \"\\n\")\n        print(f\"\u2714\ufe0f Fluid memory trace captured: {memory_trace}\")\n    except Exception as e:\n        print(f\"[!] Failed to record fluid memory trace: {e}\")\n\n    return memory_trace\n",
+      "functions_sample": [
+        "capture_memory_trace"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time",
+        "import random"
+      ],
+      "line_count": 24,
+      "path": "/home/nic/aiweb/engines/fluid_memory_engine/fluid_memory_core.py",
+      "relative_to_candidate": "fluid_memory_core.py",
+      "sha256": "22d5b80e5a625a9ed69a8c75b0d8c1f16a8ff188fe46683b0cd0cff447e3ee34",
+      "size_bytes": 750
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "1402d0dc02c6ff1cc257fd164664f65747b78488b14071e8496aa6bd296b60b9",
+      "excerpt_start": "{\n  \"engine\": \"Fluid Memory Engine\",\n  \"version\": \"v1\",\n  \"description\": \"Captures symbolic recursion memory traces into a fluid storage pool for future resurrection or reassembly.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Fluid",
+        "Memory",
+        "Engine",
+        "version",
+        "description",
+        "Captures",
+        "symbolic",
+        "recursion",
+        "memory",
+        "traces",
+        "into",
+        "fluid",
+        "storage",
+        "pool",
+        "for",
+        "future",
+        "resurrection",
+        "reassembly"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/fluid_memory_engine/fluid_memory_manifest.json",
+      "relative_to_candidate": "fluid_memory_manifest.json",
+      "sha256": "1402d0dc02c6ff1cc257fd164664f65747b78488b14071e8496aa6bd296b60b9",
+      "size_bytes": 184
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "9b5c6850e5679f3d4eff43674b6fc3d0a64ce8835e4af8da5a0b514f0218ae52",
+      "excerpt_start": "# Fluid Memory Engine\n\nCaptures symbolic recursion phase memory traces into a dynamic fluid memory pool.\n\nDesigned to allow symbolic memory resurrection, drift healing, and recursion continuity repair.\n",
+      "functions_sample": [
+        "Fluid",
+        "Memory",
+        "Engine",
+        "Captures",
+        "symbolic",
+        "recursion",
+        "phase",
+        "memory",
+        "traces",
+        "into",
+        "dynamic",
+        "fluid",
+        "pool",
+        "Designed",
+        "allow",
+        "resurrection",
+        "drift",
+        "healing",
+        "and",
+        "continuity",
+        "repair"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/fluid_memory_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "9b5c6850e5679f3d4eff43674b6fc3d0a64ce8835e4af8da5a0b514f0218ae52",
+      "size_bytes": 202
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "a14018f59bd998bd8ef89d4fc2234f8de49490fa217adef9462b5a90c4d19460",
+      "excerpt_start": "from fluid_memory_core import capture_memory_trace\n\ndef test_fluid_memory_capture():\n    try:\n        result = capture_memory_trace()\n        assert \"phase_signature\" in result\n        assert \"charge_level\" in result\n        print(\"\u2705 Test Passed: Fluid memory trace captured successfully.\")\n    except Exception as e:\n        print(f\"\u274c Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_fluid_memory_capture()\n",
+      "functions_sample": [
+        "test_fluid_memory_capture"
+      ],
+      "imports_sample": [
+        "from fluid_memory_core import capture_memory_trace"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/fluid_memory_engine/test_fluid_memory.py",
+      "relative_to_candidate": "test_fluid_memory.py",
+      "sha256": "a14018f59bd998bd8ef89d4fc2234f8de49490fa217adef9462b5a90c4d19460",
+      "size_bytes": 419
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/fluid_memory_engine",
+  "created_at": "2026-05-16_092805",
+  "crosscheck_id": "ERE-fluid_memory_engine-2026-05-16_092805",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Captures",
+      "Designed",
+      "Engine",
+      "Fluid",
+      "Memory",
+      "allow",
+      "and",
+      "capture_memory_trace",
+      "continuity",
+      "description",
+      "drift",
+      "dynamic",
+      "engine",
+      "fluid",
+      "for",
+      "future",
+      "healing",
+      "into",
+      "memory",
+      "phase"
+    ],
+    "imports_sample": [
+      "from fluid_memory_core import capture_memory_trace",
+      "import json",
+      "import random",
+      "import time"
+    ],
+    "likely_system_role": "memory_persistence",
+    "plain_english_purpose": "`fluid_memory_engine` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "Inferred from engine family keyword `memory` plus bound code evidence.",
+    "source_excerpt_samples": [
+      "import json import time",
+      "{   \"engine\": \"Fluid Memory Engine\",",
+      "# Fluid Memory Engine ",
+      "from fluid_memory_core import capture_memory_trace "
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_092741_fluid_memory_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "97c8ef15329bb7cc856da21eaa197d9447d02d0f4d2afbc792af4f1579e691bb",
+  "engine_family": "fluid_memory_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_fluid_memory_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "37813c9b9781f3b2dbef3e8e93a6bf7e1b48da38cd9042297763d50dafe0f475",
+  "evidence_id": "EEB-787e388492eb001b",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "fluid_memory_core.py",
+      "fluid_memory_manifest.json",
+      "README.md",
+      "test_fluid_memory.py"
+    ],
+    "functions_mentioned": [
+      "capture_memory_trace",
+      "engine",
+      "Fluid",
+      "Memory",
+      "Engine",
+      "symbolic",
+      "recursion",
+      "memory",
+      "traces",
+      "fluid",
+      "storage",
+      "pool",
+      "for",
+      "resurrection",
+      "reassembly",
+      "phase",
+      "dynamic",
+      "Designed",
+      "drift",
+      "healing",
+      "and",
+      "continuity",
+      "repair"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "import time",
+      "import random",
+      "from fluid_memory_core import capture_memory_trace"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 24.404,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "51f78111b293204f24355f92ee85362779bd6808ee3bfa5aa4788f0a7b9a9437",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo capture and store symbolic recursion memory traces in a dynamic fluid memory pool for potential resurrection, drift healing, and recursion continuity repair.  \n\nLikely System Role:  \nA memory tracing and storage engine designed to record structured metadata (e.g., timestamps, phase signatures, charge levels) for symbolic computation workflows, enabling later reassembly or debugging.  \n\nEvidence Used:  \n- `fluid_memory_core.py`: Implements `capture_memory_trace()` to log traces to a JSONL file.  \n- `fluid_memory_manifest.json`: Describes the engine\u2019s purpose and capabilities.  \n- `README.md`: Outlines the engine\u2019s design goals for memory resurrection and repair.  \n- `test_fluid_memory.py`: Validates trace capture by checking required metadata fields.  \n\nRisks / Uncertainties:  \n- Reliance on random values for `phase_signature` and `charge_level` may introduce inconsistency.  \n- File I/O operations (e.g., appending to `memory_pool.jsonl`) could fail due to permissions or disk errors.  \n- Lack of error handling for malformed JSON writes or missing fields in traces.  \n\nRecommendation Draft:  \nApprove the engine\u2019s core functionality but recommend adding robust error handling for I/O operations, deterministic phase signature generation, and validation for all trace fields to ensure reliability.  \n\nSuggested Nic Action:  \nApprove the review with the noted recommendations for improvement, then proceed to deployment."
+  },
+  "llm_sections": {
+    "evidence_used": "- `fluid_memory_core.py`: Implements `capture_memory_trace()` to log traces to a JSONL file.  \n- `fluid_memory_manifest.json`: Describes the engine\u2019s purpose and capabilities.  \n- `README.md`: Outlines the engine\u2019s design goals for memory resurrection and repair.  \n- `test_fluid_memory.py`: Validates trace capture by checking required metadata fields.",
+    "likely_system_role": "A memory tracing and storage engine designed to record structured metadata (e.g., timestamps, phase signatures, charge levels) for symbolic computation workflows, enabling later reassembly or debugging.",
+    "plain_english_purpose": "To capture and store symbolic recursion memory traces in a dynamic fluid memory pool for potential resurrection, drift healing, and recursion continuity repair.",
+    "recommendation_draft": "Approve the engine\u2019s core functionality but recommend adding robust error handling for I/O operations, deterministic phase signature generation, and validation for all trace fields to ensure reliability.",
+    "risks_uncertainties": "- Reliance on random values for `phase_signature` and `charge_level` may introduce inconsistency.  \n- File I/O operations (e.g., appending to `memory_pool.jsonl`) could fail due to permissions or disk errors.  \n- Lack of error handling for malformed JSON writes or missing fields in traces.",
+    "suggested_nic_action": "Approve the review with the noted recommendations for improvement, then proceed to deployment."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo capture and store symbolic recursion memory traces in a dynamic fluid memory pool for potential resurrection, drift healing, and recursion continuity repair.  \n\nLikely System Role:  \nA memory tracing and storage engine designed to record structured metadata (e.g., timestamps, phase signatures, charge levels) for symbolic computation workflows, enabling later reassembly or debugging.  \n\nEvidence Used:  \n- `fluid_memory_core.py`: Implements `capture_memory_trace()` to log traces to a JSONL file.  \n- `fluid_memory_manifest.json`: Describes the engine\u2019s purpose and capabilities.  \n- `README.md`: Outlines the engine\u2019s design goals for memory resurrection and repair.  \n- `test_fluid_memory.py`: Validates trace capture by checking required metadata fields.  \n\nRisks / Uncertainties:  \n- Reliance on random values for `phase_signature` and `charge_level` may introduce inconsistency.  \n- File I/O operations (e.g., appending to `memory_pool.jsonl`) could fail due to permissions or disk errors.  \n- Lack of error handling for malformed JSON writes or missing fields in traces.  \n\nRecommendation Draft:  \nApprove the engine\u2019s core functionality but recommend adding robust error handling for I/O operations, deterministic phase signature generation, and validation for all trace fields to ensure reliability.  \n\nSuggested Nic Action:  \nApprove the review with the noted recommendations for improvement, then proceed to deployment.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

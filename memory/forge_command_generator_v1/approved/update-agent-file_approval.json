@@ -1,0 +1,6 @@
+{
+  "proposal_id": "20260522_100047_cmd_update_agent_file",
+  "command_name": "update-agent-file",
+  "approved_at": "20260522_100047",
+  "patch_proposal": "/home/nic/forge/proposed_patches/20260522_100047_PATCH_update_agent_file.txt"
+}

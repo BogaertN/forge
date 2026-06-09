@@ -1,0 +1,33 @@
+{
+  "api_mode": "READ_ONLY_FILE_BACKED_CONTRACT_NO_SERVER",
+  "authority": {
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ledger_mutation": false,
+    "network_opened": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "server_started": false,
+    "shell_execution_authority": false
+  },
+  "build_phase_gate_path": "/home/nic/forge/memory/forge_build_phase_gates_v1/latest_forge_build_phase_gate_v1.json",
+  "build_sequence_path": "/home/nic/forge/memory/forge_build_sequence_v1/latest_forge_build_sequence_v1.json",
+  "created_at": "2026-05-19T18:26:40",
+  "dashboard_roadmap_panel_path": "/home/nic/forge/memory/forge_dashboard_roadmap_panel_v1/latest_forge_dashboard_roadmap_panel_v1.json",
+  "endpoints": {
+    "/audit": "Audit-tail continuity status.",
+    "/disposition": "Deferred/excluded engine disposition summary.",
+    "/engines": "Canonical engine lockfile summary and SHA.",
+    "/impact": "Latest patch impact map summary.",
+    "/relationships": "Latest canonical relationship map summary.",
+    "/roadmap": "Current phase and recommended next patch.",
+    "/status": "Complete read-only Forge status snapshot.",
+    "/tests": "Latest canonical safe-test run summary."
+  },
+  "report_type": "FORGE_STATUS_API_ENDPOINTS_V1",
+  "schema_version": "forge_status_api_endpoints_v1_patch147",
+  "snapshot_path": "/home/nic/forge/memory/forge_status_api_v1/2026_05_19_182640_forge_status_api_snapshot_v1.json",
+  "snapshot_sha256": "1080b3838c0ddd88d38479cc6e16126f8abbd5fc1eca9ae636f2c8c2066264b9",
+  "status": "FORGE_STATUS_API_ENDPOINTS_READY"
+}

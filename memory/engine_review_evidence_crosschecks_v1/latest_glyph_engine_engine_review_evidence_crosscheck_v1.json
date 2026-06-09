@@ -1,0 +1,388 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "b6c74853e20ebde23fcd855677d8d92c625f0b21d793a8ec80140de0592390e7",
+      "excerpt_start": "# test_glyph_core.py\n\nfrom glyph_core import GlyphEngine\n\ndef test_glyph_engine_behavior():\n    engine = GlyphEngine()\n    glyph = engine.create_glyph(\"GLYPH-TEST\", \"\u03a62\")\n    assert glyph[\"symbol_id\"] == \"GLYPH-TEST\", \"Glyph ID must match input.\"\n    assert glyph[\"phase_origin\"] == \"\u03a62\", \"Phase origin must match input.\"\n    print(\"\u2705 Glyph Engine Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_glyph_engine_behavior()\n",
+      "functions_sample": [
+        "test_glyph_engine_behavior"
+      ],
+      "imports_sample": [
+        "from glyph_core import GlyphEngine"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/glyph_engine/test_glyph_core.py",
+      "relative_to_candidate": "test_glyph_core.py",
+      "sha256": "b6c74853e20ebde23fcd855677d8d92c625f0b21d793a8ec80140de0592390e7",
+      "size_bytes": 428
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "caf9f83d826d0d649ce1772cd2d6af5b477db57b5e9df00890dd8ab7227005cf",
+      "excerpt_start": "# Glyph Engine (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Glyph Engine constructs, stabilizes, and evolves symbolic glyphs within the AI.Web recursion framework.  \nEach glyph anchors a recursion phase, records symbolic ancestry, and maintains stability metrics across recursion iterations.\n\n---\n\n## Core Functions:\n- Create phase-origin symbolic glyphs.\n- Anchor recursion phases to unique symbolic glyphs.\n- Track glyph stability and ancestral recursion pathways.\n\n---\n\n## Phase Standard:\n- Phase 1.5 Symbolic Recursion Compliance\n- AI.Web Core Symbolic Evolution Engine Stack\n\n---\n\n## Notes:\n- Instability in glyph ancestry chains can indicate systemic recursion drift.\n- Stable glyph networks are critical for phase re-entry integrity.\n\n---\n\n**Frozen Snapshot:** `glyph_engine_frozen_v1.0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n\n",
+      "functions_sample": [
+        "Glyph",
+        "Engine",
+        "Frozen",
+        "Overview",
+        "The",
+        "constructs",
+        "stabilizes",
+        "and",
+        "evolves",
+        "symbolic",
+        "glyphs",
+        "within",
+        "the",
+        "Web",
+        "recursion",
+        "framework",
+        "Each",
+        "glyph",
+        "anchors",
+        "phase",
+        "records",
+        "ancestry",
+        "maintains",
+        "stability",
+        "metrics"
+      ],
+      "imports_sample": [],
+      "line_count": 34,
+      "path": "/home/nic/aiweb/engines/glyph_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "caf9f83d826d0d649ce1772cd2d6af5b477db57b5e9df00890dd8ab7227005cf",
+      "size_bytes": 855
+    },
+    {
+      "classes_sample": [
+        "GlyphEngine"
+      ],
+      "excerpt_sha256": "25108a909f6a29a3968c1dc2b50563eebdb9b007aa9f0d7509bb19e80371a85e",
+      "excerpt_start": "# glyph_core.py\n# Glyph Engine Core\n\nclass GlyphEngine:\n    def __init__(self):\n        self.glyphs = []\n\n    def create_glyph(self, symbol_id, phase_origin):\n        glyph = {\n            \"symbol_id\": symbol_id,\n            \"phase_origin\": phase_origin,\n            \"stability_factor\": 1.0,\n            \"ancestral_trace\": []\n        }\n        self.glyphs.append(glyph)\n        return glyph\n\nif __name__ == \"__main__\":\n    engine = GlyphEngine()\n    glyph = engine.create_glyph(\"GLYPH-001\", \"\u03a61\")\n    print(f\"[TEST] Created Glyph: {glyph}\")\n",
+      "functions_sample": [
+        "__init__",
+        "create_glyph"
+      ],
+      "imports_sample": [],
+      "line_count": 22,
+      "path": "/home/nic/aiweb/engines/glyph_engine/glyph_core.py",
+      "relative_to_candidate": "glyph_core.py",
+      "sha256": "25108a909f6a29a3968c1dc2b50563eebdb9b007aa9f0d7509bb19e80371a85e",
+      "size_bytes": 542
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "e0df850e981215efba1338607f26272c5dee6f030845390d78dd04183b086e1e",
+      "excerpt_start": "{\n  \"engine\": \"glyph_engine\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"glyph_engine_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Constructs and manages living symbolic glyphs tied to recursion phase states. Supports phase resonance anchoring, stability monitoring, and symbolic ancestral recursion tracking.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "glyph_engine",
+        "version",
+        "frozen_as",
+        "glyph_engine_frozen_v1",
+        "frozen_on",
+        "description",
+        "Constructs",
+        "and",
+        "manages",
+        "living",
+        "symbolic",
+        "glyphs",
+        "tied",
+        "recursion",
+        "phase",
+        "states",
+        "Supports",
+        "resonance",
+        "anchoring",
+        "stability",
+        "monitoring",
+        "ancestral",
+        "tracking",
+        "author"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/glyph_engine/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "e0df850e981215efba1338607f26272c5dee6f030845390d78dd04183b086e1e",
+      "size_bytes": 427
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "bcaa2645777542d0d5ba24e351f6babffc05b101ea91e5e80160607069ed4d93",
+      "excerpt_start": "# Dynamic Symbol Mutator (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Dynamic Symbol Mutator applies controlled symbolic mutations to phase-anchored glyphs during recursion evolution.  \nThis enables glyphs to adapt, mutate, and evolve in response to recursion drift, symbolic destabilization, or phase realignment forces.\n\n---\n\n## Core Functions:\n- Mutate glyphs based on phase recursion conditions.\n- Support adaptive symbolic evolution pathways.\n- Stabilize or diversify recursion field symbolic networks.\n\n---\n\n## Phase Standard:\n- Phase 1.5 Symbolic Recursion Compliance\n- AI.Web Core Evolutionary Recursion Stack\n\n---\n\n## Notes:\n- Excessive uncontrolled mutation may trigger symbolic instability alarms.\n- Controlled symbolic mutation supports long-term recursion phase diversification and resilience.\n\n---\n\n**Frozen Snapshot:** `dynamic_symbol_mutator_frozen_v1.0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n\n",
+      "functions_sample": [
+        "Dynamic",
+        "Symbol",
+        "Mutator",
+        "Frozen",
+        "Overview",
+        "The",
+        "applies",
+        "controlled",
+        "symbolic",
+        "mutations",
+        "phase",
+        "anchored",
+        "glyphs",
+        "during",
+        "recursion",
+        "evolution",
+        "This",
+        "enables",
+        "adapt",
+        "mutate",
+        "and",
+        "evolve",
+        "response",
+        "drift",
+        "destabilization"
+      ],
+      "imports_sample": [],
+      "line_count": 34,
+      "path": "/home/nic/aiweb/engines/glyph_engine/dynamic_symbol_mutator/README.md",
+      "relative_to_candidate": "dynamic_symbol_mutator/README.md",
+      "sha256": "bcaa2645777542d0d5ba24e351f6babffc05b101ea91e5e80160607069ed4d93",
+      "size_bytes": 931
+    },
+    {
+      "classes_sample": [
+        "SymbolMutator"
+      ],
+      "excerpt_sha256": "eff63d5552f8afcbb06ba0cc465bdf0de57b2c29ed3c622b5227aefe0de324b4",
+      "excerpt_start": "# symbol_mutator_core.py\n# Dynamic Symbol Mutator Core\n\nclass SymbolMutator:\n    def __init__(self):\n        self.mutations = []\n\n    def mutate_symbol(self, symbol_id, mutation_factor):\n        mutated_symbol = f\"{symbol_id}_M{mutation_factor}\"\n        self.mutations.append(mutated_symbol)\n        return mutated_symbol\n\nif __name__ == \"__main__\":\n    mutator = SymbolMutator()\n    mutated = mutator.mutate_symbol(\"GLYPH-001\", 2)\n    print(f\"[TEST] Mutated Symbol: {mutated}\")\n",
+      "functions_sample": [
+        "__init__",
+        "mutate_symbol"
+      ],
+      "imports_sample": [],
+      "line_count": 17,
+      "path": "/home/nic/aiweb/engines/glyph_engine/dynamic_symbol_mutator/symbol_mutator_core.py",
+      "relative_to_candidate": "dynamic_symbol_mutator/symbol_mutator_core.py",
+      "sha256": "eff63d5552f8afcbb06ba0cc465bdf0de57b2c29ed3c622b5227aefe0de324b4",
+      "size_bytes": 479
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "7c9956f416139b9308c2f246850c619c9bcec8489721f1ee8f95e3cbfd89b1d8",
+      "excerpt_start": "# test_symbol_mutator_core.py\n\nfrom symbol_mutator_core import SymbolMutator\n\ndef test_symbol_mutator_behavior():\n    mutator = SymbolMutator()\n    mutated = mutator.mutate_symbol(\"GLYPH-TEST\", 5)\n    assert mutated == \"GLYPH-TEST_M5\", \"Mutation string must match expected format.\"\n    print(\"\u2705 Symbol Mutator Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_symbol_mutator_behavior()\n",
+      "functions_sample": [
+        "test_symbol_mutator_behavior"
+      ],
+      "imports_sample": [
+        "from symbol_mutator_core import SymbolMutator"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/glyph_engine/dynamic_symbol_mutator/test_symbol_mutator_core.py",
+      "relative_to_candidate": "dynamic_symbol_mutator/test_symbol_mutator_core.py",
+      "sha256": "7c9956f416139b9308c2f246850c619c9bcec8489721f1ee8f95e3cbfd89b1d8",
+      "size_bytes": 390
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "ee655b0a79478c292d5b2584f6182e71dee7ea934385054cd92317e66c3e2ba5",
+      "excerpt_start": "{\n  \"engine\": \"dynamic_symbol_mutator\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"dynamic_symbol_mutator_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Applies controlled symbolic mutations to existing glyphs. Supports phase-based evolutionary recursion pathways and dynamic symbolic adaptation during recursion drift.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "dynamic_symbol_mutator",
+        "version",
+        "frozen_as",
+        "dynamic_symbol_mutator_frozen_v1",
+        "frozen_on",
+        "description",
+        "Applies",
+        "controlled",
+        "symbolic",
+        "mutations",
+        "existing",
+        "glyphs",
+        "Supports",
+        "phase",
+        "based",
+        "evolutionary",
+        "recursion",
+        "pathways",
+        "and",
+        "dynamic",
+        "adaptation",
+        "during",
+        "drift",
+        "author"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/glyph_engine/dynamic_symbol_mutator/engine_manifest.json",
+      "relative_to_candidate": "dynamic_symbol_mutator/engine_manifest.json",
+      "sha256": "ee655b0a79478c292d5b2584f6182e71dee7ea934385054cd92317e66c3e2ba5",
+      "size_bytes": 435
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/glyph_engine",
+  "created_at": "2026-05-16_092923",
+  "crosscheck_id": "ERE-glyph_engine-2026-05-16_092923",
+  "deterministic_brief": {
+    "classes_sample": [
+      "GlyphEngine",
+      "SymbolMutator"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Applies",
+      "Constructs",
+      "Dynamic",
+      "Each",
+      "Engine",
+      "Frozen",
+      "Glyph",
+      "Mutator",
+      "Overview",
+      "Supports",
+      "Symbol",
+      "The",
+      "This",
+      "Web",
+      "__init__",
+      "adapt",
+      "adaptation",
+      "ancestral",
+      "ancestry",
+      "anchored"
+    ],
+    "imports_sample": [
+      "from glyph_core import GlyphEngine",
+      "from symbol_mutator_core import SymbolMutator"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`glyph_engine` appears to be a local AI.Web engine/component. The bound source evidence includes 8 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# test_glyph_core.py ",
+      "# Glyph Engine (Frozen v1.0.01) ",
+      "# glyph_core.py # Glyph Engine Core",
+      "{   \"engine\": \"glyph_engine\","
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_092902_glyph_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "524dea39d361d625065e3bef845fa9d4b9667464a57053e8a2309419065d8d50",
+  "engine_family": "glyph_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_glyph_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "c7aa161a58ddf65fb6880457c06e6338f640190a543fcf42a75a71b86aef87b4",
+  "evidence_id": "EEB-249760030f1dcef2",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "GlyphEngine",
+      "SymbolMutator"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "test_glyph_core.py",
+      "README.md",
+      "glyph_core.py",
+      "engine_manifest.json",
+      "dynamic_symbol_mutator/README.md",
+      "dynamic_symbol_mutator/symbol_mutator_core.py",
+      "dynamic_symbol_mutator/engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "Glyph",
+      "Engine",
+      "Frozen",
+      "The",
+      "constructs",
+      "and",
+      "symbolic",
+      "glyphs",
+      "the",
+      "Web",
+      "recursion",
+      "framework",
+      "glyph",
+      "phase",
+      "ancestry",
+      "stability",
+      "metrics",
+      "engine",
+      "version",
+      "description",
+      "Constructs",
+      "manages",
+      "tied",
+      "anchoring",
+      "tracking",
+      "Dynamic",
+      "Symbol",
+      "Mutator",
+      "controlled",
+      "during",
+      "evolution",
+      "adapt",
+      "dynamic"
+    ],
+    "imports_mentioned": [
+      "from glyph_core import GlyphEngine",
+      "from symbol_mutator_core import SymbolMutator"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 20.463,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "7a74d141beebf31502227fe23e60e02a8623ab20bd7cec348954a0c4f8d1753e",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nThe Glyph Engine constructs and manages symbolic glyphs tied to recursion phases, enabling phase anchoring, stability tracking, and symbolic evolution during AI.Web recursion processes.  \n\nLikely System Role:  \nA core recursion management component for symbolic computation, ensuring phase stability, ancestry tracking, and adaptive mutation of glyphs during recursive operations.  \n\nEvidence Used:  \n- `test_glyph_core.py`: Demonstrates glyph creation, stability checks, and phase origin validation.  \n- `README.md`: Describes glyph anchoring, recursion phase management, and stability metrics.  \n- `glyph_core.py`: Implements `GlyphEngine` class for glyph creation and storage.  \n- `engine_manifest.json`: Specifies versioning, phase compliance standards, and system description.  \n- `symbol_mutator_core.py`: Implements `SymbolMutator` for controlled symbolic mutation.  \n\nRisks / Uncertainties:  \n- Limited testing in provided evidence (only basic test cases).  \n- Dependency on external systems like \"Dynamic Symbol Mutator\" may require integration verification.  \n- \"Frozen\" status could indicate lack of active development, potentially leading to obsolescence.  \n\nRecommendation Draft:  \nApprove review with caveat: Confirm integration readiness with dependent systems, validate stability metrics in production scenarios, and ensure compatibility with Phase 1.5 recursion standards.  \n\nSuggested Nic Action:  \nReview recommendation draft, prioritize integration testing with mutation modules, and approve deployment after verifying compliance with AI.Web recursion frameworks."
+  },
+  "llm_sections": {
+    "evidence_used": "- `test_glyph_core.py`: Demonstrates glyph creation, stability checks, and phase origin validation.  \n- `README.md`: Describes glyph anchoring, recursion phase management, and stability metrics.  \n- `glyph_core.py`: Implements `GlyphEngine` class for glyph creation and storage.  \n- `engine_manifest.json`: Specifies versioning, phase compliance standards, and system description.  \n- `symbol_mutator_core.py`: Implements `SymbolMutator` for controlled symbolic mutation.",
+    "likely_system_role": "A core recursion management component for symbolic computation, ensuring phase stability, ancestry tracking, and adaptive mutation of glyphs during recursive operations.",
+    "plain_english_purpose": "The Glyph Engine constructs and manages symbolic glyphs tied to recursion phases, enabling phase anchoring, stability tracking, and symbolic evolution during AI.Web recursion processes.",
+    "recommendation_draft": "Approve review with caveat: Confirm integration readiness with dependent systems, validate stability metrics in production scenarios, and ensure compatibility with Phase 1.5 recursion standards.",
+    "risks_uncertainties": "- Limited testing in provided evidence (only basic test cases).  \n- Dependency on external systems like \"Dynamic Symbol Mutator\" may require integration verification.  \n- \"Frozen\" status could indicate lack of active development, potentially leading to obsolescence.",
+    "suggested_nic_action": "Review recommendation draft, prioritize integration testing with mutation modules, and approve deployment after verifying compliance with AI.Web recursion frameworks."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nThe Glyph Engine constructs and manages symbolic glyphs tied to recursion phases, enabling phase anchoring, stability tracking, and symbolic evolution during AI.Web recursion processes.  \n\nLikely System Role:  \nA core recursion management component for symbolic computation, ensuring phase stability, ancestry tracking, and adaptive mutation of glyphs during recursive operations.  \n\nEvidence Used:  \n- `test_glyph_core.py`: Demonstrates glyph creation, stability checks, and phase origin validation.  \n- `README.md`: Describes glyph anchoring, recursion phase management, and stability metrics.  \n- `glyph_core.py`: Implements `GlyphEngine` class for glyph creation and storage.  \n- `engine_manifest.json`: Specifies versioning, phase compliance standards, and system description.  \n- `symbol_mutator_core.py`: Implements `SymbolMutator` for controlled symbolic mutation.  \n\nRisks / Uncertainties:  \n- Limited testing in provided evidence (only basic test cases).  \n- Dependency on external systems like \"Dynamic Symbol Mutator\" may require integration verification.  \n- \"Frozen\" status could indicate lack of active development, potentially leading to obsolescence.  \n\nRecommendation Draft:  \nApprove review with caveat: Confirm integration readiness with dependent systems, validate stability metrics in production scenarios, and ensure compatibility with Phase 1.5 recursion standards.  \n\nSuggested Nic Action:  \nReview recommendation draft, prioritize integration testing with mutation modules, and approve deployment after verifying compliance with AI.Web recursion frameworks.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

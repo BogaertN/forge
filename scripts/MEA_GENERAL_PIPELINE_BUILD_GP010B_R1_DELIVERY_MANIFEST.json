@@ -1,0 +1,11 @@
+{
+  "baseline": "GP-009 live sealed; GP-010A audited wheelhouse",
+  "build_id": "GENERAL-PIPELINE-AUDITED-TOOL-ACTIVATION-INTEGRATION-BUILD-GP-010B-R1",
+  "contribution_economy_write": false,
+  "ct_mint": false,
+  "identity_vault_write": false,
+  "ledger_write": false,
+  "new_domain": false,
+  "persistent_state_write": false,
+  "purpose": "Install and bind audited Lark/SymPy/Hypothesis tools through existing governed pipeline socket"
+}

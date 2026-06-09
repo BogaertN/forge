@@ -1,0 +1,5 @@
+# FORGE_ROADMAP_STATUS_V1
+
+- **status**: `FORGE_ROADMAP_STATUS_READY`
+- **sandbox_status**: `GENERIC_REPAIR_SANDBOX_TESTS_ISSUES`
+- **llm_recommendation**: `REVISE_CANDIDATE`

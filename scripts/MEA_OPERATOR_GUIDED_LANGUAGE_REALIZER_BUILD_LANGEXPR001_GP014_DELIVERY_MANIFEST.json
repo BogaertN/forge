@@ -1,0 +1,49 @@
+{
+  "actual_echo_delivery_required": true,
+  "adds_route_or_ui": false,
+  "authority_baseline": "nlmath001_gp013_install_results_20260531_230019_UTC.tar.gz",
+  "build_id": "LANG-EXPR-001-GP-014-RMC-OPERATOR-GUIDED-GENERATIVE-LANGUAGE-REALIZER",
+  "calls_llm": false,
+  "candidate_scores_are_computed_not_lexicon_awarded": true,
+  "corpus_ingestion_added": false,
+  "delivery_authority_added": false,
+  "meaning_locked_before_phrase_selection": true,
+  "measured_candidate_features": [
+    "locked_atom_retention",
+    "clause_tree_structure_delta",
+    "meaning_semantic_distance",
+    "lexical_diversity",
+    "normalized_shannon_entropy",
+    "repetition_penalty",
+    "phase_transition_metrics",
+    "drift_severity_D_score",
+    "symbolic_epsilon_s"
+  ],
+  "mints_ct": false,
+  "modified_existing_files": [
+    "rmc_engine_v1/general_pipeline/__init__.py",
+    "rmc_engine_v1/general_pipeline/symbolic_math_rmc_delivery.py",
+    "rmc_engine_v1/general_pipeline/symbolic_math_language_vertical_slice.py"
+  ],
+  "new_files": [
+    "rmc_engine_v1/general_pipeline/symbolic_math_operator_language_realizer.py",
+    "rmc_engine_v1/general_pipeline/gp014_operator_guided_language_realizer.py",
+    "rmc_engine_v1/reference/symbolic_math_expression_lexicon_v1_gp014.json",
+    "scripts/test_operator_guided_language_realizer_build_langexpr001_gp014.py",
+    "scripts/operator_guided_language_realizer_build_langexpr001_gp014_verify.py",
+    "scripts/README_operator_guided_language_realizer_build_langexpr001_gp014.md",
+    "scripts/MEA_OPERATOR_GUIDED_LANGUAGE_REALIZER_BUILD_LANGEXPR001_GP014_DELIVERY_MANIFEST.json"
+  ],
+  "operator_guidance": "read_only_fbsc_crosswalk_plus_installed_measurement_kernel_candidate_evaluation",
+  "phase_externalization_sequence": [
+    "Φ6",
+    "Φ7",
+    "Φ8"
+  ],
+  "purpose": "Upgrade verified mathematical language realization from fixed phrase formatting to bounded operator-guided candidate generation without changing truth or delivery authority.",
+  "schema_version": "mea_operator_guided_language_realizer_delivery_manifest_v1_gp014",
+  "writes_contribution_economy": false,
+  "writes_identity_vault": false,
+  "writes_ledgers": false,
+  "writes_memory": false
+}

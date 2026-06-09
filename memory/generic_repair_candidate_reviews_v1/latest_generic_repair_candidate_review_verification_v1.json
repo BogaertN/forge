@@ -1,0 +1,21 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "candidate_verification_status": "GENERIC_REPAIR_CANDIDATE_VERIFIED_READY_FOR_SANDBOX",
+  "created_at": "2026-05-17T10:37:47",
+  "next_commands": [
+    "generic-repair-review-export",
+    "Install Patch 137 only if verification is ready"
+  ],
+  "problems": [],
+  "recommended_next_patch": "Patch 137 \u2014 Generic Repair Sandbox Candidate",
+  "report_type": "GENERIC_REPAIR_CANDIDATE_REVIEW_VERIFICATION_V1",
+  "review_recommendation": "APPROVE_CANDIDATE",
+  "schema_version": "generic_repair_candidate_review_verification_v1_patch136L",
+  "status": "GENERIC_REPAIR_CANDIDATE_LLM_REVIEW_VERIFIED_READY_FOR_SANDBOX",
+  "target": "stack_linker_breather",
+  "target_file": "/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py"
+}

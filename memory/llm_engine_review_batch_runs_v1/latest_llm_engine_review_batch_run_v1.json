@@ -1,0 +1,67 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_inference_authority": true,
+    "mode": "LLM_ENGINE_REVIEW_BATCH_DRAFT_RUNNER_NO_CANONICAL_AUTHORITY",
+    "patch": "101",
+    "project_file_write_authority": false,
+    "quarantine_authority": false,
+    "rule": "Patch 101 runs small, explicit LLM review draft batches from existing evidence binders. It does not approve engines, mutate ledgers, or write project files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/llm_engine_review_drafts_v1",
+      "/home/nic/forge/memory/llm_engine_review_batch_runs_v1"
+    ]
+  },
+  "blockers": [],
+  "counts": {
+    "drafted": 3,
+    "errors": 0,
+    "ready_remaining_after_run": 79,
+    "selected": 3
+  },
+  "created_at": "2026-05-15_124949",
+  "drafted_rows": [
+    {
+      "draft_id": "LER-activity_log-2026-05-15_124949",
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_124949_activity_log_llm_engine_review_draft_v1.json",
+      "draft_sha256": "882b2ebac591e0a2dfa2d9e0966d2719c693b176247c451c1e6bba28a8b53016",
+      "engine_family": "activity_log",
+      "evidence_id": "EEB-929b125c673bef05",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+      "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY"
+    },
+    {
+      "draft_id": "LER-admin_override_console-2026-05-15_124956",
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_124956_admin_override_console_llm_engine_review_draft_v1.json",
+      "draft_sha256": "865d3eb4b7b2c6df18e9bcc4b973b8b7dcf3f4c39a99d323a00209342c8cacde",
+      "engine_family": "admin_override_console",
+      "evidence_id": "EEB-7e1e67cf08853d05",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+      "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY"
+    },
+    {
+      "draft_id": "LER-agent_reflection_engine-2026-05-15_125009",
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_125009_agent_reflection_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "46e9fd044047ce1b2a840f9557479c025710e62e9957ba871c7a00e50869b0a4",
+      "engine_family": "agent_reflection_engine",
+      "evidence_id": "EEB-efe9b78ceabc9853",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+      "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY"
+    }
+  ],
+  "next_step": "Run llm-engine-review-batch-run-show latest, then engine-review-queue-build when enough drafts exist.",
+  "report_type": "LLM_ENGINE_REVIEW_BATCH_RUN_RECEIPT_V1_PATCH101",
+  "requested_limit": 3,
+  "schema_version": "llm_engine_review_batch_run_v1_patch101",
+  "status": "LLM_ENGINE_REVIEW_BATCH_RUN_COMPLETED_NO_CANONICAL_AUTHORITY",
+  "warnings": []
+}

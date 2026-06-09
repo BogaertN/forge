@@ -1,0 +1,17 @@
+Thinking...
+Okay, let's tackle this. So, the user is asking me to review a sandbox test result for a candidate called stack_linker_breather. The sandbox status is GENERIC_REVISION_SANDBOX_TESTS_PASS, which means the tests passed. There's no live import leak detected, and both compile and test return codes are 0. That's a good sign.
+
+Looking at the candidate diff preview, they're importing some modules and defining functions for breathing phases. The test stdout shows various phases with timestamps and amplitudes, ending with a checkmark indicating the test started successfully. The stderr tail is empty, so no errors there. 
+
+The dependency actions show that the required modules were installed correctly. The core_breather is copied as a package, and recursive_field_breather is a package directory. The install results have the correct paths. 
+
+Now, the question is whether to approve the sandbox result or require revisions. Since the tests passed and there are no errors in the output, it seems like everything is working as expected. The functions are defined and called correctly, and the test output shows the phases progressing without issues. 
+
+I should check if there's any missing information or potential issues. The test output mentions "✅ Unified Breather Test Starting..." which suggests the test is running and completing. The timestamps are in order, and each phase is being processed. No exceptions or errors are reported. 
+
+Since all the hard rules are followed—no live writes asked, no broad rewrites proposed—and the sandbox tests passed without issues, the recommendation should be to approve the sandbox result. There's no indication that the candidate needs revision or that the sandbox dependency plan is faulty. Everything seems to be in order.
+...done thinking.
+
+The sandbox tests passed without errors, dependencies are correctly resolved, and the candidate's functionality aligns with expected output. No revisions are needed.  
+RECOMMENDATION: APPROVE_SANDBOX_RESULT
+

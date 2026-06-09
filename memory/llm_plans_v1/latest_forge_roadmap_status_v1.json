@@ -1,0 +1,28 @@
+{
+  "schema_version": "forge_roadmap_status_v1_patch119",
+  "report_type": "FORGE_ROADMAP_STATUS_V1",
+  "created_at": "2026-05-16T23:57:30",
+  "status": "ROADMAP_STATUS_READY",
+  "current_milestone": "LLM planning packet schema installed",
+  "completed": [
+    "Final canonical engine lockfile",
+    "Deferred/excluded engine disposition report",
+    "Forge master status report",
+    "LLM planning packet schema/template"
+  ],
+  "next_patch_sequence": [
+    "Patch 120 — Forge Self-Update Proposal Gate",
+    "Patch 121 — Forge Self-Snapshot Gate",
+    "Patch 122 — Forge Self-Update Sandbox",
+    "Patch 123 — Canonical Engine Test Inventory",
+    "Patch 124 — Canonical Engine Safe Test Runner",
+    "Patch 125 — Canonical Engine Relationship Map",
+    "Patch 126 — Patch Impact Map"
+  ],
+  "authority": {
+    "read_only": true,
+    "engine_file_write_authority": false,
+    "ledger_mutation": false,
+    "patch_apply_authority": false
+  }
+}

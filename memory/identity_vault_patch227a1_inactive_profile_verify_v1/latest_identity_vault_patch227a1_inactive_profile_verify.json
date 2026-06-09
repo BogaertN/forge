@@ -1,0 +1,234 @@
+{
+  "agent_profiles": {
+    "athena.local": {
+      "activation_state": "inactive_draft",
+      "agent_id": "athena.local",
+      "canonical_name": "Athena",
+      "exists": true,
+      "hash_ok": true,
+      "is_active": 0,
+      "issues": [],
+      "last_validated_at_present": true,
+      "ok": true,
+      "operational_json_ok": true,
+      "payload_rmc_namespace": "rmc/agents/athena.local",
+      "profile_hash_present": true,
+      "profile_schema_version": "1.0.0-blueprint",
+      "required_missing": [],
+      "rmc_namespace": "rmc/agents/athena.local",
+      "rmc_pointer_only": true,
+      "role": "Governance / Strategy / Investor-Facing Analysis Agent",
+      "version": "1.0.0-blueprint-draft"
+    },
+    "gilligan.local": {
+      "activation_state": "inactive_draft",
+      "agent_id": "gilligan.local",
+      "canonical_name": "Gilligan",
+      "exists": true,
+      "hash_ok": true,
+      "is_active": 0,
+      "issues": [],
+      "last_validated_at_present": true,
+      "ok": true,
+      "operational_json_ok": true,
+      "payload_rmc_namespace": "rmc/agents/gilligan.local",
+      "profile_hash_present": true,
+      "profile_schema_version": "1.0.0-blueprint",
+      "required_missing": [],
+      "rmc_namespace": "rmc/agents/gilligan.local",
+      "rmc_pointer_only": true,
+      "role": "Recursive Mirror / Forge-Governed Development Co-Pilot",
+      "version": "1.0.0-blueprint-draft"
+    },
+    "neo.local": {
+      "activation_state": "inactive_draft",
+      "agent_id": "neo.local",
+      "canonical_name": "Neo",
+      "exists": true,
+      "hash_ok": true,
+      "is_active": 0,
+      "issues": [],
+      "last_validated_at_present": true,
+      "ok": true,
+      "operational_json_ok": true,
+      "payload_rmc_namespace": "rmc/agents/neo.local",
+      "profile_hash_present": true,
+      "profile_schema_version": "1.0.0-blueprint",
+      "required_missing": [],
+      "rmc_namespace": "rmc/agents/neo.local",
+      "rmc_pointer_only": true,
+      "role": "Public / Frontline Assistant Identity",
+      "version": "1.0.0-blueprint-draft"
+    }
+  },
+  "boundary": "read-only verification; reports only under Forge memory",
+  "canonical": {
+    "agent_columns": [
+      "id",
+      "agent_id",
+      "canonical_name",
+      "role",
+      "capabilities",
+      "limits",
+      "enforcement",
+      "created_at",
+      "updated_at",
+      "version",
+      "is_active",
+      "operational_profile_json",
+      "profile_schema_version",
+      "rmc_namespace",
+      "activation_state",
+      "profile_hash",
+      "last_validated_at"
+    ],
+    "agent_columns_ok": true,
+    "exists": true,
+    "ok": true,
+    "opened_readonly": true,
+    "path": "/home/nic/identity-vault/data/identity_vault.db",
+    "row_counts": {
+      "agent_profiles": 3,
+      "audit_logs": 0,
+      "feedback_logs": 0,
+      "session_state": 0,
+      "sqlite_sequence": 2,
+      "user_profiles": 1
+    },
+    "tables": [
+      "agent_profiles",
+      "audit_logs",
+      "feedback_logs",
+      "session_state",
+      "sqlite_sequence",
+      "user_profiles"
+    ],
+    "user_columns": [
+      "id",
+      "user_id",
+      "canonical_name",
+      "interaction_preferences",
+      "meta_rules",
+      "session_defaults",
+      "drift_tracking",
+      "created_at",
+      "updated_at",
+      "version",
+      "is_active",
+      "operational_profile_json",
+      "profile_schema_version",
+      "profile_hash",
+      "last_validated_at"
+    ],
+    "user_columns_ok": true
+  },
+  "findings": [
+    {
+      "code": "IV_CANONICAL_DB_READONLY_OK",
+      "level": "INFO",
+      "message": "Canonical Identity Vault database opened read-only."
+    },
+    {
+      "code": "IV_TEMPLATES_VALID",
+      "level": "INFO",
+      "message": "User and agent templates remain valid JSON."
+    },
+    {
+      "code": "IV_INACTIVE_DRAFT_PROFILES_VERIFIED",
+      "level": "INFO",
+      "message": "Nic, Gilligan, Athena, and Neo profiles exist and validate as inactive draft records."
+    },
+    {
+      "code": "IV_RMC_POINTERS_ONLY",
+      "level": "INFO",
+      "message": "Agent RMC namespace fields are pointer-only strings."
+    },
+    {
+      "code": "IV_NO_RMC_NAMESPACE_DIRS_FOUND",
+      "level": "INFO",
+      "message": "No matching RMC namespace folders were found at checked roots; scaffolding remains a later phase."
+    },
+    {
+      "code": "IV_NO_MUTATION_VERIFIED",
+      "level": "INFO",
+      "message": "Verification did not mutate templates, DBs, .env metadata, RMC memory, or Forge registry."
+    }
+  ],
+  "legacy": {
+    "exists": true,
+    "ok": true,
+    "opened_readonly": true,
+    "path": "/home/nic/identity-vault/vault.db",
+    "row_counts": {
+      "feedback_logs": 0,
+      "profiles": 1,
+      "session_state": 1,
+      "sqlite_sequence": 0
+    },
+    "tables": [
+      "feedback_logs",
+      "profiles",
+      "session_state",
+      "sqlite_sequence"
+    ]
+  },
+  "rmc_namespace_path_hits": {
+    "athena.local": [],
+    "gilligan.local": [],
+    "neo.local": []
+  },
+  "safety": {
+    "agent_identity_activation_performed": false,
+    "agent_template_sha_unchanged": true,
+    "canonical_db_sha_unchanged": true,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "forge_tool_registry_modified": false,
+    "identity_vault_database_write_performed": false,
+    "identity_vault_template_write_performed": false,
+    "legacy_db_sha_unchanged": true,
+    "profiles_created": false,
+    "rmc_memory_write_performed": false,
+    "tool_registry_sha_unchanged": true,
+    "user_template_sha_unchanged": true
+  },
+  "templates": {
+    "agent": {
+      "error": null,
+      "exists": true,
+      "expected_type_ok": true,
+      "inactive_defaults_ok": true,
+      "json_ok": true,
+      "path": "/home/nic/identity-vault/templates/agent-template.json",
+      "sha16": "2449b3a0f0c190bb",
+      "template_type": "agent_operational_identity_template"
+    },
+    "user": {
+      "error": null,
+      "exists": true,
+      "expected_type_ok": true,
+      "inactive_defaults_ok": true,
+      "json_ok": true,
+      "path": "/home/nic/identity-vault/templates/user-template.json",
+      "sha16": "e02dd7a6f0d5b26d",
+      "template_type": "user_operational_identity_template"
+    }
+  },
+  "timestamp": "20260523_221802_UTC",
+  "user_profile": {
+    "canonical_name": "Nic Bogaert",
+    "exists": true,
+    "hash_ok": true,
+    "is_active": 0,
+    "issues": [],
+    "last_validated_at_present": true,
+    "ok": true,
+    "operational_json_ok": true,
+    "profile_hash_present": true,
+    "profile_schema_version": "1.0.0-blueprint",
+    "required_missing": [],
+    "user_id": "nic_bogaert",
+    "version": "1.0.0-blueprint-draft"
+  },
+  "verdict": "PASS"
+}

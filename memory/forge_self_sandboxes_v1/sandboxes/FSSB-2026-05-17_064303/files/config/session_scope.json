@@ -1,0 +1,8 @@
+{
+  "_comment": "Per-session path restriction. Written at session start.",
+  "session_id": "forge_2026_05_17_063546",
+  "started_at": "2026-05-17T06:35:46",
+  "paths": [
+    "/home/nic/aiweb"
+  ]
+}

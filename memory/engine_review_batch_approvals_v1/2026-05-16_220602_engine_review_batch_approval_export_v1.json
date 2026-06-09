@@ -1,0 +1,345 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_BATCH_APPROVAL_HELPER",
+    "patch": "106",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "rule": "Patch 106 may record Patch99-compatible queue decisions for explicitly named engines, but only after Patch102 evidence cross-check readiness. It never commits ledger changes.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_batch_approvals_v1"
+  },
+  "counts": {
+    "receipts": 18
+  },
+  "created_at": "2026-05-16_220602",
+  "receipts": [
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 1,
+        "refused_or_error": 0,
+        "requested": 1,
+        "warnings": 1
+      },
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "engines": [
+        "agent_reflection_engine"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-15_142116_engine_review_batch_approval_v1.json",
+      "sha256": "e70f5b604bbc7f8ec71dbd8ee9a78e3769ac4cd5e82a22fa373c7a9baea81efa",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 1,
+        "refused_or_error": 0,
+        "requested": 1,
+        "warnings": 1
+      },
+      "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+      "engines": [
+        "agents_stack"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-15_145924_engine_review_batch_approval_v1.json",
+      "sha256": "1259c4a4345a78b45a7b1432c9d9c3e6051d023584167703c26e68b30c411013",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 1,
+        "refused_or_error": 0,
+        "requested": 1,
+        "warnings": 1
+      },
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "engines": [
+        "ascii_interpreter_engine"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_074606_engine_review_batch_approval_v1.json",
+      "sha256": "5a258c0a2289fc2c3d6044c68a3424a35844224c75b1deee16d6aa7f7d4fbc08",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 2,
+        "refused_or_error": 0,
+        "requested": 2,
+        "warnings": 2
+      },
+      "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+      "engines": [
+        "aiweb_os",
+        "aiweb_os_engine"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_083213_engine_review_batch_approval_v1.json",
+      "sha256": "9dbc8726d666b86638282bf57e0ffba722797de0a0ce83b8eeff954860f4f8ce",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 6,
+        "refused_or_error": 0,
+        "requested": 6,
+        "warnings": 6
+      },
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "engines": [
+        "christping_validator_engine",
+        "cold_archive_engine",
+        "collapse_prevention_engine",
+        "compute_contribution_engine",
+        "confusion_checker",
+        "contribution_dashboard_engine"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_083216_engine_review_batch_approval_v1.json",
+      "sha256": "2950200cbcb170bbf99c6dfcd9d282ba24d9ff7256f97e2b02442f8cc69982e5",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 2,
+        "refused_or_error": 0,
+        "requested": 2,
+        "warnings": 2
+      },
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "engines": [
+        "athena",
+        "athena_engine"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_083232_engine_review_batch_approval_v1.json",
+      "sha256": "7323e29884f926827fcc5252f167dd8f249ab8a1e219ed470b8e34ef7fc3a252",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 5,
+        "refused_or_error": 0,
+        "requested": 5,
+        "warnings": 5
+      },
+      "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+      "engines": [
+        "contribution_ledger_stack",
+        "control_stack",
+        "core_stack_breather",
+        "core_system_stack",
+        "dream_state_engine"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_090413_engine_review_batch_approval_v1.json",
+      "sha256": "4cc2c3abdcfb3b178e10e31a6719533ddc91147bdcc71f0298d79dad6dcfb479",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 5,
+        "refused_or_error": 0,
+        "requested": 5,
+        "warnings": 5
+      },
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "engines": [
+        "control_panel_ui_engine",
+        "document_output_formatter",
+        "drift_analyzer_tool",
+        "drift_arbitration_engine",
+        "drift_signature_logger"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_090418_engine_review_batch_approval_v1.json",
+      "sha256": "ce2acd43e07637852b02da089622048b37b2410d9e1c66bed32ff11cf676c7c4",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 5,
+        "refused_or_error": 0,
+        "requested": 5,
+        "warnings": 5
+      },
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "engines": [
+        "echo_trace_visualizer",
+        "entropy_monitor_engine",
+        "field_resonance_mapper",
+        "glyph_engine",
+        "glyph_ui_overlay"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_094528_engine_review_batch_approval_v1.json",
+      "sha256": "f77b79647e554814a051113c0b4f469baf2451796a45ca99e3aecddbc9ba9eed",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 4,
+        "refused_or_error": 0,
+        "requested": 4,
+        "warnings": 4
+      },
+      "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+      "engines": [
+        "external_feed_listener",
+        "fluid_memory_engine",
+        "gilligan",
+        "gilligan_drift_correction_upgrade"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_094533_engine_review_batch_approval_v1.json",
+      "sha256": "d00dfe743f7bc781131891d32edaaa73cc99f4e8b6af220d798d6179f919007b",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 5,
+        "refused_or_error": 0,
+        "requested": 5,
+        "warnings": 5
+      },
+      "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+      "engines": [
+        "goal_injection_engine",
+        "memory_stack_stack",
+        "naming_engine",
+        "neo",
+        "neo_engine"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_100022_engine_review_batch_approval_v1.json",
+      "sha256": "70ae2bb047ae88d98fdfa8bce80bcb925a6047c2ee8c844f58d8bb1e1aac783b",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 1,
+        "refused_or_error": 0,
+        "requested": 1,
+        "warnings": 1
+      },
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "engines": [
+        "install_onboarding_engine"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_192507_engine_review_batch_approval_v1.json",
+      "sha256": "b606be27d1b51660702a9d80873593442db8ebad70d581a8fb4f3cdd47877ed1",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 4,
+        "refused_or_error": 0,
+        "requested": 4,
+        "warnings": 4
+      },
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "engines": [
+        "peer_communication_engine",
+        "project_brain",
+        "project_memory",
+        "protoforge"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_193958_engine_review_batch_approval_v1.json",
+      "sha256": "d52131836f6e6a1c100a098b270d77b52a7eb988a87fea9bbb27078c22307010",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 2,
+        "refused_or_error": 0,
+        "requested": 2,
+        "warnings": 2
+      },
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "engines": [
+        "recursion_mapper",
+        "recursive_field_breather"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_195645_engine_review_batch_approval_v1.json",
+      "sha256": "255ec477de068d9b568783900518d6bcd35783032e3367cef5df445d8f6a49a6",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 2,
+        "refused_or_error": 0,
+        "requested": 2,
+        "warnings": 2
+      },
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "engines": [
+        "recursive_field_engine",
+        "recursive_field_stack"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_201735_engine_review_batch_approval_v1.json",
+      "sha256": "6bdce9229a056018d496fe9f8282ce190916b2508f870ec10abf42710e834faf",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 1,
+        "refused_or_error": 0,
+        "requested": 1,
+        "warnings": 0
+      },
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "engines": [
+        "recursive_verification_engine"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_213850_engine_review_batch_approval_v1.json",
+      "sha256": "75787e364447f2bcf99814ed73af599ab769f4012b2e04e69ea1bce29e3237e4",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 1,
+        "refused_or_error": 0,
+        "requested": 1,
+        "warnings": 1
+      },
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "engines": [
+        "resonance_display"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_215337_engine_review_batch_approval_v1.json",
+      "sha256": "4b65be02cf0b0db5c3eb848d14ee554204721352a2ef121e7ffb2ed1eda95b5a",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    },
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 1,
+        "refused_or_error": 0,
+        "requested": 1,
+        "warnings": 1
+      },
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "engines": [
+        "resonance_visualizer_engine"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_220558_engine_review_batch_approval_v1.json",
+      "sha256": "a0614b2229954306de7bc4c396568ba738cb64fe81181031aada383c5a9cc87c",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    }
+  ],
+  "report_type": "ENGINE_REVIEW_BATCH_APPROVAL_EXPORT_V1_PATCH106",
+  "schema_version": "engine_review_batch_approval_v1_patch106"
+}

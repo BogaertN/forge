@@ -1,0 +1,12 @@
+test_accepts_faithful_language (__main__.TestEchoGate.test_accepts_faithful_language) ... ok
+test_blocked_manifest_accepts_blocked_output (__main__.TestEchoGate.test_blocked_manifest_accepts_blocked_output) ... ok
+test_blocked_manifest_requires_blocked_output (__main__.TestEchoGate.test_blocked_manifest_requires_blocked_output) ... ok
+test_glyph_validation_checks_phase (__main__.TestEchoGate.test_glyph_validation_checks_phase) ... ok
+test_packet_validation (__main__.TestEchoGate.test_packet_validation) ... ok
+test_rejects_missing_manifest_fields (__main__.TestEchoGate.test_rejects_missing_manifest_fields) ... ok
+test_warn_drift_must_be_visible (__main__.TestEchoGate.test_warn_drift_must_be_visible) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.000s
+
+OK

@@ -1,0 +1,40 @@
+{
+  "authority": {
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ledger_mutation_authority": false,
+    "model_generation_called": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "requires_human_approval_before_any_future_write": true,
+    "subprocess_shell_false": true,
+    "writes_forge_memory_only": true
+  },
+  "created_at": "2026-05-17T09:29:26",
+  "duration_seconds": 85.6,
+  "model": "qwen3:8b",
+  "model_generation_called": true,
+  "next_commands": [
+    "generic-repair-show llm",
+    "patch-live-readiness latest",
+    "generic-repair-export"
+  ],
+  "plain_english": "Local LLM generated a generic repair proposal from Forge-compiled evidence. This report does not apply or write the repair.",
+  "preview": "Thinking...\nOkay, let's try to figure out what the user is asking here. They provided a JSON object that seems to be part of some system, maybe related to document ingestion or processing. The main elements here are about receipts, chunks, embeddings, and some engine names like \"ProtoForge\" and \"stack_linker_breather\". \n\nFirst, I need to understand the context. The JSON includes information about ingestion receipts, which are probably records of how documents were processed into chunks. There's mention of a chroma DB path, which is a vector database, so this might be part of a system that uses embeddings for similarity searches. The \"stack_linker_breather\" could be a component or a project name within this system.\n\nLooking at the \"source\" field in the JSON, there's a mention of \"stack_linker_breather\" as the target. The user might be asking about this target, or perhaps they want to know how to handle the data in the JSON, or maybe they need help interpreting the structure. Since the user hasn't asked a direct question, but provided this data, maybe they want an explanation of what this JSON represents or how to use it.\n\nAnother angle is that the user might be encountering an issue with the system described in the JSON. For example, there's a mention of \"engine\" in the receipts, like \"engineering_standard\" authority. Maybe there's a problem with the ingestion process, or they need to verify the chunks. The \"chunk_count_verified\" matches the planned count, which is good, but maybe there's a need to check if all chunks are correctly indexed.\n\nAlso, the \"source\" field in the JSON has a value that includes \"stack_linker_breather\", which might be a key component. The user might be asking about this component's role, how it's integrated with other parts like the chroma DB, or how to troubleshoot issues related to it. Alternatively, they might be looking for guidance on how to process or analyze the data in this JSON structure.\n\nSince the user hasn't explicitly stated their question, I should consider possible scenarios. They might need help understanding the structure of the JSON, interpreting the fields like \"receipt_id\", \"chunk_ids\", or \"authority\". They could also be looking for steps to validate the ingestion process, check for errors, or integrate this data into another system.\n\nAnother possibility is that the user is working on a project involving document processing and needs to ensure that the ingestion and chunking processes are correctly set up. The me\n...TRUNCATED_BY_FORGE...",
+  "prompt_path": "/home/nic/forge/memory/generic_repair_proposals_v1/2026_05_17_092801_prompt_stack_linker_breather.txt",
+  "prompt_sha256": "974e70b4d7c05a06c99ff58688873de0548bebeb755f509061663ee61513ef3b",
+  "provider": "ollama",
+  "raw_response_path": "/home/nic/forge/memory/generic_repair_proposals_v1/2026_05_17_092801_response_raw_stack_linker_breather.txt",
+  "raw_response_sha256": "db224898086ea8903757a9a0f1678010766fc581484f4f6199ce91ca25205455",
+  "recommendation": "Review the LLM repair proposal. Next patch should convert a human-approved minimal repair into a sandboxed patch candidate, not apply it live yet.",
+  "report_type": "GENERIC_REPAIR_LLM_PROPOSAL_V1",
+  "returncode": 0,
+  "schema_version": "generic_repair_llm_proposal_v1_patch135",
+  "source_evidence_packet_path": "/home/nic/forge/memory/generic_repair_proposals_v1/latest_generic_repair_evidence_packet_v1.json",
+  "source_evidence_packet_sha256": "cd74e9f5707ee342008f5df22fd55b916ce1bc6556d1b2e5842de7658f773c73",
+  "status": "GENERIC_REPAIR_LLM_PROPOSAL_READY_NO_WRITE_AUTHORITY",
+  "stderr_path": "/home/nic/forge/memory/generic_repair_proposals_v1/2026_05_17_092801_response_stderr_stack_linker_breather.txt",
+  "stderr_sha256": "1f296cf221c0aa2694f2cc4c138bb3c5e592b45fa4154eb0457787c6b29c8c4b",
+  "stderr_tail": "\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h\u001b[?25l\u001b[?25h",
+  "target": "stack_linker_breather"
+}

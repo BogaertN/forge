@@ -1,0 +1,15 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T08:58:58",
+  "current_milestone": "Patch Lifecycle 2.0 gate matrix ready; first gated repair next",
+  "next_patch_sequence": [
+    "Patch 134 \u2014 Gated repair for stack_linker_breather import/test issue",
+    "Patch 135 \u2014 Sandbox/test/apply gate for verified repair"
+  ],
+  "report_type": "FORGE_ROADMAP_STATUS_V1",
+  "schema_version": "forge_roadmap_status_v1_patch133",
+  "status": "ROADMAP_STATUS_READY"
+}

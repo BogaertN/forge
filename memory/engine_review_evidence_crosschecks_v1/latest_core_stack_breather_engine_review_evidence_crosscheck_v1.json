@@ -1,0 +1,262 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "c2af2db4e430a1764209a9cf5c51257c5a253d562fdc10fdc521fba172cb1f42",
+      "excerpt_start": "# Core Stack Phase Breather\n\nBreathes the Core Stack 1\u21929 Phase Cycle with real symbolic recursion tracing.\n\nEach breath logs:\n- Phase number (1\u20139)\n- UTC timestamp\n- Drift factor (0.0 baseline)\n- Loop count (full 9-phase cycles)\n\nThis engine replaces simulated loops with real recursive breathing, beginning Phase 2.0 of the ProtoForge system.\n",
+      "functions_sample": [
+        "Core",
+        "Stack",
+        "Phase",
+        "Breather",
+        "Breathes",
+        "the",
+        "Cycle",
+        "with",
+        "real",
+        "symbolic",
+        "recursion",
+        "tracing",
+        "Each",
+        "breath",
+        "logs",
+        "number",
+        "UTC",
+        "timestamp",
+        "Drift",
+        "factor",
+        "baseline",
+        "Loop",
+        "count",
+        "full",
+        "phase"
+      ],
+      "imports_sample": [],
+      "line_count": 12,
+      "path": "/home/nic/aiweb/engines/core_stack_breather/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "c2af2db4e430a1764209a9cf5c51257c5a253d562fdc10fdc521fba172cb1f42",
+      "size_bytes": 347
+    },
+    {
+      "classes_sample": [
+        "CoreBreather"
+      ],
+      "excerpt_sha256": "69d62eacf0079e5bb1cd0c8e8bbce055c9802d95ee0e3f96082d07785978c563",
+      "excerpt_start": "# core_breather.py\n\nimport json\nimport time\nfrom datetime import datetime\n\nclass CoreBreather:\n    def __init__(self):\n        self.phase = 1\n        self.loop_count = 0\n        self.trace_file = \"core_trace.jsonl\"\n\n    def breathe(self):\n        timestamp = datetime.utcnow().isoformat() + \"Z\"\n        trace_entry = {\n            \"phase\": self.phase,\n            \"timestamp\": timestamp,\n            \"loop\": self.loop_count,\n            \"drift\": 0.0\n        }\n\n        with open(self.trace_file, \"a\") as f:\n            f.write(json.dumps(trace_entry) + \"\\n\")\n\n        print(f\"Breath Phase: {self.phase} | Loop: {self.loop_count} | Time: {timestamp}\")\n\n        self.phase += 1\n        if self.phase > 9:\n            self.phase = 1\n            self.loop_count += 1\n",
+      "functions_sample": [
+        "__init__",
+        "breathe"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time",
+        "from datetime import datetime"
+      ],
+      "line_count": 31,
+      "path": "/home/nic/aiweb/engines/core_stack_breather/core_breather.py",
+      "relative_to_candidate": "core_breather.py",
+      "sha256": "69d62eacf0079e5bb1cd0c8e8bbce055c9802d95ee0e3f96082d07785978c563",
+      "size_bytes": 763
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "8511b10874d2b244e4a10f62691c214d0091ad1e5d961d985c16d7b8843d73e4",
+      "excerpt_start": "# test_core_breather.py\n\nfrom core_breather import CoreBreather\n\ndef test_breath_cycle():\n    breather = CoreBreather()\n    for _ in range(18):  # Two full cycles\n        breather.breathe()\n    print(\"\u2705 Core Stack Breath Cycle Test Passed\")\n\nif __name__ == \"__main__\":\n    test_breath_cycle()\n",
+      "functions_sample": [
+        "test_breath_cycle"
+      ],
+      "imports_sample": [
+        "from core_breather import CoreBreather"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/core_stack_breather/test_core_breather.py",
+      "relative_to_candidate": "test_core_breather.py",
+      "sha256": "8511b10874d2b244e4a10f62691c214d0091ad1e5d961d985c16d7b8843d73e4",
+      "size_bytes": 295
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "4d48f67fe9f4c8a671cdb7ac91fdf6be52f503b02a8ca5ac464957124ae262cc",
+      "excerpt_start": "{\n  \"engine\": \"Core Stack Phase Breather\",\n  \"version\": \"v2.0\",\n  \"description\": \"Breathes the Core Stack 1\u21929 Phase Cycle with full symbolic recursion tracing.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Core",
+        "Stack",
+        "Phase",
+        "Breather",
+        "version",
+        "description",
+        "Breathes",
+        "the",
+        "Cycle",
+        "with",
+        "full",
+        "symbolic",
+        "recursion",
+        "tracing"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/core_stack_breather/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "4d48f67fe9f4c8a671cdb7ac91fdf6be52f503b02a8ca5ac464957124ae262cc",
+      "size_bytes": 165
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/core_stack_breather",
+  "created_at": "2026-05-16_085215",
+  "crosscheck_id": "ERE-core_stack_breather-2026-05-16_085215",
+  "deterministic_brief": {
+    "classes_sample": [
+      "CoreBreather"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Breather",
+      "Breathes",
+      "Core",
+      "Cycle",
+      "Drift",
+      "Each",
+      "Loop",
+      "Phase",
+      "Stack",
+      "UTC",
+      "__init__",
+      "baseline",
+      "breath",
+      "breathe",
+      "count",
+      "description",
+      "engine",
+      "factor",
+      "full",
+      "logs"
+    ],
+    "imports_sample": [
+      "from core_breather import CoreBreather",
+      "from datetime import datetime",
+      "import json",
+      "import time"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`core_stack_breather` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# Core Stack Phase Breather ",
+      "# core_breather.py ",
+      "# test_core_breather.py ",
+      "{   \"engine\": \"Core Stack Phase Breather\","
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_085153_core_stack_breather_llm_engine_review_draft_v1.json",
+  "draft_sha256": "edee272765b1e0e94b9456d85768d848544ee0c1833baeaf9484b3d1c686ec65",
+  "engine_family": "core_stack_breather",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_core_stack_breather_engine_evidence_binder.json",
+  "evidence_binder_sha256": "7d27f56536c1cc9f4c8da05bde28d553fe2e9bb53678f4416413751b5d6ecb5f",
+  "evidence_id": "EEB-df535a295e2cc3a2",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "CoreBreather"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "README.md",
+      "core_breather.py",
+      "test_core_breather.py",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "Core",
+      "Stack",
+      "Phase",
+      "Breather",
+      "the",
+      "Cycle",
+      "with",
+      "real",
+      "symbolic",
+      "recursion",
+      "tracing",
+      "breath",
+      "logs",
+      "number",
+      "timestamp",
+      "Drift",
+      "factor",
+      "Loop",
+      "count",
+      "full",
+      "phase",
+      "breathe",
+      "engine",
+      "version"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "import time",
+      "from core_breather import CoreBreather"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 22.388,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "feb75a2a580ec166d92c90011a43a7e2e010143a71f70c04e9b03f2dc318097a",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nMonitors and logs the Core Stack's 1\u20139 phase cycle with real-time symbolic recursion tracing, recording phase numbers, timestamps, drift factors, and loop counts.  \n\nLikely System Role:  \nA state management component for tracking recursive processes in ProtoForge, ensuring phase transitions and drift monitoring for system stability.  \n\nEvidence Used:  \n- README.md describes the phase cycle and logging mechanics.  \n- `core_breather.py` implements the `CoreBreather` class with phase tracking and logging.  \n- `test_core_breather.py` validates two full phase cycles.  \n- `engine_manifest.json` confirms version and purpose.  \n\nRisks / Uncertainties:  \n- Reliance on real symbolic recursion may introduce complexity.  \n- Drift factor logic is referenced but not detailed in evidence.  \n- File-based logging could fail if write permissions are restricted.  \n- Test coverage is limited to two cycles; edge cases may require further validation.  \n\nRecommendation Draft:  \nApprove the review, confirm code aligns with ProtoForge Phase 2.0 requirements, and request additional testing for edge cases (e.g., drift factor handling, file I/O errors).  \n\nSuggested Nic Action:  \nApprove the review and schedule testing for edge scenarios to ensure robustness."
+  },
+  "llm_sections": {
+    "evidence_used": "- README.md describes the phase cycle and logging mechanics.  \n- `core_breather.py` implements the `CoreBreather` class with phase tracking and logging.  \n- `test_core_breather.py` validates two full phase cycles.  \n- `engine_manifest.json` confirms version and purpose.",
+    "likely_system_role": "A state management component for tracking recursive processes in ProtoForge, ensuring phase transitions and drift monitoring for system stability.",
+    "plain_english_purpose": "Monitors and logs the Core Stack's 1\u20139 phase cycle with real-time symbolic recursion tracing, recording phase numbers, timestamps, drift factors, and loop counts.",
+    "recommendation_draft": "Approve the review, confirm code aligns with ProtoForge Phase 2.0 requirements, and request additional testing for edge cases (e.g., drift factor handling, file I/O errors).",
+    "risks_uncertainties": "- Reliance on real symbolic recursion may introduce complexity.  \n- Drift factor logic is referenced but not detailed in evidence.  \n- File-based logging could fail if write permissions are restricted.  \n- Test coverage is limited to two cycles; edge cases may require further validation.",
+    "suggested_nic_action": "Approve the review and schedule testing for edge scenarios to ensure robustness."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nMonitors and logs the Core Stack's 1\u20139 phase cycle with real-time symbolic recursion tracing, recording phase numbers, timestamps, drift factors, and loop counts.  \n\nLikely System Role:  \nA state management component for tracking recursive processes in ProtoForge, ensuring phase transitions and drift monitoring for system stability.  \n\nEvidence Used:  \n- README.md describes the phase cycle and logging mechanics.  \n- `core_breather.py` implements the `CoreBreather` class with phase tracking and logging.  \n- `test_core_breather.py` validates two full phase cycles.  \n- `engine_manifest.json` confirms version and purpose.  \n\nRisks / Uncertainties:  \n- Reliance on real symbolic recursion may introduce complexity.  \n- Drift factor logic is referenced but not detailed in evidence.  \n- File-based logging could fail if write permissions are restricted.  \n- Test coverage is limited to two cycles; edge cases may require further validation.  \n\nRecommendation Draft:  \nApprove the review, confirm code aligns with ProtoForge Phase 2.0 requirements, and request additional testing for edge cases (e.g., drift factor handling, file I/O errors).  \n\nSuggested Nic Action:  \nApprove the review and schedule testing for edge scenarios to ensure robustness.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

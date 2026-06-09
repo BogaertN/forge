@@ -1,0 +1,102 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "bound_file_count": 4,
+  "candidate_path": "/home/nic/aiweb/runtime_wrappers/symbolic_layers_stack",
+  "created_at": "2026-05-16_224408",
+  "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_symbolic_layers_stack_engine_review_evidence_crosscheck_v1.json",
+  "crosscheck_sha256": "bfff6c64fbce9e9c032ddfa6a4b0815f393d46318251343172531a25d3273dee",
+  "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_223508_symbolic_layers_stack_llm_engine_review_draft_v1.json",
+  "draft_sha256": "208cdded4cb185d3dca60fba05fc897ae03ff076305a71cd3750c18c69823856",
+  "engine_family": "symbolic_layers_stack",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_symbolic_layers_stack_engine_evidence_binder.json",
+  "evidence_binder_sha256": "099fcc4b0b1215b1d44fd93cf959213b97a2e47c51d953b1be0b7dc347364a36",
+  "evidence_id": "EEB-e6c855743c10f45e",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "stack_manifest.json",
+      "test_symbolic_layers_stack_loader.py",
+      "README.md",
+      "symbolic_layers_stack_loader.py"
+    ],
+    "functions_mentioned": [
+      "stack",
+      "symbolic_layers_stack",
+      "version",
+      "Activates",
+      "symbolic",
+      "recursion",
+      "mapping",
+      "resonance",
+      "field",
+      "visualization",
+      "and",
+      "glyph",
+      "overlays",
+      "live",
+      "architecture",
+      "Web",
+      "System",
+      "Symbolic",
+      "Layers",
+      "Stack",
+      "Frozen",
+      "The",
+      "activates",
+      "systems",
+      "for",
+      "memory",
+      "dynamics",
+      "layers",
+      "the"
+    ],
+    "imports_mentioned": [
+      "from symbolic_layers_stack_loader import load_symbolic_layers_stack",
+      "import subprocess",
+      "import time"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 28.352,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "9e9285d8bb28e469d237359ff88a8dee10ffbb1e4b185574e72ca71d5d5bd43d",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nActivates symbolic visualization layers for recursion mapping, resonance field dynamics, and glyph UI overlays to enable system self-awareness during symbolic processing phases.  \n\nLikely System Role:  \nA runtime wrapper for AI.Web's symbolic_layers_stack, managing live visualization of recursion memory, resonance fields, and UI overlays to monitor and interact with symbolic phase evolution.  \n\nEvidence Used:  \n- `stack_manifest.json` describes the stack's purpose, frozen version, and activation phase.  \n- `test_symbolic_layers_stack_loader.py` validates loader functionality.  \n- `README.md` details layer components (Recursion Mapper, Resonance Display, Glyph UI Overlay) and freezing metadata.  \n- `symbolic_layers_stack_loader.py` outlines script execution for layer activation.  \n\nRisks / Uncertainties:  \n- Loader script reliability depends on subprocess calls and correct path resolution.  \n- \"Frozen\" version v1.0.01 is dated 2025-04-27 (future), raising deployment timing concerns.  \n- Untested interactions between layers and live recursion architecture may introduce instability.  \n\nRecommendation Draft:  \nApprove deployment with safeguards: verify loader script robustness, confirm path validity for all layers, and validate frozen version stability against target systems.  \n\nSuggested Nic Action:  \nApprove review with conditions: test loader script execution, confirm dependency readiness, and ensure frozen version aligns with deployment timelines. Proceed to deployment only after validation."
+  },
+  "llm_visible_review_excerpt": "Plain-English Purpose:  \nActivates symbolic visualization layers for recursion mapping, resonance field dynamics, and glyph UI overlays to enable system self-awareness during symbolic processing phases.  \n\nLikely System Role:  \nA runtime wrapper for AI.Web's symbolic_layers_stack, managing live visualization of recursion memory, resonance fields, and UI overlays to monitor and interact with symbolic phase evolution.  \n\nEvidence Used:  \n- `stack_manifest.json` describes the stack's purpose, frozen version, and activation phase.  \n- `test_symbolic_layers_stack_loader.py` validates loader functionality.  \n- `README.md` details layer components (Recursion Mapper, Resonance Display, Glyph UI Overlay) and freezing metadata.  \n- `symbolic_layers_stack_loader.py` outlines script execution for layer activation.  \n\nRisks / Uncertainties:  \n- Loader script reliability depends on subprocess calls and correct path resolution.  \n- \"Frozen\" version v1.0.01 is dated 2025-04-27 (future), raising deployment timing concerns.  \n- Untested interactions between layers and live recursion architecture may introduce instability.  \n\nRecommendation Draft:  \nApprove deployment with safeguards: verify loader script robustness, confirm path validity for all layers, and validate frozen version stability against target systems.  \n\nSuggested Nic Action:  \nApprove review with conditions: test loader script execution, confirm dependency readiness, and ensure frozen version aligns with deployment timelines. Proceed to deployment only after validation.",
+  "manual_verification_rule": "Approve only if the LLM-visible claims are supported by the bound evidence shown in the Patch 102 cross-check. If unsure, defer.",
+  "ready_for_evidence_based_queue_decision": true,
+  "report_type": "ENGINE_REVIEW_APPROVAL_CHECK_V1_PATCH103",
+  "schema_version": "engine_review_approval_helper_v1_patch103",
+  "status": "EVIDENCE_APPROVAL_CHECK_READY",
+  "warnings": [
+    "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

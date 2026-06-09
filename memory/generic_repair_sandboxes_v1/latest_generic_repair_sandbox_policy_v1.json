@@ -1,0 +1,25 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_authority": true,
+    "ledger_mutation_authority": false,
+    "llm_call_authority": "confirm_token_required",
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "sandbox_copy_authority": true,
+    "shell_execution_authority": "allowlisted_python_only_shell_false"
+  },
+  "confirmation_token": "CONFIRM_RUN_GENERIC_REPAIR_SANDBOX",
+  "created_at": "2026-05-17T10:54:39",
+  "hard_rules": [
+    "No writes to /home/nic/aiweb",
+    "No live patch apply",
+    "No arbitrary shell",
+    "Use shell=False",
+    "LLM reviews sandbox test result before any live-apply planning"
+  ],
+  "purpose": "Apply a verified repair candidate inside a Forge-owned sandbox copy, run scoped compile/test checks, then call the local LLM on the sandbox result.",
+  "report_type": "GENERIC_REPAIR_SANDBOX_POLICY_V1",
+  "schema_version": "generic_repair_sandbox_v1_patch137R",
+  "status": "GENERIC_REPAIR_SANDBOX_POLICY_READY"
+}

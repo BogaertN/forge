@@ -1,0 +1,14 @@
+FORGE PRE-RESTORE SAFETY SNAPSHOT
+══════════════════════════════════════════════════════════════════
+Target file   : /home/nic/forge_test_project/test.txt
+Snapshot time : 2026-05-09T13:52:27
+Current SHA   : fc0a6c04e779f517
+Session ID    : forge_2026_05_09_135205
+══════════════════════════════════════════════════════════════════
+
+This is a safe Forge test file.
+
+
+══════════════════════════════════════════════════════════════════
+This snapshot was saved automatically before a rollback restore.
+══════════════════════════════════════════════════════════════════

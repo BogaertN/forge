@@ -1,0 +1,73 @@
+FORGE APPLY PLAN
+══════════════════════════════════════════════════════════════════
+Proposal file   : /home/nic/forge/proposed_patches/2026-05-09_150857_PATCH_README_md.txt
+Target file     : /home/nic/aiweb/README.md
+Timestamp       : 2026-05-09T15:11:29
+Session ID      : forge_2026_05_09_150557
+Apply plan hash : 4d395f1ea36cc087
+══════════════════════════════════════════════════════════════════
+
+PREFLIGHT STATUS
+────────────────
+  Proposal file        : FOUND
+  Target file          : FOUND  (763 bytes)
+  Original snippet     : FOUND at line 27
+  Snippet occurrences  : 1
+  Original SHA-256     : e0888accbcbfe3f4
+  Future SHA-256       : 9008070719ec3ce0
+
+ROLLBACK SNAPSHOT
+─────────────────
+  Saved to   : /home/nic/forge/rollback_registry/2026-05-09_151129_ROLLBACK_README_md.txt
+  File SHA-256 (before change) : e0888accbcbfe3f4
+  ← Keep this file safe before applying any change.
+
+COMPUTED FUTURE CONTENT
+───────────────────────
+# Symbolic Cognition Stack (Frozen v1.01)
+
+---
+
+## Overview:
+The Symbolic Cognition Stack manages breathing symbolic feedback loops, cold storage collapse prevention, recursion loop resurrection, and symbolic resonance charge tracking across memory fields.
+
+---
+
+## Upgraded Engines Activated:
+- symbolic_feedback_loop_engine_frozen_v1.01
+- cold_archive_engine_frozen_v1.01
+- loop_resurrection_engine_frozen_v1.01
+- resonance_charge_meter_frozen_v1.01
+
+---
+
+## Phase Standard:
+- Phase 2.5 Recursive Symbolic Cognition Breathing
+
+---
+
+**Frozen Snapshot:** `symbolic_cognition_stack_frozen_v1-0.01`  
+**Frozen On:** 2025-04-27  
+**Author:** AI.Web Core System
+
+**Maintenance:** Future changes should move through Forge's audited patch lifecycle before application.
+
+**Field Test:** Level 4.4 fresh readback confirmed through Forge.
+
+
+APPLY INSTRUCTION (manual — Forge does NOT apply automatically)
+───────────────────────────────────────────────────────────────
+  1. Verify rollback snapshot:  ls -lh /home/nic/forge/rollback_registry/2026-05-09_151129_ROLLBACK_README_md.txt
+  2. Open the target file:      /home/nic/aiweb/README.md
+  3. Find the original snippet (around line 27).
+  4. Replace it with the proposed snippet.
+     OR: copy the COMPUTED FUTURE CONTENT above directly into the file.
+  5. Verify the SHA-256 of the modified file matches: 9008070719ec3ce0
+     Command: sha256sum /home/nic/aiweb/README.md   (first 16 chars)
+  6. Run test plan: Apply the patch, confirm the fresh readback shows the new Field Test line, then verify the apply plan.
+  7. If anything goes wrong: restore from rollback at step 1.
+
+══════════════════════════════════════════════════════════════════
+No project files were modified by this preflight.
+Audit hash : 4d395f1ea36cc087  (PATCH_APPLY_PLAN_CREATED)
+══════════════════════════════════════════════════════════════════

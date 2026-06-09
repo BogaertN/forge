@@ -1,0 +1,271 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "0db1377a606bd017b5e3b03388aeed0ca6e548c341d03326ffebf7cc25d9224f",
+      "excerpt_start": "import os\nimport json\nimport time\n\nINSTALL_STATE = \"install_state.json\"\n\ndef setup_environment():\n    required_dirs = [\n        \"../symbolic_capacitor_engine_frozen_v1\",\n        \"../cold_archive_engine_frozen_v1\",\n        \"../loop_resurrection_engine_frozen_v1\",\n        \"../resonance_charge_meter_frozen_v1\",\n        \"../tone_engine_frozen_v1\",\n        \"../peer_communication_engine_frozen_v1\",\n        \"../compute_contribution_engine_frozen_v1\",\n        \"../awh_token_runtime_frozen_v1\",\n        \"../contribution_dashboard_engine_frozen_v1\"\n    ]\n\n    missing_dirs = []\n\n    for directory in required_dirs:\n        if not os.path.exists(directory):\n            try:\n                os.makedirs(directory)\n                missing_dirs.append(directory)\n            except Exception as e:\n                print(f\"[!] Failed to create {directory}: {e}\")\n\n    install_report = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"missing_directories_created\": missing_dirs,\n        \"status\": \"completed\"\n    }\n\n    with open(INSTALL_STATE, \"w\") as f:\n        json.dump(install_report, f, indent=2)\n\n    print(f\"\u2714\ufe0f Install check complete. Report: {install_report}\")\n    return install_report\n",
+      "functions_sample": [
+        "setup_environment"
+      ],
+      "imports_sample": [
+        "import os",
+        "import json",
+        "import time"
+      ],
+      "line_count": 41,
+      "path": "/home/nic/aiweb/engines/install_onboarding_engine/onboarding_core.py",
+      "relative_to_candidate": "onboarding_core.py",
+      "sha256": "0db1377a606bd017b5e3b03388aeed0ca6e548c341d03326ffebf7cc25d9224f",
+      "size_bytes": 1224
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "b6d5865a6d037cc64ca2ab8da15aff454921ca1f6657322c977d5d6e9b2a19d4",
+      "excerpt_start": "{\n  \"timestamp\": \"2025-04-25T23:14:34Z\",\n  \"missing_directories_created\": [],\n  \"status\": \"completed\"\n}",
+      "functions_sample": [
+        "timestamp",
+        "missing_directories_created",
+        "status",
+        "completed"
+      ],
+      "imports_sample": [],
+      "line_count": 5,
+      "path": "/home/nic/aiweb/engines/install_onboarding_engine/install_state.json",
+      "relative_to_candidate": "install_state.json",
+      "sha256": "b6d5865a6d037cc64ca2ab8da15aff454921ca1f6657322c977d5d6e9b2a19d4",
+      "size_bytes": 103
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "f0c20615c3469627d3325df49583628a742f709c1d12cd2b9ea0723851b4d0d4",
+      "excerpt_start": "from onboarding_core import setup_environment\n\ndef test_install_setup():\n    try:\n        result = setup_environment()\n        print(\"\u2705 Test Passed: Install environment checked.\")\n        print(\"Install Report:\", result)\n    except Exception as e:\n        print(f\"\u274c Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_install_setup()\n",
+      "functions_sample": [
+        "test_install_setup"
+      ],
+      "imports_sample": [
+        "from onboarding_core import setup_environment"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/install_onboarding_engine/test_onboarding.py",
+      "relative_to_candidate": "test_onboarding.py",
+      "sha256": "f0c20615c3469627d3325df49583628a742f709c1d12cd2b9ea0723851b4d0d4",
+      "size_bytes": 342
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "6f9a9930fb58004d7fb24dcf27a314b520e3a03b50e56291f5d15eb052396b60",
+      "excerpt_start": "# Install + Onboarding Engine\n\nVerifies all required symbolic engine directories are present at runtime start.\n\nCreates missing folders if necessary and logs onboarding status to `install_state.json`.\n",
+      "functions_sample": [
+        "Install",
+        "Onboarding",
+        "Engine",
+        "Verifies",
+        "all",
+        "required",
+        "symbolic",
+        "engine",
+        "directories",
+        "are",
+        "present",
+        "runtime",
+        "start",
+        "Creates",
+        "missing",
+        "folders",
+        "necessary",
+        "and",
+        "logs",
+        "onboarding",
+        "status",
+        "install_state",
+        "json"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/install_onboarding_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "6f9a9930fb58004d7fb24dcf27a314b520e3a03b50e56291f5d15eb052396b60",
+      "size_bytes": 201
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "d70dcb8e4637e92a0ea194d593ebf9d4cc004fa4768b79a11ad7f7cf188736f6",
+      "excerpt_start": "{\n  \"engine\": \"install_onboarding_engine\",\n  \"version\": \"v1.0\",\n  \"status\": \"build_mode\",\n  \"description\": \"Sets up initial directory structures and validates symbolic runtime environment.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "install_onboarding_engine",
+        "version",
+        "status",
+        "build_mode",
+        "description",
+        "Sets",
+        "initial",
+        "directory",
+        "structures",
+        "and",
+        "validates",
+        "symbolic",
+        "runtime",
+        "environment"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/install_onboarding_engine/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "d70dcb8e4637e92a0ea194d593ebf9d4cc004fa4768b79a11ad7f7cf188736f6",
+      "size_bytes": 192
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/install_onboarding_engine",
+  "created_at": "2026-05-16_095438",
+  "crosscheck_id": "ERE-install_onboarding_engine-2026-05-16_095438",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Creates",
+      "Engine",
+      "Install",
+      "Onboarding",
+      "Sets",
+      "Verifies",
+      "all",
+      "and",
+      "are",
+      "build_mode",
+      "completed",
+      "description",
+      "directories",
+      "directory",
+      "engine",
+      "environment",
+      "folders",
+      "initial",
+      "install_onboarding_engine",
+      "install_state"
+    ],
+    "imports_sample": [
+      "from onboarding_core import setup_environment",
+      "import json",
+      "import os",
+      "import time"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`install_onboarding_engine` appears to be a local AI.Web engine/component. The bound source evidence includes 5 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "import os import json",
+      "{   \"timestamp\": \"2025-04-25T23:14:34Z\",",
+      "from onboarding_core import setup_environment ",
+      "# Install + Onboarding Engine "
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095417_install_onboarding_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "1de3bed434134287e5145340e0d55070841a8b8793f25987f725877ac27f6603",
+  "engine_family": "install_onboarding_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_install_onboarding_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "2818059cd122866747c15023d2389e9ecf29967befcb06a5d149234a3601526b",
+  "evidence_id": "EEB-27b6d26db1fca1c2",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "onboarding_core.py",
+      "install_state.json",
+      "test_onboarding.py",
+      "README.md",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "setup_environment",
+      "timestamp",
+      "status",
+      "Install",
+      "Onboarding",
+      "Engine",
+      "Verifies",
+      "all",
+      "required",
+      "symbolic",
+      "engine",
+      "directories",
+      "are",
+      "runtime",
+      "Creates",
+      "missing",
+      "folders",
+      "and",
+      "logs",
+      "onboarding",
+      "install_state",
+      "json",
+      "directory",
+      "environment"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "import time",
+      "from onboarding_core import setup_environment"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 20.382,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "2aee296afe47a2775612c446cf3b143438b222bbd144d8b8dd9fc0cbf511eb62",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nVerifies required symbolic engine directories exist at runtime, creates missing folders, and logs installation status to a JSON file.  \n\nLikely System Role:  \nInstallation/onboarding utility for ensuring prerequisite directories are available for symbolic engines, acting as a setup validator and environment preparer.  \n\nEvidence Used:  \n- `onboarding_core.py` contains `setup_environment()` function creating required directories and logging status.  \n- `install_state.json` stores installation reports with timestamps and missing directories.  \n- `test_onboarding.py` tests the setup process.  \n- README.md and engine_manifest.json describe the engine's purpose and directory validation.  \n\nRisks / Uncertainties:  \n- Minimal error handling in directory creation (e.g., permission issues).  \n- Test script is basic and may not cover all edge cases.  \n- JSON logging format lacks schema validation.  \n\nRecommendation Draft:  \nEnhance error handling for directory creation, add comprehensive tests for edge cases, and validate JSON structure for robustness.  \n\nSuggested Nic Action:  \nApprove review with note to address error handling and testing improvements before deployment."
+  },
+  "llm_sections": {
+    "evidence_used": "- `onboarding_core.py` contains `setup_environment()` function creating required directories and logging status.  \n- `install_state.json` stores installation reports with timestamps and missing directories.  \n- `test_onboarding.py` tests the setup process.  \n- README.md and engine_manifest.json describe the engine's purpose and directory validation.",
+    "likely_system_role": "Installation/onboarding utility for ensuring prerequisite directories are available for symbolic engines, acting as a setup validator and environment preparer.",
+    "plain_english_purpose": "Verifies required symbolic engine directories exist at runtime, creates missing folders, and logs installation status to a JSON file.",
+    "recommendation_draft": "Enhance error handling for directory creation, add comprehensive tests for edge cases, and validate JSON structure for robustness.",
+    "risks_uncertainties": "- Minimal error handling in directory creation (e.g., permission issues).  \n- Test script is basic and may not cover all edge cases.  \n- JSON logging format lacks schema validation.",
+    "suggested_nic_action": "Approve review with note to address error handling and testing improvements before deployment."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nVerifies required symbolic engine directories exist at runtime, creates missing folders, and logs installation status to a JSON file.  \n\nLikely System Role:  \nInstallation/onboarding utility for ensuring prerequisite directories are available for symbolic engines, acting as a setup validator and environment preparer.  \n\nEvidence Used:  \n- `onboarding_core.py` contains `setup_environment()` function creating required directories and logging status.  \n- `install_state.json` stores installation reports with timestamps and missing directories.  \n- `test_onboarding.py` tests the setup process.  \n- README.md and engine_manifest.json describe the engine's purpose and directory validation.  \n\nRisks / Uncertainties:  \n- Minimal error handling in directory creation (e.g., permission issues).  \n- Test script is basic and may not cover all edge cases.  \n- JSON logging format lacks schema validation.  \n\nRecommendation Draft:  \nEnhance error handling for directory creation, add comprehensive tests for edge cases, and validate JSON structure for robustness.  \n\nSuggested Nic Action:  \nApprove review with note to address error handling and testing improvements before deployment.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

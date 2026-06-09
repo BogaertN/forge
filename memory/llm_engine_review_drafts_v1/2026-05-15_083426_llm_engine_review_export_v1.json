@@ -1,0 +1,61 @@
+{
+  "authority": {
+    "allowed_gateway_tools": [
+      "read_file",
+      "code_related_files"
+    ],
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "forbidden_gateway_tools": [
+      "shell",
+      "patch-apply",
+      "ingest-one",
+      "ingest-batch-apply",
+      "delete",
+      "quarantine",
+      "restore",
+      "snapshot-live-restore",
+      "network",
+      "pip",
+      "npm",
+      "sudo"
+    ],
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "LLM_ENGINE_REVIEW_DRAFTS_WITH_REVIEW_LIMITED_READ_LENS",
+    "patch": "98",
+    "project_write_authority": false,
+    "rule": "The LLM may draft review recommendations from bound evidence. Nic approves separately. Forge commits only in a future gated patch.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/llm_engine_review_drafts_v1"
+  },
+  "counts": {
+    "drafts": 2
+  },
+  "created_at": "2026-05-15_083426",
+  "drafts": [
+    {
+      "draft_id": "LER-phase_engine-2026-05-15_083144",
+      "engine_family": "phase_engine",
+      "evidence_id": "EEB-69f03eb6723fbc4c",
+      "path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_083144_phase_engine_llm_engine_review_draft_v1.json",
+      "recommendation": "KEEP_APPROVED_REVIEW_STATUS",
+      "sha256": "0b14998c62f90f200c3094a99bb5d01212170b359e1686159aebc3758a5454ad",
+      "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY"
+    },
+    {
+      "draft_id": "LER-activity_log-2026-05-15_083417",
+      "engine_family": "activity_log",
+      "evidence_id": "EEB-929b125c673bef05",
+      "path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_083417_activity_log_llm_engine_review_draft_v1.json",
+      "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+      "sha256": "77bec2b87a2acfcec6d54eebaedd7183814cc1d6eed1c5c936c83b0c8bfad064",
+      "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY"
+    }
+  ],
+  "next_step": "Patch 99 human review queue. Patch 100 commits only after human approval and SHA re-verification.",
+  "report_type": "LLM_ENGINE_REVIEW_EXPORT_V1_PATCH98",
+  "schema_version": "llm_engine_review_draft_v1_patch98"
+}

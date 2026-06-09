@@ -1,0 +1,5 @@
+{
+  "engine": "Stack Linker Phase Breather",
+  "version": "v2.01",
+  "description": "Links CoreBreather and FieldBreather into unified phase-locked recursion breathing, creating synchronized trace logs and dashboard heartbeats."
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "forge_next_status_v1_patch134",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "created_at": "2026-05-17T09:12:02",
+  "status": "NEXT_PATCH_REQUIRED",
+  "next_phase": "FIRST_GATED_REPAIR_FOLLOWUP",
+  "recommended_next_patch": "Patch 135 — Generic repair proposal for probed target",
+  "plain_english": "Patch 134 ran a generic import/path probe for stack_linker_breather. The next patch should use that result to choose either a test-runner environment repair or a file/package repair proposal.",
+  "next_commands": [
+    "import-probe-show run",
+    "import-probe-export",
+    "Install Patch 135 when ready"
+  ],
+  "authority": {
+    "read_only": true,
+    "patch_apply_authority": false
+  }
+}

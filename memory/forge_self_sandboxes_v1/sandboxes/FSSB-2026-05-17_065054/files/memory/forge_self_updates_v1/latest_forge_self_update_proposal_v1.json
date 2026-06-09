@@ -1,0 +1,76 @@
+{
+  "authority": {
+    "audit_overwrite_authority": false,
+    "chroma_write_authority": false,
+    "forge_must_validate": true,
+    "human_approval_required": true,
+    "live_self_write_authority": false,
+    "llm_may_draft": true,
+    "mode": "PROPOSAL_ONLY",
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-17T00:02:32",
+  "expected_changes": [],
+  "goal": "Create a proposal shell for a future Forge self-update. No live file changes are authorized.",
+  "next_commands": [
+    "forge-self-update-show latest",
+    "forge-self-update-verify latest",
+    "forge-self-update-export",
+    "forge-next"
+  ],
+  "plain_english": "This proposal records what Forge may later update in itself. It does not change main.py or tool_registry.json.",
+  "problems": [],
+  "report_type": "FORGE_SELF_UPDATE_PROPOSAL_V1",
+  "requires_human_approval": true,
+  "risk_level": "HIGH",
+  "rollback_plan": [
+    "restore main.py from preinstall backup",
+    "restore config/tool_registry.json from preinstall backup",
+    "verify py_compile and forge-command-surface"
+  ],
+  "schema_version": "forge_self_update_proposal_v1_patch120",
+  "source_evidence": [
+    "Patch 119 LLM planning packet schema",
+    "Forge final canonical engine lockfile",
+    "Forge master status report"
+  ],
+  "status": "FORGE_SELF_UPDATE_PROPOSAL_READY_NO_WRITE_AUTHORITY",
+  "target_files": [
+    {
+      "allowed": true,
+      "exists": true,
+      "forbidden_reasons": [],
+      "is_file": true,
+      "path": "/home/nic/forge/config/tool_registry.json",
+      "sha256": "4f8f98d17811f452131e572b32c5d42265275dc7b09cbca4d6c43e0412b9accf"
+    },
+    {
+      "allowed": true,
+      "exists": true,
+      "forbidden_reasons": [],
+      "is_file": true,
+      "path": "/home/nic/forge/main.py",
+      "sha256": "e438fa83f227a7e6d85d0bf8622ccaa560d041cf669ce5311981e707f466957e"
+    }
+  ],
+  "test_plan": [
+    "python3 -m py_compile main.py",
+    "forge-command-surface",
+    "tool registry JSON parse",
+    "audit chain verification"
+  ],
+  "validation_requirements": {
+    "current_sha_must_match_before_apply": true,
+    "fresh_self_snapshot_required": true,
+    "human_confirmation_required": true,
+    "rollback_ready_required": true,
+    "safe_tests_required": true,
+    "self_update_sandbox_required": true
+  },
+  "warnings": [
+    "proposal_only_no_diff_attached",
+    "not_live_apply_eligible_until_snapshot_sandbox_tests_and_human_approval_exist"
+  ]
+}

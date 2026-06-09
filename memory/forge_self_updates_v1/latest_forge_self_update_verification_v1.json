@@ -1,0 +1,44 @@
+{
+  "authority": {
+    "audit_overwrite_authority": false,
+    "live_self_write_authority": false,
+    "mode": "VERIFY_ONLY",
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-17T00:02:38",
+  "live_apply_eligible": false,
+  "live_apply_reason": "Patch 120 is proposal/verification only. Later patches must require fresh self-snapshot, sandbox, safe tests, rollback readiness, and explicit confirmation.",
+  "next_commands": [
+    "forge-self-update-show verification",
+    "forge-self-update-export",
+    "forge-next"
+  ],
+  "plain_english": "Forge checked the self-update proposal targets. This still does not allow a live write.",
+  "problems": [],
+  "proposal_path": "/home/nic/forge/memory/forge_self_updates_v1/latest_forge_self_update_proposal_v1.json",
+  "proposal_sha256": "daafb01638b38bc9d885e1c6d766cca8e8ff13d060264faadb4d1d7dbd92cdf3",
+  "report_type": "FORGE_SELF_UPDATE_VERIFICATION_V1",
+  "schema_version": "forge_self_update_proposal_v1_patch120",
+  "status": "FORGE_SELF_UPDATE_PROPOSAL_VERIFIED_NO_WRITE_AUTHORITY",
+  "target_files": [
+    {
+      "allowed": true,
+      "exists": true,
+      "forbidden_reasons": [],
+      "is_file": true,
+      "path": "/home/nic/forge/config/tool_registry.json",
+      "sha256": "4f8f98d17811f452131e572b32c5d42265275dc7b09cbca4d6c43e0412b9accf"
+    },
+    {
+      "allowed": true,
+      "exists": true,
+      "forbidden_reasons": [],
+      "is_file": true,
+      "path": "/home/nic/forge/main.py",
+      "sha256": "e438fa83f227a7e6d85d0bf8622ccaa560d041cf669ce5311981e707f466957e"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,60 @@
+You are Forge's local LLM reviewing a sandbox dependency resolution result.
+
+Target: stack_linker_breather
+Prior sandbox issue: missing module core_breather
+Dependency actions installed into Forge-owned sandbox only:
+[
+  {
+    "module": "core_breather",
+    "chosen_dependency": {
+      "kind": "module_file",
+      "leaf_module": "core_breather",
+      "path": "/home/nic/aiweb/engines/core_stack_breather/core_breather.py",
+      "reason": "bounded_rglob_top_file_match",
+      "requested_module": "core_breather",
+      "top_level_module": "core_breather"
+    },
+    "install_result": {
+      "strategy": "copy_module_file_as_package",
+      "installed_paths": [
+        "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/core_breather/core_breather.py",
+        "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/core_breather/__init__.py"
+      ],
+      "package_dir": "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/core_breather"
+    }
+  }
+]
+
+Important rules:
+- The sandbox must judge only Forge-owned sandbox files, not live /home/nic/aiweb engine files.
+- Do not propose live writes.
+- If tests pass and no live import leak exists, answer with APPROVE_DEPENDENCY_RESOLUTION.
+- If tests fail, answer with REVISE_SANDBOX_DEPENDENCY_PLAN and the next minimal diagnostic or repair step.
+- Keep the answer focused on the compile/test output.
+
+Compile return code: 0
+Compile stderr:
+
+
+Test return code: 1
+Test stderr:
+Traceback (most recent call last):
+  File "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/test_stack_linker_core.py", line 3, in <module>
+    from stack_linker_breather.stack_linker_core import unified_breathe_cycle
+  File "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/stack_linker_core.py", line 5, in <module>
+    from core_breather.core_breather import breathe_phase as core_breathe
+ImportError: cannot import name 'breathe_phase' from 'core_breather.core_breather' (/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/core_breather/core_breather.py)
+
+
+Attempts:
+[
+  {
+    "attempt": 1,
+    "compile_returncode": 0,
+    "test_returncode": 1,
+    "detected_missing_module": null,
+    "test_stderr_tail": "Traceback (most recent call last):\n  File \"/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/test_stack_linker_core.py\", line 3, in <module>\n    from stack_linker_breather.stack_linker_core import unified_breathe_cycle\n  File \"/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/stack_linker_core.py\", line 5, in <module>\n    from core_breather.core_breather import breathe_phase as core_breathe\nImportError: cannot import name 'breathe_phase' from 'core_breather.core_breather' (/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/core_breather/core_breather.py)\n"
+  }
+]
+
+Live import leak detected: False

@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://docs.python.org",
+    "title": "3.14.5 Documentation",
+    "fetched_at": "20260522_194421",
+    "file": "20260522_194421_https___docs_python_org.json"
+  },
+  {
+    "url": "https://google.com",
+    "title": "Google",
+    "fetched_at": "20260522_194444",
+    "file": "20260522_194444_https___google_com.json"
+  },
+  {
+    "url": "https://independent.academia.edu/NicholasBogaert/Analytics/activity/overview",
+    "title": "Academia.edu | Log In",
+    "fetched_at": "20260522_194650",
+    "file": "20260522_194650_https___independent_academia_edu_nichola.json"
+  },
+  {
+    "url": "https://example.com",
+    "title": "Example Domain",
+    "fetched_at": "20260524_185224",
+    "file": "20260524_185224_https___example_com.json"
+  }
+]

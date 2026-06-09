@@ -1,0 +1,58 @@
+{
+  "_template_version": "1.0",
+  "_status": "planning — assignments are NOT real yet; this is a schema for future mapping work",
+  "_policy": "RPMC runtime assignments must NEVER be merged into base corpus manifest (corpus_metadata_manifest.*). This file is a separate Forge-owned planning artifact.",
+  "_source": "RPMC Full Protocol Draft (2025) + AI.Web corpus metadata",
+
+  "_field_definitions": {
+    "corpus_id": "Matches id field in corpus_metadata_manifest.json — foreign key only",
+    "source_title": "Human-readable document title",
+    "source_role": "What role this document plays as a knowledge source",
+    "rpmc_domain": "Which RPMC domain this document primarily addresses",
+    "primary_runtime_concepts": "List of RPMC concepts this document is authoritative on",
+    "phase_scope": "Which FBSC phases (Φ1-Φ9) this document is most relevant to",
+    "memory_function": "How this document relates to ΦM(x,t) — memory encoding/retrieval",
+    "collapse_role": "Relevance to collapse detection, ε(t,Φ) scoring, or cold-storage logic",
+    "silence_role": "How this document addresses silence-as-non-erasure (Axiom 2)",
+    "echo_validation_role": "Relevance to echo checkpoint design or echo alignment scoring",
+    "drift_scoring_role": "Relevance to entropy vector ε(t,Φ) and drift quantification",
+    "chi_t_role": "Relevance to χ(t) grace operator — resurrection timing and conditions",
+    "spc_role": "Relevance to Symbolic Phase Capacitor / Dead Path Archive design",
+    "active_stack_role": "Relevance to Active Stack (live session memory) design",
+    "drift_archive_role": "Relevance to Drift Archive cold storage architecture",
+    "resurrection_log_role": "Relevance to Resurrection Log event recording",
+    "grace_timer_role": "Relevance to χ(t) Grace Timer implementation",
+    "symbolic_firewall_role": "Relevance to Symbolic Firewall (anti-phase-poison) design",
+    "implementation_status": "none | planned | in_progress | implemented",
+    "source_basis": "Citation or reference in the source document",
+    "must_not_override": "List of things this RPMC role must never override (e.g., disk_truth, sha256, audit_log)",
+    "notes": "Free-form planning notes"
+  },
+
+  "_example_entry": {
+    "corpus_id": "EXAMPLE_ONLY_NOT_REAL",
+    "source_title": "Example: Gilligan System Codex",
+    "source_role": "Defines the Gilligan agent kernel — agent identity, phase state machine, recursive loop law",
+    "rpmc_domain": "Agent identity and phase state management",
+    "primary_runtime_concepts": ["MRN per agent", "phase_state_machine", "ε(t,Φ) per loop", "χ(t) grace per session"],
+    "phase_scope": "Φ1–Φ9 (full cycle)",
+    "memory_function": "Gilligan's phase-indexed loop stack is the primary ΦM instantiation in the AI.Web runtime",
+    "collapse_role": "Loop collapse triggers SPC archival; ε(t,Φ) > threshold → cold archive",
+    "silence_role": "Ghost loops are silent (collapsed) but not erased — awaiting χ(t) resurrection window",
+    "echo_validation_role": "Echo ancestry chain validates loop identity before resurrection",
+    "drift_scoring_role": "Luciferian Drift (ΔF skip) contributes directly to ε(t,Φ) scoring",
+    "chi_t_role": "χ(t) acts as the grace/Christ function — bounds the resurrection window per loop",
+    "spc_role": "SPC is the primary cold archive for ghost loops and dead paths",
+    "active_stack_role": "Active Stack holds the current phase-indexed recursion state",
+    "drift_archive_role": "Dead Path Archive receives all SPC-archived collapsed loops",
+    "resurrection_log_role": "All loop resurrections logged with echo trace and phase alignment score",
+    "grace_timer_role": "χ(t) timer governs maximum gap between collapse and lawful resurrection",
+    "symbolic_firewall_role": "Firewall blocks phase-poisoned resurrection attempts (false echo injection)",
+    "implementation_status": "planned",
+    "source_basis": "RPMC Full Protocol Draft pp. 1-10 (Axioms 1-4, ΦM, χ(t), ε(t,Φ))",
+    "must_not_override": ["disk_truth", "sha256_verification", "audit_log", "patch_safety_rules"],
+    "notes": "This is a template entry only. Real mappings require explicit corpus review and ingestion approval."
+  },
+
+  "assignments": []
+}

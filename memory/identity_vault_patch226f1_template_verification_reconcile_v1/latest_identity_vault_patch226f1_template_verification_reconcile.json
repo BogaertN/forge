@@ -1,0 +1,137 @@
+{
+  "boundary": "read-only template verification reconcile; no writes outside Forge memory reports",
+  "databases": {
+    "canonical": {
+      "error": null,
+      "exists": true,
+      "ok": true,
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/data/identity_vault.db",
+      "rows": {
+        "agent_profiles": 0,
+        "audit_logs": 0,
+        "feedback_logs": 0,
+        "session_state": 0,
+        "sqlite_sequence": 0,
+        "user_profiles": 0
+      },
+      "tables": [
+        "agent_profiles",
+        "audit_logs",
+        "feedback_logs",
+        "session_state",
+        "sqlite_sequence",
+        "user_profiles"
+      ]
+    },
+    "legacy": {
+      "error": null,
+      "exists": true,
+      "ok": true,
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/vault.db",
+      "rows": {
+        "feedback_logs": 0,
+        "profiles": 1,
+        "session_state": 1,
+        "sqlite_sequence": 0
+      },
+      "tables": [
+        "feedback_logs",
+        "profiles",
+        "session_state",
+        "sqlite_sequence"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "code": "IV_TEMPLATES_BLUEPRINT_VALID_RECONCILED",
+      "level": "INFO",
+      "message": "Both repaired Identity Vault templates satisfy required operational identity structure."
+    },
+    {
+      "code": "IV_NODE_JSON_PARSE_OK",
+      "level": "INFO",
+      "message": "Both templates parse successfully through Node JSON.parse."
+    },
+    {
+      "code": "IV_NO_MUTATION_RECONCILED",
+      "level": "INFO",
+      "message": "Verification was read-only: templates, DBs, .env metadata, RMC memory, and Forge registry stayed unchanged."
+    },
+    {
+      "code": "IV_DATABASES_READONLY_OK",
+      "level": "INFO",
+      "message": "Canonical and legacy Identity Vault databases opened read-only for verification."
+    }
+  ],
+  "generated_at_utc": "2026-05-23T22:05:56Z",
+  "safety": {
+    "agent_identity_activation_performed": false,
+    "agent_template_sha_unchanged_during_verify": true,
+    "canonical_db_sha_unchanged": true,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "forge_tool_registry_modified": false,
+    "identity_vault_database_write_performed": false,
+    "identity_vault_template_write_performed": false,
+    "legacy_db_sha_unchanged": true,
+    "profiles_created": false,
+    "rmc_memory_write_performed": false,
+    "tool_registry_sha_unchanged": true,
+    "user_template_sha_unchanged_during_verify": true
+  },
+  "templates": {
+    "agent": {
+      "exists": true,
+      "forbidden_token_hits": [],
+      "inactive_defaults_ok": true,
+      "indexed_columns_present": true,
+      "lookup_field_ok": true,
+      "node": {
+        "available": true,
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": ""
+      },
+      "ok": true,
+      "operational_missing": [],
+      "path": "/home/nic/identity-vault/templates/agent-template.json",
+      "profile_schema_version_ok": true,
+      "python_error": null,
+      "python_json_ok": true,
+      "required_fields_list_ok": true,
+      "required_root_missing": [],
+      "sha16": "2449b3a0f0c190bb",
+      "sha256": "2449b3a0f0c190bbf2ec83bbb8969c8ae517b9c6a83382b401b27028b745acf0",
+      "target_table_ok": true
+    },
+    "user": {
+      "exists": true,
+      "forbidden_token_hits": [],
+      "inactive_defaults_ok": true,
+      "indexed_columns_present": true,
+      "lookup_field_ok": true,
+      "node": {
+        "available": true,
+        "ok": true,
+        "returncode": 0,
+        "stderr_tail": ""
+      },
+      "ok": true,
+      "operational_missing": [],
+      "path": "/home/nic/identity-vault/templates/user-template.json",
+      "profile_schema_version_ok": true,
+      "python_error": null,
+      "python_json_ok": true,
+      "required_fields_list_ok": true,
+      "required_root_missing": [],
+      "sha16": "e02dd7a6f0d5b26d",
+      "sha256": "e02dd7a6f0d5b26dae21cb4ee85d416ea24d558961c19b0a9047bd28c8cb835e",
+      "target_table_ok": true
+    }
+  },
+  "timestamp": "20260523_220556_UTC",
+  "verdict": "PASS"
+}

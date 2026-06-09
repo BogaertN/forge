@@ -1,0 +1,165 @@
+{
+  "backups": {
+    "echoforge": "SKIPPED_MISSING",
+    "forge": "SKIPPED_MISSING",
+    "identity_vault": "SKIPPED_MISSING",
+    "protoforge2": "SKIPPED_MISSING",
+    "rmc": "SKIPPED_MISSING"
+  },
+  "boundary": {
+    "creates_contract_files_only": true,
+    "does_not_activate_agent_identities": true,
+    "does_not_modify_rmc_memory": true,
+    "does_not_read_env_secret_values": true,
+    "does_not_register_tools": true,
+    "does_not_write_databases": true
+  },
+  "findings": [
+    {
+      "code": "AIWEB_SERVICE_CONTRACTS_WRITTEN",
+      "level": "INFO",
+      "message": "Five service contract draft files were written and validated."
+    }
+  ],
+  "patch_id": "patch222_aiweb_service_contracts",
+  "preflight": {
+    "echoforge_root_exists": false,
+    "identity_vault_contract_exists": true,
+    "protoforge2_root_exists": false,
+    "rmc_wrappers_exist": true,
+    "tool_registry_exists": true,
+    "tool_registry_sha256": "0c1f4153eff92a50db24ef9bb0d68b3cda4c40c70f2438e614d0494ce9fcaf6b"
+  },
+  "roots": {
+    "aiweb_root": "/home/nic/aiweb",
+    "contract_root": "/home/nic/aiweb/service_contracts",
+    "forge_root": "/home/nic/forge",
+    "identity_vault_root": "/home/nic/identity-vault"
+  },
+  "timestamp": "20260523_200713_UTC",
+  "validations": {
+    "echoforge": {
+      "issues": [],
+      "ok": true,
+      "path": "/home/nic/aiweb/service_contracts/echoforge.contract.json",
+      "required_fields_present": [
+        "name",
+        "role",
+        "allowed_reads",
+        "allowed_writes",
+        "forbidden_writes",
+        "api_or_cli_commands_exposed",
+        "audit_log_path",
+        "test_command",
+        "startup_command",
+        "shutdown_command",
+        "health_check_command",
+        "owner_authority"
+      ]
+    },
+    "forge": {
+      "issues": [],
+      "ok": true,
+      "path": "/home/nic/aiweb/service_contracts/forge.contract.json",
+      "required_fields_present": [
+        "name",
+        "role",
+        "allowed_reads",
+        "allowed_writes",
+        "forbidden_writes",
+        "api_or_cli_commands_exposed",
+        "audit_log_path",
+        "test_command",
+        "startup_command",
+        "shutdown_command",
+        "health_check_command",
+        "owner_authority"
+      ]
+    },
+    "identity_vault": {
+      "issues": [],
+      "ok": true,
+      "path": "/home/nic/aiweb/service_contracts/identity_vault.contract.json",
+      "required_fields_present": [
+        "name",
+        "role",
+        "allowed_reads",
+        "allowed_writes",
+        "forbidden_writes",
+        "api_or_cli_commands_exposed",
+        "audit_log_path",
+        "test_command",
+        "startup_command",
+        "shutdown_command",
+        "health_check_command",
+        "owner_authority"
+      ]
+    },
+    "protoforge2": {
+      "issues": [],
+      "ok": true,
+      "path": "/home/nic/aiweb/service_contracts/protoforge2.contract.json",
+      "required_fields_present": [
+        "name",
+        "role",
+        "allowed_reads",
+        "allowed_writes",
+        "forbidden_writes",
+        "api_or_cli_commands_exposed",
+        "audit_log_path",
+        "test_command",
+        "startup_command",
+        "shutdown_command",
+        "health_check_command",
+        "owner_authority"
+      ]
+    },
+    "rmc": {
+      "issues": [],
+      "ok": true,
+      "path": "/home/nic/aiweb/service_contracts/rmc.contract.json",
+      "required_fields_present": [
+        "name",
+        "role",
+        "allowed_reads",
+        "allowed_writes",
+        "forbidden_writes",
+        "api_or_cli_commands_exposed",
+        "audit_log_path",
+        "test_command",
+        "startup_command",
+        "shutdown_command",
+        "health_check_command",
+        "owner_authority"
+      ]
+    }
+  },
+  "verdict": "PASS",
+  "writes": {
+    "echoforge": {
+      "after_sha256": "f184c1b0e09c4fb4f66c94725e00c0d5dcf5e0b95daca85298969461ad39bbd2",
+      "before_sha256": null,
+      "path": "/home/nic/aiweb/service_contracts/echoforge.contract.json"
+    },
+    "forge": {
+      "after_sha256": "89095c3e3e242fc1679f9e1df67b65d56f52a230fcfcf5a8589496e38b2eae23",
+      "before_sha256": null,
+      "path": "/home/nic/aiweb/service_contracts/forge.contract.json"
+    },
+    "identity_vault": {
+      "after_sha256": "a5bbef9b1936785e60983672fd83b19942040c1329e197554f9259205ab049fb",
+      "before_sha256": null,
+      "path": "/home/nic/aiweb/service_contracts/identity_vault.contract.json"
+    },
+    "protoforge2": {
+      "after_sha256": "9a220cbb9eba531b7360334231885042050bdffa268bd6e1af035bfb7dd820d3",
+      "before_sha256": null,
+      "path": "/home/nic/aiweb/service_contracts/protoforge2.contract.json"
+    },
+    "rmc": {
+      "after_sha256": "60d27a5e39181fc6944ddd4b0f10d111d394740ae9ea13f011026bc42ba5a448",
+      "before_sha256": null,
+      "path": "/home/nic/aiweb/service_contracts/rmc.contract.json"
+    }
+  }
+}

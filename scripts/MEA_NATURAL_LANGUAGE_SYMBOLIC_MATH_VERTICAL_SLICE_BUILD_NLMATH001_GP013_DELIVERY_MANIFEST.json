@@ -1,0 +1,46 @@
+{
+  "accepted_baseline": "MATH-001R1 / GP-012R1 installed-results authority packet math001r1_gp012r1_install_results_20260531_220130_UTC.tar.gz",
+  "build_id": "NL-MATH-001-GP-013-NATURAL-LANGUAGE-SYMBOLIC-EXPRESSION-TO-ECHO-VERTICAL-SLICE",
+  "pipeline_path": [
+    "natural_language_request",
+    "aiweb_full_input_symbolic_math_language_compiler",
+    "typed_SymbolicMathOperationManifest",
+    "MATH001R1_isolated_verified_computation",
+    "VerifiedToolEvidenceBinding",
+    "MEA_ProblemManifest_seal",
+    "RMC_meaning_manifest",
+    "ManifestContractV2",
+    "deterministic_math_semantic_lexicon_renderer",
+    "actual_Echo_validation",
+    "DeliveryAuthorizationReceiptV2"
+  ],
+  "purpose": "First complete bounded natural-language symbolic expression request through typed MATH-001R1 evidence, real MEA seal, RMC meaning, actual Echo and DeliveryAuthorizationReceiptV2.",
+  "schema_version": "mea_natural_language_symbolic_math_vertical_slice_delivery_manifest_v1_gp013",
+  "supported_language_operation_families": [
+    "simplification",
+    "expansion",
+    "factoring",
+    "trigonometric_simplification",
+    "trigonometric_expansion",
+    "differentiation",
+    "integration",
+    "limits"
+  ],
+  "truth_boundaries": {
+    "actual_echo_required_for_delivery": true,
+    "adds_route_or_ui": false,
+    "calls_llm": false,
+    "changes_legacy_domain_router": false,
+    "computation_kernel_delivers_output": false,
+    "corpus_ingestion_added": false,
+    "mints_ct": false,
+    "new_external_dependency_installed": false,
+    "raw_user_text_sent_to_sympy": false,
+    "repurposes_historical_renderer_preview_lane": false,
+    "writes_contribution_economy": false,
+    "writes_identity_vault": false,
+    "writes_ledgers": false,
+    "writes_memory": false
+  },
+  "underlying_math_kernel_operation_family_count": 26
+}

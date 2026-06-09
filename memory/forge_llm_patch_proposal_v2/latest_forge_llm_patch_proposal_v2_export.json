@@ -1,0 +1,44 @@
+{
+  "active_patch": "Patch 149 \u2014 LLM Patch Proposal v2",
+  "authority": {
+    "export_only": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-19T17:34:21",
+  "next_patch": "Patch 150 \u2014 Live Apply Eligibility Gate v2",
+  "proposal_path": "/home/nic/forge/memory/forge_llm_patch_proposal_v2/latest_forge_llm_patch_proposal_v2.json",
+  "proposal_sha256": "d0949c2402dc6a324d4063490b09d52ef7d648eeaf15b567de7989073f64faa6",
+  "proposal_status": "FORGE_LLM_PATCH_PROPOSAL_V2_DRAFT_READY_NO_WRITE_AUTHORITY",
+  "recommended_next_patch": "Patch 150 \u2014 Live Apply Eligibility Gate v2",
+  "report_type": "FORGE_LLM_PATCH_PROPOSAL_V2_EXPORT",
+  "schema_version": "forge_llm_patch_proposal_v2_export_patch149",
+  "status": "FORGE_LLM_PATCH_PROPOSAL_V2_EXPORT_READY",
+  "summary": {
+    "proposal": {
+      "build_gate_status": "FORGE_BUILD_PHASE_GATE_READY",
+      "canonical_excluded": 26,
+      "canonical_included": 54,
+      "deferred_queue_status": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY",
+      "expected_commands": 544,
+      "source_authority_gaps": 12,
+      "source_authority_status": "FORGE_SOURCE_AUTHORITY_HARDENING_READY",
+      "target": "Patch 150 \u2014 Live Apply Eligibility Gate v2",
+      "test_fail": 0,
+      "tests": "CANONICAL_TEST_RUN_COMPLETED_ALL_PASS",
+      "tools": 462,
+      "write_authority": false
+    },
+    "verification": {
+      "problems": 0,
+      "target": "Patch 150 \u2014 Live Apply Eligibility Gate v2",
+      "warnings": 1,
+      "write_authority": false
+    }
+  },
+  "target": "Patch 150 \u2014 Live Apply Eligibility Gate v2",
+  "verification_path": "/home/nic/forge/memory/forge_llm_patch_proposal_v2/latest_forge_llm_patch_proposal_v2_verify.json",
+  "verification_sha256": "00b120b4dbd81269ab92ea3a66f1ef0f77d1d706bcd36df9446b6a839a003df8",
+  "verification_status": "FORGE_LLM_PATCH_PROPOSAL_V2_VERIFIED_READ_ONLY"
+}

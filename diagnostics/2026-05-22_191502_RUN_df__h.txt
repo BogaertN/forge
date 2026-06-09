@@ -1,0 +1,30 @@
+FORGE EXECUTED COMMAND RECORD
+══════════════════════════════════════════════════════════════════
+Command name    : df -h
+argv            : ['df', '-h']
+Timestamp       : 2026-05-22T19:15:02
+Session ID      : forge_2026_05_22_190938
+Forge Level     : 1.0 — Read-Only Command Runner
+Exit code       : 0 (OK)
+Duration        : 2ms
+Output lines    : 10
+Output SHA-256  : 02f03b86cd129caa
+══════════════════════════════════════════════════════════════════
+
+COMMAND OUTPUT (captured verbatim)
+───────────────────────────────────
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           6.3G  4.6M  6.3G   1% /run
+/dev/nvme1n1p2  1.8T  551G  1.2T  32% /
+tmpfs            32G  124M   32G   1% /dev/shm
+tmpfs           5.0M   24K  5.0M   1% /run/lock
+efivarfs        128K   50K   74K  40% /sys/firmware/efi/efivars
+tmpfs            32G  220K   32G   1% /run/qemu
+/dev/nvme1n1p1  1.1G  6.2M  1.1G   1% /boot/efi
+tmpfs           6.3G  180K  6.3G   1% /run/user/1000
+
+
+══════════════════════════════════════════════════════════════════
+NOTE: This command was executed by Forge Level 1.0 from the hard-coded allowlist.
+      No shell, no pipes, no redirects, no user input reached argv.
+══════════════════════════════════════════════════════════════════

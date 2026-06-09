@@ -1,0 +1,18 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "permission_enforcement_active": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T08:04:18",
+  "next_commands": [
+    "forge-mode-export",
+    "Install Patch 130 when ready"
+  ],
+  "next_phase": "MODE_PERMISSION_ENFORCEMENT",
+  "plain_english": "Mode registry exists but is not enforced. The next safe move is to make commands aware of allowed modes.",
+  "recommended_next_patch": "Patch 130 \u2014 Mode Permission Enforcement",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "schema_version": "forge_next_status_v1_patch129",
+  "status": "NEXT_PATCH_REQUIRED"
+}

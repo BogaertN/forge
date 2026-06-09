@@ -1,0 +1,44 @@
+FORGE EXECUTED COMMAND RECORD
+══════════════════════════════════════════════════════════════════
+Command name    : nvidia-smi
+argv            : ['nvidia-smi']
+Timestamp       : 2026-05-09T04:08:40
+Session ID      : forge_2026_05_09_040808
+Forge Level     : 1.0 — Read-Only Command Runner
+Exit code       : 0 (OK)
+Duration        : 49ms
+Output lines    : 24
+Output SHA-256  : 1e1b8bf6b30db340
+══════════════════════════════════════════════════════════════════
+
+COMMAND OUTPUT (captured verbatim)
+───────────────────────────────────
+Sat May  9 04:08:40 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.309.01             Driver Version: 535.309.01   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA GeForce RTX 3060 Ti     On  | 00000000:2B:00.0  On |                  N/A |
+|  0%   38C    P5              15W / 200W |    484MiB /  8192MiB |     11%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|    0   N/A  N/A      3767      G   /usr/lib/xorg/Xorg                          293MiB |
+|    0   N/A  N/A      4078      G   /usr/bin/gnome-shell                         90MiB |
+|    0   N/A  N/A      4966      G   ...-if-not-exists https://chatgpt.com/        2MiB |
+|    0   N/A  N/A      5015      G   ...n=20260508-010040.869000-production       85MiB |
++---------------------------------------------------------------------------------------+
+
+
+══════════════════════════════════════════════════════════════════
+NOTE: This command was executed by Forge Level 1.0 from the hard-coded allowlist.
+      No shell, no pipes, no redirects, no user input reached argv.
+══════════════════════════════════════════════════════════════════

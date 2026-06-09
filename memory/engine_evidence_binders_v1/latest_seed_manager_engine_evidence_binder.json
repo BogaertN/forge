@@ -1,0 +1,171 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/seed_manager",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/seed_manager",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "seed_manager",
+  "evidence_id": "EEB-06a9287346a56399",
+  "file_count": 5,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "c760a2f535e77b4e469dcc8ee41a5519b2178723f8441925bbe1d8b48052dbb5",
+      "excerpt_start": "[\n  {\n    \"seed_id\": \"cab4bdff-3360-44b2-bc8d-73590a95a7cd\",\n    \"type\": \"symbolic_memory\",\n    \"created_at\": \"2025-04-26T23:49:29.484735Z\",\n    \"status\": \"active\"\n  }\n]",
+      "functions_sample": [
+        "seed_id",
+        "cab4bdff",
+        "bc8d",
+        "type",
+        "symbolic_memory",
+        "created_at",
+        "status",
+        "active"
+      ],
+      "imports_sample": [],
+      "line_count": 8,
+      "path": "/home/nic/aiweb/engines/seed_manager/seed_bank.json",
+      "relative_to_candidate": "seed_bank.json",
+      "sha256": "c760a2f535e77b4e469dcc8ee41a5519b2178723f8441925bbe1d8b48052dbb5",
+      "size_bytes": 169,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "2ad603313cd8f3e1c37859c0ac18f9c11cb6c84a166fd00e7612c04ab5832dbc",
+      "excerpt_start": "import json\nimport uuid\nimport datetime\n\nSEED_STORAGE = \"seed_bank.json\"\n\ndef generate_seed(seed_type=\"symbolic_memory\"):\n    seed = {\n        \"seed_id\": str(uuid.uuid4()),\n        \"type\": seed_type,\n        \"created_at\": datetime.datetime.utcnow().isoformat() + \"Z\",\n        \"status\": \"active\"\n    }\n    try:\n        try:\n            with open(SEED_STORAGE, \"r\") as f:\n                seeds = json.load(f)\n        except (FileNotFoundError, json.JSONDecodeError):\n            seeds = []\n\n        seeds.append(seed)\n\n        with open(SEED_STORAGE, \"w\") as f:\n            json.dump(seeds, f, indent=2)\n\n        print(f\"✔️ New symbolic seed generated: {seed}\")\n        return seed\n    except Exception as e:\n        print(f\"[!] Failed to generate seed: {e}\")\n        return None\n",
+      "functions_sample": [
+        "generate_seed"
+      ],
+      "imports_sample": [
+        "import json",
+        "import uuid",
+        "import datetime"
+      ],
+      "line_count": 31,
+      "path": "/home/nic/aiweb/engines/seed_manager/seed_core.py",
+      "relative_to_candidate": "seed_core.py",
+      "sha256": "2ad603313cd8f3e1c37859c0ac18f9c11cb6c84a166fd00e7612c04ab5832dbc",
+      "size_bytes": 782,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "cb1492d5b15513d9ca622cbd7636fbbfb6043652cfef1a608db5d898a9270d07",
+      "excerpt_start": "{\n  \"engine\": \"Seed Manager\",\n  \"version\": \"v1\",\n  \"description\": \"Generates and manages symbolic seeds for memory recursion and recovery strategies.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Seed",
+        "Manager",
+        "version",
+        "description",
+        "Generates",
+        "and",
+        "manages",
+        "symbolic",
+        "seeds",
+        "for",
+        "memory",
+        "recursion",
+        "recovery",
+        "strategies"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/seed_manager/seed_manifest.json",
+      "relative_to_candidate": "seed_manifest.json",
+      "sha256": "cb1492d5b15513d9ca622cbd7636fbbfb6043652cfef1a608db5d898a9270d07",
+      "size_bytes": 153,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "21be0611885c4470294d274b9490100ed94e1bacb1034a74f7b5df4dc4208b55",
+      "excerpt_start": "# Seed Manager Engine\n\nCreates and manages symbolic seeds.\n\nSeeds are used for memory recursion, loop recovery, and symbolic drift correction.\n\n",
+      "functions_sample": [
+        "Seed",
+        "Manager",
+        "Engine",
+        "Creates",
+        "and",
+        "manages",
+        "symbolic",
+        "seeds",
+        "Seeds",
+        "are",
+        "used",
+        "for",
+        "memory",
+        "recursion",
+        "loop",
+        "recovery",
+        "drift",
+        "correction"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/seed_manager/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "21be0611885c4470294d274b9490100ed94e1bacb1034a74f7b5df4dc4208b55",
+      "size_bytes": 144,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "6fe0caa1737b2f1e1cac80767b3e31b364e57c6664c64af280293e0e0ead7396",
+      "excerpt_start": "from seed_core import generate_seed\n\ndef test_seed_generation():\n    try:\n        seed = generate_seed()\n        assert \"seed_id\" in seed\n        assert seed[\"status\"] == \"active\"\n        print(\"✅ Test Passed: Seed created successfully.\")\n    except Exception as e:\n        print(f\"❌ Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_seed_generation()\n",
+      "functions_sample": [
+        "test_seed_generation"
+      ],
+      "imports_sample": [
+        "from seed_core import generate_seed"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/seed_manager/test_seed.py",
+      "relative_to_candidate": "test_seed.py",
+      "sha256": "6fe0caa1737b2f1e1cac80767b3e31b364e57c6664c64af280293e0e0ead7396",
+      "size_bytes": 362,
+      "suffix": ".py"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "generate_seed",
+    "test_seed_generation"
+  ],
+  "warnings": []
+}

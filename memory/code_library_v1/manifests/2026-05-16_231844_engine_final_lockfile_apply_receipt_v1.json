@@ -1,0 +1,23 @@
+{
+  "schema_version": "engine_final_lockfile_apply_receipt_v1_patch115",
+  "report_type": "ENGINE_FINAL_LOCKFILE_APPLY_RECEIPT_V1",
+  "policy_version": "patch115_final_approved_engine_lockfile_v1",
+  "created_at": "2026-05-16T23:18:44",
+  "status": "ENGINE_FINAL_LOCKFILE_WRITTEN",
+  "stable_final_lockfile_path": "/home/nic/forge/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+  "stable_final_lockfile_sha256": "b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab",
+  "timestamped_final_lockfile_path": "/home/nic/forge/memory/code_library_v1/manifests/2026-05-16_231844_engine_canonical_lockfile_v1.json",
+  "timestamped_final_lockfile_sha256": "b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab",
+  "included_count": 55,
+  "excluded_count": 25,
+  "source_proposal_path": "/home/nic/forge/memory/code_library_v1/manifests/latest_engine_final_lockfile_proposal_v1.json",
+  "source_proposal_sha256": "ac528762246528f94f71de9af996078adffff5b1328310e53c1e0fd670c04d7e",
+  "source_candidate_sha256": "a5ee63eda6aa8d0466a1eabb4799f0f16bc59dab452c95269288dbcba1ac11d6",
+  "source_readiness_sha256": "9586265e3b487bb49f54946548726a28fe4d44556377081ff72b9bd7742ab25a",
+  "source_ledger_sha256": "d1f6479c5fe04eda3bfdca9050e23f80e316abed87133bc79846b5a1e516d9ca",
+  "engine_files_changed": false,
+  "human_review_ledger_changed": false,
+  "quarantine_written": false,
+  "delete_performed": false,
+  "confirmation_token_used": true
+}

@@ -1,0 +1,368 @@
+{
+  "backups": [
+    {
+      "backup": "/home/nic/forge/backups/patch226c1_dashboard_roadmap_canonicalization_before/20260523_212636_UTC/main.py",
+      "source": "/home/nic/forge/main.py"
+    },
+    {
+      "backup": "/home/nic/forge/backups/patch226c1_dashboard_roadmap_canonicalization_before/20260523_212636_UTC/scripts/aiweb_patch226c1_dashboard_roadmap_canonicalize.py",
+      "source": "/home/nic/forge/scripts/aiweb_patch226c1_dashboard_roadmap_canonicalize.py"
+    }
+  ],
+  "boundary": "dashboard roadmap canonicalization; no Identity Vault/RMC DB/memory writes; no agent activation",
+  "candidate_files": [
+    {
+      "markers": [
+        "forge-dashboard-roadmap-status",
+        "forge-dashboard-roadmap-list",
+        "FORGE_DASHBOARD_ROADMAP_PANEL_READY",
+        "Dashboard Roadmap Panel",
+        "S19AC",
+        "Patch 147"
+      ],
+      "path": "/home/nic/forge/main.py",
+      "score": 6,
+      "sha16": "b99399b1339fef66"
+    },
+    {
+      "markers": [
+        "forge-dashboard-roadmap-status",
+        "forge-dashboard-roadmap-list",
+        "FORGE_DASHBOARD_ROADMAP_PANEL_READY",
+        "Dashboard Roadmap Panel",
+        "S19AC",
+        "Patch 147"
+      ],
+      "path": "/home/nic/forge/scripts/aiweb_patch226c1_dashboard_roadmap_canonicalize.py",
+      "score": 6,
+      "sha16": "fd1f34c76c7e1c82"
+    },
+    {
+      "markers": [
+        "S19AC",
+        "Patch 147"
+      ],
+      "path": "/home/nic/forge/config/dashboard_roadmap_canonical_aiweb_bootstrap_v1.json",
+      "score": 2,
+      "sha16": "0f07ebd660ba3a93"
+    },
+    {
+      "markers": [
+        "S19AC",
+        "Patch 147"
+      ],
+      "path": "/home/nic/forge/scripts/README_patch226c1_dashboard_roadmap_canonicalization.md",
+      "score": 2,
+      "sha16": "2c5a3c0107546537"
+    },
+    {
+      "markers": [
+        "Patch 147"
+      ],
+      "path": "/home/nic/forge/config/tool_registry.json",
+      "score": 1,
+      "sha16": "0c1f4153eff92a50"
+    }
+  ],
+  "canonical_current": {
+    "patch": "Patch 226C",
+    "stage_id": "S19AT",
+    "status": "ACTIVE",
+    "title": "Identity Vault Profile Seed Preview / Template Repair Gate"
+  },
+  "canonical_entries": [
+    {
+      "id": "S19AC",
+      "status": "DONE",
+      "title": "Runtime Candidate Sandbox Stage Create/Verify / Forge-Owned Copy Only"
+    },
+    {
+      "id": "S19AD",
+      "status": "DONE",
+      "title": "Runtime Candidate Sandbox Copy Integrity Review / No-Write Readback Receipt"
+    },
+    {
+      "id": "S19AE",
+      "status": "DONE",
+      "title": "RMC Integration Freeze / No-Move Snapshot"
+    },
+    {
+      "id": "S19AF",
+      "status": "DONE",
+      "title": "RMC Missing Module Install / Phase Parser, Drift Arbitrator, Echo Gate"
+    },
+    {
+      "id": "S19AG",
+      "status": "DONE",
+      "title": "Forge RMC Read-Only Wrapper"
+    },
+    {
+      "id": "S19AH",
+      "status": "DONE",
+      "title": "Forge RMC Runtime Preview Check"
+    },
+    {
+      "id": "S19AI",
+      "status": "DONE",
+      "title": "Identity Vault Boundary Scan / Hygiene"
+    },
+    {
+      "id": "S19AJ",
+      "status": "DONE",
+      "title": "Identity Vault Readiness Reconcile"
+    },
+    {
+      "id": "S19AK",
+      "status": "DONE",
+      "title": "Identity Vault Read-Only Adapter"
+    },
+    {
+      "id": "S19AL",
+      "status": "DONE",
+      "title": "Identity Vault Drift Auto-Confirm Safety"
+    },
+    {
+      "id": "S19AM",
+      "status": "DONE",
+      "title": "Identity Vault DB Canonical Reconcile"
+    },
+    {
+      "id": "S19AN",
+      "status": "DONE",
+      "title": "AI.Web Service Contracts Apply"
+    },
+    {
+      "id": "S19AO",
+      "status": "DONE",
+      "title": "AI.Web Service Contracts Verify"
+    },
+    {
+      "id": "S19AP",
+      "status": "DONE",
+      "title": "Forge AI.Web Read-Only Connector Commands"
+    },
+    {
+      "id": "S19AQ",
+      "status": "DONE",
+      "title": "Identity Vault Operational Schema Alignment"
+    },
+    {
+      "id": "S19AR",
+      "status": "DONE",
+      "title": "Identity Vault Schema Migration Apply"
+    },
+    {
+      "id": "S19AS",
+      "status": "DONE",
+      "title": "Legacy Profile Migration Preview / Preserve Legacy user789"
+    },
+    {
+      "id": "S19AT",
+      "status": "ACTIVE",
+      "title": "Identity Vault Profile Seed Preview / Template Repair Gate"
+    },
+    {
+      "id": "S19AU",
+      "status": "NEXT",
+      "title": "Identity Vault Template Repair Preview"
+    },
+    {
+      "id": "S19AV",
+      "status": "FUTURE",
+      "title": "Apply Repaired Identity Vault Templates"
+    },
+    {
+      "id": "S19AW",
+      "status": "FUTURE",
+      "title": "Verify Repaired Identity Vault Templates"
+    },
+    {
+      "id": "S19AX",
+      "status": "FUTURE",
+      "title": "Write Inactive Draft Identity Vault Profiles"
+    },
+    {
+      "id": "S19AY",
+      "status": "FUTURE",
+      "title": "Verify Inactive Draft Identity Vault Profiles"
+    },
+    {
+      "id": "S19AZ",
+      "status": "FUTURE",
+      "title": "Upgrade Full Profile Read-Only Adapter"
+    },
+    {
+      "id": "S19BA",
+      "status": "FUTURE",
+      "title": "RMC Namespace Scaffold Preview"
+    },
+    {
+      "id": "S19BB",
+      "status": "FUTURE",
+      "title": "RMC Namespace Scaffold Apply / Empty Namespaces Only"
+    },
+    {
+      "id": "S19BC",
+      "status": "FUTURE",
+      "title": "Bootstrap Handshake Dry-Run v2 / Inactive Profile Respected"
+    },
+    {
+      "id": "S19BD",
+      "status": "FUTURE",
+      "title": "Agent Activation Preflight Command"
+    },
+    {
+      "id": "S19BE",
+      "status": "FUTURE",
+      "title": "Activate Gilligan as Governed Profile"
+    },
+    {
+      "id": "S19BF",
+      "status": "FUTURE",
+      "title": "Gilligan Governed Handshake"
+    },
+    {
+      "id": "S19BG",
+      "status": "FUTURE",
+      "title": "RMC Test Receipt Write"
+    },
+    {
+      "id": "S19BH",
+      "status": "FUTURE",
+      "title": "Athena Activation and Governed Handshake"
+    },
+    {
+      "id": "S19BI",
+      "status": "FUTURE",
+      "title": "Neo Activation and Governed Handshake"
+    },
+    {
+      "id": "S19BJ",
+      "status": "FUTURE",
+      "title": "ProtoForge2 Discovery Scan"
+    },
+    {
+      "id": "S19BK",
+      "status": "FUTURE",
+      "title": "ProtoForge2 Read-Only Connector"
+    },
+    {
+      "id": "S19BL",
+      "status": "FUTURE",
+      "title": "ProtoForge2 Controlled Simulation Handshake"
+    },
+    {
+      "id": "S19BM",
+      "status": "FUTURE",
+      "title": "EchoForge Discovery Scan"
+    },
+    {
+      "id": "S19BN",
+      "status": "FUTURE",
+      "title": "EchoForge Read-Only Connector"
+    },
+    {
+      "id": "S19BO",
+      "status": "FUTURE",
+      "title": "EchoForge Build-Intention Preview"
+    },
+    {
+      "id": "S19BP",
+      "status": "FUTURE",
+      "title": "Full EchoForge \u2192 Forge \u2192 ProtoForge2 \u2192 RMC Approval Loop"
+    }
+  ],
+  "canonical_next_patch": {
+    "patch": "Patch 226D",
+    "stage_id": "S19AU",
+    "title": "Identity Vault Template Repair Preview / No-Write JSON Repair Review"
+  },
+  "changed_files": [
+    {
+      "after_sha16": "c4ea73b23e31cae7",
+      "before_sha16": "b99399b1339fef66",
+      "changed": true,
+      "changes": [
+        "literal_replace::Dashboard Roadmap Panel Status \u2014 Patch 147",
+        "literal_replace::Dashboard Roadmap Panel List \u2014 Patch 147",
+        "compact_replace::\"Runtime Candidate Sandbox Stage Create/Verify / Forge-Owned Copy Only\""
+      ],
+      "path": "/home/nic/forge/main.py",
+      "restored": false
+    },
+    {
+      "after_sha16": "8bc5b8fedfd228fd",
+      "before_sha16": "fd1f34c76c7e1c82",
+      "changed": true,
+      "changes": [
+        "literal_replace::Dashboard Roadmap Panel Status \u2014 Patch 147",
+        "literal_replace::Dashboard Roadmap Panel List \u2014 Patch 147",
+        "literal_replace::Current    : S19AC \u2014 Runtime Candidate Sandbox Stage Create/Verify / For",
+        "literal_replace::Next patch : Patch 184 \u2014 Runtime Candidate Sandbox Copy Integrity Review",
+        "literal_replace::S19AC ACTIVE   Runtime Candidate Sandbox Stage Create/Verify / Forge-Own",
+        "literal_replace::S19AD NEXT     Runtime Candidate Sandbox Copy Integrity Review / No-Writ",
+        "compact_replace::\"current\": \"S19AC\"",
+        "compact_replace::'current': 'S19AC'",
+        "compact_replace::\"next_patch\": \"Patch 184\"",
+        "compact_replace::'next_patch': 'Patch 184'",
+        "compact_replace::\"Runtime Candidate Sandbox Stage Create/Verify / Forge-Owned Copy Only\"",
+        "compact_replace::'Runtime Candidate Sandbox Stage Create/Verify / Forge-Owned Copy Only'"
+      ],
+      "path": "/home/nic/forge/scripts/aiweb_patch226c1_dashboard_roadmap_canonicalize.py",
+      "restored": false
+    }
+  ],
+  "compile_checks": [
+    {
+      "attempted": true,
+      "ok": true,
+      "path": "/home/nic/forge/main.py"
+    },
+    {
+      "attempted": true,
+      "ok": true,
+      "path": "/home/nic/forge/scripts/aiweb_patch226c1_dashboard_roadmap_canonicalize.py"
+    }
+  ],
+  "current_before_from_user_terminal": {
+    "current": "S19AC \u2014 Runtime Candidate Sandbox Stage Create/Verify / Forge-Owned Copy Only",
+    "next_patch": "Patch 184 \u2014 Runtime Candidate Sandbox Copy Integrity Review / No-Write Readback Receipt",
+    "panel_patch": "Patch 147"
+  },
+  "findings": [
+    {
+      "code": "ROADMAP_SOURCE_UPDATED",
+      "level": "INFO",
+      "message": "At least one Forge dashboard roadmap source file was backed up and updated."
+    },
+    {
+      "code": "CANONICAL_MANIFEST_WRITTEN",
+      "level": "INFO",
+      "message": "/home/nic/forge/config/dashboard_roadmap_canonical_aiweb_bootstrap_v1.json"
+    }
+  ],
+  "manifest_after": {
+    "exists": true,
+    "mode": "0o664",
+    "mtime_ns": 1779571596806703929,
+    "sha256": "0f07ebd660ba3a93edec8ffbb8a79324e445f3ce10ab1f4b080d9065fabbf215",
+    "size": 5967
+  },
+  "manifest_before": {
+    "exists": false
+  },
+  "manifest_path": "/home/nic/forge/config/dashboard_roadmap_canonical_aiweb_bootstrap_v1.json",
+  "manifest_written": true,
+  "safety": {
+    "agent_identity_activation_performed": false,
+    "canonical_db_sha_unchanged": true,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "identity_vault_db_write_performed": false,
+    "legacy_db_sha_unchanged": true,
+    "rmc_memory_write_performed": false,
+    "tool_registry_sha_unchanged": true
+  },
+  "timestamp": "20260523_212636_UTC",
+  "verdict": "FAIL"
+}

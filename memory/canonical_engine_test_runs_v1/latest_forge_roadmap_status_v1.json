@@ -1,0 +1,31 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "ledger_mutation": false,
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "completed": [
+    "Final canonical engine lockfile",
+    "Deferred/excluded engine disposition report",
+    "Forge master status report",
+    "LLM planning packet schema/template",
+    "Forge self-update proposal gate",
+    "Forge self-snapshot gate",
+    "Forge self-update sandbox",
+    "Canonical engine test inventory",
+    "Canonical engine safe test runner"
+  ],
+  "created_at": "2026-05-17T07:03:54",
+  "current_milestone": "Canonical engine safe test runner report ready",
+  "next_patch_sequence": [
+    "Patch 125 — Canonical Engine Relationship Map",
+    "Patch 126 — Patch Impact Map",
+    "Patch 127 — Forge Status API",
+    "Patch 128 — Dashboard Read-Only View",
+    "Patch 129 — Mode Registry"
+  ],
+  "report_type": "FORGE_ROADMAP_STATUS_V1",
+  "schema_version": "forge_roadmap_status_v1_patch124",
+  "status": "ROADMAP_STATUS_READY"
+}

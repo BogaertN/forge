@@ -1,0 +1,233 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_BATCH_COMMIT_GATE",
+    "patch": "107",
+    "project_file_write_authority": false,
+    "rule": "Patch 107 may commit Patch106 evidence-based batch queue decisions into engine_review_ledger_v1 only after queue decision, Patch103 approval helper, Patch102 cross-check, evidence binder, live candidate path, and live file SHA rechecks. It does not edit engine files or create final lockfile authority.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_batch_commits_v1",
+      "Forge-owned plan/receipt files only until explicit confirm token"
+    ]
+  },
+  "blockers": [],
+  "confirm_token_required": "CONFIRM_COMMIT_EVIDENCE_BATCH_QUEUE",
+  "counts": {
+    "already_committed_skipped": 2,
+    "batch_decision_rows": 3,
+    "blockers": 0,
+    "eligible_for_commit": 1,
+    "warnings": 5
+  },
+  "created_at": "2026-05-16_080024",
+  "ledger_path": "/home/nic/forge/memory/code_library_v1/manifests/engine_review_ledger_v1.json",
+  "ledger_sha256_at_plan": "481e51c8e8cd634ccfdfbaa96b6732161f18ab460fca23f6bd5cee76f786e698",
+  "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+  "rows": [
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-15_142116_agent_reflection_engine_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "86238f9d3ffd62ef913dd79cbe9dc5e4a2b3040d6cef8570fc6afa53ba9b8b7c",
+      "approval_helper_sha256_expected": "86238f9d3ffd62ef913dd79cbe9dc5e4a2b3040d6cef8570fc6afa53ba9b8b7c",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-15_142116_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "e70f5b604bbc7f8ec71dbd8ee9a78e3769ac4cd5e82a22fa373c7a9baea81efa",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/agent_reflection_engine",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_agent_reflection_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "61b670851a8db1682f0e7e09e8dd26eae156de95c9c7661f14ee17e87ef6f86b",
+      "crosscheck_sha256_expected": "61b670851a8db1682f0e7e09e8dd26eae156de95c9c7661f14ee17e87ef6f86b",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": false,
+      "engine_family": "agent_reflection_engine",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_agent_reflection_engine_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "88003317072045511631fd3e7e175f9f36759608d1ef0a1d2a4958b35d6830d4",
+      "evidence_binder_sha256_expected": "88003317072045511631fd3e7e175f9f36759608d1ef0a1d2a4958b35d6830d4",
+      "evidence_id": "EEB-efe9b78ceabc9853",
+      "future_lockfile_block_reason": null,
+      "future_lockfile_eligible_after_commit": true,
+      "ledger_current_future_lockfile_eligible": true,
+      "ledger_current_review_status": "APPROVED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "3326826534de3f1ce537d01a8950118ad2c034860de16eb022d38434a4508a8e",
+          "exists_now": true,
+          "expected_sha256": "3326826534de3f1ce537d01a8950118ad2c034860de16eb022d38434a4508a8e",
+          "path": "/home/nic/aiweb/engines/agent_reflection_engine/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "e2124108c3bf4848c0b0e16ab1275f1dd083d7f3455a3245518b7d4d197266b7",
+          "exists_now": true,
+          "expected_sha256": "e2124108c3bf4848c0b0e16ab1275f1dd083d7f3455a3245518b7d4d197266b7",
+          "path": "/home/nic/aiweb/engines/agent_reflection_engine/reflection_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "2feabf3cbcde360cb6ebf6542190c61ebcf99e08cc03f0d9d44a11ec2fb3d51b",
+          "exists_now": true,
+          "expected_sha256": "2feabf3cbcde360cb6ebf6542190c61ebcf99e08cc03f0d9d44a11ec2fb3d51b",
+          "path": "/home/nic/aiweb/engines/agent_reflection_engine/reflection_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "51597c796861770b0ad25e87537165a018540db936f9c7b06302b343ea52db5b",
+          "exists_now": true,
+          "expected_sha256": "51597c796861770b0ad25e87537165a018540db936f9c7b06302b343ea52db5b",
+          "path": "/home/nic/aiweb/engines/agent_reflection_engine/test_reflection.py",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-agent_reflection_engine-2026-05-15_142116",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-15_142116_agent_reflection_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "511af76cf6934dd0dfdefca2d01d14fba336e72f1417e0656665a2f45edc17d2",
+      "queue_decision_sha256_expected": "511af76cf6934dd0dfdefca2d01d14fba336e72f1417e0656665a2f45edc17d2",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed"
+      ]
+    },
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-15_145924_agents_stack_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "91cae716fe286ad90f1987be4d2ee5de1fa74799be23210b60ca3e160e33cfba",
+      "approval_helper_sha256_expected": "91cae716fe286ad90f1987be4d2ee5de1fa74799be23210b60ca3e160e33cfba",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-15_145924_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "1259c4a4345a78b45a7b1432c9d9c3e6051d023584167703c26e68b30c411013",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/agents_stack",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_agents_stack_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "49db6076bd1c890d6c40c7956d93b046bf14443fcfb076442590f98c6d766bbc",
+      "crosscheck_sha256_expected": "49db6076bd1c890d6c40c7956d93b046bf14443fcfb076442590f98c6d766bbc",
+      "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+      "eligible_for_commit": false,
+      "engine_family": "agents_stack",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_agents_stack_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "03de35cf02a987df13447f5dce8cabecf8143df1cdcbe6ed1e2b347e07085256",
+      "evidence_binder_sha256_expected": "03de35cf02a987df13447f5dce8cabecf8143df1cdcbe6ed1e2b347e07085256",
+      "evidence_id": "EEB-e7eb75087380b7b6",
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "future_lockfile_eligible_after_commit": false,
+      "ledger_current_future_lockfile_eligible": false,
+      "ledger_current_review_status": "DEFERRED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "2257c08e3fbe259bcb7180b23c537fe056768a43b4c50e7c2ec62206d2d9f9b1",
+          "exists_now": true,
+          "expected_sha256": "2257c08e3fbe259bcb7180b23c537fe056768a43b4c50e7c2ec62206d2d9f9b1",
+          "path": "/home/nic/aiweb/runtime_wrappers/agents_stack/stack_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "abceaff87cf1977b37157a3b29b3514525e4d77a50ee321098f24db01f5b2471",
+          "exists_now": true,
+          "expected_sha256": "abceaff87cf1977b37157a3b29b3514525e4d77a50ee321098f24db01f5b2471",
+          "path": "/home/nic/aiweb/runtime_wrappers/agents_stack/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "8a2f5e4e73d3729a0e33f24ea35affffbf7f96823d8143153d2b56358f795242",
+          "exists_now": true,
+          "expected_sha256": "8a2f5e4e73d3729a0e33f24ea35affffbf7f96823d8143153d2b56358f795242",
+          "path": "/home/nic/aiweb/runtime_wrappers/agents_stack/test_agents_stack_loader.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "13386e29279ee587051029867f0601c554e1635eb89ca061b694b2803591c95b",
+          "exists_now": true,
+          "expected_sha256": "13386e29279ee587051029867f0601c554e1635eb89ca061b694b2803591c95b",
+          "path": "/home/nic/aiweb/runtime_wrappers/agents_stack/agents_stack_loader.py",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-agents_stack-2026-05-15_145924",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-15_145924_agents_stack_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "6ad220e3e10ff4aeba1675eb8f07d1b6311991ca9e604c2f9cb99d4ae94c9937",
+      "queue_decision_sha256_expected": "6ad220e3e10ff4aeba1675eb8f07d1b6311991ca9e604c2f9cb99d4ae94c9937",
+      "target_review_status": "DEFERRED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed"
+      ]
+    },
+    {
+      "already_committed": false,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_074606_ascii_interpreter_engine_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "dbaf5335c8e30033d64fb098aab7bce20d162f5483998f5abb3b4f38f66cc43d",
+      "approval_helper_sha256_expected": "dbaf5335c8e30033d64fb098aab7bce20d162f5483998f5abb3b4f38f66cc43d",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_074606_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "5a258c0a2289fc2c3d6044c68a3424a35844224c75b1deee16d6aa7f7d4fbc08",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/ascii_interpreter_engine",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_ascii_interpreter_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "0b269d39cd6e4d926372225fad3c7b525bfe51b0e36faf38b12e0d34ad0a7345",
+      "crosscheck_sha256_expected": "0b269d39cd6e4d926372225fad3c7b525bfe51b0e36faf38b12e0d34ad0a7345",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": true,
+      "engine_family": "ascii_interpreter_engine",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_ascii_interpreter_engine_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "cf3cc3c103a0e4736548c780e291c116ca7669aaf8e501ca8c1fdbbf80f4f891",
+      "evidence_binder_sha256_expected": "cf3cc3c103a0e4736548c780e291c116ca7669aaf8e501ca8c1fdbbf80f4f891",
+      "evidence_id": "EEB-2acca33f6ecda788",
+      "future_lockfile_block_reason": null,
+      "future_lockfile_eligible_after_commit": true,
+      "ledger_current_future_lockfile_eligible": false,
+      "ledger_current_review_status": "PENDING_REVIEW",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "ecab6b25f98342639013e60f92dd6345fc09cbabf945795260570462a867dfc0",
+          "exists_now": true,
+          "expected_sha256": "ecab6b25f98342639013e60f92dd6345fc09cbabf945795260570462a867dfc0",
+          "path": "/home/nic/aiweb/engines/ascii_interpreter_engine/ascii_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "5ce7ca3a9f2c768135a4cfb0f78e92695b4b80f21e6775caad5770a81cc6ca1c",
+          "exists_now": true,
+          "expected_sha256": "5ce7ca3a9f2c768135a4cfb0f78e92695b4b80f21e6775caad5770a81cc6ca1c",
+          "path": "/home/nic/aiweb/engines/ascii_interpreter_engine/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "0ddef67c649165cc62750aecf999417bc272288c1b94bff514aedeed69bfdadd",
+          "exists_now": true,
+          "expected_sha256": "0ddef67c649165cc62750aecf999417bc272288c1b94bff514aedeed69bfdadd",
+          "path": "/home/nic/aiweb/engines/ascii_interpreter_engine/test_ascii_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "031b426284514a757fc0ff5f218984eed571362285f25de694d00c7fbf0af9c6",
+          "exists_now": true,
+          "expected_sha256": "031b426284514a757fc0ff5f218984eed571362285f25de694d00c7fbf0af9c6",
+          "path": "/home/nic/aiweb/engines/ascii_interpreter_engine/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-ascii_interpreter_engine-2026-05-16_074606",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_074606_ascii_interpreter_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "92569e10caf36734eb71bab68e8592e830e8ede860da4ba7a2cec0ee08da086c",
+      "queue_decision_sha256_expected": "92569e10caf36734eb71bab68e8592e830e8ede860da4ba7a2cec0ee08da086c",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    }
+  ],
+  "schema_version": "engine_review_batch_commit_v1_patch107",
+  "source": "Patch106 batch approval queue decisions only",
+  "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY",
+  "warnings": [
+    "agent_reflection_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "agent_reflection_engine: ledger already has target review status; skipping as already committed",
+    "agents_stack: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "agents_stack: ledger already has target review status; skipping as already committed",
+    "ascii_interpreter_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

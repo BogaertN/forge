@@ -1,0 +1,71 @@
+FORGE DIAGNOSTIC PROPOSAL
+══════════════════════════════════════════════════════════════════
+Title           : Check Ollama service logs for errors or warnings related to GPU usage.
+Status          : REFUSED
+Timestamp       : 2026-05-08T21:09:56
+Session ID      : forge_2026_05_08_210818
+Forge Level     : 0.6 — Diagnostic Proposal Mode
+Proposal File   : /home/nic/forge/proposals/2026-05-08_210956_REFUSED_journalctl_-u_ollamaservice_--since_1_ho.txt
+══════════════════════════════════════════════════════════════════
+
+USER QUESTION
+─────────────
+What commands should I run to check why Ollama isn't using the GPU?
+
+
+PROPOSED COMMAND
+────────────────
+  journalctl -u ollama.service --since "1 hour ago"
+
+
+PURPOSE
+───────
+Check Ollama service logs for errors or warnings related to GPU usage.
+
+
+WHY IT IS REFUSED
+─────────────────
+This command reads system logs without modifying files.
+
+
+RISK LEVEL
+──────────
+LOW
+
+
+VALIDATION CHECK
+────────────────
+REFUSED — Command does not match any Level 0.6 allowed diagnostic pattern. Allowed examples: pwd, ls, git status, grep, find -maxdepth, cat <file>, df -h, free -h, nvidia-smi, systemctl status <service>.
+
+Blocked operators checked : &&  ;  |  $()  >  >>  ` (checked)
+Sensitive paths checked   : .ssh  .gnupg  credentials  secrets  (checked)
+Composition check         : single command only, no chaining
+
+
+APPROVED PATHS INVOLVED
+───────────────────────
+  (no approved paths explicitly referenced)
+
+
+EXPECTED OUTPUT
+───────────────
+Logs showing service status, errors, or GPU-related messages.
+
+
+WHAT COULD GO WRONG
+───────────────────
+Logs may not include GPU-specific details if the service isn't configured to log them.
+
+
+══════════════════════════════════════════════════════════════════
+MANUAL INSTRUCTION
+──────────────────
+THIS COMMAND WAS REFUSED BY FORGE LEVEL 0.6 SAFETY RULES.
+DO NOT RUN THIS COMMAND.
+
+Consult Forge for a safe inspection alternative.
+
+Forge refused this proposal to protect your system.
+The refusal has been logged to the audit trail.
+══════════════════════════════════════════════════════════════════
+Audit entry hash : 8a004937a66293f3

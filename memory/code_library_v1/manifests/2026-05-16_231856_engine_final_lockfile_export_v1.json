@@ -1,0 +1,19 @@
+{
+  "schema_version": "engine_final_lockfile_export_v1_patch115",
+  "report_type": "ENGINE_FINAL_LOCKFILE_EXPORT_V1",
+  "created_at": "2026-05-16T23:18:56",
+  "policy_version": "patch115_final_approved_engine_lockfile_v1",
+  "proposal_path": "/home/nic/forge/memory/code_library_v1/manifests/latest_engine_final_lockfile_proposal_v1.json",
+  "proposal_sha256": "ac528762246528f94f71de9af996078adffff5b1328310e53c1e0fd670c04d7e",
+  "receipt_path": "/home/nic/forge/memory/code_library_v1/manifests/2026-05-16_231844_engine_final_lockfile_apply_receipt_v1.json",
+  "receipt_sha256": "84b3cb1f34b4804815b719b285adb0f07d7eb586f1666fd320f0399207936ccd",
+  "stable_final_lockfile_path": "/home/nic/forge/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+  "stable_final_lockfile_sha256": "b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab",
+  "proposal_status": "READY_FOR_FINAL_LOCKFILE_WRITE",
+  "apply_status": "ENGINE_FINAL_LOCKFILE_WRITTEN",
+  "final_report_type": "ENGINE_CANONICAL_LOCKFILE_V1",
+  "included_count": 55,
+  "excluded_count": 25,
+  "engine_files_changed": false,
+  "quarantine_written": false
+}

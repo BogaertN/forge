@@ -1,0 +1,330 @@
+# Patch 68 Engine Canonical Review Export
+
+Mode: REVIEW ONLY. No engine files were moved, deleted, renamed, quarantined, locked, promoted, or edited.
+
+Engines indexed: 425
+Duplicate/version families: 80
+Provisional candidates: 0
+Review required: 80
+
+## Review Rows
+- **protoforge** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/protoforge_frozen_v1.03_os_ui_rfe_dae` score=97
+  - variants: 17
+  - flags: candidate_is_frozen, multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **symbolic_capacitor_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/symbolic_capacitor_engine` score=125
+  - variants: 14
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **tone_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/tone_engine` score=121
+  - variants: 12
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **drift_arbitration_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/drift_arbitration_engine` score=122
+  - variants: 11
+  - flags: candidate_is_frozen, high_duplicate_variant_count
+- **christping_listener** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/christping_listener` score=120
+  - variants: 10
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **cold_archive_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/cold_archive_engine_frozen_v1` score=79
+  - variants: 10
+  - flags: candidate_is_frozen, candidate_is_backup_or_archive, high_duplicate_variant_count
+- **control_panel_ui_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/control_panel_ui_engine_v1.02` score=134
+  - variants: 10
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **neo_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/neo_engine` score=120
+  - variants: 10
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **symbolic_feedback_loop_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/symbolic_feedback_loop_engine` score=120
+  - variants: 10
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **dream_state_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/dream_state_engine` score=119
+  - variants: 8
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **loop_resurrection_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/loop_resurrection_engine` score=120
+  - variants: 8
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **recursive_field_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/recursive_field_engine` score=132
+  - variants: 8
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **resonance_charge_meter** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/resonance_charge_meter` score=120
+  - variants: 8
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **memory_stack_engine_breathing** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/memory_stack_engine_breathing_v1` score=126
+  - variants: 7
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **agent_reflection_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/agent_reflection_engine` score=119
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **aiweb_os_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/aiweb_os_engine` score=122
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **athena_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/athena_engine` score=120
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **compute_contribution_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/compute_contribution_engine` score=119
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **contribution_dashboard_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/contribution_dashboard_engine` score=120
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **document_output_formatter** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/document_output_formatter` score=120
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **failsafe_manager** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/failsafe_manager` score=120
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **fluid_memory_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/fluid_memory_engine` score=119
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **goal_injection_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/goal_injection_engine` score=119
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **memory_stack_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/memory_stack_engine` score=126
+  - variants: 6
+  - flags: candidate_is_frozen, high_duplicate_variant_count
+- **naming_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/naming_engine` score=119
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **peer_communication_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/peer_communication_engine` score=119
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **plugin_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/plugin_engine` score=122
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **recursive_agent_kernel** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/recursive_agent_kernel` score=120
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **resonance_visualizer_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/resonance_visualizer_engine` score=120
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **seed_manager** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/seed_manager` score=120
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **symbolic_policy_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/symbolic_policy_engine` score=120
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **system_log_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/system_log_engine` score=121
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **tier_enforcer** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/tier_enforcer` score=123
+  - variants: 6
+  - flags: multiple_active_or_unfrozen_variants, high_duplicate_variant_count
+- **drift_signature_logger** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/drift_signature_logger` score=132
+  - variants: 5
+  - flags: multiple_active_or_unfrozen_variants
+- **phase_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/phase_engine` score=122
+  - variants: 5
+  - flags: multiple_active_or_unfrozen_variants
+- **stack_breather_phase2** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `simulations/phase_vs_linear_augmented/engines/stack_breather_phase2_frozen_v1_0_01` score=46
+  - variants: 5
+  - flags: candidate_is_frozen, candidate_root_class_simulation_copy, multiple_active_or_unfrozen_variants
+- **admin_override_console** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/admin_override_console` score=120
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **agents_stack** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/agents_stack_frozen_v1-0.01` score=100
+  - variants: 4
+  - flags: candidate_is_frozen, multiple_active_or_unfrozen_variants
+- **athena** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `agents/athena` score=38
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **christping_validator_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/christping_validator_engine` score=126
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **collapse_prevention_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/collapse_prevention_engine` score=121
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **contribution_ledger_stack** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/runtime_wrappers/contribution_ledger_stack` score=37
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **core_stack_breather** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/core_stack_breather` score=120
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **core_system_stack** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/runtime_wrappers/core_system_stack` score=35
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **drift_analyzer_tool** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/drift_analyzer_tool` score=120
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **echo_trace_visualizer** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/echo_trace_visualizer` score=120
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **entropy_monitor_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/entropy_monitor_engine` score=126
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **external_feed_listener** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/external_feed_listener` score=120
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **field_resonance_mapper** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/field_resonance_mapper` score=127
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **gilligan** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `agents/gilligan` score=44
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **gilligan_drift_correction_upgrade** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/gilligan_drift_correction_upgrade` score=121
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **glyph_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/glyph_engine` score=126
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **glyph_ui_overlay** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/symbolic_layers/glyph_ui_overlay` score=38
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **install_onboarding_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/install_onboarding_engine` score=120
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **neo** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `agents/neo` score=38
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **recursive_field_breather** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/recursive_field_breather` score=120
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **recursive_field_stack** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/runtime_wrappers/recursive_field_stack` score=35
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **resonance_display** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/symbolic_layers/resonance_display` score=38
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **resurrection_planner** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/resurrection_planner` score=120
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **spc_memory_migrator** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/spc_memory_migrator` score=120
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **symbolic_cognition_stack** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/runtime_wrappers/symbolic_cognition_stack` score=35
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **symbolic_drift_visualizer** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/symbolic_drift_visualizer` score=121
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **symbolic_glyph_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/symbolic_glyph_engine` score=119
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **symbolic_layers_stack** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/runtime_wrappers/symbolic_layers_stack` score=35
+  - variants: 4
+  - flags: multiple_active_or_unfrozen_variants
+- **activity_log** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `projects/recursive_lmm_grok1/engines/activity_log` score=66
+  - variants: 2
+  - flags: candidate_root_class_project_copy, multiple_active_or_unfrozen_variants
+- **aiweb_os** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/runtime_wrappers/aiweb_os_v1` score=-13
+  - variants: 2
+  - flags: candidate_is_test_only
+- **ascii_interpreter_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/ascii_interpreter_engine` score=120
+  - variants: 2
+  - flags: multiple_active_or_unfrozen_variants
+- **confusion_checker** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `projects/recursive_lmm_grok1/engines/confusion_checker` score=66
+  - variants: 2
+  - flags: candidate_root_class_project_copy, multiple_active_or_unfrozen_variants
+- **control_stack** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/runtime_wrappers/control_stack` score=34
+  - variants: 2
+  - flags: multiple_active_or_unfrozen_variants
+- **memory_stack_stack** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/runtime_wrappers/memory_stack_stack` score=34
+  - variants: 2
+  - flags: multiple_active_or_unfrozen_variants
+- **project_brain** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `projects/recursive_lmm_grok1/engines/project_brain` score=82
+  - variants: 2
+  - flags: candidate_root_class_project_copy, multiple_active_or_unfrozen_variants
+- **project_memory** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `projects/recursive_lmm_grok1/engines/project_memory` score=66
+  - variants: 2
+  - flags: candidate_root_class_project_copy, multiple_active_or_unfrozen_variants
+- **protoforge_dashboard_runtime** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `runtime_wrappers/protoforge_dashboard_runtime_v2.0` score=54
+  - variants: 2
+  - flags: multiple_active_or_unfrozen_variants, protoforge_runtime_wrapper_requires_manual_review
+- **recursion_mapper** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/symbolic_layers/recursion_mapper` score=38
+  - variants: 2
+  - flags: multiple_active_or_unfrozen_variants
+- **recursive_verification_engine** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `engines/recursive_verification_engine` score=83
+  - variants: 2
+  - flags: multiple_active_or_unfrozen_variants
+- **revisit_previous_tasks** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `projects/recursive_lmm_grok1/engines/revisit_previous_tasks` score=70
+  - variants: 2
+  - flags: candidate_root_class_project_copy, multiple_active_or_unfrozen_variants
+- **saved_ideas** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `projects/recursive_lmm_grok1/engines/saved_ideas` score=21
+  - variants: 2
+  - flags: candidate_is_backup_or_archive, candidate_root_class_project_copy
+- **stack_linker_breather** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `aiweb/engines/stack_linker_breather` score=119
+  - variants: 2
+  - flags: multiple_active_or_unfrozen_variants
+- **step_counter** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `projects/recursive_lmm_grok1/engines/step_counter_frozen_v1` score=61
+  - variants: 2
+  - flags: candidate_is_frozen, candidate_root_class_project_copy
+- **trust_guard** — REVIEW_REQUIRED / manual_review
+  - provisional keep: `projects/recursive_lmm_grok1/engines/trust_guard` score=66
+  - variants: 2
+  - flags: candidate_root_class_project_copy, multiple_active_or_unfrozen_variants

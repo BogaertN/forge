@@ -1,0 +1,50 @@
+{
+  "allowed_reads": [
+    "/home/nic/identity-vault/package.json metadata",
+    "/home/nic/identity-vault/service_contracts/identity_vault_readonly_service_contract.draft.json",
+    "/home/nic/identity-vault/data/identity_vault.db schema and safe metadata through read-only adapter",
+    "agent profile metadata after explicit adapter approval",
+    "identity-to-RMC namespace pointers after explicit adapter approval"
+  ],
+  "allowed_writes": [
+    "none during read-only bootstrap"
+  ],
+  "api_or_cli_commands_exposed": [
+    "future: forge-identity-status",
+    "future: forge-agent-list",
+    "future: forge-agent-show <agent_id>"
+  ],
+  "audit_log_path": "/home/nic/forge/logs/forge_audit.log and /home/nic/forge/memory/identity_vault_* reports",
+  "created_at_utc": "20260523_200713_UTC",
+  "created_by_patch": "patch222_aiweb_service_contracts",
+  "forbidden_reads": [
+    "secret values from /home/nic/identity-vault/.env",
+    "raw tokens, private keys, JWT secrets, API keys, passwords",
+    "full private memory payloads unless routed through approved RMC boundary"
+  ],
+  "forbidden_writes": [
+    "/home/nic/identity-vault/.env",
+    "/home/nic/identity-vault/node_modules",
+    "/home/nic/identity-vault/data/identity_vault.db",
+    "/home/nic/identity-vault/vault.db",
+    "agent identity state before explicit activation gate",
+    "RMC memory",
+    "Forge tool registry"
+  ],
+  "health_check_command": "python /home/nic/forge/scripts/identity_vault_patch218_verify.py",
+  "integration_rules": [
+    "This contract defines boundary intent only; it does not activate connectors by itself.",
+    "No agent identity activation is permitted from this contract file alone.",
+    "All writes must pass through Forge approval, backup, and verification gates.",
+    "No service may bypass Forge to mutate another service.",
+    "Read-only connector commands must be proven before write-capable commands are considered."
+  ],
+  "name": "identity_vault",
+  "owner_authority": "Forge governs access; Nic approves identity activation",
+  "role": "Agent identity, permissions, profile metadata, and RMC namespace pointers. Identity Vault is not an agent runtime and not the shared memory store.",
+  "shutdown_command": "not applicable for read-only adapter",
+  "startup_command": "Identity Vault application startup is not required for read-only Forge metadata adapter",
+  "status": "DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR",
+  "test_command": "cd /home/nic/forge && source .venv/bin/activate && python scripts/identity_vault_patch218_verify.py",
+  "version": "0.1.0-contract-draft"
+}

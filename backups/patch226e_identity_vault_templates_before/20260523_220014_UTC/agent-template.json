@@ -1,0 +1,26 @@
+{
+  "agent_id": "",
+  "name": "",
+  "core_role": "",
+  "description": "",
+  "strengths": [
+    // e.g., "debugging", "UI design", "semantic analysis"
+  ],
+  "capabilities": [
+    // e.g., "access API", "generate code", "compare JSON diffs"
+  ],
+  "limitations": [
+    // e.g., "no file writes", "no external calls", "local only"
+  ],
+  "tone": "",
+  "permissions": [
+    // e.g., "read_files", "log_actions", "read profiles"
+  ],
+  "enforcement_rules": [
+    // e.g., "never overwrite user files", "always log drift correction", "require confirmation"
+  ],
+  "version": "1.0.0",
+  "last_updated": "",
+  "ipfs_hash": "",
+  "zkp_metadata": {}
+}

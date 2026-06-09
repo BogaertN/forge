@@ -1,0 +1,22 @@
+FORGE EXECUTED COMMAND RECORD
+══════════════════════════════════════════════════════════════════
+Command name    : ollama version
+argv            : ['ollama', '--version']
+Timestamp       : 2026-05-09T04:09:49
+Session ID      : forge_2026_05_09_040808
+Forge Level     : 1.0 — Read-Only Command Runner
+Exit code       : 0 (OK)
+Duration        : 14ms
+Output lines    : 2
+Output SHA-256  : 0083d08eb0650beb
+══════════════════════════════════════════════════════════════════
+
+COMMAND OUTPUT (captured verbatim)
+───────────────────────────────────
+ollama version is 0.11.10
+
+
+══════════════════════════════════════════════════════════════════
+NOTE: This command was executed by Forge Level 1.0 from the hard-coded allowlist.
+      No shell, no pipes, no redirects, no user input reached argv.
+══════════════════════════════════════════════════════════════════

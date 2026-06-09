@@ -1,0 +1,21 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "ledger_mutation_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only_export": true
+  },
+  "created_at": "2026-05-17T09:31:27",
+  "evidence_packet_status": "GENERIC_REPAIR_EVIDENCE_PACKET_READY",
+  "llm_proposal_status": "GENERIC_REPAIR_LLM_PROPOSAL_READY_NO_WRITE_AUTHORITY",
+  "model_generation_called": true,
+  "prompt_path": "/home/nic/forge/memory/generic_repair_proposals_v1/2026_05_17_092801_prompt_stack_linker_breather.txt",
+  "raw_response_path": "/home/nic/forge/memory/generic_repair_proposals_v1/2026_05_17_092801_response_raw_stack_linker_breather.txt",
+  "raw_response_sha256": "db224898086ea8903757a9a0f1678010766fc581484f4f6199ce91ca25205455",
+  "recommended_next_patch": "Patch 136 — Generic Repair Patch Candidate Builder",
+  "report_type": "GENERIC_REPAIR_EXPORT_V1",
+  "schema_version": "generic_repair_export_v1_patch135",
+  "status": "GENERIC_REPAIR_EXPORT_READY",
+  "target": "stack_linker_breather"
+}

@@ -1,0 +1,111 @@
+{
+  "timestamp": "20260523_185241_UTC",
+  "wrappers": "/home/nic/aiweb/runtime_wrappers",
+  "verdict": "PASS",
+  "compile_checks": [
+    {
+      "path": "aiweb/runtime_wrappers/phase_parser/phase_state_parser.py",
+      "exists": true,
+      "pass": true,
+      "error": ""
+    },
+    {
+      "path": "aiweb/runtime_wrappers/phase_state_parser/phase_state_parser.py",
+      "exists": true,
+      "pass": true,
+      "error": ""
+    },
+    {
+      "path": "aiweb/runtime_wrappers/drift_detection/drift_detector.py",
+      "exists": true,
+      "pass": true,
+      "error": ""
+    },
+    {
+      "path": "aiweb/runtime_wrappers/drift_arbitrator/drift_arbitrator.py",
+      "exists": true,
+      "pass": true,
+      "error": ""
+    },
+    {
+      "path": "aiweb/runtime_wrappers/echo_validator/echo_validator.py",
+      "exists": true,
+      "pass": true,
+      "error": ""
+    },
+    {
+      "path": "aiweb/runtime_wrappers/echo_gate/echo_gate.py",
+      "exists": true,
+      "pass": true,
+      "error": ""
+    },
+    {
+      "path": "aiweb/runtime_wrappers/rmc_orchestrator/rmc_orchestrator.py",
+      "exists": true,
+      "pass": true,
+      "error": ""
+    }
+  ],
+  "import_smoke": {
+    "cmd": [
+      "/home/nic/forge/.venv/bin/python",
+      "-c",
+      "\nimport sys\nfrom pathlib import Path\nbase = Path(r'/home/nic/aiweb/runtime_wrappers')\nsys.path.insert(0, str(base))\nfrom phase_parser.phase_state_parser import PhaseStateParser\nfrom phase_state_parser.phase_state_parser import PhaseStateParser as PhaseStateParserCompat\nfrom drift_detection.drift_detector import DriftArbitrator\nfrom drift_arbitrator.drift_arbitrator import DriftArbitrator as DriftArbitratorCompat\nfrom echo_validator.echo_validator import EchoGate\nfrom echo_gate.echo_gate import EchoGate as EchoGateCompat\nfrom rmc_orchestrator.rmc_orchestrator import RMCOrchestrator, RMCResult\nrmc = RMCOrchestrator()\nr = rmc.process('Hello, starting a new project')\nassert isinstance(r, RMCResult)\nassert r.phase == 1\nassert r.accepted is True\nprint('IMPORT_SMOKE_PASS', r.summary())\n"
+    ],
+    "cwd": null,
+    "returncode": 0,
+    "stdout": "IMPORT_SMOKE_PASS Phase 1 (Initiation Pulse) | drift=ALLOW | echo=0.98 | ACCEPTED\n",
+    "stderr": ""
+  },
+  "tests": [
+    {
+      "cmd": [
+        "/home/nic/forge/.venv/bin/python",
+        "test_phase_state_parser.py"
+      ],
+      "cwd": "/home/nic/aiweb/runtime_wrappers/phase_parser",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_define_maps_to_phase_7 (__main__.TestPhaseStateParser.test_define_maps_to_phase_7) ... ok\ntest_deploy_maps_to_phase_8_with_warning (__main__.TestPhaseStateParser.test_deploy_maps_to_phase_8_with_warning) ... ok\ntest_drift_maps_to_phase_5 (__main__.TestPhaseStateParser.test_drift_maps_to_phase_5) ... ok\ntest_error_maps_to_friction_or_correction (__main__.TestPhaseStateParser.test_error_maps_to_friction_or_correction) ... ok\ntest_explicit_phi_overrides (__main__.TestPhaseStateParser.test_explicit_phi_overrides) ... ok\ntest_final_maps_to_phase_9 (__main__.TestPhaseStateParser.test_final_maps_to_phase_9) ... ok\ntest_goal_maps_to_phase_3 (__main__.TestPhaseStateParser.test_goal_maps_to_phase_3) ... ok\ntest_start_maps_to_phase_1 (__main__.TestPhaseStateParser.test_start_maps_to_phase_1) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.002s\n\nOK\n",
+      "path": "aiweb/runtime_wrappers/phase_parser/test_phase_state_parser.py",
+      "exists": true
+    },
+    {
+      "cmd": [
+        "/home/nic/forge/.venv/bin/python",
+        "test_drift_detector.py"
+      ],
+      "cwd": "/home/nic/aiweb/runtime_wrappers/drift_detection",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_clean_transition_allows (__main__.TestDriftArbitrator.test_clean_transition_allows) ... ok\ntest_dangerous_skip_blocks (__main__.TestDriftArbitrator.test_dangerous_skip_blocks) ... ok\ntest_phase_6_after_5_is_valid (__main__.TestDriftArbitrator.test_phase_6_after_5_is_valid) ... ok\ntest_projection_without_closure_not_ready (__main__.TestDriftArbitrator.test_projection_without_closure_not_ready) ... ok\ntest_repeated_noise_detects (__main__.TestDriftArbitrator.test_repeated_noise_detects) ... ok\ntest_report_has_required_fields (__main__.TestDriftArbitrator.test_report_has_required_fields) ... ok\ntest_semantic_distance (__main__.TestDriftArbitrator.test_semantic_distance) ... ok\ntest_unbalanced_brackets_warns_or_blocks (__main__.TestDriftArbitrator.test_unbalanced_brackets_warns_or_blocks) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.001s\n\nOK\n",
+      "path": "aiweb/runtime_wrappers/drift_detection/test_drift_detector.py",
+      "exists": true
+    },
+    {
+      "cmd": [
+        "/home/nic/forge/.venv/bin/python",
+        "test_echo_validator.py"
+      ],
+      "cwd": "/home/nic/aiweb/runtime_wrappers/echo_validator",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_accepts_faithful_language (__main__.TestEchoGate.test_accepts_faithful_language) ... ok\ntest_blocked_manifest_accepts_blocked_output (__main__.TestEchoGate.test_blocked_manifest_accepts_blocked_output) ... ok\ntest_blocked_manifest_requires_blocked_output (__main__.TestEchoGate.test_blocked_manifest_requires_blocked_output) ... ok\ntest_glyph_validation_checks_phase (__main__.TestEchoGate.test_glyph_validation_checks_phase) ... ok\ntest_packet_validation (__main__.TestEchoGate.test_packet_validation) ... ok\ntest_rejects_missing_manifest_fields (__main__.TestEchoGate.test_rejects_missing_manifest_fields) ... ok\ntest_warn_drift_must_be_visible (__main__.TestEchoGate.test_warn_drift_must_be_visible) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nOK\n",
+      "path": "aiweb/runtime_wrappers/echo_validator/test_echo_validator.py",
+      "exists": true
+    },
+    {
+      "cmd": [
+        "/home/nic/forge/.venv/bin/python",
+        "test_rmc_orchestrator.py"
+      ],
+      "cwd": "/home/nic/aiweb/runtime_wrappers/rmc_orchestrator",
+      "returncode": 0,
+      "stdout": "============================================================\nRMC PIPELINE ORCHESTRATOR \u2014 TEST SUITE\nS19AK \u2014 Full Pipeline Integration\n============================================================\n\n============================================================\n\u2705 ALL TESTS PASSED\n============================================================\n",
+      "stderr": "test_echo_score_is_float (__main__.TestRMCResult.test_echo_score_is_float) ... ok\ntest_output_is_string (__main__.TestRMCResult.test_output_is_string) ... ok\ntest_phase_is_int (__main__.TestRMCResult.test_phase_is_int) ... ok\ntest_returns_rmc_result (__main__.TestRMCResult.test_returns_rmc_result) ... ok\ntest_summary_string (__main__.TestRMCResult.test_summary_string) ... ok\ntest_timestamp_utc (__main__.TestRMCResult.test_timestamp_utc) ... ok\ntest_to_dict_keys (__main__.TestRMCResult.test_to_dict_keys) ... ok\ntest_phase_1_detected (__main__.TestRMCPipelinePhases.test_phase_1_detected) ... ok\ntest_phase_2_detected (__main__.TestRMCPipelinePhases.test_phase_2_detected) ... ok\ntest_phase_3_detected (__main__.TestRMCPipelinePhases.test_phase_3_detected) ... ok\ntest_phase_4_detected (__main__.TestRMCPipelinePhases.test_phase_4_detected) ... ok\ntest_phase_6_detected (__main__.TestRMCPipelinePhases.test_phase_6_detected) ... ok\ntest_phase_7_detected (__main__.TestRMCPipelinePhases.test_phase_7_detected) ... ok\ntest_phase_8_detected (__main__.TestRMCPipelinePhases.test_phase_8_detected) ... ok\ntest_phase_9_detected (__main__.TestRMCPipelinePhases.test_phase_9_detected) ... ok\ntest_accepted_result_has_output (__main__.TestRMCPipelineAcceptance.test_accepted_result_has_output) ... ok\ntest_clean_input_accepted (__main__.TestRMCPipelineAcceptance.test_clean_input_accepted) ... ok\ntest_echo_score_high_on_clean (__main__.TestRMCPipelineAcceptance.test_echo_score_high_on_clean) ... ok\ntest_no_failed_record_on_accept (__main__.TestRMCPipelineAcceptance.test_no_failed_record_on_accept) ... ok\ntest_code_modality (__main__.TestRMCPipelineModalities.test_code_modality) ... ok\ntest_custom_default_modality (__main__.TestRMCPipelineModalities.test_custom_default_modality) ... ok\ntest_default_modality_is_language (__main__.TestRMCPipelineModalities.test_default_modality_is_language) ... ok\ntest_glyph_modality (__main__.TestRMCPipelineModalities.test_glyph_modality) ... ok\ntest_language_modality (__main__.TestRMCPipelineModalities.test_language_modality) ... ok\ntest_packet_modality (__main__.TestRMCPipelineModalities.test_packet_modality) ... ok\ntest_memory_accumulates (__main__.TestRMCPipelineMemory.test_memory_accumulates) ... ok\ntest_memory_grounds_later_outputs (__main__.TestRMCPipelineMemory.test_memory_grounds_later_outputs) ... ok\ntest_memory_not_stored_when_disabled (__main__.TestRMCPipelineMemory.test_memory_not_stored_when_disabled) ... ok\ntest_history_capped_at_20 (__main__.TestRMCPipelineHistory.test_history_capped_at_20) ... ok\ntest_phase_history_builds (__main__.TestRMCPipelineHistory.test_phase_history_builds) ... ok\ntest_phase_history_reset (__main__.TestRMCPipelineHistory.test_phase_history_reset) ... ok\ntest_full_9_phase_conversation (__main__.TestRMCFullConversation.test_full_9_phase_conversation) ... ok\n\n----------------------------------------------------------------------\nRan 32 tests in 0.012s\n\nOK\n",
+      "path": "aiweb/runtime_wrappers/rmc_orchestrator/test_rmc_orchestrator.py",
+      "exists": true
+    }
+  ],
+  "next_safe_step": "Create a read-only Forge RMC tool-wrapper scan; do not wire Gilligan yet."
+}

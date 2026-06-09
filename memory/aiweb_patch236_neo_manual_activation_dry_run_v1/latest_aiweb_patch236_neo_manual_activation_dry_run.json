@@ -1,0 +1,189 @@
+{
+  "blockers": [],
+  "checks": [
+    {
+      "blocker": null,
+      "detail": "{'path': '/home/nic/forge/memory/aiweb_patch235f_rmc_controlled_athena_test_receipt_verify_v1/latest_aiweb_patch235f_rmc_controlled_athena_test_receipt_verify.json', 'exists': True, 'ok': True, 'verdict': 'RMC_TEST_RECEIPT_VERIFIED_GOVERNED_ATHENA', 'expected_verdict': 'RMC_TEST_RECEIPT_VERIFIED_GOVERNED_ATHENA', 'verdict_matches': True, 'write_type': 'test_receipt', 'agent': 'athena.local', 'receipt_hash_valid': True, 'raw_error': None}",
+      "key": "patch235f_verified",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "READY_FOR_MANUAL_ACTIVATION",
+      "key": "neo_preflight_ready",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "{'agent_id': 'neo.local', 'read_ok': True, 'found': True, 'activation_state': 'inactive_draft', 'is_active': False, 'rmc_namespace': 'rmc/agents/neo.local', 'role': 'Public / Frontline Assistant Identity', 'identity_db_written_by_this_patch': False, 'raw_read_error': None}",
+      "key": "neo_profile_found",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "activation_state='inactive_draft'",
+      "key": "neo_inactive_draft",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "is_active=False",
+      "key": "neo_is_active_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "{'identity_vault_pointer': 'rmc/agents/neo.local', 'allowed_root': '/home/nic/aiweb/runtime_wrappers/ancestral_memory', 'resolved_absolute_path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local', 'status': {'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local', 'exists': True, 'is_dir': True, 'children': [{'name': 'manifests', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/manifests', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'receipts', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/receipts', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'echo', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/echo', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'private_context', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/private_context', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'phase_records', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/phase_records', 'exists': True, 'is_dir': True, 'file_count': 0}], 'all_expected_children_exist': True, 'files_or_records_written_by_this_patch': False}, 'live_memory_write_allowed': False}",
+      "key": "neo_namespace_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "profile hash must be present or computable",
+      "key": "neo_profile_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "{'agent_id': 'gilligan.local', 'read_ok': True, 'found': True, 'activation_state': 'active_governed', 'is_active': True, 'rmc_namespace': 'rmc/agents/gilligan.local', 'role': 'Recursive Mirror / Forge-Governed Development Co-Pilot', 'identity_db_written_by_this_patch': False, 'raw_read_error': None}",
+      "key": "gilligan_stays_active_governed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "{'agent_id': 'athena.local', 'read_ok': True, 'found': True, 'activation_state': 'active_governed', 'is_active': True, 'rmc_namespace': 'rmc/agents/athena.local', 'role': 'Governance / Strategy / Investor-Facing Analysis Agent', 'identity_db_written_by_this_patch': False, 'raw_read_error': None}",
+      "key": "athena_stays_active_governed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "neo.local",
+      "key": "target_is_neo_only",
+      "ok": true
+    }
+  ],
+  "checks_passed": 10,
+  "checks_total": 10,
+  "dry_run_only": true,
+  "generated_at_utc": "20260524_113821_UTC",
+  "identity_mutation_preview": {
+    "after_preview": {
+      "activation_manifest_hash": "f001351736b98d4a5915cf0e47a7d3b2ea150f56b59cda6b7180573773b44414",
+      "activation_receipt_type": "forge_manual_activation_receipt",
+      "activation_state": "active_governed",
+      "agent_id": "neo.local",
+      "is_active": 1,
+      "last_validated_at": "20260524_113821_UTC",
+      "session_state": "initialize_only_if_missing_or_explicitly_allowed"
+    },
+    "allowed_fields_to_change_in_future_apply": [
+      "activation_state",
+      "is_active",
+      "last_validated_at",
+      "activation_receipt_id",
+      "activation_profile_hash",
+      "activation_manifest_hash",
+      "session_state (only if missing or explicitly allowed)"
+    ],
+    "before": {
+      "activation_state": "inactive_draft",
+      "agent_id": "neo.local",
+      "is_active": false,
+      "namespace_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local",
+      "profile_hash": "df922d109948a5e5\u2026"
+    },
+    "fields_confirmed_unchanged_by_future_contract": [
+      "agent_id",
+      "role",
+      "permissions",
+      "forbidden_actions",
+      "service_contracts",
+      "profile_hash source fields",
+      "rmc_namespace_pointer",
+      "governance_boundaries"
+    ]
+  },
+  "identity_state_snapshot": {
+    "athena.local": {
+      "activation_state": "active_governed",
+      "agent_id": "athena.local",
+      "found": true,
+      "identity_db_written_by_this_patch": false,
+      "is_active": true,
+      "raw_read_error": null,
+      "read_ok": true,
+      "rmc_namespace": "rmc/agents/athena.local",
+      "role": "Governance / Strategy / Investor-Facing Analysis Agent"
+    },
+    "gilligan.local": {
+      "activation_state": "active_governed",
+      "agent_id": "gilligan.local",
+      "found": true,
+      "identity_db_written_by_this_patch": false,
+      "is_active": true,
+      "raw_read_error": null,
+      "read_ok": true,
+      "rmc_namespace": "rmc/agents/gilligan.local",
+      "role": "Recursive Mirror / Forge-Governed Development Co-Pilot"
+    },
+    "neo.local": {
+      "activation_state": "inactive_draft",
+      "agent_id": "neo.local",
+      "found": true,
+      "identity_db_written_by_this_patch": false,
+      "is_active": false,
+      "raw_read_error": null,
+      "read_ok": true,
+      "rmc_namespace": "rmc/agents/neo.local",
+      "role": "Public / Frontline Assistant Identity"
+    }
+  },
+  "important_note": "This is a dry-run gate. It previews Neo activation but performs no Identity Vault write and no activation.",
+  "neo_preflight": {
+    "blockers": [],
+    "checks_passed": 17,
+    "checks_total": 17,
+    "ok": true,
+    "verdict": "READY_FOR_MANUAL_ACTIVATION"
+  },
+  "neo_public_role_contract": {
+    "allowed_faq_drafting": true,
+    "allowed_non_sensitive_help": true,
+    "allowed_plain_language_summaries": true,
+    "allowed_public_onboarding": true,
+    "forbidden_database_writes": true,
+    "forbidden_identity_mutation_by_agent": true,
+    "forbidden_memory_write_without_forge_receipt": true,
+    "forbidden_private_memory_exposure": true,
+    "forbidden_secret_reads": true,
+    "forbidden_tool_execution": true
+  },
+  "next_expected_step_if_ready": "Patch 236A \u2014 Neo manual activation apply, token-gated and Neo-only.",
+  "ok": true,
+  "patch": "236",
+  "prior_235f": {
+    "agent": "athena.local",
+    "exists": true,
+    "expected_verdict": "RMC_TEST_RECEIPT_VERIFIED_GOVERNED_ATHENA",
+    "ok": true,
+    "path": "/home/nic/forge/memory/aiweb_patch235f_rmc_controlled_athena_test_receipt_verify_v1/latest_aiweb_patch235f_rmc_controlled_athena_test_receipt_verify.json",
+    "raw_error": null,
+    "receipt_hash_valid": true,
+    "verdict": "RMC_TEST_RECEIPT_VERIFIED_GOVERNED_ATHENA",
+    "verdict_matches": true,
+    "write_type": "test_receipt"
+  },
+  "target_agent": "neo.local",
+  "verdict": "NEO_MANUAL_ACTIVATION_DRY_RUN_READY",
+  "writes_performed": {
+    "agent_identity_activation_performed": false,
+    "echoforge_creation_performed": false,
+    "env_secret_values_read": false,
+    "forge_owned_dry_run_report": true,
+    "identity_vault_database_written": false,
+    "manual_activation_command_executed": false,
+    "manual_activation_command_installed": false,
+    "protoforge2_execution_performed": false,
+    "rmc_memory_written": false
+  }
+}

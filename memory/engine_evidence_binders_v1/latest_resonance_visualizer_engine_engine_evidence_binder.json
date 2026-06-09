@@ -1,0 +1,175 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/resonance_visualizer_engine",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/resonance_visualizer_engine",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "resonance_visualizer_engine",
+  "evidence_id": "EEB-46f2483eea8aaa4e",
+  "file_count": 5,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "f345ac3ac2debcc4e70dd4c43f0675fa25fde221cf0638dce15afef891854042",
+      "excerpt_start": "import json\nimport random\nimport time\n\nOUTPUT_FILE = \"visualizer_output.json\"\n\ndef generate_resonance_snapshot():\n    \"\"\"Simulates symbolic recursion charge and drift visualization.\"\"\"\n    charge = random.randint(30, 100)\n    drift = random.choice([\"none\", \"minor\", \"major\"])\n\n    snapshot = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"charge_level\": charge,\n        \"drift_status\": drift\n    }\n\n    try:\n        with open(OUTPUT_FILE, \"w\") as f:\n            json.dump(snapshot, f, indent=2)\n        print(f\"✔️ Resonance snapshot generated: {snapshot}\")\n    except Exception as e:\n        print(f\"[!] Failed to write visualizer output: {e}\")\n\n    return snapshot\n",
+      "functions_sample": [
+        "generate_resonance_snapshot"
+      ],
+      "imports_sample": [
+        "import json",
+        "import random",
+        "import time"
+      ],
+      "line_count": 26,
+      "path": "/home/nic/aiweb/engines/resonance_visualizer_engine/visualizer_core.py",
+      "relative_to_candidate": "visualizer_core.py",
+      "sha256": "f345ac3ac2debcc4e70dd4c43f0675fa25fde221cf0638dce15afef891854042",
+      "size_bytes": 707,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "9b6b8b514f3c69f6a3da511b51bc94ac34a0e0f93137c04cfe7c89d026493005",
+      "excerpt_start": "from visualizer_core import generate_resonance_snapshot\n\ndef test_visualization():\n    try:\n        result = generate_resonance_snapshot()\n        assert \"charge_level\" in result\n        assert \"drift_status\" in result\n        print(\"✅ Test Passed: Resonance snapshot generated successfully.\")\n    except Exception as e:\n        print(f\"❌ Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_visualization()\n",
+      "functions_sample": [
+        "test_visualization"
+      ],
+      "imports_sample": [
+        "from visualizer_core import generate_resonance_snapshot"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/resonance_visualizer_engine/test_visualizer.py",
+      "relative_to_candidate": "test_visualizer.py",
+      "sha256": "9b6b8b514f3c69f6a3da511b51bc94ac34a0e0f93137c04cfe7c89d026493005",
+      "size_bytes": 415,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "55231a46675fb90fb1080759a5b48f31f34f53c0cb16b6b3531a1eb8a31aeb62",
+      "excerpt_start": "# Resonance Visualizer Engine\n\nCreates simple JSON-based visual snapshots of recursion charge and symbolic drift state.\n\nDesigned for integration with dashboards, monitors, and runtime UI displays.\n",
+      "functions_sample": [
+        "Resonance",
+        "Visualizer",
+        "Engine",
+        "Creates",
+        "simple",
+        "JSON",
+        "based",
+        "visual",
+        "snapshots",
+        "recursion",
+        "charge",
+        "and",
+        "symbolic",
+        "drift",
+        "state",
+        "Designed",
+        "for",
+        "integration",
+        "with",
+        "dashboards",
+        "monitors",
+        "runtime",
+        "displays"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/resonance_visualizer_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "55231a46675fb90fb1080759a5b48f31f34f53c0cb16b6b3531a1eb8a31aeb62",
+      "size_bytes": 198,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "2ba89b57235bbf4d4cb17c3dd56acfd883baaf037e120359804bc437f0d715e0",
+      "excerpt_start": "{\n  \"timestamp\": \"2025-04-27T00:35:35Z\",\n  \"charge_level\": 45,\n  \"drift_status\": \"minor\"\n}",
+      "functions_sample": [
+        "timestamp",
+        "charge_level",
+        "drift_status",
+        "minor"
+      ],
+      "imports_sample": [],
+      "line_count": 5,
+      "path": "/home/nic/aiweb/engines/resonance_visualizer_engine/visualizer_output.json",
+      "relative_to_candidate": "visualizer_output.json",
+      "sha256": "2ba89b57235bbf4d4cb17c3dd56acfd883baaf037e120359804bc437f0d715e0",
+      "size_bytes": 90,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "e2012a2bed90a1f9ccd8141320034e17eeca31fe4f9e9bebc0db2726f6319529",
+      "excerpt_start": "{\n  \"engine\": \"Resonance Visualizer Engine\",\n  \"version\": \"v1\",\n  \"description\": \"Generates symbolic recursion charge and drift visualization snapshots for UI dashboards and system logs.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Resonance",
+        "Visualizer",
+        "Engine",
+        "version",
+        "description",
+        "Generates",
+        "symbolic",
+        "recursion",
+        "charge",
+        "and",
+        "drift",
+        "visualization",
+        "snapshots",
+        "for",
+        "dashboards",
+        "system",
+        "logs"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/resonance_visualizer_engine/visualizer_manifest.json",
+      "relative_to_candidate": "visualizer_manifest.json",
+      "sha256": "e2012a2bed90a1f9ccd8141320034e17eeca31fe4f9e9bebc0db2726f6319529",
+      "size_bytes": 190,
+      "suffix": ".json"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "generate_resonance_snapshot",
+    "test_visualization"
+  ],
+  "warnings": []
+}

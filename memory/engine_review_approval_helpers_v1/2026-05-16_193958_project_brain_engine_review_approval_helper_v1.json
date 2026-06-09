@@ -1,0 +1,99 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "bound_file_count": 12,
+  "candidate_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain",
+  "created_at": "2026-05-16_193958",
+  "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_project_brain_engine_review_evidence_crosscheck_v1.json",
+  "crosscheck_sha256": "898bc1f9af8ee50d9cfd13386360fd459db1901fe8cb093b391a377b45bd77c2",
+  "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_193230_project_brain_llm_engine_review_draft_v1.json",
+  "draft_sha256": "bde753383d3b217d4760ee7fa26456f34dad1778fa18e6d167cb9985cae41a40",
+  "engine_family": "project_brain",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_project_brain_engine_evidence_binder.json",
+  "evidence_binder_sha256": "5e409002aa318dce87843efc50dba480102d96e26cc584a577fed28820a4d1c9",
+  "evidence_id": "EEB-89de7d13d526bcb6",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "run.py",
+      "README.md",
+      "field_state.json",
+      "field_memory_binder/README.md"
+    ],
+    "functions_mentioned": [
+      "update_field",
+      "Function",
+      "the",
+      "symbolic",
+      "recursion",
+      "field",
+      "virtual",
+      "environment",
+      "tracking",
+      "charge",
+      "drift",
+      "and",
+      "loop",
+      "integrity",
+      "engine",
+      "defines",
+      "resonance",
+      "Field",
+      "state",
+      "reset",
+      "input",
+      "error",
+      "recursive",
+      "for",
+      "Recursive",
+      "Engine",
+      "Web"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "from run import reset_field_state, update_field, load_field_state"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 26.505,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "53fd65bd98f4c2c90d066dbbab0bc05846d6e4c2973dc2699c01c6f2e4eefdc1",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo implement and test a symbolic recursion field engine that tracks parameters like charge, drift, and loop integrity for AI operations, with state persistence and input processing capabilities.  \n\nLikely System Role:  \nA core component of an AI.Web engine, managing symbolic coherence and recursion parameters across interactions, likely supporting advanced AI behaviors like resonance tracking and stateful processing.  \n\nEvidence Used:  \n- `run.py`: Defines state management functions (load/save/reset) and `update_field` for processing symbolic inputs.  \n- `README.md`: Explains the engine's role in managing virtual environments for symbolic AI.  \n- `field_state.json`: Stores persistent state variables (charge, drift, loop integrity).  \n- Test scripts and logs validate state updates and error handling.  \n\nRisks / Uncertainties:  \n- Complexity of recursive state management may lead to unintended drift or coherence loss.  \n- Reliance on JSON for state persistence could introduce serialization risks.  \n- Limited test coverage in provided samples (e.g., no edge cases for extreme inputs).  \n\nRecommendation Draft:  \nApprove review with caveats: ensure comprehensive testing of edge cases, validate state persistence reliability, and confirm integration with AI.Web engine components.  \n\nSuggested Nic Action:  \nApprove review with the above recommendations, prioritizing testing and validation of state management robustness."
+  },
+  "llm_visible_review_excerpt": "Plain-English Purpose:  \nTo implement and test a symbolic recursion field engine that tracks parameters like charge, drift, and loop integrity for AI operations, with state persistence and input processing capabilities.  \n\nLikely System Role:  \nA core component of an AI.Web engine, managing symbolic coherence and recursion parameters across interactions, likely supporting advanced AI behaviors like resonance tracking and stateful processing.  \n\nEvidence Used:  \n- `run.py`: Defines state management functions (load/save/reset) and `update_field` for processing symbolic inputs.  \n- `README.md`: Explains the engine's role in managing virtual environments for symbolic AI.  \n- `field_state.json`: Stores persistent state variables (charge, drift, loop integrity).  \n- Test scripts and logs validate state updates and error handling.  \n\nRisks / Uncertainties:  \n- Complexity of recursive state management may lead to unintended drift or coherence loss.  \n- Reliance on JSON for state persistence could introduce serialization risks.  \n- Limited test coverage in provided samples (e.g., no edge cases for extreme inputs).  \n\nRecommendation Draft:  \nApprove review with caveats: ensure comprehensive testing of edge cases, validate state persistence reliability, and confirm integration with AI.Web engine components.  \n\nSuggested Nic Action:  \nApprove review with the above recommendations, prioritizing testing and validation of state management robustness.",
+  "manual_verification_rule": "Approve only if the LLM-visible claims are supported by the bound evidence shown in the Patch 102 cross-check. If unsure, defer.",
+  "ready_for_evidence_based_queue_decision": true,
+  "report_type": "ENGINE_REVIEW_APPROVAL_CHECK_V1_PATCH103",
+  "schema_version": "engine_review_approval_helper_v1_patch103",
+  "status": "EVIDENCE_APPROVAL_CHECK_READY",
+  "warnings": [
+    "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

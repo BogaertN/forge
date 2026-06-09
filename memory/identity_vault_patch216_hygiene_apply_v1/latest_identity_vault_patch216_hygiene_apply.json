@@ -1,0 +1,206 @@
+{
+  "backup_root": "/home/nic/forge/backups/patch216_identity_vault_hygiene_before/20260523_193648_UTC",
+  "backups": [
+    {
+      "backup_path": "/home/nic/forge/backups/patch216_identity_vault_hygiene_before/20260523_193648_UTC/metadata/package.json",
+      "copied": true,
+      "exists": true,
+      "label": "metadata/package.json",
+      "sha256": "263684c468dd7b5070d1cb2f14b0a8b32f792a8f88f942ac7d88b41ae9dae010",
+      "source": "/home/nic/identity-vault/package.json"
+    },
+    {
+      "backup_path": "/home/nic/forge/backups/patch216_identity_vault_hygiene_before/20260523_193648_UTC/metadata/package-lock.json",
+      "copied": true,
+      "exists": true,
+      "label": "metadata/package-lock.json",
+      "sha256": "014cd98e083d50827a4cc55f8248394fa7b681eccd43276bf643cf74b1fd0fab",
+      "source": "/home/nic/identity-vault/package-lock.json"
+    },
+    {
+      "backup_path": "/home/nic/forge/backups/patch216_identity_vault_hygiene_before/20260523_193648_UTC/metadata/.gitignore",
+      "copied": true,
+      "exists": true,
+      "label": "metadata/.gitignore",
+      "sha256": "d9785d6c0f8b0c5f98ebbac3d97eb34ecef31449f55fab298614a97a5f4c6b96",
+      "source": "/home/nic/identity-vault/.gitignore"
+    },
+    {
+      "backup_path": "/home/nic/forge/backups/patch216_identity_vault_hygiene_before/20260523_193648_UTC/metadata/.dockerignore",
+      "copied": true,
+      "exists": true,
+      "label": "metadata/.dockerignore",
+      "sha256": "2f72ff4b244162429168a03d9c2c8c108424a184ffd6ab16043968e72c32fadd",
+      "source": "/home/nic/identity-vault/.dockerignore"
+    },
+    {
+      "backup_path": "/home/nic/forge/backups/patch216_identity_vault_hygiene_before/20260523_193648_UTC/databases/data_identity_vault.db",
+      "copied": true,
+      "exists": true,
+      "label": "databases/data_identity_vault.db",
+      "sha256": "d185eb83a37a9be907ff6525deb241778772fbc7fcc51794efc4c94ab6ecf32f",
+      "source": "/home/nic/identity-vault/data/identity_vault.db"
+    },
+    {
+      "backup_path": "/home/nic/forge/backups/patch216_identity_vault_hygiene_before/20260523_193648_UTC/databases/vault.db",
+      "copied": true,
+      "exists": true,
+      "label": "databases/vault.db",
+      "sha256": "1bfcaca815f7149d32b30e261c20d0679d7182191fe55cfa63ce830c287d87b9",
+      "source": "/home/nic/identity-vault/vault.db"
+    }
+  ],
+  "boundary": [
+    "This patch performs approved hygiene only.",
+    "It backs up Identity Vault metadata and both SQLite database files before changes.",
+    "It updates ignore/packaging exclusion rules only.",
+    "It writes a DRAFT read-only service contract file only.",
+    "It does not modify Identity Vault database contents.",
+    "It does not print or copy .env secret values into reports.",
+    "It does not modify Forge registry, RMC memory, AI.Web wrappers, or agent identity activation state."
+  ],
+  "contract_exists": true,
+  "contract_path": "/home/nic/identity-vault/service_contracts/identity_vault_readonly_service_contract.draft.json",
+  "contract_sha256": "2e1573ae148f68ea3d2035c9d5f99d633251f070f7e212e13cbde3e563343189",
+  "contract_status": "DRAFT_NOT_ACTIVE",
+  "database_summary": [
+    {
+      "exists": true,
+      "ok": true,
+      "path": "/home/nic/identity-vault/data/identity_vault.db",
+      "row_counts": {
+        "agent_profiles": 0,
+        "audit_logs": 0,
+        "feedback_logs": 0,
+        "session_state": 0,
+        "sqlite_sequence": 0,
+        "user_profiles": 0
+      },
+      "tables": [
+        "agent_profiles",
+        "audit_logs",
+        "feedback_logs",
+        "session_state",
+        "sqlite_sequence",
+        "user_profiles"
+      ]
+    },
+    {
+      "exists": true,
+      "ok": true,
+      "path": "/home/nic/identity-vault/vault.db",
+      "row_counts": {
+        "feedback_logs": 0,
+        "profiles": 1,
+        "session_state": 1,
+        "sqlite_sequence": 0
+      },
+      "tables": [
+        "feedback_logs",
+        "profiles",
+        "session_state",
+        "sqlite_sequence"
+      ]
+    }
+  ],
+  "dockerignore_update": {
+    "begin_after": true,
+    "changed": true,
+    "end_after": true,
+    "exists_after": true,
+    "had_begin_before": false,
+    "had_end_before": false,
+    "path": "/home/nic/identity-vault/.dockerignore",
+    "rules_after": {
+      "!.env.example": true,
+      "*.db": true,
+      "*.sqlite": true,
+      "*.sqlite3": true,
+      ".env": true,
+      ".env.*": true,
+      "backups/": true,
+      "coverage/": true,
+      "data/*.db": true,
+      "data/*.sqlite": true,
+      "data/*.sqlite3": true,
+      "dist/": true,
+      "logs/": true,
+      "node_modules/": true
+    }
+  },
+  "findings": [
+    {
+      "code": "IV_NODE_MODULES_PRESENT_BUT_IGNORED",
+      "level": "INFO",
+      "message": "node_modules is still present locally, but ignore rules now explicitly exclude it from packaging."
+    },
+    {
+      "code": "IV_ENV_PRESENT_LOCAL_ONLY",
+      "level": "WARN",
+      "message": ".env still exists locally. This patch does not remove it. Ensure it is never packaged; rotate secrets if previously shared outside the machine."
+    },
+    {
+      "code": "IV_MULTIPLE_DBS_PRESERVED",
+      "level": "INFO",
+      "message": "Both databases were preserved and backed up. Canonical path remains data/identity_vault.db; legacy vault.db remains migration candidate."
+    }
+  ],
+  "gitignore_update": {
+    "begin_after": true,
+    "changed": true,
+    "end_after": true,
+    "exists_after": true,
+    "had_begin_before": false,
+    "had_end_before": false,
+    "path": "/home/nic/identity-vault/.gitignore",
+    "rules_after": {
+      "!.env.example": true,
+      "*.db": true,
+      "*.sqlite": true,
+      "*.sqlite3": true,
+      ".env": true,
+      ".env.*": true,
+      "backups/": true,
+      "coverage/": true,
+      "data/*.db": true,
+      "data/*.sqlite": true,
+      "data/*.sqlite3": true,
+      "dist/": true,
+      "logs/": true,
+      "node_modules/": true
+    }
+  },
+  "identity_root": "/home/nic/identity-vault",
+  "sensitive_runtime_metadata": [
+    {
+      "exists": true,
+      "mode": "0o664",
+      "path": "identity-vault/.env",
+      "sha256": "cf889320efcfdfa308b810d435219af658dc1ff33bb4f9229a8d9c33ca8dc2f2",
+      "size": 1605
+    },
+    {
+      "exists": true,
+      "mode": "0o664",
+      "path": "identity-vault/.env.example",
+      "sha256": "7a03ca41c258f7d900899466561662c58e60158f490d9a220ac47467ac8f5274",
+      "size": 6787
+    },
+    {
+      "exists": true,
+      "mode": "0o644",
+      "path": "identity-vault/data/identity_vault.db",
+      "sha256": "d185eb83a37a9be907ff6525deb241778772fbc7fcc51794efc4c94ab6ecf32f",
+      "size": 57344
+    },
+    {
+      "exists": true,
+      "mode": "0o644",
+      "path": "identity-vault/vault.db",
+      "sha256": "1bfcaca815f7149d32b30e261c20d0679d7182191fe55cfa63ce830c287d87b9",
+      "size": 36864
+    }
+  ],
+  "timestamp": "20260523_193648_UTC",
+  "verdict": "PASS"
+}

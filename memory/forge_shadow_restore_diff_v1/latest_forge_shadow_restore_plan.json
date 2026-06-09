@@ -1,0 +1,76 @@
+{
+  "active_patch": "Patch 153 \u2014 Shadow Restore / Forensic Diff",
+  "authority": {
+    "audit_log_overwrite": false,
+    "engine_file_write_authority": false,
+    "forge_owned_shadow_write": true,
+    "live_restore_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "shadow_restore_write": true,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-19T18:26:09",
+  "current_phase": "S17C \u2014 Shadow Restore / Forensic Diff",
+  "domains": [
+    {
+      "domain_id": "D01",
+      "file_count": 4,
+      "problems": [],
+      "status": "READY",
+      "title": "Forge runtime core"
+    },
+    {
+      "domain_id": "D02",
+      "file_count": 178,
+      "problems": [],
+      "status": "READY",
+      "title": "Build governance memory"
+    },
+    {
+      "domain_id": "D03",
+      "file_count": 160,
+      "problems": [],
+      "status": "READY",
+      "title": "Engine authority and test evidence"
+    },
+    {
+      "domain_id": "D04",
+      "file_count": 199,
+      "problems": [],
+      "status": "READY",
+      "title": "Operator visibility surfaces"
+    },
+    {
+      "domain_id": "D05",
+      "file_count": 1,
+      "problems": [],
+      "status": "READY",
+      "title": "Audit tail capture"
+    }
+  ],
+  "file_count": 542,
+  "next_commands": [
+    "forge-shadow-restore-run latest",
+    "forge-shadow-restore-diff latest",
+    "forge-shadow-restore-export"
+  ],
+  "next_patch": "Patch 154 \u2014 Dashboard v2 / Operator Control Panel",
+  "problem_count": 0,
+  "problems": [],
+  "recommended_next_patch": "Patch 154 \u2014 Dashboard v2 / Operator Control Panel",
+  "report_type": "FORGE_SHADOW_RESTORE_PLAN",
+  "schema_version": "forge_shadow_restore_diff_v1_patch153",
+  "shadow_id": "shadow_restore_2026_05_19_182609",
+  "shadow_root": "/home/nic/forge/memory/forge_shadow_restores_v1/shadow_restore_2026_05_19_182609",
+  "snapshot_id": "forge_snapshot_2026_05_19_181211",
+  "snapshot_root": "/home/nic/forge/memory/forge_snapshots_v1/forge_snapshot_2026_05_19_181211",
+  "status": "FORGE_SHADOW_RESTORE_PLAN_READY",
+  "summary": {
+    "planned_file_count": 542,
+    "shadow_copy_planned": true,
+    "shadow_restore_live": false,
+    "snapshot_verified": true
+  },
+  "verified_file_count": 542
+}

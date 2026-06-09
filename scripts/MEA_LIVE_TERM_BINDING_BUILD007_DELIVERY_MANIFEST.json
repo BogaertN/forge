@@ -1,0 +1,33 @@
+{
+  "build_id": "MEA-DISCOVERY-KERNEL-LIVE-TERM-BINDING-BUILD-007",
+  "schema_version": "mea_live_term_binding_delivery_manifest_v1_build007",
+  "purpose": "Install forward-only fixed-point live term binding and measured seal-readiness gating for future MEA candidate evaluations.",
+  "allowed_install_effects": [
+    "Add forge/rmc_engine_v1/mea/live_term_binding.py.",
+    "Add forge/rmc_engine_v1/mea/measured_seal_gate.py.",
+    "Replace forge/rmc_engine_v1/mea/__init__.py only to export Build 007 read-only functions.",
+    "Add Build 007 tests, verifier, README, manifest and checksum file under forge/scripts."
+  ],
+  "prohibited_effects": [
+    "No write to runtime_state or MEA manifest memory.",
+    "No rewrite, rescore or reseal of the Build 005 historical 144 Hz record.",
+    "No Identity Vault, Contribution Economy, CT or ledger activity.",
+    "No main.py or React UI change.",
+    "No API route, renderer, lexicon, Echo Validator, Chroma, LLM or network behavior."
+  ],
+  "mathematical_contract": {
+    "formula": "Score(c_i)=alpha*R+beta*P+gamma*U+delta*N+eta*I+kappa*Omega+rho*A-lambda*D-mu*B-nu*K",
+    "information_gain_formula": "I(c_i)=DeltaF+DeltaQ+DeltaX; K=operator_cost_only",
+    "numeric_representation": "integer_fixed_point_micro_units_from_build006",
+    "required_term_bindings": ["R", "P", "U", "N", "I", "Omega", "A", "D", "B", "K"]
+  },
+  "evidence_boundary": {
+    "hash_verified_build005_trace_may_bind_R": true,
+    "hash_verified_build005_trace_may_supply_limited_internal_trace_support": true,
+    "unregistered_fbsc_theory_source_may_supply_B_support": false,
+    "unregistered_external_empirical_source_may_authorize_verified_claim": false,
+    "replay_proves_empirical_truth": false
+  },
+  "forward_migration_status_after_install": "TERM_BINDING_AVAILABLE_SEAL_STILL_BLOCKED_UNTIL_GOVERNED_SOURCE_ANCESTRY_IS_REGISTERED",
+  "requires_application_restart": false
+}

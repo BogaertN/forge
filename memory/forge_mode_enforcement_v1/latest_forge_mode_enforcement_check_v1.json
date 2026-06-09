@@ -1,0 +1,20 @@
+{
+  "allowed_modes": [
+    "TEST",
+    "READ_ONLY"
+  ],
+  "authority": {
+    "check_only": true,
+    "command_executed": false,
+    "project_file_write_authority": false
+  },
+  "command": "canonical-test-run-safe",
+  "command_line_checked": "canonical-test-run-safe",
+  "created_at": "2026-05-17T08:10:46",
+  "hard_blocking_active": false,
+  "mode": "TEST",
+  "plain_english": "This check verifies mode permission for a command without executing that command.",
+  "report_type": "FORGE_MODE_ENFORCEMENT_CHECK_V1",
+  "schema_version": "forge_mode_enforcement_check_v1_patch130",
+  "status": "ALLOWED_BY_MODE_MATRIX"
+}

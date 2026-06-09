@@ -1,0 +1,22 @@
+{
+  "authority": {
+    "export_only": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false
+  },
+  "created_at": "2026-05-17T08:51:28",
+  "draft_path": "/home/nic/forge/memory/llm_live_patch_drafts_v1/latest_llm_live_patch_draft_v1.json",
+  "draft_sha256": "987150f7153692f5049c3d74df4431247c26e7f5256101d51fd02e3937333e4e",
+  "draft_status": "LLM_LIVE_PATCH_DRAFT_READY",
+  "model": "qwen3:8b",
+  "model_generation_called": true,
+  "probe_path": "/home/nic/forge/memory/llm_live_patch_drafts_v1/latest_llm_live_probe_v1.json",
+  "probe_sha256": "c678e8b0d6e2bf2a6e5c9f61036ed2d0dbf8b46286dcc51c23b0824f3c98c9cd",
+  "raw_response_path": "/home/nic/forge/memory/llm_live_patch_drafts_v1/2026_05_17_084932_response_raw_stack_linker_breather.txt",
+  "raw_response_sha256": "1012112b23adf83a3863086745216caaa0f69735c45ef68fb5adb9ba1216ae12",
+  "recommended_next_patch": "Patch 133 \u2014 Patch Lifecycle 2.0 Gate Matrix",
+  "report_type": "LLM_LIVE_EXPORT_V1",
+  "schema_version": "llm_live_export_v1_patch132R",
+  "status": "LLM_LIVE_EXPORT_READY",
+  "target": "stack_linker_breather"
+}

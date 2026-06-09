@@ -1,0 +1,76 @@
+{
+  "schema_version": "llm_plan_packet_schema_v1_patch119",
+  "report_type": "LLM_PLAN_TEMPLATE_V1",
+  "created_at": "2026-05-16T23:56:28",
+  "status": "LLM_PLAN_TEMPLATE_READY_NO_ACTION_AUTHORITY",
+  "required_fields": [
+    "goal",
+    "target_files",
+    "source_evidence",
+    "runtime_roles",
+    "risk_level",
+    "expected_changes",
+    "test_plan",
+    "rollback_plan",
+    "requires_human_approval"
+  ],
+  "allowed_risk_levels": [
+    "LOW",
+    "MEDIUM",
+    "HIGH"
+  ],
+  "template": {
+    "schema_version": "llm_plan_packet_schema_v1_patch119",
+    "packet_type": "LLM_PLANNING_PACKET",
+    "goal": "",
+    "target_files": [],
+    "source_evidence": [],
+    "runtime_roles": [],
+    "risk_level": "MEDIUM",
+    "expected_changes": [],
+    "test_plan": [],
+    "rollback_plan": [],
+    "requires_human_approval": true,
+    "llm_notes": "",
+    "forge_validation_notes": [],
+    "authority": {
+      "llm_may_draft": true,
+      "forge_must_validate": true,
+      "human_approval_required": true,
+      "project_file_write_authority": false,
+      "forge_self_write_authority": false,
+      "patch_apply_authority": false,
+      "shell_execution_authority": false,
+      "chroma_write_authority": false,
+      "ledger_mutation_authority": false
+    },
+    "validation_requirements": {
+      "target_files_must_exist": true,
+      "target_files_must_be_in_scope": true,
+      "source_evidence_must_exist": true,
+      "runtime_roles_must_be_known": true,
+      "current_sha_must_match_before_apply": true,
+      "snapshot_required_before_write": true,
+      "sandbox_required_before_write": true,
+      "safe_tests_required_before_write_when_available": true,
+      "rollback_plan_required_before_write": true
+    }
+  },
+  "plain_english": "This is the shape future LLM plans must use. It is not an executable patch and grants no write authority.",
+  "authority": {
+    "mode": "SCHEMA_TEMPLATE_ONLY",
+    "project_file_write_authority": false,
+    "forge_self_write_authority": false,
+    "patch_apply_authority": false,
+    "shell_execution_authority": false,
+    "chroma_write_authority": false,
+    "ledger_mutation_authority": false,
+    "llm_autonomous_decision_authority": false
+  },
+  "next_commands": [
+    "llm-plan-show latest",
+    "llm-plan-validate latest",
+    "llm-plan-export",
+    "forge-next"
+  ]
+}

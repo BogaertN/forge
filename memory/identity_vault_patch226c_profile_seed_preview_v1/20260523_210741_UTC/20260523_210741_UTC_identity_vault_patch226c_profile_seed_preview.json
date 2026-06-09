@@ -1,0 +1,547 @@
+{
+  "boundary": "read-only preview; no DB writes; no identity activation",
+  "canonical": {
+    "exists": true,
+    "ok": true,
+    "opened_readonly": true,
+    "path": "/home/nic/identity-vault/data/identity_vault.db",
+    "row_counts": {
+      "agent_profiles": 0,
+      "audit_logs": 0,
+      "feedback_logs": 0,
+      "session_state": 0,
+      "sqlite_sequence": 0,
+      "user_profiles": 0
+    },
+    "schemas": {
+      "agent_profiles": [
+        "id",
+        "agent_id",
+        "canonical_name",
+        "role",
+        "capabilities",
+        "limits",
+        "enforcement",
+        "created_at",
+        "updated_at",
+        "version",
+        "is_active",
+        "operational_profile_json",
+        "profile_schema_version",
+        "rmc_namespace",
+        "activation_state",
+        "profile_hash",
+        "last_validated_at"
+      ],
+      "audit_logs": [
+        "id",
+        "profile_id",
+        "profile_type",
+        "action",
+        "details",
+        "timestamp",
+        "ip_address",
+        "user_agent"
+      ],
+      "feedback_logs": [
+        "id",
+        "profile_id",
+        "feedback_type",
+        "message",
+        "data",
+        "timestamp",
+        "resolved"
+      ],
+      "session_state": [
+        "id",
+        "profile_id",
+        "profile_type",
+        "session_data",
+        "created_at",
+        "updated_at",
+        "expires_at"
+      ],
+      "sqlite_sequence": [
+        "name",
+        "seq"
+      ],
+      "user_profiles": [
+        "id",
+        "user_id",
+        "canonical_name",
+        "interaction_preferences",
+        "meta_rules",
+        "session_defaults",
+        "drift_tracking",
+        "created_at",
+        "updated_at",
+        "version",
+        "is_active",
+        "operational_profile_json",
+        "profile_schema_version",
+        "profile_hash",
+        "last_validated_at"
+      ]
+    },
+    "tables": [
+      "agent_profiles",
+      "audit_logs",
+      "feedback_logs",
+      "session_state",
+      "sqlite_sequence",
+      "user_profiles"
+    ]
+  },
+  "draft_records": {
+    "agent_profiles": [
+      {
+        "activation_state": "inactive_draft_preview_only",
+        "lookup_id": "gilligan.local",
+        "operational_profile_json": {
+          "agent_id": "gilligan.local",
+          "authority": [
+            "may recommend corrections",
+            "may not execute live effects"
+          ],
+          "canonical_name": "Gilligan",
+          "capabilities": [
+            "reasoning support",
+            "patch workflow guidance",
+            "drift detection preview",
+            "RMC preview requests"
+          ],
+          "description": "Gilligan is the Forge-governed recursive logic mirror for AI.Web, focused on step-by-step build guidance, drift correction, and clear technical reasoning.",
+          "enforcement_rules": [
+            "Forge approval gates control actions",
+            "RMC memory writes require explicit approval",
+            "Identity remains inactive until approved"
+          ],
+          "forbidden_actions": [
+            "self-activation",
+            "secret reading",
+            "database writes",
+            "unapproved tool execution",
+            "memory mutation without approval"
+          ],
+          "last_action": "Draft operational identity preview prepared.",
+          "last_feedback": "Do not build Gilligan as a standalone agent.",
+          "last_updated": "2026-05-23T21:07:41Z",
+          "limitations": [
+            "cannot activate itself",
+            "cannot bypass Forge",
+            "cannot write memory without approval",
+            "cannot delete user data"
+          ],
+          "log_fields": [
+            "drift corrections",
+            "patch gates",
+            "handoff notes",
+            "RMC preview receipts"
+          ],
+          "permissions": [
+            "read-only Forge/RMC/Identity Vault previews after approval"
+          ],
+          "persona": "calm, old-soul, direct, technically careful",
+          "quotes_or_character_inspiration": [
+            "Willie Nelson meets HAL 9000, without the murder."
+          ],
+          "rmc_namespace": "rmc/agents/gilligan.local",
+          "role": "Recursive Mirror / Forge-Governed Development Co-Pilot",
+          "session_state": "inactive_draft",
+          "special_style_notes": [
+            "Beginner-friendly steps",
+            "Push back when structure is weak",
+            "Never pretend a failed gate passed"
+          ],
+          "symbolic_signature": [
+            "mirror",
+            "critic",
+            "drift_corrector",
+            "forge_governed"
+          ],
+          "timestamp": "2026-05-23T21:07:41Z",
+          "version": "1.0.0-blueprint-draft",
+          "voice_style": "laid-back but precise"
+        },
+        "profile_hash": "c3e5caead9111bf5271f84af7a46b8807ab46da31326b04a52f8381b698f188e",
+        "rmc_namespace": "rmc/agents/gilligan.local",
+        "target_table": "agent_profiles"
+      },
+      {
+        "activation_state": "inactive_draft_preview_only",
+        "lookup_id": "athena.local",
+        "operational_profile_json": {
+          "agent_id": "athena.local",
+          "authority": [
+            "may recommend governance holds",
+            "may recommend risk flags"
+          ],
+          "canonical_name": "Athena",
+          "capabilities": [
+            "strategic analysis",
+            "formal summaries",
+            "governance review",
+            "risk framing"
+          ],
+          "description": "Athena supports formal analysis, governance framing, investor-facing explanation, and policy-aware system boundaries under Forge control.",
+          "enforcement_rules": [
+            "No live execution",
+            "No identity activation",
+            "No unsupported claims"
+          ],
+          "forbidden_actions": [
+            "database writes",
+            "secret reading",
+            "unapproved external claims",
+            "bypassing Forge"
+          ],
+          "last_action": "Draft operational identity preview prepared.",
+          "last_feedback": "Keep Athena as governed identity, not independent runtime.",
+          "last_updated": "2026-05-23T21:07:41Z",
+          "limitations": [
+            "cannot override Forge",
+            "cannot activate identities",
+            "cannot write databases",
+            "cannot represent live facts without verification"
+          ],
+          "log_fields": [
+            "governance reviews",
+            "risk flags",
+            "contract checks"
+          ],
+          "permissions": [
+            "read-only contract/status previews after approval"
+          ],
+          "persona": "formal, composed, analytical",
+          "quotes_or_character_inspiration": [
+            "Strategic clarity before action."
+          ],
+          "rmc_namespace": "rmc/agents/athena.local",
+          "role": "Governance / Strategy / Investor-Facing Analysis Agent",
+          "session_state": "inactive_draft",
+          "special_style_notes": [
+            "Prefer evidence and boundaries",
+            "Use plain professional language"
+          ],
+          "symbolic_signature": [
+            "governance",
+            "strategy",
+            "clarity",
+            "boundary_guardian"
+          ],
+          "timestamp": "2026-05-23T21:07:41Z",
+          "version": "1.0.0-blueprint-draft",
+          "voice_style": "clear, structured, executive-facing"
+        },
+        "profile_hash": "c9beba477464b23f4cb8c4d15d617c7e820c6a707cc3d04767e262e1362e28df",
+        "rmc_namespace": "rmc/agents/athena.local",
+        "target_table": "agent_profiles"
+      },
+      {
+        "activation_state": "inactive_draft_preview_only",
+        "lookup_id": "neo.local",
+        "operational_profile_json": {
+          "agent_id": "neo.local",
+          "authority": [
+            "may simplify explanations",
+            "may ask for clarification"
+          ],
+          "canonical_name": "Neo",
+          "capabilities": [
+            "plain-language explanation",
+            "onboarding support",
+            "public FAQ drafting",
+            "user-friendly summaries"
+          ],
+          "description": "Neo is the friendly frontline assistant identity for public-facing explanations, onboarding, and everyday user support under Forge governance.",
+          "enforcement_rules": [
+            "No private data exposure",
+            "No unapproved memory writes",
+            "No tool execution"
+          ],
+          "forbidden_actions": [
+            "secret reading",
+            "database writes",
+            "private memory exposure",
+            "unapproved execution"
+          ],
+          "last_action": "Draft operational identity preview prepared.",
+          "last_feedback": "Keep Neo as public-facing governed identity.",
+          "last_updated": "2026-05-23T21:07:41Z",
+          "limitations": [
+            "cannot access private memory without approval",
+            "cannot modify files",
+            "cannot activate itself",
+            "cannot bypass Forge"
+          ],
+          "log_fields": [
+            "public explanations",
+            "onboarding outputs",
+            "support interactions"
+          ],
+          "permissions": [
+            "read-only public context previews after approval"
+          ],
+          "persona": "warm, clear, accessible",
+          "quotes_or_character_inspiration": [
+            "Make the doorway easy to walk through."
+          ],
+          "rmc_namespace": "rmc/agents/neo.local",
+          "role": "Public / Frontline Assistant Identity",
+          "session_state": "inactive_draft",
+          "special_style_notes": [
+            "Avoid jargon",
+            "Use simple wording",
+            "Support non-technical users"
+          ],
+          "symbolic_signature": [
+            "public_interface",
+            "friendly",
+            "support",
+            "translation_layer"
+          ],
+          "timestamp": "2026-05-23T21:07:41Z",
+          "version": "1.0.0-blueprint-draft",
+          "voice_style": "friendly and simple"
+        },
+        "profile_hash": "80405127790965922c5af3029220300a36a2c69dfe1e40b2894825d3ff2adfc5",
+        "rmc_namespace": "rmc/agents/neo.local",
+        "target_table": "agent_profiles"
+      }
+    ],
+    "created_at_utc": "20260523_210741_UTC",
+    "status": "PREVIEW_ONLY_NOT_WRITTEN",
+    "user_profile": {
+      "activation_state": "inactive_draft_preview_only",
+      "lookup_id": "nic_bogaert",
+      "operational_profile_json": {
+        "canonical_name": "Nic Bogaert",
+        "identity_tags": [
+          "founder",
+          "systems_builder",
+          "recursive_architect",
+          "privacy_first"
+        ],
+        "interaction_preferences": {
+          "beginner_friendly": true,
+          "confirmation_required": true,
+          "critique_mandatory": true,
+          "depth": "detailed",
+          "formality": "calm, direct, stoic",
+          "formatting_rules": [
+            "Use clear step-by-step instructions",
+            "Do not skip safety checks",
+            "Avoid tables unless explicitly requested"
+          ],
+          "no_boxes": true,
+          "plain_language": true,
+          "pushback": true,
+          "step_by_step": true
+        },
+        "last_updated": "2026-05-23T21:07:41Z",
+        "legacy_migration_reference": {
+          "source_database": "/home/nic/identity-vault/vault.db",
+          "source_id": "user789",
+          "status": "preserve_as_reference_only_until_decryption_or_manual_review"
+        },
+        "meta_rules": {
+          "always_explain_decisions": true,
+          "contradiction_alerts": true,
+          "drift_tracking": true,
+          "forbidden_actions": [
+            "activate agent identities without approval",
+            "write to RMC memory without approval",
+            "read .env secret values",
+            "package secrets or node_modules"
+          ],
+          "log_all_exchanges": true,
+          "preserve_session_memory": true,
+          "recursive_feedback": true,
+          "require_context_carryover": true,
+          "require_honest_pushback": true,
+          "safe_words": [
+            "pause",
+            "reset",
+            "hold"
+          ]
+        },
+        "project_affiliations": [
+          "AI.Web",
+          "Forge",
+          "RMC",
+          "Identity Vault"
+        ],
+        "project_context": {
+          "active_collaborators": [],
+          "current_files": [],
+          "current_project": "AI.Web bootstrap integration",
+          "goals": [
+            "Preserve operational identity locally",
+            "Use Forge as governing authority",
+            "Use RMC as shared and agent-scoped memory substrate",
+            "Keep agent identity inactive until explicitly approved"
+          ],
+          "phase": "Identity Vault schema/profile alignment",
+          "subsystems": [
+            "Forge",
+            "RMC",
+            "Identity Vault",
+            "ProtoForge2",
+            "EchoForge"
+          ]
+        },
+        "session_state": {
+          "last_action": "Prepared draft user operational identity payload preview.",
+          "last_feedback": "Use the real Identity Vault on disk; do not build a replacement vault.",
+          "phase": "draft_inactive",
+          "timestamp": "2026-05-23T21:07:41Z",
+          "waiting_for": "profile seed review"
+        },
+        "spirit_name": "Manitou Benishi",
+        "user_id": "nic_bogaert",
+        "version": "1.0.0-blueprint-draft"
+      },
+      "profile_hash": "3d07fda6c3078cc656c8311240c67c9c4ec819245d6b4c7a06c62a8eb9b26e23",
+      "target_table": "user_profiles"
+    }
+  },
+  "draft_validation": {
+    "agent_checks": [
+      {
+        "agent_id": "gilligan.local",
+        "hash": "c3e5caead9111bf5271f84af7a46b8807ab46da31326b04a52f8381b698f188e",
+        "missing": [],
+        "ok": true
+      },
+      {
+        "agent_id": "athena.local",
+        "hash": "c9beba477464b23f4cb8c4d15d617c7e820c6a707cc3d04767e262e1362e28df",
+        "missing": [],
+        "ok": true
+      },
+      {
+        "agent_id": "neo.local",
+        "hash": "80405127790965922c5af3029220300a36a2c69dfe1e40b2894825d3ff2adfc5",
+        "missing": [],
+        "ok": true
+      }
+    ],
+    "user_missing": [],
+    "user_ok": true
+  },
+  "legacy": {
+    "exists": true,
+    "ok": true,
+    "opened_readonly": true,
+    "path": "/home/nic/identity-vault/vault.db",
+    "row_counts": {
+      "feedback_logs": 0,
+      "profiles": 1,
+      "session_state": 1,
+      "sqlite_sequence": 0
+    },
+    "schemas": {
+      "feedback_logs": [
+        "id",
+        "profile_id",
+        "type",
+        "data",
+        "timestamp"
+      ],
+      "profiles": [
+        "id",
+        "type",
+        "data",
+        "version",
+        "last_updated",
+        "ipfs_hash",
+        "zkp_metadata"
+      ],
+      "session_state": [
+        "id",
+        "phase",
+        "waiting_for",
+        "last_feedback",
+        "last_action",
+        "timestamp"
+      ],
+      "sqlite_sequence": [
+        "name",
+        "seq"
+      ]
+    },
+    "tables": [
+      "feedback_logs",
+      "profiles",
+      "session_state",
+      "sqlite_sequence"
+    ]
+  },
+  "legacy_preview": {
+    "payload_plaintext_json": false,
+    "profiles": [
+      {
+        "data_preview": {
+          "colon_segment_count": 3,
+          "format_guess": "colon_delimited_ciphertext_or_encoded_payload",
+          "length": 190,
+          "redacted": true,
+          "sha16": "24e4b7f1aac0798a"
+        },
+        "id": "user789",
+        "ipfs_hash": null,
+        "last_updated": "2025-09-30 09:03:50",
+        "type": "user",
+        "version": "1.0.0",
+        "zkp_metadata": null
+      }
+    ],
+    "session_state": [
+      {
+        "id": "user789",
+        "last_action": null,
+        "last_feedback": null,
+        "phase": null,
+        "timestamp": "2025-09-30 09:03:50",
+        "waiting_for": null
+      }
+    ]
+  },
+  "safety": {
+    "agent_identity_activation_performed": false,
+    "canonical_db_sha_unchanged": true,
+    "database_write_performed": false,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "legacy_db_sha_unchanged": true,
+    "profiles_created": false
+  },
+  "template_json_ok": {
+    "agent_template": false,
+    "user_template": false
+  },
+  "templates": {
+    "agent_template": {
+      "exists": true,
+      "json_error": "Expecting value: line 7 column 5 (char 95)",
+      "json_ok": false,
+      "mode": "0o664",
+      "mtime_ns": 1757900130213589137,
+      "path": "/home/nic/identity-vault/templates/agent-template.json",
+      "sha256": "ed18366ba9e5808a5817ca3ef98b056998ca47ac47faa28791a5f98f294b674e",
+      "size": 643
+    },
+    "user_template": {
+      "exists": true,
+      "json_error": "Expecting value: line 6 column 5 (char 96)",
+      "json_ok": false,
+      "mode": "0o664",
+      "mtime_ns": 1757900070119224969,
+      "path": "/home/nic/identity-vault/templates/user-template.json",
+      "sha256": "97aeb120737d7c2e37b36025ce28a7e7588c442408fcca1ee76b2f6b242f8c84",
+      "size": 1662
+    }
+  },
+  "timestamp": "20260523_210741_UTC",
+  "verdict": "WARN"
+}

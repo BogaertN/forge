@@ -1,0 +1,1825 @@
+{
+  "authority": {
+    "mode": "READ_ONLY_PROBE_REPORTS_ONLY",
+    "no_canonical_decisions": true,
+    "no_chroma_writes": true,
+    "no_engine_review": true,
+    "no_ingestion_writes": true,
+    "no_pdf_ocr": true,
+    "no_project_writes": true,
+    "patch": "Patch 97A \u2014 Source-Law Chunk Receipt / Retrieval Probe",
+    "rule": "Source law is not review-ready until chunks/retrieval evidence is proven by receipts or deterministic local search evidence.",
+    "writes": "Forge-owned reports under memory/source_law_chunk_probe_v1 only"
+  },
+  "counts": {
+    "blockers": 0,
+    "context_library_exists": true,
+    "not_ready": 0,
+    "ready_retrievable_with_chunks": 6,
+    "targets": 6
+  },
+  "created_at": "2026-05-15_082333",
+  "overall_status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+  "recommended_next_route": "PATCH98_LLM_ENGINE_REVIEW_DRAFT_GENERATOR_WITH_GATEWAY_INIT",
+  "report_type": "SOURCE_LAW_CHUNK_PROBE_V1_PATCH97A",
+  "rows": [
+    {
+      "blockers": [],
+      "display_name": "AI.Web Forge Full System Overview",
+      "json_chunk_evidence_count": 61305,
+      "json_matches": [
+        {
+          "chunk_count_hint": 3070,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "receipt"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163433_ingest_corpus_0033_manifest.json",
+          "path_sha256": "b128921cfecb5dd50a995b2a2e042effc93c392e8410ec966672dc407f0e8e4b",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 3066,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "receipt"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163413_ingest_corpus_0032_manifest.json",
+          "path_sha256": "9b16b908bfcd1c7377b3e210f0598f4ac6a8278fdb939ea3507f7d033d0d8012",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2949,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "receipt"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163406_ingest_corpus_0031_manifest.json",
+          "path_sha256": "ec554fcf710793c6a46e0c265d9307a95aa8e96a72538e93ee7dd42de8c6cf91",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2764,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "receipt"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163354_ingest_corpus_0030_manifest.json",
+          "path_sha256": "145031f9471e5e94e7ff6a2343f078fe84a3f8b056fbe52338af69273c22a8d2",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2586,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "receipt"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163351_ingest_corpus_0028_manifest.json",
+          "path_sha256": "08a99eb8b3b76d718e36b65661ab334710ccfb1eeaf595741cfb0373dfbdb80b",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2582,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "receipt"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163341_ingest_corpus_0027_manifest.json",
+          "path_sha256": "32207d85b8df50860fad172779c844ddf7a5e59a1b36990951e362ffa518b89b",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2576,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "receipt"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163331_ingest_corpus_0025_manifest.json",
+          "path_sha256": "0f95cd2912582d9fe11a1ab6c1c8249a143c81a274bc6104d76d6471382dc69f",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2571,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "receipt"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163324_ingest_corpus_0023_manifest.json",
+          "path_sha256": "d1d09fe476be93510437cc4a128683dbb6a4030950c8f8ec3c9da632ec8deefe",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2501,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "receipt"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_162921_ingest_corpus_0029_manifest.json",
+          "path_sha256": "067221514678db130a630bdd192bf3c3d18ad46f8a4257c874c41ba970104081",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2350,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "receipt"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_191930_ingest_corpus_0014_manifest.json",
+          "path_sha256": "7616bd8cb93cfd376f911ed392d9e5c80a57ef9c7f2eb557f5bde3e611d7a508",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2168,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "receipt"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_191920_ingest_corpus_0013_manifest.json",
+          "path_sha256": "aef6be13ee599186127b27db88152c5af4ebcbc708cf1157534ceaf6b28b54d2",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 1961,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "receipt"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_191912_ingest_corpus_0012_manifest.json",
+          "path_sha256": "362e31f67a64dac2690bf7b28120cbba9875d431bcaa5b8d6b610689584011bd",
+          "report_type": ""
+        }
+      ],
+      "json_metadata_files_scanned": 174,
+      "prior_patch97_ready": false,
+      "prior_patch97_status": "INGESTED_NOT_RETRIEVABLE",
+      "recommended_route": "PATCH98_LLM_REVIEW_GATE_AFTER_GATEWAY_INIT",
+      "source_key": "aiweb_forge_overview",
+      "source_law_chunk_ready": true,
+      "sqlite_files_seen": 1,
+      "sqlite_probe_errors": [],
+      "sqlite_retrieval_evidence": [
+        {
+          "column": "string_value",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "architecture"
+          ],
+          "match_score": 3,
+          "sample": "/home/nic/forge_corpus/02_AIWEB_ARCHITECTURE/Unified Algebra for Recursive Cognitive Architectures_.docx",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "string_value",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "architecture"
+          ],
+          "match_score": 3,
+          "sample": "/home/nic/forge_corpus/02_AIWEB_ARCHITECTURE/Unified Algebra for Recursive Cognitive Architectures_.docx",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "string_value",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "architecture"
+          ],
+          "match_score": 3,
+          "sample": "/home/nic/forge_corpus/02_AIWEB_ARCHITECTURE/Unified Algebra for Recursive Cognitive Architectures_.docx",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "string_value",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "architecture"
+          ],
+          "match_score": 3,
+          "sample": "/home/nic/forge_corpus/02_AIWEB_ARCHITECTURE/Unified Algebra for Recursive Cognitive Architectures_.docx",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "string_value",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "architecture"
+          ],
+          "match_score": 3,
+          "sample": "/home/nic/forge_corpus/02_AIWEB_ARCHITECTURE/Unified Algebra for Recursive Cognitive Architectures_.docx",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "string_value",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "architecture"
+          ],
+          "match_score": 3,
+          "sample": "/home/nic/forge_corpus/02_AIWEB_ARCHITECTURE/Unified Algebra for Recursive Cognitive Architectures_.docx",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "string_value",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "architecture"
+          ],
+          "match_score": 3,
+          "sample": "/home/nic/forge_corpus/02_AIWEB_ARCHITECTURE/Unified Algebra for Recursive Cognitive Architectures_.docx",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "string_value",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "architecture"
+          ],
+          "match_score": 3,
+          "sample": "/home/nic/forge_corpus/02_AIWEB_ARCHITECTURE/Unified Algebra for Recursive Cognitive Architectures_.docx",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "string_value",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "architecture"
+          ],
+          "match_score": 3,
+          "sample": "/home/nic/forge_corpus/02_AIWEB_ARCHITECTURE/Unified Algebra for Recursive Cognitive Architectures_.docx",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "string_value",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "aiweb",
+            "forge",
+            "architecture"
+          ],
+          "match_score": 3,
+          "sample": "/home/nic/forge_corpus/02_AIWEB_ARCHITECTURE/Unified Algebra for Recursive Cognitive Architectures_.docx",
+          "table": "embedding_metadata"
+        }
+      ],
+      "status": "READY_RETRIEVABLE_WITH_CHUNKS",
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "display_name": "FBSC / Frequency-Based Symbolic Calculus source law",
+      "json_chunk_evidence_count": 12866,
+      "json_matches": [
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "fbsc",
+            "core",
+            "frequency",
+            "based",
+            "symbolic",
+            "calculus",
+            "source",
+            "law",
+            "phase",
+            "math"
+          ],
+          "match_score": 10,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163615_context_export.json",
+          "path_sha256": "c9e033c74060cae92eaa97db4233d267fbfd0b5bfee569fabad5bbdd3b5a25fb",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "fbsc",
+            "core",
+            "frequency",
+            "based",
+            "symbolic",
+            "calculus",
+            "source",
+            "law",
+            "phase",
+            "math"
+          ],
+          "match_score": 10,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184457_dry_run_corpus_0002.json",
+          "path_sha256": "1626a6cd33deba5f54bc6ff1796b8d1afc1c08f08566ef8ecdadd2fa64aaaf1f",
+          "report_type": "DRY_RUN_CHUNKING"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "fbsc",
+            "core",
+            "frequency",
+            "based",
+            "symbolic",
+            "calculus",
+            "source",
+            "law",
+            "phase",
+            "math"
+          ],
+          "match_score": 10,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184837_dry_run_corpus_0002_internal_ingest_one.json",
+          "path_sha256": "f9710880d8656dfc2fce357b8edb8ff634627e57c9e3937d54ebd764f2fb30d5",
+          "report_type": "DRY_RUN_CHUNKING"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "fbsc",
+            "core",
+            "symbolic",
+            "calculus",
+            "source",
+            "law",
+            "phase"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_185249_context_export.json",
+          "path_sha256": "add64715d9ae294c975ce2bf60b869a78137a8555f25ed1ac4614e63ec5adac1",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "fbsc",
+            "core",
+            "symbolic",
+            "calculus",
+            "source",
+            "law",
+            "phase"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_190348_context_export.json",
+          "path_sha256": "17bdcbaf2f7ff77ff9b33b3bef163dd8d74d156c470a40b9720f584193885579",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "fbsc",
+            "core",
+            "symbolic",
+            "calculus",
+            "source",
+            "law",
+            "phase"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_191229_context_export.json",
+          "path_sha256": "9845ac0bbeb42c03f0d684ecf8d40b0cc21b23295fe9ff5a538e2f51a5648d4f",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "fbsc",
+            "core",
+            "symbolic",
+            "calculus",
+            "source",
+            "law",
+            "phase"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_192129_context_export.json",
+          "path_sha256": "1236989f77a79db9dd1a517f4e0ad90c66f0088d9d301420ea642f1e3798a92e",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "symbolic",
+            "source",
+            "law",
+            "phase"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184902_ingest_corpus_0002.json",
+          "path_sha256": "24c6deed6eb9164142415f3030d1a82b96dffa786abc53308e14cb91fd7e681b",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "symbolic",
+            "source",
+            "law",
+            "phase"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184458_batch_dry_run_folder_01_SYSTEM_LAW.json",
+          "path_sha256": "71b372722e045d2fc78aa889ea8e3263ff9decfca7f52ff52684d7738acf6cd3",
+          "report_type": "BATCH_DRY_RUN"
+        },
+        {
+          "chunk_count_hint": 242,
+          "collection": "",
+          "match_hits": [
+            "core",
+            "based",
+            "symbolic",
+            "source",
+            "law",
+            "phase"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184458_dry_run_corpus_0004.json",
+          "path_sha256": "3a64ebac092493b90e86c2bc03211c169dd548ac49f3e03202a4c0cb37027bd0",
+          "report_type": "DRY_RUN_CHUNKING"
+        },
+        {
+          "chunk_count_hint": 242,
+          "collection": "",
+          "match_hits": [
+            "core",
+            "based",
+            "symbolic",
+            "source",
+            "law",
+            "phase"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184937_dry_run_corpus_0004_internal_ingest_one.json",
+          "path_sha256": "49ca7ff3e6877ff7f29a14a05d1f436b9b7be3a6e656e64c9ad59feabcc448cc",
+          "report_type": "DRY_RUN_CHUNKING"
+        },
+        {
+          "chunk_count_hint": 242,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "symbolic",
+            "source",
+            "law",
+            "phase"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184946_ingest_corpus_0004.json",
+          "path_sha256": "888ca6f588e985e0257108ae2311a5194477f052cdd741f965c6da0252f0a99a",
+          "report_type": ""
+        }
+      ],
+      "json_metadata_files_scanned": 174,
+      "prior_patch97_ready": false,
+      "prior_patch97_status": "INGESTED_NOT_RETRIEVABLE",
+      "recommended_route": "PATCH98_LLM_REVIEW_GATE_AFTER_GATEWAY_INIT",
+      "source_key": "fbsc_core",
+      "source_law_chunk_ready": true,
+      "sqlite_files_seen": 1,
+      "sqlite_probe_errors": [],
+      "sqlite_retrieval_evidence": [
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "phase"
+          ],
+          "match_score": 1,
+          "sample": "phase_capacitor_terms",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "phase"
+          ],
+          "match_score": 1,
+          "sample": "rpmc_phase_tags",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source"
+          ],
+          "match_score": 1,
+          "sample": "source_role",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "symbolic"
+          ],
+          "match_score": 1,
+          "sample": "symbolic_operators",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "symbolic"
+          ],
+          "match_score": 1,
+          "sample": "symbolic_signature",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "phase"
+          ],
+          "match_score": 1,
+          "sample": "phase_capacitor_terms",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "phase"
+          ],
+          "match_score": 1,
+          "sample": "rpmc_phase_tags",
+          "table": "embedding_metadata"
+        }
+      ],
+      "status": "READY_RETRIEVABLE_WITH_CHUNKS",
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "display_name": "RSOC / Resonant runtime architecture source law",
+      "json_chunk_evidence_count": 12866,
+      "json_matches": [
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "resonant",
+            "runtime",
+            "architecture",
+            "source",
+            "law"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_185249_context_export.json",
+          "path_sha256": "add64715d9ae294c975ce2bf60b869a78137a8555f25ed1ac4614e63ec5adac1",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "resonant",
+            "runtime",
+            "architecture",
+            "source",
+            "law"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_190348_context_export.json",
+          "path_sha256": "17bdcbaf2f7ff77ff9b33b3bef163dd8d74d156c470a40b9720f584193885579",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "resonant",
+            "runtime",
+            "architecture",
+            "source",
+            "law"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_191229_context_export.json",
+          "path_sha256": "9845ac0bbeb42c03f0d684ecf8d40b0cc21b23295fe9ff5a538e2f51a5648d4f",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "resonant",
+            "runtime",
+            "architecture",
+            "source",
+            "law"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_192129_context_export.json",
+          "path_sha256": "1236989f77a79db9dd1a517f4e0ad90c66f0088d9d301420ea642f1e3798a92e",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "resonant",
+            "runtime",
+            "architecture",
+            "source",
+            "law"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163615_context_export.json",
+          "path_sha256": "c9e033c74060cae92eaa97db4233d267fbfd0b5bfee569fabad5bbdd3b5a25fb",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "resonant",
+            "runtime",
+            "architecture",
+            "source",
+            "law"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184457_dry_run_corpus_0002.json",
+          "path_sha256": "1626a6cd33deba5f54bc6ff1796b8d1afc1c08f08566ef8ecdadd2fa64aaaf1f",
+          "report_type": "DRY_RUN_CHUNKING"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "resonant",
+            "runtime",
+            "architecture",
+            "source",
+            "law"
+          ],
+          "match_score": 5,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184837_dry_run_corpus_0002_internal_ingest_one.json",
+          "path_sha256": "f9710880d8656dfc2fce357b8edb8ff634627e57c9e3937d54ebd764f2fb30d5",
+          "report_type": "DRY_RUN_CHUNKING"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "runtime",
+            "architecture",
+            "source",
+            "law"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184458_batch_dry_run_folder_01_SYSTEM_LAW.json",
+          "path_sha256": "71b372722e045d2fc78aa889ea8e3263ff9decfca7f52ff52684d7738acf6cd3",
+          "report_type": "BATCH_DRY_RUN"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184902_ingest_corpus_0002.json",
+          "path_sha256": "24c6deed6eb9164142415f3030d1a82b96dffa786abc53308e14cb91fd7e681b",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 242,
+          "collection": "",
+          "match_hits": [
+            "runtime",
+            "architecture",
+            "source",
+            "law"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184458_dry_run_corpus_0004.json",
+          "path_sha256": "3a64ebac092493b90e86c2bc03211c169dd548ac49f3e03202a4c0cb37027bd0",
+          "report_type": "DRY_RUN_CHUNKING"
+        },
+        {
+          "chunk_count_hint": 242,
+          "collection": "",
+          "match_hits": [
+            "runtime",
+            "architecture",
+            "source",
+            "law"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184937_dry_run_corpus_0004_internal_ingest_one.json",
+          "path_sha256": "49ca7ff3e6877ff7f29a14a05d1f436b9b7be3a6e656e64c9ad59feabcc448cc",
+          "report_type": "DRY_RUN_CHUNKING"
+        },
+        {
+          "chunk_count_hint": 242,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "runtime",
+            "source",
+            "law"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184946_ingest_corpus_0004.json",
+          "path_sha256": "888ca6f588e985e0257108ae2311a5194477f052cdd741f965c6da0252f0a99a",
+          "report_type": ""
+        }
+      ],
+      "json_metadata_files_scanned": 174,
+      "prior_patch97_ready": false,
+      "prior_patch97_status": "INGESTED_NOT_RETRIEVABLE",
+      "recommended_route": "PATCH98_LLM_REVIEW_GATE_AFTER_GATEWAY_INIT",
+      "source_key": "rsoc_or_resonant_runtime",
+      "source_law_chunk_ready": true,
+      "sqlite_files_seen": 1,
+      "sqlite_probe_errors": [],
+      "sqlite_retrieval_evidence": [
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source"
+          ],
+          "match_score": 1,
+          "sample": "source_role",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source"
+          ],
+          "match_score": 1,
+          "sample": "source_role",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source"
+          ],
+          "match_score": 1,
+          "sample": "source_role",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source"
+          ],
+          "match_score": 1,
+          "sample": "source_role",
+          "table": "embedding_metadata"
+        }
+      ],
+      "status": "READY_RETRIEVABLE_WITH_CHUNKS",
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "display_name": "Gilligan agent/core source law",
+      "json_chunk_evidence_count": 12866,
+      "json_matches": [
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "gilligan",
+            "core",
+            "agent",
+            "source",
+            "law",
+            "runtime",
+            "recursive"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_185249_context_export.json",
+          "path_sha256": "add64715d9ae294c975ce2bf60b869a78137a8555f25ed1ac4614e63ec5adac1",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "gilligan",
+            "core",
+            "agent",
+            "source",
+            "law",
+            "runtime",
+            "recursive"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_190348_context_export.json",
+          "path_sha256": "17bdcbaf2f7ff77ff9b33b3bef163dd8d74d156c470a40b9720f584193885579",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "gilligan",
+            "core",
+            "agent",
+            "source",
+            "law",
+            "runtime",
+            "recursive"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_191229_context_export.json",
+          "path_sha256": "9845ac0bbeb42c03f0d684ecf8d40b0cc21b23295fe9ff5a538e2f51a5648d4f",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "gilligan",
+            "core",
+            "agent",
+            "source",
+            "law",
+            "runtime",
+            "recursive"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_192129_context_export.json",
+          "path_sha256": "1236989f77a79db9dd1a517f4e0ad90c66f0088d9d301420ea642f1e3798a92e",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "gilligan",
+            "core",
+            "agent",
+            "source",
+            "law",
+            "runtime",
+            "recursive"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163615_context_export.json",
+          "path_sha256": "c9e033c74060cae92eaa97db4233d267fbfd0b5bfee569fabad5bbdd3b5a25fb",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "gilligan",
+            "core",
+            "agent",
+            "source",
+            "law",
+            "runtime",
+            "recursive"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184457_dry_run_corpus_0002.json",
+          "path_sha256": "1626a6cd33deba5f54bc6ff1796b8d1afc1c08f08566ef8ecdadd2fa64aaaf1f",
+          "report_type": "DRY_RUN_CHUNKING"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "gilligan",
+            "core",
+            "agent",
+            "source",
+            "law",
+            "runtime",
+            "recursive"
+          ],
+          "match_score": 7,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184837_dry_run_corpus_0002_internal_ingest_one.json",
+          "path_sha256": "f9710880d8656dfc2fce357b8edb8ff634627e57c9e3937d54ebd764f2fb30d5",
+          "report_type": "DRY_RUN_CHUNKING"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "source",
+            "law",
+            "runtime",
+            "recursive"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184458_batch_dry_run_folder_01_SYSTEM_LAW.json",
+          "path_sha256": "71b372722e045d2fc78aa889ea8e3263ff9decfca7f52ff52684d7738acf6cd3",
+          "report_type": "BATCH_DRY_RUN"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "source",
+            "law",
+            "recursive"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184902_ingest_corpus_0002.json",
+          "path_sha256": "24c6deed6eb9164142415f3030d1a82b96dffa786abc53308e14cb91fd7e681b",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 242,
+          "collection": "",
+          "match_hits": [
+            "core",
+            "agent",
+            "source",
+            "law",
+            "runtime",
+            "recursive"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184458_dry_run_corpus_0004.json",
+          "path_sha256": "3a64ebac092493b90e86c2bc03211c169dd548ac49f3e03202a4c0cb37027bd0",
+          "report_type": "DRY_RUN_CHUNKING"
+        },
+        {
+          "chunk_count_hint": 242,
+          "collection": "",
+          "match_hits": [
+            "core",
+            "agent",
+            "source",
+            "law",
+            "runtime",
+            "recursive"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184937_dry_run_corpus_0004_internal_ingest_one.json",
+          "path_sha256": "49ca7ff3e6877ff7f29a14a05d1f436b9b7be3a6e656e64c9ad59feabcc448cc",
+          "report_type": "DRY_RUN_CHUNKING"
+        },
+        {
+          "chunk_count_hint": 242,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "source",
+            "law",
+            "runtime"
+          ],
+          "match_score": 3,
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184946_ingest_corpus_0004.json",
+          "path_sha256": "888ca6f588e985e0257108ae2311a5194477f052cdd741f965c6da0252f0a99a",
+          "report_type": ""
+        }
+      ],
+      "json_metadata_files_scanned": 174,
+      "prior_patch97_ready": false,
+      "prior_patch97_status": "INGESTED_NOT_RETRIEVABLE",
+      "recommended_route": "PATCH98_LLM_REVIEW_GATE_AFTER_GATEWAY_INIT",
+      "source_key": "gilligan_core",
+      "source_law_chunk_ready": true,
+      "sqlite_files_seen": 1,
+      "sqlite_probe_errors": [],
+      "sqlite_retrieval_evidence": [
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source"
+          ],
+          "match_score": 1,
+          "sample": "source_role",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source"
+          ],
+          "match_score": 1,
+          "sample": "source_role",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source"
+          ],
+          "match_score": 1,
+          "sample": "source_role",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source"
+          ],
+          "match_score": 1,
+          "sample": "source_role",
+          "table": "embedding_metadata"
+        }
+      ],
+      "status": "READY_RETRIEVABLE_WITH_CHUNKS",
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "display_name": "RPMC / Resonant Phase Memory Calculus protocol",
+      "json_chunk_evidence_count": 61305,
+      "json_matches": [
+        {
+          "chunk_count_hint": 3070,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "memory"
+          ],
+          "match_score": 1,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163433_ingest_corpus_0033_manifest.json",
+          "path_sha256": "b128921cfecb5dd50a995b2a2e042effc93c392e8410ec966672dc407f0e8e4b",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 3066,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "memory"
+          ],
+          "match_score": 1,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163413_ingest_corpus_0032_manifest.json",
+          "path_sha256": "9b16b908bfcd1c7377b3e210f0598f4ac6a8278fdb939ea3507f7d033d0d8012",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2949,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "memory"
+          ],
+          "match_score": 1,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163406_ingest_corpus_0031_manifest.json",
+          "path_sha256": "ec554fcf710793c6a46e0c265d9307a95aa8e96a72538e93ee7dd42de8c6cf91",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2764,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "memory"
+          ],
+          "match_score": 1,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163354_ingest_corpus_0030_manifest.json",
+          "path_sha256": "145031f9471e5e94e7ff6a2343f078fe84a3f8b056fbe52338af69273c22a8d2",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2586,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "memory"
+          ],
+          "match_score": 1,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163351_ingest_corpus_0028_manifest.json",
+          "path_sha256": "08a99eb8b3b76d718e36b65661ab334710ccfb1eeaf595741cfb0373dfbdb80b",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2582,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "memory"
+          ],
+          "match_score": 1,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163341_ingest_corpus_0027_manifest.json",
+          "path_sha256": "32207d85b8df50860fad172779c844ddf7a5e59a1b36990951e362ffa518b89b",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2576,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "memory"
+          ],
+          "match_score": 1,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163331_ingest_corpus_0025_manifest.json",
+          "path_sha256": "0f95cd2912582d9fe11a1ab6c1c8249a143c81a274bc6104d76d6471382dc69f",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2571,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "memory"
+          ],
+          "match_score": 1,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163324_ingest_corpus_0023_manifest.json",
+          "path_sha256": "d1d09fe476be93510437cc4a128683dbb6a4030950c8f8ec3c9da632ec8deefe",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2501,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "memory"
+          ],
+          "match_score": 1,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_162921_ingest_corpus_0029_manifest.json",
+          "path_sha256": "067221514678db130a630bdd192bf3c3d18ad46f8a4257c874c41ba970104081",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2350,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "memory"
+          ],
+          "match_score": 1,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_191930_ingest_corpus_0014_manifest.json",
+          "path_sha256": "7616bd8cb93cfd376f911ed392d9e5c80a57ef9c7f2eb557f5bde3e611d7a508",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 2168,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "memory"
+          ],
+          "match_score": 1,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_191920_ingest_corpus_0013_manifest.json",
+          "path_sha256": "aef6be13ee599186127b27db88152c5af4ebcbc708cf1157534ceaf6b28b54d2",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 1961,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "memory"
+          ],
+          "match_score": 1,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_191912_ingest_corpus_0012_manifest.json",
+          "path_sha256": "362e31f67a64dac2690bf7b28120cbba9875d431bcaa5b8d6b610689584011bd",
+          "report_type": ""
+        }
+      ],
+      "json_metadata_files_scanned": 174,
+      "prior_patch97_ready": false,
+      "prior_patch97_status": "INGESTED_NOT_RETRIEVABLE",
+      "recommended_route": "PATCH98_LLM_REVIEW_GATE_AFTER_GATEWAY_INIT",
+      "source_key": "rpmc_protocol",
+      "source_law_chunk_ready": true,
+      "sqlite_files_seen": 1,
+      "sqlite_probe_errors": [],
+      "sqlite_retrieval_evidence": [
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "rpmc",
+            "phase"
+          ],
+          "match_score": 2,
+          "sample": "rpmc_phase_tags",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "rpmc",
+            "phase"
+          ],
+          "match_score": 2,
+          "sample": "rpmc_phase_tags",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "rpmc",
+            "phase"
+          ],
+          "match_score": 2,
+          "sample": "rpmc_phase_tags",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "collapse"
+          ],
+          "match_score": 1,
+          "sample": "collapse_terms",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "memory"
+          ],
+          "match_score": 1,
+          "sample": "memory_role",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "phase"
+          ],
+          "match_score": 1,
+          "sample": "phase_capacitor_terms",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "return"
+          ],
+          "match_score": 1,
+          "sample": "return_terms",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "law"
+          ],
+          "match_score": 1,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "collapse"
+          ],
+          "match_score": 1,
+          "sample": "collapse_terms",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "memory"
+          ],
+          "match_score": 1,
+          "sample": "memory_role",
+          "table": "embedding_metadata"
+        }
+      ],
+      "status": "READY_RETRIEVABLE_WITH_CHUNKS",
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "display_name": "Christ Function / correction operator source law",
+      "json_chunk_evidence_count": 12866,
+      "json_matches": [
+        {
+          "chunk_count_hint": 248,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "christ",
+            "function",
+            "operator",
+            "source",
+            "law",
+            "collapse"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184902_ingest_corpus_0002.json",
+          "path_sha256": "24c6deed6eb9164142415f3030d1a82b96dffa786abc53308e14cb91fd7e681b",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "christ",
+            "function",
+            "correction",
+            "source",
+            "law",
+            "collapse"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_192129_context_export.json",
+          "path_sha256": "1236989f77a79db9dd1a517f4e0ad90c66f0088d9d301420ea642f1e3798a92e",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "christ",
+            "function",
+            "correction",
+            "source",
+            "law",
+            "collapse"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-12_163615_context_export.json",
+          "path_sha256": "c9e033c74060cae92eaa97db4233d267fbfd0b5bfee569fabad5bbdd3b5a25fb",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "christ",
+            "function",
+            "correction",
+            "source",
+            "law",
+            "collapse"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184457_dry_run_corpus_0002.json",
+          "path_sha256": "1626a6cd33deba5f54bc6ff1796b8d1afc1c08f08566ef8ecdadd2fa64aaaf1f",
+          "report_type": "DRY_RUN_CHUNKING"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "christ",
+            "function",
+            "correction",
+            "source",
+            "law",
+            "collapse"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184837_dry_run_corpus_0002_internal_ingest_one.json",
+          "path_sha256": "f9710880d8656dfc2fce357b8edb8ff634627e57c9e3937d54ebd764f2fb30d5",
+          "report_type": "DRY_RUN_CHUNKING"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "function",
+            "source",
+            "law",
+            "collapse"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_185249_context_export.json",
+          "path_sha256": "add64715d9ae294c975ce2bf60b869a78137a8555f25ed1ac4614e63ec5adac1",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "function",
+            "source",
+            "law",
+            "collapse"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_190348_context_export.json",
+          "path_sha256": "17bdcbaf2f7ff77ff9b33b3bef163dd8d74d156c470a40b9720f584193885579",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "function",
+            "source",
+            "law",
+            "collapse"
+          ],
+          "match_score": 4,
+          "path": "/home/nic/forge/memory/context_library_v1/manifests/2026-05-10_191229_context_export.json",
+          "path_sha256": "9845ac0bbeb42c03f0d684ecf8d40b0cc21b23295fe9ff5a538e2f51a5648d4f",
+          "report_type": "CONTEXT_EXPORT_MANIFEST"
+        },
+        {
+          "chunk_count_hint": 248,
+          "collection": "",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184458_batch_dry_run_folder_01_SYSTEM_LAW.json",
+          "path_sha256": "71b372722e045d2fc78aa889ea8e3263ff9decfca7f52ff52684d7738acf6cd3",
+          "report_type": "BATCH_DRY_RUN"
+        },
+        {
+          "chunk_count_hint": 242,
+          "collection": "aiweb_context_chunks_v1",
+          "match_hits": [
+            "christ",
+            "function",
+            "operator",
+            "source",
+            "law",
+            "collapse"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184946_ingest_corpus_0004.json",
+          "path_sha256": "888ca6f588e985e0257108ae2311a5194477f052cdd741f965c6da0252f0a99a",
+          "report_type": ""
+        },
+        {
+          "chunk_count_hint": 242,
+          "collection": "",
+          "match_hits": [
+            "christ",
+            "function",
+            "correction",
+            "source",
+            "law",
+            "collapse"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184458_dry_run_corpus_0004.json",
+          "path_sha256": "3a64ebac092493b90e86c2bc03211c169dd548ac49f3e03202a4c0cb37027bd0",
+          "report_type": "DRY_RUN_CHUNKING"
+        },
+        {
+          "chunk_count_hint": 242,
+          "collection": "",
+          "match_hits": [
+            "christ",
+            "function",
+            "correction",
+            "source",
+            "law",
+            "collapse"
+          ],
+          "match_score": 6,
+          "path": "/home/nic/forge/ingestion_plans/2026-05-10_184937_dry_run_corpus_0004_internal_ingest_one.json",
+          "path_sha256": "49ca7ff3e6877ff7f29a14a05d1f436b9b7be3a6e656e64c9ad59feabcc448cc",
+          "report_type": "DRY_RUN_CHUNKING"
+        }
+      ],
+      "json_metadata_files_scanned": 174,
+      "prior_patch97_ready": false,
+      "prior_patch97_status": "INGESTED_NOT_RETRIEVABLE",
+      "recommended_route": "PATCH98_LLM_REVIEW_GATE_AFTER_GATEWAY_INIT",
+      "source_key": "christ_function",
+      "source_law_chunk_ready": true,
+      "sqlite_files_seen": 1,
+      "sqlite_probe_errors": [],
+      "sqlite_retrieval_evidence": [
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "christ",
+            "function"
+          ],
+          "match_score": 2,
+          "sample": "christ_function_terms",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "christ",
+            "function"
+          ],
+          "match_score": 2,
+          "sample": "christ_function_terms",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "christ",
+            "function"
+          ],
+          "match_score": 2,
+          "sample": "christ_function_terms",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "christ",
+            "function"
+          ],
+          "match_score": 2,
+          "sample": "christ_function_terms",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source",
+            "law"
+          ],
+          "match_score": 2,
+          "sample": "source_law_weight",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "collapse"
+          ],
+          "match_score": 1,
+          "sample": "collapse_terms",
+          "table": "embedding_metadata"
+        },
+        {
+          "column": "key",
+          "db_path": "/home/nic/forge/memory/context_library_v1/chroma_db/chroma.sqlite3",
+          "match_hits": [
+            "source"
+          ],
+          "match_score": 1,
+          "sample": "source_role",
+          "table": "embedding_metadata"
+        }
+      ],
+      "status": "READY_RETRIEVABLE_WITH_CHUNKS",
+      "warnings": []
+    }
+  ],
+  "schema_version": "source_law_chunk_probe_v1_patch97A",
+  "source_law_report_path": "/home/nic/forge/memory/source_law_context_readiness_v1/latest_source_law_context_readiness.json",
+  "source_law_report_sha256": "ba7dc93c5c7124612267ce96b2b7cffc65016e6dbdca08f51c201987986102a5"
+}

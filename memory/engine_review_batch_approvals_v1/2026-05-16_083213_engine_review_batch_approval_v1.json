@@ -1,0 +1,77 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_BATCH_APPROVAL_HELPER",
+    "patch": "106",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": true,
+    "rule": "Patch 106 may record Patch99-compatible queue decisions for explicitly named engines, but only after Patch102 evidence cross-check readiness. It never commits ledger changes.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_batch_approvals_v1"
+  },
+  "blockers": [],
+  "counts": {
+    "blockers": 0,
+    "recorded": 2,
+    "refused_or_error": 0,
+    "requested": 2,
+    "warnings": 2
+  },
+  "created_at": "2026-05-16_083213",
+  "decision_label": "DEFER",
+  "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+  "manual_verification_rule": "This helper assumes Nic has already read engine-review-evidence-show for each named engine. It records queue intent only and never mutates the ledger.",
+  "report_type": "ENGINE_REVIEW_BATCH_APPROVAL_RECEIPT_V1_PATCH106",
+  "requested_engines": [
+    "aiweb_os",
+    "aiweb_os_engine"
+  ],
+  "rows": [
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_083213_aiweb_os_engine_review_approval_helper_v1.json",
+      "check_sha256": "c90b4c757335c44c06aa67919d63634b0bf657d423d0fb545cc4286a81946f8c",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-aiweb_os-2026-05-16_083213",
+      "engine_family": "aiweb_os",
+      "evidence_id": "EEB-7b29cb90ee5e540e",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083213_aiweb_os_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "bdf54ed5080d6683cec2c57ef3c92316e8421f0e313575d01be15a5d1f3d2fc4",
+      "requested_decision": "DEFERRED_FOR_MORE_REVIEW",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/aiweb_os_engine",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_083213_aiweb_os_engine_engine_review_approval_helper_v1.json",
+      "check_sha256": "042cdafd37ffb8e7a75bddf69e5747e232b2ec9eb734cd9dd9ee59725398c0c5",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-aiweb_os_engine-2026-05-16_083213",
+      "engine_family": "aiweb_os_engine",
+      "evidence_id": "EEB-f8276d394f6ec7e0",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083213_aiweb_os_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "92429cee815bb800cd2f49ec09f2956d3575fa2c66faded465e5022caa5d5671",
+      "requested_decision": "DEFERRED_FOR_MORE_REVIEW",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    }
+  ],
+  "schema_version": "engine_review_batch_approval_v1_patch106",
+  "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION",
+  "warnings": [
+    "aiweb_os: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "aiweb_os_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

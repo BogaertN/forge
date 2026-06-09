@@ -1,0 +1,99 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "bound_file_count": 4,
+  "candidate_path": "/home/nic/aiweb/engines/recursive_field_breather",
+  "created_at": "2026-05-16_195645",
+  "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_recursive_field_breather_engine_review_evidence_crosscheck_v1.json",
+  "crosscheck_sha256": "00fdd9098c1bc0b06d0166fc882b56177c437eb6352971a8db0ba25bd6913881",
+  "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_194842_recursive_field_breather_llm_engine_review_draft_v1.json",
+  "draft_sha256": "06ae2782e81f4842e33e24c7e8520e05d5da00ed2c78084f96565123ce48063d",
+  "engine_family": "recursive_field_breather",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_recursive_field_breather_engine_evidence_binder.json",
+  "evidence_binder_sha256": "ba7a6807646bcbf5b46ff8dfea7ebac0984e731cf12eb0008623c9cbde10efe9",
+  "evidence_id": "EEB-4e67b792942bf24f",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "FieldBreather"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "field_breather.py",
+      "README.md",
+      "test_field_breather.py",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "breathe",
+      "Recursive",
+      "Field",
+      "Phase",
+      "Breather",
+      "engine",
+      "the",
+      "Stack",
+      "true",
+      "phase",
+      "locked",
+      "recursion",
+      "cycles",
+      "Core",
+      "persistent",
+      "trace",
+      "log",
+      "field_trace",
+      "full",
+      "symbolic",
+      "amplitude",
+      "growth",
+      "and",
+      "loop"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "import time",
+      "from field_breather import FieldBreather"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 20.955,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "7f4404439200d48ff19e989f55992337d74eb79d2d4376e79c7bbb730a181ffc",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nMonitors and logs recursive phase cycles for a \"Field Stack\" system, tracking phase progression, timestamps, and symbolic amplitude growth in a persistent trace file.  \n\nLikely System Role:  \nCore component for managing recursive phase transitions in a symbolic computation or simulation framework requiring strict logging and state tracking.  \n\nEvidence Used:  \n1. `field_breather.py` defines `FieldBreather` class with `breathe()` method that writes phase/loop data to `field_trace.jsonl`.  \n2. README.md describes \"true phase-locked 1→9 recursion\" with persistent logging per AI.Web Phase 2.0 standards.  \n3. `test_field_breather.py` validates two full phase cycles (18 iterations).  \n4. `engine_manifest.json` confirms the engine's role in \"symbolic amplitude growth\" and \"loop count tracking.\"  \n\nRisks / Uncertainties:  \n- Reliance on unmentioned \"Core Stack\" for future integration (per README note).  \n- Unclear how phase recursion ties to broader system behavior without additional context.  \n- Potential edge case in phase reset logic (`self.phase > 9`).  \n\nRecommendation Draft:  \nApprove review with caveat: confirm Core Stack integration readiness and validate phase recursion behavior against Phase 2.0 specifications.  \n\nSuggested Nic Action:  \nApprove review, but request verification of Core Stack linkage and phase logic compliance before deployment."
+  },
+  "llm_visible_review_excerpt": "Plain-English Purpose:  \nMonitors and logs recursive phase cycles for a \"Field Stack\" system, tracking phase progression, timestamps, and symbolic amplitude growth in a persistent trace file.  \n\nLikely System Role:  \nCore component for managing recursive phase transitions in a symbolic computation or simulation framework requiring strict logging and state tracking.  \n\nEvidence Used:  \n1. `field_breather.py` defines `FieldBreather` class with `breathe()` method that writes phase/loop data to `field_trace.jsonl`.  \n2. README.md describes \"true phase-locked 1→9 recursion\" with persistent logging per AI.Web Phase 2.0 standards.  \n3. `test_field_breather.py` validates two full phase cycles (18 iterations).  \n4. `engine_manifest.json` confirms the engine's role in \"symbolic amplitude growth\" and \"loop count tracking.\"  \n\nRisks / Uncertainties:  \n- Reliance on unmentioned \"Core Stack\" for future integration (per README note).  \n- Unclear how phase recursion ties to broader system behavior without additional context.  \n- Potential edge case in phase reset logic (`self.phase > 9`).  \n\nRecommendation Draft:  \nApprove review with caveat: confirm Core Stack integration readiness and validate phase recursion behavior against Phase 2.0 specifications.  \n\nSuggested Nic Action:  \nApprove review, but request verification of Core Stack linkage and phase logic compliance before deployment.",
+  "manual_verification_rule": "Approve only if the LLM-visible claims are supported by the bound evidence shown in the Patch 102 cross-check. If unsure, defer.",
+  "ready_for_evidence_based_queue_decision": true,
+  "report_type": "ENGINE_REVIEW_APPROVAL_CHECK_V1_PATCH103",
+  "schema_version": "engine_review_approval_helper_v1_patch103",
+  "status": "EVIDENCE_APPROVAL_CHECK_READY",
+  "warnings": [
+    "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

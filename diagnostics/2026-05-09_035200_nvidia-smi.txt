@@ -1,0 +1,54 @@
+FORGE DIAGNOSTIC SESSION
+══════════════════════════════════════════════════════════════════
+Command run     : nvidia-smi
+Timestamp       : 2026-05-09T03:52:00
+Session ID      : forge_2026_05_09_035049
+Forge Level     : 0.7 — Manual Diagnostic Loop
+Context         : (none provided)
+Output size     : 23 lines / 2011 bytes
+Output SHA-256  : bf1df06fe25d8631
+Diagnostic file : /home/nic/forge/diagnostics/2026-05-09_035200_nvidia-smi.txt
+══════════════════════════════════════════════════════════════════
+
+
+COMMAND RUN BY NIC
+──────────────────
+  nvidia-smi
+
+
+TERMINAL OUTPUT (pasted by Nic — verbatim)
+───────────────────────────────────────────
+Sat May  9 03:51:14 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.309.01             Driver Version: 535.309.01   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA GeForce RTX 3060 Ti     On  | 00000000:2B:00.0  On |                  N/A |
+|  0%   37C    P8              11W / 200W |    500MiB /  8192MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|    0   N/A  N/A      3767      G   /usr/lib/xorg/Xorg                          311MiB |
+|    0   N/A  N/A      4078      G   /usr/bin/gnome-shell                         90MiB |
+|    0   N/A  N/A      4966      G   ...-if-not-exists https://chatgpt.com/        2MiB |
+|    0   N/A  N/A      5015      G   ...n=20260508-010040.869000-production       83MiB |
++---------------------------------------------------------------------------------------+
+
+
+══════════════════════════════════════════════════════════════════
+INTEGRITY NOTE: The SHA-256 hash above covers exactly the bytes stored in the
+"TERMINAL OUTPUT" section. If the hash does not match a recomputation of that
+section, the output was modified after storage.
+══════════════════════════════════════════════════════════════════
+NOTE: Forge analysis appears in the session conversation.
+      The next diagnostic step, if any, is in a PROPOSAL file.
+══════════════════════════════════════════════════════════════════
+Audit entry hash : 2f924f8cb30ea109

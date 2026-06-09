@@ -1,0 +1,249 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "88cc690ebe0031849c75c60f189052809efebe4dd82865a129eb07b3c358a497",
+      "excerpt_start": "# test_glyph_core.py\n\nfrom glyph_core import generate_glyph\n\ndef test_generate_glyph():\n    glyph = generate_glyph()\n    assert \"symbol_id\" in glyph\n    assert \"phase_origin\" in glyph\n    print(\"\u2705 Symbolic Glyph Generation Test Passed\")\n\nif __name__ == \"__main__\":\n    test_generate_glyph()\n",
+      "functions_sample": [
+        "test_generate_glyph"
+      ],
+      "imports_sample": [
+        "from glyph_core import generate_glyph"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/symbolic_glyph_engine/test_glyph_core.py",
+      "relative_to_candidate": "test_glyph_core.py",
+      "sha256": "88cc690ebe0031849c75c60f189052809efebe4dd82865a129eb07b3c358a497",
+      "size_bytes": 293
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "64651d8ec5fbd07f1eae1867be6e1525fb89d8f3b61aaa22ecbb56a759aef405",
+      "excerpt_start": "# Symbolic Glyph Engine\n\nGenerates and manages symbolic glyphs tied to recursive phase evolution.\n\nProvides living resonance symbols that maintain coherence across memory recursion loops.\n\nPart of Phase 1.5 of the ProtoForge Recursive Symbolic Evolution Architecture.\n",
+      "functions_sample": [
+        "Symbolic",
+        "Glyph",
+        "Engine",
+        "Generates",
+        "and",
+        "manages",
+        "symbolic",
+        "glyphs",
+        "tied",
+        "recursive",
+        "phase",
+        "evolution",
+        "Provides",
+        "living",
+        "resonance",
+        "symbols",
+        "that",
+        "maintain",
+        "coherence",
+        "across",
+        "memory",
+        "recursion",
+        "loops",
+        "Part",
+        "Phase"
+      ],
+      "imports_sample": [],
+      "line_count": 8,
+      "path": "/home/nic/aiweb/engines/symbolic_glyph_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "64651d8ec5fbd07f1eae1867be6e1525fb89d8f3b61aaa22ecbb56a759aef405",
+      "size_bytes": 268
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "346e978e251cc3954dd0a4f0ebaaf17afc7f25a2c90b9f9fb38e0c06bb8e515e",
+      "excerpt_start": "# glyph_core.py\n\ndef generate_glyph():\n    return {\n        \"symbol_id\": \"GLYPH-001\",\n        \"phase_origin\": \"\u03a61\",\n        \"stability_factor\": 0.98,\n        \"ancestral_trace\": []\n    }\n",
+      "functions_sample": [
+        "generate_glyph"
+      ],
+      "imports_sample": [],
+      "line_count": 10,
+      "path": "/home/nic/aiweb/engines/symbolic_glyph_engine/glyph_core.py",
+      "relative_to_candidate": "glyph_core.py",
+      "sha256": "346e978e251cc3954dd0a4f0ebaaf17afc7f25a2c90b9f9fb38e0c06bb8e515e",
+      "size_bytes": 187
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "0c16da3c78e49948f2b7d949b2a2dfe75737010a37a5be430f69a9bce74bbf89",
+      "excerpt_start": "{\n  \"engine\": \"Symbolic Glyph Engine\",\n  \"version\": \"v1.0\",\n  \"description\": \"Handles dynamic phase-resonant glyph generation and memory symbol construction.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Symbolic",
+        "Glyph",
+        "Engine",
+        "version",
+        "description",
+        "Handles",
+        "dynamic",
+        "phase",
+        "resonant",
+        "glyph",
+        "generation",
+        "and",
+        "memory",
+        "symbol",
+        "construction"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/symbolic_glyph_engine/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "0c16da3c78e49948f2b7d949b2a2dfe75737010a37a5be430f69a9bce74bbf89",
+      "size_bytes": 161
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/symbolic_glyph_engine",
+  "created_at": "2026-05-16_223508",
+  "crosscheck_id": "ERE-symbolic_glyph_engine-2026-05-16_223508",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Engine",
+      "Generates",
+      "Glyph",
+      "Handles",
+      "Part",
+      "Phase",
+      "Provides",
+      "Symbolic",
+      "across",
+      "and",
+      "coherence",
+      "construction",
+      "description",
+      "dynamic",
+      "engine",
+      "evolution",
+      "generate_glyph",
+      "generation",
+      "glyph",
+      "glyphs"
+    ],
+    "imports_sample": [
+      "from glyph_core import generate_glyph"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`symbolic_glyph_engine` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# test_glyph_core.py ",
+      "# Symbolic Glyph Engine ",
+      "# glyph_core.py ",
+      "{   \"engine\": \"Symbolic Glyph Engine\","
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_223444_symbolic_glyph_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "28390a958ab7925fbf23520bca3a0bcfc2a57bc7e1185d3b7de50459007ed6da",
+  "engine_family": "symbolic_glyph_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_symbolic_glyph_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "24f2078c3fbcda5ca40d4f594645c6ff3d1b2b66494dc0a1deaa132fbdebdcaa",
+  "evidence_id": "EEB-34f45c7f8dba494d",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "test_glyph_core.py",
+      "README.md",
+      "glyph_core.py",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "Symbolic",
+      "Glyph",
+      "Engine",
+      "and",
+      "symbolic",
+      "glyphs",
+      "tied",
+      "recursive",
+      "phase",
+      "evolution",
+      "resonance",
+      "symbols",
+      "coherence",
+      "memory",
+      "recursion",
+      "loops",
+      "Part",
+      "Phase",
+      "engine",
+      "version",
+      "dynamic",
+      "resonant",
+      "glyph",
+      "generation",
+      "symbol",
+      "construction"
+    ],
+    "imports_mentioned": [
+      "from glyph_core import generate_glyph"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 23.899,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "20cff06ec830abbf7cb84a6173f4429f592f29a5be02b8c4718d5450415dd13c",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo generate and manage symbolic glyphs tied to recursive phase evolution, creating coherent resonance symbols for memory recursion loops as part of ProtoForge's Phase 1.5 architecture.  \n\nLikely System Role:  \nA core component for dynamic phase-resonant glyph generation and memory symbol construction, with testing infrastructure to validate glyph attributes.  \n\nEvidence Used:  \n- `test_glyph_core.py`: Tests glyph generation for required attributes (\"symbol_id\", \"phase_origin\").  \n- README.md: Describes the engine's role in recursive phase evolution and coherence maintenance.  \n- `glyph_core.py`: Implements basic glyph generation with stability factors and ancestral traces.  \n- `engine_manifest.json`: Defines the engine's purpose and version.  \n\nRisks / Uncertainties:  \n- Minimal codebase lacks detailed phase evolution mechanics or scalability features.  \n- Test suite is rudimentary and does not cover edge cases or integration with other systems.  \n- Documentation references \"ProtoForge\" without clarifying dependencies or architecture context.  \n\nRecommendation Draft:  \nApprove the review with caveats: expand code to include full phase evolution logic, enhance testing coverage, and clarify integration requirements with ProtoForge systems.  \n\nSuggested Nic Action:  \nApprove review with recommendations for code expansion and documentation. Request additional evidence on phase mechanics and integration protocols before finalizing."
+  },
+  "llm_sections": {
+    "evidence_used": "- `test_glyph_core.py`: Tests glyph generation for required attributes (\"symbol_id\", \"phase_origin\").  \n- README.md: Describes the engine's role in recursive phase evolution and coherence maintenance.  \n- `glyph_core.py`: Implements basic glyph generation with stability factors and ancestral traces.  \n- `engine_manifest.json`: Defines the engine's purpose and version.",
+    "likely_system_role": "A core component for dynamic phase-resonant glyph generation and memory symbol construction, with testing infrastructure to validate glyph attributes.",
+    "plain_english_purpose": "To generate and manage symbolic glyphs tied to recursive phase evolution, creating coherent resonance symbols for memory recursion loops as part of ProtoForge's Phase 1.5 architecture.",
+    "recommendation_draft": "Approve the review with caveats: expand code to include full phase evolution logic, enhance testing coverage, and clarify integration requirements with ProtoForge systems.",
+    "risks_uncertainties": "- Minimal codebase lacks detailed phase evolution mechanics or scalability features.  \n- Test suite is rudimentary and does not cover edge cases or integration with other systems.  \n- Documentation references \"ProtoForge\" without clarifying dependencies or architecture context.",
+    "suggested_nic_action": "Approve review with recommendations for code expansion and documentation. Request additional evidence on phase mechanics and integration protocols before finalizing."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo generate and manage symbolic glyphs tied to recursive phase evolution, creating coherent resonance symbols for memory recursion loops as part of ProtoForge's Phase 1.5 architecture.  \n\nLikely System Role:  \nA core component for dynamic phase-resonant glyph generation and memory symbol construction, with testing infrastructure to validate glyph attributes.  \n\nEvidence Used:  \n- `test_glyph_core.py`: Tests glyph generation for required attributes (\"symbol_id\", \"phase_origin\").  \n- README.md: Describes the engine's role in recursive phase evolution and coherence maintenance.  \n- `glyph_core.py`: Implements basic glyph generation with stability factors and ancestral traces.  \n- `engine_manifest.json`: Defines the engine's purpose and version.  \n\nRisks / Uncertainties:  \n- Minimal codebase lacks detailed phase evolution mechanics or scalability features.  \n- Test suite is rudimentary and does not cover edge cases or integration with other systems.  \n- Documentation references \"ProtoForge\" without clarifying dependencies or architecture context.  \n\nRecommendation Draft:  \nApprove the review with caveats: expand code to include full phase evolution logic, enhance testing coverage, and clarify integration requirements with ProtoForge systems.  \n\nSuggested Nic Action:  \nApprove review with recommendations for code expansion and documentation. Request additional evidence on phase mechanics and integration protocols before finalizing.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

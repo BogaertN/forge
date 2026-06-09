@@ -1,0 +1,34 @@
+FORGE DIAGNOSTIC SESSION
+══════════════════════════════════════════════════════════════════
+Command run     : nvidia-smi
+Timestamp       : 2026-05-08T21:10:56
+Session ID      : forge_2026_05_08_210818
+Forge Level     : 0.7 — Manual Diagnostic Loop
+Context         : (none provided)
+Output size     : 3 lines / 179 bytes
+Output SHA-256  : 01b42e69b96fa579
+Diagnostic file : /home/nic/forge/diagnostics/2026-05-08_211056_nvidia-smi.txt
+══════════════════════════════════════════════════════════════════
+
+
+COMMAND RUN BY NIC
+──────────────────
+  nvidia-smi
+
+
+TERMINAL OUTPUT (pasted by Nic — verbatim)
+───────────────────────────────────────────
+Fri May  8 20:58:00 2026
+NVIDIA-SMI 550.120        Driver Version: 550.120        CUDA Version: 12.4
+GPU 0: NVIDIA GeForce RTX 4090 | 24564MiB total | 2048MiB used | 22516MiB free
+
+
+══════════════════════════════════════════════════════════════════
+INTEGRITY NOTE: The SHA-256 hash above covers exactly the bytes stored in the
+"TERMINAL OUTPUT" section. If the hash does not match a recomputation of that
+section, the output was modified after storage.
+══════════════════════════════════════════════════════════════════
+NOTE: Forge analysis appears in the session conversation.
+      The next diagnostic step, if any, is in a PROPOSAL file.
+══════════════════════════════════════════════════════════════════
+Audit entry hash : b5ba2371255af579

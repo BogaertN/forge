@@ -1,0 +1,31 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "llm_call_required_after_tests": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "sandbox_copy_authority": true
+  },
+  "candidate_file_path": "/home/nic/forge/memory/generic_repair_candidates_v1/2026_05_17_102321_candidate_stack_linker_core.py",
+  "candidate_sha256": "8386c8ea6e289b75e5324f98e2ce5383fc3a8bc73af2937760a299cfab1cea3c",
+  "created_at": "2026-05-17T10:54:42",
+  "diff_path": "/home/nic/forge/memory/generic_repair_candidates_v1/2026_05_17_102321_candidate.diff",
+  "import_isolation_mode": "sandbox_package_parent_first_no_live_engine_path",
+  "llm_review_recommendation": "APPROVE_CANDIDATE",
+  "llm_review_status": "GENERIC_REPAIR_CANDIDATE_LLM_REVIEW_VERIFIED_READY_FOR_SANDBOX",
+  "next_commands": [
+    "generic-repair-sandbox-run latest CONFIRM_RUN_GENERIC_REPAIR_SANDBOX"
+  ],
+  "problems": [],
+  "report_type": "GENERIC_REPAIR_SANDBOX_PLAN_V1",
+  "sandbox_package_dir": "/home/nic/forge/memory/generic_repair_sandboxes_v1/sandbox_2026_05_17_105442_stack_linker_breather/sandbox_packages/stack_linker_breather",
+  "sandbox_package_parent": "/home/nic/forge/memory/generic_repair_sandboxes_v1/sandbox_2026_05_17_105442_stack_linker_breather/sandbox_packages",
+  "sandbox_root": "/home/nic/forge/memory/generic_repair_sandboxes_v1/sandbox_2026_05_17_105442_stack_linker_breather",
+  "schema_version": "generic_repair_sandbox_v1_patch137R",
+  "status": "GENERIC_REPAIR_SANDBOX_PLAN_READY",
+  "target": "stack_linker_breather",
+  "target_file": "/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py",
+  "target_sha256_current": "f34d77a31cdd9a5cc551aa922626eec469c665c2f85e7cd4d06fe6866721736f",
+  "target_sha256_expected": "f34d77a31cdd9a5cc551aa922626eec469c665c2f85e7cd4d06fe6866721736f",
+  "test_file": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+}

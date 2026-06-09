@@ -1,0 +1,19 @@
+{
+  "authority": {
+    "live_self_write_authority": false,
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T06:51:26",
+  "next_commands": [
+    "forge-self-sandbox-export",
+    "forge-roadmap-status",
+    "Install Patch 123 when ready"
+  ],
+  "next_phase": "CANONICAL_ENGINE_TEST_INVENTORY",
+  "plain_english": "Forge self-update sandboxing is proven. The next safe move is inventorying tests for the canonical engine lockfile before running anything.",
+  "recommended_next_patch": "Patch 123 \u2014 Canonical Engine Test Inventory",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "schema_version": "forge_next_status_v1_patch122",
+  "status": "NEXT_PATCH_REQUIRED"
+}

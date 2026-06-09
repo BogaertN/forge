@@ -1,0 +1,102 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "bound_file_count": 5,
+  "candidate_path": "/home/nic/aiweb/engines/tone_engine",
+  "created_at": "2026-05-16_224408",
+  "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_tone_engine_engine_review_evidence_crosscheck_v1.json",
+  "crosscheck_sha256": "4cf3393ce1ed211668db07ca01c4e9994c9b8df6206f48095d26c7b29a6c1292",
+  "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_223606_tone_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "662ffa1be13ecfe9d6bf0ae31a55ce5a2a27860ed81a189c4fa5548dc288b417",
+  "engine_family": "tone_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_tone_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "8dfc81828c24ee8275a9324c57b7607462d946452c6b9b45990daab7951577c1",
+  "evidence_id": "EEB-d96806024a817bac",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "tone_core.py",
+      "tone_state.json",
+      "README.md",
+      "test_tone_engine.py",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "charge_level",
+      "tone",
+      "focused",
+      "Tone",
+      "Engine",
+      "the",
+      "Web",
+      "system",
+      "external",
+      "response",
+      "based",
+      "symbolic",
+      "charge",
+      "Outputs",
+      "Calm",
+      "Focused",
+      "Critical",
+      "tone_state",
+      "json",
+      "engine",
+      "tone_engine",
+      "build_mode",
+      "levels",
+      "for",
+      "user",
+      "awareness",
+      "and",
+      "mood"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "import random",
+      "from tone_core import update_tone_state"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 29.772,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "ce9d41d58bcbeb1decca42ef0d61258551965aa32bb6ff7a0b08f9df2f4f3ebb",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo adjust the AI.Web system's external tone response (e.g., calm, focused, critical) based on symbolic charge levels, storing state in a JSON file for system-wide awareness.  \n\nLikely System Role:  \nA dynamic tone management module that monitors internal charge metrics, updates system-wide tone states, and influences user-facing responses to reflect system \"mood\" or operational focus.  \n\nEvidence Used:  \n- Core Python code (`tone_core.py`) defining tone logic and state updates.  \n- State file (`tone_state.json`) storing current charge level and tone.  \n- README.md describing the engine's purpose and outputs.  \n- Test script (`test_tone_engine.py`) validating tone update functionality.  \n- Engine manifest (`engine_manifest.json`) confirming its role in adjusting system tone.  \n\nRisks / Uncertainties:  \n- Simulated charge levels use random values, which may not reflect real system metrics.  \n- State persistence relies on basic exception handling; no backup or recovery mechanisms are evident.  \n- Test coverage is minimal; no validation of edge cases (e.g., charge_level < 30).  \n- Engine is in \"build_mode\"—unclear if it's production-ready or requires further validation.  \n\nRecommendation Draft:  \nApprove deployment after confirming: (1) real-world charge metric integration replaces random simulation, (2) robust error handling for state writes, and (3) comprehensive testing of all tone thresholds.  \n\nSuggested Nic Action:  \nApprove deployment with the above conditions, ensuring the engine transitions from \"build_mode\" to active use only after validation."
+  },
+  "llm_visible_review_excerpt": "Plain-English Purpose:  \nTo adjust the AI.Web system's external tone response (e.g., calm, focused, critical) based on symbolic charge levels, storing state in a JSON file for system-wide awareness.  \n\nLikely System Role:  \nA dynamic tone management module that monitors internal charge metrics, updates system-wide tone states, and influences user-facing responses to reflect system \"mood\" or operational focus.  \n\nEvidence Used:  \n- Core Python code (`tone_core.py`) defining tone logic and state updates.  \n- State file (`tone_state.json`) storing current charge level and tone.  \n- README.md describing the engine's purpose and outputs.  \n- Test script (`test_tone_engine.py`) validating tone update functionality.  \n- Engine manifest (`engine_manifest.json`) confirming its role in adjusting system tone.  \n\nRisks / Uncertainties:  \n- Simulated charge levels use random values, which may not reflect real system metrics.  \n- State persistence relies on basic exception handling; no backup or recovery mechanisms are evident.  \n- Test coverage is minimal; no validation of edge cases (e.g., charge_level < 30).  \n- Engine is in \"build_mode\"—unclear if it's production-ready or requires further validation.  \n\nRecommendation Draft:  \nApprove deployment after confirming: (1) real-world charge metric integration replaces random simulation, (2) robust error handling for state writes, and (3) comprehensive testing of all tone thresholds.  \n\nSuggested Nic Action:  \nApprove deployment with the above conditions, ensuring the engine transitions from \"build_mode\" to active use only after validation.",
+  "manual_verification_rule": "Approve only if the LLM-visible claims are supported by the bound evidence shown in the Patch 102 cross-check. If unsure, defer.",
+  "ready_for_evidence_based_queue_decision": true,
+  "report_type": "ENGINE_REVIEW_APPROVAL_CHECK_V1_PATCH103",
+  "schema_version": "engine_review_approval_helper_v1_patch103",
+  "status": "EVIDENCE_APPROVAL_CHECK_READY",
+  "warnings": [
+    "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

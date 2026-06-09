@@ -1,0 +1,20 @@
+{
+  "build_id": "CE-INTEGRATED-MULTIUSER-CORE-BUILD-002",
+  "capsule_finalization_enabled": false,
+  "ct_minting_enabled": false,
+  "data_tables": [
+    "contribution_events",
+    "memory_capsule_candidates",
+    "capsule_validation_records",
+    "capsule_finalization_receipts",
+    "ct_mint_events",
+    "nullification_correction_events"
+  ],
+  "database_path": "/home/nic/forge/memory/contribution_economy_v1/core/contribution_economy_core.db",
+  "influence_ledger_write_enabled": false,
+  "initialized_at_utc": "2026-05-30T19:00:00Z",
+  "investment_ledger_write_enabled": false,
+  "live_event_persistence_enabled": false,
+  "manifest_hash": "fdac07887c79b7bacae806b340d5ae701078052c76af752021d0692ed8177f04",
+  "schema_version": "ce_integrated_core_store_manifest_v1_build002"
+}

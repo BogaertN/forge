@@ -1,0 +1,57 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "ledger_mutation_authority": false,
+    "model_generation_called": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "writes_forge_memory_only": true
+  },
+  "base_candidate_file_path": "/home/nic/forge/memory/generic_repair_candidates_v1/2026_05_17_102321_candidate_stack_linker_core.py",
+  "base_candidate_sha256": "8386c8ea6e289b75e5324f98e2ce5383fc3a8bc73af2937760a299cfab1cea3c",
+  "candidate_compile": {
+    "candidate_compile_path": "/home/nic/forge/memory/generic_revision_candidates_v1/compile_tmp/2026_05_17_102321_candidate_stack_linker_core.py.revision_candidate.py",
+    "error": null,
+    "py_compile_status": "PASS",
+    "returncode": 0
+  },
+  "candidate_file_path": "/home/nic/forge/memory/generic_revision_candidates_v1/2026_05_17_125228_revision_candidate_2026_05_17_102321_candidate_stack_linker_core.py",
+  "candidate_sha256": "14aa7209449df19e2901302dd03cd48b1e5c81950223fb05166f9aa27da1fe25",
+  "candidate_status": "ready_for_sandbox_rerun",
+  "created_at": "2026-05-17T12:52:28",
+  "diff_path": "/home/nic/forge/memory/generic_revision_candidates_v1/2026_05_17_125228_revision_candidate.diff",
+  "diff_preview": "--- a//home/nic/forge/memory/generic_repair_candidates_v1/2026_05_17_102321_candidate_stack_linker_core.py\n+++ b//home/nic/forge/memory/generic_repair_candidates_v1/2026_05_17_102321_candidate_stack_linker_core.py (revision candidate only)\n@@ -2,10 +2,14 @@\n import os\n sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), \".\")))\n \n-from core_breather.core_breather import breathe_phase as core_breathe\n+from core_breather.core_breather import CoreBreather\n from recursive_field_breather.field_breather import breathe_phase as field_breathe\n import time\n import json\n+\n+_core_breather_instance = CoreBreather()\n+def core_breathe(phase=None):\n+    return _core_breather_instance.breathe()\n \n def unified_breathe_cycle():\n     # simple combined breathing cycle\n",
+  "llm_candidate_plan": {
+    "candidate_action": "USE_COREBREATHER_WRAPPER",
+    "model": "qwen3:8b",
+    "model_generation_called": true,
+    "preview": "Thinking...\nOkay, let's tackle this problem. The user is facing an ImportError because they're trying to import 'breathe_phase' from 'core_breather.core_breather', but that symbol doesn't exist. The core_breather module has a class CoreBreather with a method breathe(), not a standalone function called breathe_phase.\n\nFirst, I need to figure out why the import is failing. The candidate code is importing breathe_phase as core_breathe, but the actual module only has the CoreBreather class. So the candidate's import is incorrect. The minimal fix here would be to adjust the candidate's code to use the existing symbol, which is the breathe method of the CoreBreather class.\n\nBut the user's constraints say not to propose live writes, so we can't directly modify the core_breather module. Instead, the solution should involve revising the candidate's code to reference the correct symbol. That means changing the import line in stack_linker_core.py from importing breathe_phase to using the CoreBreather class's breathe method.\n\nWait, but the candidate is trying to import a function, not a class. So maybe the candidate's code is expecting a function, but the dependency provides a class. The correct approach would be to adjust the candidate's code to instantiate the CoreBreather class and call its breathe method instead of importing a function.\n\nHowever, the user's recommendation earlier suggested revising the candidate, which aligns with this. The minimal action here is to revise the sandbox dependency plan, but since the issue is in the candidate's import, the correct action is to adjust the candidate's code. However, the user's constraints say not to propose live writes, so we need to suggest changing the candidate's import to use the existing symbol.\n\nWait, the user's prior recommendation was to REVISE_CANDIDATE, which is correct. The minimal next step is to update the candidate's import to reference the actual method. So the action should be REVISE_SANDBOX_DEPENDENCY_PLAN, but the user's constraints might require using the core breather wrapper. Alternatively, the correct action here is to use the core breather wrapper to handle the import correctly.\n\nWait, the user's instructions say to include one of the three actions: USE_COREBREATHER_WRAPPER, REVISE_SANDBOX_DEPENDENCY_PLAN, or MANUAL_REVIEW. The prior recommendation was REVISE_CANDIDATE, but the user's constraints might require using the core breather wrapper. Let me check the problem again.\n\nThe error is that the candidate is trying to import a non-existent symbol. The core_breather module has a class with a method, but the candidate is looking for a function. The minimal fix is to adjust the candidate's code to use the class's method. However, the user's constraints say not to propose live writes, so the solution is to revise the candidate's code to use the correct symbol. Therefore, the action should be REVISE_SANDBOX_DEPENDENCY_PLAN, but maybe the correct action is to use the core breather wrapper to handle the import.\n\nWait, the user's example in the prior recommendation used REVISE_CANDIDATE, but the current instructions require one of the three actions. The correct action here is to use the core breather wrapper to wrap the import, but the problem is that the candidate is trying to import a non-existent symbol. So the minimal action is to revise the candidate's code to use the existing symbol, which would be a candidate revision. However, the user's constraints say not to propose live writes, so the action should be REVISE_SANDBOX_DEPENDENCY_PLAN, but that's not the case here. Alternatively, the correct action is to use the core breather wrapper to handle the import correctly.\n\nHmm, perhaps the correct action is to use the core breather wrapper to adjust the import. The core breather wrapper would allow the candidate to access the CoreBreather class's methods. So the minimal action is to use the core breather wrapper to resolve the import issue. Therefore, the action is USE_COREBREATHER_WRAPPER. Then, the candidate's code would need to be adjusted to use the wrapper, which would involve changing the import line to use the wrapper's methods. The tests would need to be rerun to verify the fix. Since the issue is in the candidate's import, it's still sandbox-only because the dependency itself is correct, and the problem is the candidate's code.\n...done thinking.\n\nACTION: USE_COREBREATHER_WRAPPER\n\n1. Why this is minimal: The core_breather module contains a class `CoreBreather` with a `breathe()` method, but the candidate is incorrectly importing a non-existent `breathe_phase` function. Using the core breather wrapper allows us to access the existing `breathe()` method without altering the dependency or live code.\n\n2. Candidate file changes needed: Update the import in `stack_linker_core.py` from `from core_breather.core_breather import breathe_phase as core_breathe` to use the `CoreBreather` class via the wrapper. For example:\n   ```python\n   from core_breather",
+    "prompt_path": "/home/nic/forge/memory/generic_revision_candidates_v1/2026_05_17_125116_prompt_revision_candidate_stack_linker_breather.txt",
+    "prompt_sha256": "870b224efed7be8217d5f5fbf20101c07cf1e4c81e38b90abb4c9295becd474d",
+    "provider": "ollama",
+    "raw_response_path": "/home/nic/forge/memory/generic_revision_candidates_v1/2026_05_17_125116_response_raw_revision_candidate_stack_linker_breather.txt",
+    "raw_response_sha256": "b5260ee3025739f5e69d2243418c23c62ccfb1b88a9a1971489e33383ccb735a",
+    "returncode": 0,
+    "stderr_path": "/home/nic/forge/memory/generic_revision_candidates_v1/2026_05_17_125116_response_stderr_revision_candidate_stack_linker_breather.txt",
+    "stderr_sha256": "a7e5e9b0f3eb12a7543daa4313cc812259c08dd1be7dd2264d3e40acc08765c6",
+    "subprocess_shell_false": true,
+    "timeout": false
+  },
+  "problems": [],
+  "recommended_next_patch": "Patch 141 — Generic Revision Sandbox Rerun",
+  "repair_strategy": {
+    "action": "USE_COREBREATHER_WRAPPER",
+    "changed": true,
+    "confidence": "MEDIUM",
+    "notes": [
+      "Replaced missing breathe_phase import with CoreBreather class import.",
+      "Inserted local core_breathe wrapper that accepts optional phase and calls CoreBreather.breathe().",
+      "This is candidate/sandbox-only; no live file was changed."
+    ]
+  },
+  "report_type": "GENERIC_REVISION_CANDIDATE_V1",
+  "schema_version": "generic_revision_candidate_v1_patch140",
+  "source_revision_recommendation": "REVISE_CANDIDATE",
+  "status": "GENERIC_REVISION_CANDIDATE_READY_NO_LIVE_WRITE",
+  "target": "stack_linker_breather"
+}

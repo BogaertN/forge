@@ -1,0 +1,17 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T07:16:14",
+  "next_commands": [
+    "patch-impact-export",
+    "Install Patch 127 when ready"
+  ],
+  "next_phase": "FORGE_STATUS_API",
+  "plain_english": "Patch impact map exists. The next safe move is a read-only Forge status API.",
+  "recommended_next_patch": "Patch 127 \u2014 Forge Status API",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "schema_version": "forge_next_status_v1_patch126",
+  "status": "NEXT_PATCH_REQUIRED"
+}

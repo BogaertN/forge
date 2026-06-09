@@ -1,0 +1,24 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "patch_apply_authority": false,
+    "read_only_export": true,
+    "test_execution_authority": false
+  },
+  "counts": {
+    "canonical_entries": 55,
+    "engines_with_safe_test_candidates": 50,
+    "engines_with_test_files": 50,
+    "engines_with_tests_but_no_safe_candidate": 0,
+    "engines_without_test_files": 5,
+    "gaps": 5,
+    "paths_resolved": 55,
+    "rows": 55
+  },
+  "created_at": "2026-05-17T06:56:44",
+  "latest_inventory_present": true,
+  "next_recommended_patch": "Patch 124 — Canonical Engine Safe Test Runner",
+  "report_type": "CANONICAL_ENGINE_TEST_INVENTORY_EXPORT_V1",
+  "schema_version": "canonical_engine_test_inventory_export_v1_patch123",
+  "status": "CANONICAL_ENGINE_TEST_INVENTORY_EXPORT_READY"
+}

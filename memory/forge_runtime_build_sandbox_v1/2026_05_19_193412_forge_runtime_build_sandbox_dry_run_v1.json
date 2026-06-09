@@ -1,0 +1,88 @@
+{
+  "active_patch": "Patch 158 \u2014 Runtime Build Sandbox Plan / Dry Run",
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_owned_sandbox_preview_write_authority": true,
+    "project_file_write_authority": false,
+    "runtime_file_write_authority": false
+  },
+  "created_at": "2026-05-19T19:34:12",
+  "created_file_count": 2,
+  "created_files": [
+    {
+      "name": "README.md",
+      "path": "/home/nic/forge/memory/forge_runtime_build_sandboxes_v1/runtime_sandbox_failsafe_manager_2026_05_19_193412/README.md",
+      "sha256": "4cd1445046b504c9a14982884bc5d258ff2c6e4746c55099c6666ad4a02103e0",
+      "size": 242
+    },
+    {
+      "name": "candidate_plan.json",
+      "path": "/home/nic/forge/memory/forge_runtime_build_sandboxes_v1/runtime_sandbox_failsafe_manager_2026_05_19_193412/candidate_plan.json",
+      "sha256": "5aa7ca4944c619f3f7df0b0b84f466b24bc0929497218f14ca68144c6e7c5dba",
+      "size": 2027
+    }
+  ],
+  "current_phase": "S19D \u2014 Runtime Build Sandbox Plan / Dry Run",
+  "dry_run_ready": true,
+  "engine_files_written": 0,
+  "future_paths_not_created": [
+    {
+      "authority": "future path only; not created",
+      "created_by_patch_158": false,
+      "kind": "future_runtime_module_directory",
+      "path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager"
+    },
+    {
+      "authority": "future path only; not created",
+      "created_by_patch_158": false,
+      "kind": "future_runtime_module_manifest",
+      "path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/runtime_manifest.json"
+    },
+    {
+      "authority": "future path only; not created",
+      "created_by_patch_158": false,
+      "kind": "future_runtime_module_readme",
+      "path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/README.md"
+    }
+  ],
+  "live_build_ready": false,
+  "next_patch": "Patch 159 \u2014 Runtime Build Sandbox Verification / Candidate File Plan",
+  "planning_ready": true,
+  "project_files_written": 0,
+  "report_type": "FORGE_RUNTIME_BUILD_SANDBOX_DRY_RUN_V1",
+  "runtime_files_written": 0,
+  "sandbox_dir": "/home/nic/forge/memory/forge_runtime_build_sandboxes_v1/runtime_sandbox_failsafe_manager_2026_05_19_193412",
+  "sandbox_id": "runtime_sandbox_failsafe_manager_2026_05_19_193412",
+  "schema_version": "forge_runtime_build_sandbox_v1_patch158",
+  "selected_candidate": {
+    "canonical_path": "aiweb/engines/failsafe_manager",
+    "canonical_status": "CANONICAL_INCLUDED",
+    "cautions": [
+      "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+    ],
+    "dependency_kind": "canonical_runtime_module",
+    "eligible_for_planning": true,
+    "engine": "failsafe_manager",
+    "live_build_ready": false,
+    "live_write_authority": false,
+    "live_write_ready": false,
+    "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+    "priority": "P1_CORE",
+    "relationship_count": 0,
+    "required_human_checks": [
+      "compare_multiple_active_variants",
+      "inspect_high_duplicate_variant_count"
+    ],
+    "risk_level": "LOW",
+    "risk_score": 25,
+    "rollback_needs": [
+      "snapshot_or_file_backup_before_live_patch",
+      "current_sha_readback_before_apply",
+      "post_write_disk_verification"
+    ],
+    "runtime_domain": "GOVERNANCE_AND_SAFETY",
+    "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+    "test_status": "PASS"
+  },
+  "status": "FORGE_RUNTIME_BUILD_SANDBOX_DRY_RUN_READY"
+}

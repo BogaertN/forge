@@ -1,0 +1,250 @@
+{
+  "created_at": "20260520_173400",
+  "export_type": "FORGE_RUNTIME_LIVE_APPLY_HOLD_REVIEW_EXPORT_V1",
+  "payload": {
+    "active_patch": "Patch 172 \u2014 Runtime Live Build Apply Hold Review / No-Write Receipt",
+    "approval_capture_status": "TEMPLATE_READY_NOT_APPROVED",
+    "approval_token_entered": false,
+    "authority": {
+      "engine_file_write_authority": false,
+      "forge_memory_write_only": true,
+      "live_execution_authority": false,
+      "patch_apply_authority": false,
+      "project_file_write_authority": false,
+      "read_only": true,
+      "runtime_file_write_authority": false,
+      "server_started": false,
+      "shell_execution_authority": false
+    },
+    "candidate": "failsafe_manager",
+    "created_at": "20260520_173308",
+    "current_phase": "S19R \u2014 Runtime Live Build Apply Hold Review / No-Write Receipt",
+    "engine_writes": 0,
+    "execution_decision": "HOLD_FOR_HUMAN_APPROVAL",
+    "gate_summary": {
+      "fail": 0,
+      "locked": 3,
+      "pass": 5,
+      "warn": 0
+    },
+    "gates": [
+      {
+        "detail": "FORGE_RUNTIME_LIVE_EXPLICIT_APPROVAL_READY_APPLY_HOLD",
+        "id": "H01",
+        "name": "Patch 171 explicit approval report exists",
+        "status": "PASS"
+      },
+      {
+        "detail": "runtime=0 project=0 engine=0",
+        "id": "H02",
+        "name": "Prior write counters are zero",
+        "status": "PASS"
+      },
+      {
+        "detail": "human_approval_present=False",
+        "id": "H03",
+        "name": "Human approval remains absent or non-executing",
+        "status": "LOCKED"
+      },
+      {
+        "detail": "token_entered=False token_status=NOT_ENTERED",
+        "id": "H04",
+        "name": "Approval token is not executable in this patch",
+        "status": "LOCKED"
+      },
+      {
+        "detail": "HOLD_FOR_HUMAN_APPROVAL",
+        "id": "H05",
+        "name": "Apply decision remains hold",
+        "status": "PASS"
+      },
+      {
+        "detail": "planned_files=4",
+        "id": "H06",
+        "name": "Planned runtime files are visible",
+        "status": "PASS"
+      },
+      {
+        "detail": "Forge-owned memory report only; no AI.Web runtime writes",
+        "id": "H07",
+        "name": "No-write receipt authority only",
+        "status": "PASS"
+      },
+      {
+        "detail": "live_build_ready=False",
+        "id": "H08",
+        "name": "Live build remains not ready",
+        "status": "LOCKED"
+      }
+    ],
+    "human_approval_present": false,
+    "live_build_ready": false,
+    "next_patch": "Patch 173 \u2014 Runtime Live Build Hold Continuation / Runtime Candidate Queue Return",
+    "no_write_receipt": {
+      "approval_present": false,
+      "approval_token_entered": false,
+      "candidate": "failsafe_manager",
+      "engine_writes_performed": 0,
+      "execution_decision": "HOLD_FOR_HUMAN_APPROVAL",
+      "live_execution_performed": false,
+      "no_write_reason": "Patch 172 is review/receipt only and carries no live apply authority.",
+      "project_writes_performed": 0,
+      "receipt_type": "RUNTIME_LIVE_BUILD_APPLY_HOLD_NO_WRITE_RECEIPT",
+      "required_before_any_future_live_apply": "separate explicit human approval plus a later execution patch that rechecks all gates from disk",
+      "runtime_writes_performed": 0,
+      "token_validation_status": "NOT_ENTERED"
+    },
+    "plain_english": "Patch 172 reviews the apply-hold state and writes a no-write receipt. It performs zero live runtime writes and keeps failsafe_manager held until explicit approval plus a later execution patch exist.",
+    "planned_file_count": 4,
+    "planned_files": [
+      {
+        "live_write_planned_now": false,
+        "relative_path": "governance_and_safety/failsafe_manager/README.md",
+        "sandbox_source": "final_gate",
+        "source": "final_gate",
+        "target_relative_path": "governance_and_safety/failsafe_manager/README.md"
+      },
+      {
+        "live_write_planned_now": false,
+        "relative_path": "governance_and_safety/failsafe_manager/runtime_manifest.json",
+        "sandbox_source": "final_gate",
+        "source": "final_gate",
+        "target_relative_path": "governance_and_safety/failsafe_manager/runtime_manifest.json"
+      },
+      {
+        "live_write_planned_now": false,
+        "relative_path": "governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py",
+        "sandbox_source": "final_gate",
+        "source": "final_gate",
+        "target_relative_path": "governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py"
+      },
+      {
+        "live_write_planned_now": false,
+        "relative_path": "governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py",
+        "sandbox_source": "final_gate",
+        "source": "final_gate",
+        "target_relative_path": "governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py"
+      }
+    ],
+    "planning_ready": true,
+    "problem_count": 0,
+    "problems": [],
+    "project_writes": 0,
+    "receipt_fingerprint": "ddb0fe4073310b3539376ce2fd9be1fa3365449d23e6a15f87ad004bcc7b0e6c",
+    "recommended_next_patch": "Patch 173 \u2014 Runtime Live Build Hold Continuation / Runtime Candidate Queue Return",
+    "report_type": "FORGE_RUNTIME_LIVE_APPLY_HOLD_REVIEW_NO_WRITE_RECEIPT_V1",
+    "roadmap_mutation_policy": "APPEND_ONLY",
+    "runtime_writes": 0,
+    "schema_version": "forge_runtime_live_apply_hold_review_v1_patch172",
+    "source_reports": [
+      {
+        "candidate": "failsafe_manager",
+        "engine_writes": null,
+        "found": true,
+        "human_approval_present": false,
+        "label": "runtime_live_preflight",
+        "live_build_ready": false,
+        "planning_ready": true,
+        "project_writes": null,
+        "relative_path": "forge_runtime_live_preflight_v1/latest_forge_runtime_live_preflight_v1.json",
+        "runtime_writes": null,
+        "status": "FORGE_RUNTIME_LIVE_PREFLIGHT_READY_GATE_LOCKED"
+      },
+      {
+        "candidate": "failsafe_manager",
+        "engine_writes": null,
+        "found": true,
+        "human_approval_present": false,
+        "label": "runtime_live_approval",
+        "live_build_ready": false,
+        "planning_ready": true,
+        "project_writes": null,
+        "relative_path": "forge_runtime_live_approval_v1/latest_forge_runtime_live_approval_v1.json",
+        "runtime_writes": null,
+        "status": "FORGE_RUNTIME_LIVE_APPROVAL_PLAN_READY_GATE_LOCKED"
+      },
+      {
+        "candidate": "failsafe_manager",
+        "engine_writes": null,
+        "found": true,
+        "human_approval_present": false,
+        "label": "runtime_live_backup_dry_run",
+        "live_build_ready": false,
+        "planning_ready": true,
+        "project_writes": null,
+        "relative_path": "forge_runtime_live_backup_v1/latest_forge_runtime_live_backup_apply_dry_run_v1.json",
+        "runtime_writes": null,
+        "status": "FORGE_RUNTIME_LIVE_BACKUP_APPLY_DRY_RUN_READY_GATE_LOCKED"
+      },
+      {
+        "candidate": "failsafe_manager",
+        "engine_writes": null,
+        "found": true,
+        "human_approval_present": false,
+        "label": "runtime_live_final_gate",
+        "live_build_ready": false,
+        "planning_ready": true,
+        "project_writes": null,
+        "relative_path": "forge_runtime_live_final_gate_v1/latest_forge_runtime_live_final_gate_v1.json",
+        "runtime_writes": null,
+        "status": "FORGE_RUNTIME_LIVE_FINAL_APPROVAL_GATE_READY_LOCKED"
+      },
+      {
+        "candidate": "failsafe_manager",
+        "engine_writes": 0,
+        "found": true,
+        "human_approval_present": false,
+        "label": "runtime_live_execution_gate",
+        "live_build_ready": false,
+        "planning_ready": true,
+        "project_writes": 0,
+        "relative_path": "forge_runtime_live_execution_v1/latest_forge_runtime_live_execution_gate_v1.json",
+        "runtime_writes": 0,
+        "status": "FORGE_RUNTIME_LIVE_EXECUTION_PLAN_READY_GATE_LOCKED"
+      },
+      {
+        "candidate": "failsafe_manager",
+        "engine_writes": 0,
+        "found": true,
+        "human_approval_present": false,
+        "label": "runtime_live_token_entry",
+        "live_build_ready": false,
+        "planning_ready": true,
+        "project_writes": 0,
+        "relative_path": "forge_runtime_live_token_entry_v1/latest_forge_runtime_live_token_entry_v1.json",
+        "runtime_writes": 0,
+        "status": "FORGE_RUNTIME_LIVE_TOKEN_ENTRY_READY_GATE_LOCKED"
+      },
+      {
+        "candidate": "failsafe_manager",
+        "engine_writes": 0,
+        "found": true,
+        "human_approval_present": false,
+        "label": "runtime_live_token_validate",
+        "live_build_ready": false,
+        "planning_ready": true,
+        "project_writes": 0,
+        "relative_path": "forge_runtime_live_token_validate_v1/latest_forge_runtime_live_token_validate_v1.json",
+        "runtime_writes": 0,
+        "status": "FORGE_RUNTIME_LIVE_TOKEN_VALIDATION_READY_GATE_LOCKED"
+      },
+      {
+        "candidate": "failsafe_manager",
+        "engine_writes": 0,
+        "found": true,
+        "human_approval_present": false,
+        "label": "runtime_live_explicit_approval",
+        "live_build_ready": false,
+        "planning_ready": true,
+        "project_writes": 0,
+        "relative_path": "forge_runtime_live_explicit_approval_v1/latest_forge_runtime_live_explicit_approval_v1.json",
+        "runtime_writes": 0,
+        "status": "FORGE_RUNTIME_LIVE_EXPLICIT_APPROVAL_READY_APPLY_HOLD"
+      }
+    ],
+    "status": "FORGE_RUNTIME_LIVE_APPLY_HOLD_REVIEW_READY_NO_WRITE_RECEIPT",
+    "token_validation_status": "NOT_ENTERED"
+  },
+  "source_report": "/home/nic/forge/memory/forge_runtime_live_apply_hold_review_v1/latest_forge_runtime_live_apply_hold_review_v1.json",
+  "source_status": "FORGE_RUNTIME_LIVE_APPLY_HOLD_REVIEW_READY_NO_WRITE_RECEIPT"
+}

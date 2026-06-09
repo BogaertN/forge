@@ -1,0 +1,31 @@
+{
+  "schema_version": "snapshot_create_readiness_v1_patch82",
+  "report_type": "SNAPSHOT_READINESS_EXPORT_V1_PATCH82",
+  "created_at": "2026-05-14T20:37:17",
+  "mode": "EXPORT_ONLY_NO_SNAPSHOT_CREATE_NO_RESTORE",
+  "authority": {
+    "snapshot_create_authority": false,
+    "restore_authority": false,
+    "shadow_restore_authority": false,
+    "project_file_copy_authority": false,
+    "project_file_write_authority": false,
+    "engine_file_write_authority": false,
+    "delete_authority": false,
+    "quarantine_authority": false,
+    "shell_access": false,
+    "chroma_write_authority": false,
+    "final_lockfile_authority": false
+  },
+  "count": 1,
+  "readiness_reports": [
+    {
+      "path": "/home/nic/forge/memory/snapshot_readiness_v1/2026-05-14_203633_snapshot_create_readiness_v1.json",
+      "created_at": "2026-05-14T20:36:33",
+      "status": "READY_WITH_WARNINGS_FOR_FUTURE_SNAPSHOT_CREATE_PATCH",
+      "eligible": true,
+      "blockers": 0,
+      "warnings": 2,
+      "manifest": "/home/nic/forge/memory/snapshot_manifests_v1/2026-05-14_203608_snapshot_manifest_dry_run_v1.json"
+    }
+  ]
+}

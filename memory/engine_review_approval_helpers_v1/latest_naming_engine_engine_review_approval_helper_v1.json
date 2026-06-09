@@ -1,0 +1,97 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "bound_file_count": 4,
+  "candidate_path": "/home/nic/aiweb/engines/naming_engine",
+  "created_at": "2026-05-16_100022",
+  "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_naming_engine_engine_review_evidence_crosscheck_v1.json",
+  "crosscheck_sha256": "f3b3835ada3b0e78426113adffa4260ee448de91ca87639e73b04e45ab2ce174",
+  "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095617_naming_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "67fbe8cd47800ae3185e3d99570d0ccb37f511f279945ee2f6457fdca77114a8",
+  "engine_family": "naming_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_naming_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "5f6b96734761c8a864e30ecdf44ee917031dc44420583d0705ff29d2d0ed5967",
+  "evidence_id": "EEB-4811acd49109ee4b",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "naming_core.py",
+      "naming_manifest.json",
+      "README.md",
+      "test_naming.py"
+    ],
+    "functions_mentioned": [
+      "assign_symbolic_name",
+      "engine",
+      "Naming",
+      "Engine",
+      "symbolic",
+      "name",
+      "generation",
+      "and",
+      "phase",
+      "linked",
+      "identity",
+      "assignment",
+      "names",
+      "agents",
+      "memories",
+      "recursion",
+      "points",
+      "based",
+      "state",
+      "tracking",
+      "drift",
+      "management",
+      "memory",
+      "frameworks"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "import random",
+      "from naming_core import assign_symbolic_name"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 25.056,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "760c2fc396d39c456a9d53dd1d48ddc34755adc7197dc041c28f693dd7a5b736",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nGenerates symbolic names for agents, memories, and recursion points using phase-based identifiers to enable identity tracking and state management.  \n\nLikely System Role:  \nA core component for symbolic recursion frameworks, ensuring consistent naming conventions and phase-linked identity assignment across agents and memory nodes.  \n\nEvidence Used:  \n- `naming_core.py`: Implements `assign_symbolic_name()` to generate names with random phases and unique integers.  \n- `naming_manifest.json`: Describes the engine's purpose as symbolic name generation and phase-linked identity assignment.  \n- `README.md`: Explains the engine's role in tracking identities and managing drift in symbolic recursion.  \n- `test_naming.py`: Validates name assignment with basic error checking.  \n\nRisks / Uncertainties:  \n- Reliance on random phase selection may cause collisions or inconsistent naming.  \n- Logging is handled via a JSONL file with limited error recovery; failures could disrupt audit trails.  \n- No explicit safeguards against duplicate names or phase state inconsistencies.  \n\nRecommendation Draft:  \nApprove the engine but recommend adding deterministic phase logic, collision detection, and enhanced logging resilience. Verify alignment with broader system naming conventions before deployment.  \n\nSuggested Nic Action:  \nApprove review with caveats; request implementation of unique name guarantees and phase-state validation mechanisms prior to production use."
+  },
+  "llm_visible_review_excerpt": "Plain-English Purpose:  \nGenerates symbolic names for agents, memories, and recursion points using phase-based identifiers to enable identity tracking and state management.  \n\nLikely System Role:  \nA core component for symbolic recursion frameworks, ensuring consistent naming conventions and phase-linked identity assignment across agents and memory nodes.  \n\nEvidence Used:  \n- `naming_core.py`: Implements `assign_symbolic_name()` to generate names with random phases and unique integers.  \n- `naming_manifest.json`: Describes the engine's purpose as symbolic name generation and phase-linked identity assignment.  \n- `README.md`: Explains the engine's role in tracking identities and managing drift in symbolic recursion.  \n- `test_naming.py`: Validates name assignment with basic error checking.  \n\nRisks / Uncertainties:  \n- Reliance on random phase selection may cause collisions or inconsistent naming.  \n- Logging is handled via a JSONL file with limited error recovery; failures could disrupt audit trails.  \n- No explicit safeguards against duplicate names or phase state inconsistencies.  \n\nRecommendation Draft:  \nApprove the engine but recommend adding deterministic phase logic, collision detection, and enhanced logging resilience. Verify alignment with broader system naming conventions before deployment.  \n\nSuggested Nic Action:  \nApprove review with caveats; request implementation of unique name guarantees and phase-state validation mechanisms prior to production use.",
+  "manual_verification_rule": "Approve only if the LLM-visible claims are supported by the bound evidence shown in the Patch 102 cross-check. If unsure, defer.",
+  "ready_for_evidence_based_queue_decision": true,
+  "report_type": "ENGINE_REVIEW_APPROVAL_CHECK_V1_PATCH103",
+  "schema_version": "engine_review_approval_helper_v1_patch103",
+  "status": "EVIDENCE_APPROVAL_CHECK_READY",
+  "warnings": [
+    "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

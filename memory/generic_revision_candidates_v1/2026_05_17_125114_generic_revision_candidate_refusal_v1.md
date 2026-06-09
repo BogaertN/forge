@@ -1,0 +1,16 @@
+# GENERIC_REVISION_CANDIDATE_REFUSAL_V1
+
+```json
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "project_file_write_authority": false
+  },
+  "created_at": "2026-05-17T12:51:14",
+  "example": "generic-revision-candidate-build latest CONFIRM_BUILD_GENERIC_REVISION_CANDIDATE",
+  "report_type": "GENERIC_REVISION_CANDIDATE_REFUSAL_V1",
+  "required_token": "CONFIRM_BUILD_GENERIC_REVISION_CANDIDATE",
+  "schema_version": "generic_revision_candidate_refusal_v1_patch140",
+  "status": "GENERIC_REVISION_CANDIDATE_BUILD_REFUSED_CONFIRM_TOKEN_REQUIRED"
+}
+```

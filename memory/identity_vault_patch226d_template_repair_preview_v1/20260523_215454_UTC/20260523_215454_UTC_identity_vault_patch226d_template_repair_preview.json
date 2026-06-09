@@ -1,0 +1,207 @@
+{
+  "boundary": "preview only; writes only Forge memory reports/previews",
+  "databases": {
+    "canonical": {
+      "error": null,
+      "exists": true,
+      "ok": true,
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/data/identity_vault.db",
+      "row_counts": {
+        "agent_profiles": 0,
+        "audit_logs": 0,
+        "feedback_logs": 0,
+        "session_state": 0,
+        "sqlite_sequence": 0,
+        "user_profiles": 0
+      },
+      "sha256": "becd76f770093361ae20a6a5ecdd7bf3016f9e05573c1dbc1f0b7439f4b6489a",
+      "tables": [
+        "agent_profiles",
+        "audit_logs",
+        "feedback_logs",
+        "session_state",
+        "sqlite_sequence",
+        "user_profiles"
+      ]
+    },
+    "legacy": {
+      "error": null,
+      "exists": true,
+      "ok": true,
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/vault.db",
+      "row_counts": {
+        "feedback_logs": 0,
+        "profiles": 1,
+        "session_state": 1,
+        "sqlite_sequence": 0
+      },
+      "sha256": "1bfcaca815f7149d32b30e261c20d0679d7182191fe55cfa63ce830c287d87b9",
+      "tables": [
+        "feedback_logs",
+        "profiles",
+        "session_state",
+        "sqlite_sequence"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "code": "IV_USER_TEMPLATE_INVALID_JSON_CONFIRMED",
+      "level": "INFO",
+      "message": "Existing user-template.json is invalid JSON and needs repair before profile seeding."
+    },
+    {
+      "code": "IV_AGENT_TEMPLATE_INVALID_JSON_CONFIRMED",
+      "level": "INFO",
+      "message": "Existing agent-template.json is invalid JSON and needs repair before profile seeding."
+    },
+    {
+      "code": "IV_REPAIRED_TEMPLATE_PREVIEWS_VALID",
+      "level": "INFO",
+      "message": "Both repaired template previews are valid JSON and include required operational identity fields."
+    },
+    {
+      "code": "IV_TEMPLATE_PREVIEW_VALIDATION_FAILED",
+      "level": "FAIL",
+      "message": "Preview validation or no-mutation safety checks failed."
+    }
+  ],
+  "preview_files": {
+    "agent_template_preview": "/home/nic/forge/memory/identity_vault_patch226d_template_repair_preview_v1/20260523_215454_UTC/20260523_215454_UTC_agent_template_repaired_preview.json",
+    "user_template_preview": "/home/nic/forge/memory/identity_vault_patch226d_template_repair_preview_v1/20260523_215454_UTC/20260523_215454_UTC_user_template_repaired_preview.json"
+  },
+  "preview_validation": {
+    "agent_template": {
+      "forbidden_token_hits": [],
+      "json_error": null,
+      "json_roundtrip_ok": true,
+      "missing_required_fields": [],
+      "ok": true,
+      "sha256": "84ef9a70759972c25f30402467858a4ad9be275b900ca1aa9a8313be2cb2b751"
+    },
+    "user_template": {
+      "forbidden_token_hits": [],
+      "json_error": null,
+      "json_roundtrip_ok": true,
+      "missing_required_fields": [],
+      "ok": true,
+      "sha256": "3d3eacbbed4d53e6e892214711fd84ca19bf31ab61a4c6f3ac4bf1ab3f9a8b81"
+    }
+  },
+  "safety": {
+    "agent_identity_activation_performed": false,
+    "agent_template_sha_unchanged": true,
+    "canonical_db_sha_unchanged": true,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "forge_tool_registry_modified": false,
+    "identity_vault_database_write_performed": false,
+    "identity_vault_template_write_performed": false,
+    "legacy_db_sha_unchanged": true,
+    "profiles_created": false,
+    "rmc_memory_write_performed": false,
+    "user_template_sha_unchanged": true
+  },
+  "source_template_diagnostics": {
+    "agent_template": {
+      "error_column": 5,
+      "error_line": 7,
+      "exists": true,
+      "json_error": "Expecting value",
+      "json_ok": false,
+      "line_context": [
+        {
+          "error_line": false,
+          "line": 4,
+          "text": "  \"core_role\": \"\","
+        },
+        {
+          "error_line": false,
+          "line": 5,
+          "text": "  \"description\": \"\","
+        },
+        {
+          "error_line": false,
+          "line": 6,
+          "text": "  \"strengths\": ["
+        },
+        {
+          "error_line": true,
+          "line": 7,
+          "text": "    // e.g., \"debugging\", \"UI design\", \"semantic analysis\""
+        },
+        {
+          "error_line": false,
+          "line": 8,
+          "text": "  ],"
+        },
+        {
+          "error_line": false,
+          "line": 9,
+          "text": "  \"capabilities\": ["
+        },
+        {
+          "error_line": false,
+          "line": 10,
+          "text": "    // e.g., \"access API\", \"generate code\", \"compare JSON diffs\""
+        }
+      ],
+      "path": "/home/nic/identity-vault/templates/agent-template.json",
+      "read_error": null,
+      "sha256": "ed18366ba9e5808a5817ca3ef98b056998ca47ac47faa28791a5f98f294b674e",
+      "size": 643
+    },
+    "user_template": {
+      "error_column": 5,
+      "error_line": 6,
+      "exists": true,
+      "json_error": "Expecting value",
+      "json_ok": false,
+      "line_context": [
+        {
+          "error_line": false,
+          "line": 3,
+          "text": "  \"canonical_name\": \"\","
+        },
+        {
+          "error_line": false,
+          "line": 4,
+          "text": "  \"spirit_name\": \"\","
+        },
+        {
+          "error_line": false,
+          "line": 5,
+          "text": "  \"project_affiliations\": ["
+        },
+        {
+          "error_line": true,
+          "line": 6,
+          "text": "    // e.g., \"ProjectX\", \"Team Alpha\", \"Personal Portfolio\""
+        },
+        {
+          "error_line": false,
+          "line": 7,
+          "text": "  ],"
+        },
+        {
+          "error_line": false,
+          "line": 8,
+          "text": "  \"identity_tags\": ["
+        },
+        {
+          "error_line": false,
+          "line": 9,
+          "text": "    // e.g., \"creative_coder\", \"analytical_thinker\", \"visionary_leader\""
+        }
+      ],
+      "path": "/home/nic/identity-vault/templates/user-template.json",
+      "read_error": null,
+      "sha256": "97aeb120737d7c2e37b36025ce28a7e7588c442408fcca1ee76b2f6b242f8c84",
+      "size": 1662
+    }
+  },
+  "timestamp": "20260523_215454_UTC",
+  "verdict": "FAIL"
+}

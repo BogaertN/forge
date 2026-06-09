@@ -1,0 +1,54 @@
+{
+  "schema_version": "llm_plan_packet_schema_v1_patch119",
+  "report_type": "LLM_PLAN_VALIDATION_V1",
+  "created_at": "2026-05-16T23:56:55",
+  "status": "LLM_PLAN_SCHEMA_VALID",
+  "source_path": "/home/nic/forge/memory/llm_plans_v1/latest_llm_plan_template_v1.json",
+  "source_sha256": "cb0d0eb158550670447d1eb47e0cdc2c12b3c88b5590488ccf9ff96bee91a18e",
+  "validation": {
+    "schema_valid": true,
+    "status": "LLM_PLAN_SCHEMA_VALID",
+    "problems": [],
+    "warnings": [
+      "target_files_empty_template_or_non_executable_plan",
+      "source_evidence_empty_template_or_non_executable_plan",
+      "test_plan_empty_template_or_non_executable_plan",
+      "rollback_plan_empty_template_or_non_executable_plan"
+    ],
+    "required_fields": [
+      "goal",
+      "target_files",
+      "source_evidence",
+      "runtime_roles",
+      "risk_level",
+      "expected_changes",
+      "test_plan",
+      "rollback_plan",
+      "requires_human_approval"
+    ],
+    "allowed_risk_levels": [
+      "LOW",
+      "MEDIUM",
+      "HIGH"
+    ],
+    "concrete_plan": false,
+    "live_apply_eligible": false,
+    "live_apply_reason": "Patch 119 validates schema only. Later gates must validate files, evidence, roles, SHA, snapshot, sandbox, tests, rollback, and human approval."
+  },
+  "authority": {
+    "mode": "SCHEMA_VALIDATION_ONLY",
+    "project_file_write_authority": false,
+    "forge_self_write_authority": false,
+    "patch_apply_authority": false,
+    "shell_execution_authority": false,
+    "chroma_write_authority": false,
+    "ledger_mutation_authority": false,
+    "llm_autonomous_decision_authority": false
+  },
+  "plain_english": "The LLM planning packet shape was checked. This does not make any patch eligible for live apply.",
+  "next_commands": [
+    "llm-plan-show validation",
+    "llm-plan-export",
+    "forge-next"
+  ]
+}

@@ -1,0 +1,633 @@
+{
+  "schema_version": "engine_readiness_v1_patch78",
+  "report_type": "ENGINE_APPROVED_CANDIDATE_READINESS_REPORT_V1",
+  "created_at": "2026-05-14T19:59:58",
+  "mode": "READINESS_REPORT_ONLY",
+  "source_candidate": "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_205514_engine_human_approved_lockfile_candidate.json",
+  "source_candidate_status": "VALID_CANDIDATE",
+  "source_validation_status": "PASS",
+  "authority": {
+    "canonical_lockfile_authority": false,
+    "actual_lockfile_written": false,
+    "engine_file_write_authority": false,
+    "quarantine_authority": false,
+    "delete_authority": false,
+    "shell_access": false,
+    "chroma_write_authority": false
+  },
+  "counts": {
+    "included_candidates": 14,
+    "ready_for_human_final_review_not_authority": 14,
+    "blocked_candidate_rows": 0,
+    "excluded_total": 66,
+    "excluded_holds_or_deferred": 8,
+    "excluded_pending_review": 58,
+    "automatic_final_lockfile_ready": 0
+  },
+  "remaining_global_blockers": [
+    "no final lockfile authority exists in this patch",
+    "automatic final lockfile readiness is intentionally zero",
+    "held/deferred families remain excluded",
+    "pending families remain excluded",
+    "variant comparisons and disk readbacks still need final proposal gates",
+    "snapshot/rollback discipline should exist before any future multi-file authority"
+  ],
+  "candidate_rows": [
+    {
+      "schema_version": "engine_readiness_v1_patch78",
+      "engine_base": "aiweb_os_engine",
+      "canonical_path_candidate": "aiweb/engines/aiweb_os_engine",
+      "readiness_status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+      "plain_english_purpose": "This appears to be a broad AI.Web operating-system layer, so it needs extra care before authority is granted.",
+      "approved_candidate_status": "APPROVED_CANDIDATE_INCLUDED",
+      "risk_level": "MEDIUM",
+      "risk_reasons": [
+        "engine is approved candidate only; final authority is still not granted",
+        "many variants exist; compare duplicates before final lockfile",
+        "human checks remain: compare_multiple_active_variants, inspect_high_duplicate_variant_count",
+        "cautions exist: core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "review_status": "APPROVED",
+      "review_note": "Patch 73 batch-approved core runtime candidate; still not canonical authority",
+      "reviewed_at": "2026-05-12T20:42:50",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "blockers": [],
+      "next_checks_before_final_authority": [
+        "compare variant files before final authority",
+        "compare_multiple_active_variants",
+        "confirm runtime role if this engine becomes final authority",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "recommended_next_step": "Review this row, compare variants if required, then include only in a future explicit final-lockfile proposal patch.",
+      "suggested_next_command": "engine-readiness-show aiweb_os_engine",
+      "authority": {
+        "ready_report_is_authority": false,
+        "final_lockfile_authority": false,
+        "engine_files_changed": false,
+        "quarantine_written": false
+      }
+    },
+    {
+      "schema_version": "engine_readiness_v1_patch78",
+      "engine_base": "christping_listener",
+      "canonical_path_candidate": "aiweb/engines/christping_listener",
+      "readiness_status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+      "plain_english_purpose": "This engine appears connected to χ(t) / ChristPing Correction Layer. In plain English: Handles lawful correction after collapse, silence, grace pulse, and reentry gating.",
+      "approved_candidate_status": "APPROVED_CANDIDATE_INCLUDED",
+      "risk_level": "MEDIUM",
+      "risk_reasons": [
+        "engine is approved candidate only; final authority is still not granted",
+        "many variants exist; compare duplicates before final lockfile",
+        "human checks remain: compare_multiple_active_variants, inspect_high_duplicate_variant_count",
+        "cautions exist: core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "review_status": "APPROVED",
+      "review_note": "Patch 73 batch-approved core runtime candidate; still not canonical authority",
+      "reviewed_at": "2026-05-12T20:42:50",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 10,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "blockers": [],
+      "next_checks_before_final_authority": [
+        "compare variant files before final authority",
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count",
+        "verify symbolic runtime role match before final authority"
+      ],
+      "recommended_next_step": "Review this row, compare variants if required, then include only in a future explicit final-lockfile proposal patch.",
+      "suggested_next_command": "engine-readiness-show christping_listener",
+      "authority": {
+        "ready_report_is_authority": false,
+        "final_lockfile_authority": false,
+        "engine_files_changed": false,
+        "quarantine_written": false
+      }
+    },
+    {
+      "schema_version": "engine_readiness_v1_patch78",
+      "engine_base": "control_panel_ui_engine",
+      "canonical_path_candidate": "aiweb/engines/control_panel_ui_engine_v1.02",
+      "readiness_status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+      "plain_english_purpose": "This engine appears connected to UI / Control Panel / Runtime Dashboard. In plain English: Exposes system state, phase state, control surfaces, overlays, dashboard logic, and user-facing instrumentation.",
+      "approved_candidate_status": "APPROVED_CANDIDATE_INCLUDED",
+      "risk_level": "MEDIUM",
+      "risk_reasons": [
+        "engine is approved candidate only; final authority is still not granted",
+        "many variants exist; compare duplicates before final lockfile",
+        "human checks remain: compare_multiple_active_variants, inspect_high_duplicate_variant_count",
+        "cautions exist: core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "review_status": "APPROVED",
+      "review_note": "Patch 73 batch-approved core runtime candidate; still not canonical authority",
+      "reviewed_at": "2026-05-12T20:42:50",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 10,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "blockers": [],
+      "next_checks_before_final_authority": [
+        "compare variant files before final authority",
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count",
+        "verify symbolic runtime role match before final authority"
+      ],
+      "recommended_next_step": "Review this row, compare variants if required, then include only in a future explicit final-lockfile proposal patch.",
+      "suggested_next_command": "engine-readiness-show control_panel_ui_engine",
+      "authority": {
+        "ready_report_is_authority": false,
+        "final_lockfile_authority": false,
+        "engine_files_changed": false,
+        "quarantine_written": false
+      }
+    },
+    {
+      "schema_version": "engine_readiness_v1_patch78",
+      "engine_base": "drift_signature_logger",
+      "canonical_path_candidate": "aiweb/engines/drift_signature_logger",
+      "readiness_status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+      "plain_english_purpose": "This engine appears connected to Drift / Collapse / Firewall Arbitration. In plain English: Detects phase drift, unsafe skips, contradiction, collapse risk, and firewall intervention points.",
+      "approved_candidate_status": "APPROVED_CANDIDATE_INCLUDED",
+      "risk_level": "MEDIUM",
+      "risk_reasons": [
+        "engine is approved candidate only; final authority is still not granted",
+        "human checks remain: compare_multiple_active_variants",
+        "cautions exist: core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "review_status": "APPROVED",
+      "review_note": "Patch 73 batch-approved core runtime candidate; still not canonical authority",
+      "reviewed_at": "2026-05-12T20:42:50",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 5,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "blockers": [],
+      "next_checks_before_final_authority": [
+        "compare variant files before final authority",
+        "compare_multiple_active_variants",
+        "verify symbolic runtime role match before final authority"
+      ],
+      "recommended_next_step": "Review this row, compare variants if required, then include only in a future explicit final-lockfile proposal patch.",
+      "suggested_next_command": "engine-readiness-show drift_signature_logger",
+      "authority": {
+        "ready_report_is_authority": false,
+        "final_lockfile_authority": false,
+        "engine_files_changed": false,
+        "quarantine_written": false
+      }
+    },
+    {
+      "schema_version": "engine_readiness_v1_patch78",
+      "engine_base": "failsafe_manager",
+      "canonical_path_candidate": "aiweb/engines/failsafe_manager",
+      "readiness_status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+      "plain_english_purpose": "This engine appears connected to Policy / Failsafe / Access Boundary. In plain English: Defines runtime law, access boundaries, safety refusal, naming policy, and non-destructive enforcement.",
+      "approved_candidate_status": "APPROVED_CANDIDATE_INCLUDED",
+      "risk_level": "MEDIUM",
+      "risk_reasons": [
+        "engine is approved candidate only; final authority is still not granted",
+        "many variants exist; compare duplicates before final lockfile",
+        "human checks remain: compare_multiple_active_variants, inspect_high_duplicate_variant_count",
+        "cautions exist: core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "review_status": "APPROVED",
+      "review_note": "Patch 73 batch-approved core runtime candidate; still not canonical authority",
+      "reviewed_at": "2026-05-12T20:42:50",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "blockers": [],
+      "next_checks_before_final_authority": [
+        "compare variant files before final authority",
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count",
+        "verify symbolic runtime role match before final authority"
+      ],
+      "recommended_next_step": "Review this row, compare variants if required, then include only in a future explicit final-lockfile proposal patch.",
+      "suggested_next_command": "engine-readiness-show failsafe_manager",
+      "authority": {
+        "ready_report_is_authority": false,
+        "final_lockfile_authority": false,
+        "engine_files_changed": false,
+        "quarantine_written": false
+      }
+    },
+    {
+      "schema_version": "engine_readiness_v1_patch78",
+      "engine_base": "loop_resurrection_engine",
+      "canonical_path_candidate": "aiweb/engines/loop_resurrection_engine",
+      "readiness_status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+      "plain_english_purpose": "This engine appears connected to Loop Resurrection / Lawful Return. In plain English: Maps engines responsible for returning sealed loops through echo-confirmed restoration.",
+      "approved_candidate_status": "APPROVED_CANDIDATE_INCLUDED",
+      "risk_level": "MEDIUM",
+      "risk_reasons": [
+        "engine is approved candidate only; final authority is still not granted",
+        "many variants exist; compare duplicates before final lockfile",
+        "human checks remain: compare_multiple_active_variants, inspect_high_duplicate_variant_count",
+        "cautions exist: core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "review_status": "APPROVED",
+      "review_note": "Patch 73 batch-approved core runtime candidate; still not canonical authority",
+      "reviewed_at": "2026-05-12T20:42:50",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 8,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "blockers": [],
+      "next_checks_before_final_authority": [
+        "compare variant files before final authority",
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count",
+        "verify symbolic runtime role match before final authority"
+      ],
+      "recommended_next_step": "Review this row, compare variants if required, then include only in a future explicit final-lockfile proposal patch.",
+      "suggested_next_command": "engine-readiness-show loop_resurrection_engine",
+      "authority": {
+        "ready_report_is_authority": false,
+        "final_lockfile_authority": false,
+        "engine_files_changed": false,
+        "quarantine_written": false
+      }
+    },
+    {
+      "schema_version": "engine_readiness_v1_patch78",
+      "engine_base": "phase_engine",
+      "canonical_path_candidate": "aiweb/engines/phase_engine",
+      "readiness_status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+      "plain_english_purpose": "This engine appears connected to Phase Logic / Φ-State Engine. In plain English: Tracks FBSC phase state, phase transitions, phase validation, and structured progression.",
+      "approved_candidate_status": "APPROVED_CANDIDATE_INCLUDED",
+      "risk_level": "MEDIUM",
+      "risk_reasons": [
+        "engine is approved candidate only; final authority is still not granted",
+        "human checks remain: compare_multiple_active_variants",
+        "cautions exist: core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "review_status": "APPROVED",
+      "review_note": "primary phase runtime candidate",
+      "reviewed_at": "2026-05-12T20:31:24",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 5,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "blockers": [],
+      "next_checks_before_final_authority": [
+        "compare variant files before final authority",
+        "compare_multiple_active_variants",
+        "verify symbolic runtime role match before final authority"
+      ],
+      "recommended_next_step": "Review this row, compare variants if required, then include only in a future explicit final-lockfile proposal patch.",
+      "suggested_next_command": "engine-readiness-show phase_engine",
+      "authority": {
+        "ready_report_is_authority": false,
+        "final_lockfile_authority": false,
+        "engine_files_changed": false,
+        "quarantine_written": false
+      }
+    },
+    {
+      "schema_version": "engine_readiness_v1_patch78",
+      "engine_base": "plugin_engine",
+      "canonical_path_candidate": "aiweb/engines/plugin_engine",
+      "readiness_status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+      "plain_english_purpose": "This appears to manage add-on modules or optional runtime capabilities.",
+      "approved_candidate_status": "APPROVED_CANDIDATE_INCLUDED",
+      "risk_level": "MEDIUM",
+      "risk_reasons": [
+        "engine is approved candidate only; final authority is still not granted",
+        "many variants exist; compare duplicates before final lockfile",
+        "human checks remain: compare_multiple_active_variants, inspect_high_duplicate_variant_count",
+        "cautions exist: core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "review_status": "APPROVED",
+      "review_note": "Patch 73 batch-approved core runtime candidate; still not canonical authority",
+      "reviewed_at": "2026-05-12T20:42:50",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "blockers": [],
+      "next_checks_before_final_authority": [
+        "compare variant files before final authority",
+        "compare_multiple_active_variants",
+        "confirm runtime role if this engine becomes final authority",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "recommended_next_step": "Review this row, compare variants if required, then include only in a future explicit final-lockfile proposal patch.",
+      "suggested_next_command": "engine-readiness-show plugin_engine",
+      "authority": {
+        "ready_report_is_authority": false,
+        "final_lockfile_authority": false,
+        "engine_files_changed": false,
+        "quarantine_written": false
+      }
+    },
+    {
+      "schema_version": "engine_readiness_v1_patch78",
+      "engine_base": "recursive_agent_kernel",
+      "canonical_path_candidate": "aiweb/engines/recursive_agent_kernel",
+      "readiness_status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+      "plain_english_purpose": "This engine appears connected to Agent Kernel / Gilligan Neo Athena Runtime. In plain English: Coordinates named agents, reflection, command authority, and inter-agent symbolic behavior.",
+      "approved_candidate_status": "APPROVED_CANDIDATE_INCLUDED",
+      "risk_level": "MEDIUM",
+      "risk_reasons": [
+        "engine is approved candidate only; final authority is still not granted",
+        "many variants exist; compare duplicates before final lockfile",
+        "human checks remain: compare_multiple_active_variants, inspect_high_duplicate_variant_count",
+        "cautions exist: core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "review_status": "APPROVED",
+      "review_note": "Patch 73 batch-approved core runtime candidate; still not canonical authority",
+      "reviewed_at": "2026-05-12T20:42:50",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "blockers": [],
+      "next_checks_before_final_authority": [
+        "compare variant files before final authority",
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count",
+        "verify symbolic runtime role match before final authority"
+      ],
+      "recommended_next_step": "Review this row, compare variants if required, then include only in a future explicit final-lockfile proposal patch.",
+      "suggested_next_command": "engine-readiness-show recursive_agent_kernel",
+      "authority": {
+        "ready_report_is_authority": false,
+        "final_lockfile_authority": false,
+        "engine_files_changed": false,
+        "quarantine_written": false
+      }
+    },
+    {
+      "schema_version": "engine_readiness_v1_patch78",
+      "engine_base": "resonance_charge_meter",
+      "canonical_path_candidate": "aiweb/engines/resonance_charge_meter",
+      "readiness_status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+      "plain_english_purpose": "This appears to be an AI.Web engine family, but Forge does not have a strong plain-English role match yet. Treat it as review-needed, not authoritative.",
+      "approved_candidate_status": "APPROVED_CANDIDATE_INCLUDED",
+      "risk_level": "MEDIUM",
+      "risk_reasons": [
+        "engine is approved candidate only; final authority is still not granted",
+        "many variants exist; compare duplicates before final lockfile",
+        "human checks remain: compare_multiple_active_variants, inspect_high_duplicate_variant_count",
+        "cautions exist: core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "review_status": "APPROVED",
+      "review_note": "Patch 73 batch-approved core runtime candidate; still not canonical authority",
+      "reviewed_at": "2026-05-12T20:42:50",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 8,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "blockers": [],
+      "next_checks_before_final_authority": [
+        "compare variant files before final authority",
+        "compare_multiple_active_variants",
+        "confirm runtime role if this engine becomes final authority",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "recommended_next_step": "Review this row, compare variants if required, then include only in a future explicit final-lockfile proposal patch.",
+      "suggested_next_command": "engine-readiness-show resonance_charge_meter",
+      "authority": {
+        "ready_report_is_authority": false,
+        "final_lockfile_authority": false,
+        "engine_files_changed": false,
+        "quarantine_written": false
+      }
+    },
+    {
+      "schema_version": "engine_readiness_v1_patch78",
+      "engine_base": "symbolic_capacitor_engine",
+      "canonical_path_candidate": "aiweb/engines/symbolic_capacitor_engine",
+      "readiness_status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+      "plain_english_purpose": "This engine appears connected to SPC / Cold Storage / Archive Containment. In plain English: Keeps unresolved loops in non-destructive cold storage until lawful retrieval or resurrection.",
+      "approved_candidate_status": "APPROVED_CANDIDATE_INCLUDED",
+      "risk_level": "MEDIUM",
+      "risk_reasons": [
+        "engine is approved candidate only; final authority is still not granted",
+        "many variants exist; compare duplicates before final lockfile",
+        "human checks remain: compare_multiple_active_variants, inspect_high_duplicate_variant_count",
+        "cautions exist: core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "review_status": "APPROVED",
+      "review_note": "Patch 73 batch-approved core runtime candidate; still not canonical authority",
+      "reviewed_at": "2026-05-12T20:42:50",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 14,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "blockers": [],
+      "next_checks_before_final_authority": [
+        "compare variant files before final authority",
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count",
+        "verify symbolic runtime role match before final authority"
+      ],
+      "recommended_next_step": "Review this row, compare variants if required, then include only in a future explicit final-lockfile proposal patch.",
+      "suggested_next_command": "engine-readiness-show symbolic_capacitor_engine",
+      "authority": {
+        "ready_report_is_authority": false,
+        "final_lockfile_authority": false,
+        "engine_files_changed": false,
+        "quarantine_written": false
+      }
+    },
+    {
+      "schema_version": "engine_readiness_v1_patch78",
+      "engine_base": "symbolic_feedback_loop_engine",
+      "canonical_path_candidate": "aiweb/engines/symbolic_feedback_loop_engine",
+      "readiness_status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+      "plain_english_purpose": "This engine appears connected to Echo Validation / Provenance Return. In plain English: Confirms outputs against origin, receipt, citation, trace, and echo-return requirements.",
+      "approved_candidate_status": "APPROVED_CANDIDATE_INCLUDED",
+      "risk_level": "MEDIUM",
+      "risk_reasons": [
+        "engine is approved candidate only; final authority is still not granted",
+        "many variants exist; compare duplicates before final lockfile",
+        "human checks remain: compare_multiple_active_variants, inspect_high_duplicate_variant_count",
+        "cautions exist: core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "review_status": "APPROVED",
+      "review_note": "Patch 73 batch-approved core runtime candidate; still not canonical authority",
+      "reviewed_at": "2026-05-12T20:42:50",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 10,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "blockers": [],
+      "next_checks_before_final_authority": [
+        "compare variant files before final authority",
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count",
+        "verify symbolic runtime role match before final authority"
+      ],
+      "recommended_next_step": "Review this row, compare variants if required, then include only in a future explicit final-lockfile proposal patch.",
+      "suggested_next_command": "engine-readiness-show symbolic_feedback_loop_engine",
+      "authority": {
+        "ready_report_is_authority": false,
+        "final_lockfile_authority": false,
+        "engine_files_changed": false,
+        "quarantine_written": false
+      }
+    },
+    {
+      "schema_version": "engine_readiness_v1_patch78",
+      "engine_base": "symbolic_policy_engine",
+      "canonical_path_candidate": "aiweb/engines/symbolic_policy_engine",
+      "readiness_status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+      "plain_english_purpose": "This engine appears connected to Policy / Failsafe / Access Boundary. In plain English: Defines runtime law, access boundaries, safety refusal, naming policy, and non-destructive enforcement.",
+      "approved_candidate_status": "APPROVED_CANDIDATE_INCLUDED",
+      "risk_level": "MEDIUM",
+      "risk_reasons": [
+        "engine is approved candidate only; final authority is still not granted",
+        "many variants exist; compare duplicates before final lockfile",
+        "human checks remain: compare_multiple_active_variants, inspect_high_duplicate_variant_count",
+        "cautions exist: core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "review_status": "APPROVED",
+      "review_note": "Patch 73 batch-approved core runtime candidate; still not canonical authority",
+      "reviewed_at": "2026-05-12T20:42:50",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "blockers": [],
+      "next_checks_before_final_authority": [
+        "compare variant files before final authority",
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count",
+        "verify symbolic runtime role match before final authority"
+      ],
+      "recommended_next_step": "Review this row, compare variants if required, then include only in a future explicit final-lockfile proposal patch.",
+      "suggested_next_command": "engine-readiness-show symbolic_policy_engine",
+      "authority": {
+        "ready_report_is_authority": false,
+        "final_lockfile_authority": false,
+        "engine_files_changed": false,
+        "quarantine_written": false
+      }
+    },
+    {
+      "schema_version": "engine_readiness_v1_patch78",
+      "engine_base": "system_log_engine",
+      "canonical_path_candidate": "aiweb/engines/system_log_engine",
+      "readiness_status": "READY_FOR_HUMAN_FINAL_REVIEW_NOT_AUTHORITY",
+      "plain_english_purpose": "This appears to handle logs, records, and operational traceability.",
+      "approved_candidate_status": "APPROVED_CANDIDATE_INCLUDED",
+      "risk_level": "MEDIUM",
+      "risk_reasons": [
+        "engine is approved candidate only; final authority is still not granted",
+        "many variants exist; compare duplicates before final lockfile",
+        "human checks remain: compare_multiple_active_variants, inspect_high_duplicate_variant_count",
+        "cautions exist: core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "review_status": "APPROVED",
+      "review_note": "Patch 73 batch-approved core runtime candidate; still not canonical authority",
+      "reviewed_at": "2026-05-12T20:42:50",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "blockers": [],
+      "next_checks_before_final_authority": [
+        "compare variant files before final authority",
+        "compare_multiple_active_variants",
+        "confirm runtime role if this engine becomes final authority",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "recommended_next_step": "Review this row, compare variants if required, then include only in a future explicit final-lockfile proposal patch.",
+      "suggested_next_command": "engine-readiness-show system_log_engine",
+      "authority": {
+        "ready_report_is_authority": false,
+        "final_lockfile_authority": false,
+        "engine_files_changed": false,
+        "quarantine_written": false
+      }
+    }
+  ]
+}

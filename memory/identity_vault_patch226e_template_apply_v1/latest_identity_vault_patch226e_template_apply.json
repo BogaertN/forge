@@ -1,0 +1,152 @@
+{
+  "timestamp": "20260523_220014_UTC",
+  "boundary": "write repaired Identity Vault template files only after backup; no DB/profile/activation/RMC writes",
+  "verdict": "PASS",
+  "paths": {
+    "user_template": "/home/nic/identity-vault/templates/user-template.json",
+    "agent_template": "/home/nic/identity-vault/templates/agent-template.json",
+    "backup_root": "/home/nic/forge/backups/patch226e_identity_vault_templates_before/20260523_220014_UTC",
+    "run_dir": "/home/nic/forge/memory/identity_vault_patch226e_template_apply_v1/20260523_220014_UTC"
+  },
+  "before": {
+    "env_stat": {
+      "exists": true,
+      "size": 1605,
+      "mtime_ns": 1759221548592283936,
+      "mode": "0o664"
+    },
+    "canonical_db_sha": "becd76f770093361ae20a6a5ecdd7bf3016f9e05573c1dbc1f0b7439f4b6489a",
+    "legacy_db_sha": "1bfcaca815f7149d32b30e261c20d0679d7182191fe55cfa63ce830c287d87b9",
+    "tool_registry_sha": "0c1f4153eff92a50db24ef9bb0d68b3cda4c40c70f2438e614d0494ce9fcaf6b",
+    "user_template_sha": "97aeb120737d7c2e37b36025ce28a7e7588c442408fcca1ee76b2f6b242f8c84",
+    "agent_template_sha": "ed18366ba9e5808a5817ca3ef98b056998ca47ac47faa28791a5f98f294b674e"
+  },
+  "source_json_before": {
+    "user": {
+      "path": "/home/nic/identity-vault/templates/user-template.json",
+      "exists": true,
+      "json_ok": false,
+      "error": "Expecting value: line 6 column 5 (char 96)"
+    },
+    "agent": {
+      "path": "/home/nic/identity-vault/templates/agent-template.json",
+      "exists": true,
+      "json_ok": false,
+      "error": "Expecting value: line 7 column 5 (char 95)"
+    }
+  },
+  "backups": {
+    "/home/nic/identity-vault/templates/user-template.json": "/home/nic/forge/backups/patch226e_identity_vault_templates_before/20260523_220014_UTC/user-template.json",
+    "/home/nic/identity-vault/templates/agent-template.json": "/home/nic/forge/backups/patch226e_identity_vault_templates_before/20260523_220014_UTC/agent-template.json"
+  },
+  "validations": {
+    "user": {
+      "kind": "user",
+      "json_ok": true,
+      "required_missing": [],
+      "forbidden_token_hits": [],
+      "inactive_defaults_ok": true,
+      "ok": true
+    },
+    "agent": {
+      "kind": "agent",
+      "json_ok": true,
+      "required_missing": [],
+      "forbidden_token_hits": [],
+      "inactive_defaults_ok": true,
+      "ok": true
+    }
+  },
+  "after": {
+    "env_stat": {
+      "exists": true,
+      "size": 1605,
+      "mtime_ns": 1759221548592283936,
+      "mode": "0o664"
+    },
+    "canonical_db_sha": "becd76f770093361ae20a6a5ecdd7bf3016f9e05573c1dbc1f0b7439f4b6489a",
+    "legacy_db_sha": "1bfcaca815f7149d32b30e261c20d0679d7182191fe55cfa63ce830c287d87b9",
+    "tool_registry_sha": "0c1f4153eff92a50db24ef9bb0d68b3cda4c40c70f2438e614d0494ce9fcaf6b",
+    "user_template_sha": "e02dd7a6f0d5b26dae21cb4ee85d416ea24d558961c19b0a9047bd28c8cb835e",
+    "agent_template_sha": "2449b3a0f0c190bbf2ec83bbb8969c8ae517b9c6a83382b401b27028b745acf0",
+    "canonical_db": {
+      "path": "/home/nic/identity-vault/data/identity_vault.db",
+      "exists": true,
+      "ok": true,
+      "opened_readonly": true,
+      "rows": {
+        "agent_profiles": 0,
+        "audit_logs": 0,
+        "feedback_logs": 0,
+        "session_state": 0,
+        "sqlite_sequence": 0,
+        "user_profiles": 0
+      }
+    },
+    "legacy_db": {
+      "path": "/home/nic/identity-vault/vault.db",
+      "exists": true,
+      "ok": true,
+      "opened_readonly": true,
+      "rows": {
+        "feedback_logs": 0,
+        "profiles": 1,
+        "session_state": 1,
+        "sqlite_sequence": 0
+      }
+    }
+  },
+  "source_json_after": {
+    "user": {
+      "path": "/home/nic/identity-vault/templates/user-template.json",
+      "exists": true,
+      "json_ok": true
+    },
+    "agent": {
+      "path": "/home/nic/identity-vault/templates/agent-template.json",
+      "exists": true,
+      "json_ok": true
+    }
+  },
+  "safety": {
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "canonical_db_sha_unchanged": true,
+    "legacy_db_sha_unchanged": true,
+    "tool_registry_sha_unchanged": true,
+    "identity_vault_database_write_performed": false,
+    "profiles_created": false,
+    "agent_identity_activation_performed": false,
+    "rmc_memory_write_performed": false,
+    "forge_tool_registry_modified": false,
+    "user_template_write_performed": true,
+    "agent_template_write_performed": true
+  },
+  "findings": [
+    [
+      "INFO",
+      "IV_USER_TEMPLATE_INVALID_BEFORE",
+      "Existing user template was invalid JSON before apply."
+    ],
+    [
+      "INFO",
+      "IV_AGENT_TEMPLATE_INVALID_BEFORE",
+      "Existing agent template was invalid JSON before apply."
+    ],
+    [
+      "INFO",
+      "IV_REPAIRED_TEMPLATES_JSON_VALID",
+      "Both applied Identity Vault templates parse as valid JSON."
+    ],
+    [
+      "INFO",
+      "IV_TEMPLATE_BLUEPRINT_FIELDS_OK",
+      "Both templates include required operational identity fields and inactive defaults."
+    ],
+    [
+      "INFO",
+      "IV_NO_FORBIDDEN_MUTATION",
+      "DBs, .env metadata, RMC memory, and Forge registry stayed unchanged."
+    ]
+  ]
+}

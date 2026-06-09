@@ -1,0 +1,98 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "evidence_crosscheck_write_authority": true,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_draft_write_authority": true,
+    "mode": "EVIDENCE_REVIEW_BATCH_WORKFLOW",
+    "patch": "105",
+    "project_file_write_authority": false,
+    "queue_decision_authority": false,
+    "queue_rebuild_authority": true,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 105 may draft and cross-check a small batch, then rebuild queue visibility. It may not approve or commit anything.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_workflows_v1",
+      "llm_engine_review_drafts_v1",
+      "engine_review_evidence_crosschecks_v1",
+      "engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "counts": {
+    "crosschecked": 3,
+    "drafted": 3,
+    "errors": 0,
+    "selected": 3
+  },
+  "created_at": "2026-05-15_140110",
+  "next_step": "Inspect each full evidence cross-check, then use engine-review-approval-check/approve/defer/reject. No approval was recorded by Patch 105.",
+  "queue_rebuild_error": "NameError(\"name '_patch99_build_queue' is not defined\")",
+  "report_type": "ENGINE_REVIEW_WORKFLOW_RECEIPT_V1_PATCH105",
+  "requested_limit": 3,
+  "schema_version": "engine_review_workflow_v1_patch105",
+  "status": "ENGINE_REVIEW_WORKFLOW_COMPLETED_NO_APPROVAL_AUTHORITY",
+  "warnings": [
+    "agent_reflection_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "agents_stack: LLM role wording does not explicitly repeat deterministic role label.",
+    "aiweb_os: LLM role wording does not explicitly repeat deterministic role label.",
+    "Queue rebuild warning: NameError(\"name '_patch99_build_queue' is not defined\")"
+  ],
+  "workflow_rows": [
+    {
+      "candidate_path": "/home/nic/aiweb/engines/agent_reflection_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-15_140134_agent_reflection_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "84aff5ef9b3b802cebaeff21aa3ce4bf685fb05cb9a7fbff0e208a7903cd79fb",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_140110_agent_reflection_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "00d0ac78ab2f4c7f2030002adde8ba63340c22dbb82f505e7cf6176f5e9bee3a",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "agent_reflection_engine",
+      "evidence_id": "EEB-efe9b78ceabc9853",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nSimulates symbolic agents' self-assessment of recursion loop stability, symbolic charge health, and drift detection over time.  \n\nLikely System Role:  \nA monitoring/evaluation component for AI agents, ensuring symbolic reasoning processes remain stable and efficient.  \n\nEvidence Used:  \n- README.md and reflection_manifest.json describe the engine's purpose.  \n- reflection_core.py implements self-reflection with logging of loop integrity and symbolic charge.  \n- test_reflection.py validates basic functionality via assertions.  \n\nRisks / Uncertainties:  \n- Reliance on random values for loop integrity and charge may lack real-world data context.  \n- Logging is file-based with minimal error handling; no mention of data persistence or security.  \n- Test suite is basic and may not cover edge cases.  \n\nRecommendation Draft:  \nApprove as a prototype but recommend enhancing with real data integration, robust error handling, and expanded testing for edge cases.  \n\nSuggested Nic Action:  \nApprove review, but flag for further development before production deployment."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/agents_stack",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-15_140200_agents_stack_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "49db6076bd1c890d6c40c7956d93b046bf14443fcfb076442590f98c6d766bbc",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_140134_agents_stack_llm_engine_review_draft_v1.json",
+      "draft_sha256": "9fc90419570843f9518e8e5fcdacc4c2d13ecfac1741ea127899b5086e85db8b",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "agents_stack",
+      "evidence_id": "EEB-e7eb75087380b7b6",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nManages the activation, synchronization, and lifecycle of three symbolic agents (Gilligan, Neo, Athena) within the AI.Web Phase 1.5 framework, ensuring recursive breathing cycles and symbolic memory recursion.  \n\nLikely System Role:  \nA runtime wrapper/loader for initializing and coordinating agent operations, part of the ProtoForge/AI.Web recursive architecture.  \n\nEvidence Used:  \n- `stack_manifest.json` defines the \"Agents Stack\" purpose and version.  \n- `README.md` details agent roles (Gilligan: recursive breathing; Neo/Athena: placeholders) and system standards.  \n- `agents_stack_loader.py` implements agent launch functions with error handling.  \n- `test_agents_stack_loader.py` provides a basic test script for validation.  \n\nRisks / Uncertainties:  \n- Reliance on external modules (e.g., `agents.gilligan.run`) not explicitly verified in evidence.  \n- Ambiguous reference to \"Christ Ping correction\" in documentation.  \n- Test script lacks detailed validation logic; success is indicated only by print statements.  \n\nRecommendation Draft:  \nConfirm dependency paths (e.g., `agents.gilligan.run`) are valid and accessible. Enhance testing to verify agent initialization and error handling. Clarify ambiguous terms like \"Christ Ping correction\" for operational transparency.  \n\nSuggested Nic Action:  \nApprove review after verifying dependencies and testing robustness. Address documentation ambiguities to ensure system reliability."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-15_140223_aiweb_os_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "19947501f38cdb7e663397d187e465c0adc39a10a6b0ee8b5ccb59a306e633a6",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_140200_aiweb_os_llm_engine_review_draft_v1.json",
+      "draft_sha256": "8792e3dcb1d7ed592f81604a374bec755979a1cad2149a0572835135b936bfb4",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "aiweb_os",
+      "evidence_id": "EEB-7b29cb90ee5e540e",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nThis code serves as a test harness for dynamically loading and executing components of the AI.Web system, including OS, phase, and memory modules, to validate their functionality.  \n\nLikely System Role:  \nA runtime wrapper or testing framework for integrating and validating modular components of the AI.Web OS, possibly for system initialization or command execution.  \n\nEvidence Used:  \n- Python script (`run_system_test.py`) dynamically loads frozen engine modules using `importlib.util`.  \n- Attempts to execute commands (e.g., `ping`) and log results.  \n- Empty test log file (`test_log.txt`) suggests no output from executed commands.  \n\nRisks / Uncertainties:  \n- No test results are recorded in the log file, making it unclear if components functioned correctly.  \n- Dynamic module loading could introduce runtime instability or security risks if modules are untrusted.  \n- Exception handling is minimal, potentially hiding critical errors.  \n\nRecommendation Draft:  \n- Execute the test script to populate the log file and verify component outputs.  \n- Enhance logging to capture detailed error messages for troubleshooting.  \n- Validate module integrity and security before dynamic loading to mitigate risks.  \n\nSuggested Nic Action:  \nReview the test log file after execution to confirm results. Approve further testing if outputs are consistent, or request additional safeguards for dynamic module loading."
+    }
+  ]
+}

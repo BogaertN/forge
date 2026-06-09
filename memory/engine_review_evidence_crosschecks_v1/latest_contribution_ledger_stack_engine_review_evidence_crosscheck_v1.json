@@ -1,0 +1,289 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "dce4ec89c79a9c416b992ffd4fb42e6d436054fa9fdde6095613ab103b93375e",
+      "excerpt_start": "# contribution_ledger_stack_loader.py\n# Contribution Ledger Stack Loader (Phase 2.5)\n\nimport json\nimport time\nimport os\n\nuser_registry_path = os.path.join(os.path.dirname(__file__), \"user_registry.json\")\ncontribution_log_path = os.path.join(os.path.dirname(__file__), \"contribution_log.jsonl\")\n\ndef load_user_registry():\n    if not os.path.exists(user_registry_path):\n        print(\"\u274c [LEDGER] No user registry found!\")\n        return {}\n    with open(user_registry_path, \"r\") as f:\n        return json.load(f)\n\ndef save_user_registry(registry):\n    with open(user_registry_path, \"w\") as f:\n        json.dump(registry, f, indent=2)\n\ndef signup_new_user(username):\n    registry = load_user_registry()\n    next_id = str(max([int(uid) for uid in registry.keys()]) + 1)\n    registry[next_id] = {\n        \"username\": username,\n        \"joined_on\": time.strftime(\"%Y-%m-%d\")\n    }\n    save_user_registry(registry)\n    print(f\"\u2705 [LEDGER] User '{username}' registered with ID {next_id}\")\n\ndef log_contribution(user_id, action_description):\n    entry = {\n        \"timestamp\": time.strftime(\"%Y-%m-%d %H:%M:%S\"),\n        \"user_id\": user_id,\n        \"action\": action_description\n    }\n    with open(contribution_log_path, \"a\") as f:\n        f.write(json.dumps(entry) + \"\\n\")\n    print(f\"\ud83d\udcdd [LEDGER] Logged contribution: {entry}\")\n\ndef run_contribution_ledger():\n    print(\"\\n\ud83d\udd35 [LEDGER] Contribution Ledger Stack Activated...\\n\")\n    registry = load_user_registry()\n\n    while True:\n        print(\"\\nOptions:\\n1. Log Contribution (Founder_Nic)\\n2. Sign Up New User\\n3. Exit\")\n        choice = input(\"Select option: \").strip()\n\n        if choice == \"1\":\n            action = input(\"Describe your contribution action: \").strip()\n            log_contribution(\"1\", action)  # Founder_Nic is always ID 1\n        elif choice == \"2\":\n            new_username = input(\"Enter new username: \").strip()\n            signup_new_user(new_username)\n        elif choice == \"3\":\n            print(\"\u2705 [LEDGER] Exiting Contribution Ledger.\")\n            break\n        else:\n            print(\"\u26a0\ufe0f Invalid option.\")\n\nif __name__ == \"__main__\":\n    run_contribution_ledger()\n",
+      "functions_sample": [
+        "load_user_registry",
+        "save_user_registry",
+        "signup_new_user",
+        "log_contribution",
+        "run_contribution_ledger"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time",
+        "import os"
+      ],
+      "line_count": 64,
+      "path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack/contribution_ledger_stack_loader.py",
+      "relative_to_candidate": "contribution_ledger_stack_loader.py",
+      "sha256": "dce4ec89c79a9c416b992ffd4fb42e6d436054fa9fdde6095613ab103b93375e",
+      "size_bytes": 2156
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "edf4f0140c04b3774b0fe54ac5fdfe2794064cb6992f19ac0d533d0d159900bd",
+      "excerpt_start": "{\n  \"stack\": \"contribution_ledger_stack\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"contribution_ledger_stack_frozen_v1-0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Manages user contributions to the symbolic recursion memory breathing system, starting with Founder_Nic as primary contributor. Open signup for early users.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 2.5 Recursive Symbolic Contribution Breathing\"\n}\n",
+      "functions_sample": [
+        "stack",
+        "contribution_ledger_stack",
+        "version",
+        "frozen_as",
+        "contribution_ledger_stack_frozen_v1",
+        "frozen_on",
+        "description",
+        "Manages",
+        "user",
+        "contributions",
+        "the",
+        "symbolic",
+        "recursion",
+        "memory",
+        "breathing",
+        "system",
+        "starting",
+        "with",
+        "Founder_Nic",
+        "primary",
+        "contributor",
+        "Open",
+        "signup",
+        "for",
+        "early"
+      ],
+      "imports_sample": [],
+      "line_count": 10,
+      "path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack/stack_manifest.json",
+      "relative_to_candidate": "stack_manifest.json",
+      "sha256": "edf4f0140c04b3774b0fe54ac5fdfe2794064cb6992f19ac0d533d0d159900bd",
+      "size_bytes": 441
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "bcb5e9a552a2b3e558058740e791bc584cb715ca949094d49e83895ba73d7e01",
+      "excerpt_start": "# Contribution Ledger Stack (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Contribution Ledger Stack manages symbolic memory contribution tracking for AI.Web's breathing recursion architecture.  \nIt records user contributions, starting with Founder_Nic (User 1), and allows new user signups without security at early phase.\n\n---\n\n## Functions:\n- Hardcoded Founder User (Founder_Nic, User ID 1)\n- Open new user signups\n- Real-time symbolic contribution logging\n\n---\n\n## Phase Standard:\n- Phase 2.5 Recursive Symbolic Contribution Breathing\n\n---\n\n**Frozen Snapshot:** `contribution_ledger_stack_frozen_v1-0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n",
+      "functions_sample": [
+        "Contribution",
+        "Ledger",
+        "Stack",
+        "Frozen",
+        "Overview",
+        "The",
+        "manages",
+        "symbolic",
+        "memory",
+        "contribution",
+        "tracking",
+        "for",
+        "Web",
+        "breathing",
+        "recursion",
+        "architecture",
+        "records",
+        "user",
+        "contributions",
+        "starting",
+        "with",
+        "Founder_Nic",
+        "User",
+        "and",
+        "allows"
+      ],
+      "imports_sample": [],
+      "line_count": 26,
+      "path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "bcb5e9a552a2b3e558058740e791bc584cb715ca949094d49e83895ba73d7e01",
+      "size_bytes": 663
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "9c27a994e5a063f9830c68e6156277c6a113a70b14bd09b5b30f3b5b4243ce63",
+      "excerpt_start": "{\n  \"1\": {\n    \"username\": \"Founder_Nic\",\n    \"joined_on\": \"2025-04-27\"\n  }\n}\n",
+      "functions_sample": [
+        "username",
+        "Founder_Nic",
+        "joined_on"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack/user_registry.json",
+      "relative_to_candidate": "user_registry.json",
+      "sha256": "9c27a994e5a063f9830c68e6156277c6a113a70b14bd09b5b30f3b5b4243ce63",
+      "size_bytes": 78
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "a09fcf4416e91d38f8027f63e380a6ea8d114fced14b9f15791a349ecaa48956",
+      "excerpt_start": "# test_contribution_ledger_stack_loader.py\n# Tests the Contribution Ledger Stack loader\n\nfrom contribution_ledger_stack_loader import run_contribution_ledger\n\ndef run_test():\n    try:\n        run_contribution_ledger()\n        print(\"\u2705 Contribution Ledger Stack Test Passed.\")\n    except Exception as e:\n        print(f\"\u274c Contribution Ledger Stack Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    run_test()\n",
+      "functions_sample": [
+        "run_test"
+      ],
+      "imports_sample": [
+        "from contribution_ledger_stack_loader import run_contribution_ledger"
+      ],
+      "line_count": 15,
+      "path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack/test_contribution_ledger_stack_loader.py",
+      "relative_to_candidate": "test_contribution_ledger_stack_loader.py",
+      "sha256": "a09fcf4416e91d38f8027f63e380a6ea8d114fced14b9f15791a349ecaa48956",
+      "size_bytes": 413
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack",
+  "created_at": "2026-05-16_085102",
+  "crosscheck_id": "ERE-contribution_ledger_stack-2026-05-16_085102",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Contribution",
+      "Founder_Nic",
+      "Frozen",
+      "Ledger",
+      "Manages",
+      "Open",
+      "Overview",
+      "Stack",
+      "The",
+      "User",
+      "Web",
+      "allows",
+      "and",
+      "architecture",
+      "breathing",
+      "contribution",
+      "contribution_ledger_stack",
+      "contribution_ledger_stack_frozen_v1",
+      "contributions",
+      "contributor"
+    ],
+    "imports_sample": [
+      "from contribution_ledger_stack_loader import run_contribution_ledger",
+      "import json",
+      "import os",
+      "import time"
+    ],
+    "likely_system_role": "ledger_provenance",
+    "plain_english_purpose": "`contribution_ledger_stack` appears to be a local AI.Web engine/component. The bound source evidence includes 5 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "Inferred from engine family keyword `ledger` plus bound code evidence.",
+    "source_excerpt_samples": [
+      "# contribution_ledger_stack_loader.py # Contribution Ledger Stack Loader (Phase 2.5)",
+      "{   \"stack\": \"contribution_ledger_stack\",",
+      "# Contribution Ledger Stack (Frozen v1.0.01) ",
+      "{   \"1\": {"
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_085034_contribution_ledger_stack_llm_engine_review_draft_v1.json",
+  "draft_sha256": "cc97ae7430a551815bccfdfd5e8b31a13a048849578538e3130fcffa44b61701",
+  "engine_family": "contribution_ledger_stack",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_contribution_ledger_stack_engine_evidence_binder.json",
+  "evidence_binder_sha256": "64387a06c3856d7819118fa391d1117e2e7ffc1dbb6b6f5cfe08fa531138fb3f",
+  "evidence_id": "EEB-e30ad0b50c5c03dd",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "contribution_ledger_stack_loader.py",
+      "stack_manifest.json",
+      "README.md",
+      "user_registry.json"
+    ],
+    "functions_mentioned": [
+      "stack",
+      "contribution_ledger_stack",
+      "version",
+      "Manages",
+      "user",
+      "contributions",
+      "the",
+      "symbolic",
+      "recursion",
+      "memory",
+      "system",
+      "with",
+      "Founder_Nic",
+      "Open",
+      "signup",
+      "for",
+      "early",
+      "Contribution",
+      "Ledger",
+      "Stack",
+      "Frozen",
+      "The",
+      "manages",
+      "contribution",
+      "tracking",
+      "Web",
+      "architecture",
+      "User",
+      "and"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "from contribution_ledger_stack_loader import run_contribution_ledger"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 27.414,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "68d03f30016d92b7aa39f9d009cb6f5e33189481096ccad3cb63358abf1e3c0d",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nManages user contributions to AI.Web's symbolic recursion memory system, tracking user actions and enabling open signups for early users.  \n\nLikely System Role:  \nA frozen contribution ledger system for logging user activities, maintaining a registry of users, and serving as a foundational component for AI.Web's recursive architecture.  \n\nEvidence Used:  \n- `contribution_ledger_stack_loader.py`: Functions for user registration, contribution logging, and data persistence.  \n- `stack_manifest.json`: Defines system version, frozen status, and purpose.  \n- `README.md`: Explains phase standards, frozen snapshot, and core functions.  \n- `user_registry.json`: Stores user data (e.g., Founder_Nic).  \n- Test script for validating system functionality.  \n\nRisks / Uncertainties:  \n- No security measures for open signups; potential for unauthorized access.  \n- Reliance on JSON files for data storage may pose risks for data integrity or loss.  \n- Frozen version limits flexibility for future updates without re-freezing.  \n\nRecommendation Draft:  \n- Approve frozen version but document security enhancements for user signups.  \n- Ensure backup mechanisms for JSON data files to prevent loss.  \n- Validate test coverage for edge cases (e.g., concurrent signups, data corruption).  \n\nSuggested Nic Action:  \n- Approve the frozen contribution ledger stack for deployment.  \n- Review security protocols for user signups and data persistence.  \n- Confirm test script adequacy and monitor system performance post-deployment."
+  },
+  "llm_sections": {
+    "evidence_used": "- `contribution_ledger_stack_loader.py`: Functions for user registration, contribution logging, and data persistence.  \n- `stack_manifest.json`: Defines system version, frozen status, and purpose.  \n- `README.md`: Explains phase standards, frozen snapshot, and core functions.  \n- `user_registry.json`: Stores user data (e.g., Founder_Nic).  \n- Test script for validating system functionality.",
+    "likely_system_role": "A frozen contribution ledger system for logging user activities, maintaining a registry of users, and serving as a foundational component for AI.Web's recursive architecture.",
+    "plain_english_purpose": "Manages user contributions to AI.Web's symbolic recursion memory system, tracking user actions and enabling open signups for early users.",
+    "recommendation_draft": "- Approve frozen version but document security enhancements for user signups.  \n- Ensure backup mechanisms for JSON data files to prevent loss.  \n- Validate test coverage for edge cases (e.g., concurrent signups, data corruption).",
+    "risks_uncertainties": "- No security measures for open signups; potential for unauthorized access.  \n- Reliance on JSON files for data storage may pose risks for data integrity or loss.  \n- Frozen version limits flexibility for future updates without re-freezing.",
+    "suggested_nic_action": "- Approve the frozen contribution ledger stack for deployment.  \n- Review security protocols for user signups and data persistence.  \n- Confirm test script adequacy and monitor system performance post-deployment."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nManages user contributions to AI.Web's symbolic recursion memory system, tracking user actions and enabling open signups for early users.  \n\nLikely System Role:  \nA frozen contribution ledger system for logging user activities, maintaining a registry of users, and serving as a foundational component for AI.Web's recursive architecture.  \n\nEvidence Used:  \n- `contribution_ledger_stack_loader.py`: Functions for user registration, contribution logging, and data persistence.  \n- `stack_manifest.json`: Defines system version, frozen status, and purpose.  \n- `README.md`: Explains phase standards, frozen snapshot, and core functions.  \n- `user_registry.json`: Stores user data (e.g., Founder_Nic).  \n- Test script for validating system functionality.  \n\nRisks / Uncertainties:  \n- No security measures for open signups; potential for unauthorized access.  \n- Reliance on JSON files for data storage may pose risks for data integrity or loss.  \n- Frozen version limits flexibility for future updates without re-freezing.  \n\nRecommendation Draft:  \n- Approve frozen version but document security enhancements for user signups.  \n- Ensure backup mechanisms for JSON data files to prevent loss.  \n- Validate test coverage for edge cases (e.g., concurrent signups, data corruption).  \n\nSuggested Nic Action:  \n- Approve the frozen contribution ledger stack for deployment.  \n- Review security protocols for user signups and data persistence.  \n- Confirm test script adequacy and monitor system performance post-deployment.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

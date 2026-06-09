@@ -1,0 +1,31 @@
+{
+  "report_type": "CONTEXT_RESET_PLAN_NON_DESTRUCTIVE",
+  "timestamp": "2026-05-10T16:35:31",
+  "warning": "PLAN ONLY. This file does not delete or modify Chroma, receipts, manifests, indexes, or symbolic maps.",
+  "would_remove_if_future_reset_were_authorized": {
+    "context_library_path": "/home/nic/forge/memory/context_library_v1",
+    "chroma_path": "/home/nic/forge/memory/context_library_v1/chroma_db",
+    "collections": [
+      {
+        "name": "aiweb_context_chunks_v1",
+        "count": 139
+      }
+    ],
+    "receipts_dir": "/home/nic/forge/memory/context_library_v1/receipts",
+    "receipt_count": 1,
+    "symbolic_maps_dir": "/home/nic/forge/memory/context_library_v1/symbolic_maps",
+    "symbolic_map_count": 1,
+    "manifests_dir": "/home/nic/forge/memory/context_library_v1/manifests",
+    "manifest_count": 3,
+    "indexes_dir": "/home/nic/forge/memory/context_library_v1/indexes",
+    "index_count": 0
+  },
+  "old_db_status": {
+    "path": "/home/nic/forge/memory/chroma_db",
+    "exists": true,
+    "item_count": 2,
+    "untouched_by_patch44": true,
+    "isolation_ok": true
+  },
+  "implemented_destructive_reset": false
+}

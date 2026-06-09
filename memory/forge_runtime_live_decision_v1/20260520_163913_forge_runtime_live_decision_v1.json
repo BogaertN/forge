@@ -1,0 +1,133 @@
+{
+  "active_patch": "Patch 168 \u2014 Runtime Live Build Approval Receipt / Execution Decision Gate",
+  "approval_receipt": {
+    "approval_present": false,
+    "approval_token_status": "TEMPLATE_READY_NOT_APPROVED",
+    "candidate": "failsafe_manager",
+    "engine_writes_performed": 0,
+    "execution_decision": "HOLD_FOR_HUMAN_APPROVAL",
+    "live_execution_performed": false,
+    "project_writes_performed": 0,
+    "receipt_type": "RUNTIME_LIVE_BUILD_APPROVAL_DECISION_RECEIPT_TEMPLATE",
+    "required_before_live_apply": "explicit human approval token plus separate execution gate",
+    "runtime_writes_performed": 0
+  },
+  "approval_receipt_status": "TEMPLATE_READY_NOT_EXECUTED",
+  "approval_token_status": "TEMPLATE_READY_NOT_APPROVED",
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "runtime_file_write_authority": false,
+    "server_started": false,
+    "shell_execution_authority": false
+  },
+  "candidate": "failsafe_manager",
+  "created_at": "20260520_163913",
+  "current_phase": "S19N \u2014 Runtime Live Build Approval Receipt / Execution Decision Gate",
+  "engine_writes": 0,
+  "execution_decision": "HOLD_FOR_HUMAN_APPROVAL",
+  "gate_summary": {
+    "fail": 0,
+    "locked": 2,
+    "pass": 6,
+    "warn": 0
+  },
+  "gates": [
+    {
+      "detail": "FORGE_RUNTIME_LIVE_APPROVAL_CAPTURE_READY_GATE_LOCKED",
+      "id": "D01",
+      "name": "Approval capture report exists",
+      "status": "PASS"
+    },
+    {
+      "detail": "FORGE_RUNTIME_LIVE_EXECUTION_PLAN_READY_GATE_LOCKED",
+      "id": "D02",
+      "name": "Execution plan / receipt template exists",
+      "status": "PASS"
+    },
+    {
+      "detail": "FORGE_RUNTIME_LIVE_FINAL_APPROVAL_GATE_READY_LOCKED",
+      "id": "D03",
+      "name": "Final approval gate exists",
+      "status": "PASS"
+    },
+    {
+      "detail": "FORGE_RUNTIME_LIVE_BACKUP_APPLY_DRY_RUN_READY_GATE_LOCKED",
+      "id": "D04",
+      "name": "Backup/apply dry-run exists",
+      "status": "PASS"
+    },
+    {
+      "detail": "FORGE_RUNTIME_CANDIDATE_STATIC_VERIFICATION_READY_GATE_LOCKED",
+      "id": "D05",
+      "name": "Static candidate verification clean",
+      "status": "PASS"
+    },
+    {
+      "detail": "approval_token_status=TEMPLATE_READY_NOT_APPROVED",
+      "id": "D06",
+      "name": "Explicit human approval captured",
+      "status": "LOCKED"
+    },
+    {
+      "detail": "HOLD_FOR_HUMAN_APPROVAL",
+      "id": "D07",
+      "name": "Execution decision",
+      "status": "LOCKED"
+    },
+    {
+      "detail": "runtime_writes=0 project_writes=0 engine_writes=0",
+      "id": "D08",
+      "name": "No live writes performed",
+      "status": "PASS"
+    }
+  ],
+  "human_approval_present": false,
+  "live_build_ready": false,
+  "next_patch": "Patch 169 \u2014 Runtime Live Build Human Approval Token Entry Gate",
+  "plain_english": "Patch 168 creates an approval receipt and execution decision gate. It performs zero live writes and keeps execution locked unless explicit approval exists.",
+  "planned_file_count": 4,
+  "planned_files": [
+    {
+      "live_write_planned_now": false,
+      "relative_path": "governance_and_safety/failsafe_manager/README.md",
+      "sandbox_source": "final_gate",
+      "source": "final_gate",
+      "target_relative_path": "governance_and_safety/failsafe_manager/README.md"
+    },
+    {
+      "live_write_planned_now": false,
+      "relative_path": "governance_and_safety/failsafe_manager/runtime_manifest.json",
+      "sandbox_source": "final_gate",
+      "source": "final_gate",
+      "target_relative_path": "governance_and_safety/failsafe_manager/runtime_manifest.json"
+    },
+    {
+      "live_write_planned_now": false,
+      "relative_path": "governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py",
+      "sandbox_source": "final_gate",
+      "source": "final_gate",
+      "target_relative_path": "governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py"
+    },
+    {
+      "live_write_planned_now": false,
+      "relative_path": "governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py",
+      "sandbox_source": "final_gate",
+      "source": "final_gate",
+      "target_relative_path": "governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py"
+    }
+  ],
+  "planning_ready": true,
+  "problem_count": 0,
+  "problems": [],
+  "project_writes": 0,
+  "recommended_next_patch": "Patch 169 \u2014 Runtime Live Build Human Approval Token Entry Gate",
+  "report_type": "FORGE_RUNTIME_LIVE_APPROVAL_RECEIPT_EXECUTION_DECISION_GATE_V1",
+  "roadmap_mutation_policy": "APPEND_ONLY",
+  "runtime_writes": 0,
+  "schema_version": "forge_runtime_live_decision_v1_patch168",
+  "status": "FORGE_RUNTIME_LIVE_DECISION_READY_GATE_LOCKED"
+}

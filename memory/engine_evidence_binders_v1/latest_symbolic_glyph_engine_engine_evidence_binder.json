@@ -1,0 +1,153 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/symbolic_glyph_engine",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/symbolic_glyph_engine",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "symbolic_glyph_engine",
+  "evidence_id": "EEB-34f45c7f8dba494d",
+  "file_count": 4,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "88cc690ebe0031849c75c60f189052809efebe4dd82865a129eb07b3c358a497",
+      "excerpt_start": "# test_glyph_core.py\n\nfrom glyph_core import generate_glyph\n\ndef test_generate_glyph():\n    glyph = generate_glyph()\n    assert \"symbol_id\" in glyph\n    assert \"phase_origin\" in glyph\n    print(\"✅ Symbolic Glyph Generation Test Passed\")\n\nif __name__ == \"__main__\":\n    test_generate_glyph()\n",
+      "functions_sample": [
+        "test_generate_glyph"
+      ],
+      "imports_sample": [
+        "from glyph_core import generate_glyph"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/symbolic_glyph_engine/test_glyph_core.py",
+      "relative_to_candidate": "test_glyph_core.py",
+      "sha256": "88cc690ebe0031849c75c60f189052809efebe4dd82865a129eb07b3c358a497",
+      "size_bytes": 293,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "64651d8ec5fbd07f1eae1867be6e1525fb89d8f3b61aaa22ecbb56a759aef405",
+      "excerpt_start": "# Symbolic Glyph Engine\n\nGenerates and manages symbolic glyphs tied to recursive phase evolution.\n\nProvides living resonance symbols that maintain coherence across memory recursion loops.\n\nPart of Phase 1.5 of the ProtoForge Recursive Symbolic Evolution Architecture.\n",
+      "functions_sample": [
+        "Symbolic",
+        "Glyph",
+        "Engine",
+        "Generates",
+        "and",
+        "manages",
+        "symbolic",
+        "glyphs",
+        "tied",
+        "recursive",
+        "phase",
+        "evolution",
+        "Provides",
+        "living",
+        "resonance",
+        "symbols",
+        "that",
+        "maintain",
+        "coherence",
+        "across",
+        "memory",
+        "recursion",
+        "loops",
+        "Part",
+        "Phase"
+      ],
+      "imports_sample": [],
+      "line_count": 8,
+      "path": "/home/nic/aiweb/engines/symbolic_glyph_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "64651d8ec5fbd07f1eae1867be6e1525fb89d8f3b61aaa22ecbb56a759aef405",
+      "size_bytes": 268,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "346e978e251cc3954dd0a4f0ebaaf17afc7f25a2c90b9f9fb38e0c06bb8e515e",
+      "excerpt_start": "# glyph_core.py\n\ndef generate_glyph():\n    return {\n        \"symbol_id\": \"GLYPH-001\",\n        \"phase_origin\": \"Φ1\",\n        \"stability_factor\": 0.98,\n        \"ancestral_trace\": []\n    }\n",
+      "functions_sample": [
+        "generate_glyph"
+      ],
+      "imports_sample": [],
+      "line_count": 10,
+      "path": "/home/nic/aiweb/engines/symbolic_glyph_engine/glyph_core.py",
+      "relative_to_candidate": "glyph_core.py",
+      "sha256": "346e978e251cc3954dd0a4f0ebaaf17afc7f25a2c90b9f9fb38e0c06bb8e515e",
+      "size_bytes": 187,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "0c16da3c78e49948f2b7d949b2a2dfe75737010a37a5be430f69a9bce74bbf89",
+      "excerpt_start": "{\n  \"engine\": \"Symbolic Glyph Engine\",\n  \"version\": \"v1.0\",\n  \"description\": \"Handles dynamic phase-resonant glyph generation and memory symbol construction.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Symbolic",
+        "Glyph",
+        "Engine",
+        "version",
+        "description",
+        "Handles",
+        "dynamic",
+        "phase",
+        "resonant",
+        "glyph",
+        "generation",
+        "and",
+        "memory",
+        "symbol",
+        "construction"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/symbolic_glyph_engine/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "0c16da3c78e49948f2b7d949b2a2dfe75737010a37a5be430f69a9bce74bbf89",
+      "size_bytes": 161,
+      "suffix": ".json"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200356_engine_canonical_decision_draft.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200444_engine_canonical_decision_draft_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "test_generate_glyph",
+    "generate_glyph"
+  ],
+  "warnings": []
+}

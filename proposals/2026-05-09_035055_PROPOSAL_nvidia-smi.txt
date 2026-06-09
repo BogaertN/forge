@@ -1,0 +1,72 @@
+FORGE DIAGNOSTIC PROPOSAL
+══════════════════════════════════════════════════════════════════
+Title           : Direct diagnostic proposal submitted via Forge CLI.
+Status          : APPROVED FOR REVIEW
+Timestamp       : 2026-05-09T03:50:55
+Session ID      : forge_2026_05_09_035049
+Forge Level     : 0.6 — Diagnostic Proposal Mode
+Proposal File   : /home/nic/forge/proposals/2026-05-09_035055_PROPOSAL_nvidia-smi.txt
+══════════════════════════════════════════════════════════════════
+
+USER QUESTION
+─────────────
+[Direct CLI proposal by Nic via 'propose nvidia-smi']
+
+
+PROPOSED COMMAND
+────────────────
+  nvidia-smi
+
+
+PURPOSE
+───────
+Direct diagnostic proposal submitted via Forge CLI.
+
+
+WHY IT IS SAFE
+──────────────
+Command proposed directly by Nic via the 'propose' CLI command. Validated against Forge Level 0.9 allowlist.
+
+
+RISK LEVEL
+──────────
+MEDIUM
+
+
+VALIDATION CHECK
+────────────────
+PASS — no blocked patterns detected
+
+Blocked operators checked : &&  ;  |  $()  >  >>  ` (checked)
+Sensitive paths checked   : .ssh  .gnupg  credentials  secrets  (checked)
+Composition check         : single command only, no chaining
+
+
+APPROVED PATHS INVOLVED
+───────────────────────
+  (no approved paths explicitly referenced)
+
+
+EXPECTED OUTPUT
+───────────────
+(Run the command and use 'diag' to paste output for analysis.)
+
+
+WHAT COULD GO WRONG
+───────────────────
+Standard caveats apply for this command type. Review the proposal file for details before running.
+
+
+══════════════════════════════════════════════════════════════════
+MANUAL INSTRUCTION
+──────────────────
+Forge cannot execute commands. This is by design.
+
+If you choose to run this command, copy and paste it yourself:
+
+  nvidia-smi
+
+Forge will never execute commands on your behalf at any trust level
+unless you explicitly enable execution mode in a future version.
+══════════════════════════════════════════════════════════════════
+Audit entry hash : abe202a40113f0ab

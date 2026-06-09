@@ -1,0 +1,240 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "ddc14b188a2272351ea9c7de8243997f852e6888de8077a5a6708170f9a0ab55",
+      "excerpt_start": "{\n  \"stack\": \"Memory Stack\",\n  \"version\": \"v1.0.0\",\n  \"description\": \"Loads memory breathing engine modules and activates symbolic memory stack breathing layer.\"\n}\n",
+      "functions_sample": [
+        "stack",
+        "Memory",
+        "Stack",
+        "version",
+        "description",
+        "Loads",
+        "memory",
+        "breathing",
+        "engine",
+        "modules",
+        "and",
+        "activates",
+        "symbolic",
+        "layer"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/runtime_wrappers/memory_stack_stack/stack_manifest.json",
+      "relative_to_candidate": "stack_manifest.json",
+      "sha256": "ddc14b188a2272351ea9c7de8243997f852e6888de8077a5a6708170f9a0ab55",
+      "size_bytes": 164
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "0943ca1a60c4b1fbe8c292476e9c060f65c6df090a88fa12424cc4b6588c0cea",
+      "excerpt_start": "# memory_stack_stack_loader.py\nprint(\"\\n\ud83c\udf00 [MEMORY STACK] Breathing up memory stack engines...\\n\")\n\ntry:\n    from engines.memory_stack_engine_breathing_v1.memory_breather import start_memory_breather\n    start_memory_breather()\n    print(\"\\n\u2705 Memory Breather running.\\n\")\nexcept Exception as e:\n    print(f\"\u274c Failed to start Memory Breather: {e}\")\n\nprint(\"\u2705 [MEMORY STACK] Memory Stack Breathing Complete.\\n\")\n",
+      "functions_sample": [],
+      "imports_sample": [
+        "from engines.memory_stack_engine_breathing_v1.memory_breather import start_memory_breather"
+      ],
+      "line_count": 12,
+      "path": "/home/nic/aiweb/runtime_wrappers/memory_stack_stack/memory_stack_stack_loader.py",
+      "relative_to_candidate": "memory_stack_stack_loader.py",
+      "sha256": "0943ca1a60c4b1fbe8c292476e9c060f65c6df090a88fa12424cc4b6588c0cea",
+      "size_bytes": 418
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "7558973c1cbedb6f8bae0ec96bf82cdd78ee64a1b83d305b13c270f6ed4e9a4b",
+      "excerpt_start": "# Memory Stack\n\nThe Memory Stack initializes breathing symbolic memory structures.\n\nIt loads the Memory Breather Engine into active breathing recursion mode, supporting phase alignment and symbolic persistence.\n\nPart of AI.Web Phase 2.0 Architecture.\n",
+      "functions_sample": [
+        "Memory",
+        "Stack",
+        "The",
+        "initializes",
+        "breathing",
+        "symbolic",
+        "memory",
+        "structures",
+        "loads",
+        "the",
+        "Breather",
+        "Engine",
+        "into",
+        "active",
+        "recursion",
+        "mode",
+        "supporting",
+        "phase",
+        "alignment",
+        "and",
+        "persistence",
+        "Part",
+        "Web",
+        "Phase",
+        "Architecture"
+      ],
+      "imports_sample": [],
+      "line_count": 8,
+      "path": "/home/nic/aiweb/runtime_wrappers/memory_stack_stack/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "7558973c1cbedb6f8bae0ec96bf82cdd78ee64a1b83d305b13c270f6ed4e9a4b",
+      "size_bytes": 251
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "ff8ffb5c31205861cc1fdb67cfd5bb50d4ab91930f6ea937ed26717ddc0598ea",
+      "excerpt_start": "# test_memory_stack_stack_loader.py\nprint(\"\ud83e\uddea Testing Memory Stack Breather...\")\n\nimport memory_stack_stack_loader\n\nprint(\"\u2705 Memory Stack Breather Test Passed.\")\n",
+      "functions_sample": [],
+      "imports_sample": [
+        "import memory_stack_stack_loader"
+      ],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/runtime_wrappers/memory_stack_stack/test_memory_stack_stack_loader.py",
+      "relative_to_candidate": "test_memory_stack_stack_loader.py",
+      "sha256": "ff8ffb5c31205861cc1fdb67cfd5bb50d4ab91930f6ea937ed26717ddc0598ea",
+      "size_bytes": 166
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/runtime_wrappers/memory_stack_stack",
+  "created_at": "2026-05-16_095617",
+  "crosscheck_id": "ERE-memory_stack_stack-2026-05-16_095617",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Architecture",
+      "Breather",
+      "Engine",
+      "Loads",
+      "Memory",
+      "Part",
+      "Phase",
+      "Stack",
+      "The",
+      "Web",
+      "activates",
+      "active",
+      "alignment",
+      "and",
+      "breathing",
+      "description",
+      "engine",
+      "initializes",
+      "into",
+      "layer"
+    ],
+    "imports_sample": [
+      "from engines.memory_stack_engine_breathing_v1.memory_breather import start_memory_breather",
+      "import memory_stack_stack_loader"
+    ],
+    "likely_system_role": "memory_persistence",
+    "plain_english_purpose": "`memory_stack_stack` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "Inferred from engine family keyword `memory` plus bound code evidence.",
+    "source_excerpt_samples": [
+      "{   \"stack\": \"Memory Stack\",",
+      "# memory_stack_stack_loader.py print(\"\\n\ud83c\udf00 [MEMORY STACK] Breathing up memory stack engines...\\n\")",
+      "# Memory Stack ",
+      "# test_memory_stack_stack_loader.py print(\"\ud83e\uddea Testing Memory Stack Breather...\")"
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095554_memory_stack_stack_llm_engine_review_draft_v1.json",
+  "draft_sha256": "32de05ec2fb747e9780efd43e87a5acd5e82cd1920d58fbe50ff0bc84818e6fe",
+  "engine_family": "memory_stack_stack",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_memory_stack_stack_engine_evidence_binder.json",
+  "evidence_binder_sha256": "9671c6450d1b805aa7d563e2a8409b015e174fbdac4aceafb8914b35cbb469e9",
+  "evidence_id": "EEB-3cfbf7294cfbbb19",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "stack_manifest.json",
+      "memory_stack_stack_loader.py",
+      "README.md",
+      "test_memory_stack_stack_loader.py"
+    ],
+    "functions_mentioned": [
+      "stack",
+      "Memory",
+      "Stack",
+      "memory",
+      "breathing",
+      "engine",
+      "modules",
+      "and",
+      "symbolic",
+      "The",
+      "the",
+      "Breather",
+      "Engine",
+      "into",
+      "phase",
+      "alignment",
+      "persistence",
+      "Web",
+      "Phase",
+      "Architecture"
+    ],
+    "imports_mentioned": [
+      "import memory_stack_stack_loader"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 22.672,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "38169ac793e8b6bf9f53359e29e176512d559c02b1e6fe9e7a37d1ef6f5849d6",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo initialize and manage a symbolic memory stack for AI.Web Phase 2.0, enabling recursive memory breathing operations with phase alignment and symbolic persistence.  \n\nLikely System Role:  \nA runtime wrapper for loading and activating memory breathing engines, acting as a core component for memory management in AI.Web's architecture.  \n\nEvidence Used:  \n1. `stack_manifest.json` describes the \"Memory Stack\" engine and its role.  \n2. `memory_stack_stack_loader.py` initiates the memory breather engine.  \n3. `README.md` references integration into AI.Web Phase 2.0.  \n4. `test_memory_stack_stack_loader.py` confirms basic loader functionality.  \n\nRisks / Uncertainties:  \n- Reliance on external modules (e.g., `memory_breather`) not fully visible in provided evidence.  \n- Abstract \"symbolic memory stack\" concept lacks concrete implementation details.  \n- Minimal testing scope in the test script.  \n\nRecommendation Draft:  \nApprove review with conditions: verify dependency availability, confirm symbolic memory stack implementation, and validate robustness beyond basic testing.  \n\nSuggested Nic Action:  \nApprove review with caveats; request confirmation of external module readiness and additional testing before deployment."
+  },
+  "llm_sections": {
+    "evidence_used": "1. `stack_manifest.json` describes the \"Memory Stack\" engine and its role.  \n2. `memory_stack_stack_loader.py` initiates the memory breather engine.  \n3. `README.md` references integration into AI.Web Phase 2.0.  \n4. `test_memory_stack_stack_loader.py` confirms basic loader functionality.",
+    "likely_system_role": "A runtime wrapper for loading and activating memory breathing engines, acting as a core component for memory management in AI.Web's architecture.",
+    "plain_english_purpose": "To initialize and manage a symbolic memory stack for AI.Web Phase 2.0, enabling recursive memory breathing operations with phase alignment and symbolic persistence.",
+    "recommendation_draft": "Approve review with conditions: verify dependency availability, confirm symbolic memory stack implementation, and validate robustness beyond basic testing.",
+    "risks_uncertainties": "- Reliance on external modules (e.g., `memory_breather`) not fully visible in provided evidence.  \n- Abstract \"symbolic memory stack\" concept lacks concrete implementation details.  \n- Minimal testing scope in the test script.",
+    "suggested_nic_action": "Approve review with caveats; request confirmation of external module readiness and additional testing before deployment."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo initialize and manage a symbolic memory stack for AI.Web Phase 2.0, enabling recursive memory breathing operations with phase alignment and symbolic persistence.  \n\nLikely System Role:  \nA runtime wrapper for loading and activating memory breathing engines, acting as a core component for memory management in AI.Web's architecture.  \n\nEvidence Used:  \n1. `stack_manifest.json` describes the \"Memory Stack\" engine and its role.  \n2. `memory_stack_stack_loader.py` initiates the memory breather engine.  \n3. `README.md` references integration into AI.Web Phase 2.0.  \n4. `test_memory_stack_stack_loader.py` confirms basic loader functionality.  \n\nRisks / Uncertainties:  \n- Reliance on external modules (e.g., `memory_breather`) not fully visible in provided evidence.  \n- Abstract \"symbolic memory stack\" concept lacks concrete implementation details.  \n- Minimal testing scope in the test script.  \n\nRecommendation Draft:  \nApprove review with conditions: verify dependency availability, confirm symbolic memory stack implementation, and validate robustness beyond basic testing.  \n\nSuggested Nic Action:  \nApprove review with caveats; request confirmation of external module readiness and additional testing before deployment.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

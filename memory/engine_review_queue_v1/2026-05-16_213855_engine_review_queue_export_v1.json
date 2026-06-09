@@ -1,0 +1,380 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "HUMAN_REVIEW_QUEUE_ONLY_NO_LEDGER_MUTATION",
+    "patch": "99",
+    "project_write_authority": false,
+    "rule": "Patch 99 queues LLM draft reviews for Nic. It records approve/defer/reject intent only. Patch 100 is required to commit ledger changes after SHA re-verification.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_queue_v1"
+  },
+  "counts": {
+    "approved_for_future_commit": 32,
+    "deferred_for_more_review": 18,
+    "drafts_in_queue": 59,
+    "rejected_from_canonical_review": 0,
+    "undecided": 9
+  },
+  "created_at": "2026-05-16_213855",
+  "decisions": [
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ-christping_listener-2026-05-15_090806",
+      "engine_family": "christping_listener",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-15_090806_christping_listener_engine_review_queue_decision_v1.json",
+      "sha256": "49555a9d251f20d107a07701bdd9b8f2ece743314f1295d94c66329a493209ab"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-activity_log-2026-05-15_132314",
+      "engine_family": "activity_log",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-15_132314_activity_log_engine_review_queue_decision_v1.json",
+      "sha256": "508beeebb1e87d868afecaecaf8a77612b08022bf7c5d019878b4c182a9a1ed3"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-admin_override_console-2026-05-15_132442",
+      "engine_family": "admin_override_console",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-15_132442_admin_override_console_engine_review_queue_decision_v1.json",
+      "sha256": "d727a461aea9b54abac95a44bd99e52016275a3165ba950ae9d8c2c01a34ba9e"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-agent_reflection_engine-2026-05-15_142116",
+      "engine_family": "agent_reflection_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-15_142116_agent_reflection_engine_engine_review_queue_decision_v1.json",
+      "sha256": "511af76cf6934dd0dfdefca2d01d14fba336e72f1417e0656665a2f45edc17d2"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-agents_stack-2026-05-15_145924",
+      "engine_family": "agents_stack",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-15_145924_agents_stack_engine_review_queue_decision_v1.json",
+      "sha256": "6ad220e3e10ff4aeba1675eb8f07d1b6311991ca9e604c2f9cb99d4ae94c9937"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-ascii_interpreter_engine-2026-05-16_074606",
+      "engine_family": "ascii_interpreter_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_074606_ascii_interpreter_engine_engine_review_queue_decision_v1.json",
+      "sha256": "92569e10caf36734eb71bab68e8592e830e8ede860da4ba7a2cec0ee08da086c"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-aiweb_os_engine-2026-05-16_083213",
+      "engine_family": "aiweb_os_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083213_aiweb_os_engine_engine_review_queue_decision_v1.json",
+      "sha256": "92429cee815bb800cd2f49ec09f2956d3575fa2c66faded465e5022caa5d5671"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-aiweb_os-2026-05-16_083213",
+      "engine_family": "aiweb_os",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083213_aiweb_os_engine_review_queue_decision_v1.json",
+      "sha256": "bdf54ed5080d6683cec2c57ef3c92316e8421f0e313575d01be15a5d1f3d2fc4"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-christping_validator_engine-2026-05-16_083216",
+      "engine_family": "christping_validator_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083216_christping_validator_engine_engine_review_queue_decision_v1.json",
+      "sha256": "9c0c829bb59bd6aeabb2d98217e84d47c5341a2802ee604d1045d792285c7d0d"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-cold_archive_engine-2026-05-16_083217",
+      "engine_family": "cold_archive_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083217_cold_archive_engine_engine_review_queue_decision_v1.json",
+      "sha256": "2ab725cef8616ab79ef82562558c6dad355842ce775c32a3d47081f6151c1944"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-collapse_prevention_engine-2026-05-16_083217",
+      "engine_family": "collapse_prevention_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083217_collapse_prevention_engine_engine_review_queue_decision_v1.json",
+      "sha256": "8f7a7dab4a17b1253961ce75356604d028ab0cb48968f90dc287035ba5123da8"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-compute_contribution_engine-2026-05-16_083217",
+      "engine_family": "compute_contribution_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083217_compute_contribution_engine_engine_review_queue_decision_v1.json",
+      "sha256": "51174de7225bb544e71523c0f744c2baf8fb04e68eec6d71f0014e5e58327224"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-confusion_checker-2026-05-16_083217",
+      "engine_family": "confusion_checker",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083217_confusion_checker_engine_review_queue_decision_v1.json",
+      "sha256": "68dd4fc4bc03766ddf16da0d6e64e9d531a1b990be3516eb9c31ca9f2e261313"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-contribution_dashboard_engine-2026-05-16_083217",
+      "engine_family": "contribution_dashboard_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083217_contribution_dashboard_engine_engine_review_queue_decision_v1.json",
+      "sha256": "19792e534db6257bdfae28e13ab789092252f72ab87208562529897ab487fb30"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-athena_engine-2026-05-16_083232",
+      "engine_family": "athena_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083232_athena_engine_engine_review_queue_decision_v1.json",
+      "sha256": "eb3db231a5a967c5ef9f8533c17fcca4ecb98999ada4251b521bede3ca618be5"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-athena-2026-05-16_083232",
+      "engine_family": "athena",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083232_athena_engine_review_queue_decision_v1.json",
+      "sha256": "db4b9e815ab9a155d3eed594ef9f1617f51c1d448cf53bbee2c129a9ee02d50a"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-contribution_ledger_stack-2026-05-16_090413",
+      "engine_family": "contribution_ledger_stack",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090413_contribution_ledger_stack_engine_review_queue_decision_v1.json",
+      "sha256": "7205844aa4dc18c8cb10815c19a1c86afa845589ef281ac56bb681111b0d14a3"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-control_stack-2026-05-16_090413",
+      "engine_family": "control_stack",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090413_control_stack_engine_review_queue_decision_v1.json",
+      "sha256": "40438b8642a6eceae525c97c2099e4b3b22bffe96fcc16e9de62f9840bf82ba1"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-core_stack_breather-2026-05-16_090413",
+      "engine_family": "core_stack_breather",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090413_core_stack_breather_engine_review_queue_decision_v1.json",
+      "sha256": "f01fb09479f5de7464476f8fdbfa72429377827c425561e720710922dd66e1fe"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-core_system_stack-2026-05-16_090413",
+      "engine_family": "core_system_stack",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090413_core_system_stack_engine_review_queue_decision_v1.json",
+      "sha256": "95df83dde6907ce7580dd7578e8208c96e875cf8265b80dd5d1dbfb786b9b430"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-dream_state_engine-2026-05-16_090413",
+      "engine_family": "dream_state_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090413_dream_state_engine_engine_review_queue_decision_v1.json",
+      "sha256": "c1acad98019804b299eb614c964fa21800e426338ae1b0ebdea218aba2e61d56"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-control_panel_ui_engine-2026-05-16_090418",
+      "engine_family": "control_panel_ui_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090418_control_panel_ui_engine_engine_review_queue_decision_v1.json",
+      "sha256": "6f9418a977cb57c008323fcdaa9ac4045e2fd4be9ce38984eb1fbf78ce9c519b"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-document_output_formatter-2026-05-16_090418",
+      "engine_family": "document_output_formatter",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090418_document_output_formatter_engine_review_queue_decision_v1.json",
+      "sha256": "d78ffb75b020f390e59ea8f89cd214d8b3388b66a3d9fd323e20440527854cea"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-drift_analyzer_tool-2026-05-16_090418",
+      "engine_family": "drift_analyzer_tool",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090418_drift_analyzer_tool_engine_review_queue_decision_v1.json",
+      "sha256": "ff8a13b20fa65ef6c9fb822b678b704c38d67bfd881572d838690753a59afeb8"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-drift_arbitration_engine-2026-05-16_090418",
+      "engine_family": "drift_arbitration_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090418_drift_arbitration_engine_engine_review_queue_decision_v1.json",
+      "sha256": "8d7486f6f43d258b20889204ded959364e68b1858abe762bcbf1bd81bdb12cfb"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-drift_signature_logger-2026-05-16_090418",
+      "engine_family": "drift_signature_logger",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090418_drift_signature_logger_engine_review_queue_decision_v1.json",
+      "sha256": "a0790aa665a57e7aee42e492ad1da4bc21f24e1361440e3b9ecf4a1df2bce57f"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-echo_trace_visualizer-2026-05-16_094528",
+      "engine_family": "echo_trace_visualizer",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_094528_echo_trace_visualizer_engine_review_queue_decision_v1.json",
+      "sha256": "3875055ea6e9b3e952da61df6d096eaf5bbdbf918ece4ed0cdece9f1d474fda7"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-entropy_monitor_engine-2026-05-16_094528",
+      "engine_family": "entropy_monitor_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_094528_entropy_monitor_engine_engine_review_queue_decision_v1.json",
+      "sha256": "1020a86dc51f0fdde16d4e8fccc08c204541b6101edd76c18d8dc189e33873af"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-field_resonance_mapper-2026-05-16_094528",
+      "engine_family": "field_resonance_mapper",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_094528_field_resonance_mapper_engine_review_queue_decision_v1.json",
+      "sha256": "442dd77e7050435e47becfb80806358bd492790e5da7e316256534b903d5c91b"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-glyph_engine-2026-05-16_094528",
+      "engine_family": "glyph_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_094528_glyph_engine_engine_review_queue_decision_v1.json",
+      "sha256": "2ddc3ecc388694c111712d967b2adcb62a29db2ec2aef29c6ef2032a56466aec"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-glyph_ui_overlay-2026-05-16_094528",
+      "engine_family": "glyph_ui_overlay",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_094528_glyph_ui_overlay_engine_review_queue_decision_v1.json",
+      "sha256": "0dc28614b1ddb800e51fff8cce56bf93750c3e222f84bff6ab8382b5bb8214fb"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-external_feed_listener-2026-05-16_094533",
+      "engine_family": "external_feed_listener",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_094533_external_feed_listener_engine_review_queue_decision_v1.json",
+      "sha256": "a481b6ed765d009041874a2730c37098e42d072599d190da992fc8f96a56b0fc"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-fluid_memory_engine-2026-05-16_094533",
+      "engine_family": "fluid_memory_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_094533_fluid_memory_engine_engine_review_queue_decision_v1.json",
+      "sha256": "658bd2dec161418ccb18b205e21d65ed8d227684b751cf093573df6f8508003e"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-gilligan_drift_correction_upgrade-2026-05-16_094533",
+      "engine_family": "gilligan_drift_correction_upgrade",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_094533_gilligan_drift_correction_upgrade_engine_review_queue_decision_v1.json",
+      "sha256": "d6b025519bb89957562190f0ce25870e1445482c45140a8a64eb3bc09708c37d"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-gilligan-2026-05-16_094533",
+      "engine_family": "gilligan",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_094533_gilligan_engine_review_queue_decision_v1.json",
+      "sha256": "154af011851ed63f3f8750d698ec83efb41fc3b66a2a8c852f5c7522227f819d"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-goal_injection_engine-2026-05-16_100022",
+      "engine_family": "goal_injection_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_100022_goal_injection_engine_engine_review_queue_decision_v1.json",
+      "sha256": "48efccdcf8e2f48a5f1f6a0630c87ef9b6450b830a32ca00661ce335e7063c9c"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-memory_stack_stack-2026-05-16_100022",
+      "engine_family": "memory_stack_stack",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_100022_memory_stack_stack_engine_review_queue_decision_v1.json",
+      "sha256": "d87c64dd3f516e2d903df1a00428d57ae5fba30d5dfe1235217938645aafa7b0"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-naming_engine-2026-05-16_100022",
+      "engine_family": "naming_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_100022_naming_engine_engine_review_queue_decision_v1.json",
+      "sha256": "a02d9a09ec8749622bbdd04e414fc3d62831ac796ea890e15f722f3ae42bb717"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-neo-2026-05-16_100022",
+      "engine_family": "neo",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_100022_neo_engine_review_queue_decision_v1.json",
+      "sha256": "5ff42974c3f9c321e12076de0f243a61a6a3627dd3f35a6ae116480021aaceba"
+    },
+    {
+      "decision": "DEFERRED_FOR_MORE_REVIEW",
+      "decision_id": "ERQ103-neo_engine-2026-05-16_100023",
+      "engine_family": "neo_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_100023_neo_engine_engine_review_queue_decision_v1.json",
+      "sha256": "0cc0a7bc0556bd4946800959bf2ff5c166b0058c6633ed18f7e624860020d61c"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-install_onboarding_engine-2026-05-16_192507",
+      "engine_family": "install_onboarding_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_192507_install_onboarding_engine_engine_review_queue_decision_v1.json",
+      "sha256": "3dc2a7e3db7aef4d73fcf471d5d2ad5d72b18dce1e31dbbcdab0e1639b439bbe"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-peer_communication_engine-2026-05-16_193958",
+      "engine_family": "peer_communication_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_193958_peer_communication_engine_engine_review_queue_decision_v1.json",
+      "sha256": "3c023eb5738470d6df4a00c177d1a5e6cf2798ddc785a4521b1b0c6b7dbeff02"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-project_brain-2026-05-16_193958",
+      "engine_family": "project_brain",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_193958_project_brain_engine_review_queue_decision_v1.json",
+      "sha256": "4997ea41ef6e6824c15767a308c9122060ddf894006980d3a57f41e1cd53bd5e"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-project_memory-2026-05-16_193958",
+      "engine_family": "project_memory",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_193958_project_memory_engine_review_queue_decision_v1.json",
+      "sha256": "1c2bb8984f5f24a57cd4ae95394653657e4c27891449eeaa53c3a3b818640769"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-protoforge-2026-05-16_193958",
+      "engine_family": "protoforge",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_193958_protoforge_engine_review_queue_decision_v1.json",
+      "sha256": "57587647992706643492f1accf910f7485558694a3c40fbe8a4c54d5853f5694"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-recursion_mapper-2026-05-16_195645",
+      "engine_family": "recursion_mapper",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_195645_recursion_mapper_engine_review_queue_decision_v1.json",
+      "sha256": "d9af29e3397e09219cbbe7489db36637ad2e4b92a56db76a2727394e745d4ea3"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-recursive_field_breather-2026-05-16_195645",
+      "engine_family": "recursive_field_breather",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_195645_recursive_field_breather_engine_review_queue_decision_v1.json",
+      "sha256": "1e85e7db330327e007ab85608b078d9682aab777ff149aaf2381571b2a966d56"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-recursive_field_engine-2026-05-16_201735",
+      "engine_family": "recursive_field_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_201735_recursive_field_engine_engine_review_queue_decision_v1.json",
+      "sha256": "4a976eaaab20914872688da85be94ae43fc7ccb7bf65b758ba2a885304cd2901"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-recursive_field_stack-2026-05-16_201735",
+      "engine_family": "recursive_field_stack",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_201735_recursive_field_stack_engine_review_queue_decision_v1.json",
+      "sha256": "fa53cd4a2a3d7dbaf413c5b94d12561b6a5c138ae5afa5ac02268a609a0b3552"
+    },
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ103-recursive_verification_engine-2026-05-16_213850",
+      "engine_family": "recursive_verification_engine",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_213850_recursive_verification_engine_engine_review_queue_decision_v1.json",
+      "sha256": "7bf9e3a57c23cbfcc635748acdb9fd35c6ff5426599a02c0acdeb56a44a054c7"
+    }
+  ],
+  "next_step": "Patch 100 commits approved decisions only after live candidate SHA re-verification.",
+  "queue_report_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_213855_engine_review_queue_v1.json",
+  "queue_report_sha256": "d9aa63cf538d1a60f8b06c857474e6cd09c76bbfeece11b6eed8a2551e009a48",
+  "report_type": "ENGINE_REVIEW_QUEUE_EXPORT_V1_PATCH99",
+  "schema_version": "engine_review_queue_v1_patch99"
+}

@@ -1,0 +1,20 @@
+{
+  "approval": "CAPTURE_RMC_LLM_TURN",
+  "candidate_id": "rmccand_997f722981a0a7fe86",
+  "canonical_reference_files_touched": [],
+  "canonical_reference_write_allowed": false,
+  "created_at_utc": "2026-05-25T19:05:09+00:00",
+  "engine_version": "rmc_dataset_growth_v1_patch262J1R_preflight_B5",
+  "extra_context_sha256": "890553bc1c2a734fabf1a71b072b7fb55284487776ebb12f7a54391db6d15281",
+  "growth_paths": {
+    "candidate_example": "/home/nic/forge/memory/rmc_dataset_v1/candidate_examples/20260525/rmccand_997f722981a0a7fe86.json",
+    "index": "/home/nic/forge/memory/rmc_dataset_v1/indexes/events_index.jsonl",
+    "raw_event": "/home/nic/forge/memory/rmc_dataset_v1/raw_events/20260525/rmcobs_be3620ab8f1bfb3d1b.json",
+    "receipt": "/home/nic/forge/memory/rmc_dataset_v1/dataset_receipts/20260525/rmcobs_be3620ab8f1bfb3d1b_receipt.json",
+    "review_queue": "/home/nic/forge/memory/rmc_dataset_v1/review_queue/20260525/rmccand_997f722981a0a7fe86_review.json"
+  },
+  "observation_id": "rmcobs_be3620ab8f1bfb3d1b",
+  "queue_candidate": true,
+  "record_type": "rmc_dataset_capture_receipt_v1",
+  "source_input_sha256": "03533ac7e058d7760960bfadff2dd83bc73cf20c5aca716e17df3766d5c21b5f"
+}

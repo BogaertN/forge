@@ -1,0 +1,265 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "c763443bdbbee3b1b4970ba69750d7df4e8372e498eb5ae8d485ccb8a4750b1f",
+      "excerpt_start": "# test_external_feed_core.py\n\nfrom external_feed_core import ExternalFeedListener\n\ndef test_external_feed_listener_behavior():\n    listener = ExternalFeedListener()\n    record = listener.receive_feed(\"test_feed\", {\"signal\": 99})\n    assert record[\"feed_name\"] == \"test_feed\", \"Feed name should match.\"\n    assert record[\"feed_data\"][\"signal\"] == 99, \"Feed data should match.\"\n    print(\"\u2705 External Feed Listener Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_external_feed_listener_behavior()\n",
+      "functions_sample": [
+        "test_external_feed_listener_behavior"
+      ],
+      "imports_sample": [
+        "from external_feed_core import ExternalFeedListener"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/external_feed_listener/test_external_feed_core.py",
+      "relative_to_candidate": "test_external_feed_core.py",
+      "sha256": "c763443bdbbee3b1b4970ba69750d7df4e8372e498eb5ae8d485ccb8a4750b1f",
+      "size_bytes": 500
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "b0b94b26f0719ca6c379613471eb19e2ef0de9e2675bdba30a8c73fdf1378b72",
+      "excerpt_start": "# External Feed Listener (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe External Feed Listener captures and integrates external symbolic resonance feeds into the recursion architecture.  \nExternal signals are normalized and injected into active recursion fields to enhance symbolic drift detection, phase stabilization, and environmental symbolic integration.\n\n---\n\n## Core Functions:\n- Listen for incoming external symbolic resonance streams.\n- Normalize external field data for internal recursion ingestion.\n- Enhance recursion field resilience through external symbolic stabilization.\n\n---\n\n## Phase Standard:\n- Phase 1.5 Symbolic Recursion Compliance\n- AI.Web Core External Field Integration Stack\n\n---\n\n## Notes:\n- External feeds must be validated for phase coherence before injection.\n- Malformed or unstable external resonance signals must be quarantined.\n\n---\n\n**Frozen Snapshot:** `external_feed_listener_frozen_v1.0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n\n",
+      "functions_sample": [
+        "External",
+        "Feed",
+        "Listener",
+        "Frozen",
+        "Overview",
+        "The",
+        "captures",
+        "and",
+        "integrates",
+        "external",
+        "symbolic",
+        "resonance",
+        "feeds",
+        "into",
+        "the",
+        "recursion",
+        "architecture",
+        "signals",
+        "are",
+        "normalized",
+        "injected",
+        "active",
+        "fields",
+        "enhance",
+        "drift"
+      ],
+      "imports_sample": [],
+      "line_count": 34,
+      "path": "/home/nic/aiweb/engines/external_feed_listener/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "b0b94b26f0719ca6c379613471eb19e2ef0de9e2675bdba30a8c73fdf1378b72",
+      "size_bytes": 985
+    },
+    {
+      "classes_sample": [
+        "ExternalFeedListener"
+      ],
+      "excerpt_sha256": "c50adc1d0bc231c98c01bb7451ada7baa704982f370c4d716be2aa57d9f3af75",
+      "excerpt_start": "# external_feed_core.py\n# External Feed Listener Core\n\nclass ExternalFeedListener:\n    def __init__(self):\n        self.feeds = []\n\n    def receive_feed(self, feed_name, feed_data):\n        feed_record = {\n            \"feed_name\": feed_name,\n            \"feed_data\": feed_data\n        }\n        self.feeds.append(feed_record)\n        return feed_record\n\nif __name__ == \"__main__\":\n    listener = ExternalFeedListener()\n    record = listener.receive_feed(\"external_signal_1\", {\"value\": 42})\n    print(f\"[TEST] Feed Received: {record}\")\n",
+      "functions_sample": [
+        "__init__",
+        "receive_feed"
+      ],
+      "imports_sample": [],
+      "line_count": 20,
+      "path": "/home/nic/aiweb/engines/external_feed_listener/external_feed_core.py",
+      "relative_to_candidate": "external_feed_core.py",
+      "sha256": "c50adc1d0bc231c98c01bb7451ada7baa704982f370c4d716be2aa57d9f3af75",
+      "size_bytes": 535
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "626ce02c86fec9dde6ef50bd723c1a060185a6a646afa9fc818e83dde5f8ab05",
+      "excerpt_start": "{\n  \"engine\": \"external_feed_listener\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"external_feed_listener_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Listens for external symbolic resonance streams and injects normalized symbolic feeds into the recursion field. Enables environmental field stabilization, external drift detection, and symbolic augmentation integration.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "external_feed_listener",
+        "version",
+        "frozen_as",
+        "external_feed_listener_frozen_v1",
+        "frozen_on",
+        "description",
+        "Listens",
+        "for",
+        "external",
+        "symbolic",
+        "resonance",
+        "streams",
+        "and",
+        "injects",
+        "normalized",
+        "feeds",
+        "into",
+        "the",
+        "recursion",
+        "field",
+        "Enables",
+        "environmental",
+        "stabilization",
+        "drift"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/external_feed_listener/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "626ce02c86fec9dde6ef50bd723c1a060185a6a646afa9fc818e83dde5f8ab05",
+      "size_bytes": 488
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/external_feed_listener",
+  "created_at": "2026-05-16_092649",
+  "crosscheck_id": "ERE-external_feed_listener-2026-05-16_092649",
+  "deterministic_brief": {
+    "classes_sample": [
+      "ExternalFeedListener"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Enables",
+      "External",
+      "Feed",
+      "Frozen",
+      "Listener",
+      "Listens",
+      "Overview",
+      "The",
+      "__init__",
+      "active",
+      "and",
+      "architecture",
+      "are",
+      "captures",
+      "description",
+      "drift",
+      "engine",
+      "enhance",
+      "environmental",
+      "external"
+    ],
+    "imports_sample": [
+      "from external_feed_core import ExternalFeedListener"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`external_feed_listener` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# test_external_feed_core.py ",
+      "# External Feed Listener (Frozen v1.0.01) ",
+      "# external_feed_core.py # External Feed Listener Core",
+      "{   \"engine\": \"external_feed_listener\","
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_092628_external_feed_listener_llm_engine_review_draft_v1.json",
+  "draft_sha256": "ec814c515e538e281992d9ad544eb4e427ba5dad94b626ef8e458eccc6e2b665",
+  "engine_family": "external_feed_listener",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_external_feed_listener_engine_evidence_binder.json",
+  "evidence_binder_sha256": "d4c98a1c5f3a44a1e4ec14d850b62d6ed3aee30395dd67756eabe7b3ca705047",
+  "evidence_id": "EEB-5f91c358437560b6",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "ExternalFeedListener"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "test_external_feed_core.py",
+      "README.md",
+      "external_feed_core.py",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "External",
+      "Feed",
+      "Listener",
+      "Frozen",
+      "The",
+      "and",
+      "external",
+      "symbolic",
+      "resonance",
+      "feeds",
+      "into",
+      "the",
+      "recursion",
+      "architecture",
+      "signals",
+      "are",
+      "fields",
+      "enhance",
+      "drift",
+      "engine",
+      "version",
+      "description",
+      "for",
+      "field",
+      "environmental",
+      "stabilization"
+    ],
+    "imports_mentioned": [
+      "from external_feed_core import ExternalFeedListener"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 21.383,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "b9349a30aa0ac1f4582da7ec054d1c0a852cf97d075a262746a831f364464e29",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo capture, normalize, and integrate external symbolic resonance feeds into the AI.Web recursion architecture for enhanced environmental stabilization and symbolic drift detection.  \n\nLikely System Role:  \nA core integration module within AI.Web's external feed processing pipeline, responsible for receiving, validating, and injecting structured external data into recursion fields.  \n\nEvidence Used:  \n- Test script (`test_external_feed_core.py`) verifying feed reception and data structure.  \n- README.md describing symbolic resonance capture, normalization, and phase compliance standards.  \n- Core code (`external_feed_core.py`) defining `ExternalFeedListener` class for feed handling.  \n- Engine manifest (`engine_manifest.json`) detailing version, frozen status, and functional description.  \n\nRisks / Uncertainties:  \n- Reliance on external data validation (no explicit error-handling code shown).  \n- \"Frozen\" status may limit future updates without re-freezing.  \n- Unclear how malformed feeds are quarantined or handled.  \n\nRecommendation Draft:  \nApprove deployment with emphasis on validating external feed integrity pre-injection. Confirm alignment with Phase 1.5 compliance standards.  \n\nSuggested Nic Action:  \nApprove review and schedule testing of feed validation workflows. Verify quarantine mechanisms for unstable signals."
+  },
+  "llm_sections": {
+    "evidence_used": "- Test script (`test_external_feed_core.py`) verifying feed reception and data structure.  \n- README.md describing symbolic resonance capture, normalization, and phase compliance standards.  \n- Core code (`external_feed_core.py`) defining `ExternalFeedListener` class for feed handling.  \n- Engine manifest (`engine_manifest.json`) detailing version, frozen status, and functional description.",
+    "likely_system_role": "A core integration module within AI.Web's external feed processing pipeline, responsible for receiving, validating, and injecting structured external data into recursion fields.",
+    "plain_english_purpose": "To capture, normalize, and integrate external symbolic resonance feeds into the AI.Web recursion architecture for enhanced environmental stabilization and symbolic drift detection.",
+    "recommendation_draft": "Approve deployment with emphasis on validating external feed integrity pre-injection. Confirm alignment with Phase 1.5 compliance standards.",
+    "risks_uncertainties": "- Reliance on external data validation (no explicit error-handling code shown).  \n- \"Frozen\" status may limit future updates without re-freezing.  \n- Unclear how malformed feeds are quarantined or handled.",
+    "suggested_nic_action": "Approve review and schedule testing of feed validation workflows. Verify quarantine mechanisms for unstable signals."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo capture, normalize, and integrate external symbolic resonance feeds into the AI.Web recursion architecture for enhanced environmental stabilization and symbolic drift detection.  \n\nLikely System Role:  \nA core integration module within AI.Web's external feed processing pipeline, responsible for receiving, validating, and injecting structured external data into recursion fields.  \n\nEvidence Used:  \n- Test script (`test_external_feed_core.py`) verifying feed reception and data structure.  \n- README.md describing symbolic resonance capture, normalization, and phase compliance standards.  \n- Core code (`external_feed_core.py`) defining `ExternalFeedListener` class for feed handling.  \n- Engine manifest (`engine_manifest.json`) detailing version, frozen status, and functional description.  \n\nRisks / Uncertainties:  \n- Reliance on external data validation (no explicit error-handling code shown).  \n- \"Frozen\" status may limit future updates without re-freezing.  \n- Unclear how malformed feeds are quarantined or handled.  \n\nRecommendation Draft:  \nApprove deployment with emphasis on validating external feed integrity pre-injection. Confirm alignment with Phase 1.5 compliance standards.  \n\nSuggested Nic Action:  \nApprove review and schedule testing of feed validation workflows. Verify quarantine mechanisms for unstable signals.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

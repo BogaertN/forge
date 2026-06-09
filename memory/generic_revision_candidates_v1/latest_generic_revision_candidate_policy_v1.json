@@ -1,0 +1,22 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "model_generation_allowed_with_token": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "writes_forge_memory_only": true
+  },
+  "confirmation_token": "CONFIRM_BUILD_GENERIC_REVISION_CANDIDATE",
+  "created_at": "2026-05-17T12:51:08",
+  "purpose": "Call the local LLM for an exact revision-candidate plan from the latest sandbox failure review, then build a Forge-memory-only candidate diff.",
+  "report_type": "GENERIC_REVISION_CANDIDATE_POLICY_V1",
+  "rules": [
+    "No live AI.Web writes.",
+    "No patch apply authority.",
+    "Requires CONFIRM_BUILD_GENERIC_REVISION_CANDIDATE before model call and candidate build.",
+    "LLM produces the revision intent; Forge builds and verifies a candidate copy only.",
+    "Candidate must be sandboxed again before any approval/apply path."
+  ],
+  "schema_version": "generic_revision_candidate_policy_v1_patch140",
+  "status": "GENERIC_REVISION_CANDIDATE_POLICY_READY"
+}

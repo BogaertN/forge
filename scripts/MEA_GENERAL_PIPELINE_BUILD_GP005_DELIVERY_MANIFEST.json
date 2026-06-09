@@ -1,0 +1,33 @@
+{
+  "boundaries": {
+    "adds_corpus_ingestion": false,
+    "adds_new_domain": false,
+    "changes_routes": false,
+    "changes_ui": false,
+    "mints_ct": false,
+    "third_party_dependencies_added": [],
+    "writes_contribution_economy": false,
+    "writes_identity_vault": false,
+    "writes_ledgers": false,
+    "writes_memory": false
+  },
+  "build_id": "GENERAL-PIPELINE-CAPABILITY-SERVICE-CONTRACTS-BUILD-GP-005",
+  "depends_on": "GENERAL-PIPELINE-PRODUCTION-REGROUND-BUILD-GP-004",
+  "modified_runtime_modules": [
+    "rmc_engine_v1/general_pipeline/__init__.py",
+    "rmc_engine_v1/general_pipeline/manifest_builder.py",
+    "rmc_engine_v1/general_pipeline/pipeline.py"
+  ],
+  "new_runtime_modules": [
+    "rmc_engine_v1/general_pipeline/capability_services.py",
+    "rmc_engine_v1/general_pipeline/gp005_capability_services.py"
+  ],
+  "new_test_and_documentation_files": [
+    "scripts/test_general_pipeline_capability_services_build_gp005.py",
+    "scripts/general_pipeline_capability_services_build_gp005_verify.py",
+    "scripts/README_general_pipeline_capability_services_build_gp005.md",
+    "scripts/MEA_GENERAL_PIPELINE_BUILD_GP005_DELIVERY_MANIFEST.json"
+  ],
+  "purpose": "Introduce Forge-owned capability service contracts, canonical invocation requests, and execution receipts without adding domains or side effects.",
+  "schema_version": "general_pipeline_capability_services_v1_build_gp005"
+}

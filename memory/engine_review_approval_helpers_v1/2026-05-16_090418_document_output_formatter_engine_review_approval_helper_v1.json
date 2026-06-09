@@ -1,0 +1,96 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "bound_file_count": 5,
+  "candidate_path": "/home/nic/aiweb/engines/document_output_formatter",
+  "created_at": "2026-05-16_090418",
+  "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_document_output_formatter_engine_review_evidence_crosscheck_v1.json",
+  "crosscheck_sha256": "d559b9876e15a2cafa2a6d6436c53d34e3a0fad4bce333f888b7ef9c612b833a",
+  "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_085239_document_output_formatter_llm_engine_review_draft_v1.json",
+  "draft_sha256": "18c6c7708236026e8107b9488a78e34ff53036a361b9db9029e7b40313a2f99f",
+  "engine_family": "document_output_formatter",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_document_output_formatter_engine_evidence_binder.json",
+  "evidence_binder_sha256": "e990f451282bc565dd86d246a447579f73e87e30d5a4d6a83266ddeff59816de",
+  "evidence_id": "EEB-73405632cfb6984f",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "formatter_core.py",
+      "README.md",
+      "formatter_manifest.json",
+      "test_formatter.py",
+      "output_log.json"
+    ],
+    "functions_mentioned": [
+      "format_output",
+      "Document",
+      "Output",
+      "Formatter",
+      "Formats",
+      "system",
+      "messages",
+      "into",
+      "structured",
+      "timestamped",
+      "log",
+      "entries",
+      "Used",
+      "for",
+      "readable",
+      "output",
+      "logs",
+      "and",
+      "exports",
+      "engine",
+      "timestamps",
+      "level",
+      "test_format"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "from formatter_core import format_output"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 22.109,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "754ba22fd7eaf1e91ca759d653783fb763c82ab0f5f395aee4f913a84d34866a",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nFormats system messages into structured, timestamped log entries for readable output in logs and exports.  \n\nLikely System Role:  \nA logging/utility engine for processing and timestamping system-level output within AI.Web applications.  \n\nEvidence Used:  \n- `formatter_core.py`: Defines `format_output` function adding timestamps to data.  \n- `README.md`: Describes purpose as structuring system messages into timestamped logs.  \n- `formatter_manifest.json`: Explicitly states the engine's role in formatting and timestamping system output.  \n- `test_formatter.py`: Validates basic functionality of the formatter.  \n- `output_log.json`: Empty file suggesting potential use for storing formatted logs.  \n\nRisks / Uncertainties:  \n- `output_log.json` is empty; unclear if it’s actively used or a placeholder.  \n- Test coverage is minimal (only basic assertion); may not account for edge cases.  \n- Role inference relies on documentation; actual usage could differ.  \n\nRecommendation Draft:  \nApprove review with noted evidence. Recommend verifying `output_log.json` usage and expanding test coverage for robustness.  \n\nSuggested Nic Action:  \nApprove review, but request confirmation on `output_log.json` status and additional testing requirements before deployment."
+  },
+  "llm_visible_review_excerpt": "Plain-English Purpose:  \nFormats system messages into structured, timestamped log entries for readable output in logs and exports.  \n\nLikely System Role:  \nA logging/utility engine for processing and timestamping system-level output within AI.Web applications.  \n\nEvidence Used:  \n- `formatter_core.py`: Defines `format_output` function adding timestamps to data.  \n- `README.md`: Describes purpose as structuring system messages into timestamped logs.  \n- `formatter_manifest.json`: Explicitly states the engine's role in formatting and timestamping system output.  \n- `test_formatter.py`: Validates basic functionality of the formatter.  \n- `output_log.json`: Empty file suggesting potential use for storing formatted logs.  \n\nRisks / Uncertainties:  \n- `output_log.json` is empty; unclear if it’s actively used or a placeholder.  \n- Test coverage is minimal (only basic assertion); may not account for edge cases.  \n- Role inference relies on documentation; actual usage could differ.  \n\nRecommendation Draft:  \nApprove review with noted evidence. Recommend verifying `output_log.json` usage and expanding test coverage for robustness.  \n\nSuggested Nic Action:  \nApprove review, but request confirmation on `output_log.json` status and additional testing requirements before deployment.",
+  "manual_verification_rule": "Approve only if the LLM-visible claims are supported by the bound evidence shown in the Patch 102 cross-check. If unsure, defer.",
+  "ready_for_evidence_based_queue_decision": true,
+  "report_type": "ENGINE_REVIEW_APPROVAL_CHECK_V1_PATCH103",
+  "schema_version": "engine_review_approval_helper_v1_patch103",
+  "status": "EVIDENCE_APPROVAL_CHECK_READY",
+  "warnings": [
+    "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

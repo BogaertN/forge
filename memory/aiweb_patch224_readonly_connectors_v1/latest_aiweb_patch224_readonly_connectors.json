@@ -1,0 +1,54 @@
+{
+  "backup": {
+    "aiweb_readonly_connectors.py": "COPIED",
+    "main.py": "COPIED"
+  },
+  "backup_root": "/home/nic/forge/backups/patch224_aiweb_readonly_connectors_before/20260523_202116_UTC",
+  "changes": {
+    "connector_module_changed": true,
+    "main_py_changed": true
+  },
+  "checks": {
+    "agent_identity_activation_performed": false,
+    "all_command_names_present": true,
+    "connector_module_compile": true,
+    "connector_smoke_ok": true,
+    "database_write_performed": false,
+    "env_secret_values_read": false,
+    "forge_tool_registry_modified": false,
+    "function_marker_present": true,
+    "main_compile": true,
+    "protected_snapshots_unchanged": true,
+    "route_marker_present": true,
+    "tool_registry_trust_level": 5.0
+  },
+  "connector_smoke": {
+    "agent_list_ok": true,
+    "agent_show_missing_safe": true,
+    "boundary_map_ok": true,
+    "identity_status_ok": true,
+    "rmc_status_ok": true,
+    "rmc_test_status_ok": true
+  },
+  "errors": [],
+  "findings": [
+    {
+      "code": "AIWEB_READONLY_CONNECTORS_INSTALLED",
+      "level": "INFO",
+      "message": "Read-only connector commands were added to Forge main.py and connector smoke passed."
+    }
+  ],
+  "safety_snapshots": {
+    "echoforge_contract": true,
+    "forge_contract": true,
+    "identity_canonical_db": true,
+    "identity_contract": true,
+    "identity_env": true,
+    "identity_legacy_db": true,
+    "protoforge2_contract": true,
+    "rmc_contract": true,
+    "tool_registry": true
+  },
+  "timestamp": "20260523_202116_UTC",
+  "verdict": "PASS"
+}

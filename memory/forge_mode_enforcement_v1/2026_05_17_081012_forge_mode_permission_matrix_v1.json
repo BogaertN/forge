@@ -1,0 +1,4580 @@
+{
+  "authority": {
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "hard_blocking_active": false,
+    "network_authority": false,
+    "patch_apply_authority": false,
+    "permission_matrix_authority": true,
+    "project_file_write_authority": false,
+    "shell_execution_authority": false
+  },
+  "command_count": 437,
+  "command_rows": [
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "help",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "quit",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "status",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "audit",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "exact-list",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "exact-read",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "PATCH_PLANNING"
+      ],
+      "command": "patch-propose",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "PATCH_PLANNING"
+      ],
+      "command": "patch-propose-grounded",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "patch-grounding-status",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "PATCH_PLANNING"
+      ],
+      "command": "patch-review",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "PATCH_PLANNING"
+      ],
+      "command": "patch-preflight",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "APPLY"
+      ],
+      "command": "patch-apply",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "patch-verify",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "patch-list",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "patch-status",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "patch-chain",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY"
+      ],
+      "command": "rollback-restore",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "field-report",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "corpus-list",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "corpus-status",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "corpus-show",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "corpus-check",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "corpus-policy",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "corpus-preview",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "doc-capabilities",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "doc-formats",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "doc-preview",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "corpus-extract-check",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "corpus-extract-report",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "corpus-extract-show",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "rpmc-policy",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "rpmc-template",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "rpmc-check",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "rpmc-source-list",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "vector-status",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "vector-audit",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "vector-report",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "vector-quarantine-plan",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "source-gap-report",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "source-gap-evidence",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "source-gap-check",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "ingestion-policy",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "ingest-dry-run",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "ingest-dry-run-validate",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "ingestion-manifest-plan",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "ingestion-readiness",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "chunk-policy",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "ingest-one",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "ingest-verify",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-version",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-command-surface",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "corpus-intake-scan",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "corpus-intake-preview",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "corpus-intake-apply",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "corpus-intake-check",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "corpus-registration-report",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "context-status",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "CONTEXT_SEARCH",
+        "READ_ONLY"
+      ],
+      "command": "context-search-test",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "CONTEXT_SEARCH",
+        "READ_ONLY"
+      ],
+      "command": "context-search",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "ingest-history",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "ingest-receipt-show",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "ingest-receipt-repair",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "ingest-next",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "ingest-batch-plan",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "ingest-batch-dry-run",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "ingest-batch-apply",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "ingest-batch-verify",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "corpus-id-map",
+      "family": "corpus_ingestion",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "source-authority-weights",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "context-duplicates",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "context-collection-stats",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "context-reset-plan",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "context-export-manifest",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "code-index-status",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "code-index-plan",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "code-index-dry-run",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "code-index-apply",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "CONTEXT_SEARCH",
+        "READ_ONLY"
+      ],
+      "command": "code-index-search",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "CONTEXT_SEARCH",
+        "READ_ONLY"
+      ],
+      "command": "code-symbol-map",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "code-index-integrity",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "code-engine-inventory",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "code-engine-show",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "code-engine-duplicates",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "code-engine-canonical-plan",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "symbolic-runtime-map",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "symbolic-runtime-show",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "symbolic-runtime-gaps",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "symbolic-runtime-export",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "SANDBOX",
+        "SELF_UPDATE"
+      ],
+      "command": "patch-sandbox-plan",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "SANDBOX",
+        "SELF_UPDATE"
+      ],
+      "command": "patch-sandbox-apply",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "SANDBOX",
+        "SELF_UPDATE"
+      ],
+      "command": "patch-sandbox-report",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "SANDBOX",
+        "SELF_UPDATE"
+      ],
+      "command": "patch-sandbox-clean",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "SANDBOX",
+        "SELF_UPDATE"
+      ],
+      "command": "patch-sandbox-smoke-plan",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "SANDBOX",
+        "SELF_UPDATE"
+      ],
+      "command": "patch-sandbox-smoke-apply",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "SANDBOX",
+        "SELF_UPDATE"
+      ],
+      "command": "patch-sandbox-smoke-report",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "SANDBOX",
+        "SELF_UPDATE"
+      ],
+      "command": "patch-sandbox-smoke-clean",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "SANDBOX",
+        "SELF_UPDATE"
+      ],
+      "command": "patch-sandbox-gate-check",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "patch-sandbox-gate-status",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "TEST",
+        "READ_ONLY"
+      ],
+      "command": "test-inventory",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "test-show",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "test-policy",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "TEST",
+        "READ_ONLY"
+      ],
+      "command": "test-readiness",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "test-run-policy",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "TEST",
+        "READ_ONLY"
+      ],
+      "command": "test-run-safe",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "TEST",
+        "READ_ONLY"
+      ],
+      "command": "test-run-smoke",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "TEST",
+        "READ_ONLY"
+      ],
+      "command": "test-run-report",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "TEST",
+        "READ_ONLY"
+      ],
+      "command": "test-run-history",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "TEST",
+        "READ_ONLY"
+      ],
+      "command": "patch-test-bind",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "TEST",
+        "READ_ONLY"
+      ],
+      "command": "patch-test-gate-check",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "patch-test-gate-status",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "TEST",
+        "READ_ONLY"
+      ],
+      "command": "patch-test-binding-report",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "patch-test-relevance-policy",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "TEST",
+        "READ_ONLY"
+      ],
+      "command": "patch-test-relevance-check",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "patch-test-relevance-status",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "APPLY"
+      ],
+      "command": "patch-apply-gate-matrix",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "patch-apply-gate-show",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "patch-apply-gate-status",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-canonical-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-canonical-review",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-canonical-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-canonical-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-decision-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-decision-draft",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-decision-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-decision-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-decision-summary",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-decision-list",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-decision-holds",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-decision-core",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-decision-exact",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-lockfile-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-lockfile-draft",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-lockfile-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-lockfile-validate",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-lockfile-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-ledger-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-ledger-init",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-mark",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-status",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-batch-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-batch-plan",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-batch-approve-core",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-batch-defer-holds",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-batch-status",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-batch-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-approved-lockfile-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-approved-lockfile-candidate",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-approved-lockfile-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-approved-lockfile-validate",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-approved-lockfile-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-final-lockfile-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-final-lockfile-proposal",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-final-lockfile-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-final-lockfile-verify",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "APPLY"
+      ],
+      "command": "engine-final-lockfile-apply",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-final-lockfile-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-completion-status",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-next",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-roadmap-status",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-disposition-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-disposition-report",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-disposition-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-disposition-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-master-status-policy",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-master-status",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-master-status-show",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-master-status-export",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "llm-plan-policy",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "PATCH_PLANNING",
+        "READ_ONLY"
+      ],
+      "command": "llm-plan-template",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "llm-plan-show",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "PATCH_PLANNING",
+        "READ_ONLY"
+      ],
+      "command": "llm-plan-validate",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "llm-plan-export",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "forge-self-update-policy",
+      "family": "forge_self_update",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "SELF_UPDATE",
+        "READ_ONLY"
+      ],
+      "command": "forge-self-update-propose",
+      "family": "forge_self_update",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "forge-self-update-show",
+      "family": "forge_self_update",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "SELF_UPDATE",
+        "READ_ONLY"
+      ],
+      "command": "forge-self-update-verify",
+      "family": "forge_self_update",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "forge-self-update-export",
+      "family": "forge_self_update",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "forge-self-snapshot-policy",
+      "family": "forge_self_update",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "SELF_UPDATE",
+        "READ_ONLY"
+      ],
+      "command": "forge-self-snapshot-create",
+      "family": "forge_self_update",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "forge-self-snapshot-show",
+      "family": "forge_self_update",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "SELF_UPDATE",
+        "READ_ONLY"
+      ],
+      "command": "forge-self-snapshot-verify",
+      "family": "forge_self_update",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "forge-self-snapshot-export",
+      "family": "forge_self_update",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "forge-self-sandbox-policy",
+      "family": "forge_self_update",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "SANDBOX",
+        "SELF_UPDATE"
+      ],
+      "command": "forge-self-sandbox-plan",
+      "family": "forge_self_update",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "SANDBOX",
+        "SELF_UPDATE"
+      ],
+      "command": "forge-self-sandbox-apply",
+      "family": "forge_self_update",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "forge-self-sandbox-show",
+      "family": "forge_self_update",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "SANDBOX",
+        "SELF_UPDATE"
+      ],
+      "command": "forge-self-sandbox-clean",
+      "family": "forge_self_update",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "forge-self-sandbox-export",
+      "family": "forge_self_update",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "TEST",
+        "READ_ONLY"
+      ],
+      "command": "canonical-test-inventory",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "canonical-test-show",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "canonical-test-gaps",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "canonical-test-export",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "canonical-test-run-policy",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "TEST",
+        "READ_ONLY"
+      ],
+      "command": "canonical-test-run-plan",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "TEST",
+        "READ_ONLY"
+      ],
+      "command": "canonical-test-run-safe",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "canonical-test-run-show",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "canonical-test-run-export",
+      "family": "test_harness",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "canonical-relationship-map",
+      "family": "canonical_engine_intelligence",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "canonical-related-files",
+      "family": "canonical_engine_intelligence",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "canonical-risk-neighbors",
+      "family": "canonical_engine_intelligence",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "canonical-relationship-export",
+      "family": "canonical_engine_intelligence",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "PATCH_PLANNING",
+        "READ_ONLY"
+      ],
+      "command": "patch-impact-map",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "PATCH_PLANNING",
+        "READ_ONLY"
+      ],
+      "command": "patch-source-trace",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "PATCH_PLANNING",
+        "READ_ONLY"
+      ],
+      "command": "patch-runtime-role-check",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "PATCH_PLANNING",
+        "READ_ONLY"
+      ],
+      "command": "patch-risk-score",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "patch-impact-export",
+      "family": "patch_lifecycle",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-status-api-policy",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-status-api-build",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-status-api-show",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-status-api-export",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-dashboard-policy",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-dashboard-build",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-dashboard-show",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-dashboard-export",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-mode-policy",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-mode-registry-build",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-mode-show",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-mode-status",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-mode-export",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-mode-enforcement-policy",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-mode-enforcement-build",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-mode-enforcement-show",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-mode-enforcement-check",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "DASHBOARD"
+      ],
+      "command": "forge-mode-enforcement-export",
+      "family": "forge_control_plane",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "llm-memory-policy",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "llm-memory-init",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "llm-memory-log-turn",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "llm-memory-correction",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "llm-memory-show",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "llm-memory-search",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "llm-memory-session",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "llm-memory-export",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "llm-tool-policy",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "llm-tool-init",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "llm-tool-list",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "llm-tool-mode",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "llm-tool-check",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "llm-tool-request",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "llm-tool-report",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-brief-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-brief",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-brief-core",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-brief-holds",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-brief-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-readiness-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-readiness-report",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-readiness-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-readiness-risks",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-readiness-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "code-relationship-policy",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "code-relationship-map",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "CONTEXT_SEARCH",
+        "READ_ONLY"
+      ],
+      "command": "code-related-files",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "CONTEXT_SEARCH",
+        "READ_ONLY"
+      ],
+      "command": "code-risk-neighbors",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "code-relationship-export",
+      "family": "context_code_search",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-policy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-plan",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-show",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-diff-plan",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-export",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-create-policy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-manifest-dry-run",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-manifest-show",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-manifest-validate",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-manifest-export",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-readiness-policy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-readiness-check",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-readiness-show",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-readiness-blockers",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-readiness-export",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-archive-policy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-create",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-create-show",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-create-verify",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-create-export",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-diff-policy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-verify-index",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-diff",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-diff-show",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-diff-export",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-shadow-policy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-shadow-plan",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-shadow-show",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-shadow-validate",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-shadow-export",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-shadow-copy-policy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-shadow-copy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-shadow-copy-show",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-shadow-copy-verify",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-shadow-copy-export",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-shadow-inspect-policy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-shadow-inspect",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-shadow-inspect-show",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-shadow-inspect-readiness",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-shadow-inspect-export",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-proposal-policy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-live-proposal",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-proposal-show",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-live-proposal-gate",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-proposal-export",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-preflight-policy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-live-preflight",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-preflight-show",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-live-preflight-gate",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-preflight-export",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-approval-policy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-live-approval-token",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-approval-show",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-live-approval-gate",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-approval-export",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-restore-policy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-live-restore-dry-run",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-restore-show",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-live-restore-gate",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-restore-export",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-backup-policy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-live-backup-plan",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-backup-show",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-live-backup-gate",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-backup-export",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-backup-copy-policy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-live-backup-copy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-backup-copy-show",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-live-backup-copy-verify",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-backup-copy-export",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-execute-policy",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-live-execute",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-execute-show",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "RECOVERY",
+        "READ_ONLY"
+      ],
+      "command": "snapshot-live-execute-gate",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "snapshot-live-execute-export",
+      "family": "recovery_snapshot",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-source-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-source-status",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-source-audit",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-source-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-source-gaps",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-source-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-evidence-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-evidence-bind",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-evidence-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-evidence-batch-plan",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-evidence-batch-bind-ready",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-evidence-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "source-law-review-policy",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "source-law-review-status",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "source-law-review-audit",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "source-law-review-show",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "source-law-review-gaps",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "source-law-review-export",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "source-law-chunk-policy",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "INGESTION",
+        "READ_ONLY"
+      ],
+      "command": "source-law-chunk-probe",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "source-law-chunk-show",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "source-law-chunk-gaps",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "source-law-chunk-export",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "llm-engine-review-policy",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "llm-engine-review-gateway-init",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "llm-engine-review-gateway-show",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "llm-engine-review-provider",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "llm-engine-review-model-test",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "llm-engine-review-draft",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "llm-engine-review-show",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "llm-engine-review-batch-plan",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "llm-engine-review-batch-next",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "llm-engine-review-export",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "llm-engine-review-batch-run-policy",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "llm-engine-review-batch-run-plan",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY"
+      ],
+      "command": "llm-engine-review-batch-run",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "llm-engine-review-batch-run-show",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "llm-engine-review-batch-run-export",
+      "family": "general",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-queue-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-queue-build",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-queue-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-queue-next",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-queue-mark-approved",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-queue-mark-deferred",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-queue-mark-rejected",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-queue-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-evidence-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-evidence-batch-plan",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-evidence-check",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-evidence-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-evidence-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-approval-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-approval-plan",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-approval-check",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-approval-approve",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-approval-defer",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-approval-reject",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-approval-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-approval-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-evidence-commit-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-evidence-commit-plan",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "APPLY"
+      ],
+      "command": "engine-review-evidence-commit-apply",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-evidence-commit-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-evidence-commit-verify",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-evidence-commit-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-workflow-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-workflow-plan",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-workflow-run",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-workflow-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-workflow-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-batch-approval-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-batch-approval-plan",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-batch-approval-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-batch-approval-approve",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-batch-approval-defer",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-batch-approval-reject",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-batch-approval-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-batch-commit-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-batch-commit-plan",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "APPLY"
+      ],
+      "command": "engine-review-batch-commit-apply",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-batch-commit-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-batch-commit-verify",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-batch-commit-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-progress-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-progress-report",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-progress-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-progress-gaps",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-progress-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-triage-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-triage-plan",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-triage-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-triage-approve",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-triage-defer",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-triage-reject",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-triage-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-cycle-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-cycle-report",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-cycle-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-cycle-next",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-cycle-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-commit-policy",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-commit-plan",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "APPLY"
+      ],
+      "command": "engine-review-commit-apply",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-commit-show",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "PATCH_PLANNING"
+      ],
+      "command": "engine-review-commit-verify",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    },
+    {
+      "allowed_modes": [
+        "READ_ONLY",
+        "CONTEXT_SEARCH",
+        "DASHBOARD"
+      ],
+      "command": "engine-review-commit-export",
+      "family": "engine_review_or_lockfile",
+      "guard_check_available": true,
+      "hard_blocking_enforced_now": false
+    }
+  ],
+  "created_at": "2026-05-17T08:10:12",
+  "mode_count": 10,
+  "mode_coverage": {
+    "APPLY": 6,
+    "CONTEXT_SEARCH": 199,
+    "DASHBOARD": 223,
+    "INGESTION": 32,
+    "PATCH_PLANNING": 81,
+    "READ_ONLY": 414,
+    "RECOVERY": 31,
+    "SANDBOX": 12,
+    "SELF_UPDATE": 16,
+    "TEST": 13
+  },
+  "mode_ids": [
+    "READ_ONLY",
+    "CONTEXT_SEARCH",
+    "PATCH_PLANNING",
+    "SANDBOX",
+    "TEST",
+    "APPLY",
+    "RECOVERY",
+    "DASHBOARD",
+    "SELF_UPDATE",
+    "INGESTION"
+  ],
+  "mode_registry_status": "FORGE_MODE_REGISTRY_READY_NO_ENFORCEMENT",
+  "plain_english": "Forge now has a command-to-mode permission matrix and a deterministic check command. This is the verified enforcement map; hard command blocking is intentionally not enabled until the matrix is inspected.",
+  "problems": [],
+  "recommended_next_patch": "Patch 131 \u2014 Source Authority Runtime Binder",
+  "report_type": "FORGE_MODE_PERMISSION_MATRIX_V1",
+  "schema_version": "forge_mode_enforcement_v1_patch130",
+  "status": "FORGE_MODE_PERMISSION_MATRIX_READY",
+  "summary": {
+    "commands_mapped": 437,
+    "engine_file_write_authority": false,
+    "guard_check_available": true,
+    "hard_blocking_active": false,
+    "modes_known": 10,
+    "project_file_write_authority": false,
+    "shell_execution_authority": false
+  }
+}

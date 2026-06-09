@@ -1,0 +1,116 @@
+FORGE PATCH PROPOSAL
+══════════════════════════════════════════════════════════════════
+Target file     : /home/nic/aiweb/test_symbolic_cognition_stack_loader.py
+Timestamp       : 2026-05-11T18:26:25
+Session ID      : forge_2026_05_11_182504
+Forge Level     : 2.0 — Patch Proposal Engine
+Risk level      : LOW
+Proposal file   : /home/nic/forge/proposed_patches/2026-05-11_182625_PATCH_test_symbolic_cognition_stack_loader_py.txt
+══════════════════════════════════════════════════════════════════
+
+PROBLEM SUMMARY
+───────────────
+Patch 56C exact block verification test only.
+
+
+ORIGINAL (current content of target region)
+────────────────────────────────────────────
+import
+
+
+PROPOSED CHANGE
+───────────────
+import
+
+
+REASONING
+─────────
+Testing that Patch 56C ignores marker words inside ordinary proposal text and only accepts a real full-line grounding attachment block.
+
+
+TEST PLAN
+─────────
+Open the generated proposal and confirm it contains GROUNDING ATTACHMENT — PATCH 56 plus BEGIN_FORGE_GROUNDING_ATTACHMENT_PATCH_56 and END_FORGE_GROUNDING_ATTACHMENT_PATCH_56.
+
+
+ROLLBACK NOTES
+──────────────
+Do not apply this proposal. Delete the proposal file if cleanup is needed.
+
+
+══════════════════════════════════════════════════════════════════
+IMPORTANT: THIS IS A PROPOSAL ONLY.
+
+No project files were created, edited, moved, deleted, or executed.
+Forge only wrote this proposal inside ~/forge/proposed_patches/.
+
+To apply this change, Nic must manually edit the target file.
+A future Forge apply-patch command may be added at a higher trust level.
+══════════════════════════════════════════════════════════════════
+Audit entry hash : 581fb2d448f9adc5
+
+
+BEGIN_FORGE_GROUNDING_ATTACHMENT_PATCH_56
+GROUNDING ATTACHMENT — PATCH 56
+Exact block verification: Patch 56C requires full-line BEGIN/END sentinels plus required fields; random user text is ignored.
+══════════════════════════════════════════════════════════════════
+This proposal was created after source-grounded preflight.
+Forge rule: ground first, propose second, carry proof forward.
+
+Grounding receipt ID        : 2026-05-11_171204_grounding_test_symbolic_cognition_stack_loader.py_7d8683a687d731d0
+Grounding receipt path      : /home/nic/forge/grounding_receipts/2026-05-11_171204_grounding_test_symbolic_cognition_stack_loader.py_7d8683a687d731d0.json
+Grounding created at        : 2026-05-11T17:12:04
+Grounding verdict           : GROUNDING_PASS
+Accepted for patch-propose  : True
+Pass count                  : 4/4
+Target path                 : /home/nic/aiweb/test_symbolic_cognition_stack_loader.py
+Target SHA-256/16           : 7d8683a687d731d0
+
+Evidence status:
+  source_law            : PASS (5 results)
+  engineering_standard  : PASS (5 results)
+  implementation        : PASS (5 results)
+  prior_or_similar      : PASS (5 context results, 5 artifacts)
+
+Top grounding evidence carried forward:
+Source-law:
+  1. score=0.6954 citation=corpus_0014 :: 🌀🌬️File8_ Memory.docx :: corpus_0014_chunk_0140 :: chars 207282-208996 :: sha256_16 a50a2ba4bb39ee49
+     role=validation_benchmark folder=04_FBSC_DOCTRINE
+  2. score=0.6933 citation=corpus_0021 :: 🌀🌬️Resonant Phase Memory Calculus_ Canonical Test Data Set_ Version 1.0.docx :: corpus_0021_chunk_0002 :: chars 2924-4673 :: sha256_16 c77bdfa2bb5718da
+     role=recursion_doctrine folder=04_FBSC_DOCTRINE
+  3. score=0.6871 citation=corpus_0022 :: 🌀🌬️Resonant Phase Memory Calculus_ The Law of Recursion, Collapse, and Return_ Full Protocol Draft_.docx :: corpus_0022_chunk_0089 :: chars 132433-134167 :: sha256_16 8c5696bbf868e99b
+     role=memory_law_definition folder=04_FBSC_DOCTRINE
+Engineering-standard:
+  1. score=0.5457 citation=corpus_0017 :: 🌀🌬️AI.Web Egine Lifecycle_ From Concept to Shipping.docx :: corpus_0017_chunk_0002 :: chars 2724-4490 :: sha256_16 effa97936c8d8da3
+     role=recursion_doctrine folder=05_ENGINEERING_STANDARDS
+  2. score=0.5333 citation=corpus_0016 :: ✅AI Web Engine Verification Protocol (Phase 1.docx :: corpus_0016_chunk_0000 :: chars 0-1758 :: sha256_16 7f5417c6f85e06a0
+     role=recursion_doctrine folder=05_ENGINEERING_STANDARDS
+  3. score=0.5158 citation=corpus_0017 :: 🌀🌬️AI.Web Egine Lifecycle_ From Concept to Shipping.docx :: corpus_0017_chunk_0023 :: chars 28852-30628 :: sha256_16 effa97936c8d8da3
+     role=recursion_doctrine folder=05_ENGINEERING_STANDARDS
+Implementation:
+  1. score=0.6852 citation=corpus_0002 :: 🌀ProtoForge Volume II – The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.docx :: corpus_0002_chunk_0063 :: chars 71432-73093 :: sha256_16 397b3898af8eb462
+     role=implementation_guide folder=01_SYSTEM_LAW
+  2. score=0.6753 citation=corpus_0020 :: Resonant Phase Memory Calculus Implementation Blueprint_.pdf :: corpus_0020_chunk_0000 :: chars 0-1736 :: sha256_16 a719fdb822a4d1dd
+     role=memory_law_definition folder=04_FBSC_DOCTRINE
+  3. score=0.6704 citation=corpus_0002 :: 🌀ProtoForge Volume II – The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.docx :: corpus_0002_chunk_0071 :: chars 81363-83116 :: sha256_16 397b3898af8eb462
+     role=implementation_guide folder=01_SYSTEM_LAW
+Prior/similar context:
+  1. score=0.5991 citation=corpus_0008 :: 🌀🌬️✅FINAL MASTER LIST — AI.Web System Engine Architecture.docx :: corpus_0008_chunk_0069 :: chars 98617-100366 :: sha256_16 c71e1089fa6c60c7
+     role=validation_benchmark folder=02_AIWEB_ARCHITECTURE
+  2. score=0.5849 citation=corpus_0014 :: 🌀🌬️File8_ Memory.docx :: corpus_0014_chunk_0140 :: chars 207282-208996 :: sha256_16 a50a2ba4bb39ee49
+     role=validation_benchmark folder=04_FBSC_DOCTRINE
+  3. score=0.5788 citation=corpus_0010 :: 🧠🌀🌬️Stack 11- Avatar Interface Engine—the symbolic embodiment and output layer that communicates with users, agents, and the system itself.docx :: corpus_0010_chunk_0011 :: chars 15771-17555 :: sha256_16 81f148c79c8d18f5
+     role=validation_benchmark folder=02_AIWEB_ARCHITECTURE
+Patch lifecycle artifacts:
+  1. score=8 path=apply_plans/2026-05-09_154718_PLAN_README_md.txt
+     snippet=FORGE APPLY PLAN ══════════════════════════════════════════════════════════════════ Proposal file : /home/nic/forge/proposed_patches/2026-05-09_154616_PATCH_README_md.txt Target file : /home/nic/aiweb/runtime_wrappers/sy
+  2. score=8 path=proposed_patches/2026-05-09_154616_PATCH_README_md.txt
+     snippet=FORGE PATCH PROPOSAL ══════════════════════════════════════════════════════════════════ Target file : /home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack/README.md Timestamp : 2026-05-09T15:46:16 Session ID : forge
+  3. score=7 path=proposed_patches/diffs/2026-05-09_154646_DIFF_2026_05_09_154616_PATCH_README_md.txt
+     snippet=FORGE PATCH DIFF PREVIEW ══════════════════════════════════════════════════════════════════ Proposal file : /home/nic/forge/proposed_patches/2026-05-09_154616_PATCH_README_md.txt Target file : /home/nic/aiweb/runtime_wra
+
+Proposal review instruction:
+  Review this grounding attachment together with the proposed change.
+  If the attachment is missing, stale, or for a different SHA, do not apply the patch.
+══════════════════════════════════════════════════════════════════
+END_FORGE_GROUNDING_ATTACHMENT_PATCH_56

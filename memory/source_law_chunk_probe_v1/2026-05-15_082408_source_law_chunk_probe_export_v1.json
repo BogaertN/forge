@@ -1,0 +1,96 @@
+{
+  "authority": {
+    "mode": "READ_ONLY_PROBE_REPORTS_ONLY",
+    "no_canonical_decisions": true,
+    "no_chroma_writes": true,
+    "no_engine_review": true,
+    "no_ingestion_writes": true,
+    "no_pdf_ocr": true,
+    "no_project_writes": true,
+    "patch": "Patch 97A \u2014 Source-Law Chunk Receipt / Retrieval Probe",
+    "rule": "Source law is not review-ready until chunks/retrieval evidence is proven by receipts or deterministic local search evidence.",
+    "writes": "Forge-owned reports under memory/source_law_chunk_probe_v1 only"
+  },
+  "counts": {
+    "blockers": 0,
+    "context_library_exists": true,
+    "not_ready": 0,
+    "ready_retrievable_with_chunks": 6,
+    "targets": 6
+  },
+  "created_at": "2026-05-15_082408",
+  "overall_status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+  "recommended_next_route": "PATCH98_LLM_ENGINE_REVIEW_DRAFT_GENERATOR_WITH_GATEWAY_INIT",
+  "report_type": "SOURCE_LAW_CHUNK_PROBE_EXPORT_V1_PATCH97A",
+  "rows": [
+    {
+      "blockers": [],
+      "display_name": "AI.Web Forge Full System Overview",
+      "json_chunk_evidence_count": 61305,
+      "recommended_route": "PATCH98_LLM_REVIEW_GATE_AFTER_GATEWAY_INIT",
+      "source_key": "aiweb_forge_overview",
+      "source_law_chunk_ready": true,
+      "sqlite_retrieval_evidence_count": 10,
+      "status": "READY_RETRIEVABLE_WITH_CHUNKS",
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "display_name": "FBSC / Frequency-Based Symbolic Calculus source law",
+      "json_chunk_evidence_count": 12866,
+      "recommended_route": "PATCH98_LLM_REVIEW_GATE_AFTER_GATEWAY_INIT",
+      "source_key": "fbsc_core",
+      "source_law_chunk_ready": true,
+      "sqlite_retrieval_evidence_count": 10,
+      "status": "READY_RETRIEVABLE_WITH_CHUNKS",
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "display_name": "RSOC / Resonant runtime architecture source law",
+      "json_chunk_evidence_count": 12866,
+      "recommended_route": "PATCH98_LLM_REVIEW_GATE_AFTER_GATEWAY_INIT",
+      "source_key": "rsoc_or_resonant_runtime",
+      "source_law_chunk_ready": true,
+      "sqlite_retrieval_evidence_count": 10,
+      "status": "READY_RETRIEVABLE_WITH_CHUNKS",
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "display_name": "Gilligan agent/core source law",
+      "json_chunk_evidence_count": 12866,
+      "recommended_route": "PATCH98_LLM_REVIEW_GATE_AFTER_GATEWAY_INIT",
+      "source_key": "gilligan_core",
+      "source_law_chunk_ready": true,
+      "sqlite_retrieval_evidence_count": 10,
+      "status": "READY_RETRIEVABLE_WITH_CHUNKS",
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "display_name": "RPMC / Resonant Phase Memory Calculus protocol",
+      "json_chunk_evidence_count": 61305,
+      "recommended_route": "PATCH98_LLM_REVIEW_GATE_AFTER_GATEWAY_INIT",
+      "source_key": "rpmc_protocol",
+      "source_law_chunk_ready": true,
+      "sqlite_retrieval_evidence_count": 10,
+      "status": "READY_RETRIEVABLE_WITH_CHUNKS",
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "display_name": "Christ Function / correction operator source law",
+      "json_chunk_evidence_count": 12866,
+      "recommended_route": "PATCH98_LLM_REVIEW_GATE_AFTER_GATEWAY_INIT",
+      "source_key": "christ_function",
+      "source_law_chunk_ready": true,
+      "sqlite_retrieval_evidence_count": 10,
+      "status": "READY_RETRIEVABLE_WITH_CHUNKS",
+      "warnings": []
+    }
+  ],
+  "schema_version": "source_law_chunk_probe_v1_patch97A",
+  "source_report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+  "source_report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e"
+}

@@ -1,0 +1,286 @@
+{
+  "databases": {
+    "canonical": {
+      "error": null,
+      "exists": true,
+      "label": "canonical",
+      "ok": true,
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/data/identity_vault.db",
+      "previews": {
+        "agent_profiles": [],
+        "session_state": [],
+        "user_profiles": []
+      },
+      "row_counts": {
+        "agent_profiles": 0,
+        "audit_logs": 0,
+        "feedback_logs": 0,
+        "session_state": 0,
+        "user_profiles": 0
+      },
+      "schemas": {
+        "agent_profiles": [
+          "id",
+          "agent_id",
+          "canonical_name",
+          "role",
+          "capabilities",
+          "limits",
+          "enforcement",
+          "created_at",
+          "updated_at",
+          "version",
+          "is_active",
+          "operational_profile_json",
+          "profile_schema_version",
+          "rmc_namespace",
+          "activation_state",
+          "profile_hash",
+          "last_validated_at"
+        ],
+        "audit_logs": [
+          "id",
+          "profile_id",
+          "profile_type",
+          "action",
+          "details",
+          "timestamp",
+          "ip_address",
+          "user_agent"
+        ],
+        "feedback_logs": [
+          "id",
+          "profile_id",
+          "feedback_type",
+          "message",
+          "data",
+          "timestamp",
+          "resolved"
+        ],
+        "session_state": [
+          "id",
+          "profile_id",
+          "profile_type",
+          "session_data",
+          "created_at",
+          "updated_at",
+          "expires_at"
+        ],
+        "user_profiles": [
+          "id",
+          "user_id",
+          "canonical_name",
+          "interaction_preferences",
+          "meta_rules",
+          "session_defaults",
+          "drift_tracking",
+          "created_at",
+          "updated_at",
+          "version",
+          "is_active",
+          "operational_profile_json",
+          "profile_schema_version",
+          "profile_hash",
+          "last_validated_at"
+        ]
+      },
+      "tables": [
+        "agent_profiles",
+        "audit_logs",
+        "feedback_logs",
+        "session_state",
+        "sqlite_sequence",
+        "user_profiles"
+      ]
+    },
+    "legacy": {
+      "error": null,
+      "exists": true,
+      "label": "legacy",
+      "ok": true,
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/vault.db",
+      "previews": {
+        "profiles": [
+          {
+            "id": "user789",
+            "version": "1.0.0"
+          }
+        ],
+        "session_state": [
+          {
+            "id": "user789"
+          }
+        ]
+      },
+      "row_counts": {
+        "feedback_logs": 0,
+        "profiles": 1,
+        "session_state": 1
+      },
+      "schemas": {
+        "feedback_logs": [
+          "id",
+          "profile_id",
+          "type",
+          "data",
+          "timestamp"
+        ],
+        "profiles": [
+          "id",
+          "type",
+          "data",
+          "version",
+          "last_updated",
+          "ipfs_hash",
+          "zkp_metadata"
+        ],
+        "session_state": [
+          "id",
+          "phase",
+          "waiting_for",
+          "last_feedback",
+          "last_action",
+          "timestamp"
+        ]
+      },
+      "tables": [
+        "feedback_logs",
+        "profiles",
+        "session_state",
+        "sqlite_sequence"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "code": "IV_CANONICAL_DB_READONLY_OK",
+      "level": "INFO",
+      "message": "Canonical Identity Vault database opened in read-only mode."
+    },
+    {
+      "code": "IV_LEGACY_PROFILE_ROWS_FOUND",
+      "level": "WARN",
+      "message": "Legacy database contains 2 profile/session rows that may need migration review."
+    },
+    {
+      "code": "IV_CANONICAL_PROFILE_ROWS_EMPTY",
+      "level": "INFO",
+      "message": "Canonical user_profiles and agent_profiles are currently empty."
+    },
+    {
+      "code": "IV_PROFILE_CANDIDATE_FILES_FOUND",
+      "level": "WARN",
+      "message": "Found 8 local profile/template candidate files for review."
+    },
+    {
+      "code": "IV_INVENTORY_SAFETY_CHECK_FAILED",
+      "level": "FAIL",
+      "message": "A no-mutation safety check failed."
+    }
+  ],
+  "next_safe_step": "Review the legacy DB previews and candidate files. If useful prior profiles exist, create a migration-preview patch that maps them into the new operational_profile_json structure without activation. If no useful profiles exist, create inactive draft Gilligan/Athena/Neo and Nic user profiles from the Identity Vault blueprint.",
+  "patch": "patch226a1_identity_vault_profile_inventory_scan_hotfix",
+  "profile_candidate_files": [
+    {
+      "classification": "agent_profile_or_template_candidate",
+      "json_attempted": false,
+      "path": "/home/nic/identity-vault/routes/agents.js",
+      "relative_path": "routes/agents.js",
+      "sha256_16": "fa26d01ec353549a",
+      "size": 8380
+    },
+    {
+      "classification": "agent_profile_or_template_candidate",
+      "error": "JSONDecodeError: Expecting value: line 7 column 5 (char 95)",
+      "json_attempted": true,
+      "json_ok": false,
+      "path": "/home/nic/identity-vault/templates/agent-template.json",
+      "relative_path": "templates/agent-template.json",
+      "sha256_16": "ed18366ba9e5808a",
+      "size": 643
+    },
+    {
+      "classification": "profile_or_identity_candidate",
+      "json_attempted": false,
+      "path": "/home/nic/identity-vault/Identity_Vault_Pro.md",
+      "relative_path": "Identity_Vault_Pro.md",
+      "sha256_16": "4a28d181b6dc4e92",
+      "size": 7400
+    },
+    {
+      "classification": "profile_or_identity_candidate",
+      "json_attempted": false,
+      "path": "/home/nic/identity-vault/routes/profiles.js",
+      "relative_path": "routes/profiles.js",
+      "sha256_16": "904ae253504e8366",
+      "size": 8255
+    },
+    {
+      "classification": "profile_or_identity_candidate",
+      "json_attempted": true,
+      "json_ok": true,
+      "path": "/home/nic/identity-vault/service_contracts/identity_vault_readonly_service_contract.draft.json",
+      "relative_path": "service_contracts/identity_vault_readonly_service_contract.draft.json",
+      "sha256_16": "2e1573ae148f68ea",
+      "size": 1922,
+      "top_level_keys": [
+        "activation_rule",
+        "allowed_reads",
+        "allowed_writes",
+        "audit_requirement",
+        "canonical_database_path",
+        "contract_name",
+        "controlled_by",
+        "created_at_utc",
+        "created_by_patch",
+        "forbidden_reads",
+        "forbidden_writes",
+        "future_adapter_rules",
+        "root",
+        "service",
+        "service_role",
+        "status",
+        "version"
+      ]
+    },
+    {
+      "classification": "user_profile_or_template_candidate",
+      "json_attempted": false,
+      "path": "/home/nic/identity-vault/User_Manual.md",
+      "relative_path": "User_Manual.md",
+      "sha256_16": "aef5da956133202b",
+      "size": 27020
+    },
+    {
+      "classification": "user_profile_or_template_candidate",
+      "error": "JSONDecodeError: Expecting value: line 6 column 5 (char 96)",
+      "json_attempted": true,
+      "json_ok": false,
+      "path": "/home/nic/identity-vault/templates/user-template.json",
+      "relative_path": "templates/user-template.json",
+      "sha256_16": "97aeb120737d7c2e",
+      "size": 1662
+    },
+    {
+      "classification": "user_profile_or_template_candidate",
+      "json_attempted": false,
+      "path": "/home/nic/identity-vault/tests/db.canonical.test.js",
+      "relative_path": "tests/db.canonical.test.js",
+      "sha256_16": "803e6633125327dc",
+      "size": 1134
+    }
+  ],
+  "safety": {
+    "agent_identity_activation_performed": false,
+    "canonical_db_sha_unchanged": true,
+    "database_write_performed": false,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "legacy_db_sha_unchanged": true,
+    "profiles_created": false
+  },
+  "timestamp": "20260523_205321_UTC",
+  "verdict": "FAIL"
+}

@@ -1,0 +1,26 @@
+{
+  "allowed": false,
+  "execution_performed": false,
+  "hidden_chain_of_thought_stored": false,
+  "mode": "READ_ONLY_REQUEST_RECEIPTS_ONLY",
+  "next_step": "If allowed, Nic or a future gateway execution patch can decide whether to run the equivalent Forge command explicitly.",
+  "project_files_changed": false,
+  "raw_request": "patch-apply",
+  "reasons": [
+    "tool is explicitly forbidden in Patch 76 gateway",
+    "tool is not in the Patch 76 read-only gateway allowlist"
+  ],
+  "receipt_id": "llm_tool_request_2026-05-14_194137_737eb8f2dc742d1e",
+  "receipt_path": "/home/nic/forge/memory/llm_memory_v1/tool_requests/llm_tool_request_2026-05-14_194137_737eb8f2dc742d1e.json",
+  "receipt_type": "LLM_TOOL_REQUEST_RECEIPT_V1",
+  "registry_metadata": {},
+  "request_type": "LLM_TOOL_GATEWAY_CHECK_V1",
+  "schema_version": "llm_tool_gateway_v1_patch76",
+  "session_id": "forge_2026_05_14_193652",
+  "status": "REFUSED",
+  "timestamp": "2026-05-14T19:41:37",
+  "tool_args": "",
+  "tool_name": "patch-apply",
+  "user_approved_execution": false,
+  "user_approved_project_write": false
+}

@@ -1,0 +1,370 @@
+{
+  "forge": {
+    "agent_framework_files": {
+      "agents/forge/agent.py": {
+        "path": "/home/nic/forge/agents/forge/agent.py",
+        "present": true,
+        "relative_path": "forge/agents/forge/agent.py"
+      },
+      "agents/forge/context_builder.py": {
+        "path": "/home/nic/forge/agents/forge/context_builder.py",
+        "present": true,
+        "relative_path": "forge/agents/forge/context_builder.py"
+      },
+      "agents/forge/memory.py": {
+        "path": "/home/nic/forge/agents/forge/memory.py",
+        "present": true,
+        "relative_path": "forge/agents/forge/memory.py"
+      },
+      "agents/forge/tools.py": {
+        "path": "/home/nic/forge/agents/forge/tools.py",
+        "present": true,
+        "relative_path": "forge/agents/forge/tools.py"
+      }
+    },
+    "file_summary": {
+      "dir_count_limited": 325,
+      "file_count_limited": 6267,
+      "limit_hit": false,
+      "present": true
+    },
+    "present": true,
+    "root": "/home/nic/forge",
+    "root_files": {
+      "config/tool_registry.json": {
+        "path": "/home/nic/forge/config/tool_registry.json",
+        "present": true,
+        "relative_path": "forge/config/tool_registry.json"
+      },
+      "main.py": {
+        "path": "/home/nic/forge/main.py",
+        "present": true,
+        "relative_path": "forge/main.py"
+      },
+      "requirements.txt": {
+        "path": "/home/nic/forge/requirements.txt",
+        "present": true,
+        "relative_path": "forge/requirements.txt"
+      }
+    },
+    "tool_registry": {
+      "current_trust_level": 5.0,
+      "path": "/home/nic/forge/config/tool_registry.json",
+      "present": true,
+      "read_error": null
+    }
+  },
+  "home": "/home/nic",
+  "identity_vault": {
+    "candidates_checked": [
+      "/home/nic/identity-vault",
+      "/home/nic/identity_vault",
+      "/home/nic/aiweb/identity-vault"
+    ],
+    "instances": [
+      {
+        "database_file_count_limited": 2,
+        "database_files_found": [
+          {
+            "path": "/home/nic/identity-vault/vault.db",
+            "relative_path": "identity-vault/vault.db"
+          },
+          {
+            "path": "/home/nic/identity-vault/data/identity_vault.db",
+            "relative_path": "identity-vault/data/identity_vault.db"
+          }
+        ],
+        "env_files_present": [
+          {
+            "path": "/home/nic/identity-vault/.env",
+            "relative_path": "identity-vault/.env",
+            "warning": "do_not_package_or_share"
+          }
+        ],
+        "file_summary": {
+          "dir_count_limited": 8,
+          "file_count_limited": 44,
+          "limit_hit": false,
+          "present": true
+        },
+        "node_modules_present": true,
+        "package_json": true,
+        "relative_path": "identity-vault",
+        "root": "/home/nic/identity-vault"
+      }
+    ],
+    "present": true
+  },
+  "mode": "READ_ONLY_PROJECT_SCAN_REPORT_WRITE_ONLY",
+  "platform": "Linux-6.14.0-37-generic-x86_64-with-glibc2.39",
+  "python": "3.12.2 | packaged by conda-forge | (main, Feb 16 2024, 20:50:58) [GCC 12.3.0]",
+  "recommendations": [
+    "Do not integrate Gilligan personality yet. Rebuild or locate missing required RMC modules first: phase_state_parser, drift_arbitrator, echo_gate.",
+    "Standalone gilligan_agent exists. Do not delete yet. Freeze/copy it first, then retire after Forge-integrated path passes tests.",
+    "Identity Vault has .env-style files. Do not include them in future patch bundles; rotate secrets if any archive was shared outside your local machine.",
+    "Identity Vault has node_modules. Do not package node_modules in future patch bundles.",
+    "Identity Vault appears to have multiple DB files. Normalize to one canonical DB path before live integration.",
+    "Keep first integration read-only: status/report commands before move/copy/delete/apply commands."
+  ],
+  "report_type": "AIWEB_BOOTSTRAP_BOUNDARY_SCAN_V1_PATCH206",
+  "rmc": {
+    "locations": {
+      "aiweb_runtime_wrappers": {
+        "path": "/home/nic/aiweb/runtime_wrappers",
+        "present": true
+      },
+      "forge_rmc_shared": {
+        "path": "/home/nic/forge/rmc_shared",
+        "present": false
+      }
+    },
+    "modules": {
+      "ancestral_memory": {
+        "claude_status": "expected_working",
+        "hits": [
+          {
+            "file_summary": {
+              "dir_count_limited": 0,
+              "file_count_limited": 2,
+              "limit_hit": false,
+              "present": true
+            },
+            "is_dir": true,
+            "is_file": false,
+            "location": "aiweb_runtime_wrappers",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory",
+            "relative_path": "aiweb/runtime_wrappers/ancestral_memory"
+          }
+        ],
+        "note": "S19AF - expected working module",
+        "present": true
+      },
+      "drift_arbitrator": {
+        "claude_status": "reported_missing_required",
+        "hits": [],
+        "note": "S19AG - required for drift arbitration",
+        "present": false
+      },
+      "echo_gate": {
+        "claude_status": "reported_missing_required",
+        "hits": [],
+        "note": "S19AJ - required for echo validation",
+        "present": false
+      },
+      "manifest_compiler": {
+        "claude_status": "expected_working",
+        "hits": [
+          {
+            "file_summary": {
+              "dir_count_limited": 0,
+              "file_count_limited": 2,
+              "limit_hit": false,
+              "present": true
+            },
+            "is_dir": true,
+            "is_file": false,
+            "location": "aiweb_runtime_wrappers",
+            "path": "/home/nic/aiweb/runtime_wrappers/manifest_compiler",
+            "relative_path": "aiweb/runtime_wrappers/manifest_compiler"
+          }
+        ],
+        "note": "S19AH - expected working module",
+        "present": true
+      },
+      "output_renderer": {
+        "claude_status": "expected_working",
+        "hits": [
+          {
+            "file_summary": {
+              "dir_count_limited": 0,
+              "file_count_limited": 2,
+              "limit_hit": false,
+              "present": true
+            },
+            "is_dir": true,
+            "is_file": false,
+            "location": "aiweb_runtime_wrappers",
+            "path": "/home/nic/aiweb/runtime_wrappers/output_renderer",
+            "relative_path": "aiweb/runtime_wrappers/output_renderer"
+          }
+        ],
+        "note": "S19AI - expected working module",
+        "present": true
+      },
+      "phase_state_parser": {
+        "claude_status": "reported_missing_required",
+        "hits": [],
+        "note": "S19AE - required for phase parsing",
+        "present": false
+      },
+      "rmc_orchestrator": {
+        "claude_status": "expected_working",
+        "hits": [
+          {
+            "file_summary": {
+              "dir_count_limited": 0,
+              "file_count_limited": 2,
+              "limit_hit": false,
+              "present": true
+            },
+            "is_dir": true,
+            "is_file": false,
+            "location": "aiweb_runtime_wrappers",
+            "path": "/home/nic/aiweb/runtime_wrappers/rmc_orchestrator",
+            "relative_path": "aiweb/runtime_wrappers/rmc_orchestrator"
+          }
+        ],
+        "note": "S19AK - expected working module",
+        "present": true
+      }
+    },
+    "summary": {
+      "expected_count": 7,
+      "missing": [
+        "phase_state_parser",
+        "drift_arbitrator",
+        "echo_gate"
+      ],
+      "missing_count": 3,
+      "missing_required_from_claude": [
+        "phase_state_parser",
+        "drift_arbitrator",
+        "echo_gate"
+      ],
+      "present": [
+        "ancestral_memory",
+        "manifest_compiler",
+        "output_renderer",
+        "rmc_orchestrator"
+      ],
+      "present_count": 4
+    }
+  },
+  "roots": {
+    "aiweb": {
+      "candidates_checked": [
+        "/home/nic/aiweb"
+      ],
+      "hits": [
+        {
+          "is_dir": true,
+          "is_file": false,
+          "path": "/home/nic/aiweb",
+          "relative_path": "aiweb"
+        }
+      ],
+      "present": true
+    },
+    "echoforge": {
+      "candidates_checked": [
+        "/home/nic/echoforge",
+        "/home/nic/EchoForge",
+        "/home/nic/aiweb/echoforge",
+        "/home/nic/aiweb/projects/echoforge"
+      ],
+      "hits": [],
+      "present": false
+    },
+    "forge": {
+      "candidates_checked": [
+        "/home/nic/forge"
+      ],
+      "hits": [
+        {
+          "is_dir": true,
+          "is_file": false,
+          "path": "/home/nic/forge",
+          "relative_path": "forge"
+        }
+      ],
+      "present": true
+    },
+    "identity_vault": {
+      "candidates_checked": [
+        "/home/nic/identity-vault",
+        "/home/nic/identity_vault",
+        "/home/nic/aiweb/identity-vault"
+      ],
+      "hits": [
+        {
+          "is_dir": true,
+          "is_file": false,
+          "path": "/home/nic/identity-vault",
+          "relative_path": "identity-vault"
+        }
+      ],
+      "present": true
+    },
+    "protoforge2": {
+      "candidates_checked": [
+        "/home/nic/protoforge2",
+        "/home/nic/ProtoForge2",
+        "/home/nic/aiweb/protoforge2",
+        "/home/nic/aiweb/projects/protoforge2"
+      ],
+      "hits": [],
+      "present": false
+    }
+  },
+  "standalone_gilligan_agent": {
+    "hits": [
+      {
+        "file_summary": {
+          "dir_count_limited": 0,
+          "file_count_limited": 2,
+          "limit_hit": false,
+          "present": true
+        },
+        "path": "/home/nic/aiweb/runtime_wrappers/gilligan_agent",
+        "present": true,
+        "recommendation": "do_not_delete_until_backed_up_and_integrated; Claude marked standalone architecture as wrong",
+        "relative_path": "aiweb/runtime_wrappers/gilligan_agent"
+      }
+    ],
+    "present": true
+  },
+  "targeted_module_search": {
+    "hits": {
+      "ancestral_memory": [
+        {
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory",
+          "relative_path": "aiweb/runtime_wrappers/ancestral_memory"
+        }
+      ],
+      "drift_arbitrator": [],
+      "echo_gate": [],
+      "gilligan_agent": [
+        {
+          "path": "/home/nic/aiweb/runtime_wrappers/gilligan_agent",
+          "relative_path": "aiweb/runtime_wrappers/gilligan_agent"
+        }
+      ],
+      "manifest_compiler": [
+        {
+          "path": "/home/nic/aiweb/runtime_wrappers/manifest_compiler",
+          "relative_path": "aiweb/runtime_wrappers/manifest_compiler"
+        }
+      ],
+      "output_renderer": [
+        {
+          "path": "/home/nic/aiweb/runtime_wrappers/output_renderer",
+          "relative_path": "aiweb/runtime_wrappers/output_renderer"
+        }
+      ],
+      "phase_state_parser": [],
+      "rmc_orchestrator": [
+        {
+          "path": "/home/nic/aiweb/runtime_wrappers/rmc_orchestrator",
+          "relative_path": "aiweb/runtime_wrappers/rmc_orchestrator"
+        }
+      ]
+    },
+    "searched_roots": [
+      "/home/nic/forge",
+      "/home/nic/aiweb",
+      "/home/nic/identity-vault"
+    ]
+  },
+  "timestamp_utc": "20260523_183110_UTC",
+  "write_scope": "/home/nic/forge/memory/aiweb_bootstrap_boundary_v1"
+}

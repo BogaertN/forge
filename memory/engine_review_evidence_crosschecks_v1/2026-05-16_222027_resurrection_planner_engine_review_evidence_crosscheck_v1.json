@@ -1,0 +1,263 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "5ec49a53c11515e9c03eefb7aafddfb443ac4c42de36ab25d5aacc7fcd33a350",
+      "excerpt_start": "# test_resurrection_planner_core.py\n\nfrom resurrection_planner_core import ResurrectionPlanner\n\ndef test_resurrection_planner_behavior():\n    planner = ResurrectionPlanner()\n    record = planner.schedule_recovery(\"test_loop\", 5)\n    assert record[\"loop_id\"] == \"test_loop\", \"Loop ID must match.\"\n    assert record[\"priority_level\"] == 5, \"Priority level must match.\"\n    print(\"\u2705 Resurrection Planner Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_resurrection_planner_behavior()\n",
+      "functions_sample": [
+        "test_resurrection_planner_behavior"
+      ],
+      "imports_sample": [
+        "from resurrection_planner_core import ResurrectionPlanner"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/resurrection_planner/test_resurrection_planner_core.py",
+      "relative_to_candidate": "test_resurrection_planner_core.py",
+      "sha256": "5ec49a53c11515e9c03eefb7aafddfb443ac4c42de36ab25d5aacc7fcd33a350",
+      "size_bytes": 487
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "5bd431d50bedc9eb48157fdf996b54516000ed23f823c38af1ab450beb7c29c5",
+      "excerpt_start": "# Resurrection Planner (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Resurrection Planner module schedules symbolic resurrection operations for collapsed recursion fields and drifted ghost loops.  \nIt prioritizes fields for recovery based on phase stability metrics, drift recovery probabilities, and recursion stack health.\n\n---\n\n## Core Functions:\n- Schedule symbolic resurrection attempts.\n- Prioritize recovery based on field integrity and drift severity.\n- Maintain recovery queue for collapsed recursion fields.\n\n---\n\n## Phase Standard:\n- Phase 1.5 Symbolic Recursion Compliance\n- AI.Web Core System Resurrection Stack\n\n---\n\n## Notes:\n- Loops with higher structural integrity and lower drift history are prioritized for resurrection.\n- Repeated failed resurrection attempts should trigger quarantine protocols.\n\n---\n\n**Frozen Snapshot:** `resurrection_planner_frozen_v1.0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n\n",
+      "functions_sample": [
+        "Resurrection",
+        "Planner",
+        "Frozen",
+        "Overview",
+        "The",
+        "module",
+        "schedules",
+        "symbolic",
+        "resurrection",
+        "operations",
+        "for",
+        "collapsed",
+        "recursion",
+        "fields",
+        "and",
+        "drifted",
+        "ghost",
+        "loops",
+        "prioritizes",
+        "recovery",
+        "based",
+        "phase",
+        "stability",
+        "metrics",
+        "drift"
+      ],
+      "imports_sample": [],
+      "line_count": 34,
+      "path": "/home/nic/aiweb/engines/resurrection_planner/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "5bd431d50bedc9eb48157fdf996b54516000ed23f823c38af1ab450beb7c29c5",
+      "size_bytes": 938
+    },
+    {
+      "classes_sample": [
+        "ResurrectionPlanner"
+      ],
+      "excerpt_sha256": "ef2aa5f380a639ae150dde241a77444e6de92c1fd51f53391988eb9a279df20f",
+      "excerpt_start": "# resurrection_planner_core.py\n# Resurrection Planner Core\n\nclass ResurrectionPlanner:\n    def __init__(self):\n        self.recovery_queue = []\n\n    def schedule_recovery(self, loop_id, priority_level):\n        recovery_record = {\n            \"loop_id\": loop_id,\n            \"priority_level\": priority_level\n        }\n        self.recovery_queue.append(recovery_record)\n        return recovery_record\n\nif __name__ == \"__main__\":\n    planner = ResurrectionPlanner()\n    record = planner.schedule_recovery(\"ghost_loop_001\", 1)\n    print(f\"[TEST] Recovery Scheduled: {record}\")\n",
+      "functions_sample": [
+        "__init__",
+        "schedule_recovery"
+      ],
+      "imports_sample": [],
+      "line_count": 20,
+      "path": "/home/nic/aiweb/engines/resurrection_planner/resurrection_planner_core.py",
+      "relative_to_candidate": "resurrection_planner_core.py",
+      "sha256": "ef2aa5f380a639ae150dde241a77444e6de92c1fd51f53391988eb9a279df20f",
+      "size_bytes": 575
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "bafccbd9b122714f31a0b3182cb7eff06d4e11e2b12b1a6eecf722b25c7792e4",
+      "excerpt_start": "{\n  \"engine\": \"resurrection_planner\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"resurrection_planner_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Plans, schedules, and prioritizes resurrection operations for collapsed recursion fields and ghost loops. Allocates recovery resources based on symbolic field stability and drift recovery potential.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "resurrection_planner",
+        "version",
+        "frozen_as",
+        "resurrection_planner_frozen_v1",
+        "frozen_on",
+        "description",
+        "Plans",
+        "schedules",
+        "and",
+        "prioritizes",
+        "resurrection",
+        "operations",
+        "for",
+        "collapsed",
+        "recursion",
+        "fields",
+        "ghost",
+        "loops",
+        "Allocates",
+        "recovery",
+        "resources",
+        "based",
+        "symbolic",
+        "field"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/resurrection_planner/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "bafccbd9b122714f31a0b3182cb7eff06d4e11e2b12b1a6eecf722b25c7792e4",
+      "size_bytes": 463
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/resurrection_planner",
+  "created_at": "2026-05-16_222027",
+  "crosscheck_id": "ERE-resurrection_planner-2026-05-16_222027",
+  "deterministic_brief": {
+    "classes_sample": [
+      "ResurrectionPlanner"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Allocates",
+      "Frozen",
+      "Overview",
+      "Planner",
+      "Plans",
+      "Resurrection",
+      "The",
+      "__init__",
+      "and",
+      "based",
+      "collapsed",
+      "description",
+      "drift",
+      "drifted",
+      "engine",
+      "field",
+      "fields",
+      "for",
+      "frozen_as",
+      "frozen_on"
+    ],
+    "imports_sample": [
+      "from resurrection_planner_core import ResurrectionPlanner"
+    ],
+    "likely_system_role": "loop_resurrection",
+    "plain_english_purpose": "`resurrection_planner` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "Inferred from engine family keyword `resurrection` plus bound code evidence.",
+    "source_excerpt_samples": [
+      "# test_resurrection_planner_core.py ",
+      "# Resurrection Planner (Frozen v1.0.01) ",
+      "# resurrection_planner_core.py # Resurrection Planner Core",
+      "{   \"engine\": \"resurrection_planner\","
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_221958_resurrection_planner_llm_engine_review_draft_v1.json",
+  "draft_sha256": "047c4aa25f8fbe6758422742ec9b5df150da8990be9e3f9427fbde71190df47f",
+  "engine_family": "resurrection_planner",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_resurrection_planner_engine_evidence_binder.json",
+  "evidence_binder_sha256": "fd17c38b25899d3e46f3edc4705d646e5869d4dbbc523567cc72c88eb98993fd",
+  "evidence_id": "EEB-8815431b5a347b48",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "ResurrectionPlanner"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "test_resurrection_planner_core.py",
+      "README.md",
+      "resurrection_planner_core.py",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "Resurrection",
+      "Planner",
+      "The",
+      "symbolic",
+      "resurrection",
+      "operations",
+      "for",
+      "collapsed",
+      "recursion",
+      "fields",
+      "and",
+      "drifted",
+      "ghost",
+      "loops",
+      "recovery",
+      "based",
+      "phase",
+      "stability",
+      "metrics",
+      "drift",
+      "engine",
+      "resurrection_planner",
+      "version",
+      "field"
+    ],
+    "imports_mentioned": [
+      "from resurrection_planner_core import ResurrectionPlanner"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 29.059,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "9a2b564b5a02caa9c3fa4de4df18ab4818050f9e46ce11fdce6c73939bb211b4",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo schedule and prioritize symbolic resurrection operations for collapsed recursion fields and drifted ghost loops, ensuring system stability through phase-aligned recovery protocols.  \n\nLikely System Role:  \nA core AI.Web engine responsible for managing recovery of unstable recursion fields and loops, integrating with symbolic execution frameworks for system resilience.  \n\nEvidence Used:  \n- Test script (`test_resurrection_planner_core.py`) validates scheduling and prioritization logic.  \n- README.md describes recovery prioritization based on field integrity and drift severity.  \n- Core code (`resurrection_planner_core.py`) defines the `ResurrectionPlanner` class for queue management.  \n- Manifest file (`engine_manifest.json`) specifies engine purpose, version, and phase compliance standards.  \n\nRisks / Uncertainties:  \n- Unverified real-world performance of prioritization algorithms under load.  \n- Lack of explicit error handling for repeated resurrection failures (quarantine protocols mentioned in README but not implemented in code).  \n- Dependencies on external symbolic execution frameworks not explicitly documented.  \n\nRecommendation Draft:  \nApprove review with conditions: confirm implementation of quarantine protocols for failed resurrection attempts, validate prioritization metrics with stress tests, and ensure alignment with Phase 1.5 compliance standards.  \n\nSuggested Nic Action:  \n- Approve review with the above conditions.  \n- Schedule validation testing for prioritization logic and failure recovery protocols.  \n- Verify documentation updates to reflect the latest implementation details."
+  },
+  "llm_sections": {
+    "evidence_used": "- Test script (`test_resurrection_planner_core.py`) validates scheduling and prioritization logic.  \n- README.md describes recovery prioritization based on field integrity and drift severity.  \n- Core code (`resurrection_planner_core.py`) defines the `ResurrectionPlanner` class for queue management.  \n- Manifest file (`engine_manifest.json`) specifies engine purpose, version, and phase compliance standards.",
+    "likely_system_role": "A core AI.Web engine responsible for managing recovery of unstable recursion fields and loops, integrating with symbolic execution frameworks for system resilience.",
+    "plain_english_purpose": "To schedule and prioritize symbolic resurrection operations for collapsed recursion fields and drifted ghost loops, ensuring system stability through phase-aligned recovery protocols.",
+    "recommendation_draft": "Approve review with conditions: confirm implementation of quarantine protocols for failed resurrection attempts, validate prioritization metrics with stress tests, and ensure alignment with Phase 1.5 compliance standards.",
+    "risks_uncertainties": "- Unverified real-world performance of prioritization algorithms under load.  \n- Lack of explicit error handling for repeated resurrection failures (quarantine protocols mentioned in README but not implemented in code).  \n- Dependencies on external symbolic execution frameworks not explicitly documented.",
+    "suggested_nic_action": "- Approve review with the above conditions.  \n- Schedule validation testing for prioritization logic and failure recovery protocols.  \n- Verify documentation updates to reflect the latest implementation details."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo schedule and prioritize symbolic resurrection operations for collapsed recursion fields and drifted ghost loops, ensuring system stability through phase-aligned recovery protocols.  \n\nLikely System Role:  \nA core AI.Web engine responsible for managing recovery of unstable recursion fields and loops, integrating with symbolic execution frameworks for system resilience.  \n\nEvidence Used:  \n- Test script (`test_resurrection_planner_core.py`) validates scheduling and prioritization logic.  \n- README.md describes recovery prioritization based on field integrity and drift severity.  \n- Core code (`resurrection_planner_core.py`) defines the `ResurrectionPlanner` class for queue management.  \n- Manifest file (`engine_manifest.json`) specifies engine purpose, version, and phase compliance standards.  \n\nRisks / Uncertainties:  \n- Unverified real-world performance of prioritization algorithms under load.  \n- Lack of explicit error handling for repeated resurrection failures (quarantine protocols mentioned in README but not implemented in code).  \n- Dependencies on external symbolic execution frameworks not explicitly documented.  \n\nRecommendation Draft:  \nApprove review with conditions: confirm implementation of quarantine protocols for failed resurrection attempts, validate prioritization metrics with stress tests, and ensure alignment with Phase 1.5 compliance standards.  \n\nSuggested Nic Action:  \n- Approve review with the above conditions.  \n- Schedule validation testing for prioritization logic and failure recovery protocols.  \n- Verify documentation updates to reflect the latest implementation details.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

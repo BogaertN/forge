@@ -1,0 +1,53 @@
+{
+  "boundary": {
+    "approves_user_output": false,
+    "authorizes_public_release": false,
+    "calls_llm": false,
+    "creates_http_routes": false,
+    "mints_ct": false,
+    "modifies_ui": false,
+    "requires_later_approval_gate": true,
+    "writes_chroma": false,
+    "writes_contribution_economy": false,
+    "writes_identity_vault": false,
+    "writes_ledgers": false,
+    "writes_mea_memory": false,
+    "writes_rmc_output_memory": false
+  },
+  "build_id": "RMC-MEA-ECHO-VALIDATOR-HARDENING-BUILD-010",
+  "canonical_valid_preview_modes": [
+    "explanation",
+    "verification_result",
+    "uncertain_result"
+  ],
+  "installed_files": [
+    "forge/rmc_engine_v1/renderer/__init__.py",
+    "forge/rmc_engine_v1/renderer/echo_validator.py",
+    "forge/scripts/test_echo_validator_hardening_build010.py",
+    "forge/scripts/echo_validator_hardening_build010_verify.py",
+    "forge/scripts/README_echo_validator_hardening_build010.md",
+    "forge/scripts/RMC_MEA_ECHO_VALIDATOR_BUILD010_DELIVERY_MANIFEST.json",
+    "forge/scripts/SHA256SUMS_echo_validator_hardening_build010.txt"
+  ],
+  "modified_existing_files": [
+    "forge/rmc_engine_v1/renderer/__init__.py"
+  ],
+  "new_files": [
+    "forge/rmc_engine_v1/renderer/echo_validator.py",
+    "forge/scripts/test_echo_validator_hardening_build010.py",
+    "forge/scripts/echo_validator_hardening_build010_verify.py",
+    "forge/scripts/README_echo_validator_hardening_build010.md",
+    "forge/scripts/RMC_MEA_ECHO_VALIDATOR_BUILD010_DELIVERY_MANIFEST.json",
+    "forge/scripts/SHA256SUMS_echo_validator_hardening_build010.txt"
+  ],
+  "overlay_root": "/home/nic",
+  "purpose": "Read-only meaning-preservation validation of Build 009 deterministic preview text against the exact Build 008 MEA render-admission packet.",
+  "schema_version": "rmc_mea_echo_validator_delivery_manifest_v1_build010",
+  "template_repair_reason": "material_proof_debt_not_preserved_in_contract_and_rendered_text",
+  "template_repair_required_modes": [
+    "decision",
+    "warning",
+    "next_step",
+    "refusal"
+  ]
+}

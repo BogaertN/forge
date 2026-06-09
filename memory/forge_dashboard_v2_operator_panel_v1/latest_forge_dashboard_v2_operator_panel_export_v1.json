@@ -1,0 +1,22 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "live_restore_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "server_started": false,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-19T18:38:32",
+  "current_phase": "S18A \u2014 Dashboard v2 / Operator Control Panel",
+  "next_patch": "Patch 155 \u2014 AI.Web Runtime Build Readiness Map",
+  "panel_count": 7,
+  "panel_status": "FORGE_DASHBOARD_V2_OPERATOR_PANEL_READY",
+  "recommended_next_patch": "Patch 155 \u2014 AI.Web Runtime Build Readiness Map",
+  "report_type": "FORGE_DASHBOARD_V2_OPERATOR_PANEL_EXPORT",
+  "schema_version": "forge_dashboard_v2_operator_panel_v1_patch154",
+  "source_panel_sha256": "9db13704ea8f34a3137ea2fa3ab4f219d09b702bb644e4a70f4eb4ea8ed06e1b",
+  "status": "FORGE_DASHBOARD_V2_OPERATOR_PANEL_EXPORT_READY"
+}

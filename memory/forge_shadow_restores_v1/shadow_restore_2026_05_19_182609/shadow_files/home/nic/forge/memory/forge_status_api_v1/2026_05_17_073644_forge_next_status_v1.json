@@ -1,0 +1,17 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T07:36:44",
+  "next_commands": [
+    "forge-status-api-export",
+    "Install Patch 128 when ready"
+  ],
+  "next_phase": "DASHBOARD_READ_ONLY_VIEW",
+  "plain_english": "Forge status API snapshot exists. The next safe move is the read-only dashboard view: gauges before levers.",
+  "recommended_next_patch": "Patch 128 \u2014 Dashboard Read-Only View",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "schema_version": "forge_next_status_v1_patch127",
+  "status": "NEXT_PATCH_REQUIRED"
+}

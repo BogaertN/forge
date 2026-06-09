@@ -1,0 +1,100 @@
+# GENERIC_SANDBOX_DEPENDENCY_PLAN_V1
+
+```json
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "sandbox_memory_write_only": true,
+    "shell_false": true
+  },
+  "blockers": [],
+  "confirmation_token": "CONFIRM_RUN_SANDBOX_DEPENDENCY_RESOLUTION",
+  "created_at": "2026-05-17T11:12:52",
+  "dependency_candidates": [
+    {
+      "kind": "module_file",
+      "leaf_module": "core_breather",
+      "path": "/home/nic/aiweb/engines/core_stack_breather/core_breather.py",
+      "reason": "bounded_rglob_top_file_match",
+      "requested_module": "core_breather",
+      "top_level_module": "core_breather"
+    },
+    {
+      "kind": "module_file",
+      "leaf_module": "core_breather",
+      "path": "/home/nic/aiweb/engines/core_stack_breather_frozen_v1-0.01/core_breather.py",
+      "reason": "bounded_rglob_top_file_match",
+      "requested_module": "core_breather",
+      "top_level_module": "core_breather"
+    },
+    {
+      "kind": "module_file",
+      "leaf_module": "core_breather",
+      "path": "/home/nic/aiweb/aiweb/runtime_wrappers/stack_breather_phase2/core_breather.py",
+      "reason": "bounded_rglob_top_file_match",
+      "requested_module": "core_breather",
+      "top_level_module": "core_breather"
+    },
+    {
+      "kind": "module_file",
+      "leaf_module": "core_breather",
+      "path": "/home/nic/aiweb/aiweb/runtime_wrappers/stack_breather_phase2_frozen_v1-0.01/core_breather.py",
+      "reason": "bounded_rglob_top_file_match",
+      "requested_module": "core_breather",
+      "top_level_module": "core_breather"
+    },
+    {
+      "kind": "module_file",
+      "leaf_module": "core_breather",
+      "path": "/home/nic/aiweb/aiweb/engines/core_stack_breather/core_breather.py",
+      "reason": "bounded_rglob_top_file_match",
+      "requested_module": "core_breather",
+      "top_level_module": "core_breather"
+    },
+    {
+      "kind": "module_file",
+      "leaf_module": "core_breather",
+      "path": "/home/nic/aiweb/aiweb/engines/core_stack_breather_frozen_v1-0.01/core_breather.py",
+      "reason": "bounded_rglob_top_file_match",
+      "requested_module": "core_breather",
+      "top_level_module": "core_breather"
+    },
+    {
+      "kind": "module_file",
+      "leaf_module": "core_breather",
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/core_breather.py",
+      "reason": "bounded_rglob_top_file_match",
+      "requested_module": "core_breather",
+      "top_level_module": "core_breather"
+    },
+    {
+      "kind": "module_file",
+      "leaf_module": "core_breather",
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2_frozen_v1-0.01/core_breather.py",
+      "reason": "bounded_rglob_top_file_match",
+      "requested_module": "core_breather",
+      "top_level_module": "core_breather"
+    }
+  ],
+  "missing_module": "core_breather",
+  "report_type": "GENERIC_SANDBOX_DEPENDENCY_PLAN_V1",
+  "schema_version": "generic_sandbox_dependency_plan_v1_patch138",
+  "selected_dependency": {
+    "kind": "module_file",
+    "leaf_module": "core_breather",
+    "path": "/home/nic/aiweb/engines/core_stack_breather/core_breather.py",
+    "reason": "bounded_rglob_top_file_match",
+    "requested_module": "core_breather",
+    "top_level_module": "core_breather"
+  },
+  "source_sandbox_package_parent": "/home/nic/forge/memory/generic_repair_sandboxes_v1/sandbox_2026_05_17_105442_stack_linker_breather/sandbox_packages",
+  "source_sandbox_root": "/home/nic/forge/memory/generic_repair_sandboxes_v1/sandbox_2026_05_17_105442_stack_linker_breather",
+  "source_sandbox_run_status": "GENERIC_REPAIR_SANDBOX_TESTS_ISSUES",
+  "status": "GENERIC_SANDBOX_DEPENDENCY_PLAN_READY",
+  "strategy": "copy_selected_dependency_into_new_forge_owned_sandbox_packages_then_rerun_compile_test_and_call_llm",
+  "target": "stack_linker_breather",
+  "top_level_module": "core_breather"
+}
+```

@@ -1,0 +1,38 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "shell_execution_authority": false
+  },
+  "blocked_items": [],
+  "created_at": "2026-05-19T17:11:16",
+  "current_phase": "S11 \u2014 Build phase gate checker",
+  "gate_fail_count": 0,
+  "gate_pass_count": 8,
+  "gate_status": "FORGE_BUILD_PHASE_GATE_READY",
+  "gate_warn_count": 0,
+  "next_patch": "Patch 147 \u2014 Dashboard Roadmap Panel",
+  "report_type": "FORGE_BUILD_PHASE_GATE_EXPORT_V1",
+  "schema_version": "forge_build_phase_gate_v1_patch146",
+  "status": "FORGE_BUILD_PHASE_GATE_EXPORT_READY",
+  "verified_state": {
+    "canonical_excluded": 26,
+    "canonical_included": 54,
+    "dashboard_next_patch": "Patch 147 \u2014 Dashboard Roadmap Panel",
+    "deferred_queue_status": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY",
+    "deferred_queue_total": 26,
+    "expected_commands": 526,
+    "latest_test_fail": 0,
+    "latest_test_pass": 67,
+    "latest_test_status": "CANONICAL_TEST_RUN_COMPLETED_ALL_PASS",
+    "patch_impact_high_risk": 0,
+    "patch_impact_status": "PATCH_IMPACT_MAP_READY",
+    "patch_impact_test_issues": 0,
+    "status_api_next_patch": "Patch 147 \u2014 Dashboard Roadmap Panel",
+    "tools": 450,
+    "trust_level": 5.0
+  }
+}

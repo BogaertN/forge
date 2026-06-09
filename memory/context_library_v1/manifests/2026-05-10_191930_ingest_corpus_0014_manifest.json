@@ -1,0 +1,13 @@
+{
+  "collection": "aiweb_context_chunks_v1",
+  "total_chunks": 2350,
+  "collection_total_chunks": 2350,
+  "document_chunk_count": 182,
+  "ingested_corpus_ids": [
+    "corpus_0014"
+  ],
+  "last_updated": "2026-05-10T19:19:30",
+  "receipts": [
+    "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191930_ingest_corpus_0014.json"
+  ]
+}

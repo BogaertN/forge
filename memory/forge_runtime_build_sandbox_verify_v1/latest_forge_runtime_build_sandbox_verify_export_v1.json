@@ -1,0 +1,217 @@
+{
+  "candidate_file_plan": {
+    "active_patch": "Patch 159 \u2014 Runtime Build Sandbox Verification / Candidate File Plan",
+    "authority": {
+      "candidate_file_write_authority": false,
+      "engine_file_write_authority": false,
+      "forge_owned_report_write_authority": true,
+      "project_file_write_authority": false,
+      "runtime_file_write_authority": false
+    },
+    "blockers": [],
+    "candidate_file_count": 4,
+    "candidate_files": [
+      {
+        "created_by_patch_159": false,
+        "path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/README.md",
+        "planned_action": "create_runtime_module_readme",
+        "purpose": "human-readable module purpose, source evidence, and audit warning"
+      },
+      {
+        "created_by_patch_159": false,
+        "path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/runtime_manifest.json",
+        "planned_action": "create_runtime_manifest",
+        "purpose": "machine-readable candidate metadata, hashes, source authority, rollback hooks"
+      },
+      {
+        "created_by_patch_159": false,
+        "path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py",
+        "planned_action": "create_runtime_adapter_candidate",
+        "purpose": "thin runtime wrapper candidate; sandbox-only in later patch"
+      },
+      {
+        "created_by_patch_159": false,
+        "path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py",
+        "planned_action": "create_manifest_validation_test_candidate",
+        "purpose": "future test candidate proving manifest parse/path safety"
+      }
+    ],
+    "created_at": "2026-05-19T20:16:24",
+    "created_by_patch_159_count": 0,
+    "current_phase": "S19E \u2014 Runtime Build Sandbox Verification / Candidate File Plan",
+    "live_build_ready": false,
+    "next_patch": "Patch 160 \u2014 Runtime Candidate File Draft / Sandbox Candidate",
+    "planning_ready": true,
+    "recommended_next_patch": "Patch 160 \u2014 Runtime Candidate File Draft / Sandbox Candidate",
+    "report_type": "FORGE_RUNTIME_BUILD_CANDIDATE_FILE_PLAN_V1",
+    "schema_version": "forge_runtime_build_sandbox_verify_v1_patch159",
+    "selected_candidate": {
+      "canonical_path": "aiweb/engines/failsafe_manager",
+      "canonical_status": "CANONICAL_INCLUDED",
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "dependency_kind": "canonical_runtime_module",
+      "eligible_for_planning": true,
+      "engine": "failsafe_manager",
+      "live_build_ready": false,
+      "live_write_authority": false,
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "relationship_count": 0,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "risk_level": "LOW",
+      "risk_score": 25,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "runtime_domain": "GOVERNANCE_AND_SAFETY",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+      "test_status": "PASS"
+    },
+    "status": "FORGE_RUNTIME_BUILD_CANDIDATE_FILE_PLAN_READY_PLANNING_ONLY",
+    "warnings": [
+      "V07 Source authority finality recorded: CANDIDATE_OR_UNKNOWN"
+    ]
+  },
+  "exported_at": "2026-05-19T20:16:33",
+  "next_patch": "Patch 160 \u2014 Runtime Candidate File Draft / Sandbox Candidate",
+  "report_type": "FORGE_RUNTIME_BUILD_SANDBOX_VERIFICATION_EXPORT_V1",
+  "schema_version": "forge_runtime_build_sandbox_verify_v1_patch159",
+  "verification": {
+    "active_patch": "Patch 159 \u2014 Runtime Build Sandbox Verification / Candidate File Plan",
+    "authority": {
+      "engine_file_write_authority": false,
+      "forge_owned_report_write_authority": true,
+      "patch_apply_authority": false,
+      "project_file_write_authority": false,
+      "runtime_file_write_authority": false
+    },
+    "blockers": [],
+    "created_at": "2026-05-19T20:15:57",
+    "current_phase": "S19E \u2014 Runtime Build Sandbox Verification / Candidate File Plan",
+    "dry_run_sandbox_dir": "/home/nic/forge/memory/forge_runtime_build_sandboxes_v1/runtime_sandbox_failsafe_manager_2026_05_19_195344",
+    "dry_run_status": "FORGE_RUNTIME_BUILD_SANDBOX_DRY_RUN_READY",
+    "gates": [
+      {
+        "detail": "FORGE_RUNTIME_BUILD_SANDBOX_PLAN_READY",
+        "id": "V01",
+        "name": "Runtime sandbox plan exists",
+        "status": "PASS"
+      },
+      {
+        "detail": "FORGE_RUNTIME_BUILD_SANDBOX_DRY_RUN_READY",
+        "id": "V02",
+        "name": "Runtime sandbox dry-run exists",
+        "status": "PASS"
+      },
+      {
+        "detail": "failsafe_manager",
+        "id": "V03",
+        "name": "Selected candidate preserved",
+        "status": "PASS"
+      },
+      {
+        "detail": "project=0 engine=0 runtime=0",
+        "id": "V04",
+        "name": "Dry-run performed no project/engine/runtime writes",
+        "status": "PASS"
+      },
+      {
+        "detail": "expected=2 actual=2",
+        "id": "V05",
+        "name": "Dry-run file count matches receipt",
+        "status": "PASS"
+      },
+      {
+        "detail": "verified=2/2",
+        "id": "V06",
+        "name": "Dry-run file hashes verify from disk",
+        "status": "PASS"
+      },
+      {
+        "detail": "CANDIDATE_OR_UNKNOWN",
+        "id": "V07",
+        "name": "Source authority finality recorded",
+        "status": "WARN"
+      },
+      {
+        "detail": "live_write_authority=False live_build_ready=False",
+        "id": "V08",
+        "name": "Live build authority remains locked",
+        "status": "PASS"
+      }
+    ],
+    "live_build_ready": false,
+    "next_patch": "Patch 160 \u2014 Runtime Candidate File Draft / Sandbox Candidate",
+    "planning_ready": true,
+    "recommended_next_patch": "Patch 160 \u2014 Runtime Candidate File Draft / Sandbox Candidate",
+    "report_type": "FORGE_RUNTIME_BUILD_SANDBOX_VERIFICATION_V1",
+    "sandbox_plan_status": "FORGE_RUNTIME_BUILD_SANDBOX_PLAN_READY",
+    "schema_version": "forge_runtime_build_sandbox_verify_v1_patch159",
+    "selected_candidate": {
+      "canonical_path": "aiweb/engines/failsafe_manager",
+      "canonical_status": "CANONICAL_INCLUDED",
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "dependency_kind": "canonical_runtime_module",
+      "eligible_for_planning": true,
+      "engine": "failsafe_manager",
+      "live_build_ready": false,
+      "live_write_authority": false,
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "relationship_count": 0,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "risk_level": "LOW",
+      "risk_score": 25,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "runtime_domain": "GOVERNANCE_AND_SAFETY",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+      "test_status": "PASS"
+    },
+    "status": "FORGE_RUNTIME_BUILD_SANDBOX_VERIFICATION_READY_PLANNING_ONLY",
+    "verified_file_count": 2,
+    "verified_file_hash_matches": 2,
+    "verified_files": [
+      {
+        "actual_sha256": "4cd1445046b504c9a14982884bc5d258ff2c6e4746c55099c6666ad4a02103e0",
+        "exists": true,
+        "expected_sha256": "4cd1445046b504c9a14982884bc5d258ff2c6e4746c55099c6666ad4a02103e0",
+        "hash_match": true,
+        "name": "README.md",
+        "path": "/home/nic/forge/memory/forge_runtime_build_sandboxes_v1/runtime_sandbox_failsafe_manager_2026_05_19_195344/README.md",
+        "size_actual": 242,
+        "size_expected": 242
+      },
+      {
+        "actual_sha256": "94d6d483a4757b1901e367004a8a392ef1409a8d8cf9619bcd37defcb0da8b3c",
+        "exists": true,
+        "expected_sha256": "94d6d483a4757b1901e367004a8a392ef1409a8d8cf9619bcd37defcb0da8b3c",
+        "hash_match": true,
+        "name": "candidate_plan.json",
+        "path": "/home/nic/forge/memory/forge_runtime_build_sandboxes_v1/runtime_sandbox_failsafe_manager_2026_05_19_195344/candidate_plan.json",
+        "size_actual": 2027,
+        "size_expected": 2027
+      }
+    ],
+    "warnings": [
+      "V07 Source authority finality recorded: CANDIDATE_OR_UNKNOWN"
+    ]
+  }
+}

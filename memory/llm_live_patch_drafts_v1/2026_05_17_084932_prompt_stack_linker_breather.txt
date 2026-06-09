@@ -1,0 +1,169 @@
+You are the local Forge LLM draft layer. Return structured JSON only. Do not claim file edits. Do not invent evidence. Use only this packet. Draft a repair plan for the Python import/package test failure. Keys: diagnosis, minimal_change_hypothesis, files_to_inspect, files_that_might_change, tests_to_rerun, risks, uncertainties, evidence_used, do_not_do.
+
+EVIDENCE_PACKET:
+{
+  "authority": {
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "forge_self_write_authority": false,
+    "ledger_mutation_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "proposal_only": true,
+    "requires_human_approval": true,
+    "shell_execution_authority": false
+  },
+  "goal": "Draft a source-grounded repair proposal for stack_linker_breather without modifying files.",
+  "problem_statement": {
+    "cautions": [],
+    "known_failures": [
+      {
+        "status": "FAIL",
+        "stderr_tail": "Traceback (most recent call last):\n  File \"/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py\", line 3, in <module>\n    from stack_linker_breather.stack_linker_core import unified_breathe_cycle\nModuleNotFoundError: No module named 'stack_linker_breather'\n",
+        "test_path": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+      }
+    ],
+    "required_human_checks": [
+      "compare_multiple_active_variants"
+    ],
+    "risk_reasons": [
+      "latest safe-test report has issues",
+      "multiple relationship neighbors",
+      "required human checks present"
+    ]
+  },
+  "rollback_plan": {
+    "needs_snapshot_or_backup": true,
+    "required": true,
+    "rollback_needs": [
+      "snapshot_or_file_backup_before_live_patch",
+      "current_sha_readback_before_apply",
+      "post_write_disk_verification"
+    ]
+  },
+  "runtime_role": {
+    "canonical_path": "aiweb/engines/stack_linker_breather",
+    "engine_base": "stack_linker_breather",
+    "required_source_domains": [
+      "MEMORY_STATE_AND_SPC_AUTHORITY",
+      "FBSC_RPMC_SYMBOLIC_RUNTIME"
+    ],
+    "review_status": "APPROVED",
+    "risk_level": "MEDIUM",
+    "risk_score": 65,
+    "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+    "test_status": "ISSUES"
+  },
+  "source_evidence": {
+    "authority_claimed": false,
+    "candidate_documents": [
+      {
+        "authority_claimed": false,
+        "candidate_only": true,
+        "declared_sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+        "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+        "exists": true,
+        "observed_sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+        "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md"
+      },
+      {
+        "authority_claimed": false,
+        "candidate_only": true,
+        "declared_sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+        "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+        "exists": true,
+        "observed_sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+        "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json"
+      },
+      {
+        "authority_claimed": false,
+        "candidate_only": true,
+        "declared_sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+        "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+        "exists": true,
+        "observed_sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+        "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md"
+      },
+      {
+        "authority_claimed": false,
+        "candidate_only": true,
+        "declared_sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+        "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+        "exists": true,
+        "observed_sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+        "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json"
+      },
+      {
+        "authority_claimed": false,
+        "candidate_only": true,
+        "declared_sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+        "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+        "exists": true,
+        "observed_sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+        "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json"
+      },
+      {
+        "authority_claimed": false,
+        "candidate_only": true,
+        "declared_sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+        "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+        "exists": true,
+        "observed_sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+        "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json"
+      }
+    ],
+    "candidate_only": true,
+    "canonical_lockfile_sha256": "b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab",
+    "impact_map_sha256": "405a07bf3f8842fe5210dbc891dbe7c68b1e604c73268d03728fbc8c1659ed98",
+    "impact_map_status": "PATCH_IMPACT_MAP_READY",
+    "source_map_sha256": "841710e052716d4be4c03c9599f0e4d55b4ac5670ef0075f7c473650748965bd",
+    "source_map_status": "ENGINE_SOURCE_AUTHORITY_RUNTIME_MAP_READY"
+  },
+  "target": "stack_linker_breather",
+  "target_files": {
+    "allowed_root": "/home/nic/aiweb",
+    "forge_memory_write_root": "/home/nic/forge/memory/llm_patch_proposals_v1",
+    "primary_target": {
+      "absolute": "/home/nic/aiweb/engines/stack_linker_breather",
+      "exists": true,
+      "raw": "/home/nic/aiweb/engines/stack_linker_breather",
+      "sha256": null,
+      "under_aiweb": true,
+      "under_forge": false
+    },
+    "related_files": [
+      {
+        "canonical_path": "aiweb/engines/recursive_field_breather",
+        "confidence": "strong",
+        "engine_base": "recursive_field_breather",
+        "reason": "python_import_reference"
+      },
+      {
+        "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+        "confidence": "medium",
+        "engine_base": "protoforge",
+        "reason": "source_text_reference"
+      }
+    ],
+    "test_targets": [
+      {
+        "absolute": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py",
+        "exists": true,
+        "raw": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py",
+        "sha256": "2297b612ec1a6c6edb63a9959dea57d7b22d9d35472f9741bd671b261b0b0951",
+        "under_aiweb": true,
+        "under_forge": false
+      }
+    ]
+  },
+  "test_plan": {
+    "existing_test_status": "ISSUES",
+    "must_rerun_canonical_safe_test_runner": true,
+    "required_safe_tests_before_live_apply": [
+      "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+    ],
+    "test_paths": [
+      "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+    ]
+  }
+}

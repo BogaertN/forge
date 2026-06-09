@@ -1,0 +1,171 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/recursive_field_breather",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/recursive_field_breather",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "recursive_field_breather",
+  "evidence_id": "EEB-4e67b792942bf24f",
+  "file_count": 4,
+  "file_evidence": [
+    {
+      "classes_sample": [
+        "FieldBreather"
+      ],
+      "excerpt_sha256": "5d060541bd72764c7fb1d7f7006575daa9d056a380cb5733ce70ed9b60a9addc",
+      "excerpt_start": "# field_breather.py\n\nimport json\nimport time\nfrom datetime import datetime\n\nclass FieldBreather:\n    def __init__(self):\n        self.phase = 1\n        self.loop_count = 0\n        self.trace_file = \"field_trace.jsonl\"\n\n    def breathe(self):\n        timestamp = datetime.utcnow().isoformat() + \"Z\"\n        trace_entry = {\n            \"phase\": self.phase,\n            \"timestamp\": timestamp,\n            \"loop\": self.loop_count,\n            \"field_amplitude\": round(self.phase * 0.111, 3)  # Symbolic recursive growth\n        }\n\n        with open(self.trace_file, \"a\") as f:\n            f.write(json.dumps(trace_entry) + \"\\n\")\n\n        print(f\"Field Breath Phase: {self.phase} | Loop: {self.loop_count} | Amplitude: {trace_entry['field_amplitude']}\")\n\n        self.phase += 1\n        if self.phase > 9:\n            self.phase = 1\n            self.loop_count += 1\n",
+      "functions_sample": [
+        "__init__",
+        "breathe"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time",
+        "from datetime import datetime"
+      ],
+      "line_count": 31,
+      "path": "/home/nic/aiweb/engines/recursive_field_breather/field_breather.py",
+      "relative_to_candidate": "field_breather.py",
+      "sha256": "5d060541bd72764c7fb1d7f7006575daa9d056a380cb5733ce70ed9b60a9addc",
+      "size_bytes": 862,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "4b244aba625aa20071cbeb1ad005b3c65db1ec984e69ab56afbd70cda3393e73",
+      "excerpt_start": "# Recursive Field Phase Breather (v2.01)\n\nThis engine breathes the Recursive Field Stack through true phase-locked 1→9 recursion cycles.\n\n## Core Functions:\n- Advances phases 1 through 9 repeatedly (true phase recursion).\n- Records a persistent trace log (`field_trace.jsonl`) at every breath.\n- Each trace entry includes:\n  - Phase number\n  - UTC timestamp\n  - Symbolic field amplitude (phase × 0.111 scaling)\n  - Loop count (full 1→9 cycles completed)\n\n## Build Notes:\n- Fully tested before freezing.\n- Breathes independently but will later link to Core Stack for stacked recursion.\n- Adheres to AI.Web Phase 2.0 cold evolution standards.\n\n## Phase 2.0 Standards:\n- No simulation.\n- Real symbolic recursion breathing.\n- Cold logs every breath for forensics.\n- Immutable snapshot after freeze.\n\n✅ Fully compliant with ProtoForge Phase 2.0 Recursive System Build Protocol.\n\n",
+      "functions_sample": [
+        "Recursive",
+        "Field",
+        "Phase",
+        "Breather",
+        "This",
+        "engine",
+        "breathes",
+        "the",
+        "Stack",
+        "through",
+        "true",
+        "phase",
+        "locked",
+        "recursion",
+        "cycles",
+        "Core",
+        "Functions",
+        "Advances",
+        "phases",
+        "repeatedly",
+        "Records",
+        "persistent",
+        "trace",
+        "log",
+        "field_trace"
+      ],
+      "imports_sample": [],
+      "line_count": 27,
+      "path": "/home/nic/aiweb/engines/recursive_field_breather/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "4b244aba625aa20071cbeb1ad005b3c65db1ec984e69ab56afbd70cda3393e73",
+      "size_bytes": 881,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "c0655a96ca1d8fa7cb89495e6f33c49b662369d7d0ce57ae3794c64c9ab72a83",
+      "excerpt_start": "# test_field_breather.py\n\nfrom field_breather import FieldBreather\n\ndef test_field_breath_cycle():\n    breather = FieldBreather()\n    for _ in range(18):  # Two full cycles\n        breather.breathe()\n    print(\"✅ Recursive Field Breath Cycle Test Passed\")\n\nif __name__ == \"__main__\":\n    test_field_breath_cycle()\n",
+      "functions_sample": [
+        "test_field_breath_cycle"
+      ],
+      "imports_sample": [
+        "from field_breather import FieldBreather"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/recursive_field_breather/test_field_breather.py",
+      "relative_to_candidate": "test_field_breather.py",
+      "sha256": "c0655a96ca1d8fa7cb89495e6f33c49b662369d7d0ce57ae3794c64c9ab72a83",
+      "size_bytes": 316,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "a71c0449a28dd4bea97f72b8228019cfd9c3ccc0d369f11759e3896b0df264b6",
+      "excerpt_start": "{\n  \"engine\": \"Recursive Field Phase Breather\",\n  \"version\": \"v2.01\",\n  \"description\": \"Breathes the Recursive Field Stack through full real 1→9 phase cycles, recording symbolic amplitude growth, phase tracing, and loop counts into a persistent trace log.\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "Recursive",
+        "Field",
+        "Phase",
+        "Breather",
+        "version",
+        "description",
+        "Breathes",
+        "the",
+        "Stack",
+        "through",
+        "full",
+        "real",
+        "phase",
+        "cycles",
+        "recording",
+        "symbolic",
+        "amplitude",
+        "growth",
+        "tracing",
+        "and",
+        "loop",
+        "counts",
+        "into",
+        "persistent"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/recursive_field_breather/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "a71c0449a28dd4bea97f72b8228019cfd9c3ccc0d369f11759e3896b0df264b6",
+      "size_bytes": 262,
+      "suffix": ".json"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200356_engine_canonical_decision_draft.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "FieldBreather",
+    "__init__",
+    "breathe",
+    "test_field_breath_cycle"
+  ],
+  "warnings": []
+}

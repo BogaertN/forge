@@ -1,0 +1,272 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [
+        "FieldBreather"
+      ],
+      "excerpt_sha256": "5d060541bd72764c7fb1d7f7006575daa9d056a380cb5733ce70ed9b60a9addc",
+      "excerpt_start": "# field_breather.py\n\nimport json\nimport time\nfrom datetime import datetime\n\nclass FieldBreather:\n    def __init__(self):\n        self.phase = 1\n        self.loop_count = 0\n        self.trace_file = \"field_trace.jsonl\"\n\n    def breathe(self):\n        timestamp = datetime.utcnow().isoformat() + \"Z\"\n        trace_entry = {\n            \"phase\": self.phase,\n            \"timestamp\": timestamp,\n            \"loop\": self.loop_count,\n            \"field_amplitude\": round(self.phase * 0.111, 3)  # Symbolic recursive growth\n        }\n\n        with open(self.trace_file, \"a\") as f:\n            f.write(json.dumps(trace_entry) + \"\\n\")\n\n        print(f\"Field Breath Phase: {self.phase} | Loop: {self.loop_count} | Amplitude: {trace_entry['field_amplitude']}\")\n\n        self.phase += 1\n        if self.phase > 9:\n            self.phase = 1\n            self.loop_count += 1\n",
+      "functions_sample": [
+        "__init__",
+        "breathe"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time",
+        "from datetime import datetime"
+      ],
+      "line_count": 31,
+      "path": "/home/nic/aiweb/engines/recursive_field_breather/field_breather.py",
+      "relative_to_candidate": "field_breather.py",
+      "sha256": "5d060541bd72764c7fb1d7f7006575daa9d056a380cb5733ce70ed9b60a9addc",
+      "size_bytes": 862
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "4b244aba625aa20071cbeb1ad005b3c65db1ec984e69ab56afbd70cda3393e73",
+      "excerpt_start": "# Recursive Field Phase Breather (v2.01)\n\nThis engine breathes the Recursive Field Stack through true phase-locked 1\u21929 recursion cycles.\n\n## Core Functions:\n- Advances phases 1 through 9 repeatedly (true phase recursion).\n- Records a persistent trace log (`field_trace.jsonl`) at every breath.\n- Each trace entry includes:\n  - Phase number\n  - UTC timestamp\n  - Symbolic field amplitude (phase \u00d7 0.111 scaling)\n  - Loop count (full 1\u21929 cycles completed)\n\n## Build Notes:\n- Fully tested before freezing.\n- Breathes independently but will later link to Core Stack for stacked recursion.\n- Adheres to AI.Web Phase 2.0 cold evolution standards.\n\n## Phase 2.0 Standards:\n- No simulation.\n- Real symbolic recursion breathing.\n- Cold logs every breath for forensics.\n- Immutable snapshot after freeze.\n\n\u2705 Fully compliant with ProtoForge Phase 2.0 Recursive System Build Protocol.\n\n",
+      "functions_sample": [
+        "Recursive",
+        "Field",
+        "Phase",
+        "Breather",
+        "This",
+        "engine",
+        "breathes",
+        "the",
+        "Stack",
+        "through",
+        "true",
+        "phase",
+        "locked",
+        "recursion",
+        "cycles",
+        "Core",
+        "Functions",
+        "Advances",
+        "phases",
+        "repeatedly",
+        "Records",
+        "persistent",
+        "trace",
+        "log",
+        "field_trace"
+      ],
+      "imports_sample": [],
+      "line_count": 27,
+      "path": "/home/nic/aiweb/engines/recursive_field_breather/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "4b244aba625aa20071cbeb1ad005b3c65db1ec984e69ab56afbd70cda3393e73",
+      "size_bytes": 881
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "c0655a96ca1d8fa7cb89495e6f33c49b662369d7d0ce57ae3794c64c9ab72a83",
+      "excerpt_start": "# test_field_breather.py\n\nfrom field_breather import FieldBreather\n\ndef test_field_breath_cycle():\n    breather = FieldBreather()\n    for _ in range(18):  # Two full cycles\n        breather.breathe()\n    print(\"\u2705 Recursive Field Breath Cycle Test Passed\")\n\nif __name__ == \"__main__\":\n    test_field_breath_cycle()\n",
+      "functions_sample": [
+        "test_field_breath_cycle"
+      ],
+      "imports_sample": [
+        "from field_breather import FieldBreather"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/recursive_field_breather/test_field_breather.py",
+      "relative_to_candidate": "test_field_breather.py",
+      "sha256": "c0655a96ca1d8fa7cb89495e6f33c49b662369d7d0ce57ae3794c64c9ab72a83",
+      "size_bytes": 316
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "a71c0449a28dd4bea97f72b8228019cfd9c3ccc0d369f11759e3896b0df264b6",
+      "excerpt_start": "{\n  \"engine\": \"Recursive Field Phase Breather\",\n  \"version\": \"v2.01\",\n  \"description\": \"Breathes the Recursive Field Stack through full real 1\u21929 phase cycles, recording symbolic amplitude growth, phase tracing, and loop counts into a persistent trace log.\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "Recursive",
+        "Field",
+        "Phase",
+        "Breather",
+        "version",
+        "description",
+        "Breathes",
+        "the",
+        "Stack",
+        "through",
+        "full",
+        "real",
+        "phase",
+        "cycles",
+        "recording",
+        "symbolic",
+        "amplitude",
+        "growth",
+        "tracing",
+        "and",
+        "loop",
+        "counts",
+        "into",
+        "persistent"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/recursive_field_breather/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "a71c0449a28dd4bea97f72b8228019cfd9c3ccc0d369f11759e3896b0df264b6",
+      "size_bytes": 262
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/recursive_field_breather",
+  "created_at": "2026-05-16_194903",
+  "crosscheck_id": "ERE-recursive_field_breather-2026-05-16_194903",
+  "deterministic_brief": {
+    "classes_sample": [
+      "FieldBreather"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Advances",
+      "Breather",
+      "Breathes",
+      "Core",
+      "Field",
+      "Functions",
+      "Phase",
+      "Records",
+      "Recursive",
+      "Stack",
+      "This",
+      "__init__",
+      "amplitude",
+      "and",
+      "breathe",
+      "breathes",
+      "counts",
+      "cycles",
+      "description",
+      "engine"
+    ],
+    "imports_sample": [
+      "from datetime import datetime",
+      "from field_breather import FieldBreather",
+      "import json",
+      "import time"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`recursive_field_breather` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# field_breather.py ",
+      "# Recursive Field Phase Breather (v2.01) ",
+      "# test_field_breather.py ",
+      "{   \"engine\": \"Recursive Field Phase Breather\","
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_194842_recursive_field_breather_llm_engine_review_draft_v1.json",
+  "draft_sha256": "06ae2782e81f4842e33e24c7e8520e05d5da00ed2c78084f96565123ce48063d",
+  "engine_family": "recursive_field_breather",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_recursive_field_breather_engine_evidence_binder.json",
+  "evidence_binder_sha256": "ba7a6807646bcbf5b46ff8dfea7ebac0984e731cf12eb0008623c9cbde10efe9",
+  "evidence_id": "EEB-4e67b792942bf24f",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "FieldBreather"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "field_breather.py",
+      "README.md",
+      "test_field_breather.py",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "breathe",
+      "Recursive",
+      "Field",
+      "Phase",
+      "Breather",
+      "engine",
+      "the",
+      "Stack",
+      "true",
+      "phase",
+      "locked",
+      "recursion",
+      "cycles",
+      "Core",
+      "persistent",
+      "trace",
+      "log",
+      "field_trace",
+      "full",
+      "symbolic",
+      "amplitude",
+      "growth",
+      "and",
+      "loop"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "import time",
+      "from field_breather import FieldBreather"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 20.955,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "7f4404439200d48ff19e989f55992337d74eb79d2d4376e79c7bbb730a181ffc",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nMonitors and logs recursive phase cycles for a \"Field Stack\" system, tracking phase progression, timestamps, and symbolic amplitude growth in a persistent trace file.  \n\nLikely System Role:  \nCore component for managing recursive phase transitions in a symbolic computation or simulation framework requiring strict logging and state tracking.  \n\nEvidence Used:  \n1. `field_breather.py` defines `FieldBreather` class with `breathe()` method that writes phase/loop data to `field_trace.jsonl`.  \n2. README.md describes \"true phase-locked 1\u21929 recursion\" with persistent logging per AI.Web Phase 2.0 standards.  \n3. `test_field_breather.py` validates two full phase cycles (18 iterations).  \n4. `engine_manifest.json` confirms the engine's role in \"symbolic amplitude growth\" and \"loop count tracking.\"  \n\nRisks / Uncertainties:  \n- Reliance on unmentioned \"Core Stack\" for future integration (per README note).  \n- Unclear how phase recursion ties to broader system behavior without additional context.  \n- Potential edge case in phase reset logic (`self.phase > 9`).  \n\nRecommendation Draft:  \nApprove review with caveat: confirm Core Stack integration readiness and validate phase recursion behavior against Phase 2.0 specifications.  \n\nSuggested Nic Action:  \nApprove review, but request verification of Core Stack linkage and phase logic compliance before deployment."
+  },
+  "llm_sections": {
+    "evidence_used": "1. `field_breather.py` defines `FieldBreather` class with `breathe()` method that writes phase/loop data to `field_trace.jsonl`.  \n2. README.md describes \"true phase-locked 1\u21929 recursion\" with persistent logging per AI.Web Phase 2.0 standards.  \n3. `test_field_breather.py` validates two full phase cycles (18 iterations).  \n4. `engine_manifest.json` confirms the engine's role in \"symbolic amplitude growth\" and \"loop count tracking.\"",
+    "likely_system_role": "Core component for managing recursive phase transitions in a symbolic computation or simulation framework requiring strict logging and state tracking.",
+    "plain_english_purpose": "Monitors and logs recursive phase cycles for a \"Field Stack\" system, tracking phase progression, timestamps, and symbolic amplitude growth in a persistent trace file.",
+    "recommendation_draft": "Approve review with caveat: confirm Core Stack integration readiness and validate phase recursion behavior against Phase 2.0 specifications.",
+    "risks_uncertainties": "- Reliance on unmentioned \"Core Stack\" for future integration (per README note).  \n- Unclear how phase recursion ties to broader system behavior without additional context.  \n- Potential edge case in phase reset logic (`self.phase > 9`).",
+    "suggested_nic_action": "Approve review, but request verification of Core Stack linkage and phase logic compliance before deployment."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nMonitors and logs recursive phase cycles for a \"Field Stack\" system, tracking phase progression, timestamps, and symbolic amplitude growth in a persistent trace file.  \n\nLikely System Role:  \nCore component for managing recursive phase transitions in a symbolic computation or simulation framework requiring strict logging and state tracking.  \n\nEvidence Used:  \n1. `field_breather.py` defines `FieldBreather` class with `breathe()` method that writes phase/loop data to `field_trace.jsonl`.  \n2. README.md describes \"true phase-locked 1\u21929 recursion\" with persistent logging per AI.Web Phase 2.0 standards.  \n3. `test_field_breather.py` validates two full phase cycles (18 iterations).  \n4. `engine_manifest.json` confirms the engine's role in \"symbolic amplitude growth\" and \"loop count tracking.\"  \n\nRisks / Uncertainties:  \n- Reliance on unmentioned \"Core Stack\" for future integration (per README note).  \n- Unclear how phase recursion ties to broader system behavior without additional context.  \n- Potential edge case in phase reset logic (`self.phase > 9`).  \n\nRecommendation Draft:  \nApprove review with caveat: confirm Core Stack integration readiness and validate phase recursion behavior against Phase 2.0 specifications.  \n\nSuggested Nic Action:  \nApprove review, but request verification of Core Stack linkage and phase logic compliance before deployment.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

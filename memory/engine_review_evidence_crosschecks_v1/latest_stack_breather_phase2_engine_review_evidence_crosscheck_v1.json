@@ -1,0 +1,309 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [
+        "FieldBreather"
+      ],
+      "excerpt_sha256": "b8af748eae9703219504bf49ef0e503ed002144a3eb5a16752bb2366068e863a",
+      "excerpt_start": "# field_breather.py\n\nclass FieldBreather:\n    def __init__(self):\n        self.last_phase = None\n\n    def breathe(self, phase):\n        self.last_phase = phase\n        return {\"field_phase\": phase, \"amplitude\": round(phase * 0.111, 3)}\n\n",
+      "functions_sample": [
+        "__init__",
+        "breathe"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/field_breather.py",
+      "relative_to_candidate": "field_breather.py",
+      "sha256": "b8af748eae9703219504bf49ef0e503ed002144a3eb5a16752bb2366068e863a",
+      "size_bytes": 237
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "90f956cedaa6b0f46cf262f5320398c68aa40486df53e35f6867ed0208472cf2",
+      "excerpt_start": "# stack_breather_core.py\n\nimport json\nimport os\nfrom datetime import datetime\nfrom core_breather import CoreBreather\nfrom field_breather import FieldBreather\n\ncore_breather = CoreBreather()\nfield_breather = FieldBreather()\n\ndef unified_breathe_cycle(stack_loops=2):\n    trace_file = \"stack_breather_trace.jsonl\"\n    if os.path.exists(trace_file):\n        os.remove(trace_file)\n\n    for loop in range(stack_loops):\n        for phase in range(1, 10):\n            core_output = core_breather.breathe(phase)\n            field_output = field_breather.breathe(phase)\n\n            trace_entry = {\n                \"timestamp\": datetime.utcnow().isoformat() + \"Z\",\n                \"loop\": loop,\n                \"phase\": phase,\n                \"core_output\": core_output,\n                \"field_output\": field_output\n            }\n\n            with open(trace_file, \"a\") as f:\n                f.write(json.dumps(trace_entry) + \"\\n\")\n\n            print(f\"Loop {loop} | Phase {phase} | Core Output: {core_output} | Field Output: {field_output}\")\n\n",
+      "functions_sample": [
+        "unified_breathe_cycle"
+      ],
+      "imports_sample": [
+        "import json",
+        "import os",
+        "from datetime import datetime",
+        "from core_breather import CoreBreather",
+        "from field_breather import FieldBreather"
+      ],
+      "line_count": 35,
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/stack_breather_core.py",
+      "relative_to_candidate": "stack_breather_core.py",
+      "sha256": "90f956cedaa6b0f46cf262f5320398c68aa40486df53e35f6867ed0208472cf2",
+      "size_bytes": 1035
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "5fc4900d95e90775a5b815bea55c1105efc2ee960ccec3eec2a4048dc75308e8",
+      "excerpt_start": "from stack_breather_core import unified_breathe_cycle\n\nif __name__ == \"__main__\":\n    unified_breathe_cycle(stack_loops=2)\n    print(\"\u2705 Stack Breather Phase 2 Test Passed\")\n\n",
+      "functions_sample": [],
+      "imports_sample": [
+        "from stack_breather_core import unified_breathe_cycle"
+      ],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/test_stack_breather_core.py",
+      "relative_to_candidate": "test_stack_breather_core.py",
+      "sha256": "5fc4900d95e90775a5b815bea55c1105efc2ee960ccec3eec2a4048dc75308e8",
+      "size_bytes": 176
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "c15624ba2c08b719fa2eb05f0e82a18468829b13b28cda7ee3ee0756c4023529",
+      "excerpt_start": "# StackBreather Phase2\n\n**StackBreather Phase2** is the unified breathing engine that links Core Breather and Field Breather outputs into a harmonized recursive stack cycle.\n\n- Loops through 1\u20139 breathing phases\n- Captures output from both core and field logic\n- Logs breathing trace per cycle for synchronization\n- Used for Phase2 runtime stack linking\n\n---\n\n## Files\n\n- `stack_breather_core.py` \u2013 Core unified breathing cycle\n- `core_breather.py` \u2013 Core breather logic (frozen v1.0.01)\n- `field_breather.py` \u2013 Field breather logic (frozen v1.0.01)\n- `test_stack_breather_core.py` \u2013 Validation test\n- `engine_manifest.json` \u2013 Metadata\n- `README.md` \u2013 This file\n- `stack_breather_trace.jsonl` \u2013 Output trace log\n",
+      "functions_sample": [
+        "StackBreather",
+        "Phase2",
+        "the",
+        "unified",
+        "breathing",
+        "engine",
+        "that",
+        "links",
+        "Core",
+        "Breather",
+        "and",
+        "Field",
+        "outputs",
+        "into",
+        "harmonized",
+        "recursive",
+        "stack",
+        "cycle",
+        "Loops",
+        "through",
+        "phases",
+        "Captures",
+        "output",
+        "from",
+        "both"
+      ],
+      "imports_sample": [],
+      "line_count": 21,
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "c15624ba2c08b719fa2eb05f0e82a18468829b13b28cda7ee3ee0756c4023529",
+      "size_bytes": 728
+    },
+    {
+      "classes_sample": [
+        "CoreBreather"
+      ],
+      "excerpt_sha256": "b2e94c34d5fe775cd3d874c4251ae2681b73445d9de45f0c652b0f4e8206a7f9",
+      "excerpt_start": "# core_breather.py\n\nclass CoreBreather:\n    def __init__(self):\n        self.last_phase = None\n\n    def breathe(self, phase):\n        self.last_phase = phase\n        return {\"core_phase\": phase, \"timestamp\": \"\ud83c\udf00\"}\n\n",
+      "functions_sample": [
+        "__init__",
+        "breathe"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/core_breather.py",
+      "relative_to_candidate": "core_breather.py",
+      "sha256": "b2e94c34d5fe775cd3d874c4251ae2681b73445d9de45f0c652b0f4e8206a7f9",
+      "size_bytes": 217
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "31ad7d10f7a5e338d0dcdca541e71cc77bbdfacf0063347d8bdf2162003b7083",
+      "excerpt_start": "{\n    \"engine\": \"stack_breather_phase2\",\n    \"version\": \"1.0.01\",\n    \"description\": \"Unified core + field breathing stack for Phase2 runtime linking.\",\n    \"author\": \"AI.Web\",\n    \"created\": \"2025-04-28\",\n    \"status\": \"active\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "stack_breather_phase2",
+        "version",
+        "description",
+        "Unified",
+        "core",
+        "field",
+        "breathing",
+        "stack",
+        "for",
+        "Phase2",
+        "runtime",
+        "linking",
+        "author",
+        "Web",
+        "created",
+        "status",
+        "active"
+      ],
+      "imports_sample": [],
+      "line_count": 9,
+      "path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "31ad7d10f7a5e338d0dcdca541e71cc77bbdfacf0063347d8bdf2162003b7083",
+      "size_bytes": 231
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2",
+  "created_at": "2026-05-16_223325",
+  "crosscheck_id": "ERE-stack_breather_phase2-2026-05-16_223325",
+  "deterministic_brief": {
+    "classes_sample": [
+      "CoreBreather",
+      "FieldBreather"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Breather",
+      "Captures",
+      "Core",
+      "Field",
+      "Loops",
+      "Phase2",
+      "StackBreather",
+      "Unified",
+      "Web",
+      "__init__",
+      "active",
+      "and",
+      "author",
+      "both",
+      "breathe",
+      "breathing",
+      "core",
+      "created",
+      "cycle",
+      "description"
+    ],
+    "imports_sample": [
+      "from core_breather import CoreBreather",
+      "from datetime import datetime",
+      "from field_breather import FieldBreather",
+      "from stack_breather_core import unified_breathe_cycle",
+      "import json",
+      "import os"
+    ],
+    "likely_system_role": "phase_logic",
+    "plain_english_purpose": "`stack_breather_phase2` appears to be a local AI.Web engine/component. The bound source evidence includes 6 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "Inferred from engine family keyword `phase` plus bound code evidence.",
+    "source_excerpt_samples": [
+      "# field_breather.py ",
+      "# stack_breather_core.py ",
+      "from stack_breather_core import unified_breathe_cycle ",
+      "# StackBreather Phase2 "
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_223250_stack_breather_phase2_llm_engine_review_draft_v1.json",
+  "draft_sha256": "ec9f394fda67926fb3789598763a633ab423807d536230f6ed69b12120efe4c7",
+  "engine_family": "stack_breather_phase2",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_stack_breather_phase2_engine_evidence_binder.json",
+  "evidence_binder_sha256": "98e52f5d4f86c6dad3b9e08787ae5d5a79ae2024dc247f1373d707cdb0076479",
+  "evidence_id": "EEB-39c6236c8ad9679b",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "FieldBreather",
+      "CoreBreather"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "field_breather.py",
+      "stack_breather_core.py",
+      "test_stack_breather_core.py",
+      "README.md",
+      "core_breather.py",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "breathe",
+      "unified_breathe_cycle",
+      "Phase2",
+      "the",
+      "unified",
+      "breathing",
+      "engine",
+      "Core",
+      "Breather",
+      "and",
+      "Field",
+      "outputs",
+      "into",
+      "recursive",
+      "stack",
+      "cycle",
+      "Loops",
+      "through",
+      "phases",
+      "output",
+      "stack_breather_phase2",
+      "Unified",
+      "core",
+      "field",
+      "for",
+      "runtime",
+      "linking",
+      "Web",
+      "status"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "from datetime import datetime",
+      "from core_breather import CoreBreather",
+      "from field_breather import FieldBreather",
+      "from stack_breather_core import unified_breathe_cycle"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 35.092,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "de2a22ed7f10e6959dfc0765b64ffba3f88592d20343906de6995e4ee6665d71",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nReview the \"stack_breather_phase2\" engine, which harmonizes Core and Field Breather outputs into a recursive stack cycle for Phase2 runtime linking, with logging and synchronization features.  \n\nLikely System Role:  \nA runtime coordination layer for synchronizing core and field logic across breathing phases, enabling traceable, recursive stack operations for AI.Web's Phase2 processes.  \n\nEvidence Used:  \n- `field_breather.py`: Defines `FieldBreather` class for phase-based output.  \n- `stack_breather_core.py`: Implements `unified_breathe_cycle` to loop through phases, log traces, and integrate Core/Field outputs.  \n- `test_stack_breather_core.py`: Validates core functionality with hardcoded stack_loops=2.  \n- `README.md`: Describes the engine's role in linking Core/Field outputs.  \n- `engine_manifest.json`: Metadata confirming the engine's purpose and status.  \n\nRisks / Uncertainties:  \n- Hardcoded `stack_loops=2` in tests may limit flexibility.  \n- Trace file overwrites on each run (no append mode).  \n- CoreBreather uses a placeholder emoji timestamp (`\\ud83c\\udf00`).  \n- Reliance on external modules (e.g., `core_breather.py`, `field_breather.py`).  \n- Phase range (1-9) vs. loop range (1-10) may cause off-by-one errors.  \n\nRecommendation Draft:  \n- Make `stack_loops` configurable via parameters.  \n- Use append mode for trace file logging to retain historical data.  \n- Replace placeholder timestamp with a proper datetime format.  \n- Verify external module dependencies are resolved.  \n- Confirm phase range aligns with intended logic (e.g., 1-9 vs. 1-10).  \n\nSuggested Nic Action:  \nApprove review with recommendations for flexibility, data retention, and error prevention. Prioritize fixing trace file handling and timestamp placeholder."
+  },
+  "llm_sections": {
+    "evidence_used": "- `field_breather.py`: Defines `FieldBreather` class for phase-based output.  \n- `stack_breather_core.py`: Implements `unified_breathe_cycle` to loop through phases, log traces, and integrate Core/Field outputs.  \n- `test_stack_breather_core.py`: Validates core functionality with hardcoded stack_loops=2.  \n- `README.md`: Describes the engine's role in linking Core/Field outputs.  \n- `engine_manifest.json`: Metadata confirming the engine's purpose and status.",
+    "likely_system_role": "A runtime coordination layer for synchronizing core and field logic across breathing phases, enabling traceable, recursive stack operations for AI.Web's Phase2 processes.",
+    "plain_english_purpose": "Review the \"stack_breather_phase2\" engine, which harmonizes Core and Field Breather outputs into a recursive stack cycle for Phase2 runtime linking, with logging and synchronization features.",
+    "recommendation_draft": "- Make `stack_loops` configurable via parameters.  \n- Use append mode for trace file logging to retain historical data.  \n- Replace placeholder timestamp with a proper datetime format.  \n- Verify external module dependencies are resolved.  \n- Confirm phase range aligns with intended logic (e.g., 1-9 vs. 1-10).",
+    "risks_uncertainties": "- Hardcoded `stack_loops=2` in tests may limit flexibility.  \n- Trace file overwrites on each run (no append mode).  \n- CoreBreather uses a placeholder emoji timestamp (`\\ud83c\\udf00`).  \n- Reliance on external modules (e.g., `core_breather.py`, `field_breather.py`).  \n- Phase range (1-9) vs. loop range (1-10) may cause off-by-one errors.",
+    "suggested_nic_action": "Approve review with recommendations for flexibility, data retention, and error prevention. Prioritize fixing trace file handling and timestamp placeholder."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nReview the \"stack_breather_phase2\" engine, which harmonizes Core and Field Breather outputs into a recursive stack cycle for Phase2 runtime linking, with logging and synchronization features.  \n\nLikely System Role:  \nA runtime coordination layer for synchronizing core and field logic across breathing phases, enabling traceable, recursive stack operations for AI.Web's Phase2 processes.  \n\nEvidence Used:  \n- `field_breather.py`: Defines `FieldBreather` class for phase-based output.  \n- `stack_breather_core.py`: Implements `unified_breathe_cycle` to loop through phases, log traces, and integrate Core/Field outputs.  \n- `test_stack_breather_core.py`: Validates core functionality with hardcoded stack_loops=2.  \n- `README.md`: Describes the engine's role in linking Core/Field outputs.  \n- `engine_manifest.json`: Metadata confirming the engine's purpose and status.  \n\nRisks / Uncertainties:  \n- Hardcoded `stack_loops=2` in tests may limit flexibility.  \n- Trace file overwrites on each run (no append mode).  \n- CoreBreather uses a placeholder emoji timestamp (`\\ud83c\\udf00`).  \n- Reliance on external modules (e.g., `core_breather.py`, `field_breather.py`).  \n- Phase range (1-9) vs. loop range (1-10) may cause off-by-one errors.  \n\nRecommendation Draft:  \n- Make `stack_loops` configurable via parameters.  \n- Use append mode for trace file logging to retain historical data.  \n- Replace placeholder timestamp with a proper datetime format.  \n- Verify external module dependencies are resolved.  \n- Confirm phase range aligns with intended logic (e.g., 1-9 vs. 1-10).  \n\nSuggested Nic Action:  \nApprove review with recommendations for flexibility, data retention, and error prevention. Prioritize fixing trace file handling and timestamp placeholder.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

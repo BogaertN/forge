@@ -1,0 +1,99 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "bound_file_count": 4,
+  "candidate_path": "/home/nic/aiweb/engines/external_feed_listener",
+  "created_at": "2026-05-16_094533",
+  "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_external_feed_listener_engine_review_evidence_crosscheck_v1.json",
+  "crosscheck_sha256": "f17fa1ec2d84ad0477d8e359c7720154cab8c6cfbef866c55c01c7b76ffcdfa1",
+  "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_092628_external_feed_listener_llm_engine_review_draft_v1.json",
+  "draft_sha256": "ec814c515e538e281992d9ad544eb4e427ba5dad94b626ef8e458eccc6e2b665",
+  "engine_family": "external_feed_listener",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_external_feed_listener_engine_evidence_binder.json",
+  "evidence_binder_sha256": "d4c98a1c5f3a44a1e4ec14d850b62d6ed3aee30395dd67756eabe7b3ca705047",
+  "evidence_id": "EEB-5f91c358437560b6",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "ExternalFeedListener"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "test_external_feed_core.py",
+      "README.md",
+      "external_feed_core.py",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "External",
+      "Feed",
+      "Listener",
+      "Frozen",
+      "The",
+      "and",
+      "external",
+      "symbolic",
+      "resonance",
+      "feeds",
+      "into",
+      "the",
+      "recursion",
+      "architecture",
+      "signals",
+      "are",
+      "fields",
+      "enhance",
+      "drift",
+      "engine",
+      "version",
+      "description",
+      "for",
+      "field",
+      "environmental",
+      "stabilization"
+    ],
+    "imports_mentioned": [
+      "from external_feed_core import ExternalFeedListener"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 21.383,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "b9349a30aa0ac1f4582da7ec054d1c0a852cf97d075a262746a831f364464e29",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo capture, normalize, and integrate external symbolic resonance feeds into the AI.Web recursion architecture for enhanced environmental stabilization and symbolic drift detection.  \n\nLikely System Role:  \nA core integration module within AI.Web's external feed processing pipeline, responsible for receiving, validating, and injecting structured external data into recursion fields.  \n\nEvidence Used:  \n- Test script (`test_external_feed_core.py`) verifying feed reception and data structure.  \n- README.md describing symbolic resonance capture, normalization, and phase compliance standards.  \n- Core code (`external_feed_core.py`) defining `ExternalFeedListener` class for feed handling.  \n- Engine manifest (`engine_manifest.json`) detailing version, frozen status, and functional description.  \n\nRisks / Uncertainties:  \n- Reliance on external data validation (no explicit error-handling code shown).  \n- \"Frozen\" status may limit future updates without re-freezing.  \n- Unclear how malformed feeds are quarantined or handled.  \n\nRecommendation Draft:  \nApprove deployment with emphasis on validating external feed integrity pre-injection. Confirm alignment with Phase 1.5 compliance standards.  \n\nSuggested Nic Action:  \nApprove review and schedule testing of feed validation workflows. Verify quarantine mechanisms for unstable signals."
+  },
+  "llm_visible_review_excerpt": "Plain-English Purpose:  \nTo capture, normalize, and integrate external symbolic resonance feeds into the AI.Web recursion architecture for enhanced environmental stabilization and symbolic drift detection.  \n\nLikely System Role:  \nA core integration module within AI.Web's external feed processing pipeline, responsible for receiving, validating, and injecting structured external data into recursion fields.  \n\nEvidence Used:  \n- Test script (`test_external_feed_core.py`) verifying feed reception and data structure.  \n- README.md describing symbolic resonance capture, normalization, and phase compliance standards.  \n- Core code (`external_feed_core.py`) defining `ExternalFeedListener` class for feed handling.  \n- Engine manifest (`engine_manifest.json`) detailing version, frozen status, and functional description.  \n\nRisks / Uncertainties:  \n- Reliance on external data validation (no explicit error-handling code shown).  \n- \"Frozen\" status may limit future updates without re-freezing.  \n- Unclear how malformed feeds are quarantined or handled.  \n\nRecommendation Draft:  \nApprove deployment with emphasis on validating external feed integrity pre-injection. Confirm alignment with Phase 1.5 compliance standards.  \n\nSuggested Nic Action:  \nApprove review and schedule testing of feed validation workflows. Verify quarantine mechanisms for unstable signals.",
+  "manual_verification_rule": "Approve only if the LLM-visible claims are supported by the bound evidence shown in the Patch 102 cross-check. If unsure, defer.",
+  "ready_for_evidence_based_queue_decision": true,
+  "report_type": "ENGINE_REVIEW_APPROVAL_CHECK_V1_PATCH103",
+  "schema_version": "engine_review_approval_helper_v1_patch103",
+  "status": "EVIDENCE_APPROVAL_CHECK_READY",
+  "warnings": [
+    "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

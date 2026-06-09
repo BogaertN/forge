@@ -1,0 +1,121 @@
+{
+  "authority": {
+    "allowed_gateway_tools": [
+      "read_file",
+      "code_related_files"
+    ],
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "forbidden_gateway_tools": [
+      "shell",
+      "patch-apply",
+      "ingest-one",
+      "ingest-batch-apply",
+      "delete",
+      "quarantine",
+      "restore",
+      "snapshot-live-restore",
+      "network",
+      "pip",
+      "npm",
+      "sudo"
+    ],
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "LLM_ENGINE_REVIEW_DRAFTS_WITH_REVIEW_LIMITED_READ_LENS",
+    "patch": "98",
+    "project_write_authority": false,
+    "rule": "The LLM may draft review recommendations from bound evidence. Nic approves separately. Forge commits only in a future gated patch.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/llm_engine_review_drafts_v1"
+  },
+  "blockers": [],
+  "candidate_path_recorded": "aiweb/engines/cold_archive_engine_frozen_v1",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-16_080645",
+  "draft_id": "LER-cold_archive_engine-2026-05-16_080645",
+  "engine_family": "cold_archive_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_cold_archive_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "a76cfc16fb9c09d0df58796218cfa81bbfdce8e509c70b3feb6847243e07b522",
+  "evidence_id": "EEB-bc75b62ef10a008d",
+  "file_count": 7,
+  "gateway_policy_path": "/home/nic/forge/memory/llm_memory_v1/indexes/llm_engine_review_gateway_policy.json",
+  "gateway_policy_sha256": "d7aafb5368368a7ad4afbd79668a71607d640b1f24fbb197bb9b4308e06d4da5",
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 20.084,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "67c22b641baffa953fa14166480544e52ed69a2e2fd9a90638d8a90301cd57d3",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nThe Cold Archive Engine archives symbolic recursion memory loops that drift beyond recovery, preventing systemic collapse by storing problematic loops in cold storage.  \n\nLikely System Role:  \nA deprecated system component for managing recursion drift in AI.Web's symbolic memory architecture, frozen in 2025.  \n\nEvidence Used:  \n- `run.py`: Defines `ColdArchiveEngine` class for archiving loops and generating summaries.  \n- `archive_core.py`: Implements `store_dead_loop` to persist loop data in `archive_state.json`.  \n- `README.md` and `engine_manifest.json`: Describe the engine's purpose, version history, and phase standard (Phase 2.5 Recursive Breathing Activation).  \n- Test scripts (`test_cold_archive.py`, `test_archive.py`) validate archival functionality.  \n\nRisks / Uncertainties:  \n- Reliance on file-based storage (`archive_state.json`) could lead to data loss if not backed up.  \n- The \"frozen\" status (2025-04-27) suggests it may no longer be actively maintained or compatible with current systems.  \n- Ambiguous handling of \"symbolic recursion loops\" may require clarification for operational accuracy.  \n\nRecommendation Draft:  \nApprove the engine's archival logic for historical review, but caution against reactivation without modernization. Prioritize verifying JSON persistence reliability and assessing compatibility with current AI.Web systems.  \n\nSuggested Nic Action:  \nApprove the review for archival purposes, but defer reactivation until modernization is confirmed. Request verification of file-based storage resilience and phase standard alignment."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nThe Cold Archive Engine archives symbolic recursion memory loops that drift beyond recovery, preventing systemic collapse by storing problematic loops in cold storage.  \n\nLikely System Role:  \nA deprecated system component for managing recursion drift in AI.Web's symbolic memory architecture, frozen in 2025.  \n\nEvidence Used:  \n- `run.py`: Defines `ColdArchiveEngine` class for archiving loops and generating summaries.  \n- `archive_core.py`: Implements `store_dead_loop` to persist loop data in `archive_state.json`.  \n- `README.md` and `engine_manifest.json`: Describe the engine's purpose, version history, and phase standard (Phase 2.5 Recursive Breathing Activation).  \n- Test scripts (`test_cold_archive.py`, `test_archive.py`) validate archival functionality.  \n\nRisks / Uncertainties:  \n- Reliance on file-based storage (`archive_state.json`) could lead to data loss if not backed up.  \n- The \"frozen\" status (2025-04-27) suggests it may no longer be actively maintained or compatible with current systems.  \n- Ambiguous handling of \"symbolic recursion loops\" may require clarification for operational accuracy.  \n\nRecommendation Draft:  \nApprove the engine's archival logic for historical review, but caution against reactivation without modernization. Prioritize verifying JSON persistence reliability and assessing compatibility with current AI.Web systems.  \n\nSuggested Nic Action:  \nApprove the review for archival purposes, but defer reactivation until modernization is confirmed. Request verification of file-based storage resilience and phase standard alignment.",
+  "plain_english_brief": {
+    "classes_sample": [
+      "ColdArchiveEngine"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Archive",
+      "Archives",
+      "Cold",
+      "Drift",
+      "Enables",
+      "Engine",
+      "Frozen",
+      "Overview",
+      "The",
+      "Web",
+      "__init__",
+      "and",
+      "archive_loop",
+      "archive_summary",
+      "archives",
+      "author",
+      "beyond",
+      "branches",
+      "captures",
+      "causing"
+    ],
+    "imports_sample": [
+      "from archive_core import store_dead_loop",
+      "from datetime import datetime",
+      "from run import ColdArchiveEngine",
+      "import json",
+      "import time"
+    ],
+    "likely_system_role": "spc_cold_storage",
+    "plain_english_purpose": "`cold_archive_engine` appears to be a local AI.Web engine/component. The bound source evidence includes 7 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DEFER_PENDING_COMPARISON",
+    "risk_notes": [],
+    "role_reason": "Inferred from engine family keyword `cold` plus bound code evidence.",
+    "source_excerpt_samples": [
+      "# test_cold_archive.py # Tests the cold archive loop behavior",
+      "# archive_core.py import json",
+      "# run.py # AI.Web Cold Archive Engine Runtime",
+      "# Cold Archive Engine (Frozen v1.01) "
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "report_type": "LLM_ENGINE_REVIEW_DRAFT_V1_PATCH98_2_REAL_LOCAL_LLM_ATTEMPT",
+  "review_status_at_draft_time": "DEFERRED",
+  "schema_version": "llm_engine_review_draft_v1_patch98",
+  "stale_evidence_rule": "Patch 100 must re-read candidate path and re-verify current SHA against this evidence binder before committing any canonical decision. If changed: REFUSED_STALE_ENGINE_EVIDENCE.",
+  "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+  "warnings": []
+}

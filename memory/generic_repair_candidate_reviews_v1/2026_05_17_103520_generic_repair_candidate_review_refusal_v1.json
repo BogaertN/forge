@@ -1,0 +1,12 @@
+{
+  "authority": {
+    "model_generation_called": false,
+    "patch_apply_authority": false
+  },
+  "created_at": "2026-05-17T10:35:20",
+  "example": "generic-repair-review-llm latest CONFIRM_CALL_LLM_CANDIDATE_REVIEW",
+  "needed": "CONFIRM_CALL_LLM_CANDIDATE_REVIEW",
+  "report_type": "GENERIC_REPAIR_CANDIDATE_REVIEW_REFUSAL_V1",
+  "schema_version": "generic_repair_candidate_review_refusal_v1_patch136L",
+  "status": "REFUSED_MISSING_CONFIRM_TOKEN"
+}

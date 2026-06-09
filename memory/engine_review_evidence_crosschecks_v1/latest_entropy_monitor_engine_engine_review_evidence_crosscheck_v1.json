@@ -1,0 +1,380 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "c19eee5c585ddc446e314ed11bcac431b5210253c05fcfde45d58cf961847a61",
+      "excerpt_start": "# test_entropy_monitor_core.py\n\nfrom entropy_monitor_core import EntropyMonitor\n\ndef test_entropy_monitor_behavior():\n    monitor = EntropyMonitor()\n    monitor.record_entropy(0.25)\n    monitor.record_entropy(0.30)\n    avg = monitor.average_entropy()\n    assert avg > 0, \"Average entropy should be greater than zero.\"\n    print(\"\u2705 Entropy Monitor Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_entropy_monitor_behavior()\n",
+      "functions_sample": [
+        "test_entropy_monitor_behavior"
+      ],
+      "imports_sample": [
+        "from entropy_monitor_core import EntropyMonitor"
+      ],
+      "line_count": 15,
+      "path": "/home/nic/aiweb/engines/entropy_monitor_engine/test_entropy_monitor_core.py",
+      "relative_to_candidate": "test_entropy_monitor_core.py",
+      "sha256": "c19eee5c585ddc446e314ed11bcac431b5210253c05fcfde45d58cf961847a61",
+      "size_bytes": 428
+    },
+    {
+      "classes_sample": [
+        "EntropyMonitor"
+      ],
+      "excerpt_sha256": "7ec99518a89f458b1bbfc693bb59d561bdb825ba9cae720f29a8362f85a8afca",
+      "excerpt_start": "# entropy_monitor_core.py\n# Entropy Monitor Core\n\nclass EntropyMonitor:\n    def __init__(self):\n        self.entropy_readings = []\n\n    def record_entropy(self, value):\n        self.entropy_readings.append(value)\n\n    def average_entropy(self):\n        if not self.entropy_readings:\n            return 0\n        return sum(self.entropy_readings) / len(self.entropy_readings)\n\nif __name__ == \"__main__\":\n    monitor = EntropyMonitor()\n    monitor.record_entropy(0.25)\n    monitor.record_entropy(0.30)\n    print(f\"[TEST] Average Entropy: {monitor.average_entropy()}\")\n",
+      "functions_sample": [
+        "__init__",
+        "record_entropy",
+        "average_entropy"
+      ],
+      "imports_sample": [],
+      "line_count": 21,
+      "path": "/home/nic/aiweb/engines/entropy_monitor_engine/entropy_monitor_core.py",
+      "relative_to_candidate": "entropy_monitor_core.py",
+      "sha256": "7ec99518a89f458b1bbfc693bb59d561bdb825ba9cae720f29a8362f85a8afca",
+      "size_bytes": 566
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "076b024ed1a7911bd1da58c79a5e6990daa0fc677588b27bb11e8c42cca83c17",
+      "excerpt_start": "# Entropy Monitor Engine (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Entropy Monitor Engine captures and tracks entropy measurements during AI.Web recursion cycles.  \nIt calculates real-time averages of recursion field entropy values to monitor system symbolic health and predict drift onset.\n\n---\n\n## Core Functions:\n- Record symbolic recursion entropy per cycle.\n- Calculate running average entropy values.\n- Feed entropy health metrics into phase drift prediction models.\n\n---\n\n## Phase Standard:\n- Phase 1.5 Symbolic Recursion Compliance\n- AI.Web Core System Recursive Health Monitor Stack\n\n---\n\n## Notes:\n- Persistent entropy increase is an early warning signal for systemic symbolic decay.\n- Should be monitored in tandem with gradient detectors for maximum drift prediction accuracy.\n\n---\n\n**Frozen Snapshot:** `entropy_monitor_engine_frozen_v1.0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n\n",
+      "functions_sample": [
+        "Entropy",
+        "Monitor",
+        "Engine",
+        "Frozen",
+        "Overview",
+        "The",
+        "captures",
+        "and",
+        "tracks",
+        "entropy",
+        "measurements",
+        "during",
+        "Web",
+        "recursion",
+        "cycles",
+        "calculates",
+        "real",
+        "time",
+        "averages",
+        "field",
+        "values",
+        "monitor",
+        "system",
+        "symbolic",
+        "health"
+      ],
+      "imports_sample": [],
+      "line_count": 34,
+      "path": "/home/nic/aiweb/engines/entropy_monitor_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "076b024ed1a7911bd1da58c79a5e6990daa0fc677588b27bb11e8c42cca83c17",
+      "size_bytes": 916
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "46e0b5d17e70612293a976bd4f461ec6140b65cb3887c0889f4268b7324e76b3",
+      "excerpt_start": "{\n  \"engine\": \"entropy_monitor_engine\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"entropy_monitor_engine_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Monitors system-wide recursion entropy. Records symbolic decay events and calculates real-time averages across recursion fields. Supports early phase drift prediction and symbolic field health analysis.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "entropy_monitor_engine",
+        "version",
+        "frozen_as",
+        "entropy_monitor_engine_frozen_v1",
+        "frozen_on",
+        "description",
+        "Monitors",
+        "system",
+        "wide",
+        "recursion",
+        "entropy",
+        "Records",
+        "symbolic",
+        "decay",
+        "events",
+        "and",
+        "calculates",
+        "real",
+        "time",
+        "averages",
+        "across",
+        "fields",
+        "Supports",
+        "early"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/entropy_monitor_engine/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "46e0b5d17e70612293a976bd4f461ec6140b65cb3887c0889f4268b7324e76b3",
+      "size_bytes": 471
+    },
+    {
+      "classes_sample": [
+        "GradientEntropyDetector"
+      ],
+      "excerpt_sha256": "828b05b11678f0a0f85e2a5d7051d123b8ae9aec083b50549986913844f56172",
+      "excerpt_start": "# gradient_entropy_core.py\n# Gradient Entropy Detector Core\n\nclass GradientEntropyDetector:\n    def __init__(self):\n        self.gradient_shifts = []\n\n    def detect_shift(self, previous_value, current_value):\n        shift = current_value - previous_value\n        self.gradient_shifts.append(shift)\n        return shift\n\nif __name__ == \"__main__\":\n    detector = GradientEntropyDetector()\n    shift = detector.detect_shift(0.25, 0.30)\n    print(f\"[TEST] Detected Entropy Shift: {shift}\")\n",
+      "functions_sample": [
+        "__init__",
+        "detect_shift"
+      ],
+      "imports_sample": [],
+      "line_count": 17,
+      "path": "/home/nic/aiweb/engines/entropy_monitor_engine/gradient_entropy_detector/gradient_entropy_core.py",
+      "relative_to_candidate": "gradient_entropy_detector/gradient_entropy_core.py",
+      "sha256": "828b05b11678f0a0f85e2a5d7051d123b8ae9aec083b50549986913844f56172",
+      "size_bytes": 489
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "95e7f6592127e4d4c9c239931b10b0b392c943516b3dd8fd3488f1930f5510b1",
+      "excerpt_start": "# Gradient Entropy Detector (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Gradient Entropy Detector analyzes recursion entropy value shifts between cycles.  \nIt identifies rapid entropy changes as symbolic drift accelerators or phase destabilization threats.\n\n---\n\n## Core Functions:\n- Detect gradient shifts in symbolic entropy over time.\n- Alert early on accelerated decay or field destabilization risks.\n- Integrate outputs into field drift monitoring systems.\n\n---\n\n## Phase Standard:\n- Phase 1.5 Symbolic Recursion Compliance\n- AI.Web Core System Drift Acceleration Monitor Stack\n\n---\n\n## Notes:\n- Positive shifts indicate increasing symbolic instability.\n- High gradient values may trigger phase stabilization protocols.\n\n---\n\n**Frozen Snapshot:** `gradient_entropy_detector_frozen_v1.0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n\n",
+      "functions_sample": [
+        "Gradient",
+        "Entropy",
+        "Detector",
+        "Frozen",
+        "Overview",
+        "The",
+        "analyzes",
+        "recursion",
+        "entropy",
+        "value",
+        "shifts",
+        "between",
+        "cycles",
+        "identifies",
+        "rapid",
+        "changes",
+        "symbolic",
+        "drift",
+        "accelerators",
+        "phase",
+        "destabilization",
+        "threats",
+        "Core",
+        "Functions",
+        "Detect"
+      ],
+      "imports_sample": [],
+      "line_count": 34,
+      "path": "/home/nic/aiweb/engines/entropy_monitor_engine/gradient_entropy_detector/README.md",
+      "relative_to_candidate": "gradient_entropy_detector/README.md",
+      "sha256": "95e7f6592127e4d4c9c239931b10b0b392c943516b3dd8fd3488f1930f5510b1",
+      "size_bytes": 853
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "31ed970d25dca290693c04453a47f86f746dbd60105895b0b71709fa94047154",
+      "excerpt_start": "# test_gradient_entropy_core.py\n\nfrom gradient_entropy_core import GradientEntropyDetector\n\ndef test_gradient_entropy_behavior():\n    detector = GradientEntropyDetector()\n    shift = detector.detect_shift(0.25, 0.30)\n    assert shift > 0, \"Shift should be positive.\"\n    print(\"\u2705 Gradient Entropy Detector Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_gradient_entropy_behavior()\n",
+      "functions_sample": [
+        "test_gradient_entropy_behavior"
+      ],
+      "imports_sample": [
+        "from gradient_entropy_core import GradientEntropyDetector"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/entropy_monitor_engine/gradient_entropy_detector/test_gradient_entropy_core.py",
+      "relative_to_candidate": "gradient_entropy_detector/test_gradient_entropy_core.py",
+      "sha256": "31ed970d25dca290693c04453a47f86f746dbd60105895b0b71709fa94047154",
+      "size_bytes": 388
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "cad5f6c0629fded621c4375c1295dd42537fa769de9b62fe19b394e0421aa969",
+      "excerpt_start": "{\n  \"engine\": \"gradient_entropy_detector\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"gradient_entropy_detector_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Detects gradient shifts in recursion entropy levels. Identifies rapid acceleration of decay or unexpected phase destabilization patterns in symbolic field behavior.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "gradient_entropy_detector",
+        "version",
+        "frozen_as",
+        "gradient_entropy_detector_frozen_v1",
+        "frozen_on",
+        "description",
+        "Detects",
+        "gradient",
+        "shifts",
+        "recursion",
+        "entropy",
+        "levels",
+        "Identifies",
+        "rapid",
+        "acceleration",
+        "decay",
+        "unexpected",
+        "phase",
+        "destabilization",
+        "patterns",
+        "symbolic",
+        "field",
+        "behavior",
+        "author"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/entropy_monitor_engine/gradient_entropy_detector/engine_manifest.json",
+      "relative_to_candidate": "gradient_entropy_detector/engine_manifest.json",
+      "sha256": "cad5f6c0629fded621c4375c1295dd42537fa769de9b62fe19b394e0421aa969",
+      "size_bytes": 439
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/entropy_monitor_engine",
+  "created_at": "2026-05-16_092628",
+  "crosscheck_id": "ERE-entropy_monitor_engine-2026-05-16_092628",
+  "deterministic_brief": {
+    "classes_sample": [
+      "EntropyMonitor",
+      "GradientEntropyDetector"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Core",
+      "Detect",
+      "Detector",
+      "Detects",
+      "Engine",
+      "Entropy",
+      "Frozen",
+      "Functions",
+      "Gradient",
+      "Identifies",
+      "Monitor",
+      "Monitors",
+      "Overview",
+      "Records",
+      "Supports",
+      "The",
+      "Web",
+      "__init__",
+      "acceleration",
+      "accelerators"
+    ],
+    "imports_sample": [
+      "from entropy_monitor_core import EntropyMonitor",
+      "from gradient_entropy_core import GradientEntropyDetector"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`entropy_monitor_engine` appears to be a local AI.Web engine/component. The bound source evidence includes 8 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# test_entropy_monitor_core.py ",
+      "# entropy_monitor_core.py # Entropy Monitor Core",
+      "# Entropy Monitor Engine (Frozen v1.0.01) ",
+      "{   \"engine\": \"entropy_monitor_engine\","
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_092607_entropy_monitor_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "27c42954766f56c7f7be88df3ffeb11c1c5c149693d69f88b1eeb6229d1deeb3",
+  "engine_family": "entropy_monitor_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_entropy_monitor_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "7b12362a010ccec1ac117ced941a87e001623f547efc262ee180d8e05a88f76a",
+  "evidence_id": "EEB-e7babb77acece4bb",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "EntropyMonitor",
+      "GradientEntropyDetector"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "entropy_monitor_core.py",
+      "README.md",
+      "gradient_entropy_detector/README.md"
+    ],
+    "functions_mentioned": [
+      "Entropy",
+      "Monitor",
+      "Engine",
+      "Frozen",
+      "The",
+      "and",
+      "entropy",
+      "Web",
+      "recursion",
+      "real",
+      "time",
+      "monitor",
+      "system",
+      "symbolic",
+      "health",
+      "engine",
+      "Monitors",
+      "decay",
+      "Gradient",
+      "Detector",
+      "shifts",
+      "identifies",
+      "drift",
+      "phase",
+      "Core",
+      "Detect",
+      "gradient",
+      "Identifies"
+    ],
+    "imports_mentioned": [
+      "from entropy_monitor_core import EntropyMonitor",
+      "from gradient_entropy_core import GradientEntropyDetector"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 21.04,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "167891738ad9e6b2f91abafd147717145af7b8c59195aaf75b24a5d9e862d9ad",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nMonitors system recursion entropy to detect symbolic decay, predict phase drift, and maintain AI.Web system stability through real-time entropy averaging and gradient shift analysis.  \n\nLikely System Role:  \nCore health monitoring component for AI.Web, integrating entropy tracking with drift prediction models to ensure recursive process stability.  \n\nEvidence Used:  \n- `entropy_monitor_core.py`: Implements `EntropyMonitor` class for entropy recording and averaging.  \n- Test scripts validate entropy calculation logic.  \n- README.md and manifest.json describe entropy monitoring, phase drift prediction, and integration with gradient detectors.  \n- `GradientEntropyDetector` class identifies entropy shifts for drift risk analysis.  \n\nRisks / Uncertainties:  \n- Reliance on accurate entropy measurement inputs; flawed data could mislead drift predictions.  \n- Integration with gradient detectors is critical for comprehensive monitoring but requires proper system linkage.  \n- \"Frozen\" status implies no further development, but long-term reliability depends on external systems (e.g., gradient detectors).  \n\nRecommendation Draft:  \nApprove deployment as a core health monitoring tool. Ensure integration with gradient detectors for robust drift prediction. Monitor entropy data quality to prevent false positives/negatives.  \n\nSuggested Nic Action:  \nApprove engine for deployment, confirm integration with gradient detection systems, and establish protocols for entropy data validation and drift response."
+  },
+  "llm_sections": {
+    "evidence_used": "- `entropy_monitor_core.py`: Implements `EntropyMonitor` class for entropy recording and averaging.  \n- Test scripts validate entropy calculation logic.  \n- README.md and manifest.json describe entropy monitoring, phase drift prediction, and integration with gradient detectors.  \n- `GradientEntropyDetector` class identifies entropy shifts for drift risk analysis.",
+    "likely_system_role": "Core health monitoring component for AI.Web, integrating entropy tracking with drift prediction models to ensure recursive process stability.",
+    "plain_english_purpose": "Monitors system recursion entropy to detect symbolic decay, predict phase drift, and maintain AI.Web system stability through real-time entropy averaging and gradient shift analysis.",
+    "recommendation_draft": "Approve deployment as a core health monitoring tool. Ensure integration with gradient detectors for robust drift prediction. Monitor entropy data quality to prevent false positives/negatives.",
+    "risks_uncertainties": "- Reliance on accurate entropy measurement inputs; flawed data could mislead drift predictions.  \n- Integration with gradient detectors is critical for comprehensive monitoring but requires proper system linkage.  \n- \"Frozen\" status implies no further development, but long-term reliability depends on external systems (e.g., gradient detectors).",
+    "suggested_nic_action": "Approve engine for deployment, confirm integration with gradient detection systems, and establish protocols for entropy data validation and drift response."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nMonitors system recursion entropy to detect symbolic decay, predict phase drift, and maintain AI.Web system stability through real-time entropy averaging and gradient shift analysis.  \n\nLikely System Role:  \nCore health monitoring component for AI.Web, integrating entropy tracking with drift prediction models to ensure recursive process stability.  \n\nEvidence Used:  \n- `entropy_monitor_core.py`: Implements `EntropyMonitor` class for entropy recording and averaging.  \n- Test scripts validate entropy calculation logic.  \n- README.md and manifest.json describe entropy monitoring, phase drift prediction, and integration with gradient detectors.  \n- `GradientEntropyDetector` class identifies entropy shifts for drift risk analysis.  \n\nRisks / Uncertainties:  \n- Reliance on accurate entropy measurement inputs; flawed data could mislead drift predictions.  \n- Integration with gradient detectors is critical for comprehensive monitoring but requires proper system linkage.  \n- \"Frozen\" status implies no further development, but long-term reliability depends on external systems (e.g., gradient detectors).  \n\nRecommendation Draft:  \nApprove deployment as a core health monitoring tool. Ensure integration with gradient detectors for robust drift prediction. Monitor entropy data quality to prevent false positives/negatives.  \n\nSuggested Nic Action:  \nApprove engine for deployment, confirm integration with gradient detection systems, and establish protocols for entropy data validation and drift response.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

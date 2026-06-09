@@ -1,0 +1,55 @@
+{
+  "baseline_packet_sha256": "fadd699232ef161cd96612a129ebb597a1b09b2a6348151787c6861ad4e3ee71",
+  "blocked_live_effects": [
+    "validation record",
+    "capsule finalization",
+    "CT minting",
+    "Influence Ledger entry",
+    "Investment Ledger entry",
+    "public attribution",
+    "MEA state write",
+    "RMC output memory write",
+    "Chroma write"
+  ],
+  "build_id": "CE-CONTROLLED-CONTRIBUTION-EVENT-BUILD-004",
+  "delivery_roots": [
+    "forge/",
+    "aiweb/",
+    "identity-vault/"
+  ],
+  "files_before_delivery_manifest": [
+    "aiweb/apps/forge-operator-console/src/api/forgeClient.ts",
+    "aiweb/apps/forge-operator-console/src/api/types.ts",
+    "aiweb/apps/forge-operator-console/src/shell/RightAuditRail.tsx",
+    "aiweb/apps/forge-operator-console/src/tabs/ContributionEconomyTab.tsx",
+    "forge/contribution_economy_v1/controlled_writes/__init__.py",
+    "forge/contribution_economy_v1/controlled_writes/build004_ce_evt_000001.py",
+    "forge/contribution_economy_v1/controlled_writes/build004_core_extension.sql",
+    "forge/contribution_economy_v1/operator_surface/read_only_status.py",
+    "forge/main.py",
+    "forge/scripts/README_ce_controlled_event_build004.md",
+    "forge/scripts/ce_controlled_event_build004_apply.py",
+    "forge/scripts/ce_controlled_event_build004_verify.py",
+    "forge/scripts/test_ce_controlled_event_build004.py",
+    "identity-vault/schema_extensions/contribution_economy_internal_persistence_consent_build004.sql",
+    "identity-vault/service_contracts/contribution_economy_controlled_persistence_build004.v1.json"
+  ],
+  "locked_capsule_candidate_id": "CE-CAP-CAND-000001",
+  "locked_event_id": "CE-EVT-000001",
+  "permitted_live_writes": [
+    "one internal persistence consent event scoped to CE-EVT-000001",
+    "one Identity Vault audit event for that scope grant",
+    "one evidence manifest",
+    "one Contribution Event CE-EVT-000001",
+    "one non-finalized Memory Capsule Candidate CE-CAP-CAND-000001",
+    "one controlled write authorization and receipt"
+  ],
+  "principal_id": "ivp_nic_bogaert_contribution_owner_v1",
+  "required_evidence_artifact_sha256": {
+    "BUILD003_INSTALL_RESULTS_UPLOAD_20260530_202127_UTC.tar.gz": "ca94a1fe1994103c684a46767012cfd4db416a5da384fb4e8ec2e29811c7b7ee",
+    "BUILD003_LIVE_ACTIVATION_RESULTS_20260530_202705_UTC.tar.gz": "2befbcd3dbbd31032c2a1af8a4ee91d2cbdf2e740dc9c78fbc85297f7bcdd915",
+    "aiweb_ce_operator_surface_build003_normal_overlay_repack.tar.gz": "0b843e5544fd0761793e505d72a90558311c8a8be963a329ac65846328d148a5"
+  },
+  "schema_version": "ce_controlled_event_build004_delivery_manifest_v1",
+  "title": "Controlled Identity-Bound Contribution Event and Non-Finalized Memory Capsule Candidate Persistence"
+}

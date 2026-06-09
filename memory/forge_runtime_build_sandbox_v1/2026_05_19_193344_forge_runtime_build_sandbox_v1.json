@@ -1,0 +1,155 @@
+{
+  "active_patch": "Patch 158 \u2014 Runtime Build Sandbox Plan / Dry Run",
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_owned_report_write_authority": true,
+    "forge_owned_sandbox_preview_write_authority": true,
+    "live_restore_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "runtime_file_write_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [
+    {
+      "id": "B01",
+      "summary": "Patch 158 does not authorize live AI.Web runtime writes.",
+      "type": "live_write"
+    },
+    {
+      "id": "B02",
+      "summary": "Dry-run output must be verified before any candidate file plan may be considered.",
+      "type": "verification"
+    },
+    {
+      "id": "B03",
+      "summary": "Human approval and live-eligibility gates remain required before live writes.",
+      "type": "approval"
+    }
+  ],
+  "created_at": "2026-05-19T19:33:44",
+  "current_phase": "S19D \u2014 Runtime Build Sandbox Plan / Dry Run",
+  "dry_run_ready": true,
+  "future_paths_not_created": [
+    {
+      "authority": "future path only; not created",
+      "created_by_patch_158": false,
+      "kind": "future_runtime_module_directory",
+      "path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager"
+    },
+    {
+      "authority": "future path only; not created",
+      "created_by_patch_158": false,
+      "kind": "future_runtime_module_manifest",
+      "path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/runtime_manifest.json"
+    },
+    {
+      "authority": "future path only; not created",
+      "created_by_patch_158": false,
+      "kind": "future_runtime_module_readme",
+      "path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/README.md"
+    }
+  ],
+  "gates": [
+    {
+      "detail": "FORGE_RUNTIME_BUILD_PLAN_READY_PLANNING_ONLY",
+      "id": "G01",
+      "name": "Runtime build plan exists",
+      "status": "PASS"
+    },
+    {
+      "detail": "failsafe_manager",
+      "id": "G02",
+      "name": "Selected candidate exists",
+      "status": "PASS"
+    },
+    {
+      "detail": "PASS",
+      "id": "G03",
+      "name": "Candidate canonical test status clean",
+      "status": "PASS"
+    },
+    {
+      "detail": "no live runtime write authority granted by Patch 158",
+      "id": "G04",
+      "name": "Live write authority locked",
+      "status": "PASS"
+    },
+    {
+      "detail": "FORGE_SNAPSHOT_CREATE_VERIFY_PASS",
+      "id": "G05",
+      "name": "Snapshot verification evidence exists",
+      "status": "PASS"
+    },
+    {
+      "detail": "shadow_match=None problems=0",
+      "id": "G06",
+      "name": "Shadow restore forensic diff clean",
+      "status": "WARN"
+    },
+    {
+      "detail": "CANDIDATE_OR_UNKNOWN",
+      "id": "G07",
+      "name": "Source authority finality",
+      "status": "WARN"
+    },
+    {
+      "detail": "dry-run writes only to Forge-owned memory/forge_runtime_build_sandboxes_v1",
+      "id": "G08",
+      "name": "Dry-run scope",
+      "status": "PASS"
+    }
+  ],
+  "live_build_ready": false,
+  "next_commands": [
+    "forge-runtime-build-sandbox-dry-run latest",
+    "forge-runtime-build-sandbox-show dry-run",
+    "forge-runtime-build-sandbox-export",
+    "forge-dashboard-roadmap-build",
+    "forge-status-api-build",
+    "forge-dashboard-build",
+    "Install Patch 159 when ready"
+  ],
+  "next_patch": "Patch 159 \u2014 Runtime Build Sandbox Verification / Candidate File Plan",
+  "plain_english": "Forge has a no-live-write sandbox/dry-run plan for the selected AI.Web runtime module candidate.",
+  "planning_ready": true,
+  "recommended_next_patch": "Patch 159 \u2014 Runtime Build Sandbox Verification / Candidate File Plan",
+  "report_type": "FORGE_RUNTIME_BUILD_SANDBOX_PLAN_V1",
+  "schema_version": "forge_runtime_build_sandbox_v1_patch158",
+  "selected_candidate": {
+    "canonical_path": "aiweb/engines/failsafe_manager",
+    "canonical_status": "CANONICAL_INCLUDED",
+    "cautions": [
+      "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+    ],
+    "dependency_kind": "canonical_runtime_module",
+    "eligible_for_planning": true,
+    "engine": "failsafe_manager",
+    "live_build_ready": false,
+    "live_write_authority": false,
+    "live_write_ready": false,
+    "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+    "priority": "P1_CORE",
+    "relationship_count": 0,
+    "required_human_checks": [
+      "compare_multiple_active_variants",
+      "inspect_high_duplicate_variant_count"
+    ],
+    "risk_level": "LOW",
+    "risk_score": 25,
+    "rollback_needs": [
+      "snapshot_or_file_backup_before_live_patch",
+      "current_sha_readback_before_apply",
+      "post_write_disk_verification"
+    ],
+    "runtime_domain": "GOVERNANCE_AND_SAFETY",
+    "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+    "test_status": "PASS"
+  },
+  "status": "FORGE_RUNTIME_BUILD_SANDBOX_PLAN_READY",
+  "tool_state": {
+    "expected_commands": 598,
+    "tools": 522,
+    "trust_level": 5.0
+  }
+}

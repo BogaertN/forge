@@ -1,0 +1,17 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T07:58:24",
+  "next_commands": [
+    "forge-dashboard-export",
+    "Install Patch 129 when ready"
+  ],
+  "next_phase": "MODE_REGISTRY",
+  "plain_english": "Read-only dashboard artifact exists. The next safe move is explicit Forge mode registry before adding stronger agent behavior.",
+  "recommended_next_patch": "Patch 129 \u2014 Mode Registry",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "schema_version": "forge_next_status_v1_patch128",
+  "status": "NEXT_PATCH_REQUIRED"
+}

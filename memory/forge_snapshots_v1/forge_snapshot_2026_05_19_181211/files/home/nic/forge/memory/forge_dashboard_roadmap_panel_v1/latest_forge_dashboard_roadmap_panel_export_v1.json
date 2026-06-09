@@ -1,0 +1,18 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-19T17:18:03",
+  "current_phase": "S12 \u2014 Dashboard roadmap panel",
+  "next_patch": "Patch 148 \u2014 Source Authority Runtime Binder Hardening",
+  "panel_count": 4,
+  "panel_status": "FORGE_DASHBOARD_ROADMAP_PANEL_READY",
+  "report_type": "FORGE_DASHBOARD_ROADMAP_PANEL_EXPORT_V1",
+  "schema_version": "forge_dashboard_roadmap_panel_v1_patch147",
+  "status": "FORGE_DASHBOARD_ROADMAP_PANEL_EXPORT_READY"
+}

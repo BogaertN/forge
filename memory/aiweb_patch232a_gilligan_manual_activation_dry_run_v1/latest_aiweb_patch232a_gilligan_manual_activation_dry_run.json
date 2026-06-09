@@ -1,0 +1,106 @@
+{
+  "activation_command_executed": false,
+  "activation_command_installed": false,
+  "allowed_targets_this_patch": [
+    "gilligan.local"
+  ],
+  "blockers": [],
+  "dry_run_only": true,
+  "generated_at_utc": "20260524_010516_UTC",
+  "governance_meaning_of_active": {
+    "forge_may_log_gilligan_handshake_receipts": true,
+    "forge_may_read_gilligan_permissions": true,
+    "forge_may_select_gilligan_identity_context": true,
+    "forge_may_use_gilligan_rmc_namespace_pointer": true,
+    "gilligan_can_bypass_forge": false,
+    "gilligan_can_create_patches_without_approval": false,
+    "gilligan_can_execute_tools_by_itself": false,
+    "gilligan_can_mutate_identity_vault": false,
+    "gilligan_can_write_memory_by_itself": false
+  },
+  "identity_mutation_preview": {
+    "after_preview": {
+      "activation_manifest_hash": "c9f20e59c8aad9cedfcf123ff83e709674db49c9ea737f1f15ea80e64ccff604",
+      "activation_receipt_type": "forge_manual_activation_receipt",
+      "activation_state": "active_governed",
+      "is_active": 1,
+      "last_validated_at": "20260524_010516_UTC",
+      "session_state": "initialize_only_if_missing_or_explicitly_allowed"
+    },
+    "agent_id": "gilligan.local",
+    "allowed_fields_to_change_in_future_apply": [
+      "activation_state",
+      "is_active",
+      "last_validated_at",
+      "activation_receipt_id",
+      "activation_profile_hash",
+      "activation_manifest_hash",
+      "session_state (only if missing or explicitly allowed)"
+    ],
+    "before": {
+      "activation_state": "inactive_draft",
+      "is_active": false,
+      "namespace_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local",
+      "profile_hash": ""
+    },
+    "fields_confirmed_unchanged_by_future_contract": [
+      "agent_id",
+      "role",
+      "permissions",
+      "forbidden_actions",
+      "service_contracts",
+      "profile_hash source fields",
+      "rmc_namespace_pointer",
+      "governance_boundaries"
+    ],
+    "future_patch_expected_to_write_identity_vault_database": true,
+    "will_write_identity_vault_database_in_this_patch": false
+  },
+  "important_note": "This is a dry-run gate. It previews the activation mutation but performs no Identity Vault write and no activation.",
+  "manual_activation_apply_executed": false,
+  "manual_activation_apply_installed": false,
+  "name": "Gilligan Manual Activation Dry-Run Gate",
+  "next_expected_step_if_ready": "Patch 232B \u2014 install and run the Gilligan-only manual activation apply command.",
+  "ok": true,
+  "patch": "232A",
+  "prior_patch231b": {
+    "exists": true,
+    "ok": true,
+    "path": "/home/nic/forge/memory/aiweb_patch231b_identity_activation_preflight_all_v1/latest_aiweb_patch231b_identity_activation_preflight_all.json",
+    "ready_agents_count": 3,
+    "target_agents_count": 3,
+    "verdict": "ALL_TARGET_AGENTS_READY_FOR_MANUAL_ACTIVATION"
+  },
+  "prior_patch232": {
+    "exists": true,
+    "ok": true,
+    "path": "/home/nic/forge/memory/aiweb_patch232_manual_activation_command_plan_v1/latest_aiweb_patch232_manual_activation_command_plan.json",
+    "verdict": "MANUAL_ACTIVATION_COMMAND_PLAN_WRITTEN"
+  },
+  "recomputed_gilligan_preflight": {
+    "blockers_count": 0,
+    "checks_passed": 17,
+    "checks_total": 17,
+    "latest_per_agent_report_path": "/home/nic/forge/memory/aiweb_patch231a_identity_activation_preflight_v1/gilligan.local_preflight_latest.json",
+    "ok": true,
+    "verdict": "READY_FOR_MANUAL_ACTIVATION"
+  },
+  "refused_targets_this_patch": [
+    "athena.local",
+    "neo.local",
+    "*"
+  ],
+  "target_agent": "gilligan.local",
+  "verdict": "GILLIGAN_MANUAL_ACTIVATION_DRY_RUN_READY",
+  "writes_performed": {
+    "agent_identity_activation_performed": false,
+    "echoforge_creation_performed": false,
+    "env_secret_values_read": false,
+    "forge_owned_dry_run_report": true,
+    "identity_vault_database_written": false,
+    "manual_activation_command_executed": false,
+    "manual_activation_command_installed": false,
+    "protoforge2_execution_performed": false,
+    "rmc_memory_written": false
+  }
+}

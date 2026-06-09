@@ -1,0 +1,38 @@
+{
+  "build_id": "GENERAL-PIPELINE-OUTCOME-CLOSURE-REFUSAL-CONTAINMENT-BUILD-GP-009",
+  "schema_version": "general_pipeline_outcome_closure_refusal_containment_build_gp009",
+  "depends_on": "GENERAL-PIPELINE-MANIFEST-CONTRACT-V2-BUILD-GP-008",
+  "purpose": "Complete existing-domain outcome migration by requiring hash-bound in-memory refusal/containment receipts for every modeled non-delivery pipeline state.",
+  "modified_runtime_files": [
+    "rmc_engine_v1/general_pipeline/__init__.py",
+    "rmc_engine_v1/general_pipeline/pipeline.py"
+  ],
+  "new_runtime_files": [
+    "rmc_engine_v1/general_pipeline/outcome_contract_v2.py",
+    "rmc_engine_v1/general_pipeline/gp009_outcome_closure.py"
+  ],
+  "new_verification_files": [
+    "scripts/test_general_pipeline_outcome_closure_build_gp009.py",
+    "scripts/general_pipeline_outcome_closure_build_gp009_verify.py",
+    "scripts/README_general_pipeline_outcome_closure_build_gp009.md",
+    "scripts/MEA_GENERAL_PIPELINE_BUILD_GP009_DELIVERY_MANIFEST.json"
+  ],
+  "boundaries": {
+    "modifies_mea_modules": false,
+    "adds_new_domain": false,
+    "promotes_external_dependency": false,
+    "third_party_components_installed": [],
+    "third_party_components_imported": [],
+    "adds_corpus_ingestion": false,
+    "adds_external_provenance_registry": false,
+    "writes_memory": false,
+    "writes_identity_vault": false,
+    "writes_contribution_economy": false,
+    "mints_ct": false,
+    "writes_ledgers": false,
+    "changes_routes": false,
+    "changes_ui": false,
+    "success_receipt_reused": "DeliveryAuthorizationReceiptV2_from_GP008",
+    "non_delivery_receipt_added": "NonDeliveryOutcomeReceiptV2"
+  }
+}

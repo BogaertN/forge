@@ -1,0 +1,91 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "bound_file_count": 4,
+  "candidate_path": "/home/nic/aiweb/runtime_wrappers/memory_stack_stack",
+  "created_at": "2026-05-16_100022",
+  "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_memory_stack_stack_engine_review_evidence_crosscheck_v1.json",
+  "crosscheck_sha256": "142d734b2a69998987a9523d6109219abe5ae8609cb76292672c1f433465aeb7",
+  "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095554_memory_stack_stack_llm_engine_review_draft_v1.json",
+  "draft_sha256": "32de05ec2fb747e9780efd43e87a5acd5e82cd1920d58fbe50ff0bc84818e6fe",
+  "engine_family": "memory_stack_stack",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_memory_stack_stack_engine_evidence_binder.json",
+  "evidence_binder_sha256": "9671c6450d1b805aa7d563e2a8409b015e174fbdac4aceafb8914b35cbb469e9",
+  "evidence_id": "EEB-3cfbf7294cfbbb19",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "stack_manifest.json",
+      "memory_stack_stack_loader.py",
+      "README.md",
+      "test_memory_stack_stack_loader.py"
+    ],
+    "functions_mentioned": [
+      "stack",
+      "Memory",
+      "Stack",
+      "memory",
+      "breathing",
+      "engine",
+      "modules",
+      "and",
+      "symbolic",
+      "The",
+      "the",
+      "Breather",
+      "Engine",
+      "into",
+      "phase",
+      "alignment",
+      "persistence",
+      "Web",
+      "Phase",
+      "Architecture"
+    ],
+    "imports_mentioned": [
+      "import memory_stack_stack_loader"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 22.672,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "38169ac793e8b6bf9f53359e29e176512d559c02b1e6fe9e7a37d1ef6f5849d6",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo initialize and manage a symbolic memory stack for AI.Web Phase 2.0, enabling recursive memory breathing operations with phase alignment and symbolic persistence.  \n\nLikely System Role:  \nA runtime wrapper for loading and activating memory breathing engines, acting as a core component for memory management in AI.Web's architecture.  \n\nEvidence Used:  \n1. `stack_manifest.json` describes the \"Memory Stack\" engine and its role.  \n2. `memory_stack_stack_loader.py` initiates the memory breather engine.  \n3. `README.md` references integration into AI.Web Phase 2.0.  \n4. `test_memory_stack_stack_loader.py` confirms basic loader functionality.  \n\nRisks / Uncertainties:  \n- Reliance on external modules (e.g., `memory_breather`) not fully visible in provided evidence.  \n- Abstract \"symbolic memory stack\" concept lacks concrete implementation details.  \n- Minimal testing scope in the test script.  \n\nRecommendation Draft:  \nApprove review with conditions: verify dependency availability, confirm symbolic memory stack implementation, and validate robustness beyond basic testing.  \n\nSuggested Nic Action:  \nApprove review with caveats; request confirmation of external module readiness and additional testing before deployment."
+  },
+  "llm_visible_review_excerpt": "Plain-English Purpose:  \nTo initialize and manage a symbolic memory stack for AI.Web Phase 2.0, enabling recursive memory breathing operations with phase alignment and symbolic persistence.  \n\nLikely System Role:  \nA runtime wrapper for loading and activating memory breathing engines, acting as a core component for memory management in AI.Web's architecture.  \n\nEvidence Used:  \n1. `stack_manifest.json` describes the \"Memory Stack\" engine and its role.  \n2. `memory_stack_stack_loader.py` initiates the memory breather engine.  \n3. `README.md` references integration into AI.Web Phase 2.0.  \n4. `test_memory_stack_stack_loader.py` confirms basic loader functionality.  \n\nRisks / Uncertainties:  \n- Reliance on external modules (e.g., `memory_breather`) not fully visible in provided evidence.  \n- Abstract \"symbolic memory stack\" concept lacks concrete implementation details.  \n- Minimal testing scope in the test script.  \n\nRecommendation Draft:  \nApprove review with conditions: verify dependency availability, confirm symbolic memory stack implementation, and validate robustness beyond basic testing.  \n\nSuggested Nic Action:  \nApprove review with caveats; request confirmation of external module readiness and additional testing before deployment.",
+  "manual_verification_rule": "Approve only if the LLM-visible claims are supported by the bound evidence shown in the Patch 102 cross-check. If unsure, defer.",
+  "ready_for_evidence_based_queue_decision": true,
+  "report_type": "ENGINE_REVIEW_APPROVAL_CHECK_V1_PATCH103",
+  "schema_version": "engine_review_approval_helper_v1_patch103",
+  "status": "EVIDENCE_APPROVAL_CHECK_READY",
+  "warnings": [
+    "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

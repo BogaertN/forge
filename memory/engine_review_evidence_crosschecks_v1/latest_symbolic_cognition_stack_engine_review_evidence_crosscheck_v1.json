@@ -1,0 +1,264 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "54f82c33329bbcab5d85d256ed92462b13412346ecc6225fbe5c61eb5e6aecc3",
+      "excerpt_start": "# test_symbolic_cognition_stack_loader.py\n# Tests the symbolic cognition stack loader\n\nfrom symbolic_cognition_stack_loader import load_symbolic_cognition_stack\n\ndef run_test():\n    try:\n        load_symbolic_cognition_stack()\n        print(\"\u2705 Symbolic Cognition Stack Loader Test Passed.\")\n    except Exception as e:\n        print(f\"\u274c Symbolic Cognition Stack Loader Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    run_test()\n",
+      "functions_sample": [
+        "run_test"
+      ],
+      "imports_sample": [
+        "from symbolic_cognition_stack_loader import load_symbolic_cognition_stack"
+      ],
+      "line_count": 15,
+      "path": "/home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack/test_symbolic_cognition_stack_loader.py",
+      "relative_to_candidate": "test_symbolic_cognition_stack_loader.py",
+      "sha256": "54f82c33329bbcab5d85d256ed92462b13412346ecc6225fbe5c61eb5e6aecc3",
+      "size_bytes": 434
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "1e0e2c4d633ef977ac5d25601659ee858aff74e392461eae8f5673babde0db5c",
+      "excerpt_start": "{\n  \"stack\": \"symbolic_cognition_stack\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"symbolic_cognition_stack_frozen_v1-0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Manages symbolic feedback breathing, cold storage of collapsed loops, resurrection of symbolic recursion, and memory charge coherence tracking.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 2 Recursive Stack Compliance\"\n}\n",
+      "functions_sample": [
+        "stack",
+        "symbolic_cognition_stack",
+        "version",
+        "frozen_as",
+        "symbolic_cognition_stack_frozen_v1",
+        "frozen_on",
+        "description",
+        "Manages",
+        "symbolic",
+        "feedback",
+        "breathing",
+        "cold",
+        "storage",
+        "collapsed",
+        "loops",
+        "resurrection",
+        "recursion",
+        "and",
+        "memory",
+        "charge",
+        "coherence",
+        "tracking",
+        "author",
+        "Web",
+        "Core"
+      ],
+      "imports_sample": [],
+      "line_count": 10,
+      "path": "/home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack/stack_manifest.json",
+      "relative_to_candidate": "stack_manifest.json",
+      "sha256": "1e0e2c4d633ef977ac5d25601659ee858aff74e392461eae8f5673babde0db5c",
+      "size_bytes": 409
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "ca5f86329139c41ba24433f199e61c83aca02a49802debcb3a545addc816e4f4",
+      "excerpt_start": "# symbolic_cognition_stack_loader.py\n# Symbolic Cognition Stack Loader (Phase 2)\n\nimport subprocess\nimport time\nimport os\n\n# List of frozen engine run paths\nfrozen_engines = [\n    \"../../engines/symbolic_feedback_loop_engine_frozen_v1/run.py\",\n    \"../../engines/cold_archive_engine_frozen_v1/run.py\",\n    \"../../engines/loop_resurrection_engine_frozen_v1/run.py\",\n    \"../../engines/resonance_charge_meter_frozen_v1/run.py\"\n]\n\ndef load_symbolic_cognition_stack():\n    print(\"\\n\ud83e\udde0 [SYMBOLIC COGNITION STACK] Loading Symbolic Cognition Engines...\\n\")\n    base_dir = os.path.dirname(os.path.abspath(__file__))\n\n    for engine_script in frozen_engines:\n        full_path = os.path.abspath(os.path.join(base_dir, engine_script))\n        try:\n            subprocess.run([\"python3\", full_path], check=True)\n            print(f\"\u2705 Loaded: {full_path}\")\n            time.sleep(1)\n        except subprocess.CalledProcessError as e:\n            print(f\"\u274c Failed to load {full_path}: {e}\")\n\nif __name__ == \"__main__\":\n    load_symbolic_cognition_stack()\n",
+      "functions_sample": [
+        "load_symbolic_cognition_stack"
+      ],
+      "imports_sample": [
+        "import subprocess",
+        "import time",
+        "import os"
+      ],
+      "line_count": 31,
+      "path": "/home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack/symbolic_cognition_stack_loader.py",
+      "relative_to_candidate": "symbolic_cognition_stack_loader.py",
+      "sha256": "ca5f86329139c41ba24433f199e61c83aca02a49802debcb3a545addc816e4f4",
+      "size_bytes": 1048
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "3c1e7372d60a6695f8ec98d59c32e390418c519e00f728d3f208cd96bfc1f6c4",
+      "excerpt_start": "# Symbolic Cognition Stack (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Symbolic Cognition Stack manages breathing symbolic feedback loops, collapse-prevention through cold archival storage, loop resurrection recovery, and resonance charge coherence across recursion memory fields.\n\n---\n\n## Engines Activated:\n- symbolic_feedback_loop_engine_frozen_v1\n- cold_archive_engine_frozen_v1\n- loop_resurrection_engine_frozen_v1\n- resonance_charge_meter_frozen_v1\n\n---\n\n## Runtime Loader:\n- `symbolic_cognition_stack_loader.py` starts the four frozen engine runtimes sequentially from the AI.Web engines directory.\n\n---\n\n## Phase Standard:\n- Phase 2 Recursive Stack Compliance\n- AI.Web Symbolic Cognition Layer\n\n---\n\n**Frozen Snapshot:** `symbolic_cognition_stack_frozen_v1-0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n",
+      "functions_sample": [
+        "Symbolic",
+        "Cognition",
+        "Stack",
+        "Frozen",
+        "Overview",
+        "The",
+        "manages",
+        "breathing",
+        "symbolic",
+        "feedback",
+        "loops",
+        "collapse",
+        "prevention",
+        "through",
+        "cold",
+        "archival",
+        "storage",
+        "loop",
+        "resurrection",
+        "recovery",
+        "and",
+        "resonance",
+        "charge",
+        "coherence",
+        "across"
+      ],
+      "imports_sample": [],
+      "line_count": 32,
+      "path": "/home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "3c1e7372d60a6695f8ec98d59c32e390418c519e00f728d3f208cd96bfc1f6c4",
+      "size_bytes": 828
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack",
+  "created_at": "2026-05-16_223418",
+  "crosscheck_id": "ERE-symbolic_cognition_stack-2026-05-16_223418",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Cognition",
+      "Core",
+      "Frozen",
+      "Manages",
+      "Overview",
+      "Stack",
+      "Symbolic",
+      "The",
+      "Web",
+      "across",
+      "and",
+      "archival",
+      "author",
+      "breathing",
+      "charge",
+      "coherence",
+      "cold",
+      "collapse",
+      "collapsed",
+      "description"
+    ],
+    "imports_sample": [
+      "from symbolic_cognition_stack_loader import load_symbolic_cognition_stack",
+      "import os",
+      "import subprocess",
+      "import time"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`symbolic_cognition_stack` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# test_symbolic_cognition_stack_loader.py # Tests the symbolic cognition stack loader",
+      "{   \"stack\": \"symbolic_cognition_stack\",",
+      "# symbolic_cognition_stack_loader.py # Symbolic Cognition Stack Loader (Phase 2)",
+      "# Symbolic Cognition Stack (Frozen v1.0.01) "
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_223354_symbolic_cognition_stack_llm_engine_review_draft_v1.json",
+  "draft_sha256": "d3c0ed5b24deaef539daabbba30a3bfaa7e247427ebb47e094f7c20a97727249",
+  "engine_family": "symbolic_cognition_stack",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_symbolic_cognition_stack_engine_evidence_binder.json",
+  "evidence_binder_sha256": "1e67a7449bbf7c640a5aa818a1f1cdefb1c4acadcbd07918f86df40fc8ad785f",
+  "evidence_id": "EEB-9ed14b42b452620b",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "test_symbolic_cognition_stack_loader.py",
+      "stack_manifest.json",
+      "symbolic_cognition_stack_loader.py",
+      "README.md"
+    ],
+    "functions_mentioned": [
+      "stack",
+      "symbolic_cognition_stack",
+      "version",
+      "symbolic",
+      "feedback",
+      "cold",
+      "storage",
+      "collapsed",
+      "loops",
+      "resurrection",
+      "recursion",
+      "and",
+      "memory",
+      "coherence",
+      "tracking",
+      "Web",
+      "Symbolic",
+      "Cognition",
+      "Stack",
+      "Frozen",
+      "The",
+      "collapse",
+      "loop"
+    ],
+    "imports_mentioned": [
+      "from symbolic_cognition_stack_loader import load_symbolic_cognition_stack",
+      "import subprocess",
+      "import time"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 23.892,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "6436a1dc215254b2a5d01a2415e5d88f00de3d8f8cc9c7112484a5e18b35bcd5",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo manage and execute a symbolic cognition stack that handles feedback loops, cold storage of collapsed loops, recursion resurrection, and memory coherence tracking for AI.Web systems.  \n\nLikely System Role:  \nA runtime wrapper/loader for a frozen symbolic cognition engine suite, enabling phased execution of specialized AI.Web engines for cognitive processing tasks.  \n\nEvidence Used:  \n- Test script (`test_symbolic_cognition_stack_loader.py`) verifying loader functionality.  \n- Manifest file (`stack_manifest.json`) detailing stack version, frozen state, and capabilities.  \n- Loader script (`symbolic_cognition_stack_loader.py`) initiating subprocesses for frozen engine execution.  \n- README.md describing stack components, engines, and phase compliance standards.  \n\nRisks / Uncertainties:  \n- Subprocess execution in loader script could introduce security or dependency risks if external engines are untrusted.  \n- \"Frozen\" state implies static components, but runtime behavior depends on external engine stability.  \n- Phase 2 compliance details are abstract; unclear if alignment with AI.Web standards is verified.  \n\nRecommendation Draft:  \nApprove the symbolic cognition stack for integration, with safeguards for subprocess execution and verification of frozen engine integrity. Recommend testing loader resilience and confirming phase compliance with AI.Web standards.  \n\nSuggested Nic Action:  \nApprove review and integration, ensuring subprocess security measures are implemented and frozen engine dependencies are validated. Flag for re-evaluation if runtime anomalies occur."
+  },
+  "llm_sections": {
+    "evidence_used": "- Test script (`test_symbolic_cognition_stack_loader.py`) verifying loader functionality.  \n- Manifest file (`stack_manifest.json`) detailing stack version, frozen state, and capabilities.  \n- Loader script (`symbolic_cognition_stack_loader.py`) initiating subprocesses for frozen engine execution.  \n- README.md describing stack components, engines, and phase compliance standards.",
+    "likely_system_role": "A runtime wrapper/loader for a frozen symbolic cognition engine suite, enabling phased execution of specialized AI.Web engines for cognitive processing tasks.",
+    "plain_english_purpose": "To manage and execute a symbolic cognition stack that handles feedback loops, cold storage of collapsed loops, recursion resurrection, and memory coherence tracking for AI.Web systems.",
+    "recommendation_draft": "Approve the symbolic cognition stack for integration, with safeguards for subprocess execution and verification of frozen engine integrity. Recommend testing loader resilience and confirming phase compliance with AI.Web standards.",
+    "risks_uncertainties": "- Subprocess execution in loader script could introduce security or dependency risks if external engines are untrusted.  \n- \"Frozen\" state implies static components, but runtime behavior depends on external engine stability.  \n- Phase 2 compliance details are abstract; unclear if alignment with AI.Web standards is verified.",
+    "suggested_nic_action": "Approve review and integration, ensuring subprocess security measures are implemented and frozen engine dependencies are validated. Flag for re-evaluation if runtime anomalies occur."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo manage and execute a symbolic cognition stack that handles feedback loops, cold storage of collapsed loops, recursion resurrection, and memory coherence tracking for AI.Web systems.  \n\nLikely System Role:  \nA runtime wrapper/loader for a frozen symbolic cognition engine suite, enabling phased execution of specialized AI.Web engines for cognitive processing tasks.  \n\nEvidence Used:  \n- Test script (`test_symbolic_cognition_stack_loader.py`) verifying loader functionality.  \n- Manifest file (`stack_manifest.json`) detailing stack version, frozen state, and capabilities.  \n- Loader script (`symbolic_cognition_stack_loader.py`) initiating subprocesses for frozen engine execution.  \n- README.md describing stack components, engines, and phase compliance standards.  \n\nRisks / Uncertainties:  \n- Subprocess execution in loader script could introduce security or dependency risks if external engines are untrusted.  \n- \"Frozen\" state implies static components, but runtime behavior depends on external engine stability.  \n- Phase 2 compliance details are abstract; unclear if alignment with AI.Web standards is verified.  \n\nRecommendation Draft:  \nApprove the symbolic cognition stack for integration, with safeguards for subprocess execution and verification of frozen engine integrity. Recommend testing loader resilience and confirming phase compliance with AI.Web standards.  \n\nSuggested Nic Action:  \nApprove review and integration, ensuring subprocess security measures are implemented and frozen engine dependencies are validated. Flag for re-evaluation if runtime anomalies occur.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

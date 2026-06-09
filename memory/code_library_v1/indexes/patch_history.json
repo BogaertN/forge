@@ -1,0 +1,312 @@
+[
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/2026-05-09_083015_PATCH_test_txt.txt",
+    "relative_path": "proposed_patches/2026-05-09_083015_PATCH_test_txt.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-09_083015_PATCH_test_txt.txt",
+    "size_bytes": 2164,
+    "sha256_16": "e7b85aa2c2f49e04",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T08:30:15"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/2026-05-09_084714_PATCH_test_txt.txt",
+    "relative_path": "proposed_patches/2026-05-09_084714_PATCH_test_txt.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-09_084714_PATCH_test_txt.txt",
+    "size_bytes": 2164,
+    "sha256_16": "f7b2bafb2585aaf2",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T08:47:14"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/2026-05-09_091325_PATCH_test_txt.txt",
+    "relative_path": "proposed_patches/2026-05-09_091325_PATCH_test_txt.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-09_091325_PATCH_test_txt.txt",
+    "size_bytes": 2164,
+    "sha256_16": "e5a59c1c660097f2",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T09:13:25"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/2026-05-09_094029_PATCH_test_txt.txt",
+    "relative_path": "proposed_patches/2026-05-09_094029_PATCH_test_txt.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-09_094029_PATCH_test_txt.txt",
+    "size_bytes": 2164,
+    "sha256_16": "5ae7c7a846a196e3",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T09:40:29"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/2026-05-09_133233_PATCH_test_txt.txt",
+    "relative_path": "proposed_patches/2026-05-09_133233_PATCH_test_txt.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-09_133233_PATCH_test_txt.txt",
+    "size_bytes": 2203,
+    "sha256_16": "92410c3dd35fc6f8",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T13:32:33"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/2026-05-09_143704_PATCH_README_md.txt",
+    "relative_path": "proposed_patches/2026-05-09_143704_PATCH_README_md.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-09_143704_PATCH_README_md.txt",
+    "size_bytes": 2486,
+    "sha256_16": "813d524c98670cac",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T14:37:04"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/2026-05-09_150857_PATCH_README_md.txt",
+    "relative_path": "proposed_patches/2026-05-09_150857_PATCH_README_md.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-09_150857_PATCH_README_md.txt",
+    "size_bytes": 2481,
+    "sha256_16": "6c5ecf7c58e1ac5a",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T15:08:57"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/2026-05-09_154616_PATCH_README_md.txt",
+    "relative_path": "proposed_patches/2026-05-09_154616_PATCH_README_md.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-09_154616_PATCH_README_md.txt",
+    "size_bytes": 2844,
+    "sha256_16": "fc1b14e82ecf419c",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T15:46:16"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/2026-05-11_172238_PATCH_test_symbolic_cognition_stack_loader_py.txt",
+    "relative_path": "proposed_patches/2026-05-11_172238_PATCH_test_symbolic_cognition_stack_loader_py.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-11_172238_PATCH_test_symbolic_cognition_stack_loader_py.txt",
+    "size_bytes": 2269,
+    "sha256_16": "6666455e582beddd",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-11T17:22:38"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/2026-05-11_180519_PATCH_test_symbolic_cognition_stack_loader_py.txt",
+    "relative_path": "proposed_patches/2026-05-11_180519_PATCH_test_symbolic_cognition_stack_loader_py.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-11_180519_PATCH_test_symbolic_cognition_stack_loader_py.txt",
+    "size_bytes": 2378,
+    "sha256_16": "a069e5576d65fbcc",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-11T18:05:19"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/2026-05-11_182625_PATCH_test_symbolic_cognition_stack_loader_py.txt",
+    "relative_path": "proposed_patches/2026-05-11_182625_PATCH_test_symbolic_cognition_stack_loader_py.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-11_182625_PATCH_test_symbolic_cognition_stack_loader_py.txt",
+    "size_bytes": 8701,
+    "sha256_16": "e51b236e6f7dea0b",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-11T18:26:25"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/diffs/2026-05-09_084749_DIFF_2026_05_09_083015_PATCH_test_txt.txt",
+    "relative_path": "proposed_patches/diffs/2026-05-09_084749_DIFF_2026_05_09_083015_PATCH_test_txt.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-09_084749_DIFF_2026_05_09_083015_PATCH_test_txt.txt",
+    "size_bytes": 1311,
+    "sha256_16": "1bdf2ba79c468059",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T08:47:49"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/diffs/2026-05-09_091406_DIFF_2026_05_09_083015_PATCH_test_txt.txt",
+    "relative_path": "proposed_patches/diffs/2026-05-09_091406_DIFF_2026_05_09_083015_PATCH_test_txt.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-09_091406_DIFF_2026_05_09_083015_PATCH_test_txt.txt",
+    "size_bytes": 1311,
+    "sha256_16": "bc3fdf81e57f64a8",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T09:14:06"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/diffs/2026-05-09_094151_DIFF_2026_05_09_094029_PATCH_test_txt.txt",
+    "relative_path": "proposed_patches/diffs/2026-05-09_094151_DIFF_2026_05_09_094029_PATCH_test_txt.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-09_094151_DIFF_2026_05_09_094029_PATCH_test_txt.txt",
+    "size_bytes": 1311,
+    "sha256_16": "0c1e6c81525cb1d2",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T09:41:51"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/diffs/2026-05-09_133322_DIFF_2026_05_09_133233_PATCH_test_txt.txt",
+    "relative_path": "proposed_patches/diffs/2026-05-09_133322_DIFF_2026_05_09_133233_PATCH_test_txt.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-09_133322_DIFF_2026_05_09_133233_PATCH_test_txt.txt",
+    "size_bytes": 1311,
+    "sha256_16": "d3162e9970b51aa3",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T13:33:22"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/diffs/2026-05-09_143746_DIFF_2026_05_09_143704_PATCH_README_md.txt",
+    "relative_path": "proposed_patches/diffs/2026-05-09_143746_DIFF_2026_05_09_143704_PATCH_README_md.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-09_143746_DIFF_2026_05_09_143704_PATCH_README_md.txt",
+    "size_bytes": 1477,
+    "sha256_16": "1c41659572f75446",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T14:37:46"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/diffs/2026-05-09_150947_DIFF_2026_05_09_150857_PATCH_README_md.txt",
+    "relative_path": "proposed_patches/diffs/2026-05-09_150947_DIFF_2026_05_09_150857_PATCH_README_md.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-09_150947_DIFF_2026_05_09_150857_PATCH_README_md.txt",
+    "size_bytes": 1451,
+    "sha256_16": "1b3fd92b88e86729",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T15:09:47"
+  },
+  {
+    "absolute_path": "/home/nic/forge/proposed_patches/diffs/2026-05-09_154646_DIFF_2026_05_09_154616_PATCH_README_md.txt",
+    "relative_path": "proposed_patches/diffs/2026-05-09_154646_DIFF_2026_05_09_154616_PATCH_README_md.txt",
+    "artifact_area": "proposed_patches",
+    "filename": "2026-05-09_154646_DIFF_2026_05_09_154616_PATCH_README_md.txt",
+    "size_bytes": 1550,
+    "sha256_16": "12d52ea78113a7a7",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T15:46:46"
+  },
+  {
+    "absolute_path": "/home/nic/forge/apply_plans/2026-05-09_091429_PLAN_test_txt.txt",
+    "relative_path": "apply_plans/2026-05-09_091429_PLAN_test_txt.txt",
+    "artifact_area": "apply_plans",
+    "filename": "2026-05-09_091429_PLAN_test_txt.txt",
+    "size_bytes": 2782,
+    "sha256_16": "2db466b5e5643eb1",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T09:14:29"
+  },
+  {
+    "absolute_path": "/home/nic/forge/apply_plans/2026-05-09_094520_PLAN_test_txt.txt",
+    "relative_path": "apply_plans/2026-05-09_094520_PLAN_test_txt.txt",
+    "artifact_area": "apply_plans",
+    "filename": "2026-05-09_094520_PLAN_test_txt.txt",
+    "size_bytes": 2782,
+    "sha256_16": "860f5c0131639a37",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T09:45:20"
+  },
+  {
+    "absolute_path": "/home/nic/forge/apply_plans/2026-05-09_133413_PLAN_test_txt.txt",
+    "relative_path": "apply_plans/2026-05-09_133413_PLAN_test_txt.txt",
+    "artifact_area": "apply_plans",
+    "filename": "2026-05-09_133413_PLAN_test_txt.txt",
+    "size_bytes": 2769,
+    "sha256_16": "51e591290eac0516",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T13:34:13"
+  },
+  {
+    "absolute_path": "/home/nic/forge/apply_plans/2026-05-09_144004_PLAN_README_md.txt",
+    "relative_path": "apply_plans/2026-05-09_144004_PLAN_README_md.txt",
+    "artifact_area": "apply_plans",
+    "filename": "2026-05-09_144004_PLAN_README_md.txt",
+    "size_bytes": 3482,
+    "sha256_16": "b1e71c2f71191782",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T14:40:04"
+  },
+  {
+    "absolute_path": "/home/nic/forge/apply_plans/2026-05-09_151129_PLAN_README_md.txt",
+    "relative_path": "apply_plans/2026-05-09_151129_PLAN_README_md.txt",
+    "artifact_area": "apply_plans",
+    "filename": "2026-05-09_151129_PLAN_README_md.txt",
+    "size_bytes": 3574,
+    "sha256_16": "62ecbf7bcbf317ba",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T15:11:29"
+  },
+  {
+    "absolute_path": "/home/nic/forge/apply_plans/2026-05-09_154718_PLAN_README_md.txt",
+    "relative_path": "apply_plans/2026-05-09_154718_PLAN_README_md.txt",
+    "artifact_area": "apply_plans",
+    "filename": "2026-05-09_154718_PLAN_README_md.txt",
+    "size_bytes": 3691,
+    "sha256_16": "fcc3cee8f36c4999",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T15:47:18"
+  },
+  {
+    "absolute_path": "/home/nic/forge/rollback_registry/2026-05-09_091429_ROLLBACK_test_txt.txt",
+    "relative_path": "rollback_registry/2026-05-09_091429_ROLLBACK_test_txt.txt",
+    "artifact_area": "rollback_registry",
+    "filename": "2026-05-09_091429_ROLLBACK_test_txt.txt",
+    "size_bytes": 1373,
+    "sha256_16": "046a2be079fb746f",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T09:14:29"
+  },
+  {
+    "absolute_path": "/home/nic/forge/rollback_registry/2026-05-09_094520_ROLLBACK_test_txt.txt",
+    "relative_path": "rollback_registry/2026-05-09_094520_ROLLBACK_test_txt.txt",
+    "artifact_area": "rollback_registry",
+    "filename": "2026-05-09_094520_ROLLBACK_test_txt.txt",
+    "size_bytes": 1373,
+    "sha256_16": "20d0a0cc1b7b8640",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T09:45:20"
+  },
+  {
+    "absolute_path": "/home/nic/forge/rollback_registry/2026-05-09_133413_ROLLBACK_test_txt.txt",
+    "relative_path": "rollback_registry/2026-05-09_133413_ROLLBACK_test_txt.txt",
+    "artifact_area": "rollback_registry",
+    "filename": "2026-05-09_133413_ROLLBACK_test_txt.txt",
+    "size_bytes": 1375,
+    "sha256_16": "c3864bac0f887d2a",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T13:34:13"
+  },
+  {
+    "absolute_path": "/home/nic/forge/rollback_registry/2026-05-09_144004_ROLLBACK_README_md.txt",
+    "relative_path": "rollback_registry/2026-05-09_144004_ROLLBACK_README_md.txt",
+    "artifact_area": "rollback_registry",
+    "filename": "2026-05-09_144004_ROLLBACK_README_md.txt",
+    "size_bytes": 1977,
+    "sha256_16": "86857e26e07bc681",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T14:40:04"
+  },
+  {
+    "absolute_path": "/home/nic/forge/rollback_registry/2026-05-09_151129_ROLLBACK_README_md.txt",
+    "relative_path": "rollback_registry/2026-05-09_151129_ROLLBACK_README_md.txt",
+    "artifact_area": "rollback_registry",
+    "filename": "2026-05-09_151129_ROLLBACK_README_md.txt",
+    "size_bytes": 2082,
+    "sha256_16": "8d40837230b67111",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T15:11:29"
+  },
+  {
+    "absolute_path": "/home/nic/forge/rollback_registry/2026-05-09_154718_ROLLBACK_README_md.txt",
+    "relative_path": "rollback_registry/2026-05-09_154718_ROLLBACK_README_md.txt",
+    "artifact_area": "rollback_registry",
+    "filename": "2026-05-09_154718_ROLLBACK_README_md.txt",
+    "size_bytes": 2080,
+    "sha256_16": "92aa0562bcb5ef46",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T15:47:18"
+  },
+  {
+    "absolute_path": "/home/nic/forge/rollback_registry/restore_safety_snapshots/2026-05-09_135227_SAFETY_test_txt.txt",
+    "relative_path": "rollback_registry/restore_safety_snapshots/2026-05-09_135227_SAFETY_test_txt.txt",
+    "artifact_area": "rollback_registry",
+    "filename": "2026-05-09_135227_SAFETY_test_txt.txt",
+    "size_bytes": 1093,
+    "sha256_16": "db2e3ebeab0e6563",
+    "collection_namespace": "aiweb_patch_history_v1",
+    "mtime": "2026-05-09T13:52:27"
+  }
+]

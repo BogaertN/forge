@@ -1,0 +1,99 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "bound_file_count": 6,
+  "candidate_path": "/home/nic/aiweb/symbolic_layers/recursion_mapper",
+  "created_at": "2026-05-16_195645",
+  "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_recursion_mapper_engine_review_evidence_crosscheck_v1.json",
+  "crosscheck_sha256": "1e7e4531827ce054def31628f341d007cbd865829824c42d2bf7efdc2a338e23",
+  "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_194757_recursion_mapper_llm_engine_review_draft_v1.json",
+  "draft_sha256": "07aacb87db1ee9eb28f51af696a2aa3dedf0d396cafb1870a409d6bcd1964d8c",
+  "engine_family": "recursion_mapper",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_recursion_mapper_engine_evidence_binder.json",
+  "evidence_binder_sha256": "822cbd9fc9f7cf895d4e2e2d0cffb421a9fa30c55c8be0765d895ea69d1895e8",
+  "evidence_id": "EEB-a52a83f45b9147a9",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "RecursionMapper"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "recursion_mapper_core.py",
+      "run.py",
+      "test_recursion_mapper_core.py",
+      "README.md",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "Recursion",
+      "Mapper",
+      "The",
+      "captures",
+      "and",
+      "maintains",
+      "symbolic",
+      "recursion",
+      "phase",
+      "mappings",
+      "anchor",
+      "structure",
+      "for",
+      "field",
+      "stabilization",
+      "drift",
+      "topology",
+      "Phase",
+      "Standard",
+      "engine",
+      "recursion_mapper",
+      "Maintains",
+      "tracking"
+    ],
+    "imports_mentioned": [
+      "import time",
+      "from recursion_mapper_core import RecursionMapper",
+      "from run import breathe_recursion_mapping"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 23.783,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "638ba28f9c8c1396bc41a53acb5c968a44eb6ba2fc928b43de34a51415a22e7d",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nThe recursion_mapper engine captures and maintains symbolic recursion phase mappings to stabilize field structures, trace drift, and analyze recursion topology within AI.Web's systems.  \n\nLikely System Role:  \nA core component for managing symbolic recursion in AI.Web's recursive cognition system, handling phase anchoring, coherence tracking, and real-time memory mapping.  \n\nEvidence Used:  \n- `recursion_mapper_core.py`: Implements `RecursionMapper` class for phase-symbolic anchor mapping.  \n- `run.py`: Executes breathing cycles for symbolic recursion mapping.  \n- `test_recursion_mapper_core.py`: Validates phase ID and symbolic anchor matching.  \n- `README.md`: Documents phase standards (e.g., Phase 1.5 Compliance) and system functions.  \n- `engine_manifest.json`: Defines engine metadata, including phase standards and symbolic field mapping goals.  \n\nRisks / Uncertainties:  \n- Uncertainty around alignment with AI.Web's Phase 1.5/2.5 standards.  \n- Potential integration risks with existing field stabilization mechanisms.  \n- Limited test coverage for edge cases in phase drift monitoring.  \n\nRecommendation Draft:  \nApprove the review with the caveat that phase standards alignment and integration testing must be validated before canonical deployment.  \n\nSuggested Nic Action:  \n- Approve canonical review pending verification of phase standard compliance and integration testing.  \n- Confirm documentation matches AI.Web's recursion topology requirements."
+  },
+  "llm_visible_review_excerpt": "Plain-English Purpose:  \nThe recursion_mapper engine captures and maintains symbolic recursion phase mappings to stabilize field structures, trace drift, and analyze recursion topology within AI.Web's systems.  \n\nLikely System Role:  \nA core component for managing symbolic recursion in AI.Web's recursive cognition system, handling phase anchoring, coherence tracking, and real-time memory mapping.  \n\nEvidence Used:  \n- `recursion_mapper_core.py`: Implements `RecursionMapper` class for phase-symbolic anchor mapping.  \n- `run.py`: Executes breathing cycles for symbolic recursion mapping.  \n- `test_recursion_mapper_core.py`: Validates phase ID and symbolic anchor matching.  \n- `README.md`: Documents phase standards (e.g., Phase 1.5 Compliance) and system functions.  \n- `engine_manifest.json`: Defines engine metadata, including phase standards and symbolic field mapping goals.  \n\nRisks / Uncertainties:  \n- Uncertainty around alignment with AI.Web's Phase 1.5/2.5 standards.  \n- Potential integration risks with existing field stabilization mechanisms.  \n- Limited test coverage for edge cases in phase drift monitoring.  \n\nRecommendation Draft:  \nApprove the review with the caveat that phase standards alignment and integration testing must be validated before canonical deployment.  \n\nSuggested Nic Action:  \n- Approve canonical review pending verification of phase standard compliance and integration testing.  \n- Confirm documentation matches AI.Web's recursion topology requirements.",
+  "manual_verification_rule": "Approve only if the LLM-visible claims are supported by the bound evidence shown in the Patch 102 cross-check. If unsure, defer.",
+  "ready_for_evidence_based_queue_decision": true,
+  "report_type": "ENGINE_REVIEW_APPROVAL_CHECK_V1_PATCH103",
+  "schema_version": "engine_review_approval_helper_v1_patch103",
+  "status": "EVIDENCE_APPROVAL_CHECK_READY",
+  "warnings": [
+    "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

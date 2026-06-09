@@ -1,0 +1,71 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "counts": {
+    "blocked": 0,
+    "ready": 4,
+    "receipts": 4
+  },
+  "created_at": "2026-05-15_132540",
+  "receipts": [
+    {
+      "blockers": 0,
+      "engine_family": "activity_log",
+      "evidence_id": "EEB-929b125c673bef05",
+      "path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-15_132305_activity_log_engine_review_approval_helper_v1.json",
+      "ready": true,
+      "sha256": "9702892ccd5169f4fd226fcd25d034cedf1dfac7bf10850babc2c5b244e3a229",
+      "status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "warnings": 1
+    },
+    {
+      "blockers": 0,
+      "engine_family": "activity_log",
+      "evidence_id": "EEB-929b125c673bef05",
+      "path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-15_132314_activity_log_engine_review_approval_helper_v1.json",
+      "ready": true,
+      "sha256": "257d6e8f4902bd04ed9eea5a6d5896539fa875645e0aa3dec417cb5f2ef03075",
+      "status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "warnings": 1
+    },
+    {
+      "blockers": 0,
+      "engine_family": "admin_override_console",
+      "evidence_id": "EEB-7e1e67cf08853d05",
+      "path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-15_132415_admin_override_console_engine_review_approval_helper_v1.json",
+      "ready": true,
+      "sha256": "f2bb1f544dbe0b6a17fd948aa9e16dca06f88b73c3c0368ea1e56aea95290a60",
+      "status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "warnings": 1
+    },
+    {
+      "blockers": 0,
+      "engine_family": "admin_override_console",
+      "evidence_id": "EEB-7e1e67cf08853d05",
+      "path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-15_132442_admin_override_console_engine_review_approval_helper_v1.json",
+      "ready": true,
+      "sha256": "7905119093d453a400c0cb135b58af900180d6ec72e95e66fdbe6d5ab6ed6fec",
+      "status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "warnings": 1
+    }
+  ],
+  "report_type": "ENGINE_REVIEW_APPROVAL_HELPER_EXPORT_V1_PATCH103",
+  "schema_version": "engine_review_approval_helper_v1_patch103"
+}

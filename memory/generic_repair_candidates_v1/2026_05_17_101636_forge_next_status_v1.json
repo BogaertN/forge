@@ -1,0 +1,17 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T10:16:36",
+  "next_commands": [
+    "generic-repair-candidate-verify latest",
+    "generic-repair-candidate-export"
+  ],
+  "next_phase": "VERIFY_GENERIC_REPAIR_CANDIDATE",
+  "plain_english": "A repair candidate exists but has not passed verification yet.",
+  "recommended_next_patch": "Run generic-repair-candidate-verify latest",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "schema_version": "forge_next_status_v1_patch136",
+  "status": "ACTION_REQUIRED"
+}

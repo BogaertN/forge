@@ -1,0 +1,1579 @@
+{
+  "report_type": "patch71_canonical_engine_lockfile_draft",
+  "policy_version": "patch71_canonical_engine_lockfile_draft_v1",
+  "timestamp": "2026-05-12T20:21:52",
+  "mode": "draft_lockfile_only",
+  "read_only": true,
+  "implemented_destructive_action": false,
+  "engine_files_changed": false,
+  "canonical_authority": false,
+  "actual_lockfile_written": false,
+  "draft_lockfile_written": true,
+  "quarantine_written": false,
+  "source_decision_report_type": "patch69_canonical_engine_decision_draft",
+  "source_decision_timestamp": "2026-05-12T20:21:52",
+  "engine_count": 425,
+  "decision_count": 80,
+  "included_count": 72,
+  "excluded_hold_count": 8,
+  "excluded_total": 8,
+  "status": "VALID_DRAFT",
+  "errors": [],
+  "warnings": [],
+  "policy": {
+    "rule": "Only DRAFT_* decisions enter this draft. HOLD_* decisions are excluded and must be architect-reviewed before any future lockfile authority.",
+    "forbidden": [
+      "move",
+      "delete",
+      "rename",
+      "quarantine",
+      "promote",
+      "edit_engine_files",
+      "make_authoritative_lockfile"
+    ],
+    "next_phase": "human review of draft lockfile before any canonical authority or quarantine plan"
+  },
+  "lockfile_entries": [
+    {
+      "engine_base": "activity_log",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "low",
+      "recommended_keep_path": "projects/recursive_lmm_grok1/engines/activity_log",
+      "patch68_keep_candidate": "projects/recursive_lmm_grok1/engines/activity_log",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "admin_override_console",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/admin_override_console",
+      "patch68_keep_candidate": "aiweb/engines/admin_override_console",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "agent_reflection_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/agent_reflection_engine",
+      "patch68_keep_candidate": "aiweb/engines/agent_reflection_engine",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "agents_stack",
+      "draft_decision": "DRAFT_KEEP_ACTIVE_PRIMARY_OVER_FROZEN_CANDIDATE",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/runtime_wrappers/agents_stack",
+      "patch68_keep_candidate": "aiweb/engines/agents_stack_frozen_v1-0.01",
+      "variant_count": 4,
+      "required_human_checks": [
+        "verify_active_primary_supersedes_frozen_candidate",
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Patch 68 scored a frozen candidate, but an active primary AI.Web variant exists; draft favors active primary until reviewed.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "aiweb_os_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "recommended_keep_path": "aiweb/engines/aiweb_os_engine",
+      "patch68_keep_candidate": "aiweb/engines/aiweb_os_engine",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "ascii_interpreter_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/ascii_interpreter_engine",
+      "patch68_keep_candidate": "aiweb/engines/ascii_interpreter_engine",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "athena",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "low",
+      "recommended_keep_path": "agents/athena",
+      "patch68_keep_candidate": "agents/athena",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "athena_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/athena_engine",
+      "patch68_keep_candidate": "aiweb/engines/athena_engine",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "christping_listener",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "recommended_keep_path": "aiweb/engines/christping_listener",
+      "patch68_keep_candidate": "aiweb/engines/christping_listener",
+      "variant_count": 10,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "christping_validator_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/christping_validator_engine",
+      "patch68_keep_candidate": "aiweb/engines/christping_validator_engine",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "collapse_prevention_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/collapse_prevention_engine",
+      "patch68_keep_candidate": "aiweb/engines/collapse_prevention_engine",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "compute_contribution_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/compute_contribution_engine",
+      "patch68_keep_candidate": "aiweb/engines/compute_contribution_engine",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "confusion_checker",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "low",
+      "recommended_keep_path": "projects/recursive_lmm_grok1/engines/confusion_checker",
+      "patch68_keep_candidate": "projects/recursive_lmm_grok1/engines/confusion_checker",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "contribution_dashboard_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/contribution_dashboard_engine",
+      "patch68_keep_candidate": "aiweb/engines/contribution_dashboard_engine",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "contribution_ledger_stack",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/runtime_wrappers/contribution_ledger_stack",
+      "patch68_keep_candidate": "aiweb/runtime_wrappers/contribution_ledger_stack",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "control_panel_ui_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "recommended_keep_path": "aiweb/engines/control_panel_ui_engine_v1.02",
+      "patch68_keep_candidate": "aiweb/engines/control_panel_ui_engine_v1.02",
+      "variant_count": 10,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "control_stack",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/runtime_wrappers/control_stack",
+      "patch68_keep_candidate": "aiweb/runtime_wrappers/control_stack",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "core_stack_breather",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/core_stack_breather",
+      "patch68_keep_candidate": "aiweb/engines/core_stack_breather",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "core_system_stack",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/runtime_wrappers/core_system_stack",
+      "patch68_keep_candidate": "aiweb/runtime_wrappers/core_system_stack",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "document_output_formatter",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/document_output_formatter",
+      "patch68_keep_candidate": "aiweb/engines/document_output_formatter",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "dream_state_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/dream_state_engine",
+      "patch68_keep_candidate": "aiweb/engines/dream_state_engine",
+      "variant_count": 8,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "drift_analyzer_tool",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/drift_analyzer_tool",
+      "patch68_keep_candidate": "aiweb/engines/drift_analyzer_tool",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "drift_signature_logger",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "recommended_keep_path": "aiweb/engines/drift_signature_logger",
+      "patch68_keep_candidate": "aiweb/engines/drift_signature_logger",
+      "variant_count": 5,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "echo_trace_visualizer",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/echo_trace_visualizer",
+      "patch68_keep_candidate": "aiweb/engines/echo_trace_visualizer",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "entropy_monitor_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/entropy_monitor_engine",
+      "patch68_keep_candidate": "aiweb/engines/entropy_monitor_engine",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "external_feed_listener",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/external_feed_listener",
+      "patch68_keep_candidate": "aiweb/engines/external_feed_listener",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "failsafe_manager",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "recommended_keep_path": "aiweb/engines/failsafe_manager",
+      "patch68_keep_candidate": "aiweb/engines/failsafe_manager",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "field_resonance_mapper",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/field_resonance_mapper",
+      "patch68_keep_candidate": "aiweb/engines/field_resonance_mapper",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "fluid_memory_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/fluid_memory_engine",
+      "patch68_keep_candidate": "aiweb/engines/fluid_memory_engine",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "gilligan",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "low",
+      "recommended_keep_path": "agents/gilligan",
+      "patch68_keep_candidate": "agents/gilligan",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "gilligan_drift_correction_upgrade",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/gilligan_drift_correction_upgrade",
+      "patch68_keep_candidate": "aiweb/engines/gilligan_drift_correction_upgrade",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "glyph_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/glyph_engine",
+      "patch68_keep_candidate": "aiweb/engines/glyph_engine",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "glyph_ui_overlay",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/symbolic_layers/glyph_ui_overlay",
+      "patch68_keep_candidate": "aiweb/symbolic_layers/glyph_ui_overlay",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "goal_injection_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/goal_injection_engine",
+      "patch68_keep_candidate": "aiweb/engines/goal_injection_engine",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "install_onboarding_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/install_onboarding_engine",
+      "patch68_keep_candidate": "aiweb/engines/install_onboarding_engine",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "loop_resurrection_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "recommended_keep_path": "aiweb/engines/loop_resurrection_engine",
+      "patch68_keep_candidate": "aiweb/engines/loop_resurrection_engine",
+      "variant_count": 8,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "memory_stack_stack",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/runtime_wrappers/memory_stack_stack",
+      "patch68_keep_candidate": "aiweb/runtime_wrappers/memory_stack_stack",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "naming_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/naming_engine",
+      "patch68_keep_candidate": "aiweb/engines/naming_engine",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "neo",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "low",
+      "recommended_keep_path": "agents/neo",
+      "patch68_keep_candidate": "agents/neo",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "neo_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/neo_engine",
+      "patch68_keep_candidate": "aiweb/engines/neo_engine",
+      "variant_count": 10,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "peer_communication_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/peer_communication_engine",
+      "patch68_keep_candidate": "aiweb/engines/peer_communication_engine",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "phase_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "recommended_keep_path": "aiweb/engines/phase_engine",
+      "patch68_keep_candidate": "aiweb/engines/phase_engine",
+      "variant_count": 5,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "plugin_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "recommended_keep_path": "aiweb/engines/plugin_engine",
+      "patch68_keep_candidate": "aiweb/engines/plugin_engine",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "project_brain",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "low",
+      "recommended_keep_path": "projects/recursive_lmm_grok1/engines/project_brain",
+      "patch68_keep_candidate": "projects/recursive_lmm_grok1/engines/project_brain",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "project_memory",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "low",
+      "recommended_keep_path": "projects/recursive_lmm_grok1/engines/project_memory",
+      "patch68_keep_candidate": "projects/recursive_lmm_grok1/engines/project_memory",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "protoforge",
+      "draft_decision": "DRAFT_KEEP_ACTIVE_PRIMARY_OVER_FROZEN_CANDIDATE",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+      "patch68_keep_candidate": "aiweb/engines/protoforge_frozen_v1.03_os_ui_rfe_dae",
+      "variant_count": 17,
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "verify_active_primary_supersedes_frozen_candidate",
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Patch 68 scored a frozen candidate, but an active primary AI.Web variant exists; draft favors active primary until reviewed.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "recursion_mapper",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/symbolic_layers/recursion_mapper",
+      "patch68_keep_candidate": "aiweb/symbolic_layers/recursion_mapper",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "recursive_agent_kernel",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "recommended_keep_path": "aiweb/engines/recursive_agent_kernel",
+      "patch68_keep_candidate": "aiweb/engines/recursive_agent_kernel",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "recursive_field_breather",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/recursive_field_breather",
+      "patch68_keep_candidate": "aiweb/engines/recursive_field_breather",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "recursive_field_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/recursive_field_engine",
+      "patch68_keep_candidate": "aiweb/engines/recursive_field_engine",
+      "variant_count": 8,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "recursive_field_stack",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/runtime_wrappers/recursive_field_stack",
+      "patch68_keep_candidate": "aiweb/runtime_wrappers/recursive_field_stack",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "recursive_verification_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "low",
+      "recommended_keep_path": "engines/recursive_verification_engine",
+      "patch68_keep_candidate": "engines/recursive_verification_engine",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "resonance_charge_meter",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "recommended_keep_path": "aiweb/engines/resonance_charge_meter",
+      "patch68_keep_candidate": "aiweb/engines/resonance_charge_meter",
+      "variant_count": 8,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "resonance_display",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/symbolic_layers/resonance_display",
+      "patch68_keep_candidate": "aiweb/symbolic_layers/resonance_display",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "resonance_visualizer_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/resonance_visualizer_engine",
+      "patch68_keep_candidate": "aiweb/engines/resonance_visualizer_engine",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "resurrection_planner",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/resurrection_planner",
+      "patch68_keep_candidate": "aiweb/engines/resurrection_planner",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "revisit_previous_tasks",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "low",
+      "recommended_keep_path": "projects/recursive_lmm_grok1/engines/revisit_previous_tasks",
+      "patch68_keep_candidate": "projects/recursive_lmm_grok1/engines/revisit_previous_tasks",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "seed_manager",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/seed_manager",
+      "patch68_keep_candidate": "aiweb/engines/seed_manager",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "spc_memory_migrator",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/spc_memory_migrator",
+      "patch68_keep_candidate": "aiweb/engines/spc_memory_migrator",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "stack_breather_phase2",
+      "draft_decision": "DRAFT_KEEP_ACTIVE_PRIMARY_OVER_FROZEN_CANDIDATE",
+      "decision_confidence": "low",
+      "recommended_keep_path": "aiweb/runtime_wrappers/stack_breather_phase2",
+      "patch68_keep_candidate": "simulations/phase_vs_linear_augmented/engines/stack_breather_phase2_frozen_v1_0_01",
+      "variant_count": 5,
+      "required_human_checks": [
+        "verify_active_primary_supersedes_frozen_candidate",
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "reason": "Patch 68 scored a frozen candidate, but an active primary AI.Web variant exists; draft favors active primary until reviewed.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "stack_linker_breather",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/stack_linker_breather",
+      "patch68_keep_candidate": "aiweb/engines/stack_linker_breather",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "symbolic_capacitor_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "recommended_keep_path": "aiweb/engines/symbolic_capacitor_engine",
+      "patch68_keep_candidate": "aiweb/engines/symbolic_capacitor_engine",
+      "variant_count": 14,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "symbolic_cognition_stack",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/runtime_wrappers/symbolic_cognition_stack",
+      "patch68_keep_candidate": "aiweb/runtime_wrappers/symbolic_cognition_stack",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "symbolic_drift_visualizer",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/symbolic_drift_visualizer",
+      "patch68_keep_candidate": "aiweb/engines/symbolic_drift_visualizer",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "symbolic_feedback_loop_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "recommended_keep_path": "aiweb/engines/symbolic_feedback_loop_engine",
+      "patch68_keep_candidate": "aiweb/engines/symbolic_feedback_loop_engine",
+      "variant_count": 10,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "symbolic_glyph_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/symbolic_glyph_engine",
+      "patch68_keep_candidate": "aiweb/engines/symbolic_glyph_engine",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "symbolic_layers_stack",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/runtime_wrappers/symbolic_layers_stack",
+      "patch68_keep_candidate": "aiweb/runtime_wrappers/symbolic_layers_stack",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "symbolic_policy_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "recommended_keep_path": "aiweb/engines/symbolic_policy_engine",
+      "patch68_keep_candidate": "aiweb/engines/symbolic_policy_engine",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "system_log_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium_high",
+      "recommended_keep_path": "aiweb/engines/system_log_engine",
+      "patch68_keep_candidate": "aiweb/engines/system_log_engine",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "tier_enforcer",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/tier_enforcer",
+      "patch68_keep_candidate": "aiweb/engines/tier_enforcer",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "tone_engine",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "medium",
+      "recommended_keep_path": "aiweb/engines/tone_engine",
+      "patch68_keep_candidate": "aiweb/engines/tone_engine",
+      "variant_count": 12,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "trust_guard",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "decision_confidence": "low",
+      "recommended_keep_path": "projects/recursive_lmm_grok1/engines/trust_guard",
+      "patch68_keep_candidate": "projects/recursive_lmm_grok1/engines/trust_guard",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "reason": "Highest scored candidate from Patch 68 review; no lockfile written.",
+      "source": "patch69_decision_draft",
+      "status": "DRAFT_LOCK_INCLUDED",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    }
+  ],
+  "excluded_holds": [
+    {
+      "engine_base": "aiweb_os",
+      "draft_decision": "HOLD_TEST_ONLY_REVIEW",
+      "decision_confidence": "manual",
+      "recommended_keep_path": "aiweb/runtime_wrappers/aiweb_os_v1",
+      "patch68_keep_candidate": "aiweb/runtime_wrappers/aiweb_os_v1",
+      "variant_count": 2,
+      "required_human_checks": [
+        "test_only_candidate_requires_human_review"
+      ],
+      "cautions": [],
+      "reason": "Candidate appears test-only; it cannot become canonical without manual review.",
+      "source": "patch69_decision_draft",
+      "status": "EXCLUDED_HOLD",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "cold_archive_engine",
+      "draft_decision": "HOLD_ARCHIVE_AMBIGUITY_REVIEW",
+      "decision_confidence": "manual",
+      "recommended_keep_path": "aiweb/engines/cold_archive_engine_frozen_v1",
+      "patch68_keep_candidate": "aiweb/engines/cold_archive_engine_frozen_v1",
+      "variant_count": 10,
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "frozen_candidate_requires_human_review",
+        "archive_or_backup_candidate_requires_human_review",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Candidate appears backup/archive related; no automatic keep/lock decision is allowed.",
+      "source": "patch69_decision_draft",
+      "status": "EXCLUDED_HOLD",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "drift_arbitration_engine",
+      "draft_decision": "HOLD_FROZEN_CANDIDATE_REVIEW",
+      "decision_confidence": "manual",
+      "recommended_keep_path": "aiweb/engines/drift_arbitration_engine",
+      "patch68_keep_candidate": "aiweb/engines/drift_arbitration_engine",
+      "variant_count": 11,
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "frozen_candidate_requires_human_review",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Candidate is frozen and no active primary replacement was found.",
+      "source": "patch69_decision_draft",
+      "status": "EXCLUDED_HOLD",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "memory_stack_engine",
+      "draft_decision": "HOLD_FROZEN_CANDIDATE_REVIEW",
+      "decision_confidence": "manual",
+      "recommended_keep_path": "aiweb/engines/memory_stack_engine",
+      "patch68_keep_candidate": "aiweb/engines/memory_stack_engine",
+      "variant_count": 6,
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "frozen_candidate_requires_human_review",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Candidate is frozen and no active primary replacement was found.",
+      "source": "patch69_decision_draft",
+      "status": "EXCLUDED_HOLD",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "memory_stack_engine_breathing",
+      "draft_decision": "HOLD_FOR_MANUAL_ARCHITECT_REVIEW",
+      "decision_confidence": "manual",
+      "recommended_keep_path": "aiweb/engines/memory_stack_engine_breathing_v1",
+      "patch68_keep_candidate": "aiweb/engines/memory_stack_engine_breathing_v1",
+      "variant_count": 7,
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "reason": "Engine family has runtime-wrapper, archive/frozen, or foundational ambiguity that must not be auto-decided.",
+      "source": "patch69_decision_draft",
+      "status": "EXCLUDED_HOLD",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "protoforge_dashboard_runtime",
+      "draft_decision": "HOLD_FOR_MANUAL_ARCHITECT_REVIEW",
+      "decision_confidence": "manual",
+      "recommended_keep_path": "runtime_wrappers/protoforge_dashboard_runtime_v2.0",
+      "patch68_keep_candidate": "runtime_wrappers/protoforge_dashboard_runtime_v2.0",
+      "variant_count": 2,
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "reason": "Engine family has runtime-wrapper, archive/frozen, or foundational ambiguity that must not be auto-decided.",
+      "source": "patch69_decision_draft",
+      "status": "EXCLUDED_HOLD",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "saved_ideas",
+      "draft_decision": "HOLD_ARCHIVE_AMBIGUITY_REVIEW",
+      "decision_confidence": "manual",
+      "recommended_keep_path": "projects/recursive_lmm_grok1/engines/saved_ideas",
+      "patch68_keep_candidate": "projects/recursive_lmm_grok1/engines/saved_ideas",
+      "variant_count": 2,
+      "required_human_checks": [
+        "archive_or_backup_candidate_requires_human_review"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "reason": "Candidate appears backup/archive related; no automatic keep/lock decision is allowed.",
+      "source": "patch69_decision_draft",
+      "status": "EXCLUDED_HOLD",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    },
+    {
+      "engine_base": "step_counter",
+      "draft_decision": "HOLD_FROZEN_CANDIDATE_REVIEW",
+      "decision_confidence": "manual",
+      "recommended_keep_path": "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1",
+      "patch68_keep_candidate": "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1",
+      "variant_count": 2,
+      "required_human_checks": [
+        "frozen_candidate_requires_human_review"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "reason": "Candidate is frozen and no active primary replacement was found.",
+      "source": "patch69_decision_draft",
+      "status": "EXCLUDED_HOLD",
+      "no_file_action": true,
+      "lockfile_written": false,
+      "quarantine_written": false
+    }
+  ]
+}

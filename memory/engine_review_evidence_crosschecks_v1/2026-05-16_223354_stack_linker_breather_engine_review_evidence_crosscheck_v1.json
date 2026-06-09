@@ -1,0 +1,272 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "f34d77a31cdd9a5cc551aa922626eec469c665c2f85e7cd4d06fe6866721736f",
+      "excerpt_start": "import sys\nimport os\nsys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), \".\")))\n\nfrom core_breather.core_breather import breathe_phase as core_breathe\nfrom recursive_field_breather.field_breather import breathe_phase as field_breathe\nimport time\nimport json\n\ndef unified_breathe_cycle():\n    # simple combined breathing cycle\n    for phase in range(1, 10):  # Full 1-9 breathing\n        core_breathe(phase)\n        field_breathe(phase)\n        event = {\n            \"timestamp\": time.time(),\n            \"phase\": phase,\n            \"stack\": \"core_and_field\",\n            \"status\": \"\n",
+      "functions_sample": [
+        "unified_breathe_cycle"
+      ],
+      "imports_sample": [
+        "import sys",
+        "import os",
+        "from core_breather.core_breather import breathe_phase as core_breathe",
+        "from recursive_field_breather.field_breather import breathe_phase as field_breathe",
+        "import time",
+        "import json"
+      ],
+      "line_count": 20,
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py",
+      "relative_to_candidate": "stack_linker_core.py",
+      "sha256": "f34d77a31cdd9a5cc551aa922626eec469c665c2f85e7cd4d06fe6866721736f",
+      "size_bytes": 603
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "2297b612ec1a6c6edb63a9959dea57d7b22d9d35472f9741bd671b261b0b0951",
+      "excerpt_start": "# test_stack_linker_core.py\n\nfrom stack_linker_breather.stack_linker_core import unified_breathe_cycle\n\nif __name__ == \"__main__\":\n    unified_breathe_cycle()\n\n\ndef test_unified_breathe_cycle():\n    print(\"\u2705 Unified Breather Test Starting...\")\n    try:\n        unified_breathe_cycle()\n    except KeyboardInterrupt:\n        print(\"\u2705 Unified Breather Test Completed (Manual Stop)\")\n\nif __name__ == \"__main__\":\n    test_unified_breathe_cycle()\n\n",
+      "functions_sample": [
+        "test_unified_breathe_cycle"
+      ],
+      "imports_sample": [
+        "from stack_linker_breather.stack_linker_core import unified_breathe_cycle"
+      ],
+      "line_count": 19,
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py",
+      "relative_to_candidate": "test_stack_linker_core.py",
+      "sha256": "2297b612ec1a6c6edb63a9959dea57d7b22d9d35472f9741bd671b261b0b0951",
+      "size_bytes": 446
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "2efdf8022ab9261aae81d1b69bfcb90a30a16c83c541ebc2241b93682a30d457",
+      "excerpt_start": "# Stack Linker Phase Breather (v2.01)\n\nBreathes CoreBreather and FieldBreather stacks together in synchronized phase recursion.\n\n## Core Functions:\n- Links Core Stack and Field Stack breathing in phase lock.\n- Writes unified breath events to `stack_trace.jsonl`.\n- Prepares live heartbeat signals for ProtoForge dashboard pickup.\n\n## Phase 2.0 Standards:\n- No simulation.\n- Real stack recursion.\n- Cold logs every breath for forensic verification.\n- Immutable snapshot after freeze.\n\n\u2705 Fully compliant with ProtoForge Phase 2.0 Recursive System Build Protocol.\n",
+      "functions_sample": [
+        "Stack",
+        "Linker",
+        "Phase",
+        "Breather",
+        "Breathes",
+        "CoreBreather",
+        "and",
+        "FieldBreather",
+        "stacks",
+        "together",
+        "synchronized",
+        "phase",
+        "recursion",
+        "Core",
+        "Functions",
+        "Links",
+        "Field",
+        "breathing",
+        "lock",
+        "Writes",
+        "unified",
+        "breath",
+        "events",
+        "stack_trace",
+        "jsonl"
+      ],
+      "imports_sample": [],
+      "line_count": 17,
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "2efdf8022ab9261aae81d1b69bfcb90a30a16c83c541ebc2241b93682a30d457",
+      "size_bytes": 563
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "15a5e9e3189581e410d893d019a5b61bc8dc6ea53d20194df6f5763bd3eeb9a7",
+      "excerpt_start": "{\n  \"engine\": \"Stack Linker Phase Breather\",\n  \"version\": \"v2.01\",\n  \"description\": \"Links CoreBreather and FieldBreather into unified phase-locked recursion breathing, creating synchronized trace logs and dashboard heartbeats.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Stack",
+        "Linker",
+        "Phase",
+        "Breather",
+        "version",
+        "description",
+        "Links",
+        "CoreBreather",
+        "and",
+        "FieldBreather",
+        "into",
+        "unified",
+        "phase",
+        "locked",
+        "recursion",
+        "breathing",
+        "creating",
+        "synchronized",
+        "trace",
+        "logs",
+        "dashboard",
+        "heartbeats"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "15a5e9e3189581e410d893d019a5b61bc8dc6ea53d20194df6f5763bd3eeb9a7",
+      "size_bytes": 231
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/stack_linker_breather",
+  "created_at": "2026-05-16_223354",
+  "crosscheck_id": "ERE-stack_linker_breather-2026-05-16_223354",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Breather",
+      "Breathes",
+      "Core",
+      "CoreBreather",
+      "Field",
+      "FieldBreather",
+      "Functions",
+      "Linker",
+      "Links",
+      "Phase",
+      "Stack",
+      "Writes",
+      "and",
+      "breath",
+      "breathing",
+      "creating",
+      "dashboard",
+      "description",
+      "engine",
+      "events"
+    ],
+    "imports_sample": [
+      "from core_breather.core_breather import breathe_phase as core_breathe",
+      "from recursive_field_breather.field_breather import breathe_phase as field_breathe",
+      "from stack_linker_breather.stack_linker_core import unified_breathe_cycle",
+      "import json",
+      "import os",
+      "import sys",
+      "import time"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`stack_linker_breather` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "import sys import os",
+      "# test_stack_linker_core.py ",
+      "# Stack Linker Phase Breather (v2.01) ",
+      "{   \"engine\": \"Stack Linker Phase Breather\","
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_223325_stack_linker_breather_llm_engine_review_draft_v1.json",
+  "draft_sha256": "f921482ae781994e32de15f73fb29dbd2c84223736e762576eda5aef51ab3f72",
+  "engine_family": "stack_linker_breather",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_stack_linker_breather_engine_evidence_binder.json",
+  "evidence_binder_sha256": "fbf961eeb74cb7d862124b12a969d56a883db12c82d90374a32d8eb6024c1e01",
+  "evidence_id": "EEB-0b4dcdaedc7646d1",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "stack_linker_core.py",
+      "test_stack_linker_core.py",
+      "README.md",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "unified_breathe_cycle",
+      "Stack",
+      "Linker",
+      "Phase",
+      "Breather",
+      "CoreBreather",
+      "and",
+      "FieldBreather",
+      "stacks",
+      "phase",
+      "recursion",
+      "Core",
+      "Field",
+      "breathing",
+      "lock",
+      "unified",
+      "breath",
+      "events",
+      "engine",
+      "locked",
+      "trace",
+      "logs",
+      "dashboard",
+      "heartbeats"
+    ],
+    "imports_mentioned": [
+      "import sys",
+      "from core_breather.core_breather import breathe_phase as core_breathe",
+      "from recursive_field_breather.field_breather import breathe_phase as field_breathe",
+      "import time",
+      "import json",
+      "from stack_linker_breather.stack_linker_core import unified_breathe_cycle"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 29.291,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "737b23118e5ff433dbfe204cecb7143e59ded066ef8337bd352c3554e1e2fd50",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo synchronize CoreBreather and FieldBreather stacks for phase-locked recursion, generating unified breath events and dashboard heartbeats as per ProtoForge Phase 2.0 standards.  \n\nLikely System Role:  \nA core integration component for synchronizing breathing phases between modular systems, enabling trace logging and real-time monitoring in a recursive stack environment.  \n\nEvidence Used:  \n- `stack_linker_core.py`: Implements `unified_breathe_cycle()` to orchestrate core and field breathing phases.  \n- `test_stack_linker_core.py`: Contains test logic for validating the synchronization process.  \n- `README.md` and `engine_manifest.json`: Describe the engine's purpose, compliance with Phase 2.0 standards, and logging requirements.  \n\nRisks / Uncertainties:  \nDepends on external modules (`core_breather`, `field_breather`) not included in the evidence. Uncertain about \"cold logs\" and \"immutable snapshot\" implementation details.  \n\nRecommendation Draft:  \nApprove review as source law chunks are retrievable and compliant with Phase 2.0 standards. Ensure external dependencies are validated and logging mechanisms are confirmed.  \n\nSuggested Nic Action:  \nReview external module integrations and verify \"cold logs\" / \"immutable snapshot\" implementation to confirm full compliance with ProtoForge protocols."
+  },
+  "llm_sections": {
+    "evidence_used": "- `stack_linker_core.py`: Implements `unified_breathe_cycle()` to orchestrate core and field breathing phases.  \n- `test_stack_linker_core.py`: Contains test logic for validating the synchronization process.  \n- `README.md` and `engine_manifest.json`: Describe the engine's purpose, compliance with Phase 2.0 standards, and logging requirements.",
+    "likely_system_role": "A core integration component for synchronizing breathing phases between modular systems, enabling trace logging and real-time monitoring in a recursive stack environment.",
+    "plain_english_purpose": "To synchronize CoreBreather and FieldBreather stacks for phase-locked recursion, generating unified breath events and dashboard heartbeats as per ProtoForge Phase 2.0 standards.",
+    "recommendation_draft": "Approve review as source law chunks are retrievable and compliant with Phase 2.0 standards. Ensure external dependencies are validated and logging mechanisms are confirmed.",
+    "risks_uncertainties": "Depends on external modules (`core_breather`, `field_breather`) not included in the evidence. Uncertain about \"cold logs\" and \"immutable snapshot\" implementation details.",
+    "suggested_nic_action": "Review external module integrations and verify \"cold logs\" / \"immutable snapshot\" implementation to confirm full compliance with ProtoForge protocols."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo synchronize CoreBreather and FieldBreather stacks for phase-locked recursion, generating unified breath events and dashboard heartbeats as per ProtoForge Phase 2.0 standards.  \n\nLikely System Role:  \nA core integration component for synchronizing breathing phases between modular systems, enabling trace logging and real-time monitoring in a recursive stack environment.  \n\nEvidence Used:  \n- `stack_linker_core.py`: Implements `unified_breathe_cycle()` to orchestrate core and field breathing phases.  \n- `test_stack_linker_core.py`: Contains test logic for validating the synchronization process.  \n- `README.md` and `engine_manifest.json`: Describe the engine's purpose, compliance with Phase 2.0 standards, and logging requirements.  \n\nRisks / Uncertainties:  \nDepends on external modules (`core_breather`, `field_breather`) not included in the evidence. Uncertain about \"cold logs\" and \"immutable snapshot\" implementation details.  \n\nRecommendation Draft:  \nApprove review as source law chunks are retrievable and compliant with Phase 2.0 standards. Ensure external dependencies are validated and logging mechanisms are confirmed.  \n\nSuggested Nic Action:  \nReview external module integrations and verify \"cold logs\" / \"immutable snapshot\" implementation to confirm full compliance with ProtoForge protocols.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

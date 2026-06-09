@@ -1,0 +1,22 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "ledger_mutation_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "shell_execution_authority": false,
+    "verification_only": true
+  },
+  "created_at": "2026-05-17T08:41:30",
+  "problem_count": 0,
+  "problems": [],
+  "proposal_sha256": "e90ab8dfb492c0107322fcc59682c3b51299eca75df8c4ba9ad163da3c678248",
+  "proposal_status": "LLM_SOURCE_GROUNDED_PATCH_PROPOSAL_READY_NO_WRITE_AUTHORITY",
+  "recommended_next_patch": "Patch 133 \u2014 Patch Lifecycle 2.0 Gate Matrix",
+  "report_type": "LLM_SOURCE_GROUNDED_PATCH_VERIFICATION_V1",
+  "schema_version": "llm_source_grounded_patch_verification_v1_patch132",
+  "status": "LLM_SOURCE_GROUNDED_PATCH_PROPOSAL_VERIFIED_NO_WRITE_AUTHORITY",
+  "target": "stack_linker_breather",
+  "warning_count": 0,
+  "warnings": []
+}

@@ -1,0 +1,57 @@
+{
+  "activation_decision": "INSTALL_CONFORMANCE_CONTRACT_ONLY; BLOCK_ACTIVE_SCORER_MIGRATION_UNTIL_LIVE_TERMS_CONFORM",
+  "actual_live_legacy_gap_contract": [
+    "information_gain_zero_blocks_discovery",
+    "measured_drift_exceeds_theta_D",
+    "legacy_proof_debt_exceeds_hypothesis_limit",
+    "no_measured_memory_ancestry_resonance_bound",
+    "operator_cost_not_bound_to_executed_hypothesize_operator",
+    "legacy_coherence_uses_fallback_R_P_U_N"
+  ],
+  "adds_files": [
+    "forge/rmc_engine_v1/mea/fixed_point_math_contract.py",
+    "forge/rmc_engine_v1/mea/evidence_tier_contract.py",
+    "forge/rmc_engine_v1/mea/fbsc_operator_crosswalk.py",
+    "forge/rmc_engine_v1/mea/math_conformance.py",
+    "forge/scripts/test_mea_math_conformance_build006.py",
+    "forge/scripts/mea_math_conformance_build006_verify.py",
+    "forge/scripts/README_mea_math_conformance_build006.md"
+  ],
+  "baseline_packet_sha256": "3475aa1b3d377c6ef99ef2789e2fa2a77014cf027663e747495b6731ac3ca1b2",
+  "build_id": "MEA-DISCOVERY-KERNEL-MATH-CONFORMANCE-BUILD-006",
+  "canonical_conformance_expectation": {
+    "candidate_id": "cg_hypothesis_001",
+    "epistemic_claim_status": "hypothesis",
+    "information_gain_micro": 1000000,
+    "problem_id": "144hz_substrate_status",
+    "proof_debt_micro": 550000,
+    "required_next_action": "test_required",
+    "verified_empirical_claim_permitted": false
+  },
+  "purpose": "Install read-only deterministic fixed-point MEA mathematical conformance contract and actual legacy-path measurement audit without rewriting historical MEA memory.",
+  "replaces_files": [
+    "forge/rmc_engine_v1/mea/__init__.py"
+  ],
+  "runtime_boundary": {
+    "calls_llm": false,
+    "creates_http_routes": false,
+    "mints_ct": false,
+    "modifies_ui": false,
+    "renders_user_output": false,
+    "writes_chroma": false,
+    "writes_contribution_economy": false,
+    "writes_files": false,
+    "writes_identity_vault": false,
+    "writes_ledgers": false,
+    "writes_mea_memory": false,
+    "writes_mea_runtime_state": false
+  },
+  "schema_version": "mea_math_conformance_delivery_manifest_v1_build006",
+  "source_authorities": [
+    "MEA_Forge_Discovery_Kernel_v1 (1).docx \u2014 final MEA / Forge Discovery Kernel bridge",
+    "FBSC Phase Glyph Codex v 2.5 (1).pdf \u2014 canonical phase/glyph/code mapping",
+    "Structured Evolution- GPT chat.pdf \u2014 prior FBSC symbolic operator family",
+    "Recursive Manifest Compiler paper \u2014 manifest-first rendering and echo law",
+    "BUILD006_MEA_MATH_CONFORMANCE_BASELINE_UPLOAD_20260530_230706_UTC.tar.gz \u2014 live post-Build005 source/state baseline"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": "llm_plan_export_v1_patch119",
+  "report_type": "LLM_PLAN_EXPORT_V1",
+  "created_at": "2026-05-16T23:57:20",
+  "status": "LLM_PLAN_EXPORT_READY",
+  "template_path": "/home/nic/forge/memory/llm_plans_v1/latest_llm_plan_template_v1.json",
+  "template_exists": true,
+  "template_sha256": "cb0d0eb158550670447d1eb47e0cdc2c12b3c88b5590488ccf9ff96bee91a18e",
+  "validation_path": "/home/nic/forge/memory/llm_plans_v1/latest_llm_plan_validation_v1.json",
+  "validation_exists": true,
+  "validation_sha256": "f249225e8c04bfea9966bcfdf5e0029e1ff4e913c5d4f72e44c156642d7b49ee",
+  "latest_validation_status": "LLM_PLAN_SCHEMA_VALID",
+  "schema_valid": true,
+  "live_apply_eligible": false,
+  "recommended_next_patch": "Patch 120 — Forge Self-Update Proposal Gate",
+  "authority": {
+    "mode": "EXPORT_ONLY",
+    "project_file_write_authority": false,
+    "forge_self_write_authority": false,
+    "patch_apply_authority": false,
+    "shell_execution_authority": false,
+    "chroma_write_authority": false,
+    "ledger_mutation_authority": false
+  },
+  "plain_english": "Patch 119 installed the safe packet shape for future LLM plans. Next is the Forge self-update proposal gate.",
+  "next_commands": [
+    "forge-next",
+    "forge-roadmap-status",
+    "Install Patch 120 when ready"
+  ]
+}

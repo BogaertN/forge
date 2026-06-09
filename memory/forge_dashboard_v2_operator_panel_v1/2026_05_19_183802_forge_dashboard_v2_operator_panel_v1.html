@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Forge Dashboard v2 Operator Panel</title>
+<style>
+body { font-family: system-ui, sans-serif; margin: 2rem; background: #101214; color: #e8e8e8; }
+h1 { margin-bottom: 0.25rem; }
+.meta { color: #aab; margin-bottom: 1.5rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.card { border: 1px solid #333b44; border-radius: 12px; padding: 1rem; background: #181b20; }
+.card.good { border-color: #376b3a; }
+.card.warn { border-color: #7b6532; }
+.card.locked { border-color: #4c6a8b; }
+.card.info { border-color: #3f4854; }
+li { margin: 0.35rem 0; }
+</style>
+</head>
+<body>
+<h1>Forge Dashboard v2 Operator Panel</h1>
+<div class="meta">Current: S18A — Dashboard v2 / Operator Control Panel · Next: Patch 155 — AI.Web Runtime Build Readiness Map · Generated: 2026-05-19T18:38:02</div>
+<div class="grid">
+<section class='card info'><h2>Operator Overview</h2><p><strong>READY</strong> · operator_overview</p><ul><li>Current phase: S18A — Dashboard v2 / Operator Control Panel</li><li>Active patch: Patch 154 — Dashboard v2 / Operator Control Panel</li><li>Next patch: Patch 155 — AI.Web Runtime Build Readiness Map</li><li>Tools: 498</li><li>Expected commands: 574</li><li>Trust: 5.0</li></ul></section><section class='card good'><h2>Append-Only Roadmap Law</h2><p><strong>LOCKED</strong> · roadmap_append_only</p><ul><li>May delete rows: False</li><li>May renumber rows: UNKNOWN</li><li>May repurpose IDs: UNKNOWN</li><li>Rows: 26</li><li>Rule: roadmap patches append; they do not erase the trail.</li></ul></section><section class='card good'><h2>Canonical Truth</h2><p><strong>CLEAN</strong> · canonical_truth</p><ul><li>Canonical included: 54</li><li>Canonical excluded: 26</li><li>Tests pass: 67</li><li>Tests fail: 0</li><li>Patch impact high risk: UNKNOWN</li></ul></section><section class='card good'><h2>Snapshot / Shadow Evidence</h2><p><strong>READY</strong> · snapshot_shadow</p><ul><li>Snapshot ID: forge_snapshot_2026_05_19_181211</li><li>Snapshot verify: FORGE_SNAPSHOT_CREATE_VERIFY_PASS</li><li>Snapshot files: 542</li><li>Shadow run: FORGE_SHADOW_RESTORE_RUN_PASS</li><li>Shadow copied: 542</li><li>Shadow matches snapshot: True</li><li>Live changed since snapshot: 18</li></ul></section><section class='card locked'><h2>Live Apply Lock</h2><p><strong>FORGE_LIVE_APPLY_ELIGIBILITY_V2_READY_NOT_ELIGIBLE</strong> · live_apply_lock</p><ul><li>Eligible for live apply: False</li><li>Gate pass: 8</li><li>Gate warn: 0</li><li>Gate fail: 4</li><li>Expected: live apply remains locked until snapshot, sandbox/test binding, rollback, and human approval evidence all exist.</li></ul></section><section class='card info'><h2>Deferred Engine Queue</h2><p><strong>FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY</strong> · deferred_queue</p><ul><li>Queue total: 26</li><li>Repair ready: 1</li><li>Repair blocked: 2</li><li>Next repair target: stack_linker_breather</li><li>Deferred engines stay visible without hijacking the main roadmap.</li></ul></section><section class='card info'><h2>Dashboard Surfaces</h2><p><strong>READY</strong> · dashboard_surfaces</p><ul><li>Status API: FORGE_STATUS_API_SNAPSHOT_READY</li><li>Dashboard v1: FORGE_DASHBOARD_READONLY_READY</li><li>Dashboard roadmap panel: FORGE_DASHBOARD_ROADMAP_PANEL_READY</li><li>Dashboard v1 next: Patch 154 — Dashboard v2 / Operator Control Panel</li><li>Status API next: Patch 154 — Dashboard v2 / Operator Control Panel</li></ul></section>
+</div>
+</body>
+</html>

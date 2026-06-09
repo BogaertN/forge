@@ -1,0 +1,18 @@
+{
+  "already_registered": false,
+  "backup_path": "/home/nic/forge/backups/patch212_rmc_tool_registration_before/20260523_191831_UTC_tools.py",
+  "checks": {
+    "begin_marker_after": true,
+    "begin_marker_before": false,
+    "end_marker_after": true,
+    "rmc_tool_name_mentions_after": 16,
+    "rmc_tool_name_mentions_before": 0,
+    "tool_registry_untouched": true,
+    "tools_exists": true
+  },
+  "modified": true,
+  "patch": "patch212_rmc_readonly_tool_registration",
+  "timestamp": "20260523_191831_UTC",
+  "tools_path": "/home/nic/forge/agents/forge/tools.py",
+  "verdict": "PASS"
+}

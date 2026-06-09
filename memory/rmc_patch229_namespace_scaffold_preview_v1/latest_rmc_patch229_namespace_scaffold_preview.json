@@ -1,0 +1,452 @@
+{
+  "agent_profile_source": {
+    "agent_identity_activation_performed": false,
+    "agents_returned": 3,
+    "database_write_performed": false,
+    "ok": true,
+    "source": "identity_vault_readonly_adapter"
+  },
+  "agents_considered": [
+    {
+      "activation_state": "inactive_draft",
+      "agent_id": "gilligan.local",
+      "canonical_name": "Gilligan",
+      "is_active": 0,
+      "profile_hash_ok": true,
+      "rmc_namespace": "rmc/agents/gilligan.local",
+      "role": "Recursive Mirror / Forge-Governed Development Co-Pilot"
+    },
+    {
+      "activation_state": "inactive_draft",
+      "agent_id": "athena.local",
+      "canonical_name": "Athena",
+      "is_active": 0,
+      "profile_hash_ok": true,
+      "rmc_namespace": "rmc/agents/athena.local",
+      "role": "Governance / Strategy / Investor-Facing Analysis Agent"
+    },
+    {
+      "activation_state": "inactive_draft",
+      "agent_id": "neo.local",
+      "canonical_name": "Neo",
+      "is_active": 0,
+      "profile_hash_ok": true,
+      "rmc_namespace": "rmc/agents/neo.local",
+      "role": "Public / Frontline Assistant Identity"
+    }
+  ],
+  "contracts": {
+    "identity_vault": {
+      "error": null,
+      "exists": true,
+      "json_ok": true,
+      "path": "/home/nic/aiweb/service_contracts/identity_vault.contract.json",
+      "role": "Agent identity, permissions, profile metadata, and RMC namespace pointers. Identity Vault is not an agent runtime and not the shared memory store.",
+      "status": "DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR"
+    },
+    "rmc": {
+      "allowed_writes": [
+        "none during read-only bootstrap",
+        "future: test receipts only under Forge-approved RMC write contract"
+      ],
+      "error": null,
+      "exists": true,
+      "forbidden_writes": [
+        "live shared RMC memory before write contract",
+        "agent private memory before identity activation gate",
+        "Identity Vault database files",
+        ".env files",
+        "Forge tool registry"
+      ],
+      "json_ok": true,
+      "path": "/home/nic/aiweb/service_contracts/rmc.contract.json",
+      "role": "Shared and agent-scoped recursive memory/meaning layer. RMC parses phase state, checks drift, compiles manifests, renders previews, and validates echo under Forge governance.",
+      "status": "DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR"
+    }
+  },
+  "existing_paths_detected": [],
+  "generated_at_utc": "20260523_230154_UTC",
+  "hard_stop_before_apply": [
+    "Review this preview report first.",
+    "Do not create namespace folders during Patch 229.",
+    "Do not write RMC memory records during Patch 229.",
+    "Do not activate any agent during Patch 229."
+  ],
+  "name": "RMC Namespace Scaffold Preview",
+  "namespace_preview": {
+    "agents": [
+      {
+        "absolute_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local",
+        "activation_state": "inactive_draft",
+        "agent_id": "gilligan.local",
+        "canonical_name": "Gilligan",
+        "children": [
+          {
+            "exists": false,
+            "name": "manifests",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/manifests"
+          },
+          {
+            "exists": false,
+            "name": "receipts",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/receipts"
+          },
+          {
+            "exists": false,
+            "name": "echo",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/echo"
+          },
+          {
+            "exists": false,
+            "name": "private_context",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/private_context"
+          },
+          {
+            "exists": false,
+            "name": "phase_records",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/phase_records"
+          }
+        ],
+        "exists": false,
+        "identity_vault_rmc_namespace_pointer": "rmc/agents/gilligan.local",
+        "is_active": 0,
+        "namespace_type": "agent",
+        "role": "Recursive Mirror / Forge-Governed Development Co-Pilot",
+        "status": "missing_preview_only"
+      },
+      {
+        "absolute_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local",
+        "activation_state": "inactive_draft",
+        "agent_id": "athena.local",
+        "canonical_name": "Athena",
+        "children": [
+          {
+            "exists": false,
+            "name": "manifests",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/manifests"
+          },
+          {
+            "exists": false,
+            "name": "receipts",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/receipts"
+          },
+          {
+            "exists": false,
+            "name": "echo",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/echo"
+          },
+          {
+            "exists": false,
+            "name": "private_context",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/private_context"
+          },
+          {
+            "exists": false,
+            "name": "phase_records",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/phase_records"
+          }
+        ],
+        "exists": false,
+        "identity_vault_rmc_namespace_pointer": "rmc/agents/athena.local",
+        "is_active": 0,
+        "namespace_type": "agent",
+        "role": "Governance / Strategy / Investor-Facing Analysis Agent",
+        "status": "missing_preview_only"
+      },
+      {
+        "absolute_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local",
+        "activation_state": "inactive_draft",
+        "agent_id": "neo.local",
+        "canonical_name": "Neo",
+        "children": [
+          {
+            "exists": false,
+            "name": "manifests",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/manifests"
+          },
+          {
+            "exists": false,
+            "name": "receipts",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/receipts"
+          },
+          {
+            "exists": false,
+            "name": "echo",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/echo"
+          },
+          {
+            "exists": false,
+            "name": "private_context",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/private_context"
+          },
+          {
+            "exists": false,
+            "name": "phase_records",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/phase_records"
+          }
+        ],
+        "exists": false,
+        "identity_vault_rmc_namespace_pointer": "rmc/agents/neo.local",
+        "is_active": 0,
+        "namespace_type": "agent",
+        "role": "Public / Frontline Assistant Identity",
+        "status": "missing_preview_only"
+      }
+    ],
+    "all_namespaces": [
+      {
+        "absolute_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared",
+        "children": [
+          {
+            "exists": false,
+            "name": "manifests",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/manifests"
+          },
+          {
+            "exists": false,
+            "name": "receipts",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/receipts"
+          },
+          {
+            "exists": false,
+            "name": "echo",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/echo"
+          },
+          {
+            "exists": false,
+            "name": "ancestry",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/ancestry"
+          },
+          {
+            "exists": false,
+            "name": "phase_records",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/phase_records"
+          }
+        ],
+        "exists": false,
+        "namespace_id": "shared",
+        "namespace_pointer": "rmc/shared",
+        "namespace_type": "shared",
+        "status": "missing_preview_only"
+      },
+      {
+        "absolute_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local",
+        "activation_state": "inactive_draft",
+        "agent_id": "gilligan.local",
+        "canonical_name": "Gilligan",
+        "children": [
+          {
+            "exists": false,
+            "name": "manifests",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/manifests"
+          },
+          {
+            "exists": false,
+            "name": "receipts",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/receipts"
+          },
+          {
+            "exists": false,
+            "name": "echo",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/echo"
+          },
+          {
+            "exists": false,
+            "name": "private_context",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/private_context"
+          },
+          {
+            "exists": false,
+            "name": "phase_records",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/phase_records"
+          }
+        ],
+        "exists": false,
+        "identity_vault_rmc_namespace_pointer": "rmc/agents/gilligan.local",
+        "is_active": 0,
+        "namespace_type": "agent",
+        "role": "Recursive Mirror / Forge-Governed Development Co-Pilot",
+        "status": "missing_preview_only"
+      },
+      {
+        "absolute_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local",
+        "activation_state": "inactive_draft",
+        "agent_id": "athena.local",
+        "canonical_name": "Athena",
+        "children": [
+          {
+            "exists": false,
+            "name": "manifests",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/manifests"
+          },
+          {
+            "exists": false,
+            "name": "receipts",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/receipts"
+          },
+          {
+            "exists": false,
+            "name": "echo",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/echo"
+          },
+          {
+            "exists": false,
+            "name": "private_context",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/private_context"
+          },
+          {
+            "exists": false,
+            "name": "phase_records",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/phase_records"
+          }
+        ],
+        "exists": false,
+        "identity_vault_rmc_namespace_pointer": "rmc/agents/athena.local",
+        "is_active": 0,
+        "namespace_type": "agent",
+        "role": "Governance / Strategy / Investor-Facing Analysis Agent",
+        "status": "missing_preview_only"
+      },
+      {
+        "absolute_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local",
+        "activation_state": "inactive_draft",
+        "agent_id": "neo.local",
+        "canonical_name": "Neo",
+        "children": [
+          {
+            "exists": false,
+            "name": "manifests",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/manifests"
+          },
+          {
+            "exists": false,
+            "name": "receipts",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/receipts"
+          },
+          {
+            "exists": false,
+            "name": "echo",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/echo"
+          },
+          {
+            "exists": false,
+            "name": "private_context",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/private_context"
+          },
+          {
+            "exists": false,
+            "name": "phase_records",
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/phase_records"
+          }
+        ],
+        "exists": false,
+        "identity_vault_rmc_namespace_pointer": "rmc/agents/neo.local",
+        "is_active": 0,
+        "namespace_type": "agent",
+        "role": "Public / Frontline Assistant Identity",
+        "status": "missing_preview_only"
+      }
+    ],
+    "shared": {
+      "absolute_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared",
+      "children": [
+        {
+          "exists": false,
+          "name": "manifests",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/manifests"
+        },
+        {
+          "exists": false,
+          "name": "receipts",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/receipts"
+        },
+        {
+          "exists": false,
+          "name": "echo",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/echo"
+        },
+        {
+          "exists": false,
+          "name": "ancestry",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/ancestry"
+        },
+        {
+          "exists": false,
+          "name": "phase_records",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/phase_records"
+        }
+      ],
+      "exists": false,
+      "namespace_id": "shared",
+      "namespace_pointer": "rmc/shared",
+      "namespace_type": "shared",
+      "status": "missing_preview_only"
+    }
+  },
+  "next_patch_if_approved": "Patch 229A \u2014 RMC namespace scaffold apply",
+  "ok": true,
+  "patch": "229",
+  "preview_only": true,
+  "roots": {
+    "aiweb_root": "/home/nic/aiweb",
+    "contracts_root": "/home/nic/aiweb/service_contracts",
+    "forge_root": "/home/nic/forge",
+    "rmc_root_detection": {
+      "candidates": [
+        {
+          "exists": false,
+          "path": "/home/nic/aiweb/rmc"
+        },
+        {
+          "exists": false,
+          "path": "/home/nic/aiweb/memory/rmc"
+        },
+        {
+          "exists": false,
+          "path": "/home/nic/aiweb/runtime_wrappers/rmc_memory"
+        },
+        {
+          "exists": true,
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory"
+        }
+      ],
+      "chosen_root": "/home/nic/aiweb/runtime_wrappers/ancestral_memory",
+      "chosen_root_exists": true,
+      "selection_reason": "first_existing_candidate"
+    }
+  },
+  "would_create_on_future_apply_patch": [
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/echo",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/manifests",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/phase_records",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/private_context",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/receipts",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/echo",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/manifests",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/phase_records",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/private_context",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/receipts",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/echo",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/manifests",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/phase_records",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/private_context",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/receipts",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/ancestry",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/echo",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/manifests",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/phase_records",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/receipts"
+  ],
+  "writes_performed": {
+    "agent_identity_activation_performed": false,
+    "env_secret_values_read": false,
+    "forge_owned_report": true,
+    "identity_vault_database_written": false,
+    "rmc_memory_written": false,
+    "rmc_namespace_created": false
+  }
+}

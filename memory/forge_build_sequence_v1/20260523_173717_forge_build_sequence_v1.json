@@ -1,0 +1,1085 @@
+{
+  "active_patch": "Patch 183 \u2014 Runtime Candidate Sandbox Stage Create/Verify / Forge-Owned Copy Only",
+  "aiweb_runtime_readiness": {
+    "latest_path": "/home/nic/forge/memory/forge_aiweb_runtime_build_readiness_v1/latest_forge_aiweb_runtime_build_readiness_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "status": "AIWEB_RUNTIME_BUILD_READINESS_MAP_READY_PLANNING_ONLY"
+  },
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "runtime_file_write_authority": false,
+    "server_started": false,
+    "shell_execution_authority": false
+  },
+  "blocked_items": [],
+  "build_phase_gate": {
+    "gate_fail_count": 0,
+    "gate_pass_count": 8,
+    "gate_warn_count": 0,
+    "status": "FORGE_BUILD_PHASE_GATE_READY"
+  },
+  "build_sequence": [
+    {
+      "id": "S01",
+      "purpose": "Initial patch/audit/exact-read foundations.",
+      "status": "DONE",
+      "title": "Patch law, audit, and exact truth"
+    },
+    {
+      "id": "S02",
+      "purpose": "Corpus intake, source authority, and context memory foundations.",
+      "status": "DONE",
+      "title": "Corpus and source authority foundations"
+    },
+    {
+      "id": "S03",
+      "purpose": "Code index, symbol map, engine inventory, and runtime role mapping.",
+      "status": "DONE",
+      "title": "Codebase index and symbolic runtime map"
+    },
+    {
+      "id": "S04",
+      "purpose": "Sandbox/test safety layers and safe canonical test execution.",
+      "status": "DONE",
+      "title": "Sandbox and safe test harness"
+    },
+    {
+      "id": "S05",
+      "purpose": "Human-reviewed canonical lockfile and deferred/excluded authority.",
+      "status": "DONE",
+      "title": "Canonical engine authority"
+    },
+    {
+      "id": "S06",
+      "purpose": "Canonical relationships, neighbors, impact map, and risk surfaces.",
+      "status": "DONE",
+      "title": "Relationship and impact intelligence"
+    },
+    {
+      "id": "S07",
+      "purpose": "Read-only status API and dashboard surfaces.",
+      "status": "DONE",
+      "title": "Status API and read-only dashboard"
+    },
+    {
+      "id": "S08",
+      "purpose": "Mode registry, check-only matrix, and permission visibility.",
+      "status": "DONE",
+      "title": "Mode registry and permission matrix"
+    },
+    {
+      "id": "S09",
+      "purpose": "Repair roadmap away from stale single-task routing.",
+      "status": "DONE",
+      "title": "Roadmap V2 realignment"
+    },
+    {
+      "id": "S10",
+      "purpose": "Create build sequence brain without replacing the historical roadmap.",
+      "status": "DONE",
+      "title": "Roadmap-Grounded Build Sequencer"
+    },
+    {
+      "id": "S11",
+      "purpose": "Keep deferred engines visible without blocking the main path.",
+      "status": "DONE",
+      "title": "Deferred Engine Repair Queue"
+    },
+    {
+      "id": "S12",
+      "purpose": "Check build phase readiness from verified reports.",
+      "status": "DONE",
+      "title": "Build Phase Gate Checker"
+    },
+    {
+      "id": "S13",
+      "purpose": "Expose roadmap/deferred/gate status to dashboard surfaces.",
+      "status": "DONE",
+      "title": "Dashboard Roadmap Panel"
+    },
+    {
+      "id": "S14",
+      "purpose": "Strengthen source-authority binder without claiming fake final authority.",
+      "status": "DONE",
+      "title": "Source Authority Runtime Binder Hardening"
+    },
+    {
+      "id": "S15",
+      "purpose": "Read-only LLM patch proposal structure with verified fields.",
+      "status": "DONE",
+      "title": "LLM Patch Proposal v2"
+    },
+    {
+      "id": "S16",
+      "purpose": "Create read-only live-apply go/no-go gate; no write authority.",
+      "status": "DONE",
+      "title": "Live Apply Eligibility Gate v2"
+    },
+    {
+      "id": "S17",
+      "purpose": "Parent roadmap stage for snapshot planning, creation, shadow replay, and forensic diff.",
+      "status": "ACTIVE",
+      "title": "Snapshot and forensic replay expansion"
+    },
+    {
+      "id": "S18",
+      "purpose": "Future operator-facing dashboard expansion after snapshot foundations.",
+      "status": "FUTURE",
+      "title": "Dashboard v2 / operator control panel"
+    },
+    {
+      "id": "S19",
+      "purpose": "Use Forge to build AI.Web runtime modules after gates are mature.",
+      "status": "ACTIVE",
+      "title": "AI.Web runtime build through Forge"
+    },
+    {
+      "id": "S20",
+      "purpose": "Package stable Forge with install, recovery, audit, and release artifacts.",
+      "status": "FUTURE",
+      "title": "Freeze, release, and recovery package"
+    },
+    {
+      "id": "S17A",
+      "purpose": "Patch 151 defines the snapshot and forensic replay plan. It creates no snapshot and restores nothing.",
+      "status": "ACTIVE",
+      "title": "Snapshot / Forensic Replay Plan"
+    },
+    {
+      "id": "S17B",
+      "purpose": "Patch 152 should create Forge-owned snapshot artifacts and verify hashes.",
+      "status": "NEXT",
+      "title": "Snapshot Create / Verify"
+    },
+    {
+      "id": "S17C",
+      "purpose": "Future patch should rehearse restore into a shadow directory and produce forensic diff evidence.",
+      "status": "FUTURE",
+      "title": "Shadow Restore / Forensic Diff"
+    },
+    {
+      "id": "S18A",
+      "purpose": "Create read-only operator gauges that combine roadmap, gates, snapshots, shadow diff, deferred queue, and live-apply lock state.",
+      "status": "DONE",
+      "title": "Dashboard v2 / Operator Control Panel"
+    },
+    {
+      "id": "S18B",
+      "purpose": "Bind dashboard v2 directly into status API/dashboard surfaces and stale-report warning rows.",
+      "status": "NEXT",
+      "title": "Operator Panel Status Aggregator"
+    },
+    {
+      "id": "S18C",
+      "purpose": "Produce a compact operator handoff artifact for restart, audit, and external review.",
+      "status": "FUTURE",
+      "title": "Operator Panel Export / Handoff View"
+    },
+    {
+      "id": "S19A",
+      "purpose": "Map whether Forge is ready to plan the AI.Web runtime build through canonical engines, tests, source authority, snapshots, shadow evidence, and live-apply gates.",
+      "status": "DONE",
+      "title": "AI.Web Runtime Build Readiness Map"
+    },
+    {
+      "id": "S19B",
+      "purpose": "Map AI.Web runtime modules, dependencies, wrappers, tests, and deferred edges before any runtime build patch is proposed.",
+      "status": "DONE",
+      "title": "Runtime Module Dependency Map"
+    },
+    {
+      "id": "S19C",
+      "purpose": "Plan a Forge-owned runtime build sandbox before any AI.Web live runtime writes are eligible.",
+      "status": "DONE",
+      "title": "Runtime Build Sandbox Planner"
+    },
+    {
+      "authority": "planning/sandbox only; no live runtime writes",
+      "id": "S19D",
+      "patch": "Patch 158 \u2014 Runtime Build Sandbox Plan / Dry Run",
+      "purpose": "Preserved historical roadmap row from earlier disk state.",
+      "status": "DONE",
+      "summary": "Build a no-live-write sandbox/dry-run plan for the selected runtime module candidate.",
+      "title": "Runtime Build Sandbox Plan / Dry Run"
+    },
+    {
+      "authority": "verification/planning only",
+      "id": "S19E",
+      "patch": "Patch 159 \u2014 Runtime Build Sandbox Verification / Candidate File Plan",
+      "purpose": "Preserved historical roadmap row from earlier disk state.",
+      "status": "DONE",
+      "summary": "Verify dry-run evidence and plan candidate files without live writes.",
+      "title": "Runtime Build Sandbox Verification / Candidate File Plan"
+    },
+    {
+      "authority": "sandbox-only candidate file creation; no live runtime writes",
+      "id": "S19F",
+      "patch": "Patch 160 \u2014 Runtime Candidate File Draft / Sandbox Candidate",
+      "purpose": "Preserved historical roadmap row from earlier disk state.",
+      "status": "DONE",
+      "summary": "Draft candidate runtime files in a Forge-owned sandbox only, with static checks.",
+      "title": "Runtime Candidate File Draft / Sandbox Candidate"
+    },
+    {
+      "authority": "verification/gating only; no live runtime writes",
+      "id": "S19G",
+      "patch": "Patch 161 \u2014 Runtime Candidate Static Verification / Live Build Gate",
+      "purpose": "Preserved historical roadmap row from earlier disk state.",
+      "status": "DONE",
+      "summary": "Statically verify sandbox candidate files and bind live build gate evidence without live writes.",
+      "title": "Runtime Candidate Static Verification / Live Build Gate"
+    },
+    {
+      "authority": "preflight/approval only; no automatic live writes",
+      "id": "S19H",
+      "patch": "Patch 162 \u2014 Runtime Live Build Preflight / Human Approval Gate",
+      "purpose": "Preserved historical roadmap row from earlier disk state.",
+      "status": "DONE",
+      "summary": "Prepare live build preflight and human approval evidence before any runtime write can be considered.",
+      "title": "Runtime Live Build Preflight / Human Approval Gate"
+    },
+    {
+      "authority": "approval token / apply plan only; live write still gated",
+      "id": "S19I",
+      "patch": "Patch 163 \u2014 Runtime Live Build Approval Token / Apply Plan",
+      "purpose": "Preserved historical roadmap row from earlier disk state.",
+      "status": "DONE",
+      "summary": "Create an explicit human approval token and live apply plan gate without executing the live build.",
+      "title": "Runtime Live Build Approval Token / Apply Plan"
+    },
+    {
+      "authority": "dry-run/backup planning only until explicit approval",
+      "id": "S19J",
+      "patch": "Patch 164 \u2014 Runtime Live Build Backup / Apply Dry Run",
+      "purpose": "Preserved historical roadmap row from earlier disk state.",
+      "status": "DONE",
+      "summary": "Prepare live target backup and run a no-write apply dry-run before any real runtime build.",
+      "title": "Runtime Live Build Backup / Apply Dry Run"
+    },
+    {
+      "authority": "approval gate only until confirmed",
+      "id": "S19K",
+      "patch": "Patch 165 \u2014 Runtime Live Build Final Approval / Live Apply Gate",
+      "purpose": "Preserved historical roadmap row from earlier disk state.",
+      "status": "DONE",
+      "summary": "Require explicit human approval before any live runtime write is eligible.",
+      "title": "Runtime Live Build Final Approval / Live Apply Gate"
+    },
+    {
+      "authority": "execution planning only unless explicit approval exists",
+      "id": "S19L",
+      "patch": "Patch 166 \u2014 Runtime Live Build Execution Plan / Receipt Gate",
+      "status": "DONE",
+      "summary": "Prepare execution receipt structure for a future approved live runtime apply.",
+      "title": "Runtime Live Build Execution Plan / Receipt Gate"
+    },
+    {
+      "authority": "approval capture and execution gate only",
+      "id": "S19M",
+      "patch": "Patch 167 \u2014 Runtime Live Build Approval Capture / Execution Gate",
+      "status": "DONE",
+      "summary": "Capture explicit human approval state and decide whether live execution can be unlocked.",
+      "title": "Runtime Live Build Approval Capture / Execution Gate"
+    },
+    {
+      "authority": "decision gate only; no implicit approval",
+      "id": "S19N",
+      "patch": "Patch 168 \u2014 Runtime Live Build Approval Receipt / Execution Decision Gate",
+      "status": "DONE",
+      "summary": "Verify approval receipt state and decide whether live build can remain locked or advance toward a separately approved execution.",
+      "title": "Runtime Live Build Approval Receipt / Execution Decision Gate"
+    },
+    {
+      "authority": "approval input gate only; no runtime writes",
+      "id": "S19O",
+      "patch": "Patch 169 \u2014 Runtime Live Build Human Approval Token Entry Gate",
+      "status": "DONE",
+      "summary": "Provide a separate, explicit token-entry gate for human approval before any live runtime apply can be considered.",
+      "title": "Runtime Live Build Human Approval Token Entry Gate"
+    },
+    {
+      "authority": "validation gate only; no implicit approval",
+      "id": "S19P",
+      "patch": "Patch 170 \u2014 Runtime Live Build Approval Token Validation / Final Execution Preflight",
+      "status": "DONE",
+      "summary": "Validate whether any explicit approval token has been captured before live execution can proceed.",
+      "title": "Runtime Live Build Approval Token Validation / Final Execution Preflight"
+    },
+    {
+      "authority": "approval capture gate only",
+      "id": "S19Q",
+      "patch": "Patch 171 \u2014 Runtime Live Build Explicit Approval Capture / Apply Hold",
+      "status": "DONE",
+      "summary": "Prepare the explicit approval capture/hold stage after validation, with live writes still locked unless approved.",
+      "title": "Runtime Live Build Explicit Approval Capture / Apply Hold"
+    },
+    {
+      "authority": "review/receipt gate only",
+      "id": "S19R",
+      "patch": "Patch 172 \u2014 Runtime Live Build Apply Hold Review / No-Write Receipt",
+      "status": "DONE",
+      "summary": "Review captured approval/hold evidence and prepare a no-write receipt before any future execution decision.",
+      "title": "Runtime Live Build Apply Hold Review / No-Write Receipt"
+    },
+    {
+      "authority": "hold-continuation gate only",
+      "id": "S19S",
+      "patch": "Patch 173 \u2014 Runtime Live Build Hold Continuation / Runtime Candidate Queue Return",
+      "status": "DONE",
+      "summary": "Continue holding the live build when approval is absent and route the candidate back into the runtime build queue without writes.",
+      "title": "Runtime Live Build Hold Continuation / Runtime Candidate Queue Return"
+    },
+    {
+      "authority": "queue review only; no live writes",
+      "id": "S19T",
+      "patch": "Patch 174 \u2014 Runtime Candidate Queue Review / Next Candidate Selection",
+      "status": "DONE",
+      "summary": "Review the held candidate queue and decide whether to keep failsafe_manager held, request explicit approval, or select the next runtime candidate for dry planning.",
+      "title": "Runtime Candidate Queue Review / Next Candidate Selection"
+    },
+    {
+      "authority": "dry-plan selector only; no runtime writes",
+      "id": "S19U",
+      "patch": "Patch 175 \u2014 Runtime Candidate Dry-Plan Selector / No-Write Planning Gate",
+      "status": "DONE",
+      "summary": "Select or preserve the next runtime candidate for dry planning only, with no approval, execution, or live writes.",
+      "title": "Runtime Candidate Dry-Plan Selector / No-Write Planning Gate"
+    },
+    {
+      "authority": "scope review only; no runtime writes",
+      "id": "S19V",
+      "patch": "Patch 176 \u2014 Runtime Candidate Dry-Plan Scope Builder / No-Write File Set Review",
+      "status": "DONE",
+      "summary": "Build the no-write file set and dependency scope for the selected runtime dry-plan candidate.",
+      "title": "Runtime Candidate Dry-Plan Scope Builder / No-Write File Set Review"
+    },
+    {
+      "authority": "impact review only; no runtime writes",
+      "id": "S19W",
+      "patch": "Patch 177 \u2014 Runtime Candidate Dry-Plan Dependency Review / No-Write Impact Notes",
+      "status": "DONE",
+      "summary": "Review dependencies and impact notes for the selected runtime candidate without applying changes.",
+      "title": "Runtime Candidate Dry-Plan Dependency Review / No-Write Impact Notes"
+    },
+    {
+      "authority": "validation planning only; no runtime writes",
+      "id": "S19X",
+      "patch": "Patch 178 \u2014 Runtime Candidate Dry-Plan Validation Matrix / No-Write Test Plan",
+      "status": "DONE",
+      "summary": "Create a no-write validation/test matrix before any future sandbox or live apply.",
+      "title": "Runtime Candidate Dry-Plan Validation Matrix / No-Write Test Plan"
+    },
+    {
+      "authority": "sandbox planning only; no runtime writes",
+      "id": "S19Y",
+      "patch": "Patch 179 \u2014 Runtime Candidate Dry-Plan Sandbox Readiness / No-Write Rehearsal Plan",
+      "status": "DONE",
+      "summary": "Plan the Forge-owned sandbox rehearsal for the selected runtime candidate without executing or applying it.",
+      "title": "Runtime Candidate Dry-Plan Sandbox Readiness / No-Write Rehearsal Plan"
+    },
+    {
+      "authority": "rollback planning only; no runtime writes",
+      "id": "S19Z",
+      "patch": "Patch 180 \u2014 Runtime Candidate Dry-Plan Rollback Matrix / No-Write Restore Plan",
+      "status": "DONE",
+      "summary": "Prepare rollback/restore planning before any sandbox execution or live apply.",
+      "title": "Runtime Candidate Dry-Plan Rollback Matrix / No-Write Restore Plan"
+    },
+    {
+      "authority": "preflight only; no runtime writes",
+      "id": "S19AA",
+      "patch": "Patch 181 \u2014 Runtime Candidate Sandbox Execution Preflight / No-Write Gate",
+      "status": "DONE",
+      "summary": "Check all receipts, scope rows, SHA rows, validation matrix, rollback matrix, and sandbox readiness before any sandbox execution patch.",
+      "title": "Runtime Candidate Sandbox Execution Preflight / No-Write Gate"
+    },
+    {
+      "id": "S19AB",
+      "patch": "Patch 182 \u2014 Runtime Candidate Sandbox Stage Manifest / No-Write Copy Plan",
+      "status": "DONE",
+      "summary": "Prepare a no-write copy/staging manifest for a future Forge-owned sandbox stage.",
+      "title": "Runtime Candidate Sandbox Stage Manifest / No-Write Copy Plan"
+    },
+    {
+      "id": "S19AC",
+      "patch": "Patch 183 \u2014 Runtime Candidate Sandbox Stage Create/Verify / Forge-Owned Copy Only",
+      "status": "ACTIVE",
+      "summary": "Create a Forge-owned sandbox stage and copy candidate files only after exact SHA precheck.",
+      "title": "Runtime Candidate Sandbox Stage Create/Verify / Forge-Owned Copy Only"
+    },
+    {
+      "id": "S19AD",
+      "patch": "Patch 184 \u2014 Runtime Candidate Sandbox Copy Integrity Review / No-Write Readback Receipt",
+      "status": "NEXT",
+      "summary": "Review the Forge-owned sandbox copy/readback receipt before sandbox execution or tests are allowed.",
+      "title": "Runtime Candidate Sandbox Copy Integrity Review / No-Write Readback Receipt"
+    },
+    {
+      "id": "S20A",
+      "status": "DONE",
+      "title": "Forge Self-Modification Foundation \u2014 Command propose/install pipeline (P184-186)"
+    },
+    {
+      "id": "S20B",
+      "status": "DONE",
+      "title": "LLM-Assisted Implementation \u2014 Qwen3 writes real command bodies (P187-193)"
+    },
+    {
+      "id": "S20C",
+      "status": "DONE",
+      "title": "External Tool Discovery \u2014 PyPI search, install, wrap (P194-195)"
+    },
+    {
+      "id": "S20D",
+      "status": "DONE",
+      "title": "Forge Self-Inspection \u2014 Self-scan, gap analysis, Qwen3 suggestions (P196)"
+    },
+    {
+      "id": "S20E",
+      "status": "DONE",
+      "title": "Smart Restart \u2014 Session diff, RESTART confirmation, relaunch in place (P197)"
+    },
+    {
+      "id": "S20F",
+      "status": "ACTIVE",
+      "title": "Roadmap Live Update \u2014 Sequence auto-sync, append/mark commands (P198)"
+    },
+    {
+      "id": "S20G",
+      "status": "NEXT",
+      "title": "Document Reading \u2014 Read PDF, DOCX, Markdown from scope"
+    },
+    {
+      "id": "S20H",
+      "status": "FUTURE",
+      "title": "Memory Search \u2014 Query forge memory by keyword and date"
+    },
+    {
+      "id": "S20I",
+      "status": "FUTURE",
+      "title": "Local File Search \u2014 Search file contents in scope"
+    },
+    {
+      "id": "S20J",
+      "status": "FUTURE",
+      "title": "Test Runner Integration \u2014 Run approved tests from Forge"
+    },
+    {
+      "id": "S20K",
+      "status": "NEXT",
+      "title": "Add memory search command"
+    },
+    {
+      "id": "S19AE",
+      "status": "DONE",
+      "title": "RMC Integration Freeze / No-Move Snapshot"
+    },
+    {
+      "id": "S19AF",
+      "status": "DONE",
+      "title": "RMC Missing Module Install / Phase Parser, Drift Arbitrator, Echo Gate"
+    },
+    {
+      "id": "S19AG",
+      "status": "DONE",
+      "title": "Forge RMC Read-Only Wrapper"
+    },
+    {
+      "id": "S19AH",
+      "status": "DONE",
+      "title": "Forge RMC Runtime Preview Check"
+    },
+    {
+      "id": "S19AI",
+      "status": "DONE",
+      "title": "Identity Vault Boundary Scan / Hygiene"
+    },
+    {
+      "id": "S19AJ",
+      "status": "DONE",
+      "title": "Identity Vault Readiness Reconcile"
+    },
+    {
+      "id": "S19AK",
+      "status": "DONE",
+      "title": "Identity Vault Read-Only Adapter"
+    },
+    {
+      "id": "S19AL",
+      "status": "DONE",
+      "title": "Identity Vault Drift Auto-Confirm Safety"
+    },
+    {
+      "id": "S19AM",
+      "status": "DONE",
+      "title": "Identity Vault DB Canonical Reconcile"
+    },
+    {
+      "id": "S19AN",
+      "status": "DONE",
+      "title": "AI.Web Service Contracts Apply"
+    },
+    {
+      "id": "S19AO",
+      "status": "DONE",
+      "title": "AI.Web Service Contracts Verify"
+    },
+    {
+      "id": "S19AP",
+      "status": "DONE",
+      "title": "Forge AI.Web Read-Only Connector Commands"
+    },
+    {
+      "id": "S19AQ",
+      "status": "FUTURE",
+      "title": "Identity Vault \u2014 persistent agent identity across sessions"
+    },
+    {
+      "id": "S19AR",
+      "status": "DONE",
+      "title": "Identity Vault Schema Migration Apply"
+    },
+    {
+      "id": "S19AS",
+      "status": "DONE",
+      "title": "Legacy Profile Migration Preview / Preserve Legacy user789"
+    },
+    {
+      "id": "S19AT",
+      "status": "ACTIVE",
+      "title": "Identity Vault Profile Seed Preview / Template Repair Gate"
+    },
+    {
+      "id": "S19AU",
+      "status": "NEXT",
+      "title": "Identity Vault Template Repair Preview"
+    },
+    {
+      "id": "S19AV",
+      "status": "FUTURE",
+      "title": "Apply Repaired Identity Vault Templates"
+    },
+    {
+      "id": "S19AW",
+      "status": "FUTURE",
+      "title": "Verify Repaired Identity Vault Templates"
+    },
+    {
+      "id": "S19AY",
+      "status": "FUTURE",
+      "title": "Verify Inactive Draft Identity Vault Profiles"
+    },
+    {
+      "id": "S19AZ",
+      "status": "FUTURE",
+      "title": "Upgrade Full Profile Read-Only Adapter"
+    },
+    {
+      "id": "S19BA",
+      "status": "FUTURE",
+      "title": "RMC Namespace Scaffold Preview"
+    },
+    {
+      "id": "S19BB",
+      "status": "FUTURE",
+      "title": "RMC Namespace Scaffold Apply / Empty Namespaces Only"
+    },
+    {
+      "id": "S19BC",
+      "status": "FUTURE",
+      "title": "Bootstrap Handshake Dry-Run v2 / Inactive Profile Respected"
+    },
+    {
+      "id": "S19BD",
+      "status": "FUTURE",
+      "title": "Agent Activation Preflight Command"
+    },
+    {
+      "id": "S19BE",
+      "status": "FUTURE",
+      "title": "Activate Gilligan as Governed Profile"
+    },
+    {
+      "id": "S19BF",
+      "status": "FUTURE",
+      "title": "Gilligan Governed Handshake"
+    },
+    {
+      "id": "S19BG",
+      "status": "FUTURE",
+      "title": "RMC Test Receipt Write"
+    },
+    {
+      "id": "S19BH",
+      "status": "FUTURE",
+      "title": "Athena Activation and Governed Handshake"
+    }
+  ],
+  "created_at": "2026-05-23T09:37:07",
+  "current_phase": "S19AC \u2014 Runtime Candidate Sandbox Stage Create/Verify / Forge-Owned Copy Only",
+  "dashboard_roadmap_panel": {
+    "latest_path": "/home/nic/forge/memory/forge_dashboard_roadmap_panel_v1/latest_forge_dashboard_roadmap_panel_v1.json",
+    "panel_count": 4,
+    "status": "FORGE_DASHBOARD_ROADMAP_PANEL_READY"
+  },
+  "dashboard_v2_operator_panel": {
+    "latest_path": "/home/nic/forge/memory/forge_dashboard_v2_operator_panel_v1/latest_forge_dashboard_v2_operator_panel_v1.json",
+    "panel_count": 7,
+    "status": "FORGE_DASHBOARD_V2_OPERATOR_PANEL_READY"
+  },
+  "deferred_items": [
+    {
+      "name": "stack_linker_breather",
+      "reason": "Deferred and excluded from canonical lockfile; visible in deferred repair queue for later dependency/sandbox repair."
+    },
+    {
+      "name": "excluded/deferred engine set",
+      "reason": "26 queue rows tracked; no delete/quarantine/promote action authorized."
+    }
+  ],
+  "deferred_queue": {
+    "next_repair_target": "stack_linker_breather",
+    "queue_total": 26,
+    "repair_ready_count": 1,
+    "status": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY"
+  },
+  "live_apply_eligibility_v2": {
+    "eligible_for_live_apply": false,
+    "gate_fail_count": 4,
+    "gate_pass_count": 8,
+    "gate_warn_count": 0,
+    "status": "FORGE_LIVE_APPLY_ELIGIBILITY_V2_READY_NOT_ELIGIBLE"
+  },
+  "llm_patch_proposal_v2": {
+    "proposal_path": "/home/nic/forge/memory/forge_llm_patch_proposal_v2/latest_forge_llm_patch_proposal_v2.json",
+    "proposal_status": "FORGE_LLM_PATCH_PROPOSAL_V2_DRAFT_READY_NO_WRITE_AUTHORITY",
+    "verification_path": "/home/nic/forge/memory/forge_llm_patch_proposal_v2/latest_forge_llm_patch_proposal_v2_verify.json",
+    "verification_status": "FORGE_LLM_PATCH_PROPOSAL_V2_VERIFIED_READ_ONLY"
+  },
+  "next_commands": [
+    "forge-runtime-live-approval-plan",
+    "forge-runtime-live-approval-token",
+    "forge-runtime-live-approval-show gates",
+    "forge-runtime-live-approval-export",
+    "forge-dashboard-roadmap-build",
+    "forge-status-api-build",
+    "forge-dashboard-build",
+    "Install Patch 164 when ready"
+  ],
+  "next_patch": "Patch 184 \u2014 Runtime Candidate Sandbox Copy Integrity Review / No-Write Readback Receipt",
+  "plain_english": "Patch 163 creates a Forge-owned approval token template and live apply plan draft. It does not grant approval and does not write live AI.Web runtime files.",
+  "recommended_next_patch": "Patch 184 \u2014 Runtime Candidate Sandbox Copy Integrity Review / No-Write Readback Receipt",
+  "report_type": "FORGE_BUILD_SEQUENCE_V1",
+  "roadmap_mutation_policy": "APPEND_ONLY",
+  "runtime_build_plan": {
+    "latest_path": "/home/nic/forge/memory/forge_runtime_build_plan_v1/latest_forge_runtime_build_plan_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "selected_candidate": "failsafe_manager",
+    "status": "FORGE_RUNTIME_BUILD_PLAN_READY_PLANNING_ONLY"
+  },
+  "runtime_build_sandbox": {
+    "dry_run_status": "FORGE_RUNTIME_BUILD_SANDBOX_DRY_RUN_READY",
+    "latest_dry_run_path": "/home/nic/forge/memory/forge_runtime_build_sandbox_v1/latest_forge_runtime_build_sandbox_dry_run_v1.json",
+    "latest_plan_path": "/home/nic/forge/memory/forge_runtime_build_sandbox_v1/latest_forge_runtime_build_sandbox_v1.json",
+    "plan_status": "FORGE_RUNTIME_BUILD_SANDBOX_PLAN_READY",
+    "selected_candidate": "failsafe_manager"
+  },
+  "runtime_build_sandbox_verification": {
+    "candidate_file_plan_status": "FORGE_RUNTIME_BUILD_CANDIDATE_FILE_PLAN_READY_PLANNING_ONLY",
+    "latest_candidate_file_plan_path": "/home/nic/forge/memory/forge_runtime_build_sandbox_verify_v1/latest_forge_runtime_build_candidate_file_plan_v1.json",
+    "latest_verification_path": "/home/nic/forge/memory/forge_runtime_build_sandbox_verify_v1/latest_forge_runtime_build_sandbox_verify_v1.json",
+    "selected_candidate": "failsafe_manager",
+    "verification_status": "FORGE_RUNTIME_BUILD_SANDBOX_VERIFICATION_READY_PLANNING_ONLY"
+  },
+  "runtime_candidate_draft": {
+    "draft_status": "FORGE_RUNTIME_CANDIDATE_DRAFT_READY_SANDBOX_ONLY",
+    "latest_draft_path": "/home/nic/forge/memory/forge_runtime_candidate_drafts_v1/latest_forge_runtime_candidate_draft_v1.json",
+    "latest_verification_path": "/home/nic/forge/memory/forge_runtime_candidate_drafts_v1/latest_forge_runtime_candidate_draft_verification_v1.json",
+    "selected_candidate": "failsafe_manager",
+    "verification_status": "FORGE_RUNTIME_CANDIDATE_DRAFT_VERIFY_PASS_SANDBOX_ONLY"
+  },
+  "runtime_candidate_dry_plan_dependency": {
+    "dependency_review_ready": true,
+    "engine_writes": 0,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_candidate_dry_plan_dependency_v1/latest_forge_runtime_candidate_dry_plan_dependency_v1.json",
+    "live_apply_allowed": false,
+    "project_writes": 0,
+    "runtime_writes": 0,
+    "selected_candidate": "failsafe_manager",
+    "status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_DEPENDENCY_READY_NO_WRITE_IMPACT_NOTES"
+  },
+  "runtime_candidate_dry_plan_rollback": {
+    "engine_writes": 0,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_candidate_dry_plan_rollback_v1/latest_forge_runtime_candidate_dry_plan_rollback_v1.json",
+    "live_apply_allowed": false,
+    "project_writes": 0,
+    "restore_execution_allowed": false,
+    "rollback_execution_allowed": false,
+    "rollback_matrix_ready": true,
+    "runtime_writes": 0,
+    "selected_candidate": "failsafe_manager",
+    "status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_ROLLBACK_READY_NO_WRITE_RESTORE_PLAN"
+  },
+  "runtime_candidate_dry_plan_sandbox": {
+    "engine_writes": 0,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_candidate_dry_plan_sandbox_v1/latest_forge_runtime_candidate_dry_plan_sandbox_v1.json",
+    "live_apply_allowed": false,
+    "project_writes": 0,
+    "runtime_writes": 0,
+    "sandbox_execution_allowed": false,
+    "sandbox_readiness_ready": true,
+    "selected_candidate": "failsafe_manager",
+    "status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_SANDBOX_READY_NO_WRITE_REHEARSAL_PLAN"
+  },
+  "runtime_candidate_dry_plan_scope": {
+    "dry_plan_scope_ready": true,
+    "engine_writes": 0,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_candidate_dry_plan_scope_v1/latest_forge_runtime_candidate_dry_plan_scope_v1.json",
+    "live_apply_allowed": false,
+    "project_writes": 0,
+    "runtime_writes": 0,
+    "selected_candidate": "failsafe_manager",
+    "status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_SCOPE_READY_NO_WRITE_FILE_SET_REVIEW"
+  },
+  "runtime_candidate_dry_plan_selector": {
+    "dry_plan_allowed": true,
+    "engine_writes": 0,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_candidate_dry_plan_selector_v1/latest_forge_runtime_candidate_dry_plan_selector_v1.json",
+    "live_apply_allowed": false,
+    "planning_ready": true,
+    "project_writes": 0,
+    "runtime_writes": 0,
+    "selected_candidate": "failsafe_manager",
+    "status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_SELECTOR_READY_NO_WRITE_PLANNING_GATE"
+  },
+  "runtime_candidate_dry_plan_validation": {
+    "engine_writes": 0,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_candidate_dry_plan_validation_v1/latest_forge_runtime_candidate_dry_plan_validation_v1.json",
+    "live_apply_allowed": false,
+    "project_writes": 0,
+    "runtime_writes": 0,
+    "selected_candidate": "failsafe_manager",
+    "status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_VALIDATION_READY_NO_WRITE_TEST_PLAN",
+    "validation_matrix_ready": true
+  },
+  "runtime_candidate_queue_review": {
+    "engine_writes": 0,
+    "execution_decision": "KEEP_HELD_DEFER_NEXT_SELECTION_TO_DRY_PLAN",
+    "human_approval_present": false,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_candidate_queue_v1/latest_forge_runtime_candidate_queue_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "project_writes": 0,
+    "runtime_writes": 0,
+    "status": "FORGE_RUNTIME_CANDIDATE_QUEUE_REVIEW_READY_NEXT_SELECTION_DEFERRED"
+  },
+  "runtime_candidate_sandbox_preflight": {
+    "engine_writes": 0,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_candidate_sandbox_preflight_v1/latest_forge_runtime_candidate_sandbox_preflight_v1.json",
+    "live_apply_allowed": false,
+    "project_writes": 0,
+    "runtime_writes": 0,
+    "sandbox_creation_allowed": false,
+    "sandbox_execution_allowed": false,
+    "sandbox_preflight_ready": true,
+    "selected_candidate": "failsafe_manager",
+    "status": "FORGE_RUNTIME_CANDIDATE_SANDBOX_PREFLIGHT_READY_NO_WRITE_GATE"
+  },
+  "runtime_candidate_sandbox_stage": {
+    "engine_writes": 0,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_candidate_sandbox_stage_v1/latest_forge_runtime_candidate_sandbox_stage_v1.json",
+    "live_apply_allowed": false,
+    "project_writes": 0,
+    "runtime_writes": 0,
+    "sandbox_copy_allowed_now": false,
+    "sandbox_execution_allowed": false,
+    "selected_candidate": "failsafe_manager",
+    "stage_manifest_ready": true,
+    "status": "FORGE_RUNTIME_CANDIDATE_SANDBOX_STAGE_MANIFEST_READY_NO_WRITE_COPY_PLAN"
+  },
+  "runtime_candidate_sandbox_stage_command_surface_ledger": {
+    "engine_writes": 0,
+    "expected_command_delta": 6,
+    "expected_command_surface_after_install": "730/730",
+    "ledger_commands_added": [
+      "forge-runtime-candidate-sandbox-stage-policy",
+      "forge-runtime-candidate-sandbox-stage-build",
+      "forge-runtime-candidate-sandbox-stage-show",
+      "forge-runtime-candidate-sandbox-stage-gates",
+      "forge-runtime-candidate-sandbox-stage-next",
+      "forge-runtime-candidate-sandbox-stage-export"
+    ],
+    "live_apply_allowed": false,
+    "patch": "Patch 182.2",
+    "project_writes": 0,
+    "runtime_writes": 0,
+    "selected_candidate": "failsafe_manager",
+    "source_status": "FORGE_RUNTIME_CANDIDATE_SANDBOX_STAGE_MANIFEST_READY_NO_WRITE_COPY_PLAN"
+  },
+  "runtime_candidate_sandbox_stage_create": {
+    "copied_count": 20,
+    "copy_integrity_ready": true,
+    "engine_writes": 0,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_candidate_sandbox_stage_create_v1/latest_forge_runtime_candidate_sandbox_stage_create_v1.json",
+    "live_apply_allowed": false,
+    "project_writes": 0,
+    "runtime_writes": 0,
+    "sandbox_root": "/home/nic/forge/memory/forge_runtime_candidate_sandboxes_v1/failsafe_manager_stage_20260521_191827",
+    "selected_candidate": "failsafe_manager",
+    "status": "FORGE_RUNTIME_CANDIDATE_SANDBOX_STAGE_CREATE_READY_FORGE_OWNED_COPY_VERIFIED",
+    "verified_count": 20
+  },
+  "runtime_candidate_static_verification": {
+    "file_count": 4,
+    "files_verified": 4,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_candidate_static_verify_v1/latest_forge_runtime_candidate_static_verify_v1.json",
+    "live_build_ready": false,
+    "selected_candidate": "failsafe_manager",
+    "status": "FORGE_RUNTIME_CANDIDATE_STATIC_VERIFICATION_READY_GATE_LOCKED"
+  },
+  "runtime_live_apply_hold_review": {
+    "candidate": "failsafe_manager",
+    "engine_writes": 0,
+    "execution_decision": "HOLD_FOR_HUMAN_APPROVAL",
+    "human_approval_present": false,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_live_apply_hold_review_v1/latest_forge_runtime_live_apply_hold_review_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "project_writes": 0,
+    "runtime_writes": 0,
+    "status": "FORGE_RUNTIME_LIVE_APPLY_HOLD_REVIEW_READY_NO_WRITE_RECEIPT"
+  },
+  "runtime_live_approval": {
+    "approval_token_status": "TEMPLATE_READY_NOT_APPROVED",
+    "candidate": "failsafe_manager",
+    "human_approval_present": false,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_live_approval_v1/latest_forge_runtime_live_approval_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "status": "FORGE_RUNTIME_LIVE_APPROVAL_PLAN_READY_GATE_LOCKED"
+  },
+  "runtime_live_approval_capture": {
+    "approval_capture_status": "TEMPLATE_READY_NOT_APPROVED",
+    "approval_token_status": "TEMPLATE_READY_NOT_APPROVED",
+    "candidate": "failsafe_manager",
+    "human_approval_present": false,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_live_approval_capture_v1/latest_forge_runtime_live_approval_capture_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "status": "FORGE_RUNTIME_LIVE_APPROVAL_CAPTURE_READY_GATE_LOCKED"
+  },
+  "runtime_live_backup": {
+    "candidate": "failsafe_manager",
+    "latest_path": "/home/nic/forge/memory/forge_runtime_live_backup_v1/latest_forge_runtime_live_backup_apply_dry_run_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "status": "FORGE_RUNTIME_LIVE_BACKUP_APPLY_DRY_RUN_READY_GATE_LOCKED"
+  },
+  "runtime_live_decision": {
+    "approval_token_status": "TEMPLATE_READY_NOT_APPROVED",
+    "candidate": "failsafe_manager",
+    "execution_decision": "HOLD_FOR_HUMAN_APPROVAL",
+    "human_approval_present": false,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_live_decision_v1/latest_forge_runtime_live_decision_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "status": "FORGE_RUNTIME_LIVE_DECISION_READY_GATE_LOCKED"
+  },
+  "runtime_live_execution_gate": {
+    "candidate": "failsafe_manager",
+    "human_approval_present": false,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_live_execution_v1/latest_forge_runtime_live_execution_gate_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "receipt_status": "TEMPLATE_READY_NOT_EXECUTED",
+    "status": "FORGE_RUNTIME_LIVE_EXECUTION_PLAN_READY_GATE_LOCKED"
+  },
+  "runtime_live_explicit_approval": {
+    "approval_capture_status": "TEMPLATE_READY_NOT_APPROVED",
+    "candidate": "failsafe_manager",
+    "execution_decision": "HOLD_FOR_HUMAN_APPROVAL",
+    "human_approval_present": false,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_live_explicit_approval_v1/latest_forge_runtime_live_explicit_approval_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "status": "FORGE_RUNTIME_LIVE_EXPLICIT_APPROVAL_READY_APPLY_HOLD"
+  },
+  "runtime_live_final_gate": {
+    "candidate": "failsafe_manager",
+    "human_approval_present": false,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_live_final_gate_v1/latest_forge_runtime_live_final_gate_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "status": "FORGE_RUNTIME_LIVE_FINAL_APPROVAL_GATE_READY_LOCKED"
+  },
+  "runtime_live_hold_continuation": {
+    "candidate": "failsafe_manager",
+    "engine_writes": 0,
+    "execution_decision": "RETURN_TO_RUNTIME_CANDIDATE_QUEUE_HELD",
+    "human_approval_present": false,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_live_hold_continuation_v1/latest_forge_runtime_live_hold_continuation_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "project_writes": 0,
+    "runtime_writes": 0,
+    "status": "FORGE_RUNTIME_LIVE_HOLD_CONTINUATION_READY_QUEUE_RETURN"
+  },
+  "runtime_live_preflight": {
+    "candidate": "failsafe_manager",
+    "human_approval_present": false,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_live_preflight_v1/latest_forge_runtime_live_preflight_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "status": "FORGE_RUNTIME_LIVE_PREFLIGHT_READY_GATE_LOCKED"
+  },
+  "runtime_live_token_entry": {
+    "approval_entry_status": "TEMPLATE_READY_NOT_ENTERED",
+    "candidate": "failsafe_manager",
+    "execution_decision": "HOLD_FOR_HUMAN_APPROVAL",
+    "human_approval_present": false,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_live_token_entry_v1/latest_forge_runtime_live_token_entry_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "status": "FORGE_RUNTIME_LIVE_TOKEN_ENTRY_READY_GATE_LOCKED"
+  },
+  "runtime_live_token_validation": {
+    "candidate": "failsafe_manager",
+    "execution_decision": "HOLD_FOR_HUMAN_APPROVAL",
+    "human_approval_present": false,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_live_token_validate_v1/latest_forge_runtime_live_token_validate_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "status": "FORGE_RUNTIME_LIVE_TOKEN_VALIDATION_READY_GATE_LOCKED",
+    "token_validation_status": "NOT_ENTERED"
+  },
+  "runtime_module_dependency_map": {
+    "canonical_engine_count": 54,
+    "domain_count": 7,
+    "latest_path": "/home/nic/forge/memory/forge_runtime_module_dependency_map_v1/latest_forge_runtime_module_dependency_map_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "status": "FORGE_RUNTIME_MODULE_DEPENDENCY_MAP_READY_PLANNING_ONLY"
+  },
+  "schema_version": "forge_build_sequence_v1_patch163_runtime_live_approval",
+  "shadow_restore_forensic_diff": {
+    "diff_status": "FORGE_SHADOW_RESTORE_FORENSIC_DIFF_READY",
+    "plan_status": "FORGE_SHADOW_RESTORE_PLAN_READY",
+    "problem_count": 0,
+    "run_status": "FORGE_SHADOW_RESTORE_RUN_PASS",
+    "shadow_id": "shadow_restore_2026_05_19_182609",
+    "snapshot_id": "forge_snapshot_2026_05_19_181211"
+  },
+  "snapshot_create_verify": {
+    "file_count": 542,
+    "problem_count": 0,
+    "snapshot_id": "forge_snapshot_2026_05_19_181211",
+    "snapshot_status": "FORGE_SNAPSHOT_CREATE_READY",
+    "verification_status": "FORGE_SNAPSHOT_CREATE_VERIFY_PASS"
+  },
+  "snapshot_forensic_replay_plan": {
+    "domain_count": 5,
+    "snapshot_evidence_created": false,
+    "status": "FORGE_SNAPSHOT_FORENSIC_REPLAY_PLAN_READY"
+  },
+  "source_authority_hardening": {
+    "latest_report_path": "/home/nic/forge/memory/forge_source_authority_hardening_v1/latest_forge_source_authority_hardening_v1.json",
+    "status": "FORGE_SOURCE_AUTHORITY_HARDENING_READY",
+    "summary": {
+      "authority_claimed_automatically": false,
+      "canonical_engines": 54,
+      "domain_count": 9,
+      "engine_file_writes": 0,
+      "engines_with_candidate_source_documents": 42,
+      "engines_with_source_authority_gaps": 12,
+      "expected_commands": 538,
+      "patch_apply_authority": false,
+      "source_candidate_files_seen": 240,
+      "tools": 462,
+      "trust_level": 5.0
+    }
+  },
+  "status": "FORGE_BUILD_SEQUENCE_READY",
+  "verified_state": {
+    "aiweb_runtime_live_build_ready": false,
+    "aiweb_runtime_planning_ready": true,
+    "aiweb_runtime_readiness_status": "AIWEB_RUNTIME_BUILD_READINESS_MAP_READY_PLANNING_ONLY",
+    "build_gate_fail_count": 0,
+    "build_gate_pass_count": 8,
+    "build_gate_status": "FORGE_BUILD_PHASE_GATE_READY",
+    "build_gate_warn_count": 0,
+    "canonical_excluded": 26,
+    "canonical_included": 54,
+    "dashboard_next_patch": "Patch 147 \u2014 Dashboard Roadmap Panel",
+    "dashboard_roadmap_panel_count": 4,
+    "dashboard_roadmap_panel_status": "FORGE_DASHBOARD_ROADMAP_PANEL_READY",
+    "dashboard_v2_operator_panel_status": "FORGE_DASHBOARD_V2_OPERATOR_PANEL_READY",
+    "dashboard_v2_panel_count": 7,
+    "deferred_queue_status": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY",
+    "deferred_queue_total": 26,
+    "expected_commands": 778,
+    "latest_test_fail": 0,
+    "latest_test_pass": 67,
+    "latest_test_status": "CANONICAL_TEST_RUN_COMPLETED_ALL_PASS",
+    "live_apply_eligibility_status": "FORGE_LIVE_APPLY_ELIGIBILITY_V2_READY_NOT_ELIGIBLE",
+    "live_apply_eligible": false,
+    "llm_patch_v2_proposal_status": "FORGE_LLM_PATCH_PROPOSAL_V2_DRAFT_READY_NO_WRITE_AUTHORITY",
+    "llm_patch_v2_verification_status": "FORGE_LLM_PATCH_PROPOSAL_V2_VERIFIED_READ_ONLY",
+    "patch_impact_high_risk": 0,
+    "patch_impact_status": "PATCH_IMPACT_MAP_READY",
+    "patch_impact_test_issues": 0,
+    "roadmap_append_only_policy": true,
+    "runtime_build_candidate": "failsafe_manager",
+    "runtime_build_candidate_file_plan_status": "FORGE_RUNTIME_BUILD_CANDIDATE_FILE_PLAN_READY_PLANNING_ONLY",
+    "runtime_build_plan_candidate": "failsafe_manager",
+    "runtime_build_plan_live_build_ready": false,
+    "runtime_build_plan_planning_ready": true,
+    "runtime_build_plan_status": "FORGE_RUNTIME_BUILD_PLAN_READY_PLANNING_ONLY",
+    "runtime_build_sandbox_candidate": "failsafe_manager",
+    "runtime_build_sandbox_dry_run_status": "FORGE_RUNTIME_BUILD_SANDBOX_DRY_RUN_READY",
+    "runtime_build_sandbox_live_build_ready": false,
+    "runtime_build_sandbox_plan_status": "FORGE_RUNTIME_BUILD_SANDBOX_PLAN_READY",
+    "runtime_build_sandbox_verification_status": "FORGE_RUNTIME_BUILD_SANDBOX_VERIFICATION_READY_PLANNING_ONLY",
+    "runtime_candidate_draft_status": "FORGE_RUNTIME_CANDIDATE_DRAFT_READY_SANDBOX_ONLY",
+    "runtime_candidate_draft_verification_status": "FORGE_RUNTIME_CANDIDATE_DRAFT_VERIFY_PASS_SANDBOX_ONLY",
+    "runtime_candidate_static_files_verified": 4,
+    "runtime_candidate_static_status": "FORGE_RUNTIME_CANDIDATE_STATIC_VERIFICATION_READY_GATE_LOCKED",
+    "runtime_live_approval_live_build_ready": false,
+    "runtime_live_approval_planning_ready": true,
+    "runtime_live_approval_status": "FORGE_RUNTIME_LIVE_APPROVAL_PLAN_READY_GATE_LOCKED",
+    "runtime_live_backup_live_build_ready": false,
+    "runtime_live_backup_planning_ready": true,
+    "runtime_live_backup_status": "FORGE_RUNTIME_LIVE_BACKUP_APPLY_DRY_RUN_READY_GATE_LOCKED",
+    "runtime_live_final_live_build_ready": false,
+    "runtime_live_final_planning_ready": true,
+    "runtime_live_final_status": "FORGE_RUNTIME_LIVE_FINAL_APPROVAL_GATE_READY_LOCKED",
+    "runtime_live_preflight_live_build_ready": false,
+    "runtime_live_preflight_planning_ready": true,
+    "runtime_live_preflight_status": "FORGE_RUNTIME_LIVE_PREFLIGHT_READY_GATE_LOCKED",
+    "runtime_module_map_domain_count": 7,
+    "runtime_module_map_engine_count": 54,
+    "runtime_module_map_live_build_ready": false,
+    "runtime_module_map_planning_ready": true,
+    "runtime_module_map_status": "FORGE_RUNTIME_MODULE_DEPENDENCY_MAP_READY_PLANNING_ONLY",
+    "shadow_restore_diff_status": "FORGE_SHADOW_RESTORE_FORENSIC_DIFF_READY",
+    "shadow_restore_plan_status": "FORGE_SHADOW_RESTORE_PLAN_READY",
+    "shadow_restore_run_status": "FORGE_SHADOW_RESTORE_RUN_PASS",
+    "snapshot_create_status": "FORGE_SNAPSHOT_CREATE_READY",
+    "snapshot_evidence_created": false,
+    "snapshot_file_count": 542,
+    "snapshot_plan_status": "FORGE_SNAPSHOT_FORENSIC_REPLAY_PLAN_READY",
+    "snapshot_verify_status": "FORGE_SNAPSHOT_CREATE_VERIFY_PASS",
+    "source_authority_candidate_count": 42,
+    "source_authority_canonical_engines": 54,
+    "source_authority_gap_count": 12,
+    "source_authority_hardening_status": "FORGE_SOURCE_AUTHORITY_HARDENING_READY",
+    "status_api_next_patch": "Patch 147 \u2014 Dashboard Roadmap Panel",
+    "tools": 714,
+    "trust_level": 5.0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "export_only": true,
+    "ledger_mutation": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-18T19:04:16",
+  "latest_impact_status": "PATCH_IMPACT_MAP_READY",
+  "latest_impact_target": "all",
+  "next_recommended_patch": "Patch 127 \u2014 Forge Status API",
+  "plain_english": "Export summary for latest read-only patch impact map. No project files are changed.",
+  "report_type": "PATCH_IMPACT_EXPORT_V1",
+  "schema_version": "patch_impact_export_v1_patch126",
+  "source_sha256": {
+    "canonical_lockfile": "379b6ef9852ce288b2b3551ba89aa809adac495312e62602edf5ac6fb9a3b604",
+    "relationship_map": "4c13c40c50dfa91e5fb8f0455f953b7204231f39c223aafdfebf897a372ea9cc",
+    "test_run_report": "93c49433a79df338cd824244911a0f47299f20b7fe77a25492953bf451dad489"
+  },
+  "status": "PATCH_IMPACT_EXPORT_READY",
+  "summary": {
+    "high_risk": 0,
+    "low_risk": 37,
+    "matches": 54,
+    "medium_risk": 17,
+    "no_test_result": 5,
+    "targets_requested": "all",
+    "test_issues": 0
+  }
+}

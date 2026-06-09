@@ -1,0 +1,25 @@
+{
+  "append_only_triggers_required": true,
+  "build_id": "CE-IV-LEDGER-CAPSULE-BUILD-001",
+  "ct_requires_finalized_validated_capsule": true,
+  "influence_ledger_surfaces": [
+    "influence_live_entries",
+    "influence_user_entries",
+    "influence_archive_entries"
+  ],
+  "initialization_mints_ct": false,
+  "initialization_records_money": false,
+  "initialization_writes_ledger_entries": false,
+  "initialized_at_utc": "2026-05-30T18:00:00Z",
+  "investment_ledger_surfaces": [
+    "investment_live_entries",
+    "investment_user_entries",
+    "investment_archive_entries"
+  ],
+  "ledger_schema_version": "contribution_dual_ledger_sqlite_v1_build001",
+  "manifest_hash": "87663dba6e0c6f3af26cdc006598bf8da2bc657bd71ac972cc5078dbe8a4d36f",
+  "money_creates_ct": false,
+  "schema_version": "contribution_dual_ledger_store_manifest_v1_build001",
+  "storage_model": "sqlite_atomic_three_surface_separated_ledgers",
+  "storage_reason": "one local transaction boundary atomically maintains live, user, and immutable archive surfaces while permanently separating work-earned CT from money activity"
+}

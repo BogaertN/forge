@@ -1,0 +1,53 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "counts": {
+    "receipts": 3
+  },
+  "created_at": "2026-05-15_131357",
+  "receipts": [
+    {
+      "blockers": 0,
+      "engine_family": "activity_log",
+      "evidence_id": "EEB-929b125c673bef05",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-15_131019_activity_log_engine_review_evidence_crosscheck_v1.json",
+      "sha256": "50ecd7db791a24589f780d214b80def2e07dbd836ea2a38d1aad1eb4e1f17bb4",
+      "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "warnings": 1
+    },
+    {
+      "blockers": 0,
+      "engine_family": "admin_override_console",
+      "evidence_id": "EEB-7e1e67cf08853d05",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-15_131106_admin_override_console_engine_review_evidence_crosscheck_v1.json",
+      "sha256": "dfd7ee9597f01c4968a7329178f8a0b9047cb4e919d35d493bfebb285874287c",
+      "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "warnings": 1
+    },
+    {
+      "blockers": 0,
+      "engine_family": "agent_reflection_engine",
+      "evidence_id": "EEB-efe9b78ceabc9853",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-15_131252_agent_reflection_engine_engine_review_evidence_crosscheck_v1.json",
+      "sha256": "be05971678849c0409e4c1433713fc282d0498bdb74e3bcbeb3a6d77888ddec0",
+      "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "warnings": 1
+    }
+  ],
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_EXPORT_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102"
+}

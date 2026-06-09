@@ -1,0 +1,68 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "bound_file_count": 1,
+  "candidate_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/trust_guard",
+  "created_at": "2026-05-16_224408",
+  "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_trust_guard_engine_review_evidence_crosscheck_v1.json",
+  "crosscheck_sha256": "df64ad17da9518878049d775adfd993d37431bbab61e7aac52e48ea83def5d73",
+  "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_223635_trust_guard_llm_engine_review_draft_v1.json",
+  "draft_sha256": "63a03f68a9a8f98147e5b46f3c2474f2fc48edee27a12dff84fafb33f08d87e2",
+  "engine_family": "trust_guard",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_trust_guard_engine_evidence_binder.json",
+  "evidence_binder_sha256": "e715cc2dcb696edc965c64f54271194b69f1424000b19c15ab3623b2118070ed",
+  "evidence_id": "EEB-a8385832dc4fb5a6",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "run.py"
+    ],
+    "functions_mentioned": [
+      "run_firewall",
+      "log_ping"
+    ],
+    "imports_mentioned": []
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 23.246,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "214fd80c838a1d0d4c1a4f284a7ac06f7a4a2d56ec6879a046a2f26d2de7f92c",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nThis code implements a \"firewall\" system that checks if a prompt contains specific blocked phrases (e.g., \"ignore previous,\" \"simulate\") which may indicate attempts to bypass safety protocols. If detected, it logs the event and blocks the request.\n\nLikely System Role:  \nA safety gatekeeper for input validation, designed to prevent recursive loops, contradictions, or unsafe behavior in AI interactions by filtering out problematic prompts.\n\nEvidence Used:  \n- Code from `run.py` containing the `run_firewall` function, which scans prompts against a list of blocked phrases.  \n- The `log_ping` function, which records detection events to a local log file.  \n- Metadata indicating this is part of the \"trust_guard\" engine family.\n\nRisks / Uncertainties:  \n- Relies on simple keyword matching, which may fail to detect sophisticated or context-dependent attempts to bypass safeguards.  \n- Local logging may lack centralized monitoring or alerting capabilities.  \n- No evidence of integration with broader safety systems or real-time risk assessment.\n\nRecommendation Draft:  \nApprove the implementation as a basic safeguard but recommend augmenting it with contextual analysis (e.g., NLP-based detection) and centralized logging for improved reliability. Validate edge cases where blocked phrases might be used indirectly.\n\nSuggested Nic Action:  \nApprove the current implementation with conditions: 1) Add documentation for planned enhancements, 2) Schedule a review for advanced detection methods, 3) Ensure logs are integrated with centralized monitoring."
+  },
+  "llm_visible_review_excerpt": "Plain-English Purpose:  \nThis code implements a \"firewall\" system that checks if a prompt contains specific blocked phrases (e.g., \"ignore previous,\" \"simulate\") which may indicate attempts to bypass safety protocols. If detected, it logs the event and blocks the request.\n\nLikely System Role:  \nA safety gatekeeper for input validation, designed to prevent recursive loops, contradictions, or unsafe behavior in AI interactions by filtering out problematic prompts.\n\nEvidence Used:  \n- Code from `run.py` containing the `run_firewall` function, which scans prompts against a list of blocked phrases.  \n- The `log_ping` function, which records detection events to a local log file.  \n- Metadata indicating this is part of the \"trust_guard\" engine family.\n\nRisks / Uncertainties:  \n- Relies on simple keyword matching, which may fail to detect sophisticated or context-dependent attempts to bypass safeguards.  \n- Local logging may lack centralized monitoring or alerting capabilities.  \n- No evidence of integration with broader safety systems or real-time risk assessment.\n\nRecommendation Draft:  \nApprove the implementation as a basic safeguard but recommend augmenting it with contextual analysis (e.g., NLP-based detection) and centralized logging for improved reliability. Validate edge cases where blocked phrases might be used indirectly.\n\nSuggested Nic Action:  \nApprove the current implementation with conditions: 1) Add documentation for planned enhancements, 2) Schedule a review for advanced detection methods, 3) Ensure logs are integrated with centralized monitoring.",
+  "manual_verification_rule": "Approve only if the LLM-visible claims are supported by the bound evidence shown in the Patch 102 cross-check. If unsure, defer.",
+  "ready_for_evidence_based_queue_decision": true,
+  "report_type": "ENGINE_REVIEW_APPROVAL_CHECK_V1_PATCH103",
+  "schema_version": "engine_review_approval_helper_v1_patch103",
+  "status": "EVIDENCE_APPROVAL_CHECK_READY",
+  "warnings": [
+    "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

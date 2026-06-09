@@ -1,0 +1,292 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "2aa81d02f822a9bb0cf3ff25adff5dbc13e1d77a4f1bc6cf23865cfbbf5e2e74",
+      "excerpt_start": "{\n  \"timestamp\": \"2025-04-27T00:04:52Z\",\n  \"tone\": \"critical\",\n  \"message\": \"Warning: Symbolic drift detected. Recalibration recommended.\"\n}",
+      "functions_sample": [
+        "timestamp",
+        "tone",
+        "critical",
+        "message",
+        "Warning",
+        "Symbolic",
+        "drift",
+        "detected",
+        "Recalibration",
+        "recommended"
+      ],
+      "imports_sample": [],
+      "line_count": 5,
+      "path": "/home/nic/aiweb/engines/neo_engine/neo_state.json",
+      "relative_to_candidate": "neo_state.json",
+      "sha256": "2aa81d02f822a9bb0cf3ff25adff5dbc13e1d77a4f1bc6cf23865cfbbf5e2e74",
+      "size_bytes": 140
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "b11a45383e369c7932110e5f10011bb513cfd4fc8f767c43467534987ee6efe4",
+      "excerpt_start": "{\n  \"engine\": \"Neo Engine\",\n  \"version\": \"v1\",\n  \"description\": \"Primary user-facing symbolic agent. Outputs system state messages based on symbolic recursion layers.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Neo",
+        "Engine",
+        "version",
+        "description",
+        "Primary",
+        "user",
+        "facing",
+        "symbolic",
+        "agent",
+        "Outputs",
+        "system",
+        "state",
+        "messages",
+        "based",
+        "recursion",
+        "layers"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/neo_engine/neo_manifest.json",
+      "relative_to_candidate": "neo_manifest.json",
+      "sha256": "b11a45383e369c7932110e5f10011bb513cfd4fc8f767c43467534987ee6efe4",
+      "size_bytes": 170
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "fa55ab70e751086fe50d930b4ac1fd30e7a4bcdebb2975da41e71dd0356c7449",
+      "excerpt_start": "from neo_core import generate_symbolic_response\n\ndef test_neo_response():\n    try:\n        result = generate_symbolic_response()\n        assert \"tone\" in result\n        assert \"message\" in result\n        print(\"\u2705 Test Passed: Neo generated a symbolic response.\")\n    except Exception as e:\n        print(f\"\u274c Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_neo_response()\n",
+      "functions_sample": [
+        "test_neo_response"
+      ],
+      "imports_sample": [
+        "from neo_core import generate_symbolic_response"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/neo_engine/test_neo.py",
+      "relative_to_candidate": "test_neo.py",
+      "sha256": "fa55ab70e751086fe50d930b4ac1fd30e7a4bcdebb2975da41e71dd0356c7449",
+      "size_bytes": 383
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "960c326155649900dbc35d96630191e7c2e4f5af8900403ebfc21ea208b5bd09",
+      "excerpt_start": "# Neo Engine\n\nNeo is the primary symbolic agent responsible for communicating AI.Web system status externally.\n\nGenerates user-facing messages based on internal symbolic charge, tone, and recursion health.\n",
+      "functions_sample": [
+        "Neo",
+        "Engine",
+        "the",
+        "primary",
+        "symbolic",
+        "agent",
+        "responsible",
+        "for",
+        "communicating",
+        "Web",
+        "system",
+        "status",
+        "externally",
+        "Generates",
+        "user",
+        "facing",
+        "messages",
+        "based",
+        "internal",
+        "charge",
+        "tone",
+        "and",
+        "recursion",
+        "health"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/neo_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "960c326155649900dbc35d96630191e7c2e4f5af8900403ebfc21ea208b5bd09",
+      "size_bytes": 206
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "cd363e9048c2afc7db678b8e636e809e21121db8310cfc97fdd6514317155cf7",
+      "excerpt_start": "import json\nimport time\nimport random\n\nNEO_STATE_FILE = \"neo_state.json\"\n\ndef generate_symbolic_response():\n    tones = [\"calm\", \"focused\", \"critical\"]\n    chosen_tone = random.choice(tones)\n\n    response = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"tone\": chosen_tone,\n        \"message\": create_message_for_tone(chosen_tone)\n    }\n\n    try:\n        with open(NEO_STATE_FILE, \"w\") as f:\n            json.dump(response, f, indent=2)\n        print(f\"\u2714\ufe0f Neo generated symbolic response: {response}\")\n    except Exception as e:\n        print(f\"[!] Failed to update Neo state: {e}\")\n\n    return response\n\ndef create_message_for_tone(tone):\n    if tone == \"calm\":\n        return \"System operating normally. All symbolic loops are stable.\"\n    elif tone == \"focused\":\n        return \"System is adjusting. Symbolic load detected.\"\n    elif tone == \"critical\":\n        return \"Warning: Symbolic drift detected. Recalibration recommended.\"\n    else:\n        return \"Status unknown.\"\n",
+      "functions_sample": [
+        "generate_symbolic_response",
+        "create_message_for_tone"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time",
+        "import random"
+      ],
+      "line_count": 35,
+      "path": "/home/nic/aiweb/engines/neo_engine/neo_core.py",
+      "relative_to_candidate": "neo_core.py",
+      "sha256": "cd363e9048c2afc7db678b8e636e809e21121db8310cfc97fdd6514317155cf7",
+      "size_bytes": 1018
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/neo_engine",
+  "created_at": "2026-05-16_095728",
+  "crosscheck_id": "ERE-neo_engine-2026-05-16_095728",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Engine",
+      "Generates",
+      "Neo",
+      "Outputs",
+      "Primary",
+      "Recalibration",
+      "Symbolic",
+      "Warning",
+      "Web",
+      "agent",
+      "and",
+      "based",
+      "charge",
+      "communicating",
+      "create_message_for_tone",
+      "critical",
+      "description",
+      "detected",
+      "drift",
+      "engine"
+    ],
+    "imports_sample": [
+      "from neo_core import generate_symbolic_response",
+      "import json",
+      "import random",
+      "import time"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`neo_engine` appears to be a local AI.Web engine/component. The bound source evidence includes 5 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "{   \"timestamp\": \"2025-04-27T00:04:52Z\",",
+      "{   \"engine\": \"Neo Engine\",",
+      "from neo_core import generate_symbolic_response ",
+      "# Neo Engine "
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095704_neo_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "e5f708e5e80e4c3916a2adfa4a63d7e593598606297d08c8e37a8414cfdd9a95",
+  "engine_family": "neo_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_neo_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "d9c922f8d413981b255ae52f3e144e26ef8a29cc3c7949afd88264d691c5dd33",
+  "evidence_id": "EEB-7d85a9d7c058d7e3",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "neo_state.json",
+      "neo_manifest.json",
+      "test_neo.py",
+      "README.md",
+      "neo_core.py"
+    ],
+    "functions_mentioned": [
+      "timestamp",
+      "tone",
+      "critical",
+      "message",
+      "Warning",
+      "Symbolic",
+      "drift",
+      "detected",
+      "Recalibration",
+      "recommended",
+      "engine",
+      "Neo",
+      "Engine",
+      "Primary",
+      "user",
+      "facing",
+      "symbolic",
+      "agent",
+      "system",
+      "state",
+      "messages",
+      "based",
+      "recursion",
+      "primary",
+      "for",
+      "communicating",
+      "Web",
+      "status",
+      "externally",
+      "Generates",
+      "internal",
+      "and",
+      "health",
+      "generate_symbolic_response"
+    ],
+    "imports_mentioned": [
+      "from neo_core import generate_symbolic_response",
+      "import json",
+      "import time",
+      "import random"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 23.657,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "8164ed9c21c2a4e7839f812bdbd726a9e13bca2b2d0c281331dad0707942f4d4",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo implement a symbolic agent (Neo Engine) that generates user-facing system status messages based on internal symbolic states, tone, and recursion health.  \n\nLikely System Role:  \nPrimary external communicator for AI.Web system status, translating internal symbolic data into actionable messages for users.  \n\nEvidence Used:  \n- `neo_manifest.json` describes it as a \"primary user-facing symbolic agent\" outputting state messages.  \n- `neo_core.py` contains logic for generating symbolic responses with tone-based messages (e.g., \"Warning: Symbolic drift detected\").  \n- `test_neo.py` validates response structure (e.g., requires \"tone\" and \"message\" fields).  \n- README.md confirms its role in \"communicating AI.Web system status externally.\"  \n- `neo_state.json` stores timestamped messages with tone indicators.  \n\nRisks / Uncertainties:  \n- Random tone selection in `generate_symbolic_response` may produce inconsistent messages.  \n- State file writes lack robust error handling beyond print statements.  \n- \"Symbolic drift\" warning is critical but lacks escalation or remediation details.  \n\nRecommendation Draft:  \n- Standardize tone selection via predefined rules instead of randomness for consistency.  \n- Enhance error handling for state file operations (e.g., retries, fallback mechanisms).  \n- Document symbolic drift protocols in code comments or external documentation.  \n- Ensure all critical messages include actionable steps (e.g., \"Recalibration recommended\" should specify how).  \n\nSuggested Nic Action:  \nApprove review with above recommendations. Add explicit error handling for state file writes and clarify symbolic drift resolution steps in code or documentation."
+  },
+  "llm_sections": {
+    "evidence_used": "- `neo_manifest.json` describes it as a \"primary user-facing symbolic agent\" outputting state messages.  \n- `neo_core.py` contains logic for generating symbolic responses with tone-based messages (e.g., \"Warning: Symbolic drift detected\").  \n- `test_neo.py` validates response structure (e.g., requires \"tone\" and \"message\" fields).  \n- README.md confirms its role in \"communicating AI.Web system status externally.\"  \n- `neo_state.json` stores timestamped messages with tone indicators.",
+    "likely_system_role": "Primary external communicator for AI.Web system status, translating internal symbolic data into actionable messages for users.",
+    "plain_english_purpose": "To implement a symbolic agent (Neo Engine) that generates user-facing system status messages based on internal symbolic states, tone, and recursion health.",
+    "recommendation_draft": "- Standardize tone selection via predefined rules instead of randomness for consistency.  \n- Enhance error handling for state file operations (e.g., retries, fallback mechanisms).  \n- Document symbolic drift protocols in code comments or external documentation.  \n- Ensure all critical messages include actionable steps (e.g., \"Recalibration recommended\" should specify how).",
+    "risks_uncertainties": "- Random tone selection in `generate_symbolic_response` may produce inconsistent messages.  \n- State file writes lack robust error handling beyond print statements.  \n- \"Symbolic drift\" warning is critical but lacks escalation or remediation details.",
+    "suggested_nic_action": "Approve review with above recommendations. Add explicit error handling for state file writes and clarify symbolic drift resolution steps in code or documentation."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo implement a symbolic agent (Neo Engine) that generates user-facing system status messages based on internal symbolic states, tone, and recursion health.  \n\nLikely System Role:  \nPrimary external communicator for AI.Web system status, translating internal symbolic data into actionable messages for users.  \n\nEvidence Used:  \n- `neo_manifest.json` describes it as a \"primary user-facing symbolic agent\" outputting state messages.  \n- `neo_core.py` contains logic for generating symbolic responses with tone-based messages (e.g., \"Warning: Symbolic drift detected\").  \n- `test_neo.py` validates response structure (e.g., requires \"tone\" and \"message\" fields).  \n- README.md confirms its role in \"communicating AI.Web system status externally.\"  \n- `neo_state.json` stores timestamped messages with tone indicators.  \n\nRisks / Uncertainties:  \n- Random tone selection in `generate_symbolic_response` may produce inconsistent messages.  \n- State file writes lack robust error handling beyond print statements.  \n- \"Symbolic drift\" warning is critical but lacks escalation or remediation details.  \n\nRecommendation Draft:  \n- Standardize tone selection via predefined rules instead of randomness for consistency.  \n- Enhance error handling for state file operations (e.g., retries, fallback mechanisms).  \n- Document symbolic drift protocols in code comments or external documentation.  \n- Ensure all critical messages include actionable steps (e.g., \"Recalibration recommended\" should specify how).  \n\nSuggested Nic Action:  \nApprove review with above recommendations. Add explicit error handling for state file writes and clarify symbolic drift resolution steps in code or documentation.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

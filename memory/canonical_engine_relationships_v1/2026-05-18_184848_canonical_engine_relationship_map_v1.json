@@ -1,0 +1,2746 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "ledger_mutation": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only_analysis": true,
+    "relationship_map_authority_only": true,
+    "shell_execution_authority": false
+  },
+  "counts": {
+    "canonical_engines": 55,
+    "engines_with_test_issues": 1,
+    "engines_without_test_result": 5,
+    "high_risk_neighbors": 0,
+    "medium_risk_neighbors": 6,
+    "relationship_rows": 55,
+    "total_detected_edges": 88
+  },
+  "created_at": "2026-05-18T18:48:48",
+  "next_recommended_patch": "Patch 126 — Patch Impact Map",
+  "plain_english": "Read-only relationship map for final canonical engines using imports, source text references, shared runtime terms, and latest safe-test status. No project files are modified.",
+  "report_type": "CANONICAL_ENGINE_RELATIONSHIP_MAP_V1",
+  "risk_rows": [
+    {
+      "engine_base": "stack_linker_breather",
+      "relationship_count": 2,
+      "risk_level": "MEDIUM",
+      "risk_reason": "test_status=ISSUES; relationship_count=2",
+      "test_status": "ISSUES",
+      "top_neighbors": [
+        {
+          "canonical_path": "aiweb/engines/recursive_field_breather",
+          "confidence": "strong",
+          "engine_base": "recursive_field_breather",
+          "reason": "python_import_reference"
+        },
+        {
+          "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+          "confidence": "medium",
+          "engine_base": "protoforge",
+          "reason": "source_text_reference"
+        }
+      ]
+    },
+    {
+      "engine_base": "christping_listener",
+      "relationship_count": 1,
+      "risk_level": "MEDIUM",
+      "risk_reason": "test_status=NO_TEST_RESULT; relationship_count=1",
+      "test_status": "NO_TEST_RESULT",
+      "top_neighbors": [
+        {
+          "canonical_path": "aiweb/engines/control_panel_ui_engine_v1.02",
+          "confidence": "medium",
+          "engine_base": "control_panel_ui_engine",
+          "reason": "source_text_reference"
+        }
+      ]
+    },
+    {
+      "engine_base": "project_memory",
+      "relationship_count": 1,
+      "risk_level": "MEDIUM",
+      "risk_reason": "test_status=NO_TEST_RESULT; relationship_count=1",
+      "test_status": "NO_TEST_RESULT",
+      "top_neighbors": [
+        {
+          "canonical_path": "aiweb/engines/spc_memory_migrator",
+          "confidence": "weak",
+          "engine_base": "spc_memory_migrator",
+          "reason": "shared_runtime_term:memory"
+        }
+      ]
+    },
+    {
+      "engine_base": "activity_log",
+      "relationship_count": 0,
+      "risk_level": "MEDIUM",
+      "risk_reason": "test_status=NO_TEST_RESULT; relationship_count=0",
+      "test_status": "NO_TEST_RESULT",
+      "top_neighbors": []
+    },
+    {
+      "engine_base": "confusion_checker",
+      "relationship_count": 0,
+      "risk_level": "MEDIUM",
+      "risk_reason": "test_status=NO_TEST_RESULT; relationship_count=0",
+      "test_status": "NO_TEST_RESULT",
+      "top_neighbors": []
+    },
+    {
+      "engine_base": "trust_guard",
+      "relationship_count": 0,
+      "risk_level": "MEDIUM",
+      "risk_reason": "test_status=NO_TEST_RESULT; relationship_count=0",
+      "test_status": "NO_TEST_RESULT",
+      "top_neighbors": []
+    }
+  ],
+  "rows": [
+    {
+      "canonical_path": "projects/recursive_lmm_grok1/engines/activity_log",
+      "engine_base": "activity_log",
+      "import_modules": [],
+      "metadata_files": [],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "run.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/activity_log",
+      "risk_level": "MEDIUM",
+      "risk_reason": "test_status=NO_TEST_RESULT; relationship_count=0",
+      "test_counts": {},
+      "test_status": "NO_TEST_RESULT",
+      "tokens": [
+        "activity"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/agent_reflection_engine",
+      "engine_base": "agent_reflection_engine",
+      "import_modules": [
+        "reflection_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "reflection_manifest.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "reflection_core.py",
+        "test_reflection.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/agent_reflection_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "reflection"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/ascii_interpreter_engine",
+      "engine_base": "ascii_interpreter_engine",
+      "import_modules": [
+        "ascii_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "ascii_core.py",
+        "test_ascii_core.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/ascii_interpreter_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "ascii",
+        "interpreter"
+      ]
+    },
+    {
+      "canonical_path": "agents/athena",
+      "engine_base": "athena",
+      "import_modules": [
+        "athena_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "athena_core.py",
+        "run.py",
+        "test_athena_core.py",
+        "test_run_agent.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/agents/athena",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 2,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "athena"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/athena_engine",
+      "engine_base": "athena_engine",
+      "import_modules": [
+        "athena_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "athena_manifest.json",
+        "athena_state.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "agents/athena",
+          "confidence": "medium",
+          "engine_base": "athena",
+          "reason": "source_text_reference"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "athena_core.py",
+        "test_athena.py"
+      ],
+      "relationship_count": 1,
+      "resolved_path": "/home/nic/aiweb/engines/athena_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "athena"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/christping_listener",
+      "engine_base": "christping_listener",
+      "import_modules": [],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json",
+        "listener_config.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/control_panel_ui_engine_v1.02",
+          "confidence": "medium",
+          "engine_base": "control_panel_ui_engine",
+          "reason": "source_text_reference"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "christ_listener.py"
+      ],
+      "relationship_count": 1,
+      "resolved_path": "/home/nic/aiweb/engines/christping_listener",
+      "risk_level": "MEDIUM",
+      "risk_reason": "test_status=NO_TEST_RESULT; relationship_count=1",
+      "test_counts": {},
+      "test_status": "NO_TEST_RESULT",
+      "tokens": [
+        "christping",
+        "listener"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/christping_validator_engine",
+      "engine_base": "christping_validator_engine",
+      "import_modules": [
+        "christping_validator_core",
+        "ping_calibrator_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json",
+        "ping_harmonics_calibrator/README.md",
+        "ping_harmonics_calibrator/engine_manifest.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "christping_validator_core.py",
+        "ping_harmonics_calibrator/ping_calibrator_core.py",
+        "ping_harmonics_calibrator/test_ping_calibrator_core.py",
+        "test_christping_validator_core.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/christping_validator_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 2,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "christping",
+        "validator"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/collapse_prevention_engine",
+      "engine_base": "collapse_prevention_engine",
+      "import_modules": [
+        "collapse_prevention_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "collapse_prevention_core.py",
+        "test_collapse_prevention_core.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/collapse_prevention_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "collapse",
+        "prevention"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/compute_contribution_engine",
+      "engine_base": "compute_contribution_engine",
+      "import_modules": [
+        "contribution_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "contribution_core.py",
+        "test_contribution.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/compute_contribution_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "compute",
+        "contribution"
+      ]
+    },
+    {
+      "canonical_path": "projects/recursive_lmm_grok1/engines/confusion_checker",
+      "engine_base": "confusion_checker",
+      "import_modules": [],
+      "metadata_files": [],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "run.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/confusion_checker",
+      "risk_level": "MEDIUM",
+      "risk_reason": "test_status=NO_TEST_RESULT; relationship_count=0",
+      "test_counts": {},
+      "test_status": "NO_TEST_RESULT",
+      "tokens": [
+        "checker",
+        "confusion"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/contribution_dashboard_engine",
+      "engine_base": "contribution_dashboard_engine",
+      "import_modules": [
+        "dashboard_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "dashboard_output.json",
+        "engine_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/compute_contribution_engine",
+          "confidence": "medium",
+          "engine_base": "compute_contribution_engine",
+          "reason": "source_text_reference"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "dashboard_core.py",
+        "test_contribution_dashboard.py"
+      ],
+      "relationship_count": 1,
+      "resolved_path": "/home/nic/aiweb/engines/contribution_dashboard_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "contribution",
+        "dashboard"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/control_panel_ui_engine_v1.02",
+      "engine_base": "control_panel_ui_engine",
+      "import_modules": [
+        "flask"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+          "confidence": "medium",
+          "engine_base": "protoforge",
+          "reason": "source_text_reference"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "test_ui_render.py",
+        "ui_server.py"
+      ],
+      "relationship_count": 1,
+      "resolved_path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "control",
+        "panel"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/document_output_formatter",
+      "engine_base": "document_output_formatter",
+      "import_modules": [
+        "formatter_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "formatter_manifest.json",
+        "output_log.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "formatter_core.py",
+        "test_formatter.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/document_output_formatter",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "document",
+        "formatter",
+        "output"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/drift_analyzer_tool",
+      "engine_base": "drift_analyzer_tool",
+      "import_modules": [
+        "drift_analyzer_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/drift_signature_logger",
+          "confidence": "weak",
+          "engine_base": "drift_signature_logger",
+          "reason": "shared_runtime_term:drift"
+        },
+        {
+          "canonical_path": "aiweb/engines/symbolic_drift_visualizer",
+          "confidence": "weak",
+          "engine_base": "symbolic_drift_visualizer",
+          "reason": "shared_runtime_term:drift"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "drift_analyzer_core.py",
+        "test_drift_analyzer_core.py"
+      ],
+      "relationship_count": 2,
+      "resolved_path": "/home/nic/aiweb/engines/drift_analyzer_tool",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "analyzer",
+        "drift",
+        "tool"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/drift_signature_logger",
+      "engine_base": "drift_signature_logger",
+      "import_modules": [
+        "drift_signature_core",
+        "ghost_tagger_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json",
+        "ghost_loop_tagger/README.md",
+        "ghost_loop_tagger/engine_manifest.json",
+        "ghost_loop_tagger/ghost_loop_tagger/README.md",
+        "ghost_loop_tagger/ghost_loop_tagger/engine_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/drift_analyzer_tool",
+          "confidence": "weak",
+          "engine_base": "drift_analyzer_tool",
+          "reason": "shared_runtime_term:drift"
+        },
+        {
+          "canonical_path": "aiweb/engines/symbolic_drift_visualizer",
+          "confidence": "weak",
+          "engine_base": "symbolic_drift_visualizer",
+          "reason": "shared_runtime_term:drift"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "drift_core.py",
+        "drift_signature_core.py",
+        "ghost_loop_tagger/ghost_loop_tagger/ghost_tagger_core.py",
+        "ghost_loop_tagger/ghost_loop_tagger/test_ghost_tagger_core.py",
+        "ghost_loop_tagger/ghost_tagger_core.py",
+        "ghost_loop_tagger/test_ghost_tagger_core.py",
+        "test_drift_core.py",
+        "test_drift_signature_core.py"
+      ],
+      "relationship_count": 2,
+      "resolved_path": "/home/nic/aiweb/engines/drift_signature_logger",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 4,
+        "statuses": [
+          "PASS",
+          "PASS",
+          "PASS",
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "drift",
+        "logger",
+        "signature"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/echo_trace_visualizer",
+      "engine_base": "echo_trace_visualizer",
+      "import_modules": [
+        "echo_trace_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "echo_trace_core.py",
+        "test_echo_trace_core.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/echo_trace_visualizer",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "echo",
+        "trace",
+        "visualizer"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/entropy_monitor_engine",
+      "engine_base": "entropy_monitor_engine",
+      "import_modules": [
+        "entropy_monitor_core",
+        "gradient_entropy_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json",
+        "gradient_entropy_detector/README.md",
+        "gradient_entropy_detector/engine_manifest.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "entropy_monitor_core.py",
+        "gradient_entropy_detector/gradient_entropy_core.py",
+        "gradient_entropy_detector/test_gradient_entropy_core.py",
+        "test_entropy_monitor_core.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/entropy_monitor_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 2,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "entropy",
+        "monitor"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/failsafe_manager",
+      "engine_base": "failsafe_manager",
+      "import_modules": [
+        "failsafe_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "failsafe_manifest.json",
+        "failsafe_status.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "failsafe_core.py",
+        "test_failsafe.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/failsafe_manager",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "failsafe",
+        "manager"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/field_resonance_mapper",
+      "engine_base": "field_resonance_mapper",
+      "import_modules": [
+        "field_feed_core",
+        "resonance_mapper_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json",
+        "external_field_feed_adapter/README.md",
+        "external_field_feed_adapter/engine_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/recursive_field_breather",
+          "confidence": "weak",
+          "engine_base": "recursive_field_breather",
+          "reason": "shared_runtime_term:field"
+        },
+        {
+          "canonical_path": "aiweb/engines/recursive_field_engine",
+          "confidence": "weak",
+          "engine_base": "recursive_field_engine",
+          "reason": "shared_runtime_term:field"
+        },
+        {
+          "canonical_path": "aiweb/runtime_wrappers/recursive_field_stack",
+          "confidence": "weak",
+          "engine_base": "recursive_field_stack",
+          "reason": "shared_runtime_term:field"
+        },
+        {
+          "canonical_path": "aiweb/engines/resonance_charge_meter",
+          "confidence": "weak",
+          "engine_base": "resonance_charge_meter",
+          "reason": "shared_runtime_term:resonance"
+        },
+        {
+          "canonical_path": "aiweb/symbolic_layers/resonance_display",
+          "confidence": "weak",
+          "engine_base": "resonance_display",
+          "reason": "shared_runtime_term:resonance"
+        },
+        {
+          "canonical_path": "aiweb/engines/resonance_visualizer_engine",
+          "confidence": "weak",
+          "engine_base": "resonance_visualizer_engine",
+          "reason": "shared_runtime_term:resonance"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "external_field_feed_adapter/field_feed_core.py",
+        "external_field_feed_adapter/test_field_feed_core.py",
+        "resonance_mapper_core.py",
+        "test_resonance_mapper_core.py"
+      ],
+      "relationship_count": 6,
+      "resolved_path": "/home/nic/aiweb/engines/field_resonance_mapper",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 2,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "field",
+        "mapper",
+        "resonance"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/glyph_engine",
+      "engine_base": "glyph_engine",
+      "import_modules": [
+        "glyph_core",
+        "symbol_mutator_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "dynamic_symbol_mutator/README.md",
+        "dynamic_symbol_mutator/engine_manifest.json",
+        "engine_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/symbolic_layers/glyph_ui_overlay",
+          "confidence": "weak",
+          "engine_base": "glyph_ui_overlay",
+          "reason": "shared_runtime_term:glyph"
+        },
+        {
+          "canonical_path": "aiweb/engines/symbolic_glyph_engine",
+          "confidence": "weak",
+          "engine_base": "symbolic_glyph_engine",
+          "reason": "shared_runtime_term:glyph"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "dynamic_symbol_mutator/symbol_mutator_core.py",
+        "dynamic_symbol_mutator/test_symbol_mutator_core.py",
+        "glyph_core.py",
+        "test_glyph_core.py"
+      ],
+      "relationship_count": 2,
+      "resolved_path": "/home/nic/aiweb/engines/glyph_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 2,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "glyph"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/symbolic_layers/glyph_ui_overlay",
+      "engine_base": "glyph_ui_overlay",
+      "import_modules": [
+        "glyph_ui_overlay_core",
+        "run"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/glyph_engine",
+          "confidence": "weak",
+          "engine_base": "glyph_engine",
+          "reason": "shared_runtime_term:glyph"
+        },
+        {
+          "canonical_path": "aiweb/engines/symbolic_glyph_engine",
+          "confidence": "weak",
+          "engine_base": "symbolic_glyph_engine",
+          "reason": "shared_runtime_term:glyph"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "glyph_ui_overlay_core.py",
+        "run.py",
+        "test_glyph_ui_overlay_core.py",
+        "test_run_engine.py"
+      ],
+      "relationship_count": 2,
+      "resolved_path": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 2,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "glyph",
+        "overlay"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/install_onboarding_engine",
+      "engine_base": "install_onboarding_engine",
+      "import_modules": [
+        "onboarding_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json",
+        "install_state.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/compute_contribution_engine",
+          "confidence": "medium",
+          "engine_base": "compute_contribution_engine",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/contribution_dashboard_engine",
+          "confidence": "medium",
+          "engine_base": "contribution_dashboard_engine",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/loop_resurrection_engine",
+          "confidence": "medium",
+          "engine_base": "loop_resurrection_engine",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/peer_communication_engine",
+          "confidence": "medium",
+          "engine_base": "peer_communication_engine",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/resonance_charge_meter",
+          "confidence": "medium",
+          "engine_base": "resonance_charge_meter",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/symbolic_capacitor_engine",
+          "confidence": "medium",
+          "engine_base": "symbolic_capacitor_engine",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/tone_engine",
+          "confidence": "medium",
+          "engine_base": "tone_engine",
+          "reason": "source_text_reference"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "onboarding_core.py",
+        "test_onboarding.py"
+      ],
+      "relationship_count": 7,
+      "resolved_path": "/home/nic/aiweb/engines/install_onboarding_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "install",
+        "onboarding"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/loop_resurrection_engine",
+      "engine_base": "loop_resurrection_engine",
+      "import_modules": [
+        "resurrection_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json",
+        "resurrection_queue.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/symbolic_feedback_loop_engine",
+          "confidence": "weak",
+          "engine_base": "symbolic_feedback_loop_engine",
+          "reason": "shared_runtime_term:loop"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "resurrection_core.py",
+        "test_resurrection.py"
+      ],
+      "relationship_count": 1,
+      "resolved_path": "/home/nic/aiweb/engines/loop_resurrection_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "loop",
+        "resurrection"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/peer_communication_engine",
+      "engine_base": "peer_communication_engine",
+      "import_modules": [
+        "peer_comm_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "peer_comm_core.py",
+        "test_peer_comm.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/peer_communication_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "communication",
+        "peer"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/phase_engine",
+      "engine_base": "phase_engine",
+      "import_modules": [
+        "run"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json",
+        "status.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "run.py",
+        "test_phase_engine.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/phase_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "phase"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/plugin_engine",
+      "engine_base": "plugin_engine",
+      "import_modules": [
+        "importlib",
+        "loader"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "__init__.py",
+        "loader.py",
+        "test_plugin_engine.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/plugin_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "plugin"
+      ]
+    },
+    {
+      "canonical_path": "projects/recursive_lmm_grok1/engines/project_brain",
+      "engine_base": "project_brain",
+      "import_modules": [
+        "memory_binder_core",
+        "recursive_field_core",
+        "run"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json",
+        "field_memory_binder/README.md",
+        "field_memory_binder/engine_manifest.json",
+        "field_state.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/recursive_field_engine",
+          "confidence": "medium",
+          "engine_base": "recursive_field_engine",
+          "reason": "source_text_reference"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "__init__.py",
+        "field_memory_binder/memory_binder_core.py",
+        "field_memory_binder/test_memory_binder_core.py",
+        "recursive_field_core.py",
+        "run.py",
+        "test_recursive_field.py",
+        "test_recursive_field_core.py"
+      ],
+      "relationship_count": 1,
+      "resolved_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 3,
+        "statuses": [
+          "PASS",
+          "PASS",
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "brain",
+        "project"
+      ]
+    },
+    {
+      "canonical_path": "projects/recursive_lmm_grok1/engines/project_memory",
+      "engine_base": "project_memory",
+      "import_modules": [],
+      "metadata_files": [],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/spc_memory_migrator",
+          "confidence": "weak",
+          "engine_base": "spc_memory_migrator",
+          "reason": "shared_runtime_term:memory"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "run.py"
+      ],
+      "relationship_count": 1,
+      "resolved_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_memory",
+      "risk_level": "MEDIUM",
+      "risk_reason": "test_status=NO_TEST_RESULT; relationship_count=1",
+      "test_counts": {},
+      "test_status": "NO_TEST_RESULT",
+      "tokens": [
+        "memory",
+        "project"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+      "engine_base": "protoforge",
+      "import_modules": [
+        "UI",
+        "flask",
+        "importlib"
+      ],
+      "metadata_files": [
+        "README.md",
+        "UI/README.md",
+        "UI/engine_manifest.json",
+        "config.json",
+        "engine_manifest.json",
+        "log/field_state.json",
+        "protoforge/config.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/control_panel_ui_engine_v1.02",
+          "confidence": "medium",
+          "engine_base": "control_panel_ui_engine",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/phase_engine",
+          "confidence": "medium",
+          "engine_base": "phase_engine",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/plugin_engine",
+          "confidence": "medium",
+          "engine_base": "plugin_engine",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/recursive_field_engine",
+          "confidence": "medium",
+          "engine_base": "recursive_field_engine",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/system_log_engine",
+          "confidence": "medium",
+          "engine_base": "system_log_engine",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/tier_enforcer",
+          "confidence": "medium",
+          "engine_base": "tier_enforcer",
+          "reason": "source_text_reference"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "UI/test_ui_render.py",
+        "UI/ui_server.py",
+        "protoforge/UI/terminal_display.py",
+        "protoforge/run.py",
+        "protoforge/test_harness/run_system_test.py",
+        "run.py",
+        "run_system_test.py",
+        "test_harness/run_system_test.py"
+      ],
+      "relationship_count": 6,
+      "resolved_path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 4,
+        "statuses": [
+          "PASS",
+          "PASS",
+          "PASS",
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "protoforge"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/symbolic_layers/recursion_mapper",
+      "engine_base": "recursion_mapper",
+      "import_modules": [
+        "recursion_mapper_core",
+        "run"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "recursion_mapper_core.py",
+        "run.py",
+        "test_recursion_mapper_core.py",
+        "test_run_engine.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/symbolic_layers/recursion_mapper",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 2,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "mapper",
+        "recursion"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/recursive_agent_kernel",
+      "engine_base": "recursive_agent_kernel",
+      "import_modules": [
+        "agent_kernel_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "agent_kernel_manifest.json",
+        "recursion_state.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/recursive_field_breather",
+          "confidence": "weak",
+          "engine_base": "recursive_field_breather",
+          "reason": "shared_runtime_term:recursive"
+        },
+        {
+          "canonical_path": "aiweb/engines/recursive_field_engine",
+          "confidence": "weak",
+          "engine_base": "recursive_field_engine",
+          "reason": "shared_runtime_term:recursive"
+        },
+        {
+          "canonical_path": "aiweb/runtime_wrappers/recursive_field_stack",
+          "confidence": "weak",
+          "engine_base": "recursive_field_stack",
+          "reason": "shared_runtime_term:recursive"
+        },
+        {
+          "canonical_path": "engines/recursive_verification_engine",
+          "confidence": "weak",
+          "engine_base": "recursive_verification_engine",
+          "reason": "shared_runtime_term:recursive"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "agent_kernel_core.py",
+        "test_agent_kernel.py"
+      ],
+      "relationship_count": 4,
+      "resolved_path": "/home/nic/aiweb/engines/recursive_agent_kernel",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "kernel",
+        "recursive"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/recursive_field_breather",
+      "engine_base": "recursive_field_breather",
+      "import_modules": [
+        "field_breather"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+          "confidence": "medium",
+          "engine_base": "protoforge",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/field_resonance_mapper",
+          "confidence": "weak",
+          "engine_base": "field_resonance_mapper",
+          "reason": "shared_runtime_term:field"
+        },
+        {
+          "canonical_path": "aiweb/engines/recursive_agent_kernel",
+          "confidence": "weak",
+          "engine_base": "recursive_agent_kernel",
+          "reason": "shared_runtime_term:recursive"
+        },
+        {
+          "canonical_path": "aiweb/engines/recursive_field_engine",
+          "confidence": "weak",
+          "engine_base": "recursive_field_engine",
+          "reason": "shared_runtime_terms:field,recursive"
+        },
+        {
+          "canonical_path": "aiweb/runtime_wrappers/recursive_field_stack",
+          "confidence": "weak",
+          "engine_base": "recursive_field_stack",
+          "reason": "shared_runtime_terms:field,recursive"
+        },
+        {
+          "canonical_path": "engines/recursive_verification_engine",
+          "confidence": "weak",
+          "engine_base": "recursive_verification_engine",
+          "reason": "shared_runtime_term:recursive"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "field_breather.py",
+        "test_field_breather.py"
+      ],
+      "relationship_count": 6,
+      "resolved_path": "/home/nic/aiweb/engines/recursive_field_breather",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "breather",
+        "field",
+        "recursive"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/recursive_field_engine",
+      "engine_base": "recursive_field_engine",
+      "import_modules": [
+        "memory_binder_core",
+        "recursive_field_core",
+        "run"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json",
+        "field_memory_binder/README.md",
+        "field_memory_binder/engine_manifest.json",
+        "field_state.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/field_resonance_mapper",
+          "confidence": "weak",
+          "engine_base": "field_resonance_mapper",
+          "reason": "shared_runtime_term:field"
+        },
+        {
+          "canonical_path": "aiweb/engines/recursive_agent_kernel",
+          "confidence": "weak",
+          "engine_base": "recursive_agent_kernel",
+          "reason": "shared_runtime_term:recursive"
+        },
+        {
+          "canonical_path": "aiweb/engines/recursive_field_breather",
+          "confidence": "weak",
+          "engine_base": "recursive_field_breather",
+          "reason": "shared_runtime_terms:field,recursive"
+        },
+        {
+          "canonical_path": "aiweb/runtime_wrappers/recursive_field_stack",
+          "confidence": "weak",
+          "engine_base": "recursive_field_stack",
+          "reason": "shared_runtime_terms:field,recursive"
+        },
+        {
+          "canonical_path": "engines/recursive_verification_engine",
+          "confidence": "weak",
+          "engine_base": "recursive_verification_engine",
+          "reason": "shared_runtime_term:recursive"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "__init__.py",
+        "field_memory_binder/memory_binder_core.py",
+        "field_memory_binder/test_memory_binder_core.py",
+        "recursive_field_core.py",
+        "run.py",
+        "test_recursive_field.py",
+        "test_recursive_field_core.py"
+      ],
+      "relationship_count": 5,
+      "resolved_path": "/home/nic/aiweb/engines/recursive_field_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 3,
+        "statuses": [
+          "PASS",
+          "PASS",
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "field",
+        "recursive"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/runtime_wrappers/recursive_field_stack",
+      "engine_base": "recursive_field_stack",
+      "import_modules": [
+        "recursive_field_stack_loader"
+      ],
+      "metadata_files": [
+        "README.md",
+        "stack_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/recursive_field_engine",
+          "confidence": "medium",
+          "engine_base": "recursive_field_engine",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/field_resonance_mapper",
+          "confidence": "weak",
+          "engine_base": "field_resonance_mapper",
+          "reason": "shared_runtime_term:field"
+        },
+        {
+          "canonical_path": "aiweb/engines/recursive_agent_kernel",
+          "confidence": "weak",
+          "engine_base": "recursive_agent_kernel",
+          "reason": "shared_runtime_term:recursive"
+        },
+        {
+          "canonical_path": "aiweb/engines/recursive_field_breather",
+          "confidence": "weak",
+          "engine_base": "recursive_field_breather",
+          "reason": "shared_runtime_terms:field,recursive"
+        },
+        {
+          "canonical_path": "engines/recursive_verification_engine",
+          "confidence": "weak",
+          "engine_base": "recursive_verification_engine",
+          "reason": "shared_runtime_term:recursive"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "recursive_field_stack_loader.py",
+        "test_recursive_field_stack_loader.py"
+      ],
+      "relationship_count": 5,
+      "resolved_path": "/home/nic/aiweb/runtime_wrappers/recursive_field_stack",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "field",
+        "recursive"
+      ]
+    },
+    {
+      "canonical_path": "engines/recursive_verification_engine",
+      "engine_base": "recursive_verification_engine",
+      "import_modules": [
+        "rvdit_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+          "confidence": "medium",
+          "engine_base": "protoforge",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/recursive_agent_kernel",
+          "confidence": "weak",
+          "engine_base": "recursive_agent_kernel",
+          "reason": "shared_runtime_term:recursive"
+        },
+        {
+          "canonical_path": "aiweb/engines/recursive_field_breather",
+          "confidence": "weak",
+          "engine_base": "recursive_field_breather",
+          "reason": "shared_runtime_term:recursive"
+        },
+        {
+          "canonical_path": "aiweb/engines/recursive_field_engine",
+          "confidence": "weak",
+          "engine_base": "recursive_field_engine",
+          "reason": "shared_runtime_term:recursive"
+        },
+        {
+          "canonical_path": "aiweb/runtime_wrappers/recursive_field_stack",
+          "confidence": "weak",
+          "engine_base": "recursive_field_stack",
+          "reason": "shared_runtime_term:recursive"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "convert_to_jsonl.py",
+        "generate_phase_loop_dataset.py",
+        "rvdit_core.py",
+        "test_recursive_verification.py"
+      ],
+      "relationship_count": 5,
+      "resolved_path": "/home/nic/aiweb/engines/recursive_verification_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "recursive",
+        "verification"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/resonance_charge_meter",
+      "engine_base": "resonance_charge_meter",
+      "import_modules": [
+        "charge_meter_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "charge_meter_state.json",
+        "engine_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/field_resonance_mapper",
+          "confidence": "weak",
+          "engine_base": "field_resonance_mapper",
+          "reason": "shared_runtime_term:resonance"
+        },
+        {
+          "canonical_path": "aiweb/symbolic_layers/resonance_display",
+          "confidence": "weak",
+          "engine_base": "resonance_display",
+          "reason": "shared_runtime_term:resonance"
+        },
+        {
+          "canonical_path": "aiweb/engines/resonance_visualizer_engine",
+          "confidence": "weak",
+          "engine_base": "resonance_visualizer_engine",
+          "reason": "shared_runtime_term:resonance"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "charge_meter_core.py",
+        "test_charge_meter.py"
+      ],
+      "relationship_count": 3,
+      "resolved_path": "/home/nic/aiweb/engines/resonance_charge_meter",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "charge",
+        "meter",
+        "resonance"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/symbolic_layers/resonance_display",
+      "engine_base": "resonance_display",
+      "import_modules": [
+        "resonance_display_core",
+        "run"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/field_resonance_mapper",
+          "confidence": "weak",
+          "engine_base": "field_resonance_mapper",
+          "reason": "shared_runtime_term:resonance"
+        },
+        {
+          "canonical_path": "aiweb/engines/resonance_charge_meter",
+          "confidence": "weak",
+          "engine_base": "resonance_charge_meter",
+          "reason": "shared_runtime_term:resonance"
+        },
+        {
+          "canonical_path": "aiweb/engines/resonance_visualizer_engine",
+          "confidence": "weak",
+          "engine_base": "resonance_visualizer_engine",
+          "reason": "shared_runtime_term:resonance"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "resonance_display_core.py",
+        "run.py",
+        "test_resonance_display_core.py",
+        "test_run_engine.py"
+      ],
+      "relationship_count": 3,
+      "resolved_path": "/home/nic/aiweb/symbolic_layers/resonance_display",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 2,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "display",
+        "resonance"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/resonance_visualizer_engine",
+      "engine_base": "resonance_visualizer_engine",
+      "import_modules": [
+        "visualizer_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "visualizer_manifest.json",
+        "visualizer_output.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/field_resonance_mapper",
+          "confidence": "weak",
+          "engine_base": "field_resonance_mapper",
+          "reason": "shared_runtime_term:resonance"
+        },
+        {
+          "canonical_path": "aiweb/engines/resonance_charge_meter",
+          "confidence": "weak",
+          "engine_base": "resonance_charge_meter",
+          "reason": "shared_runtime_term:resonance"
+        },
+        {
+          "canonical_path": "aiweb/symbolic_layers/resonance_display",
+          "confidence": "weak",
+          "engine_base": "resonance_display",
+          "reason": "shared_runtime_term:resonance"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "test_visualizer.py",
+        "visualizer_core.py"
+      ],
+      "relationship_count": 3,
+      "resolved_path": "/home/nic/aiweb/engines/resonance_visualizer_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "resonance",
+        "visualizer"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/resurrection_planner",
+      "engine_base": "resurrection_planner",
+      "import_modules": [
+        "resurrection_planner_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "resurrection_planner_core.py",
+        "test_resurrection_planner_core.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/resurrection_planner",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "planner",
+        "resurrection"
+      ]
+    },
+    {
+      "canonical_path": "projects/recursive_lmm_grok1/engines/revisit_previous_tasks",
+      "engine_base": "revisit_previous_tasks",
+      "import_modules": [
+        "resurrection_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json",
+        "resurrection_queue.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/loop_resurrection_engine",
+          "confidence": "medium",
+          "engine_base": "loop_resurrection_engine",
+          "reason": "source_text_reference"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "resurrection_core.py",
+        "test_resurrection.py"
+      ],
+      "relationship_count": 1,
+      "resolved_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/revisit_previous_tasks",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "previous",
+        "revisit",
+        "tasks"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/seed_manager",
+      "engine_base": "seed_manager",
+      "import_modules": [
+        "seed_core",
+        "uuid"
+      ],
+      "metadata_files": [
+        "README.md",
+        "seed_bank.json",
+        "seed_manifest.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "seed_core.py",
+        "test_seed.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/seed_manager",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "manager",
+        "seed"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/spc_memory_migrator",
+      "engine_base": "spc_memory_migrator",
+      "import_modules": [
+        "spc_migrator_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "projects/recursive_lmm_grok1/engines/project_memory",
+          "confidence": "weak",
+          "engine_base": "project_memory",
+          "reason": "shared_runtime_term:memory"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "spc_migrator_core.py",
+        "test_spc_migrator_core.py"
+      ],
+      "relationship_count": 1,
+      "resolved_path": "/home/nic/aiweb/engines/spc_memory_migrator",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "memory",
+        "migrator"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/runtime_wrappers/stack_breather_phase2",
+      "engine_base": "stack_breather_phase2",
+      "import_modules": [
+        "core_breather",
+        "field_breather",
+        "stack_breather_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "core_breather.py",
+        "field_breather.py",
+        "stack_breather_core.py",
+        "test_stack_breather_core.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "breather",
+        "phase2"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/stack_linker_breather",
+      "engine_base": "stack_linker_breather",
+      "import_modules": [
+        "core_breather",
+        "recursive_field_breather",
+        "stack_linker_breather"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/recursive_field_breather",
+          "confidence": "strong",
+          "engine_base": "recursive_field_breather",
+          "reason": "python_import_reference"
+        },
+        {
+          "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+          "confidence": "medium",
+          "engine_base": "protoforge",
+          "reason": "source_text_reference"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "stack_linker_core.py",
+        "test_stack_linker_core.py"
+      ],
+      "relationship_count": 2,
+      "resolved_path": "/home/nic/aiweb/engines/stack_linker_breather",
+      "risk_level": "MEDIUM",
+      "risk_reason": "test_status=ISSUES; relationship_count=2",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 1,
+        "pass": 0,
+        "statuses": [
+          "FAIL"
+        ],
+        "summary": "ISSUES",
+        "timeout": 0
+      },
+      "test_status": "ISSUES",
+      "tokens": [
+        "breather",
+        "linker"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/symbolic_capacitor_engine",
+      "engine_base": "symbolic_capacitor_engine",
+      "import_modules": [
+        "decay_tracker_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json",
+        "resonance_decay_tracker/README.md",
+        "resonance_decay_tracker/engine_manifest.json",
+        "resonance_sync.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/control_panel_ui_engine_v1.02",
+          "confidence": "medium",
+          "engine_base": "control_panel_ui_engine",
+          "reason": "source_text_reference"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "capacitor_core.py",
+        "resonance_decay_tracker/decay_tracker_core.py",
+        "resonance_decay_tracker/test_decay_tracker_core.py"
+      ],
+      "relationship_count": 1,
+      "resolved_path": "/home/nic/aiweb/engines/symbolic_capacitor_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "capacitor"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/runtime_wrappers/symbolic_cognition_stack",
+      "engine_base": "symbolic_cognition_stack",
+      "import_modules": [
+        "symbolic_cognition_stack_loader"
+      ],
+      "metadata_files": [
+        "README.md",
+        "stack_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/loop_resurrection_engine",
+          "confidence": "medium",
+          "engine_base": "loop_resurrection_engine",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/resonance_charge_meter",
+          "confidence": "medium",
+          "engine_base": "resonance_charge_meter",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/symbolic_feedback_loop_engine",
+          "confidence": "medium",
+          "engine_base": "symbolic_feedback_loop_engine",
+          "reason": "source_text_reference"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "symbolic_cognition_stack_loader.py",
+        "test_symbolic_cognition_stack_loader.py"
+      ],
+      "relationship_count": 3,
+      "resolved_path": "/home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "cognition"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/symbolic_drift_visualizer",
+      "engine_base": "symbolic_drift_visualizer",
+      "import_modules": [
+        "drift_visualizer_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/drift_analyzer_tool",
+          "confidence": "weak",
+          "engine_base": "drift_analyzer_tool",
+          "reason": "shared_runtime_term:drift"
+        },
+        {
+          "canonical_path": "aiweb/engines/drift_signature_logger",
+          "confidence": "weak",
+          "engine_base": "drift_signature_logger",
+          "reason": "shared_runtime_term:drift"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "drift_visualizer_core.py",
+        "test_drift_visualizer_core.py"
+      ],
+      "relationship_count": 2,
+      "resolved_path": "/home/nic/aiweb/engines/symbolic_drift_visualizer",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "drift",
+        "visualizer"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/symbolic_feedback_loop_engine",
+      "engine_base": "symbolic_feedback_loop_engine",
+      "import_modules": [
+        "feedback_loop_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json",
+        "loop_trace.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/loop_resurrection_engine",
+          "confidence": "weak",
+          "engine_base": "loop_resurrection_engine",
+          "reason": "shared_runtime_term:loop"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "feedback_loop_core.py",
+        "test_feedback_loop.py"
+      ],
+      "relationship_count": 1,
+      "resolved_path": "/home/nic/aiweb/engines/symbolic_feedback_loop_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "feedback",
+        "loop"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/symbolic_glyph_engine",
+      "engine_base": "symbolic_glyph_engine",
+      "import_modules": [
+        "glyph_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+          "confidence": "medium",
+          "engine_base": "protoforge",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/glyph_engine",
+          "confidence": "weak",
+          "engine_base": "glyph_engine",
+          "reason": "shared_runtime_term:glyph"
+        },
+        {
+          "canonical_path": "aiweb/symbolic_layers/glyph_ui_overlay",
+          "confidence": "weak",
+          "engine_base": "glyph_ui_overlay",
+          "reason": "shared_runtime_term:glyph"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "glyph_core.py",
+        "test_glyph_core.py"
+      ],
+      "relationship_count": 3,
+      "resolved_path": "/home/nic/aiweb/engines/symbolic_glyph_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "glyph"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/runtime_wrappers/symbolic_layers_stack",
+      "engine_base": "symbolic_layers_stack",
+      "import_modules": [
+        "symbolic_layers_stack_loader"
+      ],
+      "metadata_files": [
+        "README.md",
+        "stack_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/symbolic_layers/glyph_ui_overlay",
+          "confidence": "medium",
+          "engine_base": "glyph_ui_overlay",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/symbolic_layers/recursion_mapper",
+          "confidence": "medium",
+          "engine_base": "recursion_mapper",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/symbolic_layers/resonance_display",
+          "confidence": "medium",
+          "engine_base": "resonance_display",
+          "reason": "source_text_reference"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "symbolic_layers_stack_loader.py",
+        "test_symbolic_layers_stack_loader.py"
+      ],
+      "relationship_count": 3,
+      "resolved_path": "/home/nic/aiweb/runtime_wrappers/symbolic_layers_stack",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "layers"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/symbolic_policy_engine",
+      "engine_base": "symbolic_policy_engine",
+      "import_modules": [
+        "policy_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "policy_manifest.json",
+        "policy_rules.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "policy_core.py",
+        "test_policy.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/symbolic_policy_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "policy"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/system_log_engine",
+      "engine_base": "system_log_engine",
+      "import_modules": [
+        "log_event"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json"
+      ],
+      "neighbors": [
+        {
+          "canonical_path": "aiweb/engines/phase_engine",
+          "confidence": "medium",
+          "engine_base": "phase_engine",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/plugin_engine",
+          "confidence": "medium",
+          "engine_base": "plugin_engine",
+          "reason": "source_text_reference"
+        },
+        {
+          "canonical_path": "aiweb/engines/tier_enforcer",
+          "confidence": "medium",
+          "engine_base": "tier_enforcer",
+          "reason": "source_text_reference"
+        }
+      ],
+      "path_exists": true,
+      "python_files": [
+        "__init__.py",
+        "log_event.py",
+        "test_system_log.py"
+      ],
+      "relationship_count": 3,
+      "resolved_path": "/home/nic/aiweb/engines/system_log_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "system"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/tier_enforcer",
+      "engine_base": "tier_enforcer",
+      "import_modules": [
+        "run"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json",
+        "tier_rules.json",
+        "tier_violation_log.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "run.py",
+        "test_tier_enforcer.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/tier_enforcer",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "enforcer",
+        "tier"
+      ]
+    },
+    {
+      "canonical_path": "aiweb/engines/tone_engine",
+      "engine_base": "tone_engine",
+      "import_modules": [
+        "tone_core"
+      ],
+      "metadata_files": [
+        "README.md",
+        "engine_manifest.json",
+        "tone_state.json"
+      ],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "test_tone_engine.py",
+        "tone_core.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/engines/tone_engine",
+      "risk_level": "LOW",
+      "risk_reason": "normal_relationship_density",
+      "test_counts": {
+        "blocked": 0,
+        "error": 0,
+        "fail": 0,
+        "pass": 1,
+        "statuses": [
+          "PASS"
+        ],
+        "summary": "PASS",
+        "timeout": 0
+      },
+      "test_status": "PASS",
+      "tokens": [
+        "tone"
+      ]
+    },
+    {
+      "canonical_path": "projects/recursive_lmm_grok1/engines/trust_guard",
+      "engine_base": "trust_guard",
+      "import_modules": [],
+      "metadata_files": [],
+      "neighbors": [],
+      "path_exists": true,
+      "python_files": [
+        "run.py"
+      ],
+      "relationship_count": 0,
+      "resolved_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/trust_guard",
+      "risk_level": "MEDIUM",
+      "risk_reason": "test_status=NO_TEST_RESULT; relationship_count=0",
+      "test_counts": {},
+      "test_status": "NO_TEST_RESULT",
+      "tokens": [
+        "guard",
+        "trust"
+      ]
+    }
+  ],
+  "schema_version": "canonical_engine_relationship_map_v1_patch125",
+  "source_lockfile_path": "/home/nic/forge/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+  "source_lockfile_sha256": "b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab",
+  "source_test_report_status": "CANONICAL_TEST_RUN_COMPLETED_WITH_ISSUES",
+  "status": "CANONICAL_ENGINE_RELATIONSHIP_MAP_READY"
+}

@@ -1,0 +1,272 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "389c66550a997458afb1e109db9b2f43336eea00a912a2eb705f24a6b06b5421",
+      "excerpt_start": "{\n  \"engine\": \"Recursive Agent Kernel\",\n  \"version\": \"v1\",\n  \"description\": \"Maintains recursive symbolic agent heartbeat and monitors symbolic drift cycles.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Recursive",
+        "Agent",
+        "Kernel",
+        "version",
+        "description",
+        "Maintains",
+        "recursive",
+        "symbolic",
+        "agent",
+        "heartbeat",
+        "and",
+        "monitors",
+        "drift",
+        "cycles"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/recursive_agent_kernel/agent_kernel_manifest.json",
+      "relative_to_candidate": "agent_kernel_manifest.json",
+      "sha256": "389c66550a997458afb1e109db9b2f43336eea00a912a2eb705f24a6b06b5421",
+      "size_bytes": 161
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "8ded1ca9c586f368a75871880f99514bab42694bd2e5c51f7ee2c093fbd372ac",
+      "excerpt_start": "import json\nimport time\n\nSTATE_FILE = \"recursion_state.json\"\n\ndef pulse_heartbeat():\n    \"\"\"Simulates a recursive heartbeat for symbolic agent stability.\"\"\"\n    state = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"heartbeat\": True,\n        \"loop_phase\": \"stable\",\n        \"drift_detected\": False\n    }\n    try:\n        with open(STATE_FILE, \"w\") as f:\n            json.dump(state, f, indent=2)\n        print(f\"\u2714\ufe0f Heartbeat pulse recorded: {state}\")\n    except Exception as e:\n        print(f\"[!] Failed to update recursion state: {e}\")\n    return state\n",
+      "functions_sample": [
+        "pulse_heartbeat"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time"
+      ],
+      "line_count": 21,
+      "path": "/home/nic/aiweb/engines/recursive_agent_kernel/agent_kernel_core.py",
+      "relative_to_candidate": "agent_kernel_core.py",
+      "sha256": "8ded1ca9c586f368a75871880f99514bab42694bd2e5c51f7ee2c093fbd372ac",
+      "size_bytes": 596
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "a72d6f812eafc3401f4c7f0e13c14a71628dbb2fcbf4bc0a6114d54f1c2c24eb",
+      "excerpt_start": "# Recursive Agent Kernel Engine\n\nThis engine provides a stable recursive \"heartbeat\" for symbolic agents.\n\nTracks phase stability, drift detection, and loop integrity signals across symbolic memory runtime.\n",
+      "functions_sample": [
+        "Recursive",
+        "Agent",
+        "Kernel",
+        "Engine",
+        "This",
+        "engine",
+        "provides",
+        "stable",
+        "recursive",
+        "heartbeat",
+        "for",
+        "symbolic",
+        "agents",
+        "Tracks",
+        "phase",
+        "stability",
+        "drift",
+        "detection",
+        "and",
+        "loop",
+        "integrity",
+        "signals",
+        "across",
+        "memory",
+        "runtime"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/recursive_agent_kernel/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "a72d6f812eafc3401f4c7f0e13c14a71628dbb2fcbf4bc0a6114d54f1c2c24eb",
+      "size_bytes": 207
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "d9b53e4fd8647808f0549d649de813d208c76503dc7f83ad4e16f9159c6998d8",
+      "excerpt_start": "from agent_kernel_core import pulse_heartbeat\n\ndef test_kernel_heartbeat():\n    try:\n        result = pulse_heartbeat()\n        assert result[\"heartbeat\"] == True\n        assert result[\"loop_phase\"] == \"stable\"\n        print(\"\u2705 Test Passed: Recursive heartbeat recorded successfully.\")\n    except Exception as e:\n        print(f\"\u274c Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_kernel_heartbeat()\n",
+      "functions_sample": [
+        "test_kernel_heartbeat"
+      ],
+      "imports_sample": [
+        "from agent_kernel_core import pulse_heartbeat"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/recursive_agent_kernel/test_agent_kernel.py",
+      "relative_to_candidate": "test_agent_kernel.py",
+      "sha256": "d9b53e4fd8647808f0549d649de813d208c76503dc7f83ad4e16f9159c6998d8",
+      "size_bytes": 410
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "79786838902e110abde9fd8876a36eaa33c67ba6c84afa97476d7df5104bca75",
+      "excerpt_start": "{\n  \"timestamp\": \"2025-04-26T23:57:51Z\",\n  \"heartbeat\": true,\n  \"loop_phase\": \"stable\",\n  \"drift_detected\": false\n}",
+      "functions_sample": [
+        "timestamp",
+        "heartbeat",
+        "true",
+        "loop_phase",
+        "stable",
+        "drift_detected",
+        "false"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/recursive_agent_kernel/recursion_state.json",
+      "relative_to_candidate": "recursion_state.json",
+      "sha256": "79786838902e110abde9fd8876a36eaa33c67ba6c84afa97476d7df5104bca75",
+      "size_bytes": 115
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/recursive_agent_kernel",
+  "created_at": "2026-05-16_194842",
+  "crosscheck_id": "ERE-recursive_agent_kernel-2026-05-16_194842",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Agent",
+      "Engine",
+      "Kernel",
+      "Maintains",
+      "Recursive",
+      "This",
+      "Tracks",
+      "across",
+      "agent",
+      "agents",
+      "and",
+      "cycles",
+      "description",
+      "detection",
+      "drift",
+      "drift_detected",
+      "engine",
+      "false",
+      "for",
+      "heartbeat"
+    ],
+    "imports_sample": [
+      "from agent_kernel_core import pulse_heartbeat",
+      "import json",
+      "import time"
+    ],
+    "likely_system_role": "agent_kernel",
+    "plain_english_purpose": "`recursive_agent_kernel` appears to be a local AI.Web engine/component. The bound source evidence includes 5 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "KEEP_APPROVED_REVIEW_STATUS",
+    "risk_notes": [],
+    "role_reason": "Inferred from engine family keyword `agent` plus bound code evidence.",
+    "source_excerpt_samples": [
+      "{   \"engine\": \"Recursive Agent Kernel\",",
+      "import json import time",
+      "# Recursive Agent Kernel Engine ",
+      "from agent_kernel_core import pulse_heartbeat "
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_194821_recursive_agent_kernel_llm_engine_review_draft_v1.json",
+  "draft_sha256": "098285992c1008276b872e0fdd04c6fb690e3b38f5a95ee44e975736c37a5e3d",
+  "engine_family": "recursive_agent_kernel",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_recursive_agent_kernel_engine_evidence_binder.json",
+  "evidence_binder_sha256": "cfd274d120ba1de074008d0d2fb7f2064816d12263b77c9e940c2acb2b321a51",
+  "evidence_id": "EEB-a25ac486f908ee13",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "agent_kernel_manifest.json",
+      "agent_kernel_core.py",
+      "README.md",
+      "test_agent_kernel.py",
+      "recursion_state.json"
+    ],
+    "functions_mentioned": [
+      "engine",
+      "Recursive",
+      "Agent",
+      "Kernel",
+      "version",
+      "Maintains",
+      "recursive",
+      "symbolic",
+      "agent",
+      "heartbeat",
+      "and",
+      "drift",
+      "cycles",
+      "pulse_heartbeat",
+      "Engine",
+      "stable",
+      "for",
+      "agents",
+      "phase",
+      "stability",
+      "detection",
+      "runtime"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "import time",
+      "from agent_kernel_core import pulse_heartbeat"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 21.633,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "b371c101c6859af9d4125023f7bae3bf082adad5df135dc45f7cf48816a96489",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nMaintains a recursive \"heartbeat\" for symbolic agents to ensure stability and monitor for drift cycles during runtime.  \n\nLikely System Role:  \nA core component of an AI.Web engine, ensuring recursive symbolic agent processes remain stable and detect anomalies in real-time.  \n\nEvidence Used:  \n- `agent_kernel_manifest.json` defines the engine's purpose and version.  \n- `agent_kernel_core.py` implements the `pulse_heartbeat()` function for state tracking.  \n- `README.md` explains the engine's role in phase stability and drift detection.  \n- `test_agent_kernel.py` includes a test case for heartbeat functionality.  \n- `recursion_state.json` stores runtime state with heartbeat and drift flags.  \n\nRisks / Uncertainties:  \n- Reliance on file I/O for state storage may introduce latency or permission issues.  \n- Simulated heartbeat may not fully reflect real-world recursive agent behavior.  \n- Test coverage is limited to a single assertion; broader validation may be needed.  \n\nRecommendation Draft:  \nApprove the engine as it meets the described purpose. Suggest adding error handling for file operations and expanding test cases to cover edge scenarios.  \n\nSuggested Nic Action:  \nApprove the review, but request enhancements to error resilience and test comprehensiveness before deployment."
+  },
+  "llm_sections": {
+    "evidence_used": "- `agent_kernel_manifest.json` defines the engine's purpose and version.  \n- `agent_kernel_core.py` implements the `pulse_heartbeat()` function for state tracking.  \n- `README.md` explains the engine's role in phase stability and drift detection.  \n- `test_agent_kernel.py` includes a test case for heartbeat functionality.  \n- `recursion_state.json` stores runtime state with heartbeat and drift flags.",
+    "likely_system_role": "A core component of an AI.Web engine, ensuring recursive symbolic agent processes remain stable and detect anomalies in real-time.",
+    "plain_english_purpose": "Maintains a recursive \"heartbeat\" for symbolic agents to ensure stability and monitor for drift cycles during runtime.",
+    "recommendation_draft": "Approve the engine as it meets the described purpose. Suggest adding error handling for file operations and expanding test cases to cover edge scenarios.",
+    "risks_uncertainties": "- Reliance on file I/O for state storage may introduce latency or permission issues.  \n- Simulated heartbeat may not fully reflect real-world recursive agent behavior.  \n- Test coverage is limited to a single assertion; broader validation may be needed.",
+    "suggested_nic_action": "Approve the review, but request enhancements to error resilience and test comprehensiveness before deployment."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nMaintains a recursive \"heartbeat\" for symbolic agents to ensure stability and monitor for drift cycles during runtime.  \n\nLikely System Role:  \nA core component of an AI.Web engine, ensuring recursive symbolic agent processes remain stable and detect anomalies in real-time.  \n\nEvidence Used:  \n- `agent_kernel_manifest.json` defines the engine's purpose and version.  \n- `agent_kernel_core.py` implements the `pulse_heartbeat()` function for state tracking.  \n- `README.md` explains the engine's role in phase stability and drift detection.  \n- `test_agent_kernel.py` includes a test case for heartbeat functionality.  \n- `recursion_state.json` stores runtime state with heartbeat and drift flags.  \n\nRisks / Uncertainties:  \n- Reliance on file I/O for state storage may introduce latency or permission issues.  \n- Simulated heartbeat may not fully reflect real-world recursive agent behavior.  \n- Test coverage is limited to a single assertion; broader validation may be needed.  \n\nRecommendation Draft:  \nApprove the engine as it meets the described purpose. Suggest adding error handling for file operations and expanding test cases to cover edge scenarios.  \n\nSuggested Nic Action:  \nApprove the review, but request enhancements to error resilience and test comprehensiveness before deployment.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

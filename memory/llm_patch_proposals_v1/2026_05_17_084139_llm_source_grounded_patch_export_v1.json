@@ -1,0 +1,30 @@
+{
+  "authority": {
+    "export_only": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-17T08:41:39",
+  "proposal_path": "/home/nic/forge/memory/llm_patch_proposals_v1/latest_llm_source_grounded_patch_proposal_v1.json",
+  "proposal_sha256": "e90ab8dfb492c0107322fcc59682c3b51299eca75df8c4ba9ad163da3c678248",
+  "proposal_status": "LLM_SOURCE_GROUNDED_PATCH_PROPOSAL_READY_NO_WRITE_AUTHORITY",
+  "recommended_next_patch": "Patch 133 \u2014 Patch Lifecycle 2.0 Gate Matrix",
+  "report_type": "LLM_SOURCE_GROUNDED_PATCH_EXPORT_V1",
+  "schema_version": "llm_source_grounded_patch_export_v1_patch132",
+  "status": "LLM_SOURCE_GROUNDED_PATCH_EXPORT_READY",
+  "summary": {
+    "candidate_source_documents": 6,
+    "known_failures": 1,
+    "related_files": 2,
+    "risk_level": "MEDIUM",
+    "risk_score": 65,
+    "target": "stack_linker_breather",
+    "test_paths": 1,
+    "write_authority": false
+  },
+  "target": "stack_linker_breather",
+  "verification_path": "/home/nic/forge/memory/llm_patch_proposals_v1/latest_llm_source_grounded_patch_verification_v1.json",
+  "verification_sha256": "691c64082f93ad4e68691633d7ced1c4ed04f24009c85195ef432c6ef891ff64",
+  "verification_status": "LLM_SOURCE_GROUNDED_PATCH_PROPOSAL_VERIFIED_NO_WRITE_AUTHORITY"
+}

@@ -1,0 +1,167 @@
+{
+  "schema_version": "forge_master_status_v1_patch118",
+  "report_type": "FORGE_MASTER_STATUS_REPORT_V1",
+  "created_at": "2026-05-16T23:49:35",
+  "status": "FORGE_MASTER_STATUS_READY",
+  "blockers": [],
+  "authority": {
+    "mode": "READ_ONLY_MASTER_STATUS_ONLY",
+    "writes": [
+      "/home/nic/forge/memory/forge_master_status_v1"
+    ],
+    "engine_file_write_authority": false,
+    "project_file_write_authority": false,
+    "ledger_mutation_authority": false,
+    "final_lockfile_write_authority": false,
+    "quarantine_authority": false,
+    "delete_authority": false,
+    "chroma_write_authority": false,
+    "shell_execution_authority": false,
+    "llm_autonomous_decision_authority": false
+  },
+  "forge": {
+    "root": "/home/nic/forge",
+    "memory_root": "/home/nic/forge/memory",
+    "tool_registry": {
+      "path": "/home/nic/forge/config/tool_registry.json",
+      "exists": true,
+      "sha256": "5dcfd86822346b55145cc003e3f0f50b0381cce6e1a6a55a0cb8688330a018db",
+      "trust_level": 5.0,
+      "tool_count": 304
+    },
+    "command_surface": {
+      "expected": 380,
+      "found": 380,
+      "missing_count": 0,
+      "missing": [],
+      "status": "PASS"
+    },
+    "audit": {
+      "path": "/home/nic/forge/logs/forge_audit.log",
+      "exists": true,
+      "entries_checked": 2469,
+      "chain_breaks": 0,
+      "first_checked_entry_hash": "2d84a60717bda63e",
+      "last_entry_hash": "5d0ab2f37ab05dfb",
+      "status": "PASS"
+    },
+    "scope": {
+      "approved_paths_path": "/home/nic/forge/config/approved_paths.json",
+      "approved_paths_exists": true,
+      "approved_paths_sha256": "80c98f351a0ffe369ac7acd08c4390e8901dd003b7ce1448cdc3d1093b06f7c6",
+      "approved_paths": {
+        "_comment": "Permanent approved paths. Set by Nic. Forge cannot access anything outside these paths.",
+        "_instructions": "Add absolute paths only. These persist across all sessions.",
+        "paths": [
+          "/home/nic/forge_test_project",
+          "/home/nic/aiweb"
+        ]
+      },
+      "session_scope_path": "/home/nic/forge/config/session_scope.json",
+      "session_scope_exists": true,
+      "session_scope_sha256": "b2ed23ee29330f58c243cd054220ea6b4a596986dd34f747704b581b30bf01f3",
+      "session_scope": {
+        "_comment": "Per-session path restriction. Written at session start.",
+        "session_id": "forge_2026_05_16_234843",
+        "started_at": "2026-05-16T23:48:43",
+        "paths": [
+          "/home/nic/aiweb"
+        ]
+      }
+    }
+  },
+  "engine_review": {
+    "ledger": {
+      "path": "/home/nic/forge/memory/code_library_v1/manifests/engine_review_ledger_v1.json",
+      "exists": true,
+      "sha256": "d1f6479c5fe04eda3bfdca9050e23f80e316abed87133bc79846b5a1e516d9ca",
+      "counts": {
+        "total": 80,
+        "approved": 57,
+        "deferred": 23,
+        "rejected": 0,
+        "pending": 0,
+        "future_lockfile_eligible": 55
+      }
+    },
+    "final_lockfile": {
+      "path": "/home/nic/forge/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+      "exists": true,
+      "sha256": "b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab",
+      "canonical_authority": true,
+      "actual_lockfile_written": true,
+      "included_count": 55,
+      "excluded_count": 25
+    },
+    "completion_status": {
+      "path": "/home/nic/forge/memory/engine_review_completion_v1/latest_engine_review_completion_status_v1.json",
+      "exists": true,
+      "status": "ENGINE_REVIEW_COMPLETE",
+      "recommended_next_patch": "Patch 117 — Deferred / Excluded Engine Disposition Report"
+    },
+    "disposition": {
+      "path": "/home/nic/forge/memory/engine_disposition_v1/latest_engine_disposition_report_v1.json",
+      "exists": true,
+      "sha256": "71132fd68cb3e1e7c9fca38772909d450cd582c91d4e95804cd7131a08db1ded",
+      "excluded_total": 25,
+      "by_bucket": {
+        "authority_or_external_control_deferred": 3,
+        "runtime_wrapper_or_stack_deferred": 6,
+        "deferred_hold_family": 6,
+        "general_deferred_review": 3,
+        "approved_hold_family_excluded": 2,
+        "memory_archive_or_state_deferred": 2,
+        "agent_identity_deferred": 3
+      },
+      "safe_to_delete_now": 0,
+      "safe_to_quarantine_now": 0,
+      "safe_to_promote_now": 0
+    }
+  },
+  "libraries": {
+    "context_library": {
+      "path": "/home/nic/forge/memory/context_library_v1",
+      "exists": true,
+      "manifests": 51,
+      "receipts": 29,
+      "indexes": 0,
+      "symbolic_maps": 29,
+      "chroma_db_exists": true
+    },
+    "code_library": {
+      "path": "/home/nic/forge/memory/code_library_v1",
+      "exists": true,
+      "manifests": 66,
+      "has_final_engine_lockfile": true
+    },
+    "snapshot_plans": {
+      "path": "/home/nic/forge/memory/snapshot_plans_v1",
+      "exists": true,
+      "file_count": 4
+    },
+    "live_restore_backups": {
+      "path": "/home/nic/forge/memory/live_restore_backups_v1",
+      "exists": true,
+      "file_count": 154
+    }
+  },
+  "capabilities": {
+    "patch_lifecycle": true,
+    "sandbox": true,
+    "safe_tests": true,
+    "snapshot": true,
+    "engine_review_complete": true,
+    "engine_disposition": true,
+    "llm_gateway": true,
+    "relationship_intelligence": true,
+    "master_status": true
+  },
+  "next_phase": "LLM_PLANNING_PACKET_SCHEMA",
+  "recommended_next_patch": "Patch 119 — LLM Planning Packet Schema",
+  "next_commands": [
+    "forge-master-status-show latest",
+    "forge-master-status-export",
+    "Install Patch 119 when ready"
+  ],
+  "plain_english": "Forge now has one consolidated read-only system status surface. The next safe move is to define the structured LLM planning packet format before giving the LLM more planning responsibility."
+}

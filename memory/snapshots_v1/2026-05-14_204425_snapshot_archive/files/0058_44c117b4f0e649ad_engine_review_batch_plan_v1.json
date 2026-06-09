@@ -1,0 +1,302 @@
+{
+  "report_type": "engine_review_batch_plan",
+  "policy_version": "patch73_engine_review_batch_tools_v1",
+  "created_at": "2026-05-12T20:42:40",
+  "mode": "BATCH_PLAN_ONLY",
+  "canonical_authority": false,
+  "actual_lockfile_written": false,
+  "engine_files_changed": false,
+  "quarantine_written": false,
+  "ledger_path": "/home/nic/forge/memory/code_library_v1/manifests/engine_review_ledger_v1.json",
+  "core_approval_candidates": [
+    {
+      "engine_base": "aiweb_os_engine",
+      "recommended_keep_path": "aiweb/engines/aiweb_os_engine",
+      "current_review_status": "PENDING_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "action": "approve_core_candidate"
+    },
+    {
+      "engine_base": "christping_listener",
+      "recommended_keep_path": "aiweb/engines/christping_listener",
+      "current_review_status": "PENDING_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 10,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "action": "approve_core_candidate"
+    },
+    {
+      "engine_base": "control_panel_ui_engine",
+      "recommended_keep_path": "aiweb/engines/control_panel_ui_engine_v1.02",
+      "current_review_status": "PENDING_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 10,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "action": "approve_core_candidate"
+    },
+    {
+      "engine_base": "drift_signature_logger",
+      "recommended_keep_path": "aiweb/engines/drift_signature_logger",
+      "current_review_status": "PENDING_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 5,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "action": "approve_core_candidate"
+    },
+    {
+      "engine_base": "failsafe_manager",
+      "recommended_keep_path": "aiweb/engines/failsafe_manager",
+      "current_review_status": "PENDING_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "action": "approve_core_candidate"
+    },
+    {
+      "engine_base": "loop_resurrection_engine",
+      "recommended_keep_path": "aiweb/engines/loop_resurrection_engine",
+      "current_review_status": "PENDING_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 8,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "action": "approve_core_candidate"
+    },
+    {
+      "engine_base": "phase_engine",
+      "recommended_keep_path": "aiweb/engines/phase_engine",
+      "current_review_status": "APPROVED",
+      "decision_confidence": "medium_high",
+      "variant_count": 5,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "action": "approve_core_candidate"
+    },
+    {
+      "engine_base": "plugin_engine",
+      "recommended_keep_path": "aiweb/engines/plugin_engine",
+      "current_review_status": "PENDING_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "action": "approve_core_candidate"
+    },
+    {
+      "engine_base": "recursive_agent_kernel",
+      "recommended_keep_path": "aiweb/engines/recursive_agent_kernel",
+      "current_review_status": "PENDING_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "action": "approve_core_candidate"
+    },
+    {
+      "engine_base": "resonance_charge_meter",
+      "recommended_keep_path": "aiweb/engines/resonance_charge_meter",
+      "current_review_status": "PENDING_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 8,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "action": "approve_core_candidate"
+    },
+    {
+      "engine_base": "symbolic_capacitor_engine",
+      "recommended_keep_path": "aiweb/engines/symbolic_capacitor_engine",
+      "current_review_status": "PENDING_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 14,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "action": "approve_core_candidate"
+    },
+    {
+      "engine_base": "symbolic_feedback_loop_engine",
+      "recommended_keep_path": "aiweb/engines/symbolic_feedback_loop_engine",
+      "current_review_status": "PENDING_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 10,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "action": "approve_core_candidate"
+    },
+    {
+      "engine_base": "symbolic_policy_engine",
+      "recommended_keep_path": "aiweb/engines/symbolic_policy_engine",
+      "current_review_status": "PENDING_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "action": "approve_core_candidate"
+    },
+    {
+      "engine_base": "system_log_engine",
+      "recommended_keep_path": "aiweb/engines/system_log_engine",
+      "current_review_status": "PENDING_REVIEW",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "action": "approve_core_candidate"
+    }
+  ],
+  "hold_deferral_candidates": [
+    {
+      "engine_base": "aiweb_os",
+      "recommended_keep_path": "aiweb/runtime_wrappers/aiweb_os_v1",
+      "current_review_status": "PENDING_REVIEW",
+      "draft_decision": "HOLD_TEST_ONLY_REVIEW",
+      "required_human_checks": [
+        "test_only_candidate_requires_human_review"
+      ],
+      "action": "defer_hold_family"
+    },
+    {
+      "engine_base": "cold_archive_engine",
+      "recommended_keep_path": "aiweb/engines/cold_archive_engine_frozen_v1",
+      "current_review_status": "DEFERRED",
+      "draft_decision": "HOLD_ARCHIVE_AMBIGUITY_REVIEW",
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "frozen_candidate_requires_human_review",
+        "archive_or_backup_candidate_requires_human_review",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "action": "defer_hold_family"
+    },
+    {
+      "engine_base": "drift_arbitration_engine",
+      "recommended_keep_path": "aiweb/engines/drift_arbitration_engine",
+      "current_review_status": "PENDING_REVIEW",
+      "draft_decision": "HOLD_FROZEN_CANDIDATE_REVIEW",
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "frozen_candidate_requires_human_review",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "action": "defer_hold_family"
+    },
+    {
+      "engine_base": "memory_stack_engine",
+      "recommended_keep_path": "aiweb/engines/memory_stack_engine",
+      "current_review_status": "PENDING_REVIEW",
+      "draft_decision": "HOLD_FROZEN_CANDIDATE_REVIEW",
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "frozen_candidate_requires_human_review",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "action": "defer_hold_family"
+    },
+    {
+      "engine_base": "memory_stack_engine_breathing",
+      "recommended_keep_path": "aiweb/engines/memory_stack_engine_breathing_v1",
+      "current_review_status": "PENDING_REVIEW",
+      "draft_decision": "HOLD_FOR_MANUAL_ARCHITECT_REVIEW",
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "action": "defer_hold_family"
+    },
+    {
+      "engine_base": "protoforge_dashboard_runtime",
+      "recommended_keep_path": "runtime_wrappers/protoforge_dashboard_runtime_v2.0",
+      "current_review_status": "PENDING_REVIEW",
+      "draft_decision": "HOLD_FOR_MANUAL_ARCHITECT_REVIEW",
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "compare_multiple_active_variants"
+      ],
+      "action": "defer_hold_family"
+    },
+    {
+      "engine_base": "saved_ideas",
+      "recommended_keep_path": "projects/recursive_lmm_grok1/engines/saved_ideas",
+      "current_review_status": "PENDING_REVIEW",
+      "draft_decision": "HOLD_ARCHIVE_AMBIGUITY_REVIEW",
+      "required_human_checks": [
+        "archive_or_backup_candidate_requires_human_review"
+      ],
+      "action": "defer_hold_family"
+    },
+    {
+      "engine_base": "step_counter",
+      "recommended_keep_path": "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1",
+      "current_review_status": "PENDING_REVIEW",
+      "draft_decision": "HOLD_FROZEN_CANDIDATE_REVIEW",
+      "required_human_checks": [
+        "frozen_candidate_requires_human_review"
+      ],
+      "action": "defer_hold_family"
+    }
+  ],
+  "counts": {
+    "total": 80,
+    "pending": 78,
+    "approved": 1,
+    "deferred": 1,
+    "rejected": 0,
+    "holds": 8,
+    "non_holds": 72,
+    "eligible_candidates": 1,
+    "core_total": 15,
+    "core_non_hold_approvable": 14,
+    "core_approved": 1,
+    "core_hold": 1,
+    "holds_total": 8,
+    "holds_deferred": 1,
+    "holds_rejected": 0,
+    "holds_pending": 7
+  },
+  "rules": {
+    "batch_approve_core_only_marks_non_hold_core_rows": true,
+    "batch_defer_holds_only_marks_hold_rows_deferred": true,
+    "rejected_rows_are_not_overwritten_by_batch_approve_core": true,
+    "destructive_actions_forbidden": [
+      "move",
+      "delete",
+      "rename",
+      "quarantine",
+      "promote",
+      "edit_engine_files"
+    ]
+  }
+}

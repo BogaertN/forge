@@ -1,0 +1,99 @@
+{
+  "connector_installed_in_contract": false,
+  "contract_path": "/home/nic/aiweb/service_contracts/protoforge2.contract.json",
+  "contract_version": "0.2.0-service-contract-bound-to-protoforge-sandbox",
+  "forge_ui_modified": false,
+  "generated_at_utc": "20260525_003039_UTC",
+  "identity_vault_written": false,
+  "implementation_root": "/home/nic/aiweb/runtime_wrappers/protoforge_sandbox_substrate_v0",
+  "name": "ProtoForge Connector Status",
+  "ok": true,
+  "patch": "239",
+  "rmc_live_memory_written": false,
+  "simulation_executed": false,
+  "status_command": {
+    "command": [
+      "/home/nic/forge/.venv/bin/python",
+      "-m",
+      "protoforge_sandbox",
+      "status"
+    ],
+    "cwd": "/home/nic/aiweb/runtime_wrappers/protoforge_sandbox_substrate_v0",
+    "json": {
+      "adapter_interface": true,
+      "adapter_planning": true,
+      "adapters": [
+        {
+          "adapter_id": "builtin.probe.v0",
+          "adapter_kind": "builtin_safe_probe",
+          "arbitrary_execution": false,
+          "execution_mode": "in_process_safe_builtin_only",
+          "network_access": false,
+          "simulation_types": [
+            "echo_stability",
+            "phase_transition",
+            "drift_budget_probe",
+            "manifest_packet_probe"
+          ],
+          "status": "available",
+          "writes_outside_runs": false
+        },
+        {
+          "adapter_id": "local.symbolic_frequency.stdlib.v0",
+          "adapter_kind": "symbolic_frequency_numeric_stdlib",
+          "arbitrary_execution": false,
+          "execution_mode": "in_process_stdlib_bounded_numeric",
+          "network_access": false,
+          "simulation_types": [
+            "symbolic_frequency_probe"
+          ],
+          "status": "available",
+          "writes_outside_runs": false
+        },
+        {
+          "adapter_id": "local.physics.pybullet.fixed.v0",
+          "adapter_kind": "pybullet_direct_fixed_procedural",
+          "arbitrary_execution": false,
+          "execution_mode": "pybullet_DIRECT_fixed_template_only",
+          "network_access": false,
+          "simulation_types": [
+            "pybullet_fixed_falling_cube"
+          ],
+          "status": "available",
+          "writes_outside_runs": false
+        }
+      ],
+      "allowed_simulation_types": [
+        "echo_stability",
+        "phase_transition",
+        "drift_budget_probe",
+        "manifest_packet_probe",
+        "symbolic_frequency_probe",
+        "pybullet_fixed_falling_cube"
+      ],
+      "arbitrary_execution": false,
+      "engine_candidate_catalog": true,
+      "external_engine_readiness": true,
+      "forge_modified": false,
+      "identity_vault_write": false,
+      "manifest_integrity": true,
+      "module": "protoforge_sandbox_substrate_v0",
+      "pybullet_fixed_direct_adapter": true,
+      "pybullet_fixed_scenario_template": true,
+      "pybullet_import_check": true,
+      "pybullet_readiness_planning": true,
+      "rmc_live_memory_write": false,
+      "root": "/home/nic/aiweb/runtime_wrappers/protoforge_sandbox_substrate_v0",
+      "runs_root": "/home/nic/aiweb/runtime_wrappers/protoforge_sandbox_substrate_v0/runs",
+      "service_contract_mutation": false,
+      "symbolic_frequency_adapter": true,
+      "version": "0.8.0"
+    },
+    "ok": true,
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "{\n  \"adapter_interface\": true,\n  \"adapter_planning\": true,\n  \"adapters\": [\n    {\n      \"adapter_id\": \"builtin.probe.v0\",\n      \"adapter_kind\": \"builtin_safe_probe\",\n      \"arbitrary_execution\": false,\n      \"execution_mode\": \"in_process_safe_builtin_only\",\n      \"network_access\": false,\n      \"simulation_types\": [\n        \"echo_stability\",\n        \"phase_transition\",\n        \"drift_budget_probe\",\n        \"manifest_packet_probe\"\n      ],\n      \"status\": \"available\",\n      \"writes_outside_runs\": false\n    },\n    {\n      \"adapter_id\": \"local.symbolic_frequency.stdlib.v0\",\n      \"adapter_kind\": \"symbolic_frequency_numeric_stdlib\",\n      \"arbitrary_execution\": false,\n      \"execution_mode\": \"in_process_stdlib_bounded_numeric\",\n      \"network_access\": false,\n      \"simulation_types\": [\n        \"symbolic_frequency_probe\"\n      ],\n      \"status\": \"available\",\n      \"writes_outside_runs\": false\n    },\n    {\n      \"adapter_id\": \"local.physics.pybullet.fixed.v0\",\n      \"adapter_kind\": \"pybullet_direct_fixed_procedural\",\n      \"arbitrary_execution\": false,\n      \"execution_mode\": \"pybullet_DIRECT_fixed_template_only\",\n      \"network_access\": false,\n      \"simulation_types\": [\n        \"pybullet_fixed_falling_cube\"\n      ],\n      \"status\": \"available\",\n      \"writes_outside_runs\": false\n    }\n  ],\n  \"allowed_simulation_types\": [\n    \"echo_stability\",\n    \"phase_transition\",\n    \"drift_budget_probe\",\n    \"manifest_packet_probe\",\n    \"symbolic_frequency_probe\",\n    \"pybullet_fixed_falling_cube\"\n  ],\n  \"arbitrary_execution\": false,\n  \"engine_candidate_catalog\": true,\n  \"external_engine_readiness\": true,\n  \"forge_modified\": false,\n  \"identity_vault_write\": false,\n  \"manifest_integrity\": true,\n  \"module\": \"protoforge_sandbox_substrate_v0\",\n  \"pybullet_fixed_direct_adapter\": true,\n  \"pybullet_fixed_scenario_template\": true,\n  \"pybullet_import_check\": true,\n  \"pybullet_readiness_planning\": true,\n  \"rmc_live_memory_write\": false,\n  \"root\": \"/home/nic/aiweb/runtime_wrappers/protoforge_sandbox_substrate_v0\",\n  \"runs_root\": \"/home/nic/aiweb/runtime_wrappers/protoforge_sandbox_substrate_v0/runs\",\n  \"service_contract_mutation\": false,\n  \"symbolic_frequency_adapter\": true,\n  \"version\": \"0.8.0\"\n}\n"
+  },
+  "ui_installed_in_contract": false,
+  "verdict": "PROTOFORGE_STATUS_OK"
+}

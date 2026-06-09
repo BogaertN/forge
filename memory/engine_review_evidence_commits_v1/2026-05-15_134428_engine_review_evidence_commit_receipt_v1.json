@@ -1,0 +1,59 @@
+{
+  "schema_version": "engine_review_evidence_commit_v1_patch104",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_COMMIT_RECEIPT_V1_PATCH104",
+  "created_at": "2026-05-15_134428",
+  "status": "ENGINE_REVIEW_EVIDENCE_COMMIT_APPLIED",
+  "authority": {
+    "patch": "104",
+    "mode": "EVIDENCE_BASED_HUMAN_REVIEW_LEDGER_COMMIT",
+    "writes": [
+      "/home/nic/forge/memory/engine_review_evidence_commits_v1",
+      "/home/nic/forge/memory/code_library_v1/manifests/engine_review_ledger_v1.json"
+    ],
+    "human_review_ledger_write_authority": true,
+    "canonical_decision_authority": false,
+    "final_lockfile_authority": false,
+    "engine_file_write_authority": false,
+    "project_file_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "shell_execution_authority": false,
+    "chroma_write_authority": false,
+    "ingestion_write_authority": false,
+    "quarantine_authority": false,
+    "delete_authority": false,
+    "rule": "Patch 104 may update the human review ledger only from Patch 103 evidence-based queue decisions after Patch 102 cross-check verification and live evidence SHA recheck. It does not create final canonical authority or modify engine files."
+  },
+  "source_plan_path": "/home/nic/forge/memory/engine_review_evidence_commits_v1/2026-05-15_134428_engine_review_evidence_commit_plan_v1.json",
+  "source_plan_sha256": "35ba6301a1db16dfc28c795bcdc4e62dec1a7f325d7f101d013798cc8017b89b",
+  "ledger_path": "/home/nic/forge/memory/code_library_v1/manifests/engine_review_ledger_v1.json",
+  "ledger_sha256_before_apply": "f97f18e81ebdc8c4f53d1870a59d3b05fb780860fd9441f7fa3d390e3b18c504",
+  "ledger_sha256_after_apply": "2f2f8bd1b35fc1c605e6b3c682fd7e6bd2eb1edda4c9e277e08ea52ed6f47370",
+  "ledger_backup_path": "/home/nic/forge/memory/engine_review_evidence_commits_v1/2026-05-15_134428_engine_review_ledger_before_patch104_evidence_commit.json",
+  "counts": {
+    "applied": 2,
+    "warnings": 0,
+    "blockers": 0
+  },
+  "applied_rows": [
+    {
+      "engine_family": "activity_log",
+      "applied_review_status": "APPROVED",
+      "future_lockfile_eligible": true,
+      "evidence_id": "EEB-929b125c673bef05",
+      "decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-15_132314_activity_log_engine_review_queue_decision_v1.json",
+      "candidate_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/activity_log"
+    },
+    {
+      "engine_family": "admin_override_console",
+      "applied_review_status": "DEFERRED",
+      "future_lockfile_eligible": false,
+      "evidence_id": "EEB-7e1e67cf08853d05",
+      "decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-15_132442_admin_override_console_engine_review_queue_decision_v1.json",
+      "candidate_path": "/home/nic/aiweb/engines/admin_override_console"
+    }
+  ],
+  "warnings": [],
+  "blockers": [],
+  "engine_file_writes": false,
+  "final_lockfile_authority": false
+}

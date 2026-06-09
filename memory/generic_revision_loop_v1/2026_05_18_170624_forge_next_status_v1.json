@@ -1,0 +1,14 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-18T17:06:24",
+  "current_phase": "LLM loop candidate built; rerun isolated revision sandbox",
+  "latest_loop_candidate_status": "GENERIC_REVISION_CANDIDATE_READY_NO_LIVE_WRITE",
+  "latest_loop_llm_status": "GENERIC_REVISION_LOOP_LLM_READY_NO_WRITE_AUTHORITY",
+  "recommended_next_patch": "Run generic-revision-sandbox-plan latest, then generic-revision-sandbox-run latest CONFIRM_RUN_GENERIC_REVISION_SANDBOX",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "schema_version": "forge_next_status_v1_patch142",
+  "status": "ACTION_REQUIRED"
+}

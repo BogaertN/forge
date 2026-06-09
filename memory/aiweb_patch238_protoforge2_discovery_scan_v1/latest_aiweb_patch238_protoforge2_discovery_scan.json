@@ -1,0 +1,202 @@
+{
+  "blockers": [],
+  "checks": [
+    {
+      "detail": "ProtoForge2 expected roots inspected",
+      "key": "scan_completed",
+      "ok": true
+    },
+    {
+      "detail": "No startup/test/health command was executed",
+      "key": "no_protoforge2_execution",
+      "ok": true
+    },
+    {
+      "detail": "protoforge2.contract.json was not modified",
+      "key": "no_service_contract_update",
+      "ok": true
+    },
+    {
+      "detail": "Identity Vault was not mutated",
+      "key": "no_identity_vault_write",
+      "ok": true
+    },
+    {
+      "detail": "RMC memory was not written",
+      "key": "no_rmc_memory_write",
+      "ok": true
+    },
+    {
+      "detail": "No agent/long-term/private/shared memory was written",
+      "key": "no_agent_memory_write",
+      "ok": true
+    },
+    {
+      "detail": "No private memory was exposed",
+      "key": "no_private_memory_exposure",
+      "ok": true
+    },
+    {
+      "detail": "Dangerous/secret-like files were listed by path only, not read",
+      "key": "no_secret_reads",
+      "ok": true
+    },
+    {
+      "detail": "No autonomous execution was granted",
+      "key": "no_autonomous_execution",
+      "ok": true
+    }
+  ],
+  "checks_passed": 9,
+  "checks_total": 9,
+  "expected_roots": [
+    "/home/nic/protoforge2",
+    "/home/nic/ProtoForge2",
+    "/home/nic/aiweb/protoforge2",
+    "/home/nic/forge/protoforge2"
+  ],
+  "generated_at_utc": "20260524_123910_UTC",
+  "name": "ProtoForge2 Discovery Scan",
+  "next_patch_guidance": {
+    "if_root_found": "Patch 239 may update /home/nic/aiweb/service_contracts/protoforge2.contract.json with discovered command candidates, still without execution.",
+    "if_root_missing": "Patch 239 should be a ProtoForge2 path registration plan or the user should provide the actual root path before contract update."
+  },
+  "ok": true,
+  "patch": "238",
+  "phase": "Phase 11 \u2014 Bring ProtoForge2 into the loop",
+  "root_found": false,
+  "roots": [
+    {
+      "commands_executed": false,
+      "dangerous_files": [],
+      "database_files": [],
+      "exists": false,
+      "file_count_scanned": 0,
+      "files_written": false,
+      "health_command_candidates": [
+        "NOT_DISCOVERED"
+      ],
+      "is_dir": false,
+      "log_files": [],
+      "root": "/home/nic/protoforge2",
+      "root_stat": {
+        "error": "[Errno 2] No such file or directory: '/home/nic/protoforge2'",
+        "exists": false
+      },
+      "runtime_files": [],
+      "scan_truncated": false,
+      "selected": false,
+      "service_contract_candidate": "/home/nic/aiweb/service_contracts/protoforge2.contract.json",
+      "startup_command_candidates": [
+        "NOT_DISCOVERED"
+      ],
+      "test_command_candidates": [
+        "NOT_DISCOVERED"
+      ]
+    },
+    {
+      "commands_executed": false,
+      "dangerous_files": [],
+      "database_files": [],
+      "exists": false,
+      "file_count_scanned": 0,
+      "files_written": false,
+      "health_command_candidates": [
+        "NOT_DISCOVERED"
+      ],
+      "is_dir": false,
+      "log_files": [],
+      "root": "/home/nic/ProtoForge2",
+      "root_stat": {
+        "error": "[Errno 2] No such file or directory: '/home/nic/ProtoForge2'",
+        "exists": false
+      },
+      "runtime_files": [],
+      "scan_truncated": false,
+      "selected": false,
+      "service_contract_candidate": "/home/nic/aiweb/service_contracts/protoforge2.contract.json",
+      "startup_command_candidates": [
+        "NOT_DISCOVERED"
+      ],
+      "test_command_candidates": [
+        "NOT_DISCOVERED"
+      ]
+    },
+    {
+      "commands_executed": false,
+      "dangerous_files": [],
+      "database_files": [],
+      "exists": false,
+      "file_count_scanned": 0,
+      "files_written": false,
+      "health_command_candidates": [
+        "NOT_DISCOVERED"
+      ],
+      "is_dir": false,
+      "log_files": [],
+      "root": "/home/nic/aiweb/protoforge2",
+      "root_stat": {
+        "error": "[Errno 2] No such file or directory: '/home/nic/aiweb/protoforge2'",
+        "exists": false
+      },
+      "runtime_files": [],
+      "scan_truncated": false,
+      "selected": false,
+      "service_contract_candidate": "/home/nic/aiweb/service_contracts/protoforge2.contract.json",
+      "startup_command_candidates": [
+        "NOT_DISCOVERED"
+      ],
+      "test_command_candidates": [
+        "NOT_DISCOVERED"
+      ]
+    },
+    {
+      "commands_executed": false,
+      "dangerous_files": [],
+      "database_files": [],
+      "exists": false,
+      "file_count_scanned": 0,
+      "files_written": false,
+      "health_command_candidates": [
+        "NOT_DISCOVERED"
+      ],
+      "is_dir": false,
+      "log_files": [],
+      "root": "/home/nic/forge/protoforge2",
+      "root_stat": {
+        "error": "[Errno 2] No such file or directory: '/home/nic/forge/protoforge2'",
+        "exists": false
+      },
+      "runtime_files": [],
+      "scan_truncated": false,
+      "selected": false,
+      "service_contract_candidate": "/home/nic/aiweb/service_contracts/protoforge2.contract.json",
+      "startup_command_candidates": [
+        "NOT_DISCOVERED"
+      ],
+      "test_command_candidates": [
+        "NOT_DISCOVERED"
+      ]
+    }
+  ],
+  "selected_root": null,
+  "service_contract_target": "/home/nic/aiweb/service_contracts/protoforge2.contract.json",
+  "verdict": "PROTOFORGE2_DISCOVERY_SCAN_NO_ROOT_FOUND",
+  "writes_performed": {
+    "agent_memory_written": false,
+    "autonomous_tool_execution_performed": false,
+    "echoforge_creation_performed": false,
+    "forge_owned_patch238_report": true,
+    "full_chat_content_written": false,
+    "identity_vault_database_written": false,
+    "long_term_memory_written": false,
+    "private_memory_written": false,
+    "protoforge2_execution_performed": false,
+    "rmc_memory_written": false,
+    "rmc_test_receipt_written": false,
+    "secret_values_read": false,
+    "secret_values_written": false,
+    "service_contract_written": false,
+    "shared_memory_written": false
+  }
+}

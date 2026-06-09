@@ -1,0 +1,293 @@
+{
+  "agent_id": "gilligan.local",
+  "blockers": [],
+  "checks": [
+    {
+      "blocker": null,
+      "detail": "/home/nic/forge/memory/aiweb_patch234_rmc_controlled_test_receipt_write_v1/latest_aiweb_patch234_rmc_controlled_test_receipt_write.json",
+      "key": "patch234_report_exists",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "parsed",
+      "key": "patch234_report_parses",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "True",
+      "key": "patch234_ok",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "RMC_TEST_RECEIPT_WRITTEN_GOVERNED_GILLIGAN",
+      "key": "patch234_expected_verdict",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "gilligan.local",
+      "key": "target_agent_gilligan",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "test_receipt",
+      "key": "write_type_test_receipt",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "test_receipt",
+      "key": "forbidden_write_type_not_used",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local",
+      "key": "namespace_path_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/receipts/handshake_test_20260524_101634_UTC.json",
+      "key": "receipt_path_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/receipts/handshake_test_20260524_101634_UTC.json",
+      "key": "receipt_under_namespace",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/receipts/handshake_test_20260524_101634_UTC.json",
+      "key": "receipt_under_receipts_dir",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "handshake_test_20260524_101634_UTC.json",
+      "key": "receipt_filename_safe",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "parsed",
+      "key": "receipt_json_parses",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "gilligan.local",
+      "key": "receipt_agent_gilligan",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "test_receipt",
+      "key": "receipt_write_type_test_receipt",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "ffaa2e2dc1ac21007e9b41873d64b92ab51370ce12a05ba87deb70c8f4f98c28",
+      "key": "receipt_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "file=ffaa2e2dc1ac21007e9b41873d64b92ab51370ce12a05ba87deb70c8f4f98c28 report=ffaa2e2dc1ac21007e9b41873d64b92ab51370ce12a05ba87deb70c8f4f98c28",
+      "key": "receipt_hash_matches_report",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "computed=ffaa2e2dc1ac21007e9b41873d64b92ab51370ce12a05ba87deb70c8f4f98c28 file=ffaa2e2dc1ac21007e9b41873d64b92ab51370ce12a05ba87deb70c8f4f98c28",
+      "key": "receipt_hash_valid",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "actual=fe6fd3034534dd0b2dbd1473247cc745536b4db6e219f7c70f5cd4f5f9dc9c90 report=fe6fd3034534dd0b2dbd1473247cc745536b4db6e219f7c70f5cd4f5f9dc9c90",
+      "key": "receipt_file_sha_matches_report",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "required minimal receipt keys",
+      "key": "receipt_has_required_minimal_fields",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "0.97",
+      "key": "receipt_echo_score_valid",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "a64cb2920d1ba753e15fef63945e88d2f30e2ae9bfb760b6eeb885e9d09908ea",
+      "key": "receipt_manifest_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "receipt_boundary_no_agent_memory",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "receipt_boundary_no_long_term_memory",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "receipt_boundary_no_private_memory",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "receipt_boundary_no_shared_memory",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "receipt_boundary_no_full_chat",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "receipt_boundary_no_secret_values",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "patch234_identity_vault_unchanged",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "patch234_agent_memory_not_written",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "patch234_shared_memory_not_written",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "patch234_full_chat_not_written",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "patch234_secret_data_not_written",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "patch234_autonomous_execution_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "state=active_governed active=True",
+      "key": "current_gilligan_profile_still_active_governed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "profile=5b4f576f57903bc8a3ab79f41214cb75667f844a7df99e7a96be09a1868373bd receipt=5b4f576f57903bc8a3ab79f41214cb75667f844a7df99e7a96be09a1868373bd",
+      "key": "current_gilligan_profile_hash_matches_receipt",
+      "ok": true
+    }
+  ],
+  "checks_passed": 36,
+  "checks_total": 36,
+  "generated_at_utc": "20260524_102555_UTC",
+  "identity_profile_state": {
+    "activation_state": "active_governed",
+    "agent_id": "gilligan.local",
+    "is_active": true,
+    "last_validated_at": "2026-05-24T01:11:03Z",
+    "profile_hash": "5b4f576f57903bc8a3ab79f41214cb75667f844a7df99e7a96be09a1868373bd"
+  },
+  "memory_pollution_snapshot": {
+    "agent_memory": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/agent_memory"
+    },
+    "long_term_memory": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/long_term_memory"
+    },
+    "memories": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/memories"
+    },
+    "memory": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/memory"
+    },
+    "private_memory": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/private_memory"
+    },
+    "shared_memory_local": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/shared_memory"
+    },
+    "shared_memory_root": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared_memory"
+    },
+    "shared_root": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared"
+    }
+  },
+  "name": "Controlled RMC Test Receipt Verification",
+  "next_expected_step": "Patch 235 \u2014 Athena activation preflight and activation planning/apply, only after Gilligan receipt verification is clean.",
+  "ok": true,
+  "patch": "234A",
+  "rmc_test_receipt_file_sha256_actual": "fe6fd3034534dd0b2dbd1473247cc745536b4db6e219f7c70f5cd4f5f9dc9c90",
+  "rmc_test_receipt_file_sha256_reported": "fe6fd3034534dd0b2dbd1473247cc745536b4db6e219f7c70f5cd4f5f9dc9c90",
+  "rmc_test_receipt_hash_computed": "ffaa2e2dc1ac21007e9b41873d64b92ab51370ce12a05ba87deb70c8f4f98c28",
+  "rmc_test_receipt_hash_reported": "ffaa2e2dc1ac21007e9b41873d64b92ab51370ce12a05ba87deb70c8f4f98c28",
+  "rmc_test_receipt_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/receipts/handshake_test_20260524_101634_UTC.json",
+  "source_patch234_report": "/home/nic/forge/memory/aiweb_patch234_rmc_controlled_test_receipt_write_v1/latest_aiweb_patch234_rmc_controlled_test_receipt_write.json",
+  "source_patch234_verdict": "RMC_TEST_RECEIPT_WRITTEN_GOVERNED_GILLIGAN",
+  "verdict": "RMC_TEST_RECEIPT_VERIFIED_GOVERNED_GILLIGAN",
+  "write_type": "test_receipt",
+  "writes_performed": {
+    "agent_memory_written": false,
+    "autonomous_tool_execution_performed": false,
+    "echoforge_creation_performed": false,
+    "forge_owned_patch234a_report": true,
+    "full_chat_content_written": false,
+    "identity_vault_database_written": false,
+    "long_term_memory_written": false,
+    "private_memory_written": false,
+    "protoforge2_execution_performed": false,
+    "rmc_test_receipt_written": false,
+    "secret_values_written": false,
+    "shared_memory_written": false
+  }
+}

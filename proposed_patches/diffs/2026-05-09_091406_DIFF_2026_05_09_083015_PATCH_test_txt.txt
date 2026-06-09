@@ -1,0 +1,21 @@
+FORGE PATCH DIFF PREVIEW
+══════════════════════════════════════════════════════════════════
+Proposal file   : /home/nic/forge/proposed_patches/2026-05-09_083015_PATCH_test_txt.txt
+Target file     : /home/nic/forge_test_project/test.txt
+Timestamp       : 2026-05-09T09:14:06
+Session ID      : forge_2026_05_09_091158
+Snippet found   : YES
+══════════════════════════════════════════════════════════════════
+
+--- a/test.txt  (current)
++++ b/test.txt  (proposed)
+@@ -1 +1 @@
+-This is a safe Forge test file.
+
++This is a AI.Web Forge test file.
+
+
+══════════════════════════════════════════════════════════════════
+No project files were modified by this diff preview.
+Apply the change manually by editing the target file.
+══════════════════════════════════════════════════════════════════

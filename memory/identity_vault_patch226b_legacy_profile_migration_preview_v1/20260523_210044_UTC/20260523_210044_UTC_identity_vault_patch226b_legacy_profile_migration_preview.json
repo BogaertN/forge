@@ -1,0 +1,270 @@
+{
+  "timestamp": "20260523_210044_UTC",
+  "verdict": "FAIL",
+  "boundary": {
+    "read_only_except_reports": true,
+    "env_secret_values_read": false,
+    "database_writes": false,
+    "profile_creation": false,
+    "identity_activation": false
+  },
+  "canonical": {
+    "path": "/home/nic/identity-vault/data/identity_vault.db",
+    "exists": true,
+    "opened_readonly": true,
+    "ok": true,
+    "tables": [
+      "agent_profiles",
+      "audit_logs",
+      "feedback_logs",
+      "session_state",
+      "sqlite_sequence",
+      "user_profiles"
+    ],
+    "row_counts": {
+      "agent_profiles": 0,
+      "audit_logs": 0,
+      "feedback_logs": 0,
+      "session_state": 0,
+      "sqlite_sequence": 0,
+      "user_profiles": 0
+    },
+    "schemas": {
+      "agent_profiles": [
+        "id",
+        "agent_id",
+        "canonical_name",
+        "role",
+        "capabilities",
+        "limits",
+        "enforcement",
+        "created_at",
+        "updated_at",
+        "version",
+        "is_active",
+        "operational_profile_json",
+        "profile_schema_version",
+        "rmc_namespace",
+        "activation_state",
+        "profile_hash",
+        "last_validated_at"
+      ],
+      "audit_logs": [
+        "id",
+        "profile_id",
+        "profile_type",
+        "action",
+        "details",
+        "timestamp",
+        "ip_address",
+        "user_agent"
+      ],
+      "feedback_logs": [
+        "id",
+        "profile_id",
+        "feedback_type",
+        "message",
+        "data",
+        "timestamp",
+        "resolved"
+      ],
+      "session_state": [
+        "id",
+        "profile_id",
+        "profile_type",
+        "session_data",
+        "created_at",
+        "updated_at",
+        "expires_at"
+      ],
+      "sqlite_sequence": [
+        "name",
+        "seq"
+      ],
+      "user_profiles": [
+        "id",
+        "user_id",
+        "canonical_name",
+        "interaction_preferences",
+        "meta_rules",
+        "session_defaults",
+        "drift_tracking",
+        "created_at",
+        "updated_at",
+        "version",
+        "is_active",
+        "operational_profile_json",
+        "profile_schema_version",
+        "profile_hash",
+        "last_validated_at"
+      ]
+    },
+    "previews": {
+      "agent_profiles": [],
+      "user_profiles": [],
+      "session_state": []
+    }
+  },
+  "legacy": {
+    "path": "/home/nic/identity-vault/vault.db",
+    "exists": true,
+    "opened_readonly": true,
+    "ok": true,
+    "tables": [
+      "feedback_logs",
+      "profiles",
+      "session_state",
+      "sqlite_sequence"
+    ],
+    "row_counts": {
+      "feedback_logs": 0,
+      "profiles": 1,
+      "session_state": 1,
+      "sqlite_sequence": 0
+    },
+    "schemas": {
+      "feedback_logs": [
+        "id",
+        "profile_id",
+        "type",
+        "data",
+        "timestamp"
+      ],
+      "profiles": [
+        "id",
+        "type",
+        "data",
+        "version",
+        "last_updated",
+        "ipfs_hash",
+        "zkp_metadata"
+      ],
+      "session_state": [
+        "id",
+        "phase",
+        "waiting_for",
+        "last_feedback",
+        "last_action",
+        "timestamp"
+      ],
+      "sqlite_sequence": [
+        "name",
+        "seq"
+      ]
+    },
+    "previews": {
+      "profiles": [
+        {
+          "id": "user789",
+          "type": "user",
+          "data": {
+            "redacted": true,
+            "length": 190,
+            "sha16": "24e4b7f1aac0798a",
+            "colon_segment_count": 3,
+            "segment_lengths": [
+              24,
+              132,
+              32
+            ],
+            "format_guess": "colon_delimited_ciphertext_or_encoded_payload",
+            "json_type": null
+          },
+          "version": "1.0.0",
+          "last_updated": "2025-09-30 09:03:50",
+          "ipfs_hash": null,
+          "zkp_metadata": null
+        }
+      ],
+      "session_state": [
+        {
+          "id": "user789",
+          "phase": null,
+          "waiting_for": null,
+          "last_feedback": null,
+          "last_action": null,
+          "timestamp": "2025-09-30 09:03:50"
+        }
+      ]
+    }
+  },
+  "templates": {
+    "user": {
+      "path": "/home/nic/identity-vault/templates/user-template.json",
+      "exists": true,
+      "json_ok": false,
+      "error": "JSONDecodeError('Expecting value: line 6 column 5 (char 96)')"
+    },
+    "agent": {
+      "path": "/home/nic/identity-vault/templates/agent-template.json",
+      "exists": true,
+      "json_ok": false,
+      "error": "JSONDecodeError('Expecting value: line 7 column 5 (char 95)')"
+    }
+  },
+  "migration_preview": {
+    "count": 1,
+    "previews": [
+      {
+        "target_table": "user_profiles",
+        "target_lookup_id": "user789",
+        "write_status": "PREVIEW_ONLY_NOT_WRITTEN",
+        "can_auto_migrate_full_profile": false,
+        "reason": "Legacy payload is encrypted/encoded or not safely readable as blueprint JSON; preserve source reference and create/verify profile manually unless app-level decryption is explicitly approved.",
+        "suggested_core_fields": {
+          "user_id": "user789",
+          "canonical_name": "",
+          "version": "1.0.0",
+          "is_active": 0,
+          "profile_schema_version": "1.0.0-blueprint"
+        },
+        "suggested_operational_profile_json_skeleton": {
+          "user_id": "user789",
+          "canonical_name": "",
+          "spirit_name": "",
+          "project_affiliations": [],
+          "identity_tags": [],
+          "version": "1.0.0",
+          "last_updated": "2025-09-30 09:03:50",
+          "project_context": {
+            "current_project": "AI.Web",
+            "phase": "",
+            "current_files": [],
+            "active_collaborators": [],
+            "subsystems": [
+              "Identity Vault",
+              "Forge",
+              "RMC"
+            ],
+            "goals": []
+          },
+          "interaction_preferences": {},
+          "meta_rules": {},
+          "session_state": {
+            "phase": "",
+            "waiting_for": "",
+            "last_feedback": "",
+            "last_action": "",
+            "timestamp": "2025-09-30 09:03:50"
+          },
+          "legacy_migration_reference": {
+            "source_database": "/home/nic/identity-vault/vault.db",
+            "source_table": "profiles",
+            "source_id": "user789",
+            "payload_format_guess": "colon_delimited_ciphertext_or_encoded_payload",
+            "payload_sha16": "24e4b7f1aac0798a"
+          }
+        }
+      }
+    ]
+  },
+  "safety": {
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "canonical_db_sha_unchanged": true,
+    "legacy_db_sha_unchanged": true,
+    "database_write_performed": false,
+    "profiles_created": false,
+    "agent_identity_activation_performed": false
+  }
+}

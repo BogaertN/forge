@@ -1,0 +1,144 @@
+{
+  "active_patch": "Patch 164 \u2014 Runtime Live Build Backup / Apply Dry Run",
+  "approval_token_status": "TEMPLATE_READY_NOT_APPROVED",
+  "authority": {
+    "apply_dry_run_authority": true,
+    "backup_plan_authority": true,
+    "engine_file_write_authority": false,
+    "forge_owned_report_write_authority": true,
+    "live_restore_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "runtime_file_write_authority": false
+  },
+  "backup_root": "/home/nic/forge/memory/forge_runtime_live_backups_v1/runtime_live_backup_failsafe_manager_DRY_RUN_ONLY",
+  "candidate": "failsafe_manager",
+  "created_at": "2026-05-19T21:29:42",
+  "current_phase": "S19J \u2014 Runtime Live Build Backup / Apply Dry Run",
+  "dry_run_counts": {
+    "engine_writes": 0,
+    "project_writes": 0,
+    "runtime_writes": 0,
+    "would_backup_existing_live_files": 0,
+    "would_copy_files": 4,
+    "would_create_parent_dirs": 4
+  },
+  "existing_live_targets": [],
+  "forbidden_in_patch_164": [
+    "write_live_runtime_files",
+    "copy_sandbox_to_runtime",
+    "create_runtime_directories_live",
+    "patch_apply",
+    "engine_write",
+    "live_restore"
+  ],
+  "gate_summary": {
+    "fail": 0,
+    "locked": 1,
+    "pass": 5,
+    "warn": 0
+  },
+  "gates": [
+    {
+      "detail": "FORGE_RUNTIME_CANDIDATE_STATIC_VERIFICATION_READY_GATE_LOCKED",
+      "id": "G01",
+      "name": "Static candidate verified",
+      "status": "PASS"
+    },
+    {
+      "detail": "FORGE_RUNTIME_LIVE_APPROVAL_PLAN_READY_GATE_LOCKED",
+      "id": "G02",
+      "name": "Approval plan exists",
+      "status": "PASS"
+    },
+    {
+      "detail": "TEMPLATE_READY_NOT_APPROVED",
+      "id": "G03",
+      "name": "Approval token is template only",
+      "status": "LOCKED"
+    },
+    {
+      "detail": "runtime_file_write_authority=False",
+      "id": "G04",
+      "name": "No live write authority in Patch 164",
+      "status": "PASS"
+    },
+    {
+      "detail": "missing_sandbox=0 planned=4",
+      "id": "G05",
+      "name": "Sandbox source files exist",
+      "status": "PASS"
+    },
+    {
+      "detail": "existing_live_files=0",
+      "id": "G06",
+      "name": "Live target conflict scan",
+      "status": "PASS"
+    }
+  ],
+  "human_approval_present": false,
+  "live_build_ready": false,
+  "missing_sandbox_sources": [],
+  "next_patch": "Patch 165 \u2014 Runtime Live Build Final Approval / Live Apply Gate",
+  "plain_english": "Patch 164 builds a backup/apply dry-run plan only. It does not create live backups, does not copy files into /home/nic/aiweb/runtime, and does not approve the live build.",
+  "planned_file_count": 4,
+  "planned_files": [
+    {
+      "live_path_exists": false,
+      "planned_backup_path": "/home/nic/forge/memory/forge_runtime_live_backups_v1/runtime_live_backup_failsafe_manager_DRY_RUN_ONLY/governance_and_safety/failsafe_manager/README.md",
+      "planned_live_path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/README.md",
+      "relative_path": "governance_and_safety/failsafe_manager/README.md",
+      "sandbox_exists": true,
+      "sandbox_path": "/home/nic/forge/memory/forge_runtime_candidate_sandboxes_v1/runtime_candidate_failsafe_manager_20260519_203910/governance_and_safety/failsafe_manager/README.md",
+      "sandbox_sha256": "d29cd08e2baab69a88baffd92b23453025ca66f7c5a34a0ceefef9ff07bec0a2",
+      "would_backup_existing_live_file": false,
+      "would_copy_sandbox_to_live": true,
+      "would_create_parent_directory": true
+    },
+    {
+      "live_path_exists": false,
+      "planned_backup_path": "/home/nic/forge/memory/forge_runtime_live_backups_v1/runtime_live_backup_failsafe_manager_DRY_RUN_ONLY/governance_and_safety/failsafe_manager/runtime_manifest.json",
+      "planned_live_path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/runtime_manifest.json",
+      "relative_path": "governance_and_safety/failsafe_manager/runtime_manifest.json",
+      "sandbox_exists": true,
+      "sandbox_path": "/home/nic/forge/memory/forge_runtime_candidate_sandboxes_v1/runtime_candidate_failsafe_manager_20260519_203910/governance_and_safety/failsafe_manager/runtime_manifest.json",
+      "sandbox_sha256": "5f83dfae9b02205ea410319f10c12f5e8a53fe194ef07d02b995b16b0dacd659",
+      "would_backup_existing_live_file": false,
+      "would_copy_sandbox_to_live": true,
+      "would_create_parent_directory": true
+    },
+    {
+      "live_path_exists": false,
+      "planned_backup_path": "/home/nic/forge/memory/forge_runtime_live_backups_v1/runtime_live_backup_failsafe_manager_DRY_RUN_ONLY/governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py",
+      "planned_live_path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py",
+      "relative_path": "governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py",
+      "sandbox_exists": true,
+      "sandbox_path": "/home/nic/forge/memory/forge_runtime_candidate_sandboxes_v1/runtime_candidate_failsafe_manager_20260519_203910/governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py",
+      "sandbox_sha256": "3690cf4100c26e5ce686b36f652aff84571aab352cfb04ee79bf200bd533bfdc",
+      "would_backup_existing_live_file": false,
+      "would_copy_sandbox_to_live": true,
+      "would_create_parent_directory": true
+    },
+    {
+      "live_path_exists": false,
+      "planned_backup_path": "/home/nic/forge/memory/forge_runtime_live_backups_v1/runtime_live_backup_failsafe_manager_DRY_RUN_ONLY/governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py",
+      "planned_live_path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py",
+      "relative_path": "governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py",
+      "sandbox_exists": true,
+      "sandbox_path": "/home/nic/forge/memory/forge_runtime_candidate_sandboxes_v1/runtime_candidate_failsafe_manager_20260519_203910/governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py",
+      "sandbox_sha256": "648f2160af0bf60e7fb592c96d1f39951ccb77feccae1c9cfb5d4ddb0b8539ce",
+      "would_backup_existing_live_file": false,
+      "would_copy_sandbox_to_live": true,
+      "would_create_parent_directory": true
+    }
+  ],
+  "planning_ready": true,
+  "problem_count": 0,
+  "problems": [],
+  "recommended_next_patch": "Patch 165 \u2014 Runtime Live Build Final Approval / Live Apply Gate",
+  "report_type": "FORGE_RUNTIME_LIVE_BACKUP_APPLY_DRY_RUN_PLAN_V1",
+  "roadmap_mutation_policy": "APPEND_ONLY",
+  "schema_version": "forge_runtime_live_backup_v1_patch164",
+  "status": "FORGE_RUNTIME_LIVE_BACKUP_APPLY_DRY_RUN_PLAN_READY_GATE_LOCKED",
+  "target_root": "/home/nic/aiweb/runtime"
+}

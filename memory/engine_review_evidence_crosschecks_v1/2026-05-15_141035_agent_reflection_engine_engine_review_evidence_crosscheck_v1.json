@@ -1,0 +1,248 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "3326826534de3f1ce537d01a8950118ad2c034860de16eb022d38434a4508a8e",
+      "excerpt_start": "# Agent Reflection Engine\n\nSimulates symbolic self-assessment by symbolic agents.\n\nReflects on recursion loop stability, symbolic charge health, and symbolic drift detection across time.\n\n",
+      "functions_sample": [
+        "Agent",
+        "Reflection",
+        "Engine",
+        "Simulates",
+        "symbolic",
+        "self",
+        "assessment",
+        "agents",
+        "Reflects",
+        "recursion",
+        "loop",
+        "stability",
+        "charge",
+        "health",
+        "and",
+        "drift",
+        "detection",
+        "across",
+        "time"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/agent_reflection_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "3326826534de3f1ce537d01a8950118ad2c034860de16eb022d38434a4508a8e",
+      "size_bytes": 188
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "e2124108c3bf4848c0b0e16ab1275f1dd083d7f3455a3245518b7d4d197266b7",
+      "excerpt_start": "{\n  \"engine\": \"Agent Reflection Engine\",\n  \"version\": \"v1\",\n  \"description\": \"Simulates symbolic agent self-assessment of recursion loop integrity and symbolic charge trends.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Agent",
+        "Reflection",
+        "Engine",
+        "version",
+        "description",
+        "Simulates",
+        "symbolic",
+        "agent",
+        "self",
+        "assessment",
+        "recursion",
+        "loop",
+        "integrity",
+        "and",
+        "charge",
+        "trends"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/agent_reflection_engine/reflection_manifest.json",
+      "relative_to_candidate": "reflection_manifest.json",
+      "sha256": "e2124108c3bf4848c0b0e16ab1275f1dd083d7f3455a3245518b7d4d197266b7",
+      "size_bytes": 178
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "2feabf3cbcde360cb6ebf6542190c61ebcf99e08cc03f0d9d44a11ec2fb3d51b",
+      "excerpt_start": "import json\nimport time\nimport random\n\nLOG_FILE = \"reflection_log.jsonl\"\n\ndef perform_self_reflection():\n    \"\"\"Simulates an agent reviewing its symbolic recursion history.\"\"\"\n    loop_integrity = random.choice([\"perfect\", \"minor drift\", \"unstable\"])\n    symbolic_charge = random.randint(30, 100)\n\n    reflection = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"loop_integrity\": loop_integrity,\n        \"symbolic_charge\": symbolic_charge\n    }\n\n    try:\n        with open(LOG_FILE, \"a\") as f:\n            f.write(json.dumps(reflection) + \"\\n\")\n        print(f\"\u2714\ufe0f Reflection event recorded: {reflection}\")\n    except Exception as e:\n        print(f\"[!] Failed to record reflection: {e}\")\n\n    return reflection\n",
+      "functions_sample": [
+        "perform_self_reflection"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time",
+        "import random"
+      ],
+      "line_count": 26,
+      "path": "/home/nic/aiweb/engines/agent_reflection_engine/reflection_core.py",
+      "relative_to_candidate": "reflection_core.py",
+      "sha256": "2feabf3cbcde360cb6ebf6542190c61ebcf99e08cc03f0d9d44a11ec2fb3d51b",
+      "size_bytes": 751
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "51597c796861770b0ad25e87537165a018540db936f9c7b06302b343ea52db5b",
+      "excerpt_start": "from reflection_core import perform_self_reflection\n\ndef test_reflection_cycle():\n    try:\n        result = perform_self_reflection()\n        assert \"loop_integrity\" in result\n        assert \"symbolic_charge\" in result\n        print(\"\u2705 Test Passed: Reflection recorded successfully.\")\n    except Exception as e:\n        print(f\"\u274c Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_reflection_cycle()\n",
+      "functions_sample": [
+        "test_reflection_cycle"
+      ],
+      "imports_sample": [
+        "from reflection_core import perform_self_reflection"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/agent_reflection_engine/test_reflection.py",
+      "relative_to_candidate": "test_reflection.py",
+      "sha256": "51597c796861770b0ad25e87537165a018540db936f9c7b06302b343ea52db5b",
+      "size_bytes": 409
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/agent_reflection_engine",
+  "created_at": "2026-05-15_141035",
+  "crosscheck_id": "ERE-agent_reflection_engine-2026-05-15_141035",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Agent",
+      "Engine",
+      "Reflection",
+      "Reflects",
+      "Simulates",
+      "across",
+      "agent",
+      "agents",
+      "and",
+      "assessment",
+      "charge",
+      "description",
+      "detection",
+      "drift",
+      "engine",
+      "health",
+      "integrity",
+      "loop",
+      "perform_self_reflection",
+      "recursion"
+    ],
+    "imports_sample": [
+      "from reflection_core import perform_self_reflection",
+      "import json",
+      "import random",
+      "import time"
+    ],
+    "likely_system_role": "agent_kernel",
+    "plain_english_purpose": "`agent_reflection_engine` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "Inferred from engine family keyword `agent` plus bound code evidence.",
+    "source_excerpt_samples": [
+      "# Agent Reflection Engine ",
+      "{   \"engine\": \"Agent Reflection Engine\",",
+      "import json import time",
+      "from reflection_core import perform_self_reflection "
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_141010_agent_reflection_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "1890fbc1903185a0612b72c3388afc2c17d5c98756a998a4fad2d0b2070419f3",
+  "engine_family": "agent_reflection_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_agent_reflection_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "88003317072045511631fd3e7e175f9f36759608d1ef0a1d2a4958b35d6830d4",
+  "evidence_id": "EEB-efe9b78ceabc9853",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "README.md",
+      "reflection_manifest.json",
+      "reflection_core.py",
+      "test_reflection.py"
+    ],
+    "functions_mentioned": [
+      "Agent",
+      "Reflection",
+      "Engine",
+      "symbolic",
+      "self",
+      "assessment",
+      "agents",
+      "recursion",
+      "loop",
+      "stability",
+      "charge",
+      "health",
+      "and",
+      "drift",
+      "detection",
+      "time",
+      "engine",
+      "agent",
+      "integrity",
+      "trends"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "import time",
+      "import random",
+      "from reflection_core import perform_self_reflection"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 25.654,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "61eb6e55751f4d69c592b43d091f034768b8c65625db11c52c08c0dc71152ef9",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo simulate symbolic agents' self-assessment of recursion loop stability, symbolic charge health, and drift detection over time.  \n\nLikely System Role:  \nA component for enabling symbolic agents to monitor and evaluate their own operational integrity and resource health.  \n\nEvidence Used:  \n- README.md describes the engine's purpose and key functions (self-assessment, recursion loop stability, charge health, drift detection).  \n- reflection_manifest.json confirms the simulation of symbolic agent self-assessment for recursion loop integrity and charge trends.  \n- reflection_core.py implements the core logic for generating reflection logs with randomized loop integrity and symbolic charge metrics.  \n- test_reflection.py validates basic functionality by checking log entry structure.  \n\nRisks / Uncertainties:  \n- Reliance on random values for loop integrity and charge may not reflect real-world patterns.  \n- Logging depends on file I/O, which could introduce reliability risks.  \n- Test coverage is minimal and does not address edge cases or integration with external systems.  \n\nRecommendation Draft:  \nApprove the engine's conceptual design but recommend enhancing the simulation with real data sources, improving error handling for logging, and expanding test cases to ensure robustness.  \n\nSuggested Nic Action:  \nApprove the review with the caveat that further testing and integration are required before deployment. Verify the logging mechanism's reliability and confirm alignment with broader system requirements."
+  },
+  "llm_sections": {
+    "evidence_used": "- README.md describes the engine's purpose and key functions (self-assessment, recursion loop stability, charge health, drift detection).  \n- reflection_manifest.json confirms the simulation of symbolic agent self-assessment for recursion loop integrity and charge trends.  \n- reflection_core.py implements the core logic for generating reflection logs with randomized loop integrity and symbolic charge metrics.  \n- test_reflection.py validates basic functionality by checking log entry structure.",
+    "likely_system_role": "A component for enabling symbolic agents to monitor and evaluate their own operational integrity and resource health.",
+    "plain_english_purpose": "To simulate symbolic agents' self-assessment of recursion loop stability, symbolic charge health, and drift detection over time.",
+    "recommendation_draft": "Approve the engine's conceptual design but recommend enhancing the simulation with real data sources, improving error handling for logging, and expanding test cases to ensure robustness.",
+    "risks_uncertainties": "- Reliance on random values for loop integrity and charge may not reflect real-world patterns.  \n- Logging depends on file I/O, which could introduce reliability risks.  \n- Test coverage is minimal and does not address edge cases or integration with external systems.",
+    "suggested_nic_action": "Approve the review with the caveat that further testing and integration are required before deployment. Verify the logging mechanism's reliability and confirm alignment with broader system requirements."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo simulate symbolic agents' self-assessment of recursion loop stability, symbolic charge health, and drift detection over time.  \n\nLikely System Role:  \nA component for enabling symbolic agents to monitor and evaluate their own operational integrity and resource health.  \n\nEvidence Used:  \n- README.md describes the engine's purpose and key functions (self-assessment, recursion loop stability, charge health, drift detection).  \n- reflection_manifest.json confirms the simulation of symbolic agent self-assessment for recursion loop integrity and charge trends.  \n- reflection_core.py implements the core logic for generating reflection logs with randomized loop integrity and symbolic charge metrics.  \n- test_reflection.py validates basic functionality by checking log entry structure.  \n\nRisks / Uncertainties:  \n- Reliance on random values for loop integrity and charge may not reflect real-world patterns.  \n- Logging depends on file I/O, which could introduce reliability risks.  \n- Test coverage is minimal and does not address edge cases or integration with external systems.  \n\nRecommendation Draft:  \nApprove the engine's conceptual design but recommend enhancing the simulation with real data sources, improving error handling for logging, and expanding test cases to ensure robustness.  \n\nSuggested Nic Action:  \nApprove the review with the caveat that further testing and integration are required before deployment. Verify the logging mechanism's reliability and confirm alignment with broader system requirements.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

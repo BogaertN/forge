@@ -1,0 +1,46 @@
+{
+  "authority": {
+    "live_self_write_authority": false,
+    "mode": "PLAN_ONLY",
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "sandbox_only": true,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-17T06:43:03",
+  "next_commands": [
+    "forge-self-sandbox-apply latest",
+    "forge-self-sandbox-show report",
+    "forge-self-sandbox-export"
+  ],
+  "plain_english": "This creates a plan for a Forge-owned sandbox copy. It does not mutate live Forge files.",
+  "planned_checks": [
+    "copy_snapshot_files",
+    "py_compile_main",
+    "tool_registry_json_parse",
+    "expected_command_scan"
+  ],
+  "planned_entries": [
+    "main.py",
+    "config/tool_registry.json",
+    "config/session_scope.json",
+    "config/approved_paths.json",
+    "memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+    "memory/forge_self_updates_v1/latest_forge_self_update_proposal_v1.json",
+    "memory/forge_self_updates_v1/latest_forge_self_update_verification_v1.json",
+    "memory/llm_plans_v1/latest_llm_plan_template_v1.json",
+    "memory/forge_master_status_v1/latest_forge_master_status_report_v1.json"
+  ],
+  "problems": [],
+  "proposal_path": "/home/nic/forge/memory/forge_self_updates_v1/latest_forge_self_update_proposal_v1.json",
+  "proposal_verification_status": "FORGE_SELF_UPDATE_PROPOSAL_VERIFIED_NO_WRITE_AUTHORITY",
+  "report_type": "FORGE_SELF_SANDBOX_PLAN_V1",
+  "sandbox_id": "FSSB-2026-05-17_064303",
+  "sandbox_root": "/home/nic/forge/memory/forge_self_sandboxes_v1/sandboxes/FSSB-2026-05-17_064303",
+  "schema_version": "forge_self_update_sandbox_v1_patch122",
+  "snapshot_id": "FSS-2026-05-17_063610",
+  "snapshot_manifest_path": "/home/nic/forge/memory/forge_self_snapshots_v1/latest_forge_self_snapshot_manifest_v1.json",
+  "snapshot_verification_status": "FORGE_SELF_SNAPSHOT_VERIFIED",
+  "status": "FORGE_SELF_SANDBOX_PLAN_READY",
+  "warnings": []
+}

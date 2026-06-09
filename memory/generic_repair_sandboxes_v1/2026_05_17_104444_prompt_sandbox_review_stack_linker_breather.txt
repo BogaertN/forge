@@ -1,0 +1,43 @@
+You are the local Forge repair-review LLM. Review the sandbox execution result only.
+
+TARGET: stack_linker_breather
+TARGET_FILE: /home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py
+CANDIDATE_DIFF_PATH: /home/nic/forge/memory/generic_repair_candidates_v1/2026_05_17_102321_candidate.diff
+SANDBOX_TARGET: /home/nic/forge/memory/generic_repair_sandboxes_v1/sandbox_2026_05_17_104421_stack_linker_breather/engine_under_test/stack_linker_core.py
+
+COMPILE_RESULT:
+returncode=0
+timeout=False
+stderr:
+
+stdout:
+
+
+TEST_RESULT:
+{
+  "argv": [
+    "/home/nic/forge/.venv/bin/python3",
+    "/home/nic/forge/memory/generic_repair_sandboxes_v1/sandbox_2026_05_17_104421_stack_linker_breather/engine_under_test/test_stack_linker_core.py"
+  ],
+  "cwd": "/home/nic/forge/memory/generic_repair_sandboxes_v1/sandbox_2026_05_17_104421_stack_linker_breather/engine_under_test",
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/home/nic/forge/memory/generic_repair_sandboxes_v1/sandbox_2026_05_17_104421_stack_linker_breather/engine_under_test/test_stack_linker_core.py\", line 3, in <module>\n    from stack_linker_breather.stack_linker_core import unified_breathe_cycle\n  File \"/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py\", line 19\n    \"status\": \"\n              ^\nSyntaxError: unterminated string literal (detected at line 19)\n",
+  "started_at": "2026-05-17T10:44:44",
+  "ended_at": "2026-05-17T10:44:44",
+  "timeout": false,
+  "shell": false
+}
+
+RULES:
+- Do not propose live writes.
+- If sandbox compile and test pass, say APPROVE_SANDBOX_RESULT and list the exact live test to rerun after approval.
+- If sandbox fails, say REVISE_CANDIDATE and explain the next minimal repair needed.
+- Focus only on this target and these outputs.
+- Do not discuss Chroma, ingestion receipts, vector DBs, or unrelated source documents.
+
+Respond in this exact shape:
+RECOMMENDATION: APPROVE_SANDBOX_RESULT or REVISE_CANDIDATE or REJECT_CANDIDATE
+WHY: one or two sentences
+NEXT_TESTS: paths/commands in plain text
+NEXT_REPAIR_IF_NEEDED: plain text or NONE

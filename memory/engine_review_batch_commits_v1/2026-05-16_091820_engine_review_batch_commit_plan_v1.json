@@ -1,0 +1,1740 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_BATCH_COMMIT_GATE",
+    "patch": "107",
+    "project_file_write_authority": false,
+    "rule": "Patch 107 may commit Patch106 evidence-based batch queue decisions into engine_review_ledger_v1 only after queue decision, Patch103 approval helper, Patch102 cross-check, evidence binder, live candidate path, and live file SHA rechecks. It does not edit engine files or create final lockfile authority.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_batch_commits_v1",
+      "Forge-owned plan/receipt files only until explicit confirm token"
+    ]
+  },
+  "blockers": [],
+  "confirm_token_required": "CONFIRM_COMMIT_EVIDENCE_BATCH_QUEUE",
+  "counts": {
+    "already_committed_skipped": 15,
+    "batch_decision_rows": 23,
+    "blockers": 0,
+    "eligible_for_commit": 8,
+    "warnings": 40
+  },
+  "created_at": "2026-05-16_091820",
+  "ledger_path": "/home/nic/forge/memory/code_library_v1/manifests/engine_review_ledger_v1.json",
+  "ledger_sha256_at_plan": "837a61cf6eb47b80ebbecb40b569d07215ae27024188e8da523ec315845ed6de",
+  "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+  "rows": [
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-15_142116_agent_reflection_engine_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "86238f9d3ffd62ef913dd79cbe9dc5e4a2b3040d6cef8570fc6afa53ba9b8b7c",
+      "approval_helper_sha256_expected": "86238f9d3ffd62ef913dd79cbe9dc5e4a2b3040d6cef8570fc6afa53ba9b8b7c",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-15_142116_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "e70f5b604bbc7f8ec71dbd8ee9a78e3769ac4cd5e82a22fa373c7a9baea81efa",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/agent_reflection_engine",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_agent_reflection_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "61b670851a8db1682f0e7e09e8dd26eae156de95c9c7661f14ee17e87ef6f86b",
+      "crosscheck_sha256_expected": "61b670851a8db1682f0e7e09e8dd26eae156de95c9c7661f14ee17e87ef6f86b",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": false,
+      "engine_family": "agent_reflection_engine",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_agent_reflection_engine_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "88003317072045511631fd3e7e175f9f36759608d1ef0a1d2a4958b35d6830d4",
+      "evidence_binder_sha256_expected": "88003317072045511631fd3e7e175f9f36759608d1ef0a1d2a4958b35d6830d4",
+      "evidence_id": "EEB-efe9b78ceabc9853",
+      "future_lockfile_block_reason": null,
+      "future_lockfile_eligible_after_commit": true,
+      "ledger_current_future_lockfile_eligible": true,
+      "ledger_current_review_status": "APPROVED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "3326826534de3f1ce537d01a8950118ad2c034860de16eb022d38434a4508a8e",
+          "exists_now": true,
+          "expected_sha256": "3326826534de3f1ce537d01a8950118ad2c034860de16eb022d38434a4508a8e",
+          "path": "/home/nic/aiweb/engines/agent_reflection_engine/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "e2124108c3bf4848c0b0e16ab1275f1dd083d7f3455a3245518b7d4d197266b7",
+          "exists_now": true,
+          "expected_sha256": "e2124108c3bf4848c0b0e16ab1275f1dd083d7f3455a3245518b7d4d197266b7",
+          "path": "/home/nic/aiweb/engines/agent_reflection_engine/reflection_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "2feabf3cbcde360cb6ebf6542190c61ebcf99e08cc03f0d9d44a11ec2fb3d51b",
+          "exists_now": true,
+          "expected_sha256": "2feabf3cbcde360cb6ebf6542190c61ebcf99e08cc03f0d9d44a11ec2fb3d51b",
+          "path": "/home/nic/aiweb/engines/agent_reflection_engine/reflection_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "51597c796861770b0ad25e87537165a018540db936f9c7b06302b343ea52db5b",
+          "exists_now": true,
+          "expected_sha256": "51597c796861770b0ad25e87537165a018540db936f9c7b06302b343ea52db5b",
+          "path": "/home/nic/aiweb/engines/agent_reflection_engine/test_reflection.py",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-agent_reflection_engine-2026-05-15_142116",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-15_142116_agent_reflection_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "511af76cf6934dd0dfdefca2d01d14fba336e72f1417e0656665a2f45edc17d2",
+      "queue_decision_sha256_expected": "511af76cf6934dd0dfdefca2d01d14fba336e72f1417e0656665a2f45edc17d2",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed"
+      ]
+    },
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-15_145924_agents_stack_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "91cae716fe286ad90f1987be4d2ee5de1fa74799be23210b60ca3e160e33cfba",
+      "approval_helper_sha256_expected": "91cae716fe286ad90f1987be4d2ee5de1fa74799be23210b60ca3e160e33cfba",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-15_145924_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "1259c4a4345a78b45a7b1432c9d9c3e6051d023584167703c26e68b30c411013",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/agents_stack",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_agents_stack_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "49db6076bd1c890d6c40c7956d93b046bf14443fcfb076442590f98c6d766bbc",
+      "crosscheck_sha256_expected": "49db6076bd1c890d6c40c7956d93b046bf14443fcfb076442590f98c6d766bbc",
+      "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+      "eligible_for_commit": false,
+      "engine_family": "agents_stack",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_agents_stack_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "03de35cf02a987df13447f5dce8cabecf8143df1cdcbe6ed1e2b347e07085256",
+      "evidence_binder_sha256_expected": "03de35cf02a987df13447f5dce8cabecf8143df1cdcbe6ed1e2b347e07085256",
+      "evidence_id": "EEB-e7eb75087380b7b6",
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "future_lockfile_eligible_after_commit": false,
+      "ledger_current_future_lockfile_eligible": false,
+      "ledger_current_review_status": "DEFERRED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "2257c08e3fbe259bcb7180b23c537fe056768a43b4c50e7c2ec62206d2d9f9b1",
+          "exists_now": true,
+          "expected_sha256": "2257c08e3fbe259bcb7180b23c537fe056768a43b4c50e7c2ec62206d2d9f9b1",
+          "path": "/home/nic/aiweb/runtime_wrappers/agents_stack/stack_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "abceaff87cf1977b37157a3b29b3514525e4d77a50ee321098f24db01f5b2471",
+          "exists_now": true,
+          "expected_sha256": "abceaff87cf1977b37157a3b29b3514525e4d77a50ee321098f24db01f5b2471",
+          "path": "/home/nic/aiweb/runtime_wrappers/agents_stack/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "8a2f5e4e73d3729a0e33f24ea35affffbf7f96823d8143153d2b56358f795242",
+          "exists_now": true,
+          "expected_sha256": "8a2f5e4e73d3729a0e33f24ea35affffbf7f96823d8143153d2b56358f795242",
+          "path": "/home/nic/aiweb/runtime_wrappers/agents_stack/test_agents_stack_loader.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "13386e29279ee587051029867f0601c554e1635eb89ca061b694b2803591c95b",
+          "exists_now": true,
+          "expected_sha256": "13386e29279ee587051029867f0601c554e1635eb89ca061b694b2803591c95b",
+          "path": "/home/nic/aiweb/runtime_wrappers/agents_stack/agents_stack_loader.py",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-agents_stack-2026-05-15_145924",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-15_145924_agents_stack_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "6ad220e3e10ff4aeba1675eb8f07d1b6311991ca9e604c2f9cb99d4ae94c9937",
+      "queue_decision_sha256_expected": "6ad220e3e10ff4aeba1675eb8f07d1b6311991ca9e604c2f9cb99d4ae94c9937",
+      "target_review_status": "DEFERRED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed"
+      ]
+    },
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_083213_aiweb_os_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "c90b4c757335c44c06aa67919d63634b0bf657d423d0fb545cc4286a81946f8c",
+      "approval_helper_sha256_expected": "c90b4c757335c44c06aa67919d63634b0bf657d423d0fb545cc4286a81946f8c",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_083213_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "9dbc8726d666b86638282bf57e0ffba722797de0a0ce83b8eeff954860f4f8ce",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_aiweb_os_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "d6d98b4a327fb9a0d2cbb7190a5b7d2106b2728803029b3645fb13cd72946264",
+      "crosscheck_sha256_expected": "d6d98b4a327fb9a0d2cbb7190a5b7d2106b2728803029b3645fb13cd72946264",
+      "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+      "eligible_for_commit": false,
+      "engine_family": "aiweb_os",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_aiweb_os_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "67b457092a01cf10e174cb8f45b3497b3e7ced9a47857b00e944a69a7ac7a409",
+      "evidence_binder_sha256_expected": "67b457092a01cf10e174cb8f45b3497b3e7ced9a47857b00e944a69a7ac7a409",
+      "evidence_id": "EEB-7b29cb90ee5e540e",
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "future_lockfile_eligible_after_commit": false,
+      "ledger_current_future_lockfile_eligible": false,
+      "ledger_current_review_status": "DEFERRED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "79d66f45d8bd1daaedaa1a59d670a7190019b9e0d2d4b01c0befd382207d8960",
+          "exists_now": true,
+          "expected_sha256": "79d66f45d8bd1daaedaa1a59d670a7190019b9e0d2d4b01c0befd382207d8960",
+          "path": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1/run_system_test.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exists_now": true,
+          "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "path": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1/test_log.txt",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-aiweb_os-2026-05-16_083213",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083213_aiweb_os_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "bdf54ed5080d6683cec2c57ef3c92316e8421f0e313575d01be15a5d1f3d2fc4",
+      "queue_decision_sha256_expected": "bdf54ed5080d6683cec2c57ef3c92316e8421f0e313575d01be15a5d1f3d2fc4",
+      "target_review_status": "DEFERRED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed"
+      ]
+    },
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_083213_aiweb_os_engine_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "042cdafd37ffb8e7a75bddf69e5747e232b2ec9eb734cd9dd9ee59725398c0c5",
+      "approval_helper_sha256_expected": "042cdafd37ffb8e7a75bddf69e5747e232b2ec9eb734cd9dd9ee59725398c0c5",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_083213_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "9dbc8726d666b86638282bf57e0ffba722797de0a0ce83b8eeff954860f4f8ce",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/aiweb_os_engine",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_aiweb_os_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "82770b8d2889f4876d1cafcaaf9c71e8cc3938ef23418488f3c8a832f563f868",
+      "crosscheck_sha256_expected": "82770b8d2889f4876d1cafcaaf9c71e8cc3938ef23418488f3c8a832f563f868",
+      "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+      "eligible_for_commit": false,
+      "engine_family": "aiweb_os_engine",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_aiweb_os_engine_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "789279d7cf03d4f626d84b91f16a874bf0edbbf0c199a9cfb5b84218cc1383c1",
+      "evidence_binder_sha256_expected": "789279d7cf03d4f626d84b91f16a874bf0edbbf0c199a9cfb5b84218cc1383c1",
+      "evidence_id": "EEB-f8276d394f6ec7e0",
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "future_lockfile_eligible_after_commit": false,
+      "ledger_current_future_lockfile_eligible": false,
+      "ledger_current_review_status": "DEFERRED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "9197c8ef8a619a6f73c512b399f4237d365275ecba0ae29a2ef0c1525037b0ba",
+          "exists_now": true,
+          "expected_sha256": "9197c8ef8a619a6f73c512b399f4237d365275ecba0ae29a2ef0c1525037b0ba",
+          "path": "/home/nic/aiweb/engines/aiweb_os_engine/run.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "f438156f2aadfe66cb1d0330c3b443726633e0fc31180d8e4bbce8307fbd11e0",
+          "exists_now": true,
+          "expected_sha256": "f438156f2aadfe66cb1d0330c3b443726633e0fc31180d8e4bbce8307fbd11e0",
+          "path": "/home/nic/aiweb/engines/aiweb_os_engine/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "54aca18646b22d54dfe8914921860f7964ddf7b484e84c4d46e44fd12d799b10",
+          "exists_now": true,
+          "expected_sha256": "54aca18646b22d54dfe8914921860f7964ddf7b484e84c4d46e44fd12d799b10",
+          "path": "/home/nic/aiweb/engines/aiweb_os_engine/test_log.txt",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "741fe6fd2172e7305ddb5e2143b9b766b9d356292550efc0eaf579700e48dcdc",
+          "exists_now": true,
+          "expected_sha256": "741fe6fd2172e7305ddb5e2143b9b766b9d356292550efc0eaf579700e48dcdc",
+          "path": "/home/nic/aiweb/engines/aiweb_os_engine/status.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "4a272d9afd46ec9fda699084c4d72ac589efdec07ca04c848e8c264b8a890a39",
+          "exists_now": true,
+          "expected_sha256": "4a272d9afd46ec9fda699084c4d72ac589efdec07ca04c848e8c264b8a890a39",
+          "path": "/home/nic/aiweb/engines/aiweb_os_engine/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "a4ccbb93aceeb7d27aae7457acb05d07ddb1112cef30fca6611308f1f0dcba5c",
+          "exists_now": true,
+          "expected_sha256": "a4ccbb93aceeb7d27aae7457acb05d07ddb1112cef30fca6611308f1f0dcba5c",
+          "path": "/home/nic/aiweb/engines/aiweb_os_engine/test_aiweb_os_engine.py",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-aiweb_os_engine-2026-05-16_083213",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083213_aiweb_os_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "92429cee815bb800cd2f49ec09f2956d3575fa2c66faded465e5022caa5d5671",
+      "queue_decision_sha256_expected": "92429cee815bb800cd2f49ec09f2956d3575fa2c66faded465e5022caa5d5671",
+      "target_review_status": "DEFERRED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed"
+      ]
+    },
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_074606_ascii_interpreter_engine_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "dbaf5335c8e30033d64fb098aab7bce20d162f5483998f5abb3b4f38f66cc43d",
+      "approval_helper_sha256_expected": "dbaf5335c8e30033d64fb098aab7bce20d162f5483998f5abb3b4f38f66cc43d",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_074606_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "5a258c0a2289fc2c3d6044c68a3424a35844224c75b1deee16d6aa7f7d4fbc08",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/ascii_interpreter_engine",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_ascii_interpreter_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "0b269d39cd6e4d926372225fad3c7b525bfe51b0e36faf38b12e0d34ad0a7345",
+      "crosscheck_sha256_expected": "0b269d39cd6e4d926372225fad3c7b525bfe51b0e36faf38b12e0d34ad0a7345",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": false,
+      "engine_family": "ascii_interpreter_engine",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_ascii_interpreter_engine_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "cf3cc3c103a0e4736548c780e291c116ca7669aaf8e501ca8c1fdbbf80f4f891",
+      "evidence_binder_sha256_expected": "cf3cc3c103a0e4736548c780e291c116ca7669aaf8e501ca8c1fdbbf80f4f891",
+      "evidence_id": "EEB-2acca33f6ecda788",
+      "future_lockfile_block_reason": null,
+      "future_lockfile_eligible_after_commit": true,
+      "ledger_current_future_lockfile_eligible": true,
+      "ledger_current_review_status": "APPROVED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "ecab6b25f98342639013e60f92dd6345fc09cbabf945795260570462a867dfc0",
+          "exists_now": true,
+          "expected_sha256": "ecab6b25f98342639013e60f92dd6345fc09cbabf945795260570462a867dfc0",
+          "path": "/home/nic/aiweb/engines/ascii_interpreter_engine/ascii_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "5ce7ca3a9f2c768135a4cfb0f78e92695b4b80f21e6775caad5770a81cc6ca1c",
+          "exists_now": true,
+          "expected_sha256": "5ce7ca3a9f2c768135a4cfb0f78e92695b4b80f21e6775caad5770a81cc6ca1c",
+          "path": "/home/nic/aiweb/engines/ascii_interpreter_engine/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "0ddef67c649165cc62750aecf999417bc272288c1b94bff514aedeed69bfdadd",
+          "exists_now": true,
+          "expected_sha256": "0ddef67c649165cc62750aecf999417bc272288c1b94bff514aedeed69bfdadd",
+          "path": "/home/nic/aiweb/engines/ascii_interpreter_engine/test_ascii_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "031b426284514a757fc0ff5f218984eed571362285f25de694d00c7fbf0af9c6",
+          "exists_now": true,
+          "expected_sha256": "031b426284514a757fc0ff5f218984eed571362285f25de694d00c7fbf0af9c6",
+          "path": "/home/nic/aiweb/engines/ascii_interpreter_engine/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-ascii_interpreter_engine-2026-05-16_074606",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_074606_ascii_interpreter_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "92569e10caf36734eb71bab68e8592e830e8ede860da4ba7a2cec0ee08da086c",
+      "queue_decision_sha256_expected": "92569e10caf36734eb71bab68e8592e830e8ede860da4ba7a2cec0ee08da086c",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed"
+      ]
+    },
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_083232_athena_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "7fa6501791fd46d3c2891dea132844e27258baab8e00171a34eb79c4a613f5ca",
+      "approval_helper_sha256_expected": "7fa6501791fd46d3c2891dea132844e27258baab8e00171a34eb79c4a613f5ca",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_083232_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "7323e29884f926827fcc5252f167dd8f249ab8a1e219ed470b8e34ef7fc3a252",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/agents/athena",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_athena_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "804096bd3a839aac144eeeea13f4f3529a0225aeea6828c4125b7f8945b6c96c",
+      "crosscheck_sha256_expected": "804096bd3a839aac144eeeea13f4f3529a0225aeea6828c4125b7f8945b6c96c",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": false,
+      "engine_family": "athena",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_athena_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "1400eb349e8482a6e7ddcef78ece2b9b63f60a9a92446473d1dd3ed0d46e1728",
+      "evidence_binder_sha256_expected": "1400eb349e8482a6e7ddcef78ece2b9b63f60a9a92446473d1dd3ed0d46e1728",
+      "evidence_id": "EEB-4615d0bfc9a40a98",
+      "future_lockfile_block_reason": null,
+      "future_lockfile_eligible_after_commit": true,
+      "ledger_current_future_lockfile_eligible": true,
+      "ledger_current_review_status": "APPROVED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "6bf23c7a34f3225cbf32df0e442f57964691de7eddfd343650d9071c8645d841",
+          "exists_now": true,
+          "expected_sha256": "6bf23c7a34f3225cbf32df0e442f57964691de7eddfd343650d9071c8645d841",
+          "path": "/home/nic/aiweb/agents/athena/athena_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exists_now": true,
+          "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "path": "/home/nic/aiweb/agents/athena/test_run_agent.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "019176113b3539d64b296af56aa7d6c23ae8c07fb1e555d1e62d6680cc721bde",
+          "exists_now": true,
+          "expected_sha256": "019176113b3539d64b296af56aa7d6c23ae8c07fb1e555d1e62d6680cc721bde",
+          "path": "/home/nic/aiweb/agents/athena/run.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "cb1222ec2b399a641a974e0d269a971c4c8aa54a11688f3e984be49bcd9e5d23",
+          "exists_now": true,
+          "expected_sha256": "cb1222ec2b399a641a974e0d269a971c4c8aa54a11688f3e984be49bcd9e5d23",
+          "path": "/home/nic/aiweb/agents/athena/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "0c9f674f2f6ed8427d21a8253c0aab444df999529204f36b7ea4b79df6fefc70",
+          "exists_now": true,
+          "expected_sha256": "0c9f674f2f6ed8427d21a8253c0aab444df999529204f36b7ea4b79df6fefc70",
+          "path": "/home/nic/aiweb/agents/athena/test_athena_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "8b2c7548edeb26b6796745dea639cd0d11d68d7e52eabdea00c016db2b3a15e2",
+          "exists_now": true,
+          "expected_sha256": "8b2c7548edeb26b6796745dea639cd0d11d68d7e52eabdea00c016db2b3a15e2",
+          "path": "/home/nic/aiweb/agents/athena/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-athena-2026-05-16_083232",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083232_athena_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "db4b9e815ab9a155d3eed594ef9f1617f51c1d448cf53bbee2c129a9ee02d50a",
+      "queue_decision_sha256_expected": "db4b9e815ab9a155d3eed594ef9f1617f51c1d448cf53bbee2c129a9ee02d50a",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed"
+      ]
+    },
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_083232_athena_engine_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "3bf539ae0cb4ac6f823d6c75cf32d4e176e1d0529b639af9f645c93d075ee860",
+      "approval_helper_sha256_expected": "3bf539ae0cb4ac6f823d6c75cf32d4e176e1d0529b639af9f645c93d075ee860",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_083232_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "7323e29884f926827fcc5252f167dd8f249ab8a1e219ed470b8e34ef7fc3a252",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/athena_engine",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_athena_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "8c6afcbc4a7b7279bbb6a90fe9cf17d9f8a40f2c21b2edfccc8d92078b339fac",
+      "crosscheck_sha256_expected": "8c6afcbc4a7b7279bbb6a90fe9cf17d9f8a40f2c21b2edfccc8d92078b339fac",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": false,
+      "engine_family": "athena_engine",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_athena_engine_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "4d67df1b5da155fac99dc5df2abec6791bea485ee48361d788fef7b141136a83",
+      "evidence_binder_sha256_expected": "4d67df1b5da155fac99dc5df2abec6791bea485ee48361d788fef7b141136a83",
+      "evidence_id": "EEB-77509139334c5639",
+      "future_lockfile_block_reason": null,
+      "future_lockfile_eligible_after_commit": true,
+      "ledger_current_future_lockfile_eligible": true,
+      "ledger_current_review_status": "APPROVED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "68f7621ee8694af55e99581be690732605011e4d34521d864032fccc92425017",
+          "exists_now": true,
+          "expected_sha256": "68f7621ee8694af55e99581be690732605011e4d34521d864032fccc92425017",
+          "path": "/home/nic/aiweb/engines/athena_engine/test_athena.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "fbdde9edf3e7b84eea7a0ad19a4a04e3caeb5b74c789537451e71bab53512d1b",
+          "exists_now": true,
+          "expected_sha256": "fbdde9edf3e7b84eea7a0ad19a4a04e3caeb5b74c789537451e71bab53512d1b",
+          "path": "/home/nic/aiweb/engines/athena_engine/athena_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "9ab485c89a3acecc26ee0bdf4ffb1d3e54ba67cd48a951ac632da6381cb067ad",
+          "exists_now": true,
+          "expected_sha256": "9ab485c89a3acecc26ee0bdf4ffb1d3e54ba67cd48a951ac632da6381cb067ad",
+          "path": "/home/nic/aiweb/engines/athena_engine/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "2f3016e48cf9e779f1cbaefe995fa0871701e0ca6d96c232aa089aa647e94ee0",
+          "exists_now": true,
+          "expected_sha256": "2f3016e48cf9e779f1cbaefe995fa0871701e0ca6d96c232aa089aa647e94ee0",
+          "path": "/home/nic/aiweb/engines/athena_engine/athena_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "efec3c1d658916694b3d27f80db6775892dcbd6713f7cc6e9e04ce124afd4cf1",
+          "exists_now": true,
+          "expected_sha256": "efec3c1d658916694b3d27f80db6775892dcbd6713f7cc6e9e04ce124afd4cf1",
+          "path": "/home/nic/aiweb/engines/athena_engine/athena_state.json",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-athena_engine-2026-05-16_083232",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083232_athena_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "eb3db231a5a967c5ef9f8533c17fcca4ecb98999ada4251b521bede3ca618be5",
+      "queue_decision_sha256_expected": "eb3db231a5a967c5ef9f8533c17fcca4ecb98999ada4251b521bede3ca618be5",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed"
+      ]
+    },
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_083216_christping_validator_engine_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "907f0d31017f19afdd51e31cb0a4e57e106faae04d4f0fc60aca2ec8309ac9e7",
+      "approval_helper_sha256_expected": "907f0d31017f19afdd51e31cb0a4e57e106faae04d4f0fc60aca2ec8309ac9e7",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_083216_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "2950200cbcb170bbf99c6dfcd9d282ba24d9ff7256f97e2b02442f8cc69982e5",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/christping_validator_engine",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_christping_validator_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "47af4a378c9c50fe7baa072e49f20d8e816330a8b9116beb491ee08191aba598",
+      "crosscheck_sha256_expected": "47af4a378c9c50fe7baa072e49f20d8e816330a8b9116beb491ee08191aba598",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": false,
+      "engine_family": "christping_validator_engine",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_christping_validator_engine_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "16af162e9ab3180245040a0f2ad9bc8007cc3b9ff7a306d61ebd9a99f4d736ff",
+      "evidence_binder_sha256_expected": "16af162e9ab3180245040a0f2ad9bc8007cc3b9ff7a306d61ebd9a99f4d736ff",
+      "evidence_id": "EEB-45c0906ffe7e9875",
+      "future_lockfile_block_reason": null,
+      "future_lockfile_eligible_after_commit": true,
+      "ledger_current_future_lockfile_eligible": true,
+      "ledger_current_review_status": "APPROVED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "0723af7717778e635653d4ff726c79cd6cdf0c7592dc5058fd11f87e45c45044",
+          "exists_now": true,
+          "expected_sha256": "0723af7717778e635653d4ff726c79cd6cdf0c7592dc5058fd11f87e45c45044",
+          "path": "/home/nic/aiweb/engines/christping_validator_engine/christping_validator_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "2885e2ad960f7a599b113424c5c33b5ce62cae0622f44f3d26acce97b64d08e6",
+          "exists_now": true,
+          "expected_sha256": "2885e2ad960f7a599b113424c5c33b5ce62cae0622f44f3d26acce97b64d08e6",
+          "path": "/home/nic/aiweb/engines/christping_validator_engine/test_christping_validator_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "c3b21a5ad3aa8cf430daeeb8b48281e9b70feb983c5a0cca571f2dfbcecbf931",
+          "exists_now": true,
+          "expected_sha256": "c3b21a5ad3aa8cf430daeeb8b48281e9b70feb983c5a0cca571f2dfbcecbf931",
+          "path": "/home/nic/aiweb/engines/christping_validator_engine/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "5c00699aaaaee03ed86fcbf0f5ec8f3a6346e2e8492975cce5bb60699ae3afc5",
+          "exists_now": true,
+          "expected_sha256": "5c00699aaaaee03ed86fcbf0f5ec8f3a6346e2e8492975cce5bb60699ae3afc5",
+          "path": "/home/nic/aiweb/engines/christping_validator_engine/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "52e525b9d15de243bb85ee8eb06d5d188de52257d332fe8b26552ed2c574a751",
+          "exists_now": true,
+          "expected_sha256": "52e525b9d15de243bb85ee8eb06d5d188de52257d332fe8b26552ed2c574a751",
+          "path": "/home/nic/aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "52a21d7408e55a2aaf71111f042d42d68632b1591b8723b65583bb612ffb0f37",
+          "exists_now": true,
+          "expected_sha256": "52a21d7408e55a2aaf71111f042d42d68632b1591b8723b65583bb612ffb0f37",
+          "path": "/home/nic/aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/ping_calibrator_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "5c00699aaaaee03ed86fcbf0f5ec8f3a6346e2e8492975cce5bb60699ae3afc5",
+          "exists_now": true,
+          "expected_sha256": "5c00699aaaaee03ed86fcbf0f5ec8f3a6346e2e8492975cce5bb60699ae3afc5",
+          "path": "/home/nic/aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "01100d8b190abb8ec67a144f12f3a5f3228de57e4c8bc114f4c8af9786b38112",
+          "exists_now": true,
+          "expected_sha256": "01100d8b190abb8ec67a144f12f3a5f3228de57e4c8bc114f4c8af9786b38112",
+          "path": "/home/nic/aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/test_ping_calibrator_core.py",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-christping_validator_engine-2026-05-16_083216",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083216_christping_validator_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "9c0c829bb59bd6aeabb2d98217e84d47c5341a2802ee604d1045d792285c7d0d",
+      "queue_decision_sha256_expected": "9c0c829bb59bd6aeabb2d98217e84d47c5341a2802ee604d1045d792285c7d0d",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed"
+      ]
+    },
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_083217_cold_archive_engine_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "a55cd114ca8dcabd3f93ccd523a5c51b44d29b32147c1480fb4e2398e55f14d7",
+      "approval_helper_sha256_expected": "a55cd114ca8dcabd3f93ccd523a5c51b44d29b32147c1480fb4e2398e55f14d7",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_083216_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "2950200cbcb170bbf99c6dfcd9d282ba24d9ff7256f97e2b02442f8cc69982e5",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_cold_archive_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "43f0d96d1aa331fc4224b3552d2ba4cf27c6aa52f3087c4374bc860e867f17f2",
+      "crosscheck_sha256_expected": "43f0d96d1aa331fc4224b3552d2ba4cf27c6aa52f3087c4374bc860e867f17f2",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": false,
+      "engine_family": "cold_archive_engine",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_cold_archive_engine_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "a76cfc16fb9c09d0df58796218cfa81bbfdce8e509c70b3feb6847243e07b522",
+      "evidence_binder_sha256_expected": "a76cfc16fb9c09d0df58796218cfa81bbfdce8e509c70b3feb6847243e07b522",
+      "evidence_id": "EEB-bc75b62ef10a008d",
+      "future_lockfile_block_reason": "hold_family_requires_manual_review",
+      "future_lockfile_eligible_after_commit": false,
+      "ledger_current_future_lockfile_eligible": false,
+      "ledger_current_review_status": "APPROVED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "df016369650df3d925c48bbec027ffd48114f9ed3836a7a6b847b5a40fb7482b",
+          "exists_now": true,
+          "expected_sha256": "df016369650df3d925c48bbec027ffd48114f9ed3836a7a6b847b5a40fb7482b",
+          "path": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1/test_cold_archive.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "e48a8bbe2ca248e3c41001872b35b45f44f1b5053387df4eee0bec754110a274",
+          "exists_now": true,
+          "expected_sha256": "e48a8bbe2ca248e3c41001872b35b45f44f1b5053387df4eee0bec754110a274",
+          "path": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1/archive_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "6db5f5fe7a6cc659a5f09ecd59eeb4f970b8fd09a421639b2f4ff4877d172a7c",
+          "exists_now": true,
+          "expected_sha256": "6db5f5fe7a6cc659a5f09ecd59eeb4f970b8fd09a421639b2f4ff4877d172a7c",
+          "path": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1/run.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "979080b68ff131e7b420c39ff137178a3663389b55c491d9d6dbe1bffb0c61ba",
+          "exists_now": true,
+          "expected_sha256": "979080b68ff131e7b420c39ff137178a3663389b55c491d9d6dbe1bffb0c61ba",
+          "path": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "ba3679ce27adb3b9def23c960bf301058d952d468f5c38e817126dd2cd761b93",
+          "exists_now": true,
+          "expected_sha256": "ba3679ce27adb3b9def23c960bf301058d952d468f5c38e817126dd2cd761b93",
+          "path": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1/test_archive.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "15a756127bd46280d495149795a9d77c5f7ea5d4e2ac175e045256103b0f4199",
+          "exists_now": true,
+          "expected_sha256": "15a756127bd46280d495149795a9d77c5f7ea5d4e2ac175e045256103b0f4199",
+          "path": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "2a189905499f8d68e01106b775be3ae03aee41daaf035212ea6f98527a50f405",
+          "exists_now": true,
+          "expected_sha256": "2a189905499f8d68e01106b775be3ae03aee41daaf035212ea6f98527a50f405",
+          "path": "/home/nic/aiweb/engines/cold_archive_engine_frozen_v1/archive_state.json",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-cold_archive_engine-2026-05-16_083217",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083217_cold_archive_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "2ab725cef8616ab79ef82562558c6dad355842ce775c32a3d47081f6151c1944",
+      "queue_decision_sha256_expected": "2ab725cef8616ab79ef82562558c6dad355842ce775c32a3d47081f6151c1944",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed",
+        "engine is marked hold-family; approval will not make it future-lockfile eligible"
+      ]
+    },
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_083217_collapse_prevention_engine_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "5dd7f6d988ef5ba0aa038e47469d480927c311c2a879741899b8849fb4355c71",
+      "approval_helper_sha256_expected": "5dd7f6d988ef5ba0aa038e47469d480927c311c2a879741899b8849fb4355c71",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_083216_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "2950200cbcb170bbf99c6dfcd9d282ba24d9ff7256f97e2b02442f8cc69982e5",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/collapse_prevention_engine",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_collapse_prevention_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "662d583ae511ee68d338049db441d88471488bb7b597a87ef91de5f0a280526b",
+      "crosscheck_sha256_expected": "662d583ae511ee68d338049db441d88471488bb7b597a87ef91de5f0a280526b",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": false,
+      "engine_family": "collapse_prevention_engine",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_collapse_prevention_engine_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "e7767d465a1788c8519098ce9194218cb0efd9543128f990c0626c9a1765b230",
+      "evidence_binder_sha256_expected": "e7767d465a1788c8519098ce9194218cb0efd9543128f990c0626c9a1765b230",
+      "evidence_id": "EEB-82b276d0748f3de8",
+      "future_lockfile_block_reason": null,
+      "future_lockfile_eligible_after_commit": true,
+      "ledger_current_future_lockfile_eligible": true,
+      "ledger_current_review_status": "APPROVED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "d66665f2df98506a37658848bc0fa77a1f2d28a0ef79cc68427f9535d80d4aea",
+          "exists_now": true,
+          "expected_sha256": "d66665f2df98506a37658848bc0fa77a1f2d28a0ef79cc68427f9535d80d4aea",
+          "path": "/home/nic/aiweb/engines/collapse_prevention_engine/collapse_prevention_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "4198ad9321c59945ea8fedef30f28d96c8e423b61a74993f3e7c6349a47195f0",
+          "exists_now": true,
+          "expected_sha256": "4198ad9321c59945ea8fedef30f28d96c8e423b61a74993f3e7c6349a47195f0",
+          "path": "/home/nic/aiweb/engines/collapse_prevention_engine/test_collapse_prevention_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "d97f20764949bd95148abc64f9ada8810a3fa25d27ac558191425993517644c5",
+          "exists_now": true,
+          "expected_sha256": "d97f20764949bd95148abc64f9ada8810a3fa25d27ac558191425993517644c5",
+          "path": "/home/nic/aiweb/engines/collapse_prevention_engine/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "266e3fa79c3bc56e3f084c2d29e6d741a0aac5231aa3c57985d3db4486632634",
+          "exists_now": true,
+          "expected_sha256": "266e3fa79c3bc56e3f084c2d29e6d741a0aac5231aa3c57985d3db4486632634",
+          "path": "/home/nic/aiweb/engines/collapse_prevention_engine/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-collapse_prevention_engine-2026-05-16_083217",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083217_collapse_prevention_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "8f7a7dab4a17b1253961ce75356604d028ab0cb48968f90dc287035ba5123da8",
+      "queue_decision_sha256_expected": "8f7a7dab4a17b1253961ce75356604d028ab0cb48968f90dc287035ba5123da8",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed"
+      ]
+    },
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_083217_compute_contribution_engine_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "32d7892e7a963fd3fdbbdf623ed41a2238ef85fc04313482270f02be90f1e81b",
+      "approval_helper_sha256_expected": "32d7892e7a963fd3fdbbdf623ed41a2238ef85fc04313482270f02be90f1e81b",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_083216_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "2950200cbcb170bbf99c6dfcd9d282ba24d9ff7256f97e2b02442f8cc69982e5",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/compute_contribution_engine",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_compute_contribution_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "a10a456ee0be22da9e503244b5d2af560d9b9edf161f017c401735f9b50ca79e",
+      "crosscheck_sha256_expected": "a10a456ee0be22da9e503244b5d2af560d9b9edf161f017c401735f9b50ca79e",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": false,
+      "engine_family": "compute_contribution_engine",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_compute_contribution_engine_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "be73631e1ce112d73ed35803f24a4ad2a777c43388da38f704144ca8c347aa4a",
+      "evidence_binder_sha256_expected": "be73631e1ce112d73ed35803f24a4ad2a777c43388da38f704144ca8c347aa4a",
+      "evidence_id": "EEB-91df18441d00687d",
+      "future_lockfile_block_reason": null,
+      "future_lockfile_eligible_after_commit": true,
+      "ledger_current_future_lockfile_eligible": true,
+      "ledger_current_review_status": "APPROVED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "185e79b07913e88c334e5524814f742ea9b290f86867b1d3afcc59d1b766b14c",
+          "exists_now": true,
+          "expected_sha256": "185e79b07913e88c334e5524814f742ea9b290f86867b1d3afcc59d1b766b14c",
+          "path": "/home/nic/aiweb/engines/compute_contribution_engine/contribution_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "a3cf1fd594f1b005d1fa87970fb4b2fd76e22d8c8e1bbcf8153082fc9028ba0d",
+          "exists_now": true,
+          "expected_sha256": "a3cf1fd594f1b005d1fa87970fb4b2fd76e22d8c8e1bbcf8153082fc9028ba0d",
+          "path": "/home/nic/aiweb/engines/compute_contribution_engine/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "ac671f705530065e57ea75ebcd5015be3101414806c7e8afadc3ba9779297da7",
+          "exists_now": true,
+          "expected_sha256": "ac671f705530065e57ea75ebcd5015be3101414806c7e8afadc3ba9779297da7",
+          "path": "/home/nic/aiweb/engines/compute_contribution_engine/test_contribution.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "b0c3de7647f1c6a868b01903abf11da017a5bf2f565823e60ee55f953b8f4935",
+          "exists_now": true,
+          "expected_sha256": "b0c3de7647f1c6a868b01903abf11da017a5bf2f565823e60ee55f953b8f4935",
+          "path": "/home/nic/aiweb/engines/compute_contribution_engine/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-compute_contribution_engine-2026-05-16_083217",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083217_compute_contribution_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "51174de7225bb544e71523c0f744c2baf8fb04e68eec6d71f0014e5e58327224",
+      "queue_decision_sha256_expected": "51174de7225bb544e71523c0f744c2baf8fb04e68eec6d71f0014e5e58327224",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed"
+      ]
+    },
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_083217_confusion_checker_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "6929b0486b6eefee2a6017fa27622027126ae0cb6b6dcd7e9459702bb0690b8b",
+      "approval_helper_sha256_expected": "6929b0486b6eefee2a6017fa27622027126ae0cb6b6dcd7e9459702bb0690b8b",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_083216_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "2950200cbcb170bbf99c6dfcd9d282ba24d9ff7256f97e2b02442f8cc69982e5",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/confusion_checker",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_confusion_checker_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "3d81348c89c6d60eda6405443d4e9ed06a90939898b643349d87da2f5645388c",
+      "crosscheck_sha256_expected": "3d81348c89c6d60eda6405443d4e9ed06a90939898b643349d87da2f5645388c",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": false,
+      "engine_family": "confusion_checker",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_confusion_checker_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "3166fdd52a6df46c67afe553fe567c13a3734d5df3ec350bf50851afff0fbb57",
+      "evidence_binder_sha256_expected": "3166fdd52a6df46c67afe553fe567c13a3734d5df3ec350bf50851afff0fbb57",
+      "evidence_id": "EEB-0fec7336f1df5be6",
+      "future_lockfile_block_reason": null,
+      "future_lockfile_eligible_after_commit": true,
+      "ledger_current_future_lockfile_eligible": true,
+      "ledger_current_review_status": "APPROVED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "5d98b926867612b76be6ef3510c42b69c09aabd67ce20a23a77e803bebc6a66a",
+          "exists_now": true,
+          "expected_sha256": "5d98b926867612b76be6ef3510c42b69c09aabd67ce20a23a77e803bebc6a66a",
+          "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/confusion_checker/run.py",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-confusion_checker-2026-05-16_083217",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083217_confusion_checker_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "68dd4fc4bc03766ddf16da0d6e64e9d531a1b990be3516eb9c31ca9f2e261313",
+      "queue_decision_sha256_expected": "68dd4fc4bc03766ddf16da0d6e64e9d531a1b990be3516eb9c31ca9f2e261313",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed"
+      ]
+    },
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_083217_contribution_dashboard_engine_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "f93b3b946b1c4f40b996e10c6a580d2169784717771fea575e18b3230c03cd11",
+      "approval_helper_sha256_expected": "f93b3b946b1c4f40b996e10c6a580d2169784717771fea575e18b3230c03cd11",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_083216_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "2950200cbcb170bbf99c6dfcd9d282ba24d9ff7256f97e2b02442f8cc69982e5",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/contribution_dashboard_engine",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_contribution_dashboard_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "14a744c4f7e34dfb45395a37a2a7c4d29922bc852c12175b41db5d71a3f5e47c",
+      "crosscheck_sha256_expected": "14a744c4f7e34dfb45395a37a2a7c4d29922bc852c12175b41db5d71a3f5e47c",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": false,
+      "engine_family": "contribution_dashboard_engine",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_contribution_dashboard_engine_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "6486643ffc1d2df2f376fe9841c2fd1230b94096fd7fe4cd9e3bfa5f5996bb03",
+      "evidence_binder_sha256_expected": "6486643ffc1d2df2f376fe9841c2fd1230b94096fd7fe4cd9e3bfa5f5996bb03",
+      "evidence_id": "EEB-505effd8a0bf2be3",
+      "future_lockfile_block_reason": null,
+      "future_lockfile_eligible_after_commit": true,
+      "ledger_current_future_lockfile_eligible": true,
+      "ledger_current_review_status": "APPROVED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "9cdadc600cb2a84a4c928da8375db9fae0726565394db3e245bb448dd9f21066",
+          "exists_now": true,
+          "expected_sha256": "9cdadc600cb2a84a4c928da8375db9fae0726565394db3e245bb448dd9f21066",
+          "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/dashboard_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "788e3f47075e55c3ac20ec09c758a9f1b27b87ef50c7b270d11731789005d1bd",
+          "exists_now": true,
+          "expected_sha256": "788e3f47075e55c3ac20ec09c758a9f1b27b87ef50c7b270d11731789005d1bd",
+          "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/test_contribution_dashboard.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "604aa8576157225f44dc708d89e73a40767823e765be970cd5d3757be9ffab8a",
+          "exists_now": true,
+          "expected_sha256": "604aa8576157225f44dc708d89e73a40767823e765be970cd5d3757be9ffab8a",
+          "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "00a3ddfaa314ef9ffc1d4153dde548312bbf3b513bd0d68aa05cbc71663aff44",
+          "exists_now": true,
+          "expected_sha256": "00a3ddfaa314ef9ffc1d4153dde548312bbf3b513bd0d68aa05cbc71663aff44",
+          "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/dashboard_output.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "7320ae4d759c466b26ce4b4fb2ab0d52641678033e5343e37f83602d4ecb099e",
+          "exists_now": true,
+          "expected_sha256": "7320ae4d759c466b26ce4b4fb2ab0d52641678033e5343e37f83602d4ecb099e",
+          "path": "/home/nic/aiweb/engines/contribution_dashboard_engine/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-contribution_dashboard_engine-2026-05-16_083217",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_083217_contribution_dashboard_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "19792e534db6257bdfae28e13ab789092252f72ab87208562529897ab487fb30",
+      "queue_decision_sha256_expected": "19792e534db6257bdfae28e13ab789092252f72ab87208562529897ab487fb30",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed"
+      ]
+    },
+    {
+      "already_committed": false,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090413_contribution_ledger_stack_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "bb9a338c4342409577290265a95b31c6dde3c2907b8d1124a1bdb05909b5bb60",
+      "approval_helper_sha256_expected": "bb9a338c4342409577290265a95b31c6dde3c2907b8d1124a1bdb05909b5bb60",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_090413_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "4cc2c3abdcfb3b178e10e31a6719533ddc91147bdcc71f0298d79dad6dcfb479",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_contribution_ledger_stack_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "ddf9fd81072bbf7e407e01932477fae979a9c032c891980c3ff70c65e3c64ea8",
+      "crosscheck_sha256_expected": "ddf9fd81072bbf7e407e01932477fae979a9c032c891980c3ff70c65e3c64ea8",
+      "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+      "eligible_for_commit": true,
+      "engine_family": "contribution_ledger_stack",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_contribution_ledger_stack_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "64387a06c3856d7819118fa391d1117e2e7ffc1dbb6b6f5cfe08fa531138fb3f",
+      "evidence_binder_sha256_expected": "64387a06c3856d7819118fa391d1117e2e7ffc1dbb6b6f5cfe08fa531138fb3f",
+      "evidence_id": "EEB-e30ad0b50c5c03dd",
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "future_lockfile_eligible_after_commit": false,
+      "ledger_current_future_lockfile_eligible": false,
+      "ledger_current_review_status": "PENDING_REVIEW",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "dce4ec89c79a9c416b992ffd4fb42e6d436054fa9fdde6095613ab103b93375e",
+          "exists_now": true,
+          "expected_sha256": "dce4ec89c79a9c416b992ffd4fb42e6d436054fa9fdde6095613ab103b93375e",
+          "path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack/contribution_ledger_stack_loader.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "edf4f0140c04b3774b0fe54ac5fdfe2794064cb6992f19ac0d533d0d159900bd",
+          "exists_now": true,
+          "expected_sha256": "edf4f0140c04b3774b0fe54ac5fdfe2794064cb6992f19ac0d533d0d159900bd",
+          "path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack/stack_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "bcb5e9a552a2b3e558058740e791bc584cb715ca949094d49e83895ba73d7e01",
+          "exists_now": true,
+          "expected_sha256": "bcb5e9a552a2b3e558058740e791bc584cb715ca949094d49e83895ba73d7e01",
+          "path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "9c27a994e5a063f9830c68e6156277c6a113a70b14bd09b5b30f3b5b4243ce63",
+          "exists_now": true,
+          "expected_sha256": "9c27a994e5a063f9830c68e6156277c6a113a70b14bd09b5b30f3b5b4243ce63",
+          "path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack/user_registry.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "a09fcf4416e91d38f8027f63e380a6ea8d114fced14b9f15791a349ecaa48956",
+          "exists_now": true,
+          "expected_sha256": "a09fcf4416e91d38f8027f63e380a6ea8d114fced14b9f15791a349ecaa48956",
+          "path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack/test_contribution_ledger_stack_loader.py",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-contribution_ledger_stack-2026-05-16_090413",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090413_contribution_ledger_stack_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "7205844aa4dc18c8cb10815c19a1c86afa845589ef281ac56bb681111b0d14a3",
+      "queue_decision_sha256_expected": "7205844aa4dc18c8cb10815c19a1c86afa845589ef281ac56bb681111b0d14a3",
+      "target_review_status": "DEFERRED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090418_control_panel_ui_engine_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "62666f7be529143219df4e123464f989d99ed036607c90de9d034dbe84e5b777",
+      "approval_helper_sha256_expected": "62666f7be529143219df4e123464f989d99ed036607c90de9d034dbe84e5b777",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_090418_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "ce2acd43e07637852b02da089622048b37b2410d9e1c66bed32ff11cf676c7c4",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_control_panel_ui_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "3ae4f1a98f14d8e21063cd7b0fdfab8a5d5e4c6f6cc94ac9c0c667edfb524d7d",
+      "crosscheck_sha256_expected": "3ae4f1a98f14d8e21063cd7b0fdfab8a5d5e4c6f6cc94ac9c0c667edfb524d7d",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": false,
+      "engine_family": "control_panel_ui_engine",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_control_panel_ui_engine_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "279088d763332f93cc592d805e73d73c3861150448d184efe0fb99663808bdd4",
+      "evidence_binder_sha256_expected": "279088d763332f93cc592d805e73d73c3861150448d184efe0fb99663808bdd4",
+      "evidence_id": "EEB-fd254ee2e030c2ee",
+      "future_lockfile_block_reason": null,
+      "future_lockfile_eligible_after_commit": true,
+      "ledger_current_future_lockfile_eligible": true,
+      "ledger_current_review_status": "APPROVED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exists_now": true,
+          "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/test_ui_render.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "4033b1db3336a3205cfe959a83c9defb5ab6f2e3f05740364de3457005104394",
+          "exists_now": true,
+          "expected_sha256": "4033b1db3336a3205cfe959a83c9defb5ab6f2e3f05740364de3457005104394",
+          "path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "cad8693a417c54c7c2b4cd7da16e424a8f9fd94a40ff33b0a11866cd1409efe3",
+          "exists_now": true,
+          "expected_sha256": "cad8693a417c54c7c2b4cd7da16e424a8f9fd94a40ff33b0a11866cd1409efe3",
+          "path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/test_log.txt",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "081190c36f5268b4ba06d1a7b434454dc5fc5e669ed608201d327818436ea82e",
+          "exists_now": true,
+          "expected_sha256": "081190c36f5268b4ba06d1a7b434454dc5fc5e669ed608201d327818436ea82e",
+          "path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/ui_server.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "deae8001406e734b412121ab26e640aa1a58f6a7ef1783dac9fe3a370440210f",
+          "exists_now": true,
+          "expected_sha256": "deae8001406e734b412121ab26e640aa1a58f6a7ef1783dac9fe3a370440210f",
+          "path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exists_now": true,
+          "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/static/dashboard.js",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "d8ae3277f082a30a699ac01dd4fa1ef2931ae50e9fe90a7921288ebca0928ba2",
+          "exists_now": true,
+          "expected_sha256": "d8ae3277f082a30a699ac01dd4fa1ef2931ae50e9fe90a7921288ebca0928ba2",
+          "path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/static/style.css",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "b13495bb80c9ee63fb5f51b60ffc73cb733db084e6e116a839d948c39933dc04",
+          "exists_now": true,
+          "expected_sha256": "b13495bb80c9ee63fb5f51b60ffc73cb733db084e6e116a839d948c39933dc04",
+          "path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/style.css",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "d09ce3132e0dfc488b83a1e7aea655fbcbbf225278e56e7baa990a690d9fb4c6",
+          "exists_now": true,
+          "expected_sha256": "d09ce3132e0dfc488b83a1e7aea655fbcbbf225278e56e7baa990a690d9fb4c6",
+          "path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/templates/index.html",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-control_panel_ui_engine-2026-05-16_090418",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090418_control_panel_ui_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "6f9418a977cb57c008323fcdaa9ac4045e2fd4be9ce38984eb1fbf78ce9c519b",
+      "queue_decision_sha256_expected": "6f9418a977cb57c008323fcdaa9ac4045e2fd4be9ce38984eb1fbf78ce9c519b",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed"
+      ]
+    },
+    {
+      "already_committed": false,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090413_control_stack_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "39055452ed232ba850f4fa9c31a8d9d70e0da35c09d7e78db613f7b113381253",
+      "approval_helper_sha256_expected": "39055452ed232ba850f4fa9c31a8d9d70e0da35c09d7e78db613f7b113381253",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_090413_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "4cc2c3abdcfb3b178e10e31a6719533ddc91147bdcc71f0298d79dad6dcfb479",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/control_stack",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_control_stack_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "e602f5754f09d993c4ecab471ac609d33e67f3a7ed35a099ade289d9d6bf8d2f",
+      "crosscheck_sha256_expected": "e602f5754f09d993c4ecab471ac609d33e67f3a7ed35a099ade289d9d6bf8d2f",
+      "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+      "eligible_for_commit": true,
+      "engine_family": "control_stack",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_control_stack_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "511cd71e6a4413f537dd4913e0d91914e927992607a95b39769c9acb4be75b2d",
+      "evidence_binder_sha256_expected": "511cd71e6a4413f537dd4913e0d91914e927992607a95b39769c9acb4be75b2d",
+      "evidence_id": "EEB-7df4589a96005a41",
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "future_lockfile_eligible_after_commit": false,
+      "ledger_current_future_lockfile_eligible": false,
+      "ledger_current_review_status": "PENDING_REVIEW",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "08af7f7b6a0ea715a20ecc289d8f6f04f9e8b83dc4223181fd20df6f363597b6",
+          "exists_now": true,
+          "expected_sha256": "08af7f7b6a0ea715a20ecc289d8f6f04f9e8b83dc4223181fd20df6f363597b6",
+          "path": "/home/nic/aiweb/runtime_wrappers/control_stack/stack_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "8a1ddb6707e1e5e9680c22a7bdb022982367a7404f0c981f41ad5f7bd090afa4",
+          "exists_now": true,
+          "expected_sha256": "8a1ddb6707e1e5e9680c22a7bdb022982367a7404f0c981f41ad5f7bd090afa4",
+          "path": "/home/nic/aiweb/runtime_wrappers/control_stack/control_stack_loader.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "5dedb6cd29a233e54ef68be774f68ecf37322381f40d913f056b7e2d1ca557db",
+          "exists_now": true,
+          "expected_sha256": "5dedb6cd29a233e54ef68be774f68ecf37322381f40d913f056b7e2d1ca557db",
+          "path": "/home/nic/aiweb/runtime_wrappers/control_stack/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "ada57821f97f2855fd043f29788c5502eb36c17342f95078e844ee96b3a323bc",
+          "exists_now": true,
+          "expected_sha256": "ada57821f97f2855fd043f29788c5502eb36c17342f95078e844ee96b3a323bc",
+          "path": "/home/nic/aiweb/runtime_wrappers/control_stack/test_control_stack_loader.py",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-control_stack-2026-05-16_090413",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090413_control_stack_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "40438b8642a6eceae525c97c2099e4b3b22bffe96fcc16e9de62f9840bf82ba1",
+      "queue_decision_sha256_expected": "40438b8642a6eceae525c97c2099e4b3b22bffe96fcc16e9de62f9840bf82ba1",
+      "target_review_status": "DEFERRED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "already_committed": false,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090413_core_stack_breather_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "cdce2f0538e47cd2c896589b4ca64508349ebe8ac6178426fa7abed1d4c380fc",
+      "approval_helper_sha256_expected": "cdce2f0538e47cd2c896589b4ca64508349ebe8ac6178426fa7abed1d4c380fc",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_090413_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "4cc2c3abdcfb3b178e10e31a6719533ddc91147bdcc71f0298d79dad6dcfb479",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/core_stack_breather",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_core_stack_breather_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "6798fbd0c436134f0553e8ea6a6694fe08af3897dbb09b710cf2fee539cab798",
+      "crosscheck_sha256_expected": "6798fbd0c436134f0553e8ea6a6694fe08af3897dbb09b710cf2fee539cab798",
+      "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+      "eligible_for_commit": true,
+      "engine_family": "core_stack_breather",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_core_stack_breather_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "7d27f56536c1cc9f4c8da05bde28d553fe2e9bb53678f4416413751b5d6ecb5f",
+      "evidence_binder_sha256_expected": "7d27f56536c1cc9f4c8da05bde28d553fe2e9bb53678f4416413751b5d6ecb5f",
+      "evidence_id": "EEB-df535a295e2cc3a2",
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "future_lockfile_eligible_after_commit": false,
+      "ledger_current_future_lockfile_eligible": false,
+      "ledger_current_review_status": "PENDING_REVIEW",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "c2af2db4e430a1764209a9cf5c51257c5a253d562fdc10fdc521fba172cb1f42",
+          "exists_now": true,
+          "expected_sha256": "c2af2db4e430a1764209a9cf5c51257c5a253d562fdc10fdc521fba172cb1f42",
+          "path": "/home/nic/aiweb/engines/core_stack_breather/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "69d62eacf0079e5bb1cd0c8e8bbce055c9802d95ee0e3f96082d07785978c563",
+          "exists_now": true,
+          "expected_sha256": "69d62eacf0079e5bb1cd0c8e8bbce055c9802d95ee0e3f96082d07785978c563",
+          "path": "/home/nic/aiweb/engines/core_stack_breather/core_breather.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "8511b10874d2b244e4a10f62691c214d0091ad1e5d961d985c16d7b8843d73e4",
+          "exists_now": true,
+          "expected_sha256": "8511b10874d2b244e4a10f62691c214d0091ad1e5d961d985c16d7b8843d73e4",
+          "path": "/home/nic/aiweb/engines/core_stack_breather/test_core_breather.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "4d48f67fe9f4c8a671cdb7ac91fdf6be52f503b02a8ca5ac464957124ae262cc",
+          "exists_now": true,
+          "expected_sha256": "4d48f67fe9f4c8a671cdb7ac91fdf6be52f503b02a8ca5ac464957124ae262cc",
+          "path": "/home/nic/aiweb/engines/core_stack_breather/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-core_stack_breather-2026-05-16_090413",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090413_core_stack_breather_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "f01fb09479f5de7464476f8fdbfa72429377827c425561e720710922dd66e1fe",
+      "queue_decision_sha256_expected": "f01fb09479f5de7464476f8fdbfa72429377827c425561e720710922dd66e1fe",
+      "target_review_status": "DEFERRED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "already_committed": false,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090413_core_system_stack_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "9b1394a2df807b0e2bfbd9faf8fbcddfc09c16f2f76d58882c2dc0b7ce4890b8",
+      "approval_helper_sha256_expected": "9b1394a2df807b0e2bfbd9faf8fbcddfc09c16f2f76d58882c2dc0b7ce4890b8",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_090413_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "4cc2c3abdcfb3b178e10e31a6719533ddc91147bdcc71f0298d79dad6dcfb479",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/core_system_stack",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_core_system_stack_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "505408be061f8ca1781651ce51deb68be740370d2f1cc8218ec80ae19db53122",
+      "crosscheck_sha256_expected": "505408be061f8ca1781651ce51deb68be740370d2f1cc8218ec80ae19db53122",
+      "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+      "eligible_for_commit": true,
+      "engine_family": "core_system_stack",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_core_system_stack_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "47570e3f7445fd4a90f1c66c15c6005225d12170377860ce89da8d9143c9d72f",
+      "evidence_binder_sha256_expected": "47570e3f7445fd4a90f1c66c15c6005225d12170377860ce89da8d9143c9d72f",
+      "evidence_id": "EEB-3bf3f922354da81e",
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "future_lockfile_eligible_after_commit": false,
+      "ledger_current_future_lockfile_eligible": false,
+      "ledger_current_review_status": "PENDING_REVIEW",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "9e623cc8b7925e52a6df757c9db797398003b312dda9579fb60b53bf66ce4654",
+          "exists_now": true,
+          "expected_sha256": "9e623cc8b7925e52a6df757c9db797398003b312dda9579fb60b53bf66ce4654",
+          "path": "/home/nic/aiweb/runtime_wrappers/core_system_stack/stack_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "30e882e4e523c036ac1103422e1fd9df086e801ddb5f8667dab76ba2159890dc",
+          "exists_now": true,
+          "expected_sha256": "30e882e4e523c036ac1103422e1fd9df086e801ddb5f8667dab76ba2159890dc",
+          "path": "/home/nic/aiweb/runtime_wrappers/core_system_stack/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "5827adc9e62b3f237bf33abfeccd227ac8c7910862da3007b0676908e55cbae4",
+          "exists_now": true,
+          "expected_sha256": "5827adc9e62b3f237bf33abfeccd227ac8c7910862da3007b0676908e55cbae4",
+          "path": "/home/nic/aiweb/runtime_wrappers/core_system_stack/core_system_stack_loader.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "818e0dabe41499d889c7c96d88cba7aeb0ef23e877caa0df1e7719d24f6a665b",
+          "exists_now": true,
+          "expected_sha256": "818e0dabe41499d889c7c96d88cba7aeb0ef23e877caa0df1e7719d24f6a665b",
+          "path": "/home/nic/aiweb/runtime_wrappers/core_system_stack/test_core_system_stack_loader.py",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-core_system_stack-2026-05-16_090413",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090413_core_system_stack_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "95df83dde6907ce7580dd7578e8208c96e875cf8265b80dd5d1dbfb786b9b430",
+      "queue_decision_sha256_expected": "95df83dde6907ce7580dd7578e8208c96e875cf8265b80dd5d1dbfb786b9b430",
+      "target_review_status": "DEFERRED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "already_committed": false,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090418_document_output_formatter_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "5c0eb2c2633258f2fd26fe7a6555829c5868546e8c48825d3fa49a49d3052a00",
+      "approval_helper_sha256_expected": "5c0eb2c2633258f2fd26fe7a6555829c5868546e8c48825d3fa49a49d3052a00",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_090418_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "ce2acd43e07637852b02da089622048b37b2410d9e1c66bed32ff11cf676c7c4",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/document_output_formatter",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_document_output_formatter_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "d559b9876e15a2cafa2a6d6436c53d34e3a0fad4bce333f888b7ef9c612b833a",
+      "crosscheck_sha256_expected": "d559b9876e15a2cafa2a6d6436c53d34e3a0fad4bce333f888b7ef9c612b833a",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": true,
+      "engine_family": "document_output_formatter",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_document_output_formatter_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "e990f451282bc565dd86d246a447579f73e87e30d5a4d6a83266ddeff59816de",
+      "evidence_binder_sha256_expected": "e990f451282bc565dd86d246a447579f73e87e30d5a4d6a83266ddeff59816de",
+      "evidence_id": "EEB-73405632cfb6984f",
+      "future_lockfile_block_reason": null,
+      "future_lockfile_eligible_after_commit": true,
+      "ledger_current_future_lockfile_eligible": false,
+      "ledger_current_review_status": "PENDING_REVIEW",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "611b4b7ac445bc687c4aedf271a9b12e48dd42bc3895cb6fa4e38ca3480752bb",
+          "exists_now": true,
+          "expected_sha256": "611b4b7ac445bc687c4aedf271a9b12e48dd42bc3895cb6fa4e38ca3480752bb",
+          "path": "/home/nic/aiweb/engines/document_output_formatter/formatter_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "f5a86f5e7af9035386a0ad222194492b0ee1f8731373fef61a445166a8410b48",
+          "exists_now": true,
+          "expected_sha256": "f5a86f5e7af9035386a0ad222194492b0ee1f8731373fef61a445166a8410b48",
+          "path": "/home/nic/aiweb/engines/document_output_formatter/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "b97521bc753093782c07f554aac3f6cf2654ae11feb83ec7924acd4bb7289cc0",
+          "exists_now": true,
+          "expected_sha256": "b97521bc753093782c07f554aac3f6cf2654ae11feb83ec7924acd4bb7289cc0",
+          "path": "/home/nic/aiweb/engines/document_output_formatter/formatter_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "d53279bd2989c9a918d2c6dcb81e5b09b59a91a3de83628656f41b3d950b551a",
+          "exists_now": true,
+          "expected_sha256": "d53279bd2989c9a918d2c6dcb81e5b09b59a91a3de83628656f41b3d950b551a",
+          "path": "/home/nic/aiweb/engines/document_output_formatter/test_formatter.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "exists_now": true,
+          "expected_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+          "path": "/home/nic/aiweb/engines/document_output_formatter/output_log.json",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-document_output_formatter-2026-05-16_090418",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090418_document_output_formatter_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "d78ffb75b020f390e59ea8f89cd214d8b3388b66a3d9fd323e20440527854cea",
+      "queue_decision_sha256_expected": "d78ffb75b020f390e59ea8f89cd214d8b3388b66a3d9fd323e20440527854cea",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "already_committed": false,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090413_dream_state_engine_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "b9f91cb4db048df32795e0277027fe59cbc84421d1ae9e8f0fc73ec283de5acc",
+      "approval_helper_sha256_expected": "b9f91cb4db048df32795e0277027fe59cbc84421d1ae9e8f0fc73ec283de5acc",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_090413_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "4cc2c3abdcfb3b178e10e31a6719533ddc91147bdcc71f0298d79dad6dcfb479",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/dream_state_engine",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_dream_state_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "1ed3e812f5930a7c63046d6e029493e83d181a35952715614c473526687eff7a",
+      "crosscheck_sha256_expected": "1ed3e812f5930a7c63046d6e029493e83d181a35952715614c473526687eff7a",
+      "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+      "eligible_for_commit": true,
+      "engine_family": "dream_state_engine",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_dream_state_engine_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "3923221213ebda151c358f44141098af655ef3b54ec1dfca2bad911eb112eb41",
+      "evidence_binder_sha256_expected": "3923221213ebda151c358f44141098af655ef3b54ec1dfca2bad911eb112eb41",
+      "evidence_id": "EEB-250da52af3cef833",
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "future_lockfile_eligible_after_commit": false,
+      "ledger_current_future_lockfile_eligible": false,
+      "ledger_current_review_status": "PENDING_REVIEW",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "26e7ede2b0e5498758db4b709a2a623303c56a1eb035cefdfb4a043029bda744",
+          "exists_now": true,
+          "expected_sha256": "26e7ede2b0e5498758db4b709a2a623303c56a1eb035cefdfb4a043029bda744",
+          "path": "/home/nic/aiweb/engines/dream_state_engine/dream_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "f07c26f2b6ff89ceaa03c91880cc870505e4a0bde65b151e9050776d7a8a9358",
+          "exists_now": true,
+          "expected_sha256": "f07c26f2b6ff89ceaa03c91880cc870505e4a0bde65b151e9050776d7a8a9358",
+          "path": "/home/nic/aiweb/engines/dream_state_engine/test_dream.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "691435ed6ca1593170ceae6ce3a033414034ca7002d7b7e9c9794f95b498735d",
+          "exists_now": true,
+          "expected_sha256": "691435ed6ca1593170ceae6ce3a033414034ca7002d7b7e9c9794f95b498735d",
+          "path": "/home/nic/aiweb/engines/dream_state_engine/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "93261746084bbd124ff674b45f89139ff0537232f08cd2b7fa07ac08163cc0b7",
+          "exists_now": true,
+          "expected_sha256": "93261746084bbd124ff674b45f89139ff0537232f08cd2b7fa07ac08163cc0b7",
+          "path": "/home/nic/aiweb/engines/dream_state_engine/dream_core.py",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-dream_state_engine-2026-05-16_090413",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090413_dream_state_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "c1acad98019804b299eb614c964fa21800e426338ae1b0ebdea218aba2e61d56",
+      "queue_decision_sha256_expected": "c1acad98019804b299eb614c964fa21800e426338ae1b0ebdea218aba2e61d56",
+      "target_review_status": "DEFERRED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "already_committed": false,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090418_drift_analyzer_tool_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "c538f42530963660e6f7b14e3653782d8f4bc7f1b86e28994f2b343f39e44b17",
+      "approval_helper_sha256_expected": "c538f42530963660e6f7b14e3653782d8f4bc7f1b86e28994f2b343f39e44b17",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_090418_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "ce2acd43e07637852b02da089622048b37b2410d9e1c66bed32ff11cf676c7c4",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/drift_analyzer_tool",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_drift_analyzer_tool_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "d1c50ceb3f06042ea20a8967b22ffda03ec1cbf6c016a0803c286a70e2d74903",
+      "crosscheck_sha256_expected": "d1c50ceb3f06042ea20a8967b22ffda03ec1cbf6c016a0803c286a70e2d74903",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": true,
+      "engine_family": "drift_analyzer_tool",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_drift_analyzer_tool_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "80b89dcaaa2cf1c30b39e47f9c3e8575520afd98163f6551e694200baca3245c",
+      "evidence_binder_sha256_expected": "80b89dcaaa2cf1c30b39e47f9c3e8575520afd98163f6551e694200baca3245c",
+      "evidence_id": "EEB-bed831a69b1978e5",
+      "future_lockfile_block_reason": null,
+      "future_lockfile_eligible_after_commit": true,
+      "ledger_current_future_lockfile_eligible": false,
+      "ledger_current_review_status": "PENDING_REVIEW",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "a837b9374ea8cdb353af0684c3c2c28977d236d5a447204181579474e48d4fff",
+          "exists_now": true,
+          "expected_sha256": "a837b9374ea8cdb353af0684c3c2c28977d236d5a447204181579474e48d4fff",
+          "path": "/home/nic/aiweb/engines/drift_analyzer_tool/test_drift_analyzer_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "e8dcfbcba7e115a607d93a50e16baa9e0078ca4bbc39c4e8a9c29b46908e138f",
+          "exists_now": true,
+          "expected_sha256": "e8dcfbcba7e115a607d93a50e16baa9e0078ca4bbc39c4e8a9c29b46908e138f",
+          "path": "/home/nic/aiweb/engines/drift_analyzer_tool/drift_analyzer_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "6f9b8d7f76b480ba702623f2bae141830b2a59f4ec40f2994fbc636cdb0c9bc8",
+          "exists_now": true,
+          "expected_sha256": "6f9b8d7f76b480ba702623f2bae141830b2a59f4ec40f2994fbc636cdb0c9bc8",
+          "path": "/home/nic/aiweb/engines/drift_analyzer_tool/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "709a09acdc34b606af755823780e0f212ba52452d32402d471c021d84e1827ca",
+          "exists_now": true,
+          "expected_sha256": "709a09acdc34b606af755823780e0f212ba52452d32402d471c021d84e1827ca",
+          "path": "/home/nic/aiweb/engines/drift_analyzer_tool/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-drift_analyzer_tool-2026-05-16_090418",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090418_drift_analyzer_tool_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "ff8a13b20fa65ef6c9fb822b678b704c38d67bfd881572d838690753a59afeb8",
+      "queue_decision_sha256_expected": "ff8a13b20fa65ef6c9fb822b678b704c38d67bfd881572d838690753a59afeb8",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "already_committed": false,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090418_drift_arbitration_engine_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "0b5e034ad63ffaa46835f9d65df40246fb696c41bfccba6802a8a5355c78007a",
+      "approval_helper_sha256_expected": "0b5e034ad63ffaa46835f9d65df40246fb696c41bfccba6802a8a5355c78007a",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_090418_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "ce2acd43e07637852b02da089622048b37b2410d9e1c66bed32ff11cf676c7c4",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/drift_arbitration_engine",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_drift_arbitration_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "bb28dd6f1c7cbe432c81e0a33092643f46b27cc401dd12cd5dfc0460bc9c6c59",
+      "crosscheck_sha256_expected": "bb28dd6f1c7cbe432c81e0a33092643f46b27cc401dd12cd5dfc0460bc9c6c59",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": true,
+      "engine_family": "drift_arbitration_engine",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_drift_arbitration_engine_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "1d99454a1bbd833acf5c0be92462ee27f2eaa014da056f2fae128d772a4ba708",
+      "evidence_binder_sha256_expected": "1d99454a1bbd833acf5c0be92462ee27f2eaa014da056f2fae128d772a4ba708",
+      "evidence_id": "EEB-caf4c9b35c20c0c1",
+      "future_lockfile_block_reason": "hold_family_requires_manual_review",
+      "future_lockfile_eligible_after_commit": false,
+      "ledger_current_future_lockfile_eligible": false,
+      "ledger_current_review_status": "DEFERRED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "a67169955ad4a83f78edf1b5e93e422dc07a609426189fc82e63e2e08558df3a",
+          "exists_now": true,
+          "expected_sha256": "a67169955ad4a83f78edf1b5e93e422dc07a609426189fc82e63e2e08558df3a",
+          "path": "/home/nic/aiweb/engines/drift_arbitration_engine/test_entropy_buffer_integration.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "7123d24d6b14ca2c41a59bed71428da32cd4cef067602da885277bfa854d0c7d",
+          "exists_now": true,
+          "expected_sha256": "7123d24d6b14ca2c41a59bed71428da32cd4cef067602da885277bfa854d0c7d",
+          "path": "/home/nic/aiweb/engines/drift_arbitration_engine/test_drift_arbitration.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "f10d5601c4159d52758a45754b1e87409bc4ad4fa8f8f8cd7ae32fa47f2f7331",
+          "exists_now": true,
+          "expected_sha256": "f10d5601c4159d52758a45754b1e87409bc4ad4fa8f8f8cd7ae32fa47f2f7331",
+          "path": "/home/nic/aiweb/engines/drift_arbitration_engine/run.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "102cfc27a634f6663213da910c82911085fb9964cdbc5e82c9f814553c32a3a6",
+          "exists_now": true,
+          "expected_sha256": "102cfc27a634f6663213da910c82911085fb9964cdbc5e82c9f814553c32a3a6",
+          "path": "/home/nic/aiweb/engines/drift_arbitration_engine/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "b9f7c8892f9a9dcc87e646644608e034b469f2a200cec88e01356263e6f28d1e",
+          "exists_now": true,
+          "expected_sha256": "b9f7c8892f9a9dcc87e646644608e034b469f2a200cec88e01356263e6f28d1e",
+          "path": "/home/nic/aiweb/engines/drift_arbitration_engine/test_log.txt",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "c228373bc7abefb050b77b103d9df619575de6f4fe14fe6d4c36e4bf7fbbcecc",
+          "exists_now": true,
+          "expected_sha256": "c228373bc7abefb050b77b103d9df619575de6f4fe14fe6d4c36e4bf7fbbcecc",
+          "path": "/home/nic/aiweb/engines/drift_arbitration_engine/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exists_now": true,
+          "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "path": "/home/nic/aiweb/engines/drift_arbitration_engine/__init__.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "7123d24d6b14ca2c41a59bed71428da32cd4cef067602da885277bfa854d0c7d",
+          "exists_now": true,
+          "expected_sha256": "7123d24d6b14ca2c41a59bed71428da32cd4cef067602da885277bfa854d0c7d",
+          "path": "/home/nic/aiweb/engines/drift_arbitration_engine/drift_arbitration_engine_frozen_v1/test_drift_arbitration.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "f10d5601c4159d52758a45754b1e87409bc4ad4fa8f8f8cd7ae32fa47f2f7331",
+          "exists_now": true,
+          "expected_sha256": "f10d5601c4159d52758a45754b1e87409bc4ad4fa8f8f8cd7ae32fa47f2f7331",
+          "path": "/home/nic/aiweb/engines/drift_arbitration_engine/drift_arbitration_engine_frozen_v1/run.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "102cfc27a634f6663213da910c82911085fb9964cdbc5e82c9f814553c32a3a6",
+          "exists_now": true,
+          "expected_sha256": "102cfc27a634f6663213da910c82911085fb9964cdbc5e82c9f814553c32a3a6",
+          "path": "/home/nic/aiweb/engines/drift_arbitration_engine/drift_arbitration_engine_frozen_v1/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "b9f7c8892f9a9dcc87e646644608e034b469f2a200cec88e01356263e6f28d1e",
+          "exists_now": true,
+          "expected_sha256": "b9f7c8892f9a9dcc87e646644608e034b469f2a200cec88e01356263e6f28d1e",
+          "path": "/home/nic/aiweb/engines/drift_arbitration_engine/drift_arbitration_engine_frozen_v1/test_log.txt",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exists_now": true,
+          "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "path": "/home/nic/aiweb/engines/drift_arbitration_engine/drift_arbitration_engine_frozen_v1/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-drift_arbitration_engine-2026-05-16_090418",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090418_drift_arbitration_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "8d7486f6f43d258b20889204ded959364e68b1858abe762bcbf1bd81bdb12cfb",
+      "queue_decision_sha256_expected": "8d7486f6f43d258b20889204ded959364e68b1858abe762bcbf1bd81bdb12cfb",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "engine is marked hold-family; approval will not make it future-lockfile eligible"
+      ]
+    },
+    {
+      "already_committed": true,
+      "approval_helper_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090418_drift_signature_logger_engine_review_approval_helper_v1.json",
+      "approval_helper_sha256_actual": "1705f440a54494bb4f268fc9c3372b325e44a820864bad2ba6647018ce30f95c",
+      "approval_helper_sha256_expected": "1705f440a54494bb4f268fc9c3372b325e44a820864bad2ba6647018ce30f95c",
+      "batch_approval_receipt_path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-16_090418_engine_review_batch_approval_v1.json",
+      "batch_approval_receipt_sha256": "ce2acd43e07637852b02da089622048b37b2410d9e1c66bed32ff11cf676c7c4",
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/drift_signature_logger",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_drift_signature_logger_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256_actual": "087fc5aa039b6477f62f444af1589f7727b18e3c888ae32df323863919409115",
+      "crosscheck_sha256_expected": "087fc5aa039b6477f62f444af1589f7727b18e3c888ae32df323863919409115",
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "eligible_for_commit": false,
+      "engine_family": "drift_signature_logger",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_drift_signature_logger_engine_evidence_binder.json",
+      "evidence_binder_sha256_actual": "5404f2d2b143990d825c7b7ddde003c9ebbb70414ef1bf85d405ad03e031d2e3",
+      "evidence_binder_sha256_expected": "5404f2d2b143990d825c7b7ddde003c9ebbb70414ef1bf85d405ad03e031d2e3",
+      "evidence_id": "EEB-3f7110ff52737f3a",
+      "future_lockfile_block_reason": null,
+      "future_lockfile_eligible_after_commit": true,
+      "ledger_current_future_lockfile_eligible": true,
+      "ledger_current_review_status": "APPROVED",
+      "live_evidence_file_checks": [
+        {
+          "current_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exists_now": true,
+          "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "path": "/home/nic/aiweb/engines/drift_signature_logger/test_drift_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "d8d41dac7e3777f13b56a34c7f7b84c9de5ab49b343f8a632c35d2ab86f6493c",
+          "exists_now": true,
+          "expected_sha256": "d8d41dac7e3777f13b56a34c7f7b84c9de5ab49b343f8a632c35d2ab86f6493c",
+          "path": "/home/nic/aiweb/engines/drift_signature_logger/test_drift_signature_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "a46ac52d5cb212dccb5b0a61308fc63f539c2ed27126ac039cc6e830afb020f0",
+          "exists_now": true,
+          "expected_sha256": "a46ac52d5cb212dccb5b0a61308fc63f539c2ed27126ac039cc6e830afb020f0",
+          "path": "/home/nic/aiweb/engines/drift_signature_logger/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "a6ee7f9502861f5632ed0ad9f622685c3432f11f7f2d7fa7592aa7cb96f979d1",
+          "exists_now": true,
+          "expected_sha256": "a6ee7f9502861f5632ed0ad9f622685c3432f11f7f2d7fa7592aa7cb96f979d1",
+          "path": "/home/nic/aiweb/engines/drift_signature_logger/drift_signature_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "e741a43d59dde6ea3899c476632e7d7726be1b2150ac057d04942753da7e2093",
+          "exists_now": true,
+          "expected_sha256": "e741a43d59dde6ea3899c476632e7d7726be1b2150ac057d04942753da7e2093",
+          "path": "/home/nic/aiweb/engines/drift_signature_logger/drift_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "b7735d3f1f8ad2e165762841d3bae49238e77ff9f64b75b215dfb6555459b17c",
+          "exists_now": true,
+          "expected_sha256": "b7735d3f1f8ad2e165762841d3bae49238e77ff9f64b75b215dfb6555459b17c",
+          "path": "/home/nic/aiweb/engines/drift_signature_logger/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "ce703d4977c965c5afa9a7a66923a7913cb102da9eb3a98d5e1d04ecdee1031b",
+          "exists_now": true,
+          "expected_sha256": "ce703d4977c965c5afa9a7a66923a7913cb102da9eb3a98d5e1d04ecdee1031b",
+          "path": "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/ghost_tagger_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "47b5c99c965d93814d92b26c37990179332797159461b6a160ccbbca0667c665",
+          "exists_now": true,
+          "expected_sha256": "47b5c99c965d93814d92b26c37990179332797159461b6a160ccbbca0667c665",
+          "path": "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/README.md",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "e0e43180d9329ee43e87ef61d88ff7b757fe086286c164e0fb07d3bc34318565",
+          "exists_now": true,
+          "expected_sha256": "e0e43180d9329ee43e87ef61d88ff7b757fe086286c164e0fb07d3bc34318565",
+          "path": "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/test_ghost_tagger_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "f15f806aa76de8745bbc5e427615e83617843ca19f7aa19b53b60f33c39c2a32",
+          "exists_now": true,
+          "expected_sha256": "f15f806aa76de8745bbc5e427615e83617843ca19f7aa19b53b60f33c39c2a32",
+          "path": "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/engine_manifest.json",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "ce703d4977c965c5afa9a7a66923a7913cb102da9eb3a98d5e1d04ecdee1031b",
+          "exists_now": true,
+          "expected_sha256": "ce703d4977c965c5afa9a7a66923a7913cb102da9eb3a98d5e1d04ecdee1031b",
+          "path": "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/ghost_loop_tagger/ghost_tagger_core.py",
+          "sha_matches_evidence_binder": true
+        },
+        {
+          "current_sha256": "a7661960efb7f46ffb0ffae6f9dc15257496a054294bac7dbdc18aca2d25a82f",
+          "exists_now": true,
+          "expected_sha256": "a7661960efb7f46ffb0ffae6f9dc15257496a054294bac7dbdc18aca2d25a82f",
+          "path": "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/ghost_loop_tagger/README.md",
+          "sha_matches_evidence_binder": true
+        }
+      ],
+      "queue_decision_id": "ERQ103-drift_signature_logger-2026-05-16_090418",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090418_drift_signature_logger_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256_actual": "a0790aa665a57e7aee42e492ad1da4bc21f24e1361440e3b9ecf4a1df2bce57f",
+      "queue_decision_sha256_expected": "a0790aa665a57e7aee42e492ad1da4bc21f24e1361440e3b9ecf4a1df2bce57f",
+      "target_review_status": "APPROVED",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+        "ledger already has target review status; skipping as already committed"
+      ]
+    }
+  ],
+  "schema_version": "engine_review_batch_commit_v1_patch107",
+  "source": "Patch106 batch approval queue decisions only",
+  "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY",
+  "warnings": [
+    "agent_reflection_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "agent_reflection_engine: ledger already has target review status; skipping as already committed",
+    "agents_stack: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "agents_stack: ledger already has target review status; skipping as already committed",
+    "aiweb_os: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "aiweb_os: ledger already has target review status; skipping as already committed",
+    "aiweb_os_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "aiweb_os_engine: ledger already has target review status; skipping as already committed",
+    "ascii_interpreter_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "ascii_interpreter_engine: ledger already has target review status; skipping as already committed",
+    "athena: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "athena: ledger already has target review status; skipping as already committed",
+    "athena_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "athena_engine: ledger already has target review status; skipping as already committed",
+    "christping_validator_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "christping_validator_engine: ledger already has target review status; skipping as already committed",
+    "cold_archive_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "cold_archive_engine: ledger already has target review status; skipping as already committed",
+    "cold_archive_engine: engine is marked hold-family; approval will not make it future-lockfile eligible",
+    "collapse_prevention_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "collapse_prevention_engine: ledger already has target review status; skipping as already committed",
+    "compute_contribution_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "compute_contribution_engine: ledger already has target review status; skipping as already committed",
+    "confusion_checker: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "confusion_checker: ledger already has target review status; skipping as already committed",
+    "contribution_dashboard_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "contribution_dashboard_engine: ledger already has target review status; skipping as already committed",
+    "contribution_ledger_stack: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "control_panel_ui_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "control_panel_ui_engine: ledger already has target review status; skipping as already committed",
+    "control_stack: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "core_stack_breather: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "core_system_stack: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "document_output_formatter: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "dream_state_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "drift_analyzer_tool: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "drift_arbitration_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "drift_arbitration_engine: engine is marked hold-family; approval will not make it future-lockfile eligible",
+    "drift_signature_logger: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "drift_signature_logger: ledger already has target review status; skipping as already committed"
+  ]
+}

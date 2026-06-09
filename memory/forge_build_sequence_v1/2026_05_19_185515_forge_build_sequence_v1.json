@@ -1,0 +1,348 @@
+{
+  "active_patch": "Patch 155 \u2014 AI.Web Runtime Build Readiness Map",
+  "aiweb_runtime_readiness": {
+    "latest_path": "/home/nic/forge/memory/forge_aiweb_runtime_build_readiness_v1/latest_forge_aiweb_runtime_build_readiness_v1.json",
+    "live_build_ready": false,
+    "planning_ready": true,
+    "status": "AIWEB_RUNTIME_BUILD_READINESS_MAP_READY_PLANNING_ONLY"
+  },
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "server_started": false,
+    "shell_execution_authority": false
+  },
+  "blocked_items": [],
+  "build_phase_gate": {
+    "gate_fail_count": 0,
+    "gate_pass_count": 8,
+    "gate_warn_count": 0,
+    "status": "FORGE_BUILD_PHASE_GATE_READY"
+  },
+  "build_sequence": [
+    {
+      "id": "S01",
+      "purpose": "Initial patch/audit/exact-read foundations.",
+      "status": "DONE",
+      "title": "Patch law, audit, and exact truth"
+    },
+    {
+      "id": "S02",
+      "purpose": "Corpus intake, source authority, and context memory foundations.",
+      "status": "DONE",
+      "title": "Corpus and source authority foundations"
+    },
+    {
+      "id": "S03",
+      "purpose": "Code index, symbol map, engine inventory, and runtime role mapping.",
+      "status": "DONE",
+      "title": "Codebase index and symbolic runtime map"
+    },
+    {
+      "id": "S04",
+      "purpose": "Sandbox/test safety layers and safe canonical test execution.",
+      "status": "DONE",
+      "title": "Sandbox and safe test harness"
+    },
+    {
+      "id": "S05",
+      "purpose": "Human-reviewed canonical lockfile and deferred/excluded authority.",
+      "status": "DONE",
+      "title": "Canonical engine authority"
+    },
+    {
+      "id": "S06",
+      "purpose": "Canonical relationships, neighbors, impact map, and risk surfaces.",
+      "status": "DONE",
+      "title": "Relationship and impact intelligence"
+    },
+    {
+      "id": "S07",
+      "purpose": "Read-only status API and dashboard surfaces.",
+      "status": "DONE",
+      "title": "Status API and read-only dashboard"
+    },
+    {
+      "id": "S08",
+      "purpose": "Mode registry, check-only matrix, and permission visibility.",
+      "status": "DONE",
+      "title": "Mode registry and permission matrix"
+    },
+    {
+      "id": "S09",
+      "purpose": "Repair roadmap away from stale single-task routing.",
+      "status": "DONE",
+      "title": "Roadmap V2 realignment"
+    },
+    {
+      "id": "S10",
+      "purpose": "Create build sequence brain without replacing the historical roadmap.",
+      "status": "DONE",
+      "title": "Roadmap-Grounded Build Sequencer"
+    },
+    {
+      "id": "S11",
+      "purpose": "Keep deferred engines visible without blocking the main path.",
+      "status": "DONE",
+      "title": "Deferred Engine Repair Queue"
+    },
+    {
+      "id": "S12",
+      "purpose": "Check build phase readiness from verified reports.",
+      "status": "DONE",
+      "title": "Build Phase Gate Checker"
+    },
+    {
+      "id": "S13",
+      "purpose": "Expose roadmap/deferred/gate status to dashboard surfaces.",
+      "status": "DONE",
+      "title": "Dashboard Roadmap Panel"
+    },
+    {
+      "id": "S14",
+      "purpose": "Strengthen source-authority binder without claiming fake final authority.",
+      "status": "DONE",
+      "title": "Source Authority Runtime Binder Hardening"
+    },
+    {
+      "id": "S15",
+      "purpose": "Read-only LLM patch proposal structure with verified fields.",
+      "status": "DONE",
+      "title": "LLM Patch Proposal v2"
+    },
+    {
+      "id": "S16",
+      "purpose": "Create read-only live-apply go/no-go gate; no write authority.",
+      "status": "DONE",
+      "title": "Live Apply Eligibility Gate v2"
+    },
+    {
+      "id": "S17",
+      "purpose": "Parent roadmap stage for snapshot planning, creation, shadow replay, and forensic diff.",
+      "status": "DONE",
+      "title": "Snapshot and forensic replay expansion"
+    },
+    {
+      "id": "S18",
+      "purpose": "Future operator-facing dashboard expansion after snapshot foundations.",
+      "status": "DONE",
+      "title": "Dashboard v2 / operator control panel"
+    },
+    {
+      "id": "S19",
+      "purpose": "Use Forge to build AI.Web runtime modules after gates are mature.",
+      "status": "ACTIVE",
+      "title": "AI.Web runtime build through Forge"
+    },
+    {
+      "id": "S20",
+      "purpose": "Package stable Forge with install, recovery, audit, and release artifacts.",
+      "status": "FUTURE",
+      "title": "Freeze, release, and recovery package"
+    },
+    {
+      "id": "S17A",
+      "purpose": "Patch 151 defines the snapshot and forensic replay plan. It creates no snapshot and restores nothing.",
+      "status": "DONE",
+      "title": "Snapshot / Forensic Replay Plan"
+    },
+    {
+      "id": "S17B",
+      "purpose": "Patch 152 should create Forge-owned snapshot artifacts and verify hashes.",
+      "status": "DONE",
+      "title": "Snapshot Create / Verify"
+    },
+    {
+      "id": "S17C",
+      "purpose": "Future patch should rehearse restore into a shadow directory and produce forensic diff evidence.",
+      "status": "DONE",
+      "title": "Shadow Restore / Forensic Diff"
+    },
+    {
+      "id": "S18A",
+      "purpose": "Create read-only operator gauges that combine roadmap, gates, snapshots, shadow diff, deferred queue, and live-apply lock state.",
+      "status": "DONE",
+      "title": "Dashboard v2 / Operator Control Panel"
+    },
+    {
+      "id": "S18B",
+      "purpose": "Bind dashboard v2 directly into status API/dashboard surfaces and stale-report warning rows.",
+      "status": "NEXT",
+      "title": "Operator Panel Status Aggregator"
+    },
+    {
+      "id": "S18C",
+      "purpose": "Produce a compact operator handoff artifact for restart, audit, and external review.",
+      "status": "FUTURE",
+      "title": "Operator Panel Export / Handoff View"
+    },
+    {
+      "id": "S19A",
+      "purpose": "Map whether Forge is ready to plan the AI.Web runtime build through canonical engines, tests, source authority, snapshots, shadow evidence, and live-apply gates.",
+      "status": "ACTIVE",
+      "title": "AI.Web Runtime Build Readiness Map"
+    },
+    {
+      "id": "S19B",
+      "purpose": "Map AI.Web runtime modules, dependencies, wrappers, tests, and deferred edges before any runtime build patch is proposed.",
+      "status": "NEXT",
+      "title": "Runtime Module Dependency Map"
+    },
+    {
+      "id": "S19C",
+      "purpose": "Plan a Forge-owned runtime build sandbox before any AI.Web live runtime writes are eligible.",
+      "status": "FUTURE",
+      "title": "Runtime Build Sandbox Planner"
+    }
+  ],
+  "created_at": "2026-05-19T18:55:15",
+  "current_phase": "S19A \u2014 AI.Web Runtime Build Readiness Map",
+  "dashboard_roadmap_panel": {
+    "latest_path": "/home/nic/forge/memory/forge_dashboard_roadmap_panel_v1/latest_forge_dashboard_roadmap_panel_v1.json",
+    "panel_count": 4,
+    "status": "FORGE_DASHBOARD_ROADMAP_PANEL_READY"
+  },
+  "dashboard_v2_operator_panel": {
+    "latest_path": "/home/nic/forge/memory/forge_dashboard_v2_operator_panel_v1/latest_forge_dashboard_v2_operator_panel_v1.json",
+    "panel_count": 7,
+    "status": "FORGE_DASHBOARD_V2_OPERATOR_PANEL_READY"
+  },
+  "deferred_items": [
+    {
+      "name": "stack_linker_breather",
+      "reason": "Deferred and excluded from canonical lockfile; visible in deferred repair queue for later dependency/sandbox repair."
+    },
+    {
+      "name": "excluded/deferred engine set",
+      "reason": "26 queue rows tracked; no delete/quarantine/promote action authorized."
+    }
+  ],
+  "deferred_queue": {
+    "next_repair_target": "stack_linker_breather",
+    "queue_total": 26,
+    "repair_ready_count": 1,
+    "status": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY"
+  },
+  "live_apply_eligibility_v2": {
+    "eligible_for_live_apply": false,
+    "gate_fail_count": 4,
+    "gate_pass_count": 8,
+    "gate_warn_count": 0,
+    "status": "FORGE_LIVE_APPLY_ELIGIBILITY_V2_READY_NOT_ELIGIBLE"
+  },
+  "llm_patch_proposal_v2": {
+    "proposal_path": "/home/nic/forge/memory/forge_llm_patch_proposal_v2/latest_forge_llm_patch_proposal_v2.json",
+    "proposal_status": "FORGE_LLM_PATCH_PROPOSAL_V2_DRAFT_READY_NO_WRITE_AUTHORITY",
+    "verification_path": "/home/nic/forge/memory/forge_llm_patch_proposal_v2/latest_forge_llm_patch_proposal_v2_verify.json",
+    "verification_status": "FORGE_LLM_PATCH_PROPOSAL_V2_VERIFIED_READ_ONLY"
+  },
+  "next_commands": [
+    "forge-aiweb-runtime-readiness-build",
+    "forge-aiweb-runtime-readiness-show latest",
+    "forge-aiweb-runtime-readiness-export",
+    "forge-dashboard-roadmap-build",
+    "forge-status-api-build",
+    "forge-dashboard-build",
+    "Install Patch 156 when ready"
+  ],
+  "next_patch": "Patch 156 \u2014 Runtime Module Dependency Map",
+  "plain_english": "Patch 155 maps readiness for building the AI.Web runtime through Forge. It is planning-only and preserves the append-only roadmap trail.",
+  "recommended_next_patch": "Patch 156 \u2014 Runtime Module Dependency Map",
+  "report_type": "FORGE_BUILD_SEQUENCE_V1",
+  "roadmap_mutation_policy": {
+    "correction_reason": "Patch 151 previously compressed/renumbered future roadmap stages; Patch 151R restores append-only behavior.",
+    "may_add_rows": true,
+    "may_delete_rows": false,
+    "may_renumber_existing_rows": false,
+    "may_repurpose_existing_ids": false,
+    "may_update_status_forward": true,
+    "mode": "APPEND_ONLY"
+  },
+  "schema_version": "forge_build_sequence_v1_patch155_aiweb_runtime_readiness",
+  "shadow_restore_forensic_diff": {
+    "diff_status": "FORGE_SHADOW_RESTORE_FORENSIC_DIFF_READY",
+    "plan_status": "FORGE_SHADOW_RESTORE_PLAN_READY",
+    "problem_count": 0,
+    "run_status": "FORGE_SHADOW_RESTORE_RUN_PASS",
+    "shadow_id": "shadow_restore_2026_05_19_182609",
+    "snapshot_id": "forge_snapshot_2026_05_19_181211"
+  },
+  "snapshot_create_verify": {
+    "file_count": 542,
+    "problem_count": 0,
+    "snapshot_id": "forge_snapshot_2026_05_19_181211",
+    "snapshot_status": "FORGE_SNAPSHOT_CREATE_READY",
+    "verification_status": "FORGE_SNAPSHOT_CREATE_VERIFY_PASS"
+  },
+  "snapshot_forensic_replay_plan": {
+    "domain_count": 5,
+    "snapshot_evidence_created": false,
+    "status": "FORGE_SNAPSHOT_FORENSIC_REPLAY_PLAN_READY"
+  },
+  "source_authority_hardening": {
+    "latest_report_path": "/home/nic/forge/memory/forge_source_authority_hardening_v1/latest_forge_source_authority_hardening_v1.json",
+    "status": "FORGE_SOURCE_AUTHORITY_HARDENING_READY",
+    "summary": {
+      "authority_claimed_automatically": false,
+      "canonical_engines": 54,
+      "domain_count": 9,
+      "engine_file_writes": 0,
+      "engines_with_candidate_source_documents": 42,
+      "engines_with_source_authority_gaps": 12,
+      "expected_commands": 538,
+      "patch_apply_authority": false,
+      "source_candidate_files_seen": 240,
+      "tools": 462,
+      "trust_level": 5.0
+    }
+  },
+  "status": "FORGE_BUILD_SEQUENCE_READY",
+  "verified_state": {
+    "aiweb_runtime_live_build_ready": false,
+    "aiweb_runtime_planning_ready": true,
+    "aiweb_runtime_readiness_status": "AIWEB_RUNTIME_BUILD_READINESS_MAP_READY_PLANNING_ONLY",
+    "build_gate_fail_count": 0,
+    "build_gate_pass_count": 8,
+    "build_gate_status": "FORGE_BUILD_PHASE_GATE_READY",
+    "build_gate_warn_count": 0,
+    "canonical_excluded": 26,
+    "canonical_included": 54,
+    "dashboard_next_patch": "Patch 147 \u2014 Dashboard Roadmap Panel",
+    "dashboard_roadmap_panel_count": 4,
+    "dashboard_roadmap_panel_status": "FORGE_DASHBOARD_ROADMAP_PANEL_READY",
+    "dashboard_v2_operator_panel_status": "FORGE_DASHBOARD_V2_OPERATOR_PANEL_READY",
+    "dashboard_v2_panel_count": 7,
+    "deferred_queue_status": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY",
+    "deferred_queue_total": 26,
+    "expected_commands": 580,
+    "latest_test_fail": 0,
+    "latest_test_pass": 67,
+    "latest_test_status": "CANONICAL_TEST_RUN_COMPLETED_ALL_PASS",
+    "live_apply_eligibility_status": "FORGE_LIVE_APPLY_ELIGIBILITY_V2_READY_NOT_ELIGIBLE",
+    "live_apply_eligible": false,
+    "llm_patch_v2_proposal_status": "FORGE_LLM_PATCH_PROPOSAL_V2_DRAFT_READY_NO_WRITE_AUTHORITY",
+    "llm_patch_v2_verification_status": "FORGE_LLM_PATCH_PROPOSAL_V2_VERIFIED_READ_ONLY",
+    "patch_impact_high_risk": 0,
+    "patch_impact_status": "PATCH_IMPACT_MAP_READY",
+    "patch_impact_test_issues": 0,
+    "roadmap_append_only_policy": true,
+    "shadow_restore_diff_status": "FORGE_SHADOW_RESTORE_FORENSIC_DIFF_READY",
+    "shadow_restore_plan_status": "FORGE_SHADOW_RESTORE_PLAN_READY",
+    "shadow_restore_run_status": "FORGE_SHADOW_RESTORE_RUN_PASS",
+    "snapshot_create_status": "FORGE_SNAPSHOT_CREATE_READY",
+    "snapshot_evidence_created": false,
+    "snapshot_file_count": 542,
+    "snapshot_plan_status": "FORGE_SNAPSHOT_FORENSIC_REPLAY_PLAN_READY",
+    "snapshot_verify_status": "FORGE_SNAPSHOT_CREATE_VERIFY_PASS",
+    "source_authority_candidate_count": 42,
+    "source_authority_canonical_engines": 54,
+    "source_authority_gap_count": 12,
+    "source_authority_hardening_status": "FORGE_SOURCE_AUTHORITY_HARDENING_READY",
+    "status_api_next_patch": "Patch 147 \u2014 Dashboard Roadmap Panel",
+    "tools": 504,
+    "trust_level": 5.0
+  }
+}

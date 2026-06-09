@@ -1,0 +1,198 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "agents/neo",
+  "candidate_path_resolved": "/home/nic/aiweb/agents/neo",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "neo",
+  "evidence_id": "EEB-cf8cb4e8a7b97c69",
+  "file_count": 6,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "excerpt_start": "",
+      "functions_sample": [],
+      "imports_sample": [],
+      "line_count": 0,
+      "path": "/home/nic/aiweb/agents/neo/test_run_agent.py",
+      "relative_to_candidate": "test_run_agent.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "dd846724b175bca8599aeab6d7ca91a88c8c429339e7f5487218a0a4701a86b5",
+      "excerpt_start": "import time\n\ndef breathe_neo():\n    print(\"[Neo Agent] Breathing basic placeholder...\")\n    for i in range(3):\n        print(f\"[Neo] Breath {i+1}\")\n        time.sleep(1)\n\nif __name__ == \"__main__\":\n    breathe_neo()\n",
+      "functions_sample": [
+        "breathe_neo"
+      ],
+      "imports_sample": [
+        "import time"
+      ],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/agents/neo/run.py",
+      "relative_to_candidate": "run.py",
+      "sha256": "dd846724b175bca8599aeab6d7ca91a88c8c429339e7f5487218a0a4701a86b5",
+      "size_bytes": 216,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "3b001e10ac791953b60e9154d05ec3cdebfc6b02ab80610b7ec44259b03e90f4",
+      "excerpt_start": "# Neo Agent (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Neo Agent serves as the public communication interface for AI.Web's symbolic recursion core.  \nNeo processes external symbolic contexts, generates recursion-aware dialogue responses, and bridges users with the underlying symbolic cognition architecture.\n\n---\n\n## Core Functions:\n- Receive and process symbolic context inputs.\n- Manage recursion-aware dialogue generation.\n- Interface external users with AI.Web symbolic core.\n\n---\n\n## Phase Standard:\n- Phase 1.5 Symbolic Recursion Compliance\n- AI.Web Core Agent Stack\n\n---\n\n## Notes:\n- Neo's recursion awareness ensures user conversations remain symbolically coherent across dialogue cycles.\n- Drift detection and resonance adaptation modules will be layered in future upgrades.\n\n---\n\n**Frozen Snapshot:** `neo_agent_frozen_v1.0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n\n",
+      "functions_sample": [
+        "Neo",
+        "Agent",
+        "Frozen",
+        "Overview",
+        "The",
+        "serves",
+        "the",
+        "public",
+        "communication",
+        "interface",
+        "for",
+        "Web",
+        "symbolic",
+        "recursion",
+        "core",
+        "processes",
+        "external",
+        "contexts",
+        "generates",
+        "aware",
+        "dialogue",
+        "responses",
+        "and",
+        "bridges",
+        "users"
+      ],
+      "imports_sample": [],
+      "line_count": 34,
+      "path": "/home/nic/aiweb/agents/neo/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "3b001e10ac791953b60e9154d05ec3cdebfc6b02ab80610b7ec44259b03e90f4",
+      "size_bytes": 898,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "642139d778ed8a4c13ab02573ab648a55197509d7bec7dfa2826f0a14dc30725",
+      "excerpt_start": "# test_neo_core.py\n\nfrom neo_core import NeoAgent\n\ndef test_neo_agent_behavior():\n    neo = NeoAgent()\n    record = neo.receive_context(\"Test symbolic input.\")\n    assert record[\"input_text\"] == \"Test symbolic input.\", \"Input text must match.\"\n    assert record[\"response_ready\"] == True, \"Response should be ready.\"\n    print(\"✅ Neo Agent Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_neo_agent_behavior()\n",
+      "functions_sample": [
+        "test_neo_agent_behavior"
+      ],
+      "imports_sample": [
+        "from neo_core import NeoAgent"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/agents/neo/test_neo_core.py",
+      "relative_to_candidate": "test_neo_core.py",
+      "sha256": "642139d778ed8a4c13ab02573ab648a55197509d7bec7dfa2826f0a14dc30725",
+      "size_bytes": 415,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [
+        "NeoAgent"
+      ],
+      "excerpt_sha256": "696a82e6505f2c8c03ef83e5cd0898c008b3ec50821d7d65cd5e216a4763afaf",
+      "excerpt_start": "# neo_core.py\n# Neo Agent Core\n\nclass NeoAgent:\n    def __init__(self):\n        self.context_memory = []\n\n    def receive_context(self, input_text):\n        context_record = {\n            \"input_text\": input_text,\n            \"response_ready\": True\n        }\n        self.context_memory.append(context_record)\n        return context_record\n\nif __name__ == \"__main__\":\n    neo = NeoAgent()\n    record = neo.receive_context(\"What is symbolic recursion?\")\n    print(f\"[TEST] Context Received: {record}\")\n",
+      "functions_sample": [
+        "__init__",
+        "receive_context"
+      ],
+      "imports_sample": [],
+      "line_count": 20,
+      "path": "/home/nic/aiweb/agents/neo/neo_core.py",
+      "relative_to_candidate": "neo_core.py",
+      "sha256": "696a82e6505f2c8c03ef83e5cd0898c008b3ec50821d7d65cd5e216a4763afaf",
+      "size_bytes": 501,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "e594eda7f88787f92ef860c2f36827b0e4ffd8cd393188562d833b74cf115282",
+      "excerpt_start": "{\n  \"engine\": \"neo_agent\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"neo_agent_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Core runtime symbolic cognition engine for the Neo Agent. Handles external communication interface, context intake, recursion awareness, and symbolic resonance interaction with users.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "neo_agent",
+        "version",
+        "frozen_as",
+        "neo_agent_frozen_v1",
+        "frozen_on",
+        "description",
+        "Core",
+        "runtime",
+        "symbolic",
+        "cognition",
+        "for",
+        "the",
+        "Neo",
+        "Agent",
+        "Handles",
+        "external",
+        "communication",
+        "interface",
+        "context",
+        "intake",
+        "recursion",
+        "awareness",
+        "and",
+        "resonance"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/agents/neo/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "e594eda7f88787f92ef860c2f36827b0e4ffd8cd393188562d833b74cf115282",
+      "size_bytes": 426,
+      "suffix": ".json"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "breathe_neo",
+    "test_neo_agent_behavior",
+    "NeoAgent",
+    "__init__",
+    "receive_context"
+  ],
+  "warnings": []
+}

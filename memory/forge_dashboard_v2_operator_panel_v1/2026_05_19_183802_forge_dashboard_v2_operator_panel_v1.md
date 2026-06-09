@@ -1,0 +1,64 @@
+# FORGE_DASHBOARD_V2_OPERATOR_PANEL
+
+- **status**: `FORGE_DASHBOARD_V2_OPERATOR_PANEL_READY`
+- **active_patch**: `Patch 154 — Dashboard v2 / Operator Control Panel`
+- **current_phase**: `S18A — Dashboard v2 / Operator Control Panel`
+- **next_patch**: `Patch 155 — AI.Web Runtime Build Readiness Map`
+- **panel_count**: `7`
+
+## Panels
+- **operator_overview** — `READY` — Operator Overview
+  - Current phase: S18A — Dashboard v2 / Operator Control Panel
+  - Active patch: Patch 154 — Dashboard v2 / Operator Control Panel
+  - Next patch: Patch 155 — AI.Web Runtime Build Readiness Map
+  - Tools: 498
+  - Expected commands: 574
+  - Trust: 5.0
+- **roadmap_append_only** — `LOCKED` — Append-Only Roadmap Law
+  - May delete rows: False
+  - May renumber rows: UNKNOWN
+  - May repurpose IDs: UNKNOWN
+  - Rows: 26
+  - Rule: roadmap patches append; they do not erase the trail.
+- **canonical_truth** — `CLEAN` — Canonical Truth
+  - Canonical included: 54
+  - Canonical excluded: 26
+  - Tests pass: 67
+  - Tests fail: 0
+  - Patch impact high risk: UNKNOWN
+- **snapshot_shadow** — `READY` — Snapshot / Shadow Evidence
+  - Snapshot ID: forge_snapshot_2026_05_19_181211
+  - Snapshot verify: FORGE_SNAPSHOT_CREATE_VERIFY_PASS
+  - Snapshot files: 542
+  - Shadow run: FORGE_SHADOW_RESTORE_RUN_PASS
+  - Shadow copied: 542
+  - Shadow matches snapshot: True
+  - Live changed since snapshot: 18
+- **live_apply_lock** — `FORGE_LIVE_APPLY_ELIGIBILITY_V2_READY_NOT_ELIGIBLE` — Live Apply Lock
+  - Eligible for live apply: False
+  - Gate pass: 8
+  - Gate warn: 0
+  - Gate fail: 4
+  - Expected: live apply remains locked until snapshot, sandbox/test binding, rollback, and human approval evidence all exist.
+- **deferred_queue** — `FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY` — Deferred Engine Queue
+  - Queue total: 26
+  - Repair ready: 1
+  - Repair blocked: 2
+  - Next repair target: stack_linker_breather
+  - Deferred engines stay visible without hijacking the main roadmap.
+- **dashboard_surfaces** — `READY` — Dashboard Surfaces
+  - Status API: FORGE_STATUS_API_SNAPSHOT_READY
+  - Dashboard v1: FORGE_DASHBOARD_READONLY_READY
+  - Dashboard roadmap panel: FORGE_DASHBOARD_ROADMAP_PANEL_READY
+  - Dashboard v1 next: Patch 154 — Dashboard v2 / Operator Control Panel
+  - Status API next: Patch 154 — Dashboard v2 / Operator Control Panel
+
+## Authority
+- **read_only**: `True`
+- **forge_memory_write_only**: `True`
+- **patch_apply_authority**: `False`
+- **project_file_write_authority**: `False`
+- **engine_file_write_authority**: `False`
+- **shell_execution_authority**: `False`
+- **server_started**: `False`
+- **live_restore_authority**: `False`

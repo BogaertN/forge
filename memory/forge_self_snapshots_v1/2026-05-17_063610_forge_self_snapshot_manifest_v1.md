@@ -1,0 +1,34 @@
+# FORGE_SELF_SNAPSHOT_MANIFEST_V1
+
+- **schema_version:** forge_self_snapshot_manifest_v1_patch121
+- **report_type:** FORGE_SELF_SNAPSHOT_MANIFEST_V1
+- **created_at:** 2026-05-17T06:36:10
+- **status:** FORGE_SELF_SNAPSHOT_CREATED
+- **snapshot_id:** FSS-2026-05-17_063610
+- **snapshot_root:** /home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610
+- **files_root:** /home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files
+- **entries:** 9 item(s)
+  - `{'source_path': '/home/nic/forge/main.py', 'relative_path': 'main.py', 'exists': True, 'is_file': True, 'source_sha256': '7e61e2129abbcadedf4d3e36fb9a5214f6a0e28d78cffa50777dbf44641f89d8', 'copied': True, 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/main.py', 'snapshot_sha256': '7e61e2129abbcadedf4d3e36fb9a5214f6a0e28d78cffa50777dbf44641f89d8'}`
+  - `{'source_path': '/home/nic/forge/config/tool_registry.json', 'relative_path': 'config/tool_registry.json', 'exists': True, 'is_file': True, 'source_sha256': '7a83fa1a69176510793ad8a042253cb860b2eb00bbc5b9e5410cac1f6fc9686e', 'copied': True, 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/config/tool_registry.json', 'snapshot_sha256': '7a83fa1a69176510793ad8a042253cb860b2eb00bbc5b9e5410cac1f6fc9686e'}`
+  - `{'source_path': '/home/nic/forge/config/session_scope.json', 'relative_path': 'config/session_scope.json', 'exists': True, 'is_file': True, 'source_sha256': '2f8412e6e37eafa09c334d79aa5f23d3a6d93d6dbe83e441e7fa860788a49d1a', 'copied': True, 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/config/session_scope.json', 'snapshot_sha256': '2f8412e6e37eafa09c334d79aa5f23d3a6d93d6dbe83e441e7fa860788a49d1a'}`
+  - `{'source_path': '/home/nic/forge/config/approved_paths.json', 'relative_path': 'config/approved_paths.json', 'exists': True, 'is_file': True, 'source_sha256': '80c98f351a0ffe369ac7acd08c4390e8901dd003b7ce1448cdc3d1093b06f7c6', 'copied': True, 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/config/approved_paths.json', 'snapshot_sha256': '80c98f351a0ffe369ac7acd08c4390e8901dd003b7ce1448cdc3d1093b06f7c6'}`
+  - `{'source_path': '/home/nic/forge/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json', 'relative_path': 'memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json', 'exists': True, 'is_file': True, 'source_sha256': 'b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab', 'copied': True, 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json', 'snapshot_sha256': 'b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab'}`
+  - `{'source_path': '/home/nic/forge/memory/forge_self_updates_v1/latest_forge_self_update_proposal_v1.json', 'relative_path': 'memory/forge_self_updates_v1/latest_forge_self_update_proposal_v1.json', 'exists': True, 'is_file': True, 'source_sha256': 'daafb01638b38bc9d885e1c6d766cca8e8ff13d060264faadb4d1d7dbd92cdf3', 'copied': True, 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/memory/forge_self_updates_v1/latest_forge_self_update_proposal_v1.json', 'snapshot_sha256': 'daafb01638b38bc9d885e1c6d766cca8e8ff13d060264faadb4d1d7dbd92cdf3'}`
+  - `{'source_path': '/home/nic/forge/memory/forge_self_updates_v1/latest_forge_self_update_verification_v1.json', 'relative_path': 'memory/forge_self_updates_v1/latest_forge_self_update_verification_v1.json', 'exists': True, 'is_file': True, 'source_sha256': '8e3991b3488b52481d4718cfcd05b6a681ab40e1ec923b132a25cbe9065e7a32', 'copied': True, 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/memory/forge_self_updates_v1/latest_forge_self_update_verification_v1.json', 'snapshot_sha256': '8e3991b3488b52481d4718cfcd05b6a681ab40e1ec923b132a25cbe9065e7a32'}`
+  - `{'source_path': '/home/nic/forge/memory/llm_plans_v1/latest_llm_plan_template_v1.json', 'relative_path': 'memory/llm_plans_v1/latest_llm_plan_template_v1.json', 'exists': True, 'is_file': True, 'source_sha256': 'cb0d0eb158550670447d1eb47e0cdc2c12b3c88b5590488ccf9ff96bee91a18e', 'copied': True, 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/memory/llm_plans_v1/latest_llm_plan_template_v1.json', 'snapshot_sha256': 'cb0d0eb158550670447d1eb47e0cdc2c12b3c88b5590488ccf9ff96bee91a18e'}`
+  - `{'source_path': '/home/nic/forge/memory/forge_master_status_v1/latest_forge_master_status_report_v1.json', 'relative_path': 'memory/forge_master_status_v1/latest_forge_master_status_report_v1.json', 'exists': True, 'is_file': True, 'source_sha256': '8539bf216a389d99208f391fe112bb657bb55d5429736f1ce2e9a04bf3ed4fb8', 'copied': True, 'snapshot_path': '/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/memory/forge_master_status_v1/latest_forge_master_status_report_v1.json', 'snapshot_sha256': '8539bf216a389d99208f391fe112bb657bb55d5429736f1ce2e9a04bf3ed4fb8'}`
+- **copied_count:** 9
+- **missing_optional_count:** 0
+- **problems:** 0 item(s)
+- **authority:**
+  - `writes_forge_memory_only`: `True`
+  - `live_self_write_authority`: `False`
+  - `project_file_write_authority`: `False`
+  - `patch_apply_authority`: `False`
+  - `shell_execution_authority`: `False`
+  - `audit_overwrite_authority`: `False`
+- **next_commands:** 4 item(s)
+  - `forge-self-snapshot-show latest`
+  - `forge-self-snapshot-verify latest`
+  - `forge-self-snapshot-export`
+  - `forge-next`

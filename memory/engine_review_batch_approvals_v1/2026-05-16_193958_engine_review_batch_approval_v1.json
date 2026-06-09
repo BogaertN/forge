@@ -1,0 +1,115 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_BATCH_APPROVAL_HELPER",
+    "patch": "106",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": true,
+    "rule": "Patch 106 may record Patch99-compatible queue decisions for explicitly named engines, but only after Patch102 evidence cross-check readiness. It never commits ledger changes.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_batch_approvals_v1"
+  },
+  "blockers": [],
+  "counts": {
+    "blockers": 0,
+    "recorded": 4,
+    "refused_or_error": 0,
+    "requested": 4,
+    "warnings": 4
+  },
+  "created_at": "2026-05-16_193958",
+  "decision_label": "APPROVE",
+  "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+  "manual_verification_rule": "This helper assumes Nic has already read engine-review-evidence-show for each named engine. It records queue intent only and never mutates the ledger.",
+  "report_type": "ENGINE_REVIEW_BATCH_APPROVAL_RECEIPT_V1_PATCH106",
+  "requested_engines": [
+    "peer_communication_engine",
+    "project_brain",
+    "project_memory",
+    "protoforge"
+  ],
+  "rows": [
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/peer_communication_engine",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_193958_peer_communication_engine_engine_review_approval_helper_v1.json",
+      "check_sha256": "d6eccb13d9659065bdf2b8590034982d048f813ce2cbe6578f9cfeac113e21d6",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-peer_communication_engine-2026-05-16_193958",
+      "engine_family": "peer_communication_engine",
+      "evidence_id": "EEB-b4d43bbd029bc6ce",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_193958_peer_communication_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "3c023eb5738470d6df4a00c177d1a5e6cf2798ddc785a4521b1b0c6b7dbeff02",
+      "requested_decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_193958_project_brain_engine_review_approval_helper_v1.json",
+      "check_sha256": "72f2b62779728203076815fd7b09eab142e701a4d9ba965777f8abb4cbcc4bec",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-project_brain-2026-05-16_193958",
+      "engine_family": "project_brain",
+      "evidence_id": "EEB-89de7d13d526bcb6",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_193958_project_brain_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "4997ea41ef6e6824c15767a308c9122060ddf894006980d3a57f41e1cd53bd5e",
+      "requested_decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_memory",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_193958_project_memory_engine_review_approval_helper_v1.json",
+      "check_sha256": "70af97f9ee9f97ad41043ef184c3e9901a5989d2356cba97cf4491f359d62d20",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-project_memory-2026-05-16_193958",
+      "engine_family": "project_memory",
+      "evidence_id": "EEB-23949a7bc582f4ff",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_193958_project_memory_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "1c2bb8984f5f24a57cd4ae95394653657e4c27891449eeaa53c3a3b818640769",
+      "requested_decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_193958_protoforge_engine_review_approval_helper_v1.json",
+      "check_sha256": "edefadd5efd40e06f5145b31f8963e18df8ae4422f362bcd14ee56ab4ebd27fa",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-protoforge-2026-05-16_193958",
+      "engine_family": "protoforge",
+      "evidence_id": "EEB-f507208845aa44b0",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_193958_protoforge_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "57587647992706643492f1accf910f7485558694a3c40fbe8a4c54d5853f5694",
+      "requested_decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    }
+  ],
+  "schema_version": "engine_review_batch_approval_v1_patch106",
+  "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION",
+  "warnings": [
+    "peer_communication_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "project_brain: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "project_memory: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "protoforge: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

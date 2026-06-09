@@ -1,0 +1,4829 @@
+{
+  "report_type": "SYMBOLIC_RUNTIME_MAP_PATCH59_READ_ONLY",
+  "timestamp": "2026-05-12T17:55:50",
+  "read_only": true,
+  "implemented_destructive_action": false,
+  "warning": "MAP ONLY. This command does not move, rename, delete, promote, freeze, or rewrite engine files.",
+  "engine_count": 425,
+  "symbolic_role_count": 12,
+  "required_role_gaps": [],
+  "roles": [
+    {
+      "role_id": "phase_logic",
+      "title": "Phase Logic / Φ-State Engine",
+      "description": "Tracks FBSC phase state, phase transitions, phase validation, and structured progression.",
+      "required": true,
+      "phases": [
+        "Φ1",
+        "Φ2",
+        "Φ3",
+        "Φ4",
+        "Φ5",
+        "Φ6",
+        "Φ7",
+        "Φ8",
+        "Φ9"
+      ],
+      "operators": [
+        "∆Φ"
+      ],
+      "status": "MAPPED",
+      "candidate_count": 68,
+      "top_candidates": [
+        {
+          "engine_name": "phase_engine",
+          "engine_base": "phase_engine",
+          "root": "aiweb/engines/phase_engine",
+          "family": "engines",
+          "canonical_score": 122,
+          "runtime_role_score": 37,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 9,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 2
+          },
+          "sample_files": [
+            "aiweb/engines/phase_engine/run.py",
+            "aiweb/engines/phase_engine/test_phase_engine.py",
+            "aiweb/engines/phase_engine/README.md",
+            "aiweb/engines/phase_engine/test_log.txt",
+            "aiweb/engines/phase_engine/status.json",
+            "aiweb/engines/phase_engine/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "phase_engine",
+          "engine_base": "phase_engine",
+          "root": "engines/phase_engine",
+          "family": "engines",
+          "canonical_score": 82,
+          "runtime_role_score": 33,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 9,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 2
+          },
+          "sample_files": [
+            "engines/phase_engine/run.py",
+            "engines/phase_engine/test_phase_engine.py",
+            "engines/phase_engine/README.md",
+            "engines/phase_engine/test_log.txt",
+            "engines/phase_engine/status.json",
+            "engines/phase_engine/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "phase_engine_frozen_v1",
+          "engine_base": "phase_engine",
+          "root": "aiweb/engines/phase_engine_frozen_v1",
+          "family": "engines",
+          "canonical_score": 111,
+          "runtime_role_score": 29,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 18,
+          "roles": {
+            "engine_definition": 9,
+            "test_file": 4
+          },
+          "sample_files": [
+            "aiweb/engines/phase_engine_frozen_v1/run.py",
+            "aiweb/engines/phase_engine_frozen_v1/test_phase_engine.py",
+            "aiweb/engines/phase_engine_frozen_v1/README.md",
+            "aiweb/engines/phase_engine_frozen_v1/test_log.txt",
+            "aiweb/engines/phase_engine_frozen_v1/status.json",
+            "aiweb/engines/phase_engine_frozen_v1/engine_manifest.json",
+            "aiweb/engines/phase_engine_frozen_v1/__init__.py",
+            "aiweb/engines/phase_engine_frozen_v1/phase_engine/run.py"
+          ]
+        },
+        {
+          "engine_name": "tier_enforcer",
+          "engine_base": "tier_enforcer",
+          "root": "aiweb/engines/tier_enforcer",
+          "family": "engines",
+          "canonical_score": 123,
+          "runtime_role_score": 27,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 6,
+          "roles": {
+            "engine_definition": 5,
+            "test_file": 2
+          },
+          "sample_files": [
+            "aiweb/engines/tier_enforcer/run.py",
+            "aiweb/engines/tier_enforcer/README.md",
+            "aiweb/engines/tier_enforcer/test_tier_enforcer.py",
+            "aiweb/engines/tier_enforcer/test_log.txt",
+            "aiweb/engines/tier_enforcer/tier_violation_log.json",
+            "aiweb/engines/tier_enforcer/tier_rules.json",
+            "aiweb/engines/tier_enforcer/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "phase_engine_frozen_v1",
+          "engine_base": "phase_engine",
+          "root": "engines/phase_engine_frozen_v1",
+          "family": "engines",
+          "canonical_score": 71,
+          "runtime_role_score": 25,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 18,
+          "roles": {
+            "engine_definition": 9,
+            "test_file": 4
+          },
+          "sample_files": [
+            "engines/phase_engine_frozen_v1/run.py",
+            "engines/phase_engine_frozen_v1/test_phase_engine.py",
+            "engines/phase_engine_frozen_v1/README.md",
+            "engines/phase_engine_frozen_v1/test_log.txt",
+            "engines/phase_engine_frozen_v1/status.json",
+            "engines/phase_engine_frozen_v1/engine_manifest.json",
+            "engines/phase_engine_frozen_v1/__init__.py",
+            "engines/phase_engine_frozen_v1/phase_engine/run.py"
+          ]
+        },
+        {
+          "engine_name": "phase_engine_frozen_v1",
+          "engine_base": "phase_engine",
+          "root": "projects/recursive_lmm_grok1/engines/phase_engine_frozen_v1",
+          "family": "engines",
+          "canonical_score": 61,
+          "runtime_role_score": 24,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 18,
+          "roles": {
+            "engine_definition": 9,
+            "test_file": 4
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1/engines/phase_engine_frozen_v1/run.py",
+            "projects/recursive_lmm_grok1/engines/phase_engine_frozen_v1/test_phase_engine.py",
+            "projects/recursive_lmm_grok1/engines/phase_engine_frozen_v1/README.md",
+            "projects/recursive_lmm_grok1/engines/phase_engine_frozen_v1/test_log.txt",
+            "projects/recursive_lmm_grok1/engines/phase_engine_frozen_v1/status.json",
+            "projects/recursive_lmm_grok1/engines/phase_engine_frozen_v1/engine_manifest.json",
+            "projects/recursive_lmm_grok1/engines/phase_engine_frozen_v1/__init__.py",
+            "projects/recursive_lmm_grok1/engines/phase_engine_frozen_v1/phase_engine/run.py"
+          ]
+        },
+        {
+          "engine_name": "step_counter_frozen_v1",
+          "engine_base": "step_counter",
+          "root": "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1",
+          "family": "engines",
+          "canonical_score": 61,
+          "runtime_role_score": 24,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 18,
+          "roles": {
+            "engine_definition": 9,
+            "test_file": 4
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1/run.py",
+            "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1/test_phase_engine.py",
+            "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1/README.md",
+            "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1/test_log.txt",
+            "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1/status.json",
+            "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1/engine_manifest.json",
+            "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1/__init__.py",
+            "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1/phase_engine/run.py"
+          ]
+        },
+        {
+          "engine_name": "step_counter_frozen_v1",
+          "engine_base": "step_counter",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/step_counter_frozen_v1",
+          "family": "engines",
+          "canonical_score": 61,
+          "runtime_role_score": 24,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 13,
+          "symbol_count": 18,
+          "roles": {
+            "engine_definition": 9,
+            "test_file": 4
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1_phase2/engines/step_counter_frozen_v1/run.py",
+            "projects/recursive_lmm_grok1_phase2/engines/step_counter_frozen_v1/test_phase_engine.py",
+            "projects/recursive_lmm_grok1_phase2/engines/step_counter_frozen_v1/README.md",
+            "projects/recursive_lmm_grok1_phase2/engines/step_counter_frozen_v1/test_log.txt",
+            "projects/recursive_lmm_grok1_phase2/engines/step_counter_frozen_v1/status.json",
+            "projects/recursive_lmm_grok1_phase2/engines/step_counter_frozen_v1/engine_manifest.json",
+            "projects/recursive_lmm_grok1_phase2/engines/step_counter_frozen_v1/__init__.py",
+            "projects/recursive_lmm_grok1_phase2/engines/step_counter_frozen_v1/phase_engine/run.py"
+          ]
+        },
+        {
+          "engine_name": "tier_enforcer",
+          "engine_base": "tier_enforcer",
+          "root": "engines/tier_enforcer",
+          "family": "engines",
+          "canonical_score": 83,
+          "runtime_role_score": 23,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 6,
+          "roles": {
+            "engine_definition": 5,
+            "test_file": 2
+          },
+          "sample_files": [
+            "engines/tier_enforcer/run.py",
+            "engines/tier_enforcer/README.md",
+            "engines/tier_enforcer/test_tier_enforcer.py",
+            "engines/tier_enforcer/test_log.txt",
+            "engines/tier_enforcer/tier_violation_log.json",
+            "engines/tier_enforcer/tier_rules.json",
+            "engines/tier_enforcer/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "tier_enforcer_frozen_v1",
+          "engine_base": "tier_enforcer",
+          "root": "aiweb/engines/tier_enforcer_frozen_v1",
+          "family": "engines",
+          "canonical_score": 103,
+          "runtime_role_score": 18,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 6,
+          "roles": {
+            "engine_definition": 5,
+            "test_file": 2
+          },
+          "sample_files": [
+            "aiweb/engines/tier_enforcer_frozen_v1/run.py",
+            "aiweb/engines/tier_enforcer_frozen_v1/README.md",
+            "aiweb/engines/tier_enforcer_frozen_v1/test_tier_enforcer.py",
+            "aiweb/engines/tier_enforcer_frozen_v1/test_log.txt",
+            "aiweb/engines/tier_enforcer_frozen_v1/tier_violation_log.json",
+            "aiweb/engines/tier_enforcer_frozen_v1/tier_rules.json",
+            "aiweb/engines/tier_enforcer_frozen_v1/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "recursive_verification_engine",
+          "engine_base": "recursive_verification_engine",
+          "root": "engines/recursive_verification_engine",
+          "family": "engines",
+          "canonical_score": 83,
+          "runtime_role_score": 18,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 10,
+          "roles": {
+            "engine_definition": 5,
+            "test_file": 1
+          },
+          "sample_files": [
+            "engines/recursive_verification_engine/convert_to_jsonl.py",
+            "engines/recursive_verification_engine/test_recursive_verification.py",
+            "engines/recursive_verification_engine/README.md",
+            "engines/recursive_verification_engine/rvdit_core.py",
+            "engines/recursive_verification_engine/generate_phase_loop_dataset.py",
+            "engines/recursive_verification_engine/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "recursive_verification_engine_v1.0.0",
+          "engine_base": "recursive_verification_engine",
+          "root": "engines/recursive_verification_engine_v1.0.0",
+          "family": "engines",
+          "canonical_score": 83,
+          "runtime_role_score": 18,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 10,
+          "roles": {
+            "engine_definition": 5,
+            "test_file": 1
+          },
+          "sample_files": [
+            "engines/recursive_verification_engine_v1.0.0/convert_to_jsonl.py",
+            "engines/recursive_verification_engine_v1.0.0/test_recursive_verification.py",
+            "engines/recursive_verification_engine_v1.0.0/README.md",
+            "engines/recursive_verification_engine_v1.0.0/rvdit_core.py",
+            "engines/recursive_verification_engine_v1.0.0/generate_phase_loop_dataset.py",
+            "engines/recursive_verification_engine_v1.0.0/engine_manifest.json"
+          ]
+        }
+      ]
+    },
+    {
+      "role_id": "memory_persistence",
+      "title": "Memory Persistence / Active Stack",
+      "description": "Stores active memory, receipts, context state, runtime continuity, and durable recall surfaces.",
+      "required": true,
+      "phases": [
+        "Φ1",
+        "Φ2",
+        "Φ6",
+        "Φ7",
+        "Φ9"
+      ],
+      "operators": [
+        "ΦM",
+        "MRN"
+      ],
+      "status": "MAPPED",
+      "candidate_count": 35,
+      "top_candidates": [
+        {
+          "engine_name": "memory_stack_engine_breathing_v1",
+          "engine_base": "memory_stack_engine_breathing",
+          "root": "aiweb/engines/memory_stack_engine_breathing_v1",
+          "family": "engines",
+          "canonical_score": 126,
+          "runtime_role_score": 49,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 13,
+          "roles": {
+            "engine_definition": 6,
+            "test_file": 3
+          },
+          "sample_files": [
+            "aiweb/engines/memory_stack_engine_breathing_v1/log.py",
+            "aiweb/engines/memory_stack_engine_breathing_v1/memory_breather.py",
+            "aiweb/engines/memory_stack_engine_breathing_v1/test_memory_breather.py",
+            "aiweb/engines/memory_stack_engine_breathing_v1/test_memory_stack.py",
+            "aiweb/engines/memory_stack_engine_breathing_v1/README.md",
+            "aiweb/engines/memory_stack_engine_breathing_v1/test_log.txt",
+            "aiweb/engines/memory_stack_engine_breathing_v1/stack.json",
+            "aiweb/engines/memory_stack_engine_breathing_v1/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "memory_stack_engine_breathing_v1",
+          "engine_base": "memory_stack_engine_breathing",
+          "root": "engines/memory_stack_engine_breathing_v1",
+          "family": "engines",
+          "canonical_score": 86,
+          "runtime_role_score": 45,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 13,
+          "roles": {
+            "engine_definition": 6,
+            "test_file": 3
+          },
+          "sample_files": [
+            "engines/memory_stack_engine_breathing_v1/log.py",
+            "engines/memory_stack_engine_breathing_v1/memory_breather.py",
+            "engines/memory_stack_engine_breathing_v1/test_memory_breather.py",
+            "engines/memory_stack_engine_breathing_v1/test_memory_stack.py",
+            "engines/memory_stack_engine_breathing_v1/README.md",
+            "engines/memory_stack_engine_breathing_v1/test_log.txt",
+            "engines/memory_stack_engine_breathing_v1/stack.json",
+            "engines/memory_stack_engine_breathing_v1/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "memory_stack_engine",
+          "engine_base": "memory_stack_engine",
+          "root": "aiweb/engines/memory_stack_engine",
+          "family": "engines",
+          "canonical_score": 126,
+          "runtime_role_score": 42,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 19,
+          "symbol_count": 38,
+          "roles": {
+            "engine_definition": 15,
+            "test_file": 4
+          },
+          "sample_files": [
+            "aiweb/engines/memory_stack_engine/log.py",
+            "aiweb/engines/memory_stack_engine/test_memory_stack.py",
+            "aiweb/engines/memory_stack_engine/README.md",
+            "aiweb/engines/memory_stack_engine/test_log.txt",
+            "aiweb/engines/memory_stack_engine/stack.json",
+            "aiweb/engines/memory_stack_engine/engine_manifest.json",
+            "aiweb/engines/memory_stack_engine/__init__.py",
+            "aiweb/engines/memory_stack_engine/spiral_drift_controller_frozen_v1-0.01/test_spiral_drift_controller.py"
+          ]
+        },
+        {
+          "engine_name": "memory_stack_engine_breathing_v1_frozen_v1-0.01",
+          "engine_base": "memory_stack_engine_breathing",
+          "root": "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.01",
+          "family": "engines",
+          "canonical_score": 106,
+          "runtime_role_score": 40,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 13,
+          "roles": {
+            "engine_definition": 6,
+            "test_file": 3
+          },
+          "sample_files": [
+            "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.01/log.py",
+            "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.01/memory_breather.py",
+            "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.01/test_memory_breather.py",
+            "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.01/test_memory_stack.py",
+            "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.01/README.md",
+            "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.01/test_log.txt",
+            "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.01/stack.json",
+            "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.01/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "memory_stack_engine_breathing_v1_frozen_v1-0.02",
+          "engine_base": "memory_stack_engine_breathing",
+          "root": "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.02",
+          "family": "engines",
+          "canonical_score": 106,
+          "runtime_role_score": 40,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 13,
+          "roles": {
+            "engine_definition": 6,
+            "test_file": 3
+          },
+          "sample_files": [
+            "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.02/log.py",
+            "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.02/memory_breather.py",
+            "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.02/test_memory_breather.py",
+            "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.02/test_memory_stack.py",
+            "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.02/README.md",
+            "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.02/test_log.txt",
+            "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.02/stack.json",
+            "aiweb/engines/memory_stack_engine_breathing_v1_frozen_v1-0.02/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "memory_stack_engine_frozen_v1",
+          "engine_base": "memory_stack_engine",
+          "root": "aiweb/engines/memory_stack_engine_frozen_v1",
+          "family": "engines",
+          "canonical_score": 103,
+          "runtime_role_score": 40,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 8,
+          "roles": {
+            "engine_definition": 5,
+            "test_file": 2
+          },
+          "sample_files": [
+            "aiweb/engines/memory_stack_engine_frozen_v1/log.py",
+            "aiweb/engines/memory_stack_engine_frozen_v1/test_memory_stack.py",
+            "aiweb/engines/memory_stack_engine_frozen_v1/README.md",
+            "aiweb/engines/memory_stack_engine_frozen_v1/test_log.txt",
+            "aiweb/engines/memory_stack_engine_frozen_v1/stack.json",
+            "aiweb/engines/memory_stack_engine_frozen_v1/engine_manifest.json",
+            "aiweb/engines/memory_stack_engine_frozen_v1/__init__.py"
+          ]
+        },
+        {
+          "engine_name": "memory_stack_stack",
+          "engine_base": "memory_stack_stack",
+          "root": "aiweb/runtime_wrappers/memory_stack_stack",
+          "family": "runtime_wrappers",
+          "canonical_score": 34,
+          "runtime_role_score": 40,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 1,
+          "roles": {
+            "runtime_wrapper": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/runtime_wrappers/memory_stack_stack/stack_manifest.json",
+            "aiweb/runtime_wrappers/memory_stack_stack/memory_stack_stack_loader.py",
+            "aiweb/runtime_wrappers/memory_stack_stack/README.md",
+            "aiweb/runtime_wrappers/memory_stack_stack/test_memory_stack_stack_loader.py"
+          ]
+        },
+        {
+          "engine_name": "memory_stack_stack",
+          "engine_base": "memory_stack_stack",
+          "root": "runtime_wrappers/memory_stack_stack",
+          "family": "runtime_wrappers",
+          "canonical_score": 34,
+          "runtime_role_score": 40,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 1,
+          "roles": {
+            "runtime_wrapper": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "runtime_wrappers/memory_stack_stack/stack_manifest.json",
+            "runtime_wrappers/memory_stack_stack/memory_stack_stack_loader.py",
+            "runtime_wrappers/memory_stack_stack/README.md",
+            "runtime_wrappers/memory_stack_stack/test_memory_stack_stack_loader.py"
+          ]
+        },
+        {
+          "engine_name": "memory_stack_engine",
+          "engine_base": "memory_stack_engine",
+          "root": "engines/memory_stack_engine",
+          "family": "engines",
+          "canonical_score": 86,
+          "runtime_role_score": 38,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 19,
+          "symbol_count": 38,
+          "roles": {
+            "engine_definition": 15,
+            "test_file": 4
+          },
+          "sample_files": [
+            "engines/memory_stack_engine/log.py",
+            "engines/memory_stack_engine/test_memory_stack.py",
+            "engines/memory_stack_engine/README.md",
+            "engines/memory_stack_engine/test_log.txt",
+            "engines/memory_stack_engine/stack.json",
+            "engines/memory_stack_engine/engine_manifest.json",
+            "engines/memory_stack_engine/__init__.py",
+            "engines/memory_stack_engine/spiral_drift_controller_frozen_v1-0.01/test_spiral_drift_controller.py"
+          ]
+        },
+        {
+          "engine_name": "fluid_memory_engine",
+          "engine_base": "fluid_memory_engine",
+          "root": "aiweb/engines/fluid_memory_engine",
+          "family": "engines",
+          "canonical_score": 119,
+          "runtime_role_score": 36,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/fluid_memory_engine/fluid_memory_core.py",
+            "aiweb/engines/fluid_memory_engine/fluid_memory_manifest.json",
+            "aiweb/engines/fluid_memory_engine/README.md",
+            "aiweb/engines/fluid_memory_engine/test_fluid_memory.py"
+          ]
+        },
+        {
+          "engine_name": "memory_stack_engine_breathing_v1_frozen_v1-0.01",
+          "engine_base": "memory_stack_engine_breathing",
+          "root": "engines/memory_stack_engine_breathing_v1_frozen_v1-0.01",
+          "family": "engines",
+          "canonical_score": 66,
+          "runtime_role_score": 36,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 13,
+          "roles": {
+            "engine_definition": 6,
+            "test_file": 3
+          },
+          "sample_files": [
+            "engines/memory_stack_engine_breathing_v1_frozen_v1-0.01/log.py",
+            "engines/memory_stack_engine_breathing_v1_frozen_v1-0.01/memory_breather.py",
+            "engines/memory_stack_engine_breathing_v1_frozen_v1-0.01/test_memory_breather.py",
+            "engines/memory_stack_engine_breathing_v1_frozen_v1-0.01/test_memory_stack.py",
+            "engines/memory_stack_engine_breathing_v1_frozen_v1-0.01/README.md",
+            "engines/memory_stack_engine_breathing_v1_frozen_v1-0.01/test_log.txt",
+            "engines/memory_stack_engine_breathing_v1_frozen_v1-0.01/stack.json",
+            "engines/memory_stack_engine_breathing_v1_frozen_v1-0.01/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "memory_stack_engine_breathing_v1_frozen_v1-0.02",
+          "engine_base": "memory_stack_engine_breathing",
+          "root": "engines/memory_stack_engine_breathing_v1_frozen_v1-0.02",
+          "family": "engines",
+          "canonical_score": 66,
+          "runtime_role_score": 36,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 13,
+          "roles": {
+            "engine_definition": 6,
+            "test_file": 3
+          },
+          "sample_files": [
+            "engines/memory_stack_engine_breathing_v1_frozen_v1-0.02/log.py",
+            "engines/memory_stack_engine_breathing_v1_frozen_v1-0.02/memory_breather.py",
+            "engines/memory_stack_engine_breathing_v1_frozen_v1-0.02/test_memory_breather.py",
+            "engines/memory_stack_engine_breathing_v1_frozen_v1-0.02/test_memory_stack.py",
+            "engines/memory_stack_engine_breathing_v1_frozen_v1-0.02/README.md",
+            "engines/memory_stack_engine_breathing_v1_frozen_v1-0.02/test_log.txt",
+            "engines/memory_stack_engine_breathing_v1_frozen_v1-0.02/stack.json",
+            "engines/memory_stack_engine_breathing_v1_frozen_v1-0.02/engine_manifest.json"
+          ]
+        }
+      ]
+    },
+    {
+      "role_id": "echo_validation",
+      "title": "Echo Validation / Provenance Return",
+      "description": "Confirms outputs against origin, receipt, citation, trace, and echo-return requirements.",
+      "required": true,
+      "phases": [
+        "Φ2",
+        "Φ6",
+        "Φ7",
+        "Φ9"
+      ],
+      "operators": [
+        "echo",
+        "χ(t)"
+      ],
+      "status": "MAPPED",
+      "candidate_count": 24,
+      "top_candidates": [
+        {
+          "engine_name": "christping_validator_engine",
+          "engine_base": "christping_validator_engine",
+          "root": "aiweb/engines/christping_validator_engine",
+          "family": "engines",
+          "canonical_score": 126,
+          "runtime_role_score": 37,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 16,
+          "roles": {
+            "engine_definition": 6,
+            "test_file": 2
+          },
+          "sample_files": [
+            "aiweb/engines/christping_validator_engine/christping_validator_core.py",
+            "aiweb/engines/christping_validator_engine/test_christping_validator_core.py",
+            "aiweb/engines/christping_validator_engine/README.md",
+            "aiweb/engines/christping_validator_engine/engine_manifest.json",
+            "aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/README.md",
+            "aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/ping_calibrator_core.py",
+            "aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/engine_manifest.json",
+            "aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/test_ping_calibrator_core.py"
+          ]
+        },
+        {
+          "engine_name": "christping_validator_engine",
+          "engine_base": "christping_validator_engine",
+          "root": "engines/christping_validator_engine",
+          "family": "engines",
+          "canonical_score": 86,
+          "runtime_role_score": 33,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 16,
+          "roles": {
+            "engine_definition": 6,
+            "test_file": 2
+          },
+          "sample_files": [
+            "engines/christping_validator_engine/christping_validator_core.py",
+            "engines/christping_validator_engine/test_christping_validator_core.py",
+            "engines/christping_validator_engine/README.md",
+            "engines/christping_validator_engine/engine_manifest.json",
+            "engines/christping_validator_engine/ping_harmonics_calibrator/README.md",
+            "engines/christping_validator_engine/ping_harmonics_calibrator/ping_calibrator_core.py",
+            "engines/christping_validator_engine/ping_harmonics_calibrator/engine_manifest.json",
+            "engines/christping_validator_engine/ping_harmonics_calibrator/test_ping_calibrator_core.py"
+          ]
+        },
+        {
+          "engine_name": "christping_validator_engine_frozen_v1-0.01",
+          "engine_base": "christping_validator_engine",
+          "root": "aiweb/engines/christping_validator_engine_frozen_v1-0.01",
+          "family": "engines",
+          "canonical_score": 106,
+          "runtime_role_score": 28,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 16,
+          "roles": {
+            "engine_definition": 6,
+            "test_file": 2
+          },
+          "sample_files": [
+            "aiweb/engines/christping_validator_engine_frozen_v1-0.01/christping_validator_core.py",
+            "aiweb/engines/christping_validator_engine_frozen_v1-0.01/test_christping_validator_core.py",
+            "aiweb/engines/christping_validator_engine_frozen_v1-0.01/README.md",
+            "aiweb/engines/christping_validator_engine_frozen_v1-0.01/engine_manifest.json",
+            "aiweb/engines/christping_validator_engine_frozen_v1-0.01/ping_harmonics_calibrator/README.md",
+            "aiweb/engines/christping_validator_engine_frozen_v1-0.01/ping_harmonics_calibrator/ping_calibrator_core.py",
+            "aiweb/engines/christping_validator_engine_frozen_v1-0.01/ping_harmonics_calibrator/engine_manifest.json",
+            "aiweb/engines/christping_validator_engine_frozen_v1-0.01/ping_harmonics_calibrator/test_ping_calibrator_core.py"
+          ]
+        },
+        {
+          "engine_name": "echo_trace_visualizer",
+          "engine_base": "echo_trace_visualizer",
+          "root": "aiweb/engines/echo_trace_visualizer",
+          "family": "engines",
+          "canonical_score": 120,
+          "runtime_role_score": 27,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9,
+          "roles": {
+            "test_file": 1,
+            "engine_definition": 3
+          },
+          "sample_files": [
+            "aiweb/engines/echo_trace_visualizer/test_echo_trace_core.py",
+            "aiweb/engines/echo_trace_visualizer/README.md",
+            "aiweb/engines/echo_trace_visualizer/engine_manifest.json",
+            "aiweb/engines/echo_trace_visualizer/echo_trace_core.py"
+          ]
+        },
+        {
+          "engine_name": "symbolic_feedback_loop_engine",
+          "engine_base": "symbolic_feedback_loop_engine",
+          "root": "aiweb/engines/symbolic_feedback_loop_engine",
+          "family": "engines",
+          "canonical_score": 120,
+          "runtime_role_score": 27,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/symbolic_feedback_loop_engine/README.md",
+            "aiweb/engines/symbolic_feedback_loop_engine/feedback_loop_core.py",
+            "aiweb/engines/symbolic_feedback_loop_engine/loop_trace.json",
+            "aiweb/engines/symbolic_feedback_loop_engine/engine_manifest.json",
+            "aiweb/engines/symbolic_feedback_loop_engine/test_feedback_loop.py"
+          ]
+        },
+        {
+          "engine_name": "agent_reflection_engine",
+          "engine_base": "agent_reflection_engine",
+          "root": "aiweb/engines/agent_reflection_engine",
+          "family": "engines",
+          "canonical_score": 119,
+          "runtime_role_score": 26,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/agent_reflection_engine/README.md",
+            "aiweb/engines/agent_reflection_engine/reflection_manifest.json",
+            "aiweb/engines/agent_reflection_engine/reflection_core.py",
+            "aiweb/engines/agent_reflection_engine/test_reflection.py"
+          ]
+        },
+        {
+          "engine_name": "christping_validator_engine_frozen_v1-0.01",
+          "engine_base": "christping_validator_engine",
+          "root": "engines/christping_validator_engine_frozen_v1-0.01",
+          "family": "engines",
+          "canonical_score": 66,
+          "runtime_role_score": 24,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 16,
+          "roles": {
+            "engine_definition": 6,
+            "test_file": 2
+          },
+          "sample_files": [
+            "engines/christping_validator_engine_frozen_v1-0.01/christping_validator_core.py",
+            "engines/christping_validator_engine_frozen_v1-0.01/test_christping_validator_core.py",
+            "engines/christping_validator_engine_frozen_v1-0.01/README.md",
+            "engines/christping_validator_engine_frozen_v1-0.01/engine_manifest.json",
+            "engines/christping_validator_engine_frozen_v1-0.01/ping_harmonics_calibrator/README.md",
+            "engines/christping_validator_engine_frozen_v1-0.01/ping_harmonics_calibrator/ping_calibrator_core.py",
+            "engines/christping_validator_engine_frozen_v1-0.01/ping_harmonics_calibrator/engine_manifest.json",
+            "engines/christping_validator_engine_frozen_v1-0.01/ping_harmonics_calibrator/test_ping_calibrator_core.py"
+          ]
+        },
+        {
+          "engine_name": "echo_trace_visualizer",
+          "engine_base": "echo_trace_visualizer",
+          "root": "engines/echo_trace_visualizer",
+          "family": "engines",
+          "canonical_score": 80,
+          "runtime_role_score": 23,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9,
+          "roles": {
+            "test_file": 1,
+            "engine_definition": 3
+          },
+          "sample_files": [
+            "engines/echo_trace_visualizer/test_echo_trace_core.py",
+            "engines/echo_trace_visualizer/README.md",
+            "engines/echo_trace_visualizer/engine_manifest.json",
+            "engines/echo_trace_visualizer/echo_trace_core.py"
+          ]
+        },
+        {
+          "engine_name": "symbolic_feedback_loop_engine",
+          "engine_base": "symbolic_feedback_loop_engine",
+          "root": "engines/symbolic_feedback_loop_engine",
+          "family": "engines",
+          "canonical_score": 80,
+          "runtime_role_score": 23,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "engines/symbolic_feedback_loop_engine/README.md",
+            "engines/symbolic_feedback_loop_engine/feedback_loop_core.py",
+            "engines/symbolic_feedback_loop_engine/loop_trace.json",
+            "engines/symbolic_feedback_loop_engine/engine_manifest.json",
+            "engines/symbolic_feedback_loop_engine/test_feedback_loop.py"
+          ]
+        },
+        {
+          "engine_name": "agent_reflection_engine",
+          "engine_base": "agent_reflection_engine",
+          "root": "engines/agent_reflection_engine",
+          "family": "engines",
+          "canonical_score": 79,
+          "runtime_role_score": 22,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "engines/agent_reflection_engine/README.md",
+            "engines/agent_reflection_engine/reflection_manifest.json",
+            "engines/agent_reflection_engine/reflection_core.py",
+            "engines/agent_reflection_engine/test_reflection.py"
+          ]
+        },
+        {
+          "engine_name": "symbolic_feedback_loop_engine",
+          "engine_base": "symbolic_feedback_loop_engine",
+          "root": "projects/recursive_lmm_grok1/engines/symbolic_feedback_loop_engine",
+          "family": "engines",
+          "canonical_score": 76,
+          "runtime_role_score": 22,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 8,
+          "roles": {
+            "engine_definition": 8,
+            "test_file": 2
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1/engines/symbolic_feedback_loop_engine/README.md",
+            "projects/recursive_lmm_grok1/engines/symbolic_feedback_loop_engine/feedback_loop_core.py",
+            "projects/recursive_lmm_grok1/engines/symbolic_feedback_loop_engine/loop_trace.json",
+            "projects/recursive_lmm_grok1/engines/symbolic_feedback_loop_engine/engine_manifest.json",
+            "projects/recursive_lmm_grok1/engines/symbolic_feedback_loop_engine/test_feedback_loop.py",
+            "projects/recursive_lmm_grok1/engines/symbolic_feedback_loop_engine/symbolic_feedback_loop_engine/README.md",
+            "projects/recursive_lmm_grok1/engines/symbolic_feedback_loop_engine/symbolic_feedback_loop_engine/feedback_loop_core.py",
+            "projects/recursive_lmm_grok1/engines/symbolic_feedback_loop_engine/symbolic_feedback_loop_engine/loop_trace.json"
+          ]
+        },
+        {
+          "engine_name": "agent_reflection_engine",
+          "engine_base": "agent_reflection_engine",
+          "root": "projects/recursive_lmm_grok1/engines/agent_reflection_engine",
+          "family": "engines",
+          "canonical_score": 74,
+          "runtime_role_score": 22,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 6,
+          "roles": {
+            "engine_definition": 6,
+            "test_file": 2
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1/engines/agent_reflection_engine/README.md",
+            "projects/recursive_lmm_grok1/engines/agent_reflection_engine/reflection_manifest.json",
+            "projects/recursive_lmm_grok1/engines/agent_reflection_engine/reflection_core.py",
+            "projects/recursive_lmm_grok1/engines/agent_reflection_engine/test_reflection.py",
+            "projects/recursive_lmm_grok1/engines/agent_reflection_engine/agent_reflection_engine/README.md",
+            "projects/recursive_lmm_grok1/engines/agent_reflection_engine/agent_reflection_engine/reflection_manifest.json",
+            "projects/recursive_lmm_grok1/engines/agent_reflection_engine/agent_reflection_engine/reflection_core.py",
+            "projects/recursive_lmm_grok1/engines/agent_reflection_engine/agent_reflection_engine/test_reflection.py"
+          ]
+        }
+      ]
+    },
+    {
+      "role_id": "drift_collapse",
+      "title": "Drift / Collapse / Firewall Arbitration",
+      "description": "Detects phase drift, unsafe skips, contradiction, collapse risk, and firewall intervention points.",
+      "required": true,
+      "phases": [
+        "Φ4",
+        "Φ5",
+        "Φ6"
+      ],
+      "operators": [
+        "ε(t,Φ)",
+        "∆Φ",
+        "χ(t)"
+      ],
+      "status": "MAPPED",
+      "candidate_count": 38,
+      "top_candidates": [
+        {
+          "engine_name": "drift_arbitration_engine",
+          "engine_base": "drift_arbitration_engine",
+          "root": "aiweb/engines/drift_arbitration_engine",
+          "family": "engines",
+          "canonical_score": 122,
+          "runtime_role_score": 42,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 17,
+          "symbol_count": 26,
+          "roles": {
+            "test_file": 6,
+            "engine_definition": 11
+          },
+          "sample_files": [
+            "aiweb/engines/drift_arbitration_engine/test_entropy_buffer_integration.py",
+            "aiweb/engines/drift_arbitration_engine/test_drift_arbitration.py",
+            "aiweb/engines/drift_arbitration_engine/run.py",
+            "aiweb/engines/drift_arbitration_engine/README.md",
+            "aiweb/engines/drift_arbitration_engine/test_log.txt",
+            "aiweb/engines/drift_arbitration_engine/engine_manifest.json",
+            "aiweb/engines/drift_arbitration_engine/__init__.py",
+            "aiweb/engines/drift_arbitration_engine/drift_arbitration_engine_frozen_v1/test_drift_arbitration.py"
+          ]
+        },
+        {
+          "engine_name": "drift_arbitration_engine_frozen_v1-0.02",
+          "engine_base": "drift_arbitration_engine",
+          "root": "aiweb/engines/drift_arbitration_engine_frozen_v1-0.02",
+          "family": "engines",
+          "canonical_score": 117,
+          "runtime_role_score": 41,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 17,
+          "symbol_count": 26,
+          "roles": {
+            "test_file": 6,
+            "engine_definition": 11
+          },
+          "sample_files": [
+            "aiweb/engines/drift_arbitration_engine_frozen_v1-0.02/test_entropy_buffer_integration.py",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1-0.02/test_drift_arbitration.py",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1-0.02/run.py",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1-0.02/README.md",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1-0.02/test_log.txt",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1-0.02/engine_manifest.json",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1-0.02/__init__.py",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1-0.02/drift_arbitration_engine_frozen_v1/test_drift_arbitration.py"
+          ]
+        },
+        {
+          "engine_name": "drift_signature_logger",
+          "engine_base": "drift_signature_logger",
+          "root": "aiweb/engines/drift_signature_logger",
+          "family": "engines",
+          "canonical_score": 132,
+          "runtime_role_score": 40,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 12,
+          "symbol_count": 28,
+          "roles": {
+            "test_file": 3,
+            "engine_definition": 9
+          },
+          "sample_files": [
+            "aiweb/engines/drift_signature_logger/test_drift_signature_core.py",
+            "aiweb/engines/drift_signature_logger/README.md",
+            "aiweb/engines/drift_signature_logger/drift_signature_core.py",
+            "aiweb/engines/drift_signature_logger/engine_manifest.json",
+            "aiweb/engines/drift_signature_logger/ghost_loop_tagger/ghost_tagger_core.py",
+            "aiweb/engines/drift_signature_logger/ghost_loop_tagger/README.md",
+            "aiweb/engines/drift_signature_logger/ghost_loop_tagger/test_ghost_tagger_core.py",
+            "aiweb/engines/drift_signature_logger/ghost_loop_tagger/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "drift_arbitration_engine_frozen_v1-0.01",
+          "engine_base": "drift_arbitration_engine",
+          "root": "aiweb/engines/drift_arbitration_engine_frozen_v1-0.01",
+          "family": "engines",
+          "canonical_score": 108,
+          "runtime_role_score": 40,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 17,
+          "roles": {
+            "test_file": 3,
+            "engine_definition": 7
+          },
+          "sample_files": [
+            "aiweb/engines/drift_arbitration_engine_frozen_v1-0.01/test_drift_arbitration.py",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1-0.01/run.py",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1-0.01/README.md",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1-0.01/test_log.txt",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1-0.01/engine_manifest.json",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1-0.01/__init__.py",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1-0.01/entropy_buffer_upgrade/entropy_buffer_core.py",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1-0.01/entropy_buffer_upgrade/test_entropy_buffer_core.py"
+          ]
+        },
+        {
+          "engine_name": "drift_arbitration_engine_frozen_v1",
+          "engine_base": "drift_arbitration_engine",
+          "root": "aiweb/engines/drift_arbitration_engine_frozen_v1",
+          "family": "engines",
+          "canonical_score": 102,
+          "runtime_role_score": 40,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 9,
+          "roles": {
+            "test_file": 2,
+            "engine_definition": 4
+          },
+          "sample_files": [
+            "aiweb/engines/drift_arbitration_engine_frozen_v1/test_drift_arbitration.py",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1/run.py",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1/README.md",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1/test_log.txt",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1/engine_manifest.json",
+            "aiweb/engines/drift_arbitration_engine_frozen_v1/__init__.py"
+          ]
+        },
+        {
+          "engine_name": "gilligan_drift_correction_upgrade",
+          "engine_base": "gilligan_drift_correction_upgrade",
+          "root": "aiweb/engines/gilligan_drift_correction_upgrade",
+          "family": "engines",
+          "canonical_score": 121,
+          "runtime_role_score": 39,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 11,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/gilligan_drift_correction_upgrade/drift_correction_core.py",
+            "aiweb/engines/gilligan_drift_correction_upgrade/test_drift_correction_core.py",
+            "aiweb/engines/gilligan_drift_correction_upgrade/README.md",
+            "aiweb/engines/gilligan_drift_correction_upgrade/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "symbolic_drift_visualizer",
+          "engine_base": "symbolic_drift_visualizer",
+          "root": "aiweb/engines/symbolic_drift_visualizer",
+          "family": "engines",
+          "canonical_score": 121,
+          "runtime_role_score": 39,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 10,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/symbolic_drift_visualizer/drift_visualizer_core.py",
+            "aiweb/engines/symbolic_drift_visualizer/test_drift_visualizer_core.py",
+            "aiweb/engines/symbolic_drift_visualizer/README.md",
+            "aiweb/engines/symbolic_drift_visualizer/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "drift_analyzer_tool",
+          "engine_base": "drift_analyzer_tool",
+          "root": "aiweb/engines/drift_analyzer_tool",
+          "family": "engines",
+          "canonical_score": 120,
+          "runtime_role_score": 39,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9,
+          "roles": {
+            "test_file": 1,
+            "engine_definition": 3
+          },
+          "sample_files": [
+            "aiweb/engines/drift_analyzer_tool/test_drift_analyzer_core.py",
+            "aiweb/engines/drift_analyzer_tool/drift_analyzer_core.py",
+            "aiweb/engines/drift_analyzer_tool/README.md",
+            "aiweb/engines/drift_analyzer_tool/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "drift_arbitration_engine",
+          "engine_base": "drift_arbitration_engine",
+          "root": "engines/drift_arbitration_engine",
+          "family": "engines",
+          "canonical_score": 82,
+          "runtime_role_score": 38,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 17,
+          "symbol_count": 26,
+          "roles": {
+            "test_file": 6,
+            "engine_definition": 11
+          },
+          "sample_files": [
+            "engines/drift_arbitration_engine/test_entropy_buffer_integration.py",
+            "engines/drift_arbitration_engine/test_drift_arbitration.py",
+            "engines/drift_arbitration_engine/run.py",
+            "engines/drift_arbitration_engine/README.md",
+            "engines/drift_arbitration_engine/test_log.txt",
+            "engines/drift_arbitration_engine/engine_manifest.json",
+            "engines/drift_arbitration_engine/__init__.py",
+            "engines/drift_arbitration_engine/drift_arbitration_engine_frozen_v1/test_drift_arbitration.py"
+          ]
+        },
+        {
+          "engine_name": "collapse_prevention_engine",
+          "engine_base": "collapse_prevention_engine",
+          "root": "aiweb/engines/collapse_prevention_engine",
+          "family": "engines",
+          "canonical_score": 121,
+          "runtime_role_score": 37,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 10,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/collapse_prevention_engine/collapse_prevention_core.py",
+            "aiweb/engines/collapse_prevention_engine/test_collapse_prevention_core.py",
+            "aiweb/engines/collapse_prevention_engine/README.md",
+            "aiweb/engines/collapse_prevention_engine/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "drift_signature_logger",
+          "engine_base": "drift_signature_logger",
+          "root": "engines/drift_signature_logger",
+          "family": "engines",
+          "canonical_score": 94,
+          "runtime_role_score": 36,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 14,
+          "symbol_count": 29,
+          "roles": {
+            "test_file": 4,
+            "engine_definition": 10
+          },
+          "sample_files": [
+            "engines/drift_signature_logger/test_drift_core.py",
+            "engines/drift_signature_logger/test_drift_signature_core.py",
+            "engines/drift_signature_logger/README.md",
+            "engines/drift_signature_logger/drift_signature_core.py",
+            "engines/drift_signature_logger/drift_core.py",
+            "engines/drift_signature_logger/engine_manifest.json",
+            "engines/drift_signature_logger/ghost_loop_tagger/ghost_tagger_core.py",
+            "engines/drift_signature_logger/ghost_loop_tagger/README.md"
+          ]
+        },
+        {
+          "engine_name": "drift_arbitration_engine_frozen_v1-0.01",
+          "engine_base": "drift_arbitration_engine",
+          "root": "engines/drift_arbitration_engine_frozen_v1-0.01",
+          "family": "engines",
+          "canonical_score": 68,
+          "runtime_role_score": 36,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 17,
+          "roles": {
+            "test_file": 3,
+            "engine_definition": 7
+          },
+          "sample_files": [
+            "engines/drift_arbitration_engine_frozen_v1-0.01/test_drift_arbitration.py",
+            "engines/drift_arbitration_engine_frozen_v1-0.01/run.py",
+            "engines/drift_arbitration_engine_frozen_v1-0.01/README.md",
+            "engines/drift_arbitration_engine_frozen_v1-0.01/test_log.txt",
+            "engines/drift_arbitration_engine_frozen_v1-0.01/engine_manifest.json",
+            "engines/drift_arbitration_engine_frozen_v1-0.01/__init__.py",
+            "engines/drift_arbitration_engine_frozen_v1-0.01/entropy_buffer_upgrade/entropy_buffer_core.py",
+            "engines/drift_arbitration_engine_frozen_v1-0.01/entropy_buffer_upgrade/test_entropy_buffer_core.py"
+          ]
+        }
+      ]
+    },
+    {
+      "role_id": "christping_correction",
+      "title": "χ(t) / ChristPing Correction Layer",
+      "description": "Handles lawful correction after collapse, silence, grace pulse, and reentry gating.",
+      "required": true,
+      "phases": [
+        "Φ5",
+        "Φ6",
+        "Φ7"
+      ],
+      "operators": [
+        "χ(t)"
+      ],
+      "status": "MAPPED",
+      "candidate_count": 23,
+      "top_candidates": [
+        {
+          "engine_name": "christping_listener",
+          "engine_base": "christping_listener",
+          "root": "aiweb/engines/christping_listener",
+          "family": "engines",
+          "canonical_score": 120,
+          "runtime_role_score": 59,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7,
+          "roles": {
+            "engine_definition": 4
+          },
+          "sample_files": [
+            "aiweb/engines/christping_listener/listener_config.json",
+            "aiweb/engines/christping_listener/README.md",
+            "aiweb/engines/christping_listener/christ_listener.py",
+            "aiweb/engines/christping_listener/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "christping_listener",
+          "engine_base": "christping_listener",
+          "root": "engines/christping_listener",
+          "family": "engines",
+          "canonical_score": 80,
+          "runtime_role_score": 55,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7,
+          "roles": {
+            "engine_definition": 4
+          },
+          "sample_files": [
+            "engines/christping_listener/listener_config.json",
+            "engines/christping_listener/README.md",
+            "engines/christping_listener/christ_listener.py",
+            "engines/christping_listener/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "christping_listener",
+          "engine_base": "christping_listener",
+          "root": "projects/recursive_lmm_grok1/engines/christping_listener",
+          "family": "engines",
+          "canonical_score": 75,
+          "runtime_role_score": 54,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 14,
+          "roles": {
+            "engine_definition": 8
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1/engines/christping_listener/listener_config.json",
+            "projects/recursive_lmm_grok1/engines/christping_listener/README.md",
+            "projects/recursive_lmm_grok1/engines/christping_listener/christ_listener.py",
+            "projects/recursive_lmm_grok1/engines/christping_listener/engine_manifest.json",
+            "projects/recursive_lmm_grok1/engines/christping_listener/christping_listener/listener_config.json",
+            "projects/recursive_lmm_grok1/engines/christping_listener/christping_listener/README.md",
+            "projects/recursive_lmm_grok1/engines/christping_listener/christping_listener/christ_listener.py",
+            "projects/recursive_lmm_grok1/engines/christping_listener/christping_listener/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "christping_listener",
+          "engine_base": "christping_listener",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/christping_listener",
+          "family": "engines",
+          "canonical_score": 70,
+          "runtime_role_score": 54,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7,
+          "roles": {
+            "engine_definition": 4
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1_phase2/engines/christping_listener/listener_config.json",
+            "projects/recursive_lmm_grok1_phase2/engines/christping_listener/README.md",
+            "projects/recursive_lmm_grok1_phase2/engines/christping_listener/christ_listener.py",
+            "projects/recursive_lmm_grok1_phase2/engines/christping_listener/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "christping_listener_frozen_v1",
+          "engine_base": "christping_listener",
+          "root": "aiweb/engines/christping_listener_frozen_v1",
+          "family": "engines",
+          "canonical_score": 100,
+          "runtime_role_score": 50,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7,
+          "roles": {
+            "engine_definition": 4
+          },
+          "sample_files": [
+            "aiweb/engines/christping_listener_frozen_v1/listener_config.json",
+            "aiweb/engines/christping_listener_frozen_v1/README.md",
+            "aiweb/engines/christping_listener_frozen_v1/christ_listener.py",
+            "aiweb/engines/christping_listener_frozen_v1/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "christping_validator_engine",
+          "engine_base": "christping_validator_engine",
+          "root": "aiweb/engines/christping_validator_engine",
+          "family": "engines",
+          "canonical_score": 126,
+          "runtime_role_score": 49,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 16,
+          "roles": {
+            "engine_definition": 6,
+            "test_file": 2
+          },
+          "sample_files": [
+            "aiweb/engines/christping_validator_engine/christping_validator_core.py",
+            "aiweb/engines/christping_validator_engine/test_christping_validator_core.py",
+            "aiweb/engines/christping_validator_engine/README.md",
+            "aiweb/engines/christping_validator_engine/engine_manifest.json",
+            "aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/README.md",
+            "aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/ping_calibrator_core.py",
+            "aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/engine_manifest.json",
+            "aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/test_ping_calibrator_core.py"
+          ]
+        },
+        {
+          "engine_name": "christping_listener_frozen_v1",
+          "engine_base": "christping_listener",
+          "root": "engines/christping_listener_frozen_v1",
+          "family": "engines",
+          "canonical_score": 60,
+          "runtime_role_score": 46,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7,
+          "roles": {
+            "engine_definition": 4
+          },
+          "sample_files": [
+            "engines/christping_listener_frozen_v1/listener_config.json",
+            "engines/christping_listener_frozen_v1/README.md",
+            "engines/christping_listener_frozen_v1/christ_listener.py",
+            "engines/christping_listener_frozen_v1/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "christping_validator_engine",
+          "engine_base": "christping_validator_engine",
+          "root": "engines/christping_validator_engine",
+          "family": "engines",
+          "canonical_score": 86,
+          "runtime_role_score": 45,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 16,
+          "roles": {
+            "engine_definition": 6,
+            "test_file": 2
+          },
+          "sample_files": [
+            "engines/christping_validator_engine/christping_validator_core.py",
+            "engines/christping_validator_engine/test_christping_validator_core.py",
+            "engines/christping_validator_engine/README.md",
+            "engines/christping_validator_engine/engine_manifest.json",
+            "engines/christping_validator_engine/ping_harmonics_calibrator/README.md",
+            "engines/christping_validator_engine/ping_harmonics_calibrator/ping_calibrator_core.py",
+            "engines/christping_validator_engine/ping_harmonics_calibrator/engine_manifest.json",
+            "engines/christping_validator_engine/ping_harmonics_calibrator/test_ping_calibrator_core.py"
+          ]
+        },
+        {
+          "engine_name": "christping_listener_frozen_v1",
+          "engine_base": "christping_listener",
+          "root": "simulations/phase_vs_linear_augmented/engines/christping_listener_frozen_v1",
+          "family": "engines",
+          "canonical_score": 51,
+          "runtime_role_score": 45,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 7,
+          "roles": {
+            "engine_definition": 5
+          },
+          "sample_files": [
+            "simulations/phase_vs_linear_augmented/engines/christping_listener_frozen_v1/listener_config.json",
+            "simulations/phase_vs_linear_augmented/engines/christping_listener_frozen_v1/README.md",
+            "simulations/phase_vs_linear_augmented/engines/christping_listener_frozen_v1/christ_listener.py",
+            "simulations/phase_vs_linear_augmented/engines/christping_listener_frozen_v1/engine_manifest.json",
+            "simulations/phase_vs_linear_augmented/engines/christping_listener_frozen_v1/__init__.py"
+          ]
+        },
+        {
+          "engine_name": "christping_listener_frozen_v1",
+          "engine_base": "christping_listener",
+          "root": "aiweb/runtime_wrappers/protoforge_frozen_v1.06_db_enabled/engines/christping_listener_frozen_v1",
+          "family": "engines",
+          "canonical_score": 50,
+          "runtime_role_score": 45,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7,
+          "roles": {
+            "engine_definition": 4
+          },
+          "sample_files": [
+            "aiweb/runtime_wrappers/protoforge_frozen_v1.06_db_enabled/engines/christping_listener_frozen_v1/listener_config.json",
+            "aiweb/runtime_wrappers/protoforge_frozen_v1.06_db_enabled/engines/christping_listener_frozen_v1/README.md",
+            "aiweb/runtime_wrappers/protoforge_frozen_v1.06_db_enabled/engines/christping_listener_frozen_v1/christ_listener.py",
+            "aiweb/runtime_wrappers/protoforge_frozen_v1.06_db_enabled/engines/christping_listener_frozen_v1/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "christping_listener_frozen_v1",
+          "engine_base": "christping_listener",
+          "root": "runtime_wrappers/protoforge_frozen_v1.06_db_enabled/engines/christping_listener_frozen_v1",
+          "family": "engines",
+          "canonical_score": 50,
+          "runtime_role_score": 45,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7,
+          "roles": {
+            "engine_definition": 4
+          },
+          "sample_files": [
+            "runtime_wrappers/protoforge_frozen_v1.06_db_enabled/engines/christping_listener_frozen_v1/listener_config.json",
+            "runtime_wrappers/protoforge_frozen_v1.06_db_enabled/engines/christping_listener_frozen_v1/README.md",
+            "runtime_wrappers/protoforge_frozen_v1.06_db_enabled/engines/christping_listener_frozen_v1/christ_listener.py",
+            "runtime_wrappers/protoforge_frozen_v1.06_db_enabled/engines/christping_listener_frozen_v1/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "christping_listener_frozen_v1",
+          "engine_base": "christping_listener",
+          "root": "simulations/phase_vs_linear_augmented_frozen_v1-0.01/engines/christping_listener_frozen_v1",
+          "family": "engines",
+          "canonical_score": 50,
+          "runtime_role_score": 45,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 7,
+          "roles": {
+            "engine_definition": 4
+          },
+          "sample_files": [
+            "simulations/phase_vs_linear_augmented_frozen_v1-0.01/engines/christping_listener_frozen_v1/listener_config.json",
+            "simulations/phase_vs_linear_augmented_frozen_v1-0.01/engines/christping_listener_frozen_v1/README.md",
+            "simulations/phase_vs_linear_augmented_frozen_v1-0.01/engines/christping_listener_frozen_v1/christ_listener.py",
+            "simulations/phase_vs_linear_augmented_frozen_v1-0.01/engines/christping_listener_frozen_v1/engine_manifest.json"
+          ]
+        }
+      ]
+    },
+    {
+      "role_id": "spc_cold_storage",
+      "title": "SPC / Cold Storage / Archive Containment",
+      "description": "Keeps unresolved loops in non-destructive cold storage until lawful retrieval or resurrection.",
+      "required": true,
+      "phases": [
+        "Φ5",
+        "Φ6",
+        "Φ8",
+        "Φ9"
+      ],
+      "operators": [
+        "SPC",
+        "RPM"
+      ],
+      "status": "MAPPED",
+      "candidate_count": 31,
+      "top_candidates": [
+        {
+          "engine_name": "symbolic_capacitor_engine",
+          "engine_base": "symbolic_capacitor_engine",
+          "root": "aiweb/engines/symbolic_capacitor_engine",
+          "family": "engines",
+          "canonical_score": 125,
+          "runtime_role_score": 49,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 10,
+          "roles": {
+            "engine_definition": 7,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/symbolic_capacitor_engine/README.md",
+            "aiweb/engines/symbolic_capacitor_engine/engine_manifest.json",
+            "aiweb/engines/symbolic_capacitor_engine/resonance_sync.json",
+            "aiweb/engines/symbolic_capacitor_engine/capacitor_core.py",
+            "aiweb/engines/symbolic_capacitor_engine/resonance_decay_tracker/test_decay_tracker_core.py",
+            "aiweb/engines/symbolic_capacitor_engine/resonance_decay_tracker/README.md",
+            "aiweb/engines/symbolic_capacitor_engine/resonance_decay_tracker/engine_manifest.json",
+            "aiweb/engines/symbolic_capacitor_engine/resonance_decay_tracker/decay_tracker_core.py"
+          ]
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine",
+          "engine_base": "symbolic_capacitor_engine",
+          "root": "engines/symbolic_capacitor_engine",
+          "family": "engines",
+          "canonical_score": 85,
+          "runtime_role_score": 45,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 10,
+          "roles": {
+            "engine_definition": 7,
+            "test_file": 1
+          },
+          "sample_files": [
+            "engines/symbolic_capacitor_engine/README.md",
+            "engines/symbolic_capacitor_engine/engine_manifest.json",
+            "engines/symbolic_capacitor_engine/resonance_sync.json",
+            "engines/symbolic_capacitor_engine/capacitor_core.py",
+            "engines/symbolic_capacitor_engine/resonance_decay_tracker/test_decay_tracker_core.py",
+            "engines/symbolic_capacitor_engine/resonance_decay_tracker/README.md",
+            "engines/symbolic_capacitor_engine/resonance_decay_tracker/engine_manifest.json",
+            "engines/symbolic_capacitor_engine/resonance_decay_tracker/decay_tracker_core.py"
+          ]
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine",
+          "engine_base": "symbolic_capacitor_engine",
+          "root": "projects/recursive_lmm_grok1/engines/symbolic_capacitor_engine",
+          "family": "engines",
+          "canonical_score": 85,
+          "runtime_role_score": 45,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 16,
+          "symbol_count": 20,
+          "roles": {
+            "engine_definition": 14,
+            "test_file": 2
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1/engines/symbolic_capacitor_engine/README.md",
+            "projects/recursive_lmm_grok1/engines/symbolic_capacitor_engine/engine_manifest.json",
+            "projects/recursive_lmm_grok1/engines/symbolic_capacitor_engine/resonance_sync.json",
+            "projects/recursive_lmm_grok1/engines/symbolic_capacitor_engine/capacitor_core.py",
+            "projects/recursive_lmm_grok1/engines/symbolic_capacitor_engine/symbolic_capacitor_engine/README.md",
+            "projects/recursive_lmm_grok1/engines/symbolic_capacitor_engine/symbolic_capacitor_engine/engine_manifest.json",
+            "projects/recursive_lmm_grok1/engines/symbolic_capacitor_engine/symbolic_capacitor_engine/resonance_sync.json",
+            "projects/recursive_lmm_grok1/engines/symbolic_capacitor_engine/symbolic_capacitor_engine/capacitor_core.py"
+          ]
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine",
+          "engine_base": "symbolic_capacitor_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/symbolic_capacitor_engine",
+          "family": "engines",
+          "canonical_score": 75,
+          "runtime_role_score": 44,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 10,
+          "roles": {
+            "engine_definition": 7,
+            "test_file": 1
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1_phase2/engines/symbolic_capacitor_engine/README.md",
+            "projects/recursive_lmm_grok1_phase2/engines/symbolic_capacitor_engine/engine_manifest.json",
+            "projects/recursive_lmm_grok1_phase2/engines/symbolic_capacitor_engine/resonance_sync.json",
+            "projects/recursive_lmm_grok1_phase2/engines/symbolic_capacitor_engine/capacitor_core.py",
+            "projects/recursive_lmm_grok1_phase2/engines/symbolic_capacitor_engine/resonance_decay_tracker/test_decay_tracker_core.py",
+            "projects/recursive_lmm_grok1_phase2/engines/symbolic_capacitor_engine/resonance_decay_tracker/README.md",
+            "projects/recursive_lmm_grok1_phase2/engines/symbolic_capacitor_engine/resonance_decay_tracker/engine_manifest.json",
+            "projects/recursive_lmm_grok1_phase2/engines/symbolic_capacitor_engine/resonance_decay_tracker/decay_tracker_core.py"
+          ]
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine_frozen_v1-0.01",
+          "engine_base": "symbolic_capacitor_engine",
+          "root": "aiweb/engines/symbolic_capacitor_engine_frozen_v1-0.01",
+          "family": "engines",
+          "canonical_score": 105,
+          "runtime_role_score": 40,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 10,
+          "roles": {
+            "engine_definition": 7,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/symbolic_capacitor_engine_frozen_v1-0.01/README.md",
+            "aiweb/engines/symbolic_capacitor_engine_frozen_v1-0.01/engine_manifest.json",
+            "aiweb/engines/symbolic_capacitor_engine_frozen_v1-0.01/resonance_sync.json",
+            "aiweb/engines/symbolic_capacitor_engine_frozen_v1-0.01/capacitor_core.py",
+            "aiweb/engines/symbolic_capacitor_engine_frozen_v1-0.01/resonance_decay_tracker/test_decay_tracker_core.py",
+            "aiweb/engines/symbolic_capacitor_engine_frozen_v1-0.01/resonance_decay_tracker/README.md",
+            "aiweb/engines/symbolic_capacitor_engine_frozen_v1-0.01/resonance_decay_tracker/engine_manifest.json",
+            "aiweb/engines/symbolic_capacitor_engine_frozen_v1-0.01/resonance_decay_tracker/decay_tracker_core.py"
+          ]
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine_frozen_v1",
+          "engine_base": "symbolic_capacitor_engine",
+          "root": "aiweb/engines/symbolic_capacitor_engine_frozen_v1",
+          "family": "engines",
+          "canonical_score": 99,
+          "runtime_role_score": 39,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4
+          },
+          "sample_files": [
+            "aiweb/engines/symbolic_capacitor_engine_frozen_v1/README.md",
+            "aiweb/engines/symbolic_capacitor_engine_frozen_v1/engine_manifest.json",
+            "aiweb/engines/symbolic_capacitor_engine_frozen_v1/resonance_sync.json",
+            "aiweb/engines/symbolic_capacitor_engine_frozen_v1/capacitor_core.py"
+          ]
+        },
+        {
+          "engine_name": "cold_archive_engine",
+          "engine_base": "cold_archive_engine",
+          "root": "aiweb/engines/cold_archive_engine",
+          "family": "engines",
+          "canonical_score": 70,
+          "runtime_role_score": 39,
+          "status_tags": [
+            "backup_or_archive"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/cold_archive_engine/archive_core.py",
+            "aiweb/engines/cold_archive_engine/README.md",
+            "aiweb/engines/cold_archive_engine/test_archive.py",
+            "aiweb/engines/cold_archive_engine/engine_manifest.json",
+            "aiweb/engines/cold_archive_engine/archive_state.json"
+          ]
+        },
+        {
+          "engine_name": "cold_archive_engine_frozen_v1",
+          "engine_base": "cold_archive_engine",
+          "root": "aiweb/engines/cold_archive_engine_frozen_v1",
+          "family": "engines",
+          "canonical_score": 79,
+          "runtime_role_score": 37,
+          "status_tags": [
+            "frozen",
+            "backup_or_archive"
+          ],
+          "file_count": 7,
+          "symbol_count": 11,
+          "roles": {
+            "test_file": 2,
+            "engine_definition": 5
+          },
+          "sample_files": [
+            "aiweb/engines/cold_archive_engine_frozen_v1/test_cold_archive.py",
+            "aiweb/engines/cold_archive_engine_frozen_v1/archive_core.py",
+            "aiweb/engines/cold_archive_engine_frozen_v1/run.py",
+            "aiweb/engines/cold_archive_engine_frozen_v1/README.md",
+            "aiweb/engines/cold_archive_engine_frozen_v1/test_archive.py",
+            "aiweb/engines/cold_archive_engine_frozen_v1/engine_manifest.json",
+            "aiweb/engines/cold_archive_engine_frozen_v1/archive_state.json"
+          ]
+        },
+        {
+          "engine_name": "cold_archive_engine_frozen_v1.01",
+          "engine_base": "cold_archive_engine",
+          "root": "aiweb/engines/cold_archive_engine_frozen_v1.01",
+          "family": "engines",
+          "canonical_score": 79,
+          "runtime_role_score": 37,
+          "status_tags": [
+            "frozen",
+            "backup_or_archive"
+          ],
+          "file_count": 7,
+          "symbol_count": 11,
+          "roles": {
+            "test_file": 2,
+            "engine_definition": 5
+          },
+          "sample_files": [
+            "aiweb/engines/cold_archive_engine_frozen_v1.01/test_cold_archive.py",
+            "aiweb/engines/cold_archive_engine_frozen_v1.01/archive_core.py",
+            "aiweb/engines/cold_archive_engine_frozen_v1.01/run.py",
+            "aiweb/engines/cold_archive_engine_frozen_v1.01/README.md",
+            "aiweb/engines/cold_archive_engine_frozen_v1.01/test_archive.py",
+            "aiweb/engines/cold_archive_engine_frozen_v1.01/engine_manifest.json",
+            "aiweb/engines/cold_archive_engine_frozen_v1.01/archive_state.json"
+          ]
+        },
+        {
+          "engine_name": "cold_archive_engine_frozen_v1.1.01",
+          "engine_base": "cold_archive_engine",
+          "root": "aiweb/engines/cold_archive_engine_frozen_v1.1.01",
+          "family": "engines",
+          "canonical_score": 75,
+          "runtime_role_score": 37,
+          "status_tags": [
+            "frozen",
+            "backup_or_archive"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/cold_archive_engine_frozen_v1.1.01/archive_core.py",
+            "aiweb/engines/cold_archive_engine_frozen_v1.1.01/README.md",
+            "aiweb/engines/cold_archive_engine_frozen_v1.1.01/test_archive.py",
+            "aiweb/engines/cold_archive_engine_frozen_v1.1.01/engine_manifest.json",
+            "aiweb/engines/cold_archive_engine_frozen_v1.1.01/archive_state.json"
+          ]
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine_frozen_v1-0.01",
+          "engine_base": "symbolic_capacitor_engine",
+          "root": "engines/symbolic_capacitor_engine_frozen_v1-0.01",
+          "family": "engines",
+          "canonical_score": 65,
+          "runtime_role_score": 36,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 10,
+          "roles": {
+            "engine_definition": 7,
+            "test_file": 1
+          },
+          "sample_files": [
+            "engines/symbolic_capacitor_engine_frozen_v1-0.01/README.md",
+            "engines/symbolic_capacitor_engine_frozen_v1-0.01/engine_manifest.json",
+            "engines/symbolic_capacitor_engine_frozen_v1-0.01/resonance_sync.json",
+            "engines/symbolic_capacitor_engine_frozen_v1-0.01/capacitor_core.py",
+            "engines/symbolic_capacitor_engine_frozen_v1-0.01/resonance_decay_tracker/test_decay_tracker_core.py",
+            "engines/symbolic_capacitor_engine_frozen_v1-0.01/resonance_decay_tracker/README.md",
+            "engines/symbolic_capacitor_engine_frozen_v1-0.01/resonance_decay_tracker/engine_manifest.json",
+            "engines/symbolic_capacitor_engine_frozen_v1-0.01/resonance_decay_tracker/decay_tracker_core.py"
+          ]
+        },
+        {
+          "engine_name": "symbolic_capacitor_engine_frozen_v1",
+          "engine_base": "symbolic_capacitor_engine",
+          "root": "engines/symbolic_capacitor_engine_frozen_v1",
+          "family": "engines",
+          "canonical_score": 59,
+          "runtime_role_score": 35,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4
+          },
+          "sample_files": [
+            "engines/symbolic_capacitor_engine_frozen_v1/README.md",
+            "engines/symbolic_capacitor_engine_frozen_v1/engine_manifest.json",
+            "engines/symbolic_capacitor_engine_frozen_v1/resonance_sync.json",
+            "engines/symbolic_capacitor_engine_frozen_v1/capacitor_core.py"
+          ]
+        }
+      ]
+    },
+    {
+      "role_id": "loop_resurrection",
+      "title": "Loop Resurrection / Lawful Return",
+      "description": "Maps engines responsible for returning sealed loops through echo-confirmed restoration.",
+      "required": true,
+      "phases": [
+        "Φ6",
+        "Φ7",
+        "Φ8",
+        "Φ9"
+      ],
+      "operators": [
+        "χ(t)",
+        "RPM"
+      ],
+      "status": "MAPPED",
+      "candidate_count": 15,
+      "top_candidates": [
+        {
+          "engine_name": "loop_resurrection_engine",
+          "engine_base": "loop_resurrection_engine",
+          "root": "aiweb/engines/loop_resurrection_engine",
+          "family": "engines",
+          "canonical_score": 120,
+          "runtime_role_score": 49,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/loop_resurrection_engine/resurrection_core.py",
+            "aiweb/engines/loop_resurrection_engine/test_resurrection.py",
+            "aiweb/engines/loop_resurrection_engine/resurrection_queue.json",
+            "aiweb/engines/loop_resurrection_engine/README.md",
+            "aiweb/engines/loop_resurrection_engine/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "loop_resurrection_engine",
+          "engine_base": "loop_resurrection_engine",
+          "root": "engines/loop_resurrection_engine",
+          "family": "engines",
+          "canonical_score": 80,
+          "runtime_role_score": 45,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "engines/loop_resurrection_engine/resurrection_core.py",
+            "engines/loop_resurrection_engine/test_resurrection.py",
+            "engines/loop_resurrection_engine/resurrection_queue.json",
+            "engines/loop_resurrection_engine/README.md",
+            "engines/loop_resurrection_engine/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "loop_resurrection_engine",
+          "engine_base": "loop_resurrection_engine",
+          "root": "projects/recursive_lmm_grok1/engines/loop_resurrection_engine",
+          "family": "engines",
+          "canonical_score": 70,
+          "runtime_role_score": 44,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1/engines/loop_resurrection_engine/resurrection_core.py",
+            "projects/recursive_lmm_grok1/engines/loop_resurrection_engine/test_resurrection.py",
+            "projects/recursive_lmm_grok1/engines/loop_resurrection_engine/resurrection_queue.json",
+            "projects/recursive_lmm_grok1/engines/loop_resurrection_engine/README.md",
+            "projects/recursive_lmm_grok1/engines/loop_resurrection_engine/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "loop_resurrection_engine_frozen_v1",
+          "engine_base": "loop_resurrection_engine",
+          "root": "aiweb/engines/loop_resurrection_engine_frozen_v1",
+          "family": "engines",
+          "canonical_score": 104,
+          "runtime_role_score": 40,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 11,
+          "roles": {
+            "engine_definition": 5,
+            "test_file": 2
+          },
+          "sample_files": [
+            "aiweb/engines/loop_resurrection_engine_frozen_v1/resurrection_core.py",
+            "aiweb/engines/loop_resurrection_engine_frozen_v1/test_resurrection.py",
+            "aiweb/engines/loop_resurrection_engine_frozen_v1/resurrection_queue.json",
+            "aiweb/engines/loop_resurrection_engine_frozen_v1/run.py",
+            "aiweb/engines/loop_resurrection_engine_frozen_v1/README.md",
+            "aiweb/engines/loop_resurrection_engine_frozen_v1/test_loop_resurrection.py",
+            "aiweb/engines/loop_resurrection_engine_frozen_v1/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "loop_resurrection_engine_frozen_v1.01",
+          "engine_base": "loop_resurrection_engine",
+          "root": "aiweb/engines/loop_resurrection_engine_frozen_v1.01",
+          "family": "engines",
+          "canonical_score": 104,
+          "runtime_role_score": 40,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 11,
+          "roles": {
+            "engine_definition": 5,
+            "test_file": 2
+          },
+          "sample_files": [
+            "aiweb/engines/loop_resurrection_engine_frozen_v1.01/resurrection_core.py",
+            "aiweb/engines/loop_resurrection_engine_frozen_v1.01/test_resurrection.py",
+            "aiweb/engines/loop_resurrection_engine_frozen_v1.01/resurrection_queue.json",
+            "aiweb/engines/loop_resurrection_engine_frozen_v1.01/run.py",
+            "aiweb/engines/loop_resurrection_engine_frozen_v1.01/README.md",
+            "aiweb/engines/loop_resurrection_engine_frozen_v1.01/test_loop_resurrection.py",
+            "aiweb/engines/loop_resurrection_engine_frozen_v1.01/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "resurrection_planner",
+          "engine_base": "resurrection_planner",
+          "root": "aiweb/engines/resurrection_planner",
+          "family": "engines",
+          "canonical_score": 120,
+          "runtime_role_score": 39,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9,
+          "roles": {
+            "test_file": 1,
+            "engine_definition": 3
+          },
+          "sample_files": [
+            "aiweb/engines/resurrection_planner/test_resurrection_planner_core.py",
+            "aiweb/engines/resurrection_planner/README.md",
+            "aiweb/engines/resurrection_planner/resurrection_planner_core.py",
+            "aiweb/engines/resurrection_planner/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "loop_resurrection_engine_frozen_v1",
+          "engine_base": "loop_resurrection_engine",
+          "root": "engines/loop_resurrection_engine_frozen_v1",
+          "family": "engines",
+          "canonical_score": 64,
+          "runtime_role_score": 36,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 11,
+          "roles": {
+            "engine_definition": 5,
+            "test_file": 2
+          },
+          "sample_files": [
+            "engines/loop_resurrection_engine_frozen_v1/resurrection_core.py",
+            "engines/loop_resurrection_engine_frozen_v1/test_resurrection.py",
+            "engines/loop_resurrection_engine_frozen_v1/resurrection_queue.json",
+            "engines/loop_resurrection_engine_frozen_v1/run.py",
+            "engines/loop_resurrection_engine_frozen_v1/README.md",
+            "engines/loop_resurrection_engine_frozen_v1/test_loop_resurrection.py",
+            "engines/loop_resurrection_engine_frozen_v1/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "loop_resurrection_engine_frozen_v1.01",
+          "engine_base": "loop_resurrection_engine",
+          "root": "engines/loop_resurrection_engine_frozen_v1.01",
+          "family": "engines",
+          "canonical_score": 64,
+          "runtime_role_score": 36,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 11,
+          "roles": {
+            "engine_definition": 5,
+            "test_file": 2
+          },
+          "sample_files": [
+            "engines/loop_resurrection_engine_frozen_v1.01/resurrection_core.py",
+            "engines/loop_resurrection_engine_frozen_v1.01/test_resurrection.py",
+            "engines/loop_resurrection_engine_frozen_v1.01/resurrection_queue.json",
+            "engines/loop_resurrection_engine_frozen_v1.01/run.py",
+            "engines/loop_resurrection_engine_frozen_v1.01/README.md",
+            "engines/loop_resurrection_engine_frozen_v1.01/test_loop_resurrection.py",
+            "engines/loop_resurrection_engine_frozen_v1.01/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "resurrection_planner",
+          "engine_base": "resurrection_planner",
+          "root": "engines/resurrection_planner",
+          "family": "engines",
+          "canonical_score": 80,
+          "runtime_role_score": 35,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9,
+          "roles": {
+            "test_file": 1,
+            "engine_definition": 3
+          },
+          "sample_files": [
+            "engines/resurrection_planner/test_resurrection_planner_core.py",
+            "engines/resurrection_planner/README.md",
+            "engines/resurrection_planner/resurrection_planner_core.py",
+            "engines/resurrection_planner/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "loop_resurrection_engine_frozen_v1",
+          "engine_base": "loop_resurrection_engine",
+          "root": "simulations/phase_vs_linear_augmented/engines/loop_resurrection_engine_frozen_v1",
+          "family": "engines",
+          "canonical_score": 54,
+          "runtime_role_score": 35,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 7,
+          "symbol_count": 11,
+          "roles": {
+            "engine_definition": 5,
+            "test_file": 2
+          },
+          "sample_files": [
+            "simulations/phase_vs_linear_augmented/engines/loop_resurrection_engine_frozen_v1/resurrection_core.py",
+            "simulations/phase_vs_linear_augmented/engines/loop_resurrection_engine_frozen_v1/test_resurrection.py",
+            "simulations/phase_vs_linear_augmented/engines/loop_resurrection_engine_frozen_v1/resurrection_queue.json",
+            "simulations/phase_vs_linear_augmented/engines/loop_resurrection_engine_frozen_v1/run.py",
+            "simulations/phase_vs_linear_augmented/engines/loop_resurrection_engine_frozen_v1/README.md",
+            "simulations/phase_vs_linear_augmented/engines/loop_resurrection_engine_frozen_v1/test_loop_resurrection.py",
+            "simulations/phase_vs_linear_augmented/engines/loop_resurrection_engine_frozen_v1/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "resurrection_planner_frozen_v1-0.01",
+          "engine_base": "resurrection_planner",
+          "root": "aiweb/engines/resurrection_planner_frozen_v1-0.01",
+          "family": "engines",
+          "canonical_score": 100,
+          "runtime_role_score": 30,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9,
+          "roles": {
+            "test_file": 1,
+            "engine_definition": 3
+          },
+          "sample_files": [
+            "aiweb/engines/resurrection_planner_frozen_v1-0.01/test_resurrection_planner_core.py",
+            "aiweb/engines/resurrection_planner_frozen_v1-0.01/README.md",
+            "aiweb/engines/resurrection_planner_frozen_v1-0.01/resurrection_planner_core.py",
+            "aiweb/engines/resurrection_planner_frozen_v1-0.01/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "resurrection_planner_frozen_v1-0.01",
+          "engine_base": "resurrection_planner",
+          "root": "engines/resurrection_planner_frozen_v1-0.01",
+          "family": "engines",
+          "canonical_score": 60,
+          "runtime_role_score": 26,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9,
+          "roles": {
+            "test_file": 1,
+            "engine_definition": 3
+          },
+          "sample_files": [
+            "engines/resurrection_planner_frozen_v1-0.01/test_resurrection_planner_core.py",
+            "engines/resurrection_planner_frozen_v1-0.01/README.md",
+            "engines/resurrection_planner_frozen_v1-0.01/resurrection_planner_core.py",
+            "engines/resurrection_planner_frozen_v1-0.01/engine_manifest.json"
+          ]
+        }
+      ]
+    },
+    {
+      "role_id": "agent_kernel",
+      "title": "Agent Kernel / Gilligan Neo Athena Runtime",
+      "description": "Coordinates named agents, reflection, command authority, and inter-agent symbolic behavior.",
+      "required": true,
+      "phases": [
+        "Φ7",
+        "Φ8",
+        "Φ9"
+      ],
+      "operators": [
+        "ψ",
+        "χ(t)"
+      ],
+      "status": "MAPPED",
+      "candidate_count": 57,
+      "top_candidates": [
+        {
+          "engine_name": "recursive_agent_kernel",
+          "engine_base": "recursive_agent_kernel",
+          "root": "aiweb/engines/recursive_agent_kernel",
+          "family": "engines",
+          "canonical_score": 120,
+          "runtime_role_score": 37,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/recursive_agent_kernel/agent_kernel_manifest.json",
+            "aiweb/engines/recursive_agent_kernel/agent_kernel_core.py",
+            "aiweb/engines/recursive_agent_kernel/README.md",
+            "aiweb/engines/recursive_agent_kernel/test_agent_kernel.py",
+            "aiweb/engines/recursive_agent_kernel/recursion_state.json"
+          ]
+        },
+        {
+          "engine_name": "agent_reflection_engine",
+          "engine_base": "agent_reflection_engine",
+          "root": "aiweb/engines/agent_reflection_engine",
+          "family": "engines",
+          "canonical_score": 119,
+          "runtime_role_score": 36,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/agent_reflection_engine/README.md",
+            "aiweb/engines/agent_reflection_engine/reflection_manifest.json",
+            "aiweb/engines/agent_reflection_engine/reflection_core.py",
+            "aiweb/engines/agent_reflection_engine/test_reflection.py"
+          ]
+        },
+        {
+          "engine_name": "recursive_agent_kernel",
+          "engine_base": "recursive_agent_kernel",
+          "root": "engines/recursive_agent_kernel",
+          "family": "engines",
+          "canonical_score": 80,
+          "runtime_role_score": 33,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "engines/recursive_agent_kernel/agent_kernel_manifest.json",
+            "engines/recursive_agent_kernel/agent_kernel_core.py",
+            "engines/recursive_agent_kernel/README.md",
+            "engines/recursive_agent_kernel/test_agent_kernel.py",
+            "engines/recursive_agent_kernel/recursion_state.json"
+          ]
+        },
+        {
+          "engine_name": "agent_reflection_engine",
+          "engine_base": "agent_reflection_engine",
+          "root": "engines/agent_reflection_engine",
+          "family": "engines",
+          "canonical_score": 79,
+          "runtime_role_score": 32,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "engines/agent_reflection_engine/README.md",
+            "engines/agent_reflection_engine/reflection_manifest.json",
+            "engines/agent_reflection_engine/reflection_core.py",
+            "engines/agent_reflection_engine/test_reflection.py"
+          ]
+        },
+        {
+          "engine_name": "recursive_agent_kernel",
+          "engine_base": "recursive_agent_kernel",
+          "root": "projects/recursive_lmm_grok1/engines/recursive_agent_kernel",
+          "family": "engines",
+          "canonical_score": 76,
+          "runtime_role_score": 32,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6,
+          "roles": {
+            "engine_definition": 8,
+            "test_file": 2
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1/engines/recursive_agent_kernel/agent_kernel_manifest.json",
+            "projects/recursive_lmm_grok1/engines/recursive_agent_kernel/agent_kernel_core.py",
+            "projects/recursive_lmm_grok1/engines/recursive_agent_kernel/README.md",
+            "projects/recursive_lmm_grok1/engines/recursive_agent_kernel/test_agent_kernel.py",
+            "projects/recursive_lmm_grok1/engines/recursive_agent_kernel/recursion_state.json",
+            "projects/recursive_lmm_grok1/engines/recursive_agent_kernel/recursive_agent_kernel/agent_kernel_manifest.json",
+            "projects/recursive_lmm_grok1/engines/recursive_agent_kernel/recursive_agent_kernel/agent_kernel_core.py",
+            "projects/recursive_lmm_grok1/engines/recursive_agent_kernel/recursive_agent_kernel/README.md"
+          ]
+        },
+        {
+          "engine_name": "agent_reflection_engine",
+          "engine_base": "agent_reflection_engine",
+          "root": "projects/recursive_lmm_grok1/engines/agent_reflection_engine",
+          "family": "engines",
+          "canonical_score": 74,
+          "runtime_role_score": 32,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 6,
+          "roles": {
+            "engine_definition": 6,
+            "test_file": 2
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1/engines/agent_reflection_engine/README.md",
+            "projects/recursive_lmm_grok1/engines/agent_reflection_engine/reflection_manifest.json",
+            "projects/recursive_lmm_grok1/engines/agent_reflection_engine/reflection_core.py",
+            "projects/recursive_lmm_grok1/engines/agent_reflection_engine/test_reflection.py",
+            "projects/recursive_lmm_grok1/engines/agent_reflection_engine/agent_reflection_engine/README.md",
+            "projects/recursive_lmm_grok1/engines/agent_reflection_engine/agent_reflection_engine/reflection_manifest.json",
+            "projects/recursive_lmm_grok1/engines/agent_reflection_engine/agent_reflection_engine/reflection_core.py",
+            "projects/recursive_lmm_grok1/engines/agent_reflection_engine/agent_reflection_engine/test_reflection.py"
+          ]
+        },
+        {
+          "engine_name": "recursive_agent_kernel",
+          "engine_base": "recursive_agent_kernel",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/recursive_agent_kernel",
+          "family": "engines",
+          "canonical_score": 70,
+          "runtime_role_score": 32,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1_phase2/engines/recursive_agent_kernel/agent_kernel_manifest.json",
+            "projects/recursive_lmm_grok1_phase2/engines/recursive_agent_kernel/agent_kernel_core.py",
+            "projects/recursive_lmm_grok1_phase2/engines/recursive_agent_kernel/README.md",
+            "projects/recursive_lmm_grok1_phase2/engines/recursive_agent_kernel/test_agent_kernel.py",
+            "projects/recursive_lmm_grok1_phase2/engines/recursive_agent_kernel/recursion_state.json"
+          ]
+        },
+        {
+          "engine_name": "agent_reflection_engine",
+          "engine_base": "agent_reflection_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/agent_reflection_engine",
+          "family": "engines",
+          "canonical_score": 69,
+          "runtime_role_score": 31,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1_phase2/engines/agent_reflection_engine/README.md",
+            "projects/recursive_lmm_grok1_phase2/engines/agent_reflection_engine/reflection_manifest.json",
+            "projects/recursive_lmm_grok1_phase2/engines/agent_reflection_engine/reflection_core.py",
+            "projects/recursive_lmm_grok1_phase2/engines/agent_reflection_engine/test_reflection.py"
+          ]
+        },
+        {
+          "engine_name": "recursive_agent_kernel_frozen_v1",
+          "engine_base": "recursive_agent_kernel",
+          "root": "aiweb/engines/recursive_agent_kernel_frozen_v1",
+          "family": "engines",
+          "canonical_score": 100,
+          "runtime_role_score": 28,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/recursive_agent_kernel_frozen_v1/agent_kernel_manifest.json",
+            "aiweb/engines/recursive_agent_kernel_frozen_v1/agent_kernel_core.py",
+            "aiweb/engines/recursive_agent_kernel_frozen_v1/README.md",
+            "aiweb/engines/recursive_agent_kernel_frozen_v1/test_agent_kernel.py",
+            "aiweb/engines/recursive_agent_kernel_frozen_v1/recursion_state.json"
+          ]
+        },
+        {
+          "engine_name": "gilligan_drift_correction_upgrade",
+          "engine_base": "gilligan_drift_correction_upgrade",
+          "root": "aiweb/engines/gilligan_drift_correction_upgrade",
+          "family": "engines",
+          "canonical_score": 121,
+          "runtime_role_score": 27,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 11,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/gilligan_drift_correction_upgrade/drift_correction_core.py",
+            "aiweb/engines/gilligan_drift_correction_upgrade/test_drift_correction_core.py",
+            "aiweb/engines/gilligan_drift_correction_upgrade/README.md",
+            "aiweb/engines/gilligan_drift_correction_upgrade/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "athena_engine",
+          "engine_base": "athena_engine",
+          "root": "aiweb/engines/athena_engine",
+          "family": "engines",
+          "canonical_score": 120,
+          "runtime_role_score": 27,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "test_file": 1,
+            "engine_definition": 4
+          },
+          "sample_files": [
+            "aiweb/engines/athena_engine/test_athena.py",
+            "aiweb/engines/athena_engine/athena_core.py",
+            "aiweb/engines/athena_engine/README.md",
+            "aiweb/engines/athena_engine/athena_manifest.json",
+            "aiweb/engines/athena_engine/athena_state.json"
+          ]
+        },
+        {
+          "engine_name": "neo_engine",
+          "engine_base": "neo_engine",
+          "root": "aiweb/engines/neo_engine",
+          "family": "engines",
+          "canonical_score": 120,
+          "runtime_role_score": 27,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/neo_engine/neo_state.json",
+            "aiweb/engines/neo_engine/neo_manifest.json",
+            "aiweb/engines/neo_engine/test_neo.py",
+            "aiweb/engines/neo_engine/README.md",
+            "aiweb/engines/neo_engine/neo_core.py"
+          ]
+        }
+      ]
+    },
+    {
+      "role_id": "ui_control_panel",
+      "title": "UI / Control Panel / Runtime Dashboard",
+      "description": "Exposes system state, phase state, control surfaces, overlays, dashboard logic, and user-facing instrumentation.",
+      "required": false,
+      "phases": [
+        "Φ7",
+        "Φ8",
+        "Φ9"
+      ],
+      "operators": [
+        "display",
+        "overlay"
+      ],
+      "status": "MAPPED",
+      "candidate_count": 71,
+      "top_candidates": [
+        {
+          "engine_name": "control_panel_ui_engine_v1.02",
+          "engine_base": "control_panel_ui_engine",
+          "root": "aiweb/engines/control_panel_ui_engine_v1.02",
+          "family": "engines",
+          "canonical_score": 134,
+          "runtime_role_score": 43,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 88,
+          "roles": {
+            "test_file": 2,
+            "engine_definition": 7
+          },
+          "sample_files": [
+            "aiweb/engines/control_panel_ui_engine_v1.02/test_ui_render.py",
+            "aiweb/engines/control_panel_ui_engine_v1.02/README.md",
+            "aiweb/engines/control_panel_ui_engine_v1.02/style.css",
+            "aiweb/engines/control_panel_ui_engine_v1.02/test_log.txt",
+            "aiweb/engines/control_panel_ui_engine_v1.02/ui_server.py",
+            "aiweb/engines/control_panel_ui_engine_v1.02/engine_manifest.json",
+            "aiweb/engines/control_panel_ui_engine_v1.02/static/style.css",
+            "aiweb/engines/control_panel_ui_engine_v1.02/static/dashboard.js"
+          ]
+        },
+        {
+          "engine_name": "control_panel_ui_engine",
+          "engine_base": "control_panel_ui_engine",
+          "root": "aiweb/engines/control_panel_ui_engine",
+          "family": "engines",
+          "canonical_score": 123,
+          "runtime_role_score": 42,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 1,
+          "roles": {
+            "test_file": 2,
+            "engine_definition": 6
+          },
+          "sample_files": [
+            "aiweb/engines/control_panel_ui_engine/test_ui_render.py",
+            "aiweb/engines/control_panel_ui_engine/README.md",
+            "aiweb/engines/control_panel_ui_engine/test_log.txt",
+            "aiweb/engines/control_panel_ui_engine/ui_server.py",
+            "aiweb/engines/control_panel_ui_engine/engine_manifest.json",
+            "aiweb/engines/control_panel_ui_engine/static/style.css",
+            "aiweb/engines/control_panel_ui_engine/static/dashboard.js",
+            "aiweb/engines/control_panel_ui_engine/templates/index.html"
+          ]
+        },
+        {
+          "engine_name": "control_panel_ui_engine_v1.02",
+          "engine_base": "control_panel_ui_engine",
+          "root": "engines/control_panel_ui_engine_v1.02",
+          "family": "engines",
+          "canonical_score": 94,
+          "runtime_role_score": 39,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 88,
+          "roles": {
+            "test_file": 2,
+            "engine_definition": 7
+          },
+          "sample_files": [
+            "engines/control_panel_ui_engine_v1.02/test_ui_render.py",
+            "engines/control_panel_ui_engine_v1.02/README.md",
+            "engines/control_panel_ui_engine_v1.02/style.css",
+            "engines/control_panel_ui_engine_v1.02/test_log.txt",
+            "engines/control_panel_ui_engine_v1.02/ui_server.py",
+            "engines/control_panel_ui_engine_v1.02/engine_manifest.json",
+            "engines/control_panel_ui_engine_v1.02/static/style.css",
+            "engines/control_panel_ui_engine_v1.02/static/dashboard.js"
+          ]
+        },
+        {
+          "engine_name": "control_panel_ui_engine",
+          "engine_base": "control_panel_ui_engine",
+          "root": "engines/control_panel_ui_engine",
+          "family": "engines",
+          "canonical_score": 83,
+          "runtime_role_score": 38,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 1,
+          "roles": {
+            "test_file": 2,
+            "engine_definition": 6
+          },
+          "sample_files": [
+            "engines/control_panel_ui_engine/test_ui_render.py",
+            "engines/control_panel_ui_engine/README.md",
+            "engines/control_panel_ui_engine/test_log.txt",
+            "engines/control_panel_ui_engine/ui_server.py",
+            "engines/control_panel_ui_engine/engine_manifest.json",
+            "engines/control_panel_ui_engine/static/style.css",
+            "engines/control_panel_ui_engine/static/dashboard.js",
+            "engines/control_panel_ui_engine/templates/index.html"
+          ]
+        },
+        {
+          "engine_name": "glyph_ui_overlay",
+          "engine_base": "glyph_ui_overlay",
+          "root": "aiweb/symbolic_layers/glyph_ui_overlay",
+          "family": "symbolic_layers",
+          "canonical_score": 38,
+          "runtime_role_score": 38,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 13,
+          "roles": {
+            "runtime_wrapper": 1,
+            "python_module": 1,
+            "readme_or_manifest": 1,
+            "test_file": 2,
+            "engine_definition": 1
+          },
+          "sample_files": [
+            "aiweb/symbolic_layers/glyph_ui_overlay/run.py",
+            "aiweb/symbolic_layers/glyph_ui_overlay/glyph_ui_overlay_core.py",
+            "aiweb/symbolic_layers/glyph_ui_overlay/README.md",
+            "aiweb/symbolic_layers/glyph_ui_overlay/test_run_engine.py",
+            "aiweb/symbolic_layers/glyph_ui_overlay/test_glyph_ui_overlay_core.py",
+            "aiweb/symbolic_layers/glyph_ui_overlay/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "glyph_ui_overlay",
+          "engine_base": "glyph_ui_overlay",
+          "root": "symbolic_layers/glyph_ui_overlay",
+          "family": "symbolic_layers",
+          "canonical_score": 38,
+          "runtime_role_score": 38,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 13,
+          "roles": {
+            "runtime_wrapper": 1,
+            "python_module": 1,
+            "readme_or_manifest": 1,
+            "test_file": 2,
+            "engine_definition": 1
+          },
+          "sample_files": [
+            "symbolic_layers/glyph_ui_overlay/run.py",
+            "symbolic_layers/glyph_ui_overlay/glyph_ui_overlay_core.py",
+            "symbolic_layers/glyph_ui_overlay/README.md",
+            "symbolic_layers/glyph_ui_overlay/test_run_engine.py",
+            "symbolic_layers/glyph_ui_overlay/test_glyph_ui_overlay_core.py",
+            "symbolic_layers/glyph_ui_overlay/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "control_panel_ui_engine_frozen_v1.02",
+          "engine_base": "control_panel_ui_engine",
+          "root": "aiweb/engines/control_panel_ui_engine_frozen_v1.02",
+          "family": "engines",
+          "canonical_score": 114,
+          "runtime_role_score": 34,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 90,
+          "roles": {
+            "test_file": 2,
+            "engine_definition": 7
+          },
+          "sample_files": [
+            "aiweb/engines/control_panel_ui_engine_frozen_v1.02/test_ui_render.py",
+            "aiweb/engines/control_panel_ui_engine_frozen_v1.02/README.md",
+            "aiweb/engines/control_panel_ui_engine_frozen_v1.02/style.css",
+            "aiweb/engines/control_panel_ui_engine_frozen_v1.02/test_log.txt",
+            "aiweb/engines/control_panel_ui_engine_frozen_v1.02/ui_server.py",
+            "aiweb/engines/control_panel_ui_engine_frozen_v1.02/engine_manifest.json",
+            "aiweb/engines/control_panel_ui_engine_frozen_v1.02/static/style.css",
+            "aiweb/engines/control_panel_ui_engine_frozen_v1.02/static/dashboard.js"
+          ]
+        },
+        {
+          "engine_name": "control_panel_ui_engine_frozen_v1.01",
+          "engine_base": "control_panel_ui_engine",
+          "root": "aiweb/engines/control_panel_ui_engine_frozen_v1.01",
+          "family": "engines",
+          "canonical_score": 103,
+          "runtime_role_score": 33,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 2,
+          "roles": {
+            "test_file": 2,
+            "engine_definition": 6
+          },
+          "sample_files": [
+            "aiweb/engines/control_panel_ui_engine_frozen_v1.01/test_ui_render.py",
+            "aiweb/engines/control_panel_ui_engine_frozen_v1.01/README.md",
+            "aiweb/engines/control_panel_ui_engine_frozen_v1.01/test_log.txt",
+            "aiweb/engines/control_panel_ui_engine_frozen_v1.01/ui_server.py",
+            "aiweb/engines/control_panel_ui_engine_frozen_v1.01/engine_manifest.json",
+            "aiweb/engines/control_panel_ui_engine_frozen_v1.01/static/style.css",
+            "aiweb/engines/control_panel_ui_engine_frozen_v1.01/static/dashboard.js",
+            "aiweb/engines/control_panel_ui_engine_frozen_v1.01/templates/index.html"
+          ]
+        },
+        {
+          "engine_name": "control_panel_ui_engine_frozen_v1.02",
+          "engine_base": "control_panel_ui_engine",
+          "root": "engines/control_panel_ui_engine_frozen_v1.02",
+          "family": "engines",
+          "canonical_score": 74,
+          "runtime_role_score": 30,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 9,
+          "symbol_count": 90,
+          "roles": {
+            "test_file": 2,
+            "engine_definition": 7
+          },
+          "sample_files": [
+            "engines/control_panel_ui_engine_frozen_v1.02/test_ui_render.py",
+            "engines/control_panel_ui_engine_frozen_v1.02/README.md",
+            "engines/control_panel_ui_engine_frozen_v1.02/style.css",
+            "engines/control_panel_ui_engine_frozen_v1.02/test_log.txt",
+            "engines/control_panel_ui_engine_frozen_v1.02/ui_server.py",
+            "engines/control_panel_ui_engine_frozen_v1.02/engine_manifest.json",
+            "engines/control_panel_ui_engine_frozen_v1.02/static/style.css",
+            "engines/control_panel_ui_engine_frozen_v1.02/static/dashboard.js"
+          ]
+        },
+        {
+          "engine_name": "control_panel_ui_engine_frozen_v1.02",
+          "engine_base": "control_panel_ui_engine",
+          "root": "projects/recursive_lmm_grok1/engines/control_panel_ui_engine_frozen_v1.02",
+          "family": "engines",
+          "canonical_score": 73,
+          "runtime_role_score": 30,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 18,
+          "symbol_count": 180,
+          "roles": {
+            "test_file": 4,
+            "engine_definition": 14
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1/engines/control_panel_ui_engine_frozen_v1.02/test_ui_render.py",
+            "projects/recursive_lmm_grok1/engines/control_panel_ui_engine_frozen_v1.02/README.md",
+            "projects/recursive_lmm_grok1/engines/control_panel_ui_engine_frozen_v1.02/style.css",
+            "projects/recursive_lmm_grok1/engines/control_panel_ui_engine_frozen_v1.02/test_log.txt",
+            "projects/recursive_lmm_grok1/engines/control_panel_ui_engine_frozen_v1.02/ui_server.py",
+            "projects/recursive_lmm_grok1/engines/control_panel_ui_engine_frozen_v1.02/engine_manifest.json",
+            "projects/recursive_lmm_grok1/engines/control_panel_ui_engine_frozen_v1.02/static/style.css",
+            "projects/recursive_lmm_grok1/engines/control_panel_ui_engine_frozen_v1.02/static/dashboard.js"
+          ]
+        },
+        {
+          "engine_name": "protoforge_dashboard_runtime_v2.0",
+          "engine_base": "protoforge_dashboard_runtime",
+          "root": "runtime_wrappers/protoforge_dashboard_runtime_v2.0",
+          "family": "runtime_wrappers",
+          "canonical_score": 54,
+          "runtime_role_score": 30,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 14,
+          "symbol_count": 116,
+          "roles": {
+            "test_file": 2,
+            "runtime_wrapper": 11,
+            "engine_definition": 1
+          },
+          "sample_files": [
+            "runtime_wrappers/protoforge_dashboard_runtime_v2.0/test_ui_render.py",
+            "runtime_wrappers/protoforge_dashboard_runtime_v2.0/gilligan_logic.py",
+            "runtime_wrappers/protoforge_dashboard_runtime_v2.0/README.md",
+            "runtime_wrappers/protoforge_dashboard_runtime_v2.0/test_log.txt",
+            "runtime_wrappers/protoforge_dashboard_runtime_v2.0/ui_server.py",
+            "runtime_wrappers/protoforge_dashboard_runtime_v2.0/engine_manifest.json",
+            "runtime_wrappers/protoforge_dashboard_runtime_v2.0/static/field_overlay_renderer.js",
+            "runtime_wrappers/protoforge_dashboard_runtime_v2.0/static/style.css"
+          ]
+        },
+        {
+          "engine_name": "protoforge_dashboard_runtime_v2.0",
+          "engine_base": "protoforge_dashboard_runtime",
+          "root": "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0",
+          "family": "runtime_wrappers",
+          "canonical_score": 52,
+          "runtime_role_score": 30,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 12,
+          "symbol_count": 75,
+          "roles": {
+            "test_file": 2,
+            "runtime_wrapper": 9,
+            "engine_definition": 1
+          },
+          "sample_files": [
+            "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/test_ui_render.py",
+            "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/gilligan_logic.py",
+            "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/README.md",
+            "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/test_log.txt",
+            "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/ui_server.py",
+            "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/engine_manifest.json",
+            "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/static/field_overlay_renderer.js",
+            "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/static/style.css"
+          ]
+        }
+      ]
+    },
+    {
+      "role_id": "ledger_provenance",
+      "title": "Ledger / Contribution / Provenance Economy",
+      "description": "Tracks proof, contribution, tokenization, receipts, audit trails, and source-bound ownership logic.",
+      "required": false,
+      "phases": [
+        "Φ1",
+        "Φ6",
+        "Φ7",
+        "Φ8",
+        "Φ9"
+      ],
+      "operators": [
+        "proof_hash",
+        "ledger"
+      ],
+      "status": "MAPPED",
+      "candidate_count": 16,
+      "top_candidates": [
+        {
+          "engine_name": "compute_contribution_engine",
+          "engine_base": "compute_contribution_engine",
+          "root": "aiweb/engines/compute_contribution_engine",
+          "family": "engines",
+          "canonical_score": 119,
+          "runtime_role_score": 36,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/compute_contribution_engine/contribution_core.py",
+            "aiweb/engines/compute_contribution_engine/README.md",
+            "aiweb/engines/compute_contribution_engine/test_contribution.py",
+            "aiweb/engines/compute_contribution_engine/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "compute_contribution_engine",
+          "engine_base": "compute_contribution_engine",
+          "root": "engines/compute_contribution_engine",
+          "family": "engines",
+          "canonical_score": 79,
+          "runtime_role_score": 32,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "engines/compute_contribution_engine/contribution_core.py",
+            "engines/compute_contribution_engine/README.md",
+            "engines/compute_contribution_engine/test_contribution.py",
+            "engines/compute_contribution_engine/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "compute_contribution_engine",
+          "engine_base": "compute_contribution_engine",
+          "root": "projects/recursive_lmm_grok1/engines/compute_contribution_engine",
+          "family": "engines",
+          "canonical_score": 74,
+          "runtime_role_score": 32,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 8,
+          "symbol_count": 6,
+          "roles": {
+            "engine_definition": 6,
+            "test_file": 2
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1/engines/compute_contribution_engine/contribution_core.py",
+            "projects/recursive_lmm_grok1/engines/compute_contribution_engine/README.md",
+            "projects/recursive_lmm_grok1/engines/compute_contribution_engine/test_contribution.py",
+            "projects/recursive_lmm_grok1/engines/compute_contribution_engine/engine_manifest.json",
+            "projects/recursive_lmm_grok1/engines/compute_contribution_engine/compute_contribution_engine/contribution_core.py",
+            "projects/recursive_lmm_grok1/engines/compute_contribution_engine/compute_contribution_engine/README.md",
+            "projects/recursive_lmm_grok1/engines/compute_contribution_engine/compute_contribution_engine/test_contribution.py",
+            "projects/recursive_lmm_grok1/engines/compute_contribution_engine/compute_contribution_engine/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "compute_contribution_engine",
+          "engine_base": "compute_contribution_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/compute_contribution_engine",
+          "family": "engines",
+          "canonical_score": 69,
+          "runtime_role_score": 31,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1_phase2/engines/compute_contribution_engine/contribution_core.py",
+            "projects/recursive_lmm_grok1_phase2/engines/compute_contribution_engine/README.md",
+            "projects/recursive_lmm_grok1_phase2/engines/compute_contribution_engine/test_contribution.py",
+            "projects/recursive_lmm_grok1_phase2/engines/compute_contribution_engine/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "contribution_ledger_stack",
+          "engine_base": "contribution_ledger_stack",
+          "root": "aiweb/runtime_wrappers/contribution_ledger_stack",
+          "family": "runtime_wrappers",
+          "canonical_score": 37,
+          "runtime_role_score": 28,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 10,
+          "roles": {
+            "runtime_wrapper": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/runtime_wrappers/contribution_ledger_stack/contribution_ledger_stack_loader.py",
+            "aiweb/runtime_wrappers/contribution_ledger_stack/stack_manifest.json",
+            "aiweb/runtime_wrappers/contribution_ledger_stack/README.md",
+            "aiweb/runtime_wrappers/contribution_ledger_stack/user_registry.json",
+            "aiweb/runtime_wrappers/contribution_ledger_stack/test_contribution_ledger_stack_loader.py"
+          ]
+        },
+        {
+          "engine_name": "contribution_ledger_stack",
+          "engine_base": "contribution_ledger_stack",
+          "root": "runtime_wrappers/contribution_ledger_stack",
+          "family": "runtime_wrappers",
+          "canonical_score": 37,
+          "runtime_role_score": 28,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 10,
+          "roles": {
+            "runtime_wrapper": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "runtime_wrappers/contribution_ledger_stack/contribution_ledger_stack_loader.py",
+            "runtime_wrappers/contribution_ledger_stack/stack_manifest.json",
+            "runtime_wrappers/contribution_ledger_stack/README.md",
+            "runtime_wrappers/contribution_ledger_stack/user_registry.json",
+            "runtime_wrappers/contribution_ledger_stack/test_contribution_ledger_stack_loader.py"
+          ]
+        },
+        {
+          "engine_name": "contribution_dashboard_engine",
+          "engine_base": "contribution_dashboard_engine",
+          "root": "aiweb/engines/contribution_dashboard_engine",
+          "family": "engines",
+          "canonical_score": 120,
+          "runtime_role_score": 27,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/contribution_dashboard_engine/dashboard_core.py",
+            "aiweb/engines/contribution_dashboard_engine/test_contribution_dashboard.py",
+            "aiweb/engines/contribution_dashboard_engine/README.md",
+            "aiweb/engines/contribution_dashboard_engine/dashboard_output.json",
+            "aiweb/engines/contribution_dashboard_engine/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "compute_contribution_engine_frozen_v1",
+          "engine_base": "compute_contribution_engine",
+          "root": "aiweb/engines/compute_contribution_engine_frozen_v1",
+          "family": "engines",
+          "canonical_score": 99,
+          "runtime_role_score": 27,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/compute_contribution_engine_frozen_v1/contribution_core.py",
+            "aiweb/engines/compute_contribution_engine_frozen_v1/README.md",
+            "aiweb/engines/compute_contribution_engine_frozen_v1/test_contribution.py",
+            "aiweb/engines/compute_contribution_engine_frozen_v1/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "contribution_dashboard_engine",
+          "engine_base": "contribution_dashboard_engine",
+          "root": "engines/contribution_dashboard_engine",
+          "family": "engines",
+          "canonical_score": 80,
+          "runtime_role_score": 23,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "engines/contribution_dashboard_engine/dashboard_core.py",
+            "engines/contribution_dashboard_engine/test_contribution_dashboard.py",
+            "engines/contribution_dashboard_engine/README.md",
+            "engines/contribution_dashboard_engine/dashboard_output.json",
+            "engines/contribution_dashboard_engine/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "compute_contribution_engine_frozen_v1",
+          "engine_base": "compute_contribution_engine",
+          "root": "engines/compute_contribution_engine_frozen_v1",
+          "family": "engines",
+          "canonical_score": 59,
+          "runtime_role_score": 23,
+          "status_tags": [
+            "frozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "engines/compute_contribution_engine_frozen_v1/contribution_core.py",
+            "engines/compute_contribution_engine_frozen_v1/README.md",
+            "engines/compute_contribution_engine_frozen_v1/test_contribution.py",
+            "engines/compute_contribution_engine_frozen_v1/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "contribution_dashboard_engine",
+          "engine_base": "contribution_dashboard_engine",
+          "root": "projects/recursive_lmm_grok1/engines/contribution_dashboard_engine",
+          "family": "engines",
+          "canonical_score": 76,
+          "runtime_role_score": 22,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6,
+          "roles": {
+            "engine_definition": 8,
+            "test_file": 2
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1/engines/contribution_dashboard_engine/dashboard_core.py",
+            "projects/recursive_lmm_grok1/engines/contribution_dashboard_engine/test_contribution_dashboard.py",
+            "projects/recursive_lmm_grok1/engines/contribution_dashboard_engine/README.md",
+            "projects/recursive_lmm_grok1/engines/contribution_dashboard_engine/dashboard_output.json",
+            "projects/recursive_lmm_grok1/engines/contribution_dashboard_engine/engine_manifest.json",
+            "projects/recursive_lmm_grok1/engines/contribution_dashboard_engine/contribution_dashboard_engine/dashboard_core.py",
+            "projects/recursive_lmm_grok1/engines/contribution_dashboard_engine/contribution_dashboard_engine/test_contribution_dashboard.py",
+            "projects/recursive_lmm_grok1/engines/contribution_dashboard_engine/contribution_dashboard_engine/README.md"
+          ]
+        },
+        {
+          "engine_name": "contribution_dashboard_engine",
+          "engine_base": "contribution_dashboard_engine",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/contribution_dashboard_engine",
+          "family": "engines",
+          "canonical_score": 70,
+          "runtime_role_score": 22,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1_phase2/engines/contribution_dashboard_engine/dashboard_core.py",
+            "projects/recursive_lmm_grok1_phase2/engines/contribution_dashboard_engine/test_contribution_dashboard.py",
+            "projects/recursive_lmm_grok1_phase2/engines/contribution_dashboard_engine/README.md",
+            "projects/recursive_lmm_grok1_phase2/engines/contribution_dashboard_engine/dashboard_output.json",
+            "projects/recursive_lmm_grok1_phase2/engines/contribution_dashboard_engine/engine_manifest.json"
+          ]
+        }
+      ]
+    },
+    {
+      "role_id": "policy_failsafe",
+      "title": "Policy / Failsafe / Access Boundary",
+      "description": "Defines runtime law, access boundaries, safety refusal, naming policy, and non-destructive enforcement.",
+      "required": true,
+      "phases": [
+        "Φ4",
+        "Φ5",
+        "Φ6",
+        "Φ7"
+      ],
+      "operators": [
+        "policy",
+        "failsafe"
+      ],
+      "status": "MAPPED",
+      "candidate_count": 24,
+      "top_candidates": [
+        {
+          "engine_name": "trust_guard",
+          "engine_base": "trust_guard",
+          "root": "projects/recursive_lmm_grok1/engines/trust_guard",
+          "family": "engines",
+          "canonical_score": 66,
+          "runtime_role_score": 31,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 1,
+          "symbol_count": 2,
+          "roles": {
+            "engine_definition": 1
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1/engines/trust_guard/run.py"
+          ]
+        },
+        {
+          "engine_name": "trust_guard",
+          "engine_base": "trust_guard",
+          "root": "projects/recursive_lmm_grok1_phase2/engines/trust_guard",
+          "family": "engines",
+          "canonical_score": 66,
+          "runtime_role_score": 31,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 1,
+          "symbol_count": 2,
+          "roles": {
+            "engine_definition": 1
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1_phase2/engines/trust_guard/run.py"
+          ]
+        },
+        {
+          "engine_name": "admin_override_console",
+          "engine_base": "admin_override_console",
+          "root": "aiweb/engines/admin_override_console",
+          "family": "engines",
+          "canonical_score": 120,
+          "runtime_role_score": 27,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9,
+          "roles": {
+            "test_file": 1,
+            "engine_definition": 3
+          },
+          "sample_files": [
+            "aiweb/engines/admin_override_console/test_admin_override_core.py",
+            "aiweb/engines/admin_override_console/admin_override_core.py",
+            "aiweb/engines/admin_override_console/README.md",
+            "aiweb/engines/admin_override_console/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "failsafe_manager",
+          "engine_base": "failsafe_manager",
+          "root": "aiweb/engines/failsafe_manager",
+          "family": "engines",
+          "canonical_score": 120,
+          "runtime_role_score": 27,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/failsafe_manager/README.md",
+            "aiweb/engines/failsafe_manager/failsafe_manifest.json",
+            "aiweb/engines/failsafe_manager/test_failsafe.py",
+            "aiweb/engines/failsafe_manager/failsafe_status.json",
+            "aiweb/engines/failsafe_manager/failsafe_core.py"
+          ]
+        },
+        {
+          "engine_name": "symbolic_policy_engine",
+          "engine_base": "symbolic_policy_engine",
+          "root": "aiweb/engines/symbolic_policy_engine",
+          "family": "engines",
+          "canonical_score": 120,
+          "runtime_role_score": 27,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "test_file": 1,
+            "engine_definition": 4
+          },
+          "sample_files": [
+            "aiweb/engines/symbolic_policy_engine/test_policy.py",
+            "aiweb/engines/symbolic_policy_engine/policy_rules.json",
+            "aiweb/engines/symbolic_policy_engine/policy_manifest.json",
+            "aiweb/engines/symbolic_policy_engine/README.md",
+            "aiweb/engines/symbolic_policy_engine/policy_core.py"
+          ]
+        },
+        {
+          "engine_name": "naming_engine",
+          "engine_base": "naming_engine",
+          "root": "aiweb/engines/naming_engine",
+          "family": "engines",
+          "canonical_score": 119,
+          "runtime_role_score": 26,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/naming_engine/naming_core.py",
+            "aiweb/engines/naming_engine/naming_manifest.json",
+            "aiweb/engines/naming_engine/README.md",
+            "aiweb/engines/naming_engine/test_naming.py"
+          ]
+        },
+        {
+          "engine_name": "admin_override_console",
+          "engine_base": "admin_override_console",
+          "root": "engines/admin_override_console",
+          "family": "engines",
+          "canonical_score": 80,
+          "runtime_role_score": 23,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 9,
+          "roles": {
+            "test_file": 1,
+            "engine_definition": 3
+          },
+          "sample_files": [
+            "engines/admin_override_console/test_admin_override_core.py",
+            "engines/admin_override_console/admin_override_core.py",
+            "engines/admin_override_console/README.md",
+            "engines/admin_override_console/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "failsafe_manager",
+          "engine_base": "failsafe_manager",
+          "root": "engines/failsafe_manager",
+          "family": "engines",
+          "canonical_score": 80,
+          "runtime_role_score": 23,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "engines/failsafe_manager/README.md",
+            "engines/failsafe_manager/failsafe_manifest.json",
+            "engines/failsafe_manager/test_failsafe.py",
+            "engines/failsafe_manager/failsafe_status.json",
+            "engines/failsafe_manager/failsafe_core.py"
+          ]
+        },
+        {
+          "engine_name": "symbolic_policy_engine",
+          "engine_base": "symbolic_policy_engine",
+          "root": "engines/symbolic_policy_engine",
+          "family": "engines",
+          "canonical_score": 80,
+          "runtime_role_score": 23,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "test_file": 1,
+            "engine_definition": 4
+          },
+          "sample_files": [
+            "engines/symbolic_policy_engine/test_policy.py",
+            "engines/symbolic_policy_engine/policy_rules.json",
+            "engines/symbolic_policy_engine/policy_manifest.json",
+            "engines/symbolic_policy_engine/README.md",
+            "engines/symbolic_policy_engine/policy_core.py"
+          ]
+        },
+        {
+          "engine_name": "naming_engine",
+          "engine_base": "naming_engine",
+          "root": "engines/naming_engine",
+          "family": "engines",
+          "canonical_score": 79,
+          "runtime_role_score": 22,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "engines/naming_engine/naming_core.py",
+            "engines/naming_engine/naming_manifest.json",
+            "engines/naming_engine/README.md",
+            "engines/naming_engine/test_naming.py"
+          ]
+        },
+        {
+          "engine_name": "failsafe_manager",
+          "engine_base": "failsafe_manager",
+          "root": "projects/recursive_lmm_grok1/engines/failsafe_manager",
+          "family": "engines",
+          "canonical_score": 76,
+          "runtime_role_score": 22,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6,
+          "roles": {
+            "engine_definition": 8,
+            "test_file": 2
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1/engines/failsafe_manager/README.md",
+            "projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_manifest.json",
+            "projects/recursive_lmm_grok1/engines/failsafe_manager/test_failsafe.py",
+            "projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_status.json",
+            "projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_core.py",
+            "projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_manager/README.md",
+            "projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_manager/failsafe_manifest.json",
+            "projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_manager/test_failsafe.py"
+          ]
+        },
+        {
+          "engine_name": "symbolic_policy_engine",
+          "engine_base": "symbolic_policy_engine",
+          "root": "projects/recursive_lmm_grok1/engines/symbolic_policy_engine",
+          "family": "engines",
+          "canonical_score": 76,
+          "runtime_role_score": 22,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 10,
+          "symbol_count": 6,
+          "roles": {
+            "test_file": 2,
+            "engine_definition": 8
+          },
+          "sample_files": [
+            "projects/recursive_lmm_grok1/engines/symbolic_policy_engine/test_policy.py",
+            "projects/recursive_lmm_grok1/engines/symbolic_policy_engine/policy_rules.json",
+            "projects/recursive_lmm_grok1/engines/symbolic_policy_engine/policy_manifest.json",
+            "projects/recursive_lmm_grok1/engines/symbolic_policy_engine/README.md",
+            "projects/recursive_lmm_grok1/engines/symbolic_policy_engine/policy_core.py",
+            "projects/recursive_lmm_grok1/engines/symbolic_policy_engine/symbolic_policy_engine/test_policy.py",
+            "projects/recursive_lmm_grok1/engines/symbolic_policy_engine/symbolic_policy_engine/policy_rules.json",
+            "projects/recursive_lmm_grok1/engines/symbolic_policy_engine/symbolic_policy_engine/policy_manifest.json"
+          ]
+        }
+      ]
+    },
+    {
+      "role_id": "runtime_wrapper",
+      "title": "Runtime Wrapper / Integration Harness",
+      "description": "Wraps engines into executable demos, dashboards, protoforge runtime folders, test harnesses, and launch surfaces.",
+      "required": false,
+      "phases": [
+        "Φ1",
+        "Φ7",
+        "Φ8",
+        "Φ9"
+      ],
+      "operators": [
+        "wrapper"
+      ],
+      "status": "MAPPED",
+      "candidate_count": 68,
+      "top_candidates": [
+        {
+          "engine_name": "protoforge",
+          "engine_base": "protoforge",
+          "root": "runtime_wrappers/protoforge",
+          "family": "runtime_wrappers",
+          "canonical_score": 36,
+          "runtime_role_score": 28,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 4,
+          "roles": {
+            "runtime_wrapper": 3,
+            "engine_definition": 1,
+            "test_file": 2
+          },
+          "sample_files": [
+            "runtime_wrappers/protoforge/run.py",
+            "runtime_wrappers/protoforge/engine_freeze_log.txt",
+            "runtime_wrappers/protoforge/config.json",
+            "runtime_wrappers/protoforge/UI/terminal_display.py",
+            "runtime_wrappers/protoforge/test_harness/run_system_test.py",
+            "runtime_wrappers/protoforge/test_harness/test_log.txt"
+          ]
+        },
+        {
+          "engine_name": "protoforge",
+          "engine_base": "protoforge",
+          "root": "aiweb/runtime_wrappers/protoforge",
+          "family": "runtime_wrappers",
+          "canonical_score": 35,
+          "runtime_role_score": 28,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 4,
+          "roles": {
+            "runtime_wrapper": 3,
+            "test_file": 2
+          },
+          "sample_files": [
+            "aiweb/runtime_wrappers/protoforge/run.py",
+            "aiweb/runtime_wrappers/protoforge/config.json",
+            "aiweb/runtime_wrappers/protoforge/UI/terminal_display.py",
+            "aiweb/runtime_wrappers/protoforge/test_harness/run_system_test.py",
+            "aiweb/runtime_wrappers/protoforge/test_harness/test_log.txt"
+          ]
+        },
+        {
+          "engine_name": "core_stack_breather",
+          "engine_base": "core_stack_breather",
+          "root": "aiweb/engines/core_stack_breather",
+          "family": "engines",
+          "canonical_score": 120,
+          "runtime_role_score": 27,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 5,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/core_stack_breather/README.md",
+            "aiweb/engines/core_stack_breather/core_breather.py",
+            "aiweb/engines/core_stack_breather/test_core_breather.py",
+            "aiweb/engines/core_stack_breather/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "install_onboarding_engine",
+          "engine_base": "install_onboarding_engine",
+          "root": "aiweb/engines/install_onboarding_engine",
+          "family": "engines",
+          "canonical_score": 120,
+          "runtime_role_score": 27,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "aiweb/engines/install_onboarding_engine/onboarding_core.py",
+            "aiweb/engines/install_onboarding_engine/install_state.json",
+            "aiweb/engines/install_onboarding_engine/test_onboarding.py",
+            "aiweb/engines/install_onboarding_engine/README.md",
+            "aiweb/engines/install_onboarding_engine/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "protoforge_v1.04_db_enabled",
+          "engine_base": "protoforge",
+          "root": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+          "family": "runtime_wrappers",
+          "canonical_score": 60,
+          "runtime_role_score": 26,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 22,
+          "symbol_count": 103,
+          "roles": {
+            "test_file": 8,
+            "runtime_wrapper": 12,
+            "engine_definition": 2
+          },
+          "sample_files": [
+            "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/run_system_test.py",
+            "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/run.py",
+            "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/README.md",
+            "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/config.json",
+            "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/test_log.txt",
+            "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/engine_manifest.json",
+            "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/UI/test_ui_render.py",
+            "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/UI/README.md"
+          ]
+        },
+        {
+          "engine_name": "Protoforge_v2.01",
+          "engine_base": "protoforge",
+          "root": "runtime_wrappers/Protoforge_v2.01",
+          "family": "runtime_wrappers",
+          "canonical_score": 60,
+          "runtime_role_score": 26,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 34,
+          "symbol_count": 152,
+          "roles": {
+            "runtime_wrapper": 13,
+            "test_file": 9,
+            "engine_definition": 12
+          },
+          "sample_files": [
+            "runtime_wrappers/Protoforge_v2.01/index.html",
+            "runtime_wrappers/Protoforge_v2.01/test_recursive_verification.py",
+            "runtime_wrappers/Protoforge_v2.01/diagnostic_panel.js",
+            "runtime_wrappers/Protoforge_v2.01/rvdit_trace_log.py",
+            "runtime_wrappers/Protoforge_v2.01/protoforge_dashboard_runtime_v2.0/test_ui_render.py",
+            "runtime_wrappers/Protoforge_v2.01/protoforge_dashboard_runtime_v2.0/gilligan_logic.py",
+            "runtime_wrappers/Protoforge_v2.01/protoforge_dashboard_runtime_v2.0/README.md",
+            "runtime_wrappers/Protoforge_v2.01/protoforge_dashboard_runtime_v2.0/test_log.txt"
+          ]
+        },
+        {
+          "engine_name": "protoforge_v1.04_db_enabled",
+          "engine_base": "protoforge",
+          "root": "runtime_wrappers/protoforge_v1.04_db_enabled",
+          "family": "runtime_wrappers",
+          "canonical_score": 60,
+          "runtime_role_score": 26,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 23,
+          "symbol_count": 97,
+          "roles": {
+            "test_file": 8,
+            "runtime_wrapper": 12,
+            "engine_definition": 3
+          },
+          "sample_files": [
+            "runtime_wrappers/protoforge_v1.04_db_enabled/run_system_test.py",
+            "runtime_wrappers/protoforge_v1.04_db_enabled/run.py",
+            "runtime_wrappers/protoforge_v1.04_db_enabled/README.md",
+            "runtime_wrappers/protoforge_v1.04_db_enabled/config.json",
+            "runtime_wrappers/protoforge_v1.04_db_enabled/test_log.txt",
+            "runtime_wrappers/protoforge_v1.04_db_enabled/engine_manifest.json",
+            "runtime_wrappers/protoforge_v1.04_db_enabled/UI/test_ui_render.py",
+            "runtime_wrappers/protoforge_v1.04_db_enabled/UI/README.md"
+          ]
+        },
+        {
+          "engine_name": "protoforge_dashboard_runtime_v2.0",
+          "engine_base": "protoforge_dashboard_runtime",
+          "root": "runtime_wrappers/protoforge_dashboard_runtime_v2.0",
+          "family": "runtime_wrappers",
+          "canonical_score": 54,
+          "runtime_role_score": 25,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 14,
+          "symbol_count": 116,
+          "roles": {
+            "test_file": 2,
+            "runtime_wrapper": 11,
+            "engine_definition": 1
+          },
+          "sample_files": [
+            "runtime_wrappers/protoforge_dashboard_runtime_v2.0/test_ui_render.py",
+            "runtime_wrappers/protoforge_dashboard_runtime_v2.0/gilligan_logic.py",
+            "runtime_wrappers/protoforge_dashboard_runtime_v2.0/README.md",
+            "runtime_wrappers/protoforge_dashboard_runtime_v2.0/test_log.txt",
+            "runtime_wrappers/protoforge_dashboard_runtime_v2.0/ui_server.py",
+            "runtime_wrappers/protoforge_dashboard_runtime_v2.0/engine_manifest.json",
+            "runtime_wrappers/protoforge_dashboard_runtime_v2.0/static/field_overlay_renderer.js",
+            "runtime_wrappers/protoforge_dashboard_runtime_v2.0/static/style.css"
+          ]
+        },
+        {
+          "engine_name": "protoforge_dashboard_runtime_v2.0",
+          "engine_base": "protoforge_dashboard_runtime",
+          "root": "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0",
+          "family": "runtime_wrappers",
+          "canonical_score": 52,
+          "runtime_role_score": 25,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 12,
+          "symbol_count": 75,
+          "roles": {
+            "test_file": 2,
+            "runtime_wrapper": 9,
+            "engine_definition": 1
+          },
+          "sample_files": [
+            "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/test_ui_render.py",
+            "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/gilligan_logic.py",
+            "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/README.md",
+            "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/test_log.txt",
+            "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/ui_server.py",
+            "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/engine_manifest.json",
+            "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/static/field_overlay_renderer.js",
+            "aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0/static/style.css"
+          ]
+        },
+        {
+          "engine_name": "core_stack_breather",
+          "engine_base": "core_stack_breather",
+          "root": "engines/core_stack_breather",
+          "family": "engines",
+          "canonical_score": 80,
+          "runtime_role_score": 23,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 4,
+          "symbol_count": 5,
+          "roles": {
+            "engine_definition": 3,
+            "test_file": 1
+          },
+          "sample_files": [
+            "engines/core_stack_breather/README.md",
+            "engines/core_stack_breather/core_breather.py",
+            "engines/core_stack_breather/test_core_breather.py",
+            "engines/core_stack_breather/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "install_onboarding_engine",
+          "engine_base": "install_onboarding_engine",
+          "root": "engines/install_onboarding_engine",
+          "family": "engines",
+          "canonical_score": 80,
+          "runtime_role_score": 23,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 5,
+          "symbol_count": 3,
+          "roles": {
+            "engine_definition": 4,
+            "test_file": 1
+          },
+          "sample_files": [
+            "engines/install_onboarding_engine/onboarding_core.py",
+            "engines/install_onboarding_engine/install_state.json",
+            "engines/install_onboarding_engine/test_onboarding.py",
+            "engines/install_onboarding_engine/README.md",
+            "engines/install_onboarding_engine/engine_manifest.json"
+          ]
+        },
+        {
+          "engine_name": "stack_breather_phase2",
+          "engine_base": "stack_breather_phase2",
+          "root": "aiweb/runtime_wrappers/stack_breather_phase2",
+          "family": "runtime_wrappers",
+          "canonical_score": 37,
+          "runtime_role_score": 23,
+          "status_tags": [
+            "active_or_unfrozen"
+          ],
+          "file_count": 6,
+          "symbol_count": 9,
+          "roles": {
+            "runtime_wrapper": 4,
+            "test_file": 1,
+            "engine_definition": 1
+          },
+          "sample_files": [
+            "aiweb/runtime_wrappers/stack_breather_phase2/field_breather.py",
+            "aiweb/runtime_wrappers/stack_breather_phase2/stack_breather_core.py",
+            "aiweb/runtime_wrappers/stack_breather_phase2/test_stack_breather_core.py",
+            "aiweb/runtime_wrappers/stack_breather_phase2/README.md",
+            "aiweb/runtime_wrappers/stack_breather_phase2/core_breather.py",
+            "aiweb/runtime_wrappers/stack_breather_phase2/engine_manifest.json"
+          ]
+        }
+      ]
+    }
+  ],
+  "unmapped_engine_count": 365,
+  "unmapped_sample": [
+    {
+      "engine_name": "recursive_field_engine",
+      "engine_base": "recursive_field_engine",
+      "root": "aiweb/engines/recursive_field_engine",
+      "family": "engines",
+      "canonical_score": 132,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 13,
+      "symbol_count": 23
+    },
+    {
+      "engine_name": "field_resonance_mapper",
+      "engine_base": "field_resonance_mapper",
+      "root": "aiweb/engines/field_resonance_mapper",
+      "family": "engines",
+      "canonical_score": 127,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 8,
+      "symbol_count": 20
+    },
+    {
+      "engine_name": "entropy_monitor_engine",
+      "engine_base": "entropy_monitor_engine",
+      "root": "aiweb/engines/entropy_monitor_engine",
+      "family": "engines",
+      "canonical_score": 126,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 8,
+      "symbol_count": 19
+    },
+    {
+      "engine_name": "glyph_engine",
+      "engine_base": "glyph_engine",
+      "root": "aiweb/engines/glyph_engine",
+      "family": "engines",
+      "canonical_score": 126,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 8,
+      "symbol_count": 18
+    },
+    {
+      "engine_name": "aiweb_os_engine",
+      "engine_base": "aiweb_os_engine",
+      "root": "aiweb/engines/aiweb_os_engine",
+      "family": "engines",
+      "canonical_score": 122,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 6,
+      "symbol_count": 7
+    },
+    {
+      "engine_name": "plugin_engine",
+      "engine_base": "plugin_engine",
+      "root": "aiweb/engines/plugin_engine",
+      "family": "engines",
+      "canonical_score": 122,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 6,
+      "symbol_count": 5
+    },
+    {
+      "engine_name": "collapse_prevention_engine",
+      "engine_base": "collapse_prevention_engine",
+      "root": "aiweb/engines/collapse_prevention_engine",
+      "family": "engines",
+      "canonical_score": 121,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 10
+    },
+    {
+      "engine_name": "gilligan_drift_correction_upgrade",
+      "engine_base": "gilligan_drift_correction_upgrade",
+      "root": "aiweb/engines/gilligan_drift_correction_upgrade",
+      "family": "engines",
+      "canonical_score": 121,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 11
+    },
+    {
+      "engine_name": "symbolic_drift_visualizer",
+      "engine_base": "symbolic_drift_visualizer",
+      "root": "aiweb/engines/symbolic_drift_visualizer",
+      "family": "engines",
+      "canonical_score": 121,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 10
+    },
+    {
+      "engine_name": "system_log_engine",
+      "engine_base": "system_log_engine",
+      "root": "aiweb/engines/system_log_engine",
+      "family": "engines",
+      "canonical_score": 121,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 6,
+      "symbol_count": 4
+    },
+    {
+      "engine_name": "tone_engine",
+      "engine_base": "tone_engine",
+      "root": "aiweb/engines/tone_engine",
+      "family": "engines",
+      "canonical_score": 121,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 5
+    },
+    {
+      "engine_name": "ascii_interpreter_engine",
+      "engine_base": "ascii_interpreter_engine",
+      "root": "aiweb/engines/ascii_interpreter_engine",
+      "family": "engines",
+      "canonical_score": 120,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 6
+    },
+    {
+      "engine_name": "athena_engine",
+      "engine_base": "athena_engine",
+      "root": "aiweb/engines/athena_engine",
+      "family": "engines",
+      "canonical_score": 120,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "contribution_dashboard_engine",
+      "engine_base": "contribution_dashboard_engine",
+      "root": "aiweb/engines/contribution_dashboard_engine",
+      "family": "engines",
+      "canonical_score": 120,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "document_output_formatter",
+      "engine_base": "document_output_formatter",
+      "root": "aiweb/engines/document_output_formatter",
+      "family": "engines",
+      "canonical_score": 120,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "drift_analyzer_tool",
+      "engine_base": "drift_analyzer_tool",
+      "root": "aiweb/engines/drift_analyzer_tool",
+      "family": "engines",
+      "canonical_score": 120,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 9
+    },
+    {
+      "engine_name": "external_feed_listener",
+      "engine_base": "external_feed_listener",
+      "root": "aiweb/engines/external_feed_listener",
+      "family": "engines",
+      "canonical_score": 120,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 9
+    },
+    {
+      "engine_name": "neo_engine",
+      "engine_base": "neo_engine",
+      "root": "aiweb/engines/neo_engine",
+      "family": "engines",
+      "canonical_score": 120,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 4
+    },
+    {
+      "engine_name": "recursive_field_breather",
+      "engine_base": "recursive_field_breather",
+      "root": "aiweb/engines/recursive_field_breather",
+      "family": "engines",
+      "canonical_score": 120,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 8
+    },
+    {
+      "engine_name": "resonance_charge_meter",
+      "engine_base": "resonance_charge_meter",
+      "root": "aiweb/engines/resonance_charge_meter",
+      "family": "engines",
+      "canonical_score": 120,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "resonance_visualizer_engine",
+      "engine_base": "resonance_visualizer_engine",
+      "root": "aiweb/engines/resonance_visualizer_engine",
+      "family": "engines",
+      "canonical_score": 120,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "resurrection_planner",
+      "engine_base": "resurrection_planner",
+      "root": "aiweb/engines/resurrection_planner",
+      "family": "engines",
+      "canonical_score": 120,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 9
+    },
+    {
+      "engine_name": "seed_manager",
+      "engine_base": "seed_manager",
+      "root": "aiweb/engines/seed_manager",
+      "family": "engines",
+      "canonical_score": 120,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "spc_memory_migrator",
+      "engine_base": "spc_memory_migrator",
+      "root": "aiweb/engines/spc_memory_migrator",
+      "family": "engines",
+      "canonical_score": 120,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 9
+    },
+    {
+      "engine_name": "dream_state_engine",
+      "engine_base": "dream_state_engine",
+      "root": "aiweb/engines/dream_state_engine",
+      "family": "engines",
+      "canonical_score": 119,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "fluid_memory_engine",
+      "engine_base": "fluid_memory_engine",
+      "root": "aiweb/engines/fluid_memory_engine",
+      "family": "engines",
+      "canonical_score": 119,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "goal_injection_engine",
+      "engine_base": "goal_injection_engine",
+      "root": "aiweb/engines/goal_injection_engine",
+      "family": "engines",
+      "canonical_score": 119,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "naming_engine",
+      "engine_base": "naming_engine",
+      "root": "aiweb/engines/naming_engine",
+      "family": "engines",
+      "canonical_score": 119,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "peer_communication_engine",
+      "engine_base": "peer_communication_engine",
+      "root": "aiweb/engines/peer_communication_engine",
+      "family": "engines",
+      "canonical_score": 119,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "stack_linker_breather",
+      "engine_base": "stack_linker_breather",
+      "root": "aiweb/engines/stack_linker_breather",
+      "family": "engines",
+      "canonical_score": 119,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 4
+    },
+    {
+      "engine_name": "symbolic_glyph_engine",
+      "engine_base": "symbolic_glyph_engine",
+      "root": "aiweb/engines/symbolic_glyph_engine",
+      "family": "engines",
+      "canonical_score": 119,
+      "status_tags": [
+        "active_or_unfrozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "control_panel_ui_engine_frozen_v1.02",
+      "engine_base": "control_panel_ui_engine",
+      "root": "aiweb/engines/control_panel_ui_engine_frozen_v1.02",
+      "family": "engines",
+      "canonical_score": 114,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 9,
+      "symbol_count": 90
+    },
+    {
+      "engine_name": "drift_signature_logger_frozen_v1-0.01",
+      "engine_base": "drift_signature_logger",
+      "root": "aiweb/engines/drift_signature_logger_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 112,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 12,
+      "symbol_count": 28
+    },
+    {
+      "engine_name": "recursive_field_engine_frozen_v1-0.01",
+      "engine_base": "recursive_field_engine",
+      "root": "aiweb/engines/recursive_field_engine_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 112,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 13,
+      "symbol_count": 23
+    },
+    {
+      "engine_name": "field_resonance_mapper_frozen_v1-0.01",
+      "engine_base": "field_resonance_mapper",
+      "root": "aiweb/engines/field_resonance_mapper_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 107,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 8,
+      "symbol_count": 20
+    },
+    {
+      "engine_name": "gilligan_drift_correction_upgrade_frozen_v1-0.01",
+      "engine_base": "gilligan_drift_correction_upgrade",
+      "root": "aiweb/engines/gilligan_drift_correction_upgrade_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 107,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 8,
+      "symbol_count": 22
+    },
+    {
+      "engine_name": "tone_engine_frozen_v1",
+      "engine_base": "tone_engine",
+      "root": "aiweb/engines/tone_engine_frozen_v1",
+      "family": "engines",
+      "canonical_score": 107,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 10,
+      "symbol_count": 10
+    },
+    {
+      "engine_name": "document_output_formatter_frozen_v1",
+      "engine_base": "document_output_formatter",
+      "root": "aiweb/engines/document_output_formatter_frozen_v1",
+      "family": "engines",
+      "canonical_score": 106,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 10,
+      "symbol_count": 6
+    },
+    {
+      "engine_name": "entropy_monitor_engine_frozen_v1-0.01",
+      "engine_base": "entropy_monitor_engine",
+      "root": "aiweb/engines/entropy_monitor_engine_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 106,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 8,
+      "symbol_count": 19
+    },
+    {
+      "engine_name": "glyph_engine_frozen_v1-0.01",
+      "engine_base": "glyph_engine",
+      "root": "aiweb/engines/glyph_engine_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 106,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 8,
+      "symbol_count": 18
+    },
+    {
+      "engine_name": "neo_engine_frozen_v1",
+      "engine_base": "neo_engine",
+      "root": "aiweb/engines/neo_engine_frozen_v1",
+      "family": "engines",
+      "canonical_score": 106,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 10,
+      "symbol_count": 8
+    },
+    {
+      "engine_name": "resonance_visualizer_engine_frozen_v1",
+      "engine_base": "resonance_visualizer_engine",
+      "root": "aiweb/engines/resonance_visualizer_engine_frozen_v1",
+      "family": "engines",
+      "canonical_score": 106,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 10,
+      "symbol_count": 6
+    },
+    {
+      "engine_name": "recursive_field_engine_frozen_v1",
+      "engine_base": "recursive_field_engine",
+      "root": "aiweb/engines/recursive_field_engine_frozen_v1",
+      "family": "engines",
+      "canonical_score": 104,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 7,
+      "symbol_count": 11
+    },
+    {
+      "engine_name": "resonance_charge_meter_frozen_v1",
+      "engine_base": "resonance_charge_meter",
+      "root": "aiweb/engines/resonance_charge_meter_frozen_v1",
+      "family": "engines",
+      "canonical_score": 104,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 7,
+      "symbol_count": 11
+    },
+    {
+      "engine_name": "resonance_charge_meter_frozen_v1.01",
+      "engine_base": "resonance_charge_meter",
+      "root": "aiweb/engines/resonance_charge_meter_frozen_v1.01",
+      "family": "engines",
+      "canonical_score": 104,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 7,
+      "symbol_count": 11
+    },
+    {
+      "engine_name": "aiweb_os_engine_frozen_v1",
+      "engine_base": "aiweb_os_engine",
+      "root": "aiweb/engines/aiweb_os_engine_frozen_v1",
+      "family": "engines",
+      "canonical_score": 103,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 7,
+      "symbol_count": 7
+    },
+    {
+      "engine_name": "control_panel_ui_engine_frozen_v1.01",
+      "engine_base": "control_panel_ui_engine",
+      "root": "aiweb/engines/control_panel_ui_engine_frozen_v1.01",
+      "family": "engines",
+      "canonical_score": 103,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 8,
+      "symbol_count": 2
+    },
+    {
+      "engine_name": "memory_stack_engine_frozen_v1",
+      "engine_base": "memory_stack_engine",
+      "root": "aiweb/engines/memory_stack_engine_frozen_v1",
+      "family": "engines",
+      "canonical_score": 103,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 7,
+      "symbol_count": 8
+    },
+    {
+      "engine_name": "plugin_engine_frozen_v1",
+      "engine_base": "plugin_engine",
+      "root": "aiweb/engines/plugin_engine_frozen_v1",
+      "family": "engines",
+      "canonical_score": 103,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 7,
+      "symbol_count": 7
+    },
+    {
+      "engine_name": "symbolic_feedback_loop_engine_frozen_v1",
+      "engine_base": "symbolic_feedback_loop_engine",
+      "root": "aiweb/engines/symbolic_feedback_loop_engine_frozen_v1",
+      "family": "engines",
+      "canonical_score": 103,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 7,
+      "symbol_count": 8
+    },
+    {
+      "engine_name": "symbolic_feedback_loop_engine_frozen_v1.01",
+      "engine_base": "symbolic_feedback_loop_engine",
+      "root": "aiweb/engines/symbolic_feedback_loop_engine_frozen_v1.01",
+      "family": "engines",
+      "canonical_score": 103,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 7,
+      "symbol_count": 8
+    },
+    {
+      "engine_name": "tier_enforcer_frozen_v1",
+      "engine_base": "tier_enforcer",
+      "root": "aiweb/engines/tier_enforcer_frozen_v1",
+      "family": "engines",
+      "canonical_score": 103,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 7,
+      "symbol_count": 6
+    },
+    {
+      "engine_name": "collapse_prevention_engine_frozen_v1-0.01",
+      "engine_base": "collapse_prevention_engine",
+      "root": "aiweb/engines/collapse_prevention_engine_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 101,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 10
+    },
+    {
+      "engine_name": "symbolic_drift_visualizer_frozen_v1-0.01",
+      "engine_base": "symbolic_drift_visualizer",
+      "root": "aiweb/engines/symbolic_drift_visualizer_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 101,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 10
+    },
+    {
+      "engine_name": "system_log_engine_frozen_v1",
+      "engine_base": "system_log_engine",
+      "root": "aiweb/engines/system_log_engine_frozen_v1",
+      "family": "engines",
+      "canonical_score": 101,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 6,
+      "symbol_count": 4
+    },
+    {
+      "engine_name": "tone_engine_frozen_v1-0.01",
+      "engine_base": "tone_engine",
+      "root": "aiweb/engines/tone_engine_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 101,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 5
+    },
+    {
+      "engine_name": "tone_engine_frozen_v1.1.01",
+      "engine_base": "tone_engine",
+      "root": "aiweb/engines/tone_engine_frozen_v1.1.01",
+      "family": "engines",
+      "canonical_score": 101,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 5
+    },
+    {
+      "engine_name": "tone_engine_frozen_v1.1.02",
+      "engine_base": "tone_engine",
+      "root": "aiweb/engines/tone_engine_frozen_v1.1.02",
+      "family": "engines",
+      "canonical_score": 101,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 5
+    },
+    {
+      "engine_name": "admin_override_console_frozen_v1-0.01",
+      "engine_base": "admin_override_console",
+      "root": "aiweb/engines/admin_override_console_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 9
+    },
+    {
+      "engine_name": "agents_stack_frozen_v1-0.01",
+      "engine_base": "agents_stack",
+      "root": "aiweb/engines/agents_stack_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 8
+    },
+    {
+      "engine_name": "athena_engine_frozen_v1",
+      "engine_base": "athena_engine",
+      "root": "aiweb/engines/athena_engine_frozen_v1",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "contribution_dashboard_engine_frozen_v1",
+      "engine_base": "contribution_dashboard_engine",
+      "root": "aiweb/engines/contribution_dashboard_engine_frozen_v1",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "core_stack_breather_frozen_v1-0.01",
+      "engine_base": "core_stack_breather",
+      "root": "aiweb/engines/core_stack_breather_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 5
+    },
+    {
+      "engine_name": "drift_analyzer_tool_frozen_v1-0.01",
+      "engine_base": "drift_analyzer_tool",
+      "root": "aiweb/engines/drift_analyzer_tool_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 9
+    },
+    {
+      "engine_name": "echo_trace_visualizer_frozen_v1-0.01",
+      "engine_base": "echo_trace_visualizer",
+      "root": "aiweb/engines/echo_trace_visualizer_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 9
+    },
+    {
+      "engine_name": "external_feed_listener_frozen_v1-0.01",
+      "engine_base": "external_feed_listener",
+      "root": "aiweb/engines/external_feed_listener_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 9
+    },
+    {
+      "engine_name": "failsafe_manager_frozen_v1",
+      "engine_base": "failsafe_manager",
+      "root": "aiweb/engines/failsafe_manager_frozen_v1",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "neo_engine_frozen_v1.1.01",
+      "engine_base": "neo_engine",
+      "root": "aiweb/engines/neo_engine_frozen_v1.1.01",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 4
+    },
+    {
+      "engine_name": "neo_engine_frozen_v1.1.02",
+      "engine_base": "neo_engine",
+      "root": "aiweb/engines/neo_engine_frozen_v1.1.02",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 4
+    },
+    {
+      "engine_name": "recursive_agent_kernel_frozen_v1",
+      "engine_base": "recursive_agent_kernel",
+      "root": "aiweb/engines/recursive_agent_kernel_frozen_v1",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "recursive_field_breather_frozen_v1-0.01",
+      "engine_base": "recursive_field_breather",
+      "root": "aiweb/engines/recursive_field_breather_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 8
+    },
+    {
+      "engine_name": "resurrection_planner_frozen_v1-0.01",
+      "engine_base": "resurrection_planner",
+      "root": "aiweb/engines/resurrection_planner_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 9
+    },
+    {
+      "engine_name": "seed_manager_frozen_v1",
+      "engine_base": "seed_manager",
+      "root": "aiweb/engines/seed_manager_frozen_v1",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "spc_memory_migrator_frozen_v1-0.01",
+      "engine_base": "spc_memory_migrator",
+      "root": "aiweb/engines/spc_memory_migrator_frozen_v1-0.01",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 9
+    },
+    {
+      "engine_name": "symbolic_policy_engine_frozen_v1",
+      "engine_base": "symbolic_policy_engine",
+      "root": "aiweb/engines/symbolic_policy_engine_frozen_v1",
+      "family": "engines",
+      "canonical_score": 100,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 5,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "agent_reflection_engine_frozen_v1",
+      "engine_base": "agent_reflection_engine",
+      "root": "aiweb/engines/agent_reflection_engine_frozen_v1",
+      "family": "engines",
+      "canonical_score": 99,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "compute_contribution_engine_frozen_v1",
+      "engine_base": "compute_contribution_engine",
+      "root": "aiweb/engines/compute_contribution_engine_frozen_v1",
+      "family": "engines",
+      "canonical_score": 99,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "dream_state_engine_frozen_v1",
+      "engine_base": "dream_state_engine",
+      "root": "aiweb/engines/dream_state_engine_frozen_v1",
+      "family": "engines",
+      "canonical_score": 99,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "dream_state_engine_frozen_v1.1.01",
+      "engine_base": "dream_state_engine",
+      "root": "aiweb/engines/dream_state_engine_frozen_v1.1.01",
+      "family": "engines",
+      "canonical_score": 99,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 3
+    },
+    {
+      "engine_name": "fluid_memory_engine_frozen_v1",
+      "engine_base": "fluid_memory_engine",
+      "root": "aiweb/engines/fluid_memory_engine_frozen_v1",
+      "family": "engines",
+      "canonical_score": 99,
+      "status_tags": [
+        "frozen"
+      ],
+      "file_count": 4,
+      "symbol_count": 3
+    }
+  ],
+  "source_inventory": "Patch 58 code engine inventory generated from code_library_v1 indexes",
+  "errors": []
+}

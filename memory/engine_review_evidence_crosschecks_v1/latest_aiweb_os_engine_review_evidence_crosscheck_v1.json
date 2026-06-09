@@ -1,0 +1,133 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "79d66f45d8bd1daaedaa1a59d670a7190019b9e0d2d4b01c0befd382207d8960",
+      "excerpt_start": "import sys\nimport os\nimport importlib.util\n\n# --- Dynamic Module Loader ---\ndef load_module(name, path):\n    spec = importlib.util.spec_from_file_location(name, path)\n    mod = importlib.util.module_from_spec(spec)\n    spec.loader.exec_module(mod)\n    return mod\n\n# --- Absolute Paths to Each Frozen Engine ---\nbase = os.path.abspath(\"../../engines\")\n\nos_engine     = load_module(\"os_engine\",     f\"{base}/aiweb_os_engine_frozen_v1/run.py\")\nphase_engine  = load_module(\"phase_engine\",  f\"{base}/phase_engine_frozen_v1/run.py\")\ntier_enforcer = load_module(\"tier_enforcer\", f\"{base}/tier_enforcer_frozen_v1/run.py\")\nmemory_stack  = load_module(\"memory_stack\",  f\"{base}/memory_stack_engine_frozen_v1/log.py\")\nsys_logger    = load_module(\"sys_logger\",    f\"{base}/system_log_engine_frozen_v1/log_event.py\")\nplugin_loader = load_module(\"plugin_loader\", f\"{base}/plugin_engine_frozen_v1/loader.py\")\n\nprint(\"\\n=== \ud83e\uddea AI.Web System Test Harness ===\")\n\ntry:\n    print(\"\\n[OS ENGINE] Booting...\")\n    result = os_engine.execute_command(\"ping\")\n    print(\"OS Engine:\", result)\nexcept Exception as e:\n    print(\"OS Engine: FAIL\", e)\n\ntry:\n    print(\"\\n[PHASE ENGINE] Initializing...\")\n    result = phase_engine.init_phase_state()\n    print(\"Phase Init:\", result)\n    result = phase_engine.move_to_next_phase()\n    print(\"Phase Step:\", result)\nexcept Exception as e:\n    print(\"Phase Engine: FAIL\", e)\n\ntry:\n    print(\"\\n[TIER ENFORCER] Validating output...\")\n    result = tier_enforcer.enforce_tier(\"This tool helps you journal clearly.\")\n    print(\"Tier Enforcer Output:\", result)\nexcept Exception as e:\n    print(\"Tier Enforcer: FAIL\", e)\n\ntry:\n    print(\"\\n[MEMORY STACK] Writing test entry...\")\n    memory_stack.write_to_stack({\"source\": \"test\", \"note\": \"phase step\"})\n    print(\"Memory Stack: PASS\")\nexcept Exception as e:\n    print(\"Memory Stack: FAIL\", e)\n\ntry:\n    print(\"\\n[SYSTEM LOGGER] Logging system event...\")\n    sys_logger.log_event(\"test_harness\", \"System test running\", status=\"info\")\n    print(\"System Logger: PASS\")\nexcept Exception as e:\n    print(\"System Logger: FAIL\", e)\n\ntry:\n    print(\"\\n[PLUGIN ENGINE] Attempting to load plugins...\")\n    plugin_loader.load_plugins()\n    print(\"Plugin Loader: PASS\")\nexcept Exception as e:\n    print(\"Plugin Loader: FAIL\", e)\n\nprint(\"\\n\u2705 SYSTEM TEST COMPLETE\")\n\n",
+      "functions_sample": [
+        "load_module"
+      ],
+      "imports_sample": [
+        "import sys",
+        "import os",
+        "import importlib.util"
+      ],
+      "line_count": 70,
+      "path": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1/run_system_test.py",
+      "relative_to_candidate": "run_system_test.py",
+      "sha256": "79d66f45d8bd1daaedaa1a59d670a7190019b9e0d2d4b01c0befd382207d8960",
+      "size_bytes": 2316
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "excerpt_start": "",
+      "functions_sample": [],
+      "imports_sample": [],
+      "line_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1/test_log.txt",
+      "relative_to_candidate": "test_log.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1",
+  "created_at": "2026-05-16_080511",
+  "crosscheck_id": "ERE-aiweb_os-2026-05-16_080511",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "load_module"
+    ],
+    "imports_sample": [
+      "import importlib.util",
+      "import os",
+      "import sys"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`aiweb_os` appears to be a local AI.Web engine/component. The bound source evidence includes 2 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DEFER_PENDING_COMPARISON",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "import sys import os"
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080449_aiweb_os_llm_engine_review_draft_v1.json",
+  "draft_sha256": "d3bd5a002f54003c47b5bb869a951244b3df59c9c3b7ec433020bee949582235",
+  "engine_family": "aiweb_os",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_aiweb_os_engine_evidence_binder.json",
+  "evidence_binder_sha256": "67b457092a01cf10e174cb8f45b3497b3e7ced9a47857b00e944a69a7ac7a409",
+  "evidence_id": "EEB-7b29cb90ee5e540e",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "run_system_test.py",
+      "test_log.txt"
+    ],
+    "functions_mentioned": [],
+    "imports_mentioned": [
+      "import sys"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 22.148,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "68b42d7d7a815052553ae861ca02b108180893d69d9748ef54a9ba58ec9e8847",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nThis code serves as a system test harness for AI.Web engines, dynamically loading and testing core components like the OS engine via a \"ping\" command.  \n\nLikely System Role:  \nA runtime wrapper for initializing and validating AI.Web engine modules, possibly for deployment or integration testing.  \n\nEvidence Used:  \n- `run_system_test.py` dynamically loads frozen engine modules (e.g., `os_engine`) and attempts to execute commands (e.g., `ping`).  \n- References to other frozen engines (phase_engine, tier_enforcer, etc.) suggest a modular system architecture.  \n- Empty `test_log.txt` indicates potential output logging absence.  \n\nRisks / Uncertainties:  \n- Test script is incomplete (cut-off at `phase_engine.i`).  \n- No output in `test_log.txt` makes result validation ambiguous.  \n- Dynamic module loading could introduce security risks if paths are not strictly controlled.  \n- Dependencies on other frozen engines may not be fully validated.  \n\nRecommendation Draft:  \nComplete the test script to validate all engine initializations. Ensure logging captures results, and verify dynamic module loading security constraints. Confirm dependencies are stable before deployment.  \n\nSuggested Nic Action:  \nReview the incomplete test script and empty log file. Assess dynamic module loading security. Approve once validation and logging are confirmed."
+  },
+  "llm_sections": {
+    "evidence_used": "- `run_system_test.py` dynamically loads frozen engine modules (e.g., `os_engine`) and attempts to execute commands (e.g., `ping`).  \n- References to other frozen engines (phase_engine, tier_enforcer, etc.) suggest a modular system architecture.  \n- Empty `test_log.txt` indicates potential output logging absence.",
+    "likely_system_role": "A runtime wrapper for initializing and validating AI.Web engine modules, possibly for deployment or integration testing.",
+    "plain_english_purpose": "This code serves as a system test harness for AI.Web engines, dynamically loading and testing core components like the OS engine via a \"ping\" command.",
+    "recommendation_draft": "Complete the test script to validate all engine initializations. Ensure logging captures results, and verify dynamic module loading security constraints. Confirm dependencies are stable before deployment.",
+    "risks_uncertainties": "- Test script is incomplete (cut-off at `phase_engine.i`).  \n- No output in `test_log.txt` makes result validation ambiguous.  \n- Dynamic module loading could introduce security risks if paths are not strictly controlled.  \n- Dependencies on other frozen engines may not be fully validated.",
+    "suggested_nic_action": "Review the incomplete test script and empty log file. Assess dynamic module loading security. Approve once validation and logging are confirmed."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nThis code serves as a system test harness for AI.Web engines, dynamically loading and testing core components like the OS engine via a \"ping\" command.  \n\nLikely System Role:  \nA runtime wrapper for initializing and validating AI.Web engine modules, possibly for deployment or integration testing.  \n\nEvidence Used:  \n- `run_system_test.py` dynamically loads frozen engine modules (e.g., `os_engine`) and attempts to execute commands (e.g., `ping`).  \n- References to other frozen engines (phase_engine, tier_enforcer, etc.) suggest a modular system architecture.  \n- Empty `test_log.txt` indicates potential output logging absence.  \n\nRisks / Uncertainties:  \n- Test script is incomplete (cut-off at `phase_engine.i`).  \n- No output in `test_log.txt` makes result validation ambiguous.  \n- Dynamic module loading could introduce security risks if paths are not strictly controlled.  \n- Dependencies on other frozen engines may not be fully validated.  \n\nRecommendation Draft:  \nComplete the test script to validate all engine initializations. Ensure logging captures results, and verify dynamic module loading security constraints. Confirm dependencies are stable before deployment.  \n\nSuggested Nic Action:  \nReview the incomplete test script and empty log file. Assess dynamic module loading security. Approve once validation and logging are confirmed.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

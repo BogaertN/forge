@@ -1,0 +1,169 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "ENGINE_REVIEW_TRIAGE_WORKSPACE",
+    "patch": "109",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "rule": "Patch 109 shows a triage workspace for cross-checked LLM engine reviews and may record Patch99-compatible queue decisions through the existing evidence-based approval path. It never commits the ledger or edits engines.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_triage_v1"
+  },
+  "counts": {
+    "crosschecked_engines": 5,
+    "not_ready_or_already_decided": 4,
+    "progress_crosschecked_not_decided": 1,
+    "ready_for_triage_decision": 1
+  },
+  "created_at": "2026-05-15_145529",
+  "manual_rule": "Never approve from summary alone. Read engine-review-evidence-show <engine> first.",
+  "next_step": "Run engine-review-triage-show <engine>, read the full evidence display, then approve/defer/reject explicitly. No ledger mutation occurs until the commit gate.",
+  "recommended_next_engine": "agents_stack",
+  "report_type": "ENGINE_REVIEW_TRIAGE_PLAN_V1_PATCH109",
+  "rows": [
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/agents_stack",
+      "commands": {
+        "approve": "engine-review-triage-approve agents_stack",
+        "defer": "engine-review-triage-defer agents_stack",
+        "read_evidence": "engine-review-evidence-show agents_stack",
+        "reject": "engine-review-triage-reject agents_stack",
+        "show_triage": "engine-review-triage-show agents_stack"
+      },
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_agents_stack_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "49db6076bd1c890d6c40c7956d93b046bf14443fcfb076442590f98c6d766bbc",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "engine_family": "agents_stack",
+      "evidence_id": "EEB-e7eb75087380b7b6",
+      "ledger_status": "PENDING_REVIEW",
+      "likely_system_role": null,
+      "llm_called": true,
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "priority": 1,
+      "queue_decision": "UNDECIDED",
+      "ready_for_triage_decision": true,
+      "recommendation_draft": null,
+      "warnings": []
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/activity_log",
+      "commands": {
+        "approve": "engine-review-triage-approve activity_log",
+        "defer": "engine-review-triage-defer activity_log",
+        "read_evidence": "engine-review-evidence-show activity_log",
+        "reject": "engine-review-triage-reject activity_log",
+        "show_triage": "engine-review-triage-show activity_log"
+      },
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_activity_log_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "50ecd7db791a24589f780d214b80def2e07dbd836ea2a38d1aad1eb4e1f17bb4",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "engine_family": "activity_log",
+      "evidence_id": "EEB-929b125c673bef05",
+      "ledger_status": "APPROVED",
+      "likely_system_role": null,
+      "llm_called": true,
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "priority": 5,
+      "queue_decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "ready_for_triage_decision": false,
+      "recommendation_draft": null,
+      "warnings": [
+        "ledger_status_is_APPROVED; decision may already be committed/deferred",
+        "queue_decision_already_APPROVED_FOR_FUTURE_COMMIT"
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/admin_override_console",
+      "commands": {
+        "approve": "engine-review-triage-approve admin_override_console",
+        "defer": "engine-review-triage-defer admin_override_console",
+        "read_evidence": "engine-review-evidence-show admin_override_console",
+        "reject": "engine-review-triage-reject admin_override_console",
+        "show_triage": "engine-review-triage-show admin_override_console"
+      },
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_admin_override_console_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "dfd7ee9597f01c4968a7329178f8a0b9047cb4e919d35d493bfebb285874287c",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "engine_family": "admin_override_console",
+      "evidence_id": "EEB-7e1e67cf08853d05",
+      "ledger_status": "DEFERRED",
+      "likely_system_role": null,
+      "llm_called": true,
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "priority": 5,
+      "queue_decision": "DEFERRED_FOR_MORE_REVIEW",
+      "ready_for_triage_decision": false,
+      "recommendation_draft": null,
+      "warnings": [
+        "ledger_status_is_DEFERRED; decision may already be committed/deferred",
+        "queue_decision_already_DEFERRED_FOR_MORE_REVIEW"
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/agent_reflection_engine",
+      "commands": {
+        "approve": "engine-review-triage-approve agent_reflection_engine",
+        "defer": "engine-review-triage-defer agent_reflection_engine",
+        "read_evidence": "engine-review-evidence-show agent_reflection_engine",
+        "reject": "engine-review-triage-reject agent_reflection_engine",
+        "show_triage": "engine-review-triage-show agent_reflection_engine"
+      },
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_agent_reflection_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "61b670851a8db1682f0e7e09e8dd26eae156de95c9c7661f14ee17e87ef6f86b",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "engine_family": "agent_reflection_engine",
+      "evidence_id": "EEB-efe9b78ceabc9853",
+      "ledger_status": "APPROVED",
+      "likely_system_role": null,
+      "llm_called": true,
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "priority": 5,
+      "queue_decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "ready_for_triage_decision": false,
+      "recommendation_draft": null,
+      "warnings": [
+        "ledger_status_is_APPROVED; decision may already be committed/deferred",
+        "queue_decision_already_APPROVED_FOR_FUTURE_COMMIT"
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1",
+      "commands": {
+        "approve": "engine-review-triage-approve aiweb_os",
+        "defer": "engine-review-triage-defer aiweb_os",
+        "read_evidence": "engine-review-evidence-show aiweb_os",
+        "reject": "engine-review-triage-reject aiweb_os",
+        "show_triage": "engine-review-triage-show aiweb_os"
+      },
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_aiweb_os_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "19947501f38cdb7e663397d187e465c0adc39a10a6b0ee8b5ccb59a306e633a6",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "engine_family": "aiweb_os",
+      "evidence_id": "EEB-7b29cb90ee5e540e",
+      "ledger_status": "DEFERRED",
+      "likely_system_role": null,
+      "llm_called": true,
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "priority": 5,
+      "queue_decision": "UNDECIDED",
+      "ready_for_triage_decision": false,
+      "recommendation_draft": null,
+      "warnings": [
+        "ledger_status_is_DEFERRED; decision may already be committed/deferred"
+      ]
+    }
+  ],
+  "schema_version": "engine_review_triage_workspace_v1_patch109",
+  "status": "ENGINE_REVIEW_TRIAGE_READY_NO_LEDGER_AUTHORITY"
+}

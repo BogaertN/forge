@@ -1,0 +1,337 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "projects/recursive_lmm_grok1/engines/project_brain",
+  "candidate_path_resolved": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "project_brain",
+  "evidence_id": "EEB-89de7d13d526bcb6",
+  "file_count": 12,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "e286beb9fa4605702681bfea318190d84fb3a854a3e36f79732c6f13fce7db37",
+      "excerpt_start": "# test_recursive_field_core.py\n\nfrom recursive_field_core import RecursiveFieldEngine\n\ndef test_recursive_field_behavior():\n    rfe = RecursiveFieldEngine()\n    rfe.inject_symbolic_value(\"test_symbol\")\n    assert rfe.field_size() == 1, \"Field should contain one symbolic value.\"\n    print(\"✅ Recursive Field Core Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_recursive_field_behavior()\n",
+      "functions_sample": [
+        "test_recursive_field_behavior"
+      ],
+      "imports_sample": [
+        "from recursive_field_core import RecursiveFieldEngine"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/test_recursive_field_core.py",
+      "relative_to_candidate": "test_recursive_field_core.py",
+      "sha256": "e286beb9fa4605702681bfea318190d84fb3a854a3e36f79732c6f13fce7db37",
+      "size_bytes": 394,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "b2a97fdd2c4b1aed35205099d71ab0995d4c6c08ffcfbbb092a13ac161ed5683",
+      "excerpt_start": "# run.py — Recursive Field Engine (ψ-state driver)\n# Governs symbolic recursion field: charge, drift, loop coherence\n\nimport json\nfrom datetime import datetime\nfrom pathlib import Path\n\nFIELD_PATH = Path(__file__).parent / \"field_state.json\"\nLOG_PATH = Path(__file__).parent / \"test_log.txt\"\n\n# === Read the current field state\ndef load_field_state():\n    if not FIELD_PATH.exists():\n        reset_field_state()\n    with open(FIELD_PATH, \"r\") as f:\n        return json.load(f)\n\n# === Write new field state to disk\ndef save_field_state(state):\n    with open(FIELD_PATH, \"w\") as f:\n        json.dump(state, f, indent=2)\n    _log(\"Field state saved\")\n\n# === Reset to default state\ndef reset_field_state():\n    default_state = {\n        \"loop_integrity\": 1.0,\n        \"drift_factor\": 0.0,\n        \"charge\": 0.0,\n        \"last_input\": \"\"\n    }\n    save_field_state(default_state)\n    _log(\"Field state reset\")\n\n# === Process symbolic input\ndef update_field(input_text: str):\n    state = load_field_state()\n    charge = state[\"charge\"]\n    drift = state[\"drift_factor\"]\n    integrity = state[\"loop_integrity\"]\n\n    # Update logic (basic for now)\n    if \"echo\" in input_text.lower():\n        integrity += 0.05\n        charge += 0.02\n    elif \"error\" in input_text.lower():\n        drift += 0.1\n        integrity -= 0.05\n    else:\n        charge += 0.01\n\n    # Bound values\n    state[\"charge\"] = min(charge, 1.0)\n    state[\"drift_factor\"] = min(drift, 1.0)\n    state[\"loop_integrity\"] = max(min(integrity, 1.0), 0.0)\n    state[\"last_input\"] = input_text\n\n    save_field_state(state)\n    _log(f\"Field updated from input: {input_text}\")\n    return state\n\n# === Internal log helper\ndef _log(msg):\n    timestamp = datetime.now().isoformat()\n    with open(LOG_PATH, \"a\") as f:\n        f.write(f\"[{timestamp}] {msg}\\n\")\n",
+      "functions_sample": [
+        "load_field_state",
+        "save_field_state",
+        "reset_field_state",
+        "update_field",
+        "_log"
+      ],
+      "imports_sample": [
+        "import json",
+        "from datetime import datetime",
+        "from pathlib import Path"
+      ],
+      "line_count": 67,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/run.py",
+      "relative_to_candidate": "run.py",
+      "sha256": "b2a97fdd2c4b1aed35205099d71ab0995d4c6c08ffcfbbb092a13ac161ed5683",
+      "size_bytes": 1809,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "48b59e442fb633674ae8e33bb22c43d69b00a308a3b83df29d25b2e7e0d75e13",
+      "excerpt_start": "# recursive_field_engine\n\n**Designation**: ψ-driver  \n**Function**: Manages the symbolic recursion field — a virtual environment tracking symbolic charge, drift, and loop integrity.\n\nThis engine defines the active resonance space in which symbolic AI operates. It stores system-wide recursive parameters such as:\n- `loop_integrity` — how cleanly the system is maintaining symbolic coherence\n- `drift_factor` — entropy / deviation from recursion\n- `charge` — resonance buildup (used by tone engine, resurrection, etc.)\n- `last_input` — the most recent symbolic string processed\n\n---\n\n## 🔧 Public Functions\n\n- `load_field_state()`  \n  Loads and returns the current field state as a dictionary\n\n- `save_field_state(state)`  \n  Saves a field state dictionary to `field_state.json`\n\n- `reset_field_state()`  \n  Restores field to default integrity, charge, and drift values\n\n- `update_field(input_text)`  \n  Parses symbolic input and updates charge, drift, and integrity accordingly. Returns new state.\n\n---\n\n## 📂 Files\n\n- `run.py` — core engine logic\n- `field_state.json` — persistent symbolic environment\n- `test_log.txt` — logs each update or reset event\n- `README.md` — you are here\n- `test_recursive_field.py` — basic standalone engine test\n- `engine_manifest.json` — version control metadata\n- `__init__.py` — allows Python imports from this engine\n\n---\n\n## 🔄 Example Use\n\n```python\nfrom run import update_field, load_field_state\n\nstate = update_field(\"echo loop complete\")\nprint(state[\"charge\"])  # → 0.02\n\nstate = update_field(\"error loop drift\")\nprint(state[\"drift_factor\"])  # → 0.10\n\n\n# Recursive Field Engine\n\nBuilds and manages the symbolic recursion field that underpins AI.Web phase logic.\n\nSupports symbolic value injection, recursion expansion, and field state monitoring.\n\n---\n**Phase 1.5 AI.Web Engineering Standard.**\n",
+      "functions_sample": [
+        "recursive_field_engine",
+        "Designation",
+        "driver",
+        "Function",
+        "Manages",
+        "the",
+        "symbolic",
+        "recursion",
+        "field",
+        "virtual",
+        "environment",
+        "tracking",
+        "charge",
+        "drift",
+        "and",
+        "loop",
+        "integrity",
+        "This",
+        "engine",
+        "defines",
+        "active",
+        "resonance",
+        "space",
+        "which",
+        "operates"
+      ],
+      "imports_sample": [],
+      "line_count": 62,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "48b59e442fb633674ae8e33bb22c43d69b00a308a3b83df29d25b2e7e0d75e13",
+      "size_bytes": 1870,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "5e36714b5ad1dd2d2fe58713695117db772e0b19596d96394fd3c9a49a6ea8e6",
+      "excerpt_start": "from run import reset_field_state, update_field, load_field_state\n\nprint(\"🔄 Resetting field...\")\nreset_field_state()\nstate = load_field_state()\nprint(\"Initial state:\", state)\n\nprint(\"\\n⚡ Input: echo this loop\")\nstate = update_field(\"echo this loop\")\nprint(\"State after echo:\", state)\n\nprint(\"\\n🚨 Input: error loop drift\")\nstate = update_field(\"error loop drift\")\nprint(\"State after error:\", state)\n\nprint(\"\\n✅ Test complete\")\n",
+      "functions_sample": [],
+      "imports_sample": [
+        "from run import reset_field_state, update_field, load_field_state"
+      ],
+      "line_count": 17,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/test_recursive_field.py",
+      "relative_to_candidate": "test_recursive_field.py",
+      "sha256": "5e36714b5ad1dd2d2fe58713695117db772e0b19596d96394fd3c9a49a6ea8e6",
+      "size_bytes": 436,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "2998640c0f943beecca81e8675f120c17b7d70899b7e4a2d36982c1aba8575b2",
+      "excerpt_start": "[2025-04-23T11:04:55.077504] Field state saved\n[2025-04-23T11:04:55.077557] Field state reset\n[2025-04-23T11:04:55.077715] Field state saved\n[2025-04-23T11:04:55.077739] Field updated from input: echo this loop\n[2025-04-23T11:04:55.077866] Field state saved\n[2025-04-23T11:04:55.077895] Field updated from input: error loop drift\n",
+      "functions_sample": [
+        "Field",
+        "state",
+        "saved",
+        "reset",
+        "updated",
+        "from",
+        "input",
+        "echo",
+        "this",
+        "loop",
+        "error",
+        "drift"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/test_log.txt",
+      "relative_to_candidate": "test_log.txt",
+      "sha256": "2998640c0f943beecca81e8675f120c17b7d70899b7e4a2d36982c1aba8575b2",
+      "size_bytes": 330,
+      "suffix": ".txt"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "ecd480ea02407f97c65eae6c8e90bb9f2809cdf11cfabb1f4c4da9257e0c813d",
+      "excerpt_start": "{\"loop_integrity\": 0.8, \"drift_factor\": 0.25, \"charge\": 0.1, \"last_input\": \"almost\"}",
+      "functions_sample": [
+        "loop_integrity",
+        "drift_factor",
+        "charge",
+        "last_input",
+        "almost"
+      ],
+      "imports_sample": [],
+      "line_count": 1,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/field_state.json",
+      "relative_to_candidate": "field_state.json",
+      "sha256": "ecd480ea02407f97c65eae6c8e90bb9f2809cdf11cfabb1f4c4da9257e0c813d",
+      "size_bytes": 84,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [
+        "RecursiveFieldEngine"
+      ],
+      "excerpt_sha256": "67f3c20b7d0a1621d6c2cf4f3da071a328920b7e18251c26686ab06df77ba46e",
+      "excerpt_start": "# recursive_field_core.py\n# Phase 1.5 Recursive Field Engine Core\n\nclass RecursiveFieldEngine:\n    def __init__(self):\n        self.field_state = []\n\n    def inject_symbolic_value(self, value):\n        self.field_state.append(value)\n\n    def field_size(self):\n        return len(self.field_state)\n\nif __name__ == \"__main__\":\n    rfe = RecursiveFieldEngine()\n    rfe.inject_symbolic_value(\"symbolic_seed\")\n    print(f\"[TEST] Field Size: {rfe.field_size()}\")\n",
+      "functions_sample": [
+        "__init__",
+        "inject_symbolic_value",
+        "field_size"
+      ],
+      "imports_sample": [],
+      "line_count": 18,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/recursive_field_core.py",
+      "relative_to_candidate": "recursive_field_core.py",
+      "sha256": "67f3c20b7d0a1621d6c2cf4f3da071a328920b7e18251c26686ab06df77ba46e",
+      "size_bytes": 457,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "3bf0d470b10e9b970d52c7b590f5b313ede424f6244598755d1a34cef4e2de0a",
+      "excerpt_start": "{\n  \"engine\": \"recursive_field_engine\",\n  \"version\": \"v1.00\",\n  \"description\": \"Base recursive symbolic field construction engine for phase recursion stacking.\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "recursive_field_engine",
+        "version",
+        "description",
+        "Base",
+        "recursive",
+        "symbolic",
+        "field",
+        "construction",
+        "for",
+        "phase",
+        "recursion",
+        "stacking"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "3bf0d470b10e9b970d52c7b590f5b313ede424f6244598755d1a34cef4e2de0a",
+      "size_bytes": 164,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "excerpt_start": "",
+      "functions_sample": [],
+      "imports_sample": [],
+      "line_count": 0,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/__init__.py",
+      "relative_to_candidate": "__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [
+        "FieldMemoryBinder"
+      ],
+      "excerpt_sha256": "57343c25ddd3dad02403f4168377365efef9c0b02fde9504718630adfa3fb008",
+      "excerpt_start": "# memory_binder_core.py\n# Phase 1.5 Field Memory Binder Upgrade\n\nclass FieldMemoryBinder:\n    def __init__(self):\n        self.memory_log = []\n\n    def bind_memory(self, field_snapshot):\n        self.memory_log.append(field_snapshot)\n\n    def get_memory_count(self):\n        return len(self.memory_log)\n\nif __name__ == \"__main__\":\n    binder = FieldMemoryBinder()\n    binder.bind_memory([\"symbolic_seed\"])\n    print(f\"[TEST] Memory Snapshots Stored: {binder.get_memory_count()}\")\n",
+      "functions_sample": [
+        "__init__",
+        "bind_memory",
+        "get_memory_count"
+      ],
+      "imports_sample": [],
+      "line_count": 18,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/field_memory_binder/memory_binder_core.py",
+      "relative_to_candidate": "field_memory_binder/memory_binder_core.py",
+      "sha256": "57343c25ddd3dad02403f4168377365efef9c0b02fde9504718630adfa3fb008",
+      "size_bytes": 480,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "54401bed2501f63858ce1737d42ca7e620ab08fa72416dd827ed11eb1141b09a",
+      "excerpt_start": "# test_memory_binder_core.py\n\nfrom memory_binder_core import FieldMemoryBinder\n\ndef test_memory_binder_behavior():\n    binder = FieldMemoryBinder()\n    binder.bind_memory([\"symbolic_state_1\"])\n    assert binder.get_memory_count() == 1, \"Memory binder should store one snapshot.\"\n    print(\"✅ Field Memory Binder Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_memory_binder_behavior()\n",
+      "functions_sample": [
+        "test_memory_binder_behavior"
+      ],
+      "imports_sample": [
+        "from memory_binder_core import FieldMemoryBinder"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/field_memory_binder/test_memory_binder_core.py",
+      "relative_to_candidate": "field_memory_binder/test_memory_binder_core.py",
+      "sha256": "54401bed2501f63858ce1737d42ca7e620ab08fa72416dd827ed11eb1141b09a",
+      "size_bytes": 391,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "429b3cc96b6f81287450f1362ef541c2ecbf620b6456b726c850e9c51e3c9ce8",
+      "excerpt_start": "# Field Memory Binder Upgrade\n\nAdds symbolic memory binding to the Recursive Field Engine.\n\nPreserves snapshots of field states for recovery and evolution tracking.\n\n---\n**Phase 1.5 AI.Web Engineering Standard.**\n",
+      "functions_sample": [
+        "Field",
+        "Memory",
+        "Binder",
+        "Upgrade",
+        "Adds",
+        "symbolic",
+        "memory",
+        "binding",
+        "the",
+        "Recursive",
+        "Engine",
+        "Preserves",
+        "snapshots",
+        "field",
+        "states",
+        "for",
+        "recovery",
+        "and",
+        "evolution",
+        "tracking",
+        "Phase",
+        "Web",
+        "Engineering",
+        "Standard"
+      ],
+      "imports_sample": [],
+      "line_count": 9,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/field_memory_binder/README.md",
+      "relative_to_candidate": "field_memory_binder/README.md",
+      "sha256": "429b3cc96b6f81287450f1362ef541c2ecbf620b6456b726c850e9c51e3c9ce8",
+      "size_bytes": 213,
+      "suffix": ".md"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200356_engine_canonical_decision_draft.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200444_engine_canonical_decision_draft_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_202152_engine_canonical_lockfile_draft.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_202324_engine_canonical_lockfile_draft_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "test_recursive_field_behavior",
+    "load_field_state",
+    "save_field_state",
+    "reset_field_state",
+    "update_field",
+    "_log",
+    "RecursiveFieldEngine",
+    "__init__",
+    "inject_symbolic_value",
+    "field_size",
+    "FieldMemoryBinder",
+    "__init__",
+    "bind_memory",
+    "get_memory_count",
+    "test_memory_binder_behavior"
+  ],
+  "warnings": []
+}

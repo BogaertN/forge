@@ -1,0 +1,13 @@
+test_define_maps_to_phase_7 (__main__.TestPhaseStateParser.test_define_maps_to_phase_7) ... ok
+test_deploy_maps_to_phase_8_with_warning (__main__.TestPhaseStateParser.test_deploy_maps_to_phase_8_with_warning) ... ok
+test_drift_maps_to_phase_5 (__main__.TestPhaseStateParser.test_drift_maps_to_phase_5) ... ok
+test_error_maps_to_friction_or_correction (__main__.TestPhaseStateParser.test_error_maps_to_friction_or_correction) ... ok
+test_explicit_phi_overrides (__main__.TestPhaseStateParser.test_explicit_phi_overrides) ... ok
+test_final_maps_to_phase_9 (__main__.TestPhaseStateParser.test_final_maps_to_phase_9) ... ok
+test_goal_maps_to_phase_3 (__main__.TestPhaseStateParser.test_goal_maps_to_phase_3) ... ok
+test_start_maps_to_phase_1 (__main__.TestPhaseStateParser.test_start_maps_to_phase_1) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.002s
+
+OK

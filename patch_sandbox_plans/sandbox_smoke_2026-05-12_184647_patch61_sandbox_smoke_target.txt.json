@@ -1,0 +1,22 @@
+{
+  "report_type": "PATCH_SANDBOX_SMOKE_PLAN_PATCH61",
+  "timestamp": "2026-05-12T18:46:47",
+  "sandbox_id": "sandbox_smoke_2026-05-12_184647_patch61_sandbox_smoke_target.txt",
+  "status": "READY",
+  "smoke_test": true,
+  "smoke_test_patch": 61,
+  "read_only_project_files": true,
+  "forge_owned_writes_only": true,
+  "project_file_modified": false,
+  "apply_plan_path": "/home/nic/forge/apply_plans/2026-05-12_184647_PATCH61_SANDBOX_SMOKE_PLAN.txt",
+  "target_file": "/home/nic/forge/patch_sandbox_smoke_tests/targets/patch61_sandbox_smoke_target.txt",
+  "target_size_bytes": 124,
+  "original_sha256": "6d5560c9fbfb9663",
+  "future_sha256": "0072e8a8b8f859d5",
+  "current_sha256": "6d5560c9fbfb9663",
+  "rollback_path": "FORGE_OWNED_SMOKE_TARGET_NO_PROJECT_ROLLBACK_REQUIRED",
+  "sandbox_root": "/home/nic/forge/patch_sandboxes/sandbox_smoke_2026-05-12_184647_patch61_sandbox_smoke_target.txt",
+  "sandbox_relative_target": "_forge_owned_smoke/patch61_sandbox_smoke_target.txt",
+  "issues": [],
+  "next_step": "patch-sandbox-smoke-apply latest"
+}

@@ -1,0 +1,23 @@
+# FORGE_SELF_SNAPSHOT_EXPORT_V1
+
+- **schema_version:** forge_self_snapshot_export_v1_patch121
+- **report_type:** FORGE_SELF_SNAPSHOT_EXPORT_V1
+- **created_at:** 2026-05-17T06:36:48
+- **status:** FORGE_SELF_SNAPSHOT_EXPORT_READY
+- **latest_manifest_status:** FORGE_SELF_SNAPSHOT_CREATED
+- **latest_verification_status:** FORGE_SELF_SNAPSHOT_VERIFIED
+- **snapshot_id:** FSS-2026-05-17_063610
+- **copied_count:** 9
+- **verified_count:** 9
+- **manifest_path:** /home/nic/forge/memory/forge_self_snapshots_v1/latest_forge_self_snapshot_manifest_v1.json
+- **verification_path:** /home/nic/forge/memory/forge_self_snapshots_v1/latest_forge_self_snapshot_verification_v1.json
+- **authority:**
+  - `mode`: `EXPORT_ONLY`
+  - `live_self_write_authority`: `False`
+  - `project_file_write_authority`: `False`
+  - `patch_apply_authority`: `False`
+  - `shell_execution_authority`: `False`
+- **next_commands:** 3 item(s)
+  - `forge-next`
+  - `forge-roadmap-status`
+  - `Install Patch 122 when ready`

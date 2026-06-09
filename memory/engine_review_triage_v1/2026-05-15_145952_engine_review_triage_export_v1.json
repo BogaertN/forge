@@ -1,0 +1,59 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "ENGINE_REVIEW_TRIAGE_WORKSPACE",
+    "patch": "109",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "rule": "Patch 109 shows a triage workspace for cross-checked LLM engine reviews and may record Patch99-compatible queue decisions through the existing evidence-based approval path. It never commits the ledger or edits engines.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_triage_v1"
+  },
+  "counts": {
+    "reports": 2
+  },
+  "created_at": "2026-05-15_145952",
+  "report_type": "ENGINE_REVIEW_TRIAGE_EXPORT_V1_PATCH109",
+  "reports": [
+    {
+      "counts": {
+        "crosschecked_engines": 5,
+        "not_ready_or_already_decided": 4,
+        "progress_crosschecked_not_decided": 1,
+        "ready_for_triage_decision": 1
+      },
+      "engines": [
+        "agents_stack",
+        "activity_log",
+        "admin_override_console",
+        "agent_reflection_engine",
+        "aiweb_os"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_triage_v1/2026-05-15_145529_engine_review_triage_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_TRIAGE_PLAN_V1_PATCH109",
+      "sha256": "75dedfab700541d1136b84e232540c623b2fee4d20a55a135bb647221d73abba",
+      "status": "ENGINE_REVIEW_TRIAGE_READY_NO_LEDGER_AUTHORITY"
+    },
+    {
+      "counts": {
+        "recorded": 1,
+        "refused": 0,
+        "requested": 1
+      },
+      "engines": [
+        "agents_stack"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_triage_v1/2026-05-15_145924_agents_stack_engine_review_triage_decision_v1.json",
+      "report_type": "ENGINE_REVIEW_TRIAGE_DECISION_V1_PATCH109",
+      "sha256": "234840b41d14fd837bd60991ecdbd8f3eb8ac9cead303dae925f4cc95a78f0e5",
+      "status": "ENGINE_REVIEW_TRIAGE_DECISION_RECORDED_NO_LEDGER_MUTATION"
+    }
+  ],
+  "schema_version": "engine_review_triage_workspace_v1_patch109"
+}

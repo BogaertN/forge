@@ -1,0 +1,48 @@
+{
+  "export_type": "LLM_MEMORY_LEDGER_EXPORT_V1",
+  "hidden_chain_of_thought_stored": false,
+  "project_write_authority": false,
+  "receipt_count": 4,
+  "receipts": [
+    {
+      "hidden_chain_of_thought_stored": false,
+      "path": "/home/nic/forge/memory/llm_memory_v1/turns/llm_turn_2026-05-14_193028_f806f8edb4b7aba8.json",
+      "project_files_changed": false,
+      "receipt_id": "llm_turn_2026-05-14_193028_f806f8edb4b7aba8",
+      "receipt_type": "LLM_MEMORY_TURN_RECEIPT_V1",
+      "summary": "Forge wrote a safe LLM turn receipt under memory/llm_memory_v1. This proves the ledger can remember recommendations without storing hidden chain-of-thought or touching project files.",
+      "timestamp": "2026-05-14T19:30:28"
+    },
+    {
+      "hidden_chain_of_thought_stored": false,
+      "path": "/home/nic/forge/memory/llm_memory_v1/corrections/seed_llm_memory_reason_for_patch75.json",
+      "project_files_changed": false,
+      "receipt_id": "seed_llm_memory_reason_for_patch75",
+      "receipt_type": "LLM_MEMORY_SEEDED_CORRECTION_V1",
+      "summary": "Nic clarified that Forge must not only produce raw reports. The LLM layer needs auditable memory of what it recommended, corrected, explained, and told Nic to run.",
+      "timestamp": "2026-05-14T19:30:17"
+    },
+    {
+      "hidden_chain_of_thought_stored": false,
+      "path": "/home/nic/forge/memory/llm_memory_v1/corrections/seed_patch74_timestamp_helper_correction.json",
+      "project_files_changed": false,
+      "receipt_id": "seed_patch74_timestamp_helper_correction",
+      "receipt_type": "LLM_MEMORY_SEEDED_CORRECTION_V1",
+      "summary": "Patch 74 originally called undefined _patch_timestamp(). Patch 74.1 fixed it by using the existing _patch60_timestamp() helper.",
+      "timestamp": "2026-05-14T19:30:17"
+    },
+    {
+      "hidden_chain_of_thought_stored": false,
+      "path": "/home/nic/forge/memory/llm_memory_v1/corrections/seed_patch67_archive_root_instruction_correction.json",
+      "project_files_changed": false,
+      "receipt_id": "seed_patch67_archive_root_instruction_correction",
+      "receipt_type": "LLM_MEMORY_SEEDED_CORRECTION_V1",
+      "summary": "Patch 67 install instructions assumed a nested extracted folder that did not exist. Future patch installs must inspect the archive root with find before giving copy paths.",
+      "timestamp": "2026-05-14T19:30:17"
+    }
+  ],
+  "root": "/home/nic/forge/memory/llm_memory_v1",
+  "schema_version": "llm_memory_v1_patch75",
+  "session_id": "forge_2026_05_14_192941",
+  "timestamp": "2026-05-14T19:31:52"
+}

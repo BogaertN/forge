@@ -1,0 +1,5 @@
+# FORGE_ROADMAP_STATUS_V1
+
+- Status: `ROADMAP_STATUS_READY`
+- Created: `2026-05-17T06:51:30`
+- Authority: `SANDBOX_ONLY`

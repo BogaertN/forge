@@ -1,0 +1,12 @@
+{
+  "build_id": "GENERAL-LEARNING-TO-ANSWER-PIPELINE-LINEAR-EQUATIONS-BUILD-GP-002",
+  "schema_version": "general_pipeline_v1_build_gp002",
+  "built_against": "gp_post_gp001_state_for_claude (live installed GP-001, byte-verified)",
+  "install_type": "additive_source_overlay_new_files_only",
+  "modifies_existing_files": false,
+  "gp001_files_untouched": true,
+  "adds_learned_domain": "linear_equation_one_unknown",
+  "activation": "import rmc_engine_v1.general_pipeline.gp002_linear_equations and call activate() (idempotent)",
+  "boundaries": ["in_memory_only","no_route","no_ui","no_llm","no_file_io","no_memory_write","no_chroma","no_identity_vault","no_ct_or_ledger"],
+  "expected_results": {"behavior": "Total:30 Passed:30 Failed:0", "verify": "Total:26 Passed:26 Failed:0"}
+}

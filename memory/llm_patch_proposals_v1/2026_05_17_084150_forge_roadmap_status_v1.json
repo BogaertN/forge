@@ -1,0 +1,22 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "completed": [
+    "Final canonical engine lockfile",
+    "Source-authority runtime binder",
+    "Patch impact map",
+    "LLM source-grounded proposal packet"
+  ],
+  "created_at": "2026-05-17T08:41:50",
+  "current_milestone": "LLM source-grounded patch proposal packets ready; live-apply gate matrix next",
+  "next_patch_sequence": [
+    "Patch 133 \u2014 Patch Lifecycle 2.0 Gate Matrix",
+    "Patch 134 \u2014 Repair stack_linker_breather import/test issue through gated workflow",
+    "Patch 135 \u2014 Hard mode enforcement candidate after recovery gates are proven"
+  ],
+  "report_type": "FORGE_ROADMAP_STATUS_V1",
+  "schema_version": "forge_roadmap_status_v1_patch132",
+  "status": "ROADMAP_STATUS_READY"
+}

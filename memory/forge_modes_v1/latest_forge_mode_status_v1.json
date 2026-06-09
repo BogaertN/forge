@@ -1,0 +1,21 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "mode_switching_authority": false,
+    "network_opened": false,
+    "patch_apply_authority": false,
+    "permission_enforcement_active": false,
+    "project_file_write_authority": false,
+    "read_only_registry": true,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-17T08:04:11",
+  "current_mode": "UNENFORCED_REGISTRY_ONLY",
+  "enforcement_active": false,
+  "mode_count": 10,
+  "mode_registry_status": "FORGE_MODE_REGISTRY_READY_NO_ENFORCEMENT",
+  "recommended_next_patch": "Patch 130 \u2014 Mode Permission Enforcement",
+  "report_type": "FORGE_MODE_STATUS_V1",
+  "schema_version": "forge_mode_status_v1_patch129",
+  "status": "FORGE_MODE_STATUS_READY_NO_ENFORCEMENT"
+}

@@ -1,0 +1,97 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "bound_file_count": 5,
+  "candidate_path": "/home/nic/aiweb/engines/contribution_dashboard_engine",
+  "created_at": "2026-05-16_083217",
+  "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_contribution_dashboard_engine_engine_review_evidence_crosscheck_v1.json",
+  "crosscheck_sha256": "14a744c4f7e34dfb45395a37a2a7c4d29922bc852c12175b41db5d71a3f5e47c",
+  "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080827_contribution_dashboard_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "53aa4b60c972dbe754d9016147f80f4c6f5cb3e58f105a92e9ed8b48bb83024e",
+  "engine_family": "contribution_dashboard_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_contribution_dashboard_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "6486643ffc1d2df2f376fe9841c2fd1230b94096fd7fe4cd9e3bfa5f5996bb03",
+  "evidence_id": "EEB-505effd8a0bf2be3",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "dashboard_core.py",
+      "test_contribution_dashboard.py",
+      "README.md",
+      "dashboard_output.json",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "Contribution",
+      "Dashboard",
+      "Engine",
+      "contributions",
+      "and",
+      "AWH",
+      "token",
+      "earnings",
+      "into",
+      "human",
+      "readable",
+      "dashboard",
+      "output",
+      "dashboard_output",
+      "json",
+      "for",
+      "integration",
+      "with",
+      "reward",
+      "timestamp",
+      "engine",
+      "status",
+      "build_mode"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "import time",
+      "from dashboard_core import generate_dashboard"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 24.665,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "08af64a0ca8e7109cbf002000233985626f7520bcfb60b29a2bf733a3c836176",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nAggregate user contributions and AWH token earnings into a structured dashboard output for UI integration and reward system tracking.  \n\nLikely System Role:  \nA data aggregation and reporting tool that synthesizes contribution events and token ledger data into a human-readable JSON format for display or analysis.  \n\nEvidence Used:  \n- `dashboard_core.py`: Reads contribution logs and token ledgers, generates a dashboard JSON output.  \n- `test_contribution_dashboard.py`: Validates dashboard generation with error handling.  \n- `README.md`: Describes the engine's purpose as a contribution/earnings aggregator.  \n- `dashboard_output.json`: Example output structure with timestamp, totals, and recent contributors.  \n- `engine_manifest.json`: Officially defines the engine's role and status as \"build_mode\".  \n\nRisks / Uncertainties:  \n- Code is in Python but lacks dependency declarations or environment setup guidance.  \n- Test script is minimal; no evidence of comprehensive testing for edge cases.  \n- Dashboard output is static JSON; no indication of real-time updates or UI integration details.  \n- \"build_mode\" status suggests it may not be production-ready yet.  \n\nRecommendation Draft:  \nApprove the engine for limited use while noting the need for:  \n1. Full testing of error handling and edge cases.  \n2. Clarification on real-time data refresh mechanisms.  \n3. Documentation of dependencies and deployment requirements.  \n\nSuggested Nic Action:  \nApprove the review with caveats, but delay production deployment until testing confirms reliability. Request additional validation of real-time capabilities and output persistence mechanisms."
+  },
+  "llm_visible_review_excerpt": "Plain-English Purpose:  \nAggregate user contributions and AWH token earnings into a structured dashboard output for UI integration and reward system tracking.  \n\nLikely System Role:  \nA data aggregation and reporting tool that synthesizes contribution events and token ledger data into a human-readable JSON format for display or analysis.  \n\nEvidence Used:  \n- `dashboard_core.py`: Reads contribution logs and token ledgers, generates a dashboard JSON output.  \n- `test_contribution_dashboard.py`: Validates dashboard generation with error handling.  \n- `README.md`: Describes the engine's purpose as a contribution/earnings aggregator.  \n- `dashboard_output.json`: Example output structure with timestamp, totals, and recent contributors.  \n- `engine_manifest.json`: Officially defines the engine's role and status as \"build_mode\".  \n\nRisks / Uncertainties:  \n- Code is in Python but lacks dependency declarations or environment setup guidance.  \n- Test script is minimal; no evidence of comprehensive testing for edge cases.  \n- Dashboard output is static JSON; no indication of real-time updates or UI integration details.  \n- \"build_mode\" status suggests it may not be production-ready yet.  \n\nRecommendation Draft:  \nApprove the engine for limited use while noting the need for:  \n1. Full testing of error handling and edge cases.  \n2. Clarification on real-time data refresh mechanisms.  \n3. Documentation of dependencies and deployment requirements.  \n\nSuggested Nic Action:  \nApprove the review with caveats, but delay production deployment until testing confirms reliability. Request additional validation of real-time capabilities and output persistence mechanisms.",
+  "manual_verification_rule": "Approve only if the LLM-visible claims are supported by the bound evidence shown in the Patch 102 cross-check. If unsure, defer.",
+  "ready_for_evidence_based_queue_decision": true,
+  "report_type": "ENGINE_REVIEW_APPROVAL_CHECK_V1_PATCH103",
+  "schema_version": "engine_review_approval_helper_v1_patch103",
+  "status": "EVIDENCE_APPROVAL_CHECK_READY",
+  "warnings": [
+    "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

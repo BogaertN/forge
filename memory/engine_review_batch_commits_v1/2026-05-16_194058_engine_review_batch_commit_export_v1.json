@@ -1,0 +1,542 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_BATCH_COMMIT_GATE",
+    "patch": "107",
+    "project_file_write_authority": false,
+    "rule": "Patch 107 may commit Patch106 evidence-based batch queue decisions into engine_review_ledger_v1 only after queue decision, Patch103 approval helper, Patch102 cross-check, evidence binder, live candidate path, and live file SHA rechecks. It does not edit engine files or create final lockfile authority.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_batch_commits_v1",
+      "Forge-owned plan/receipt files only until explicit confirm token"
+    ]
+  },
+  "counts": {
+    "reports": 44
+  },
+  "created_at": "2026-05-16_194058",
+  "report_type": "ENGINE_REVIEW_BATCH_COMMIT_EXPORT_V1_PATCH107",
+  "reports": [
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 0,
+        "batch_decision_rows": 1,
+        "blockers": 0,
+        "eligible_for_commit": 1,
+        "warnings": 1
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-15_143336_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "97fe0cdc85852ebc0fa7403f058ad4f41e95924158be9933e5a78bebd18297eb",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 0,
+        "batch_decision_rows": 1,
+        "blockers": 0,
+        "eligible_for_commit": 1,
+        "warnings": 1
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-15_143431_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "aae6059dfd251c0aa078eaafce82ee3922ba78a64a5b54f724a95bfcf4544309",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": 1,
+      "counts": null,
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-15_143431_engine_review_batch_commit_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_RECEIPT_V1_PATCH107",
+      "sha256": "70d49dc442f0547d071c19ad2aab0eecf94091c446d7adbaf3e9da9415cd5cec",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_APPLIED"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "reports": 3
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-15_143505_engine_review_batch_commit_export_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_EXPORT_V1_PATCH107",
+      "sha256": "c134a0d869360f2389bff992d26f43065d95a5955e1c917e170df98d7dc99d34",
+      "status": null
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 1,
+        "batch_decision_rows": 2,
+        "blockers": 0,
+        "eligible_for_commit": 1,
+        "warnings": 3
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-15_150928_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "94ac98a6fbe6f0c8d30f3cc395817a33dd02df73ec1b0240ffdd2b796661adae",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 1,
+        "batch_decision_rows": 2,
+        "blockers": 0,
+        "eligible_for_commit": 1,
+        "warnings": 3
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-15_151015_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "47ede8df150e65180bd7edbc7b16173b8862b87e2162122e1f027f117255e3f7",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": 1,
+      "counts": null,
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-15_151015_engine_review_batch_commit_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_RECEIPT_V1_PATCH107",
+      "sha256": "f8ee6cd0e3d12005913f53030df2dbca32d009afa83d5870d9994ac404265c1e",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_APPLIED"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "reports": 7
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-15_151051_engine_review_batch_commit_export_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_EXPORT_V1_PATCH107",
+      "sha256": "8b70325a9df516e99b1f2bbf0eaa43df6ca4090877271a83a6ddc0cc3ba9b392",
+      "status": null
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 2,
+        "batch_decision_rows": 3,
+        "blockers": 0,
+        "eligible_for_commit": 1,
+        "warnings": 5
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_075248_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "7081a2c8bbfebeac907ab41db3353301d1baa85837aef60f0e5a8433f9f90171",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "reports": 9
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_075414_engine_review_batch_commit_export_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_EXPORT_V1_PATCH107",
+      "sha256": "92bbac6a862ad767f837149b322c066d5ba5d90604329af4a152cc8e166a0cf4",
+      "status": null
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 2,
+        "batch_decision_rows": 3,
+        "blockers": 0,
+        "eligible_for_commit": 1,
+        "warnings": 5
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_075956_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "e79bb067240f20d16cb3dcf765e5e872b53555a7b9a6787762001aeda38f1d80",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 2,
+        "batch_decision_rows": 3,
+        "blockers": 0,
+        "eligible_for_commit": 1,
+        "warnings": 5
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_080024_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "222b5784b6d052f89c8e0148cafc82ffb61b6b45ac1f4b8f46a130fbbe99f34a",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": 1,
+      "counts": null,
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_080024_engine_review_batch_commit_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_RECEIPT_V1_PATCH107",
+      "sha256": "62635988ad7c66eec2d11dfea891a6884d26d69c2f59ea5c4a7d23ad1285fc9d",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_APPLIED"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 4,
+        "batch_decision_rows": 13,
+        "blockers": 0,
+        "eligible_for_commit": 9,
+        "warnings": 18
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_084238_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "d3cc4e06a21a9222d24ed1c57470334edb5e156434d7e8e4af75f1d4012be127",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 4,
+        "batch_decision_rows": 13,
+        "blockers": 0,
+        "eligible_for_commit": 9,
+        "warnings": 18
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_084350_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "29e8fb209971da98c660ca01bd31ea5a4d7c453dd063165e0dbdf8066d7bf8a7",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": 9,
+      "counts": null,
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_084350_engine_review_batch_commit_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_RECEIPT_V1_PATCH107",
+      "sha256": "4426996d334e7f3f8f87aaf23b83cf6b1ac4d426f30a593026012ef5eeae7ec4",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_APPLIED"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "reports": 16
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_084428_engine_review_batch_commit_export_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_EXPORT_V1_PATCH107",
+      "sha256": "3a7930c85b0f8f8b470a806ef0545b542cb0209ea972ef3ade750439ec5fb2dc",
+      "status": null
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 15,
+        "batch_decision_rows": 23,
+        "blockers": 0,
+        "eligible_for_commit": 8,
+        "warnings": 40
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_091732_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "c7c9c17a7fc3361c62c300ddd66a51ca8c10b94c625f4fe11f05b81b1b1ec6c1",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 15,
+        "batch_decision_rows": 23,
+        "blockers": 0,
+        "eligible_for_commit": 8,
+        "warnings": 40
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_091820_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "7c5009cb107f1839b64ebec9754e510bba48f906dcfd7058391105f4a584bbcb",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": 8,
+      "counts": null,
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_091820_engine_review_batch_commit_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_RECEIPT_V1_PATCH107",
+      "sha256": "77d801738f942ff9e91ce3d29fda78aaedd92ad46b5bad32a7e0410a961efc2d",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_APPLIED"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "reports": 20
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_091911_engine_review_batch_commit_export_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_EXPORT_V1_PATCH107",
+      "sha256": "d25cb48e11dd6666d903fce5b02d7363b756ebf6f3ac02859f390e40ca428a06",
+      "status": null
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 23,
+        "batch_decision_rows": 32,
+        "blockers": 0,
+        "eligible_for_commit": 9,
+        "warnings": 57
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_094830_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "0ca1e85772ba4e97e29e43d1dd9421ee0f1de198eebd849906aab90c72bba35a",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "reports": 24
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_094831_engine_review_batch_commit_export_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_EXPORT_V1_PATCH107",
+      "sha256": "7e9308ef2c6cf05a6f794887d5e67bb5547bb76ee912de393a3a0816ffef77cc",
+      "status": null
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 23,
+        "batch_decision_rows": 32,
+        "blockers": 0,
+        "eligible_for_commit": 9,
+        "warnings": 57
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_094831_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "2c5191f42f91d900d4d4bd1dc5787e1e7d01d517c29b24da37cd0b00c3768c2e",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": 9,
+      "counts": null,
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_094831_engine_review_batch_commit_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_RECEIPT_V1_PATCH107",
+      "sha256": "e7287f1ff334ce7bcd55b434e0afb6a225f5aa059f518b58605dc26f5a5db0cf",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_APPLIED"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 32,
+        "batch_decision_rows": 37,
+        "blockers": 0,
+        "eligible_for_commit": 5,
+        "warnings": 71
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_191200_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "da3345e96ff87800da8dede01cc865ec79b463ae2443556a348bf51dcae395e6",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "reports": 26
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_191228_engine_review_batch_commit_export_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_EXPORT_V1_PATCH107",
+      "sha256": "9043b6f0a3d26a40497f6d0bbafa7d875e0ff09d92e473924f9b802b44fa386b",
+      "status": null
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 32,
+        "batch_decision_rows": 37,
+        "blockers": 0,
+        "eligible_for_commit": 5,
+        "warnings": 71
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_191616_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "25164afef8ddca7ef8c670a206253bd37861f013b7400c7d6a71096f03026c45",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 32,
+        "batch_decision_rows": 37,
+        "blockers": 0,
+        "eligible_for_commit": 5,
+        "warnings": 71
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_191637_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "147727d78fb40aebd4df80affe6eb34f3c163f1a6f3a94121bf16e4d10faeff1",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": 5,
+      "counts": null,
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_191637_engine_review_batch_commit_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_RECEIPT_V1_PATCH107",
+      "sha256": "f6a15aa34a93ad17494b06a2d9b8a496a88a95217a3bbcaea0a650c500638799",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_APPLIED"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "reports": 30
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_191654_engine_review_batch_commit_export_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_EXPORT_V1_PATCH107",
+      "sha256": "384271936f0e8149a0cfeda0317d9d5faf08b39183b928e7c69568487eb99500",
+      "status": null
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 37,
+        "batch_decision_rows": 37,
+        "blockers": 0,
+        "eligible_for_commit": 0,
+        "warnings": 76
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_191947_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "10c08c2e8c9cccc594944920c23cd58cc5e8dee447740abf642b65f7d466ae42",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_NOT_READY"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 37,
+        "batch_decision_rows": 37,
+        "blockers": 0,
+        "eligible_for_commit": 0,
+        "warnings": 76
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_192006_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "55bac6484e8878370649213a64be1aa96a955beac4250cc34d5db2dd005b9b73",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_NOT_READY"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 37,
+        "batch_decision_rows": 37,
+        "blockers": 0,
+        "eligible_for_commit": 0,
+        "warnings": 76
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_192022_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "55e90f02be6a3e6175d61e2d4933432b3ca896d523cc1ba46d5faea4d36c03d9",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_NOT_READY"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "reports": 34
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_192039_engine_review_batch_commit_export_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_EXPORT_V1_PATCH107",
+      "sha256": "9aced0bb4aad95bedf332c36eaa929eb6d8d3011b2666e550a542eaf445da9e6",
+      "status": null
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "reports": 35
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_192046_engine_review_batch_commit_export_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_EXPORT_V1_PATCH107",
+      "sha256": "d493dc977f0a85bb9a3d997f71a65d637fff7164f1d79f88875fc1d6ec79cffc",
+      "status": null
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "reports": 36
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_192051_engine_review_batch_commit_export_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_EXPORT_V1_PATCH107",
+      "sha256": "8c6aba2db4792da9cd28a301eed0c7c21ced6116a5f2650015fee75de8f7e725",
+      "status": null
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 37,
+        "batch_decision_rows": 38,
+        "blockers": 0,
+        "eligible_for_commit": 1,
+        "warnings": 77
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_192519_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "d058c97f2d772fabb76a8367f28691814feb2d6009116ffe799849d678d56539",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 37,
+        "batch_decision_rows": 38,
+        "blockers": 0,
+        "eligible_for_commit": 1,
+        "warnings": 77
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_192538_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "d4691f9069751276eed54f443d7a5c85594f601411d8c170503391b62d2b51b0",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": 1,
+      "counts": null,
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_192538_engine_review_batch_commit_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_RECEIPT_V1_PATCH107",
+      "sha256": "9d437f16dafaae52b1ab8157fb07dbea8d36751b43da24d90877d512cd85566d",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_APPLIED"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "reports": 40
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_192547_engine_review_batch_commit_export_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_EXPORT_V1_PATCH107",
+      "sha256": "ccfd46268f52120a0b5c307a246f239d916356651c461de9a901f873424c0eed",
+      "status": null
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 38,
+        "batch_decision_rows": 42,
+        "blockers": 0,
+        "eligible_for_commit": 4,
+        "warnings": 82
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_194024_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "b04a2e882c5d6879227e9a16bc57c7f6c9169593544bfc8388df4a9b5f97763a",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": null,
+      "counts": {
+        "already_committed_skipped": 38,
+        "batch_decision_rows": 42,
+        "blockers": 0,
+        "eligible_for_commit": 4,
+        "warnings": 82
+      },
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_194039_engine_review_batch_commit_plan_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_V1_PATCH107",
+      "sha256": "adb57cccc6c81514e352fb195cbe52061f63d63e7db26a733174f68baa586334",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY"
+    },
+    {
+      "applied_count": 4,
+      "counts": null,
+      "path": "/home/nic/forge/memory/engine_review_batch_commits_v1/2026-05-16_194039_engine_review_batch_commit_v1.json",
+      "report_type": "ENGINE_REVIEW_BATCH_COMMIT_RECEIPT_V1_PATCH107",
+      "sha256": "3bdb619cfc7b9938ec377deff3de0c8976a06f754461f68b8a45d3fe9a172400",
+      "status": "ENGINE_REVIEW_BATCH_COMMIT_APPLIED"
+    }
+  ],
+  "schema_version": "engine_review_batch_commit_v1_patch107"
+}

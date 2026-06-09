@@ -1,0 +1,46 @@
+{
+  "schema_version": "import_probe_run_v1_patch134",
+  "report_type": "IMPORT_PROBE_RUN_V1",
+  "created_at": "2026-05-17T09:11:39",
+  "status": "IMPORT_PROBE_FAIL",
+  "target": "stack_linker_breather",
+  "target_engine": "stack_linker_breather",
+  "resolved_target": {
+    "raw": "stack_linker_breather",
+    "target": "stack_linker_breather",
+    "target_kind": "canonical_or_engine_name",
+    "engine_name": "stack_linker_breather",
+    "scope_ok": true,
+    "target_exists": true,
+    "target_path": "/home/nic/aiweb/engines/stack_linker_breather",
+    "test_candidates": [
+      "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+    ]
+  },
+  "command_kind": "engine_test_file",
+  "argv": [
+    "/home/nic/forge/.venv/bin/python3",
+    "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+  ],
+  "cwd": "/home/nic/aiweb/engines/stack_linker_breather",
+  "env_additions": {
+    "PYTHONPATH_prefix": "/home/nic/aiweb/engines/stack_linker_breather:/home/nic/aiweb/engines:/home/nic/aiweb"
+  },
+  "problems": [],
+  "plain_english": "Generic import/path probe result. A passing probe means this target can run under the scoped diagnostic environment. A failing probe means the target needs either test-runner path adjustment or file/package repair review.",
+  "authority": {
+    "read_only": true,
+    "project_file_write_authority": false,
+    "engine_file_write_authority": false,
+    "patch_apply_authority": false,
+    "ledger_mutation_authority": false,
+    "writes_forge_memory_only": true,
+    "subprocess_shell_false": true
+  },
+  "returncode": 1,
+  "duration_seconds": 0.011,
+  "stdout_tail": "",
+  "stderr_tail": "Traceback (most recent call last):\n  File \"/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py\", line 3, in <module>\n    from stack_linker_breather.stack_linker_core import unified_breathe_cycle\n  File \"/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py\", line 19\n    \"status\": \"\n              ^\nSyntaxError: unterminated string literal (detected at line 19)\n",
+  "probe_passed": false,
+  "recommendation": "Do not alter live files yet; inspect package structure, imports, and test assumptions through a separate repair proposal."
+}

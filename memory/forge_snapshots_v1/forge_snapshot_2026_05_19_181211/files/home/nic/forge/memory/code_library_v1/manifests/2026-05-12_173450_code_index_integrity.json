@@ -1,0 +1,25 @@
+{
+  "report_type": "CODE_INDEX_INTEGRITY_PATCH58",
+  "timestamp": "2026-05-12T17:34:50",
+  "read_only": true,
+  "ok": true,
+  "expected": {
+    "files": 6423,
+    "chunks": 18741,
+    "symbols": 79706,
+    "patch_history": 31
+  },
+  "actual": {
+    "files": 6423,
+    "chunks": 18741,
+    "symbols": 79706,
+    "patch_history": 31
+  },
+  "mismatches": [],
+  "errors": [],
+  "bad_chunk_reference_count": 0,
+  "bad_symbol_reference_count": 0,
+  "duplicate_file_hash_groups": 1051,
+  "old_chroma_db": "/home/nic/forge/memory/chroma_db",
+  "code_chroma_reserved": "/home/nic/forge/memory/code_library_v1/chroma_db"
+}

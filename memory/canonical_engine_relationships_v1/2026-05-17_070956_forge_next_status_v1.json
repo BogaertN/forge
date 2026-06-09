@@ -1,0 +1,19 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T07:09:56",
+  "next_commands": [
+    "canonical-related-files all",
+    "canonical-risk-neighbors all",
+    "canonical-relationship-export",
+    "Install Patch 126 when ready"
+  ],
+  "next_phase": "PATCH_IMPACT_MAP",
+  "plain_english": "Canonical relationship map exists. The next safe move is a target-file patch impact map.",
+  "recommended_next_patch": "Patch 126 — Patch Impact Map",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "schema_version": "forge_next_status_v1_patch125",
+  "status": "NEXT_PATCH_REQUIRED"
+}

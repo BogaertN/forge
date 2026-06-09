@@ -1,0 +1,963 @@
+{
+  "schema_version": "engine_final_lockfile_proposal_v1_patch115",
+  "report_type": "ENGINE_FINAL_LOCKFILE_PROPOSAL_V1",
+  "policy_version": "patch115_final_approved_engine_lockfile_v1",
+  "created_at": "2026-05-16T23:18:13",
+  "mode": "FINAL_LOCKFILE_PROPOSAL_ONLY_NO_WRITE",
+  "proposal_status": "READY_FOR_FINAL_LOCKFILE_WRITE",
+  "confirm_token_required": "CONFIRM_WRITE_FINAL_ENGINE_LOCKFILE",
+  "authority": {
+    "proposal_authority": true,
+    "final_lockfile_authority_now": false,
+    "final_lockfile_write_requires_confirm_token": true,
+    "engine_file_write_authority": false,
+    "quarantine_authority": false,
+    "delete_authority": false,
+    "human_review_ledger_write_authority": false,
+    "chroma_write_authority": false,
+    "shell_execution_authority": false,
+    "llm_autonomous_decision_authority": false
+  },
+  "source_candidate_path": "/home/nic/forge/memory/code_library_v1/manifests/2026-05-16_225155_engine_human_approved_lockfile_candidate.json",
+  "source_candidate_sha256": "a5ee63eda6aa8d0466a1eabb4799f0f16bc59dab452c95269288dbcba1ac11d6",
+  "source_readiness_path": "/home/nic/forge/memory/code_library_v1/manifests/2026-05-16_225615_engine_approved_candidate_readiness_report.json",
+  "source_readiness_sha256": "9586265e3b487bb49f54946548726a28fe4d44556377081ff72b9bd7742ab25a",
+  "source_ledger_path": "/home/nic/forge/memory/code_library_v1/manifests/engine_review_ledger_v1.json",
+  "source_ledger_sha256": "d1f6479c5fe04eda3bfdca9050e23f80e316abed87133bc79846b5a1e516d9ca",
+  "would_write": {
+    "stable_final_lockfile_path": "/home/nic/forge/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+    "timestamped_final_lockfile_path": "/home/nic/forge/memory/code_library_v1/manifests/2026-05-16_231813_engine_canonical_lockfile_v1.json",
+    "markdown_stable_path": "/home/nic/forge/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.md"
+  },
+  "counts": {
+    "included": 55,
+    "excluded": 25,
+    "ledger_total": 80,
+    "ledger_approved": 57,
+    "ledger_deferred": 23,
+    "ledger_pending": 0,
+    "future_lockfile_eligible": 55
+  },
+  "entries_preview": [
+    {
+      "engine_base": "activity_log",
+      "canonical_path": "projects/recursive_lmm_grok1/engines/activity_log",
+      "review_status": "APPROVED",
+      "decision_confidence": "low",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ]
+    },
+    {
+      "engine_base": "agent_reflection_engine",
+      "canonical_path": "aiweb/engines/agent_reflection_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "ascii_interpreter_engine",
+      "canonical_path": "aiweb/engines/ascii_interpreter_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "athena",
+      "canonical_path": "agents/athena",
+      "review_status": "APPROVED",
+      "decision_confidence": "low",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ]
+    },
+    {
+      "engine_base": "athena_engine",
+      "canonical_path": "aiweb/engines/athena_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "christping_listener",
+      "canonical_path": "aiweb/engines/christping_listener",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium_high",
+      "variant_count": 10,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ]
+    },
+    {
+      "engine_base": "christping_validator_engine",
+      "canonical_path": "aiweb/engines/christping_validator_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "collapse_prevention_engine",
+      "canonical_path": "aiweb/engines/collapse_prevention_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "compute_contribution_engine",
+      "canonical_path": "aiweb/engines/compute_contribution_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "confusion_checker",
+      "canonical_path": "projects/recursive_lmm_grok1/engines/confusion_checker",
+      "review_status": "APPROVED",
+      "decision_confidence": "low",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ]
+    },
+    {
+      "engine_base": "contribution_dashboard_engine",
+      "canonical_path": "aiweb/engines/contribution_dashboard_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "control_panel_ui_engine",
+      "canonical_path": "aiweb/engines/control_panel_ui_engine_v1.02",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium_high",
+      "variant_count": 10,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ]
+    },
+    {
+      "engine_base": "document_output_formatter",
+      "canonical_path": "aiweb/engines/document_output_formatter",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "drift_analyzer_tool",
+      "canonical_path": "aiweb/engines/drift_analyzer_tool",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "drift_signature_logger",
+      "canonical_path": "aiweb/engines/drift_signature_logger",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium_high",
+      "variant_count": 5,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ]
+    },
+    {
+      "engine_base": "echo_trace_visualizer",
+      "canonical_path": "aiweb/engines/echo_trace_visualizer",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "entropy_monitor_engine",
+      "canonical_path": "aiweb/engines/entropy_monitor_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "failsafe_manager",
+      "canonical_path": "aiweb/engines/failsafe_manager",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ]
+    },
+    {
+      "engine_base": "field_resonance_mapper",
+      "canonical_path": "aiweb/engines/field_resonance_mapper",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "glyph_engine",
+      "canonical_path": "aiweb/engines/glyph_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "glyph_ui_overlay",
+      "canonical_path": "aiweb/symbolic_layers/glyph_ui_overlay",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "install_onboarding_engine",
+      "canonical_path": "aiweb/engines/install_onboarding_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "loop_resurrection_engine",
+      "canonical_path": "aiweb/engines/loop_resurrection_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium_high",
+      "variant_count": 8,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ]
+    },
+    {
+      "engine_base": "peer_communication_engine",
+      "canonical_path": "aiweb/engines/peer_communication_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "phase_engine",
+      "canonical_path": "aiweb/engines/phase_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium_high",
+      "variant_count": 5,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ]
+    },
+    {
+      "engine_base": "plugin_engine",
+      "canonical_path": "aiweb/engines/plugin_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ]
+    },
+    {
+      "engine_base": "project_brain",
+      "canonical_path": "projects/recursive_lmm_grok1/engines/project_brain",
+      "review_status": "APPROVED",
+      "decision_confidence": "low",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ]
+    },
+    {
+      "engine_base": "project_memory",
+      "canonical_path": "projects/recursive_lmm_grok1/engines/project_memory",
+      "review_status": "APPROVED",
+      "decision_confidence": "low",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ]
+    },
+    {
+      "engine_base": "protoforge",
+      "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 17,
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "verify_active_primary_supersedes_frozen_candidate",
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "recursion_mapper",
+      "canonical_path": "aiweb/symbolic_layers/recursion_mapper",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "recursive_agent_kernel",
+      "canonical_path": "aiweb/engines/recursive_agent_kernel",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ]
+    },
+    {
+      "engine_base": "recursive_field_breather",
+      "canonical_path": "aiweb/engines/recursive_field_breather",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "recursive_field_engine",
+      "canonical_path": "aiweb/engines/recursive_field_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 8,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "recursive_field_stack",
+      "canonical_path": "aiweb/runtime_wrappers/recursive_field_stack",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "recursive_verification_engine",
+      "canonical_path": "engines/recursive_verification_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "low",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ]
+    },
+    {
+      "engine_base": "resonance_charge_meter",
+      "canonical_path": "aiweb/engines/resonance_charge_meter",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium_high",
+      "variant_count": 8,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ]
+    },
+    {
+      "engine_base": "resonance_display",
+      "canonical_path": "aiweb/symbolic_layers/resonance_display",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "resonance_visualizer_engine",
+      "canonical_path": "aiweb/engines/resonance_visualizer_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "resurrection_planner",
+      "canonical_path": "aiweb/engines/resurrection_planner",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "revisit_previous_tasks",
+      "canonical_path": "projects/recursive_lmm_grok1/engines/revisit_previous_tasks",
+      "review_status": "APPROVED",
+      "decision_confidence": "low",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ]
+    },
+    {
+      "engine_base": "seed_manager",
+      "canonical_path": "aiweb/engines/seed_manager",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "spc_memory_migrator",
+      "canonical_path": "aiweb/engines/spc_memory_migrator",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "stack_breather_phase2",
+      "canonical_path": "aiweb/runtime_wrappers/stack_breather_phase2",
+      "review_status": "APPROVED",
+      "decision_confidence": "low",
+      "variant_count": 5,
+      "required_human_checks": [
+        "verify_active_primary_supersedes_frozen_candidate",
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ]
+    },
+    {
+      "engine_base": "stack_linker_breather",
+      "canonical_path": "aiweb/engines/stack_linker_breather",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "symbolic_capacitor_engine",
+      "canonical_path": "aiweb/engines/symbolic_capacitor_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium_high",
+      "variant_count": 14,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ]
+    },
+    {
+      "engine_base": "symbolic_cognition_stack",
+      "canonical_path": "aiweb/runtime_wrappers/symbolic_cognition_stack",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "symbolic_drift_visualizer",
+      "canonical_path": "aiweb/engines/symbolic_drift_visualizer",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "symbolic_feedback_loop_engine",
+      "canonical_path": "aiweb/engines/symbolic_feedback_loop_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium_high",
+      "variant_count": 10,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ]
+    },
+    {
+      "engine_base": "symbolic_glyph_engine",
+      "canonical_path": "aiweb/engines/symbolic_glyph_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "symbolic_layers_stack",
+      "canonical_path": "aiweb/runtime_wrappers/symbolic_layers_stack",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "symbolic_policy_engine",
+      "canonical_path": "aiweb/engines/symbolic_policy_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ]
+    },
+    {
+      "engine_base": "system_log_engine",
+      "canonical_path": "aiweb/engines/system_log_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ]
+    },
+    {
+      "engine_base": "tier_enforcer",
+      "canonical_path": "aiweb/engines/tier_enforcer",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "tone_engine",
+      "canonical_path": "aiweb/engines/tone_engine",
+      "review_status": "APPROVED",
+      "decision_confidence": "medium",
+      "variant_count": 12,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": []
+    },
+    {
+      "engine_base": "trust_guard",
+      "canonical_path": "projects/recursive_lmm_grok1/engines/trust_guard",
+      "review_status": "APPROVED",
+      "decision_confidence": "low",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ]
+    }
+  ],
+  "excluded_entries": [
+    {
+      "engine_base": "admin_override_console",
+      "recommended_keep_path": "aiweb/engines/admin_override_console",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "agents_stack",
+      "recommended_keep_path": "aiweb/runtime_wrappers/agents_stack",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_ACTIVE_PRIMARY_OVER_FROZEN_CANDIDATE",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "aiweb_os",
+      "recommended_keep_path": "aiweb/runtime_wrappers/aiweb_os_v1",
+      "review_status": "DEFERRED",
+      "is_hold_family": true,
+      "future_lockfile_eligible": false,
+      "draft_decision": "HOLD_TEST_ONLY_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "aiweb_os_engine",
+      "recommended_keep_path": "aiweb/engines/aiweb_os_engine",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "cold_archive_engine",
+      "recommended_keep_path": "aiweb/engines/cold_archive_engine_frozen_v1",
+      "review_status": "APPROVED",
+      "is_hold_family": true,
+      "future_lockfile_eligible": false,
+      "draft_decision": "HOLD_ARCHIVE_AMBIGUITY_REVIEW",
+      "reason": "hold family excluded"
+    },
+    {
+      "engine_base": "contribution_ledger_stack",
+      "recommended_keep_path": "aiweb/runtime_wrappers/contribution_ledger_stack",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "control_stack",
+      "recommended_keep_path": "aiweb/runtime_wrappers/control_stack",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "core_stack_breather",
+      "recommended_keep_path": "aiweb/engines/core_stack_breather",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "core_system_stack",
+      "recommended_keep_path": "aiweb/runtime_wrappers/core_system_stack",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "dream_state_engine",
+      "recommended_keep_path": "aiweb/engines/dream_state_engine",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "drift_arbitration_engine",
+      "recommended_keep_path": "aiweb/engines/drift_arbitration_engine",
+      "review_status": "APPROVED",
+      "is_hold_family": true,
+      "future_lockfile_eligible": false,
+      "draft_decision": "HOLD_FROZEN_CANDIDATE_REVIEW",
+      "reason": "hold family excluded"
+    },
+    {
+      "engine_base": "external_feed_listener",
+      "recommended_keep_path": "aiweb/engines/external_feed_listener",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "fluid_memory_engine",
+      "recommended_keep_path": "aiweb/engines/fluid_memory_engine",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "gilligan",
+      "recommended_keep_path": "agents/gilligan",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "gilligan_drift_correction_upgrade",
+      "recommended_keep_path": "aiweb/engines/gilligan_drift_correction_upgrade",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "goal_injection_engine",
+      "recommended_keep_path": "aiweb/engines/goal_injection_engine",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "memory_stack_engine",
+      "recommended_keep_path": "aiweb/engines/memory_stack_engine",
+      "review_status": "DEFERRED",
+      "is_hold_family": true,
+      "future_lockfile_eligible": false,
+      "draft_decision": "HOLD_FROZEN_CANDIDATE_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "memory_stack_engine_breathing",
+      "recommended_keep_path": "aiweb/engines/memory_stack_engine_breathing_v1",
+      "review_status": "DEFERRED",
+      "is_hold_family": true,
+      "future_lockfile_eligible": false,
+      "draft_decision": "HOLD_FOR_MANUAL_ARCHITECT_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "memory_stack_stack",
+      "recommended_keep_path": "aiweb/runtime_wrappers/memory_stack_stack",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "naming_engine",
+      "recommended_keep_path": "aiweb/engines/naming_engine",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "neo",
+      "recommended_keep_path": "agents/neo",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "neo_engine",
+      "recommended_keep_path": "aiweb/engines/neo_engine",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "protoforge_dashboard_runtime",
+      "recommended_keep_path": "runtime_wrappers/protoforge_dashboard_runtime_v2.0",
+      "review_status": "DEFERRED",
+      "is_hold_family": true,
+      "future_lockfile_eligible": false,
+      "draft_decision": "HOLD_FOR_MANUAL_ARCHITECT_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "saved_ideas",
+      "recommended_keep_path": "projects/recursive_lmm_grok1/engines/saved_ideas",
+      "review_status": "DEFERRED",
+      "is_hold_family": true,
+      "future_lockfile_eligible": false,
+      "draft_decision": "HOLD_ARCHIVE_AMBIGUITY_REVIEW",
+      "reason": "deferred by human review"
+    },
+    {
+      "engine_base": "step_counter",
+      "recommended_keep_path": "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1",
+      "review_status": "DEFERRED",
+      "is_hold_family": true,
+      "future_lockfile_eligible": false,
+      "draft_decision": "HOLD_FROZEN_CANDIDATE_REVIEW",
+      "reason": "deferred by human review"
+    }
+  ],
+  "verification": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "required_invariants": [
+      "latest approved candidate exists",
+      "approved candidate status is VALID_CANDIDATE",
+      "approved candidate validation_status is PASS",
+      "readiness report exists",
+      "readiness blocked_candidate_rows is zero",
+      "ledger pending count is zero",
+      "candidate/readiness/ledger SHAs must be unchanged at apply time",
+      "final apply requires explicit confirmation token",
+      "final lockfile write is Forge-owned manifest only",
+      "engine files remain unchanged",
+      "human review ledger remains unchanged"
+    ]
+  }
+}

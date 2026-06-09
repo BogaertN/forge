@@ -1,0 +1,912 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "patch_apply_authority": false,
+    "plan_only": true,
+    "project_file_write_authority": false,
+    "shell_execution_authority": false,
+    "tests_executed": false
+  },
+  "confirm_token_required_for_execution": "CONFIRM_RUN_CANONICAL_ENGINE_SAFE_TESTS",
+  "counts": {
+    "max_targets": 75,
+    "planned_targets": 68,
+    "problems": 0,
+    "timeout_seconds_per_target": 20
+  },
+  "created_at": "2026-05-18T18:46:48",
+  "plain_english": "A Forge-owned plan for running only pre-inventoried safe Python test candidates. No tests were executed by this command.",
+  "problems": [],
+  "report_type": "CANONICAL_ENGINE_TEST_RUN_PLAN_V1",
+  "requested": "all",
+  "schema_version": "canonical_engine_safe_test_runner_v1_patch124",
+  "source_inventory_status": "CANONICAL_ENGINE_TEST_INVENTORY_READY",
+  "source_lockfile_sha256": "b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab",
+  "status": "CANONICAL_TEST_RUN_PLAN_READY",
+  "targets": [
+    {
+      "canonical_path": "aiweb/engines/agent_reflection_engine",
+      "cwd": "/home/nic/aiweb/engines/agent_reflection_engine",
+      "engine_base": "agent_reflection_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/agent_reflection_engine/test_reflection.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/agent_reflection_engine/test_reflection.py",
+      "test_sha256": "51597c796861770b0ad25e87537165a018540db936f9c7b06302b343ea52db5b",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/ascii_interpreter_engine",
+      "cwd": "/home/nic/aiweb/engines/ascii_interpreter_engine",
+      "engine_base": "ascii_interpreter_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/ascii_interpreter_engine/test_ascii_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/ascii_interpreter_engine/test_ascii_core.py",
+      "test_sha256": "0ddef67c649165cc62750aecf999417bc272288c1b94bff514aedeed69bfdadd",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "agents/athena",
+      "cwd": "/home/nic/aiweb/agents/athena",
+      "engine_base": "athena",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/agents/athena/test_athena_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/agents/athena/test_athena_core.py",
+      "test_sha256": "0c9f674f2f6ed8427d21a8253c0aab444df999529204f36b7ea4b79df6fefc70",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "agents/athena",
+      "cwd": "/home/nic/aiweb/agents/athena",
+      "engine_base": "athena",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/agents/athena/test_run_agent.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/agents/athena/test_run_agent.py",
+      "test_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/athena_engine",
+      "cwd": "/home/nic/aiweb/engines/athena_engine",
+      "engine_base": "athena_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/athena_engine/test_athena.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/athena_engine/test_athena.py",
+      "test_sha256": "68f7621ee8694af55e99581be690732605011e4d34521d864032fccc92425017",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/christping_validator_engine",
+      "cwd": "/home/nic/aiweb/engines/christping_validator_engine",
+      "engine_base": "christping_validator_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/test_ping_calibrator_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/christping_validator_engine/ping_harmonics_calibrator/test_ping_calibrator_core.py",
+      "test_sha256": "01100d8b190abb8ec67a144f12f3a5f3228de57e4c8bc114f4c8af9786b38112",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/christping_validator_engine",
+      "cwd": "/home/nic/aiweb/engines/christping_validator_engine",
+      "engine_base": "christping_validator_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/christping_validator_engine/test_christping_validator_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/christping_validator_engine/test_christping_validator_core.py",
+      "test_sha256": "2885e2ad960f7a599b113424c5c33b5ce62cae0622f44f3d26acce97b64d08e6",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/collapse_prevention_engine",
+      "cwd": "/home/nic/aiweb/engines/collapse_prevention_engine",
+      "engine_base": "collapse_prevention_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/collapse_prevention_engine/test_collapse_prevention_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/collapse_prevention_engine/test_collapse_prevention_core.py",
+      "test_sha256": "4198ad9321c59945ea8fedef30f28d96c8e423b61a74993f3e7c6349a47195f0",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/compute_contribution_engine",
+      "cwd": "/home/nic/aiweb/engines/compute_contribution_engine",
+      "engine_base": "compute_contribution_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/compute_contribution_engine/test_contribution.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/compute_contribution_engine/test_contribution.py",
+      "test_sha256": "ac671f705530065e57ea75ebcd5015be3101414806c7e8afadc3ba9779297da7",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/contribution_dashboard_engine",
+      "cwd": "/home/nic/aiweb/engines/contribution_dashboard_engine",
+      "engine_base": "contribution_dashboard_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/contribution_dashboard_engine/test_contribution_dashboard.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/contribution_dashboard_engine/test_contribution_dashboard.py",
+      "test_sha256": "788e3f47075e55c3ac20ec09c758a9f1b27b87ef50c7b270d11731789005d1bd",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/control_panel_ui_engine_v1.02",
+      "cwd": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02",
+      "engine_base": "control_panel_ui_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/test_ui_render.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02/test_ui_render.py",
+      "test_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/document_output_formatter",
+      "cwd": "/home/nic/aiweb/engines/document_output_formatter",
+      "engine_base": "document_output_formatter",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/document_output_formatter/test_formatter.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/document_output_formatter/test_formatter.py",
+      "test_sha256": "d53279bd2989c9a918d2c6dcb81e5b09b59a91a3de83628656f41b3d950b551a",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/drift_analyzer_tool",
+      "cwd": "/home/nic/aiweb/engines/drift_analyzer_tool",
+      "engine_base": "drift_analyzer_tool",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/drift_analyzer_tool/test_drift_analyzer_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/drift_analyzer_tool/test_drift_analyzer_core.py",
+      "test_sha256": "a837b9374ea8cdb353af0684c3c2c28977d236d5a447204181579474e48d4fff",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/drift_signature_logger",
+      "cwd": "/home/nic/aiweb/engines/drift_signature_logger",
+      "engine_base": "drift_signature_logger",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/ghost_loop_tagger/test_ghost_tagger_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/ghost_loop_tagger/test_ghost_tagger_core.py",
+      "test_sha256": "e0e43180d9329ee43e87ef61d88ff7b757fe086286c164e0fb07d3bc34318565",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/drift_signature_logger",
+      "cwd": "/home/nic/aiweb/engines/drift_signature_logger",
+      "engine_base": "drift_signature_logger",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/test_ghost_tagger_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/drift_signature_logger/ghost_loop_tagger/test_ghost_tagger_core.py",
+      "test_sha256": "e0e43180d9329ee43e87ef61d88ff7b757fe086286c164e0fb07d3bc34318565",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/drift_signature_logger",
+      "cwd": "/home/nic/aiweb/engines/drift_signature_logger",
+      "engine_base": "drift_signature_logger",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/drift_signature_logger/test_drift_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/drift_signature_logger/test_drift_core.py",
+      "test_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/drift_signature_logger",
+      "cwd": "/home/nic/aiweb/engines/drift_signature_logger",
+      "engine_base": "drift_signature_logger",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/drift_signature_logger/test_drift_signature_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/drift_signature_logger/test_drift_signature_core.py",
+      "test_sha256": "d8d41dac7e3777f13b56a34c7f7b84c9de5ab49b343f8a632c35d2ab86f6493c",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/echo_trace_visualizer",
+      "cwd": "/home/nic/aiweb/engines/echo_trace_visualizer",
+      "engine_base": "echo_trace_visualizer",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/echo_trace_visualizer/test_echo_trace_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/echo_trace_visualizer/test_echo_trace_core.py",
+      "test_sha256": "56b2d40d2990977d10df602618744d7bdb40eceb1ee8e7779241b4c1e532eb4e",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/entropy_monitor_engine",
+      "cwd": "/home/nic/aiweb/engines/entropy_monitor_engine",
+      "engine_base": "entropy_monitor_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/entropy_monitor_engine/gradient_entropy_detector/test_gradient_entropy_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/entropy_monitor_engine/gradient_entropy_detector/test_gradient_entropy_core.py",
+      "test_sha256": "31ed970d25dca290693c04453a47f86f746dbd60105895b0b71709fa94047154",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/entropy_monitor_engine",
+      "cwd": "/home/nic/aiweb/engines/entropy_monitor_engine",
+      "engine_base": "entropy_monitor_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/entropy_monitor_engine/test_entropy_monitor_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/entropy_monitor_engine/test_entropy_monitor_core.py",
+      "test_sha256": "c19eee5c585ddc446e314ed11bcac431b5210253c05fcfde45d58cf961847a61",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/failsafe_manager",
+      "cwd": "/home/nic/aiweb/engines/failsafe_manager",
+      "engine_base": "failsafe_manager",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/failsafe_manager/test_failsafe.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/failsafe_manager/test_failsafe.py",
+      "test_sha256": "fb2661677517ae8d840de8c70f135bf618b9917365f65b824d87310126a15976",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/field_resonance_mapper",
+      "cwd": "/home/nic/aiweb/engines/field_resonance_mapper",
+      "engine_base": "field_resonance_mapper",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/field_resonance_mapper/external_field_feed_adapter/test_field_feed_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/field_resonance_mapper/external_field_feed_adapter/test_field_feed_core.py",
+      "test_sha256": "45a133451a8d0bdcdbf4b5e3ef1c468cd5d144ce4772c604ba2967db066e879f",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/field_resonance_mapper",
+      "cwd": "/home/nic/aiweb/engines/field_resonance_mapper",
+      "engine_base": "field_resonance_mapper",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/field_resonance_mapper/test_resonance_mapper_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/field_resonance_mapper/test_resonance_mapper_core.py",
+      "test_sha256": "e5d223641346ef0c8c4d643849c2f9d50433bcdf4927b5bc0304f647484ea82d",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/glyph_engine",
+      "cwd": "/home/nic/aiweb/engines/glyph_engine",
+      "engine_base": "glyph_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/glyph_engine/dynamic_symbol_mutator/test_symbol_mutator_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/glyph_engine/dynamic_symbol_mutator/test_symbol_mutator_core.py",
+      "test_sha256": "7c9956f416139b9308c2f246850c619c9bcec8489721f1ee8f95e3cbfd89b1d8",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/glyph_engine",
+      "cwd": "/home/nic/aiweb/engines/glyph_engine",
+      "engine_base": "glyph_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/glyph_engine/test_glyph_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/glyph_engine/test_glyph_core.py",
+      "test_sha256": "b6c74853e20ebde23fcd855677d8d92c625f0b21d793a8ec80140de0592390e7",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/symbolic_layers/glyph_ui_overlay",
+      "cwd": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay",
+      "engine_base": "glyph_ui_overlay",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay/test_glyph_ui_overlay_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay/test_glyph_ui_overlay_core.py",
+      "test_sha256": "908414b01d6560ba181897677058cf8eb7c72bb3d55fa7d7ed3081114e4d9091",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/symbolic_layers/glyph_ui_overlay",
+      "cwd": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay",
+      "engine_base": "glyph_ui_overlay",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay/test_run_engine.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay/test_run_engine.py",
+      "test_sha256": "381a6b7f3bf61d6bd72c0accd9e6b16164f9a3172cdaf271ea50ee35f68c2939",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/install_onboarding_engine",
+      "cwd": "/home/nic/aiweb/engines/install_onboarding_engine",
+      "engine_base": "install_onboarding_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/install_onboarding_engine/test_onboarding.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/install_onboarding_engine/test_onboarding.py",
+      "test_sha256": "f0c20615c3469627d3325df49583628a742f709c1d12cd2b9ea0723851b4d0d4",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/loop_resurrection_engine",
+      "cwd": "/home/nic/aiweb/engines/loop_resurrection_engine",
+      "engine_base": "loop_resurrection_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/loop_resurrection_engine/test_resurrection.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/loop_resurrection_engine/test_resurrection.py",
+      "test_sha256": "1a2a1a193b5c75796d76ca8b84d3fbe6b4e6aefc7d1096f31217fbe43fa0d757",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/peer_communication_engine",
+      "cwd": "/home/nic/aiweb/engines/peer_communication_engine",
+      "engine_base": "peer_communication_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/peer_communication_engine/test_peer_comm.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/peer_communication_engine/test_peer_comm.py",
+      "test_sha256": "963127e26ffbda182211b81bdd9d2cb909a12b0d333e52aca1f09d2b0c315402",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/phase_engine",
+      "cwd": "/home/nic/aiweb/engines/phase_engine",
+      "engine_base": "phase_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/phase_engine/test_phase_engine.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/phase_engine/test_phase_engine.py",
+      "test_sha256": "2f08993b22ebd608569aded76ccb2936e78dc6325c5b123fa57cb9903276e81d",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/plugin_engine",
+      "cwd": "/home/nic/aiweb/engines/plugin_engine",
+      "engine_base": "plugin_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/plugin_engine/test_plugin_engine.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/plugin_engine/test_plugin_engine.py",
+      "test_sha256": "1fc3e41ee14793acdc1919b79fd8d588455350fb855e6d74ef0aa939d3feae8e",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "projects/recursive_lmm_grok1/engines/project_brain",
+      "cwd": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain",
+      "engine_base": "project_brain",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/field_memory_binder/test_memory_binder_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/field_memory_binder/test_memory_binder_core.py",
+      "test_sha256": "54401bed2501f63858ce1737d42ca7e620ab08fa72416dd827ed11eb1141b09a",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "projects/recursive_lmm_grok1/engines/project_brain",
+      "cwd": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain",
+      "engine_base": "project_brain",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/test_recursive_field.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/test_recursive_field.py",
+      "test_sha256": "5e36714b5ad1dd2d2fe58713695117db772e0b19596d96394fd3c9a49a6ea8e6",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "projects/recursive_lmm_grok1/engines/project_brain",
+      "cwd": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain",
+      "engine_base": "project_brain",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/test_recursive_field_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_brain/test_recursive_field_core.py",
+      "test_sha256": "e286beb9fa4605702681bfea318190d84fb3a854a3e36f79732c6f13fce7db37",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+      "cwd": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+      "engine_base": "protoforge",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/UI/test_ui_render.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/UI/test_ui_render.py",
+      "test_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+      "cwd": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+      "engine_base": "protoforge",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/protoforge/test_harness/run_system_test.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/protoforge/test_harness/run_system_test.py",
+      "test_sha256": "79d66f45d8bd1daaedaa1a59d670a7190019b9e0d2d4b01c0befd382207d8960",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+      "cwd": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+      "engine_base": "protoforge",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/run_system_test.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/run_system_test.py",
+      "test_sha256": "e5708795a2a85ba6ab00ea31c6ab5fd5931149d20f9c60800aca146b17aed56b",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+      "cwd": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+      "engine_base": "protoforge",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/test_harness/run_system_test.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/runtime_wrappers/protoforge_v1.04_db_enabled/test_harness/run_system_test.py",
+      "test_sha256": "79d66f45d8bd1daaedaa1a59d670a7190019b9e0d2d4b01c0befd382207d8960",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/symbolic_layers/recursion_mapper",
+      "cwd": "/home/nic/aiweb/symbolic_layers/recursion_mapper",
+      "engine_base": "recursion_mapper",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/symbolic_layers/recursion_mapper/test_recursion_mapper_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/symbolic_layers/recursion_mapper/test_recursion_mapper_core.py",
+      "test_sha256": "042275dee7ba21aa763b17e9dd7f4d99b4b6a38d974ae8564c2db87cdcd3bf3a",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/symbolic_layers/recursion_mapper",
+      "cwd": "/home/nic/aiweb/symbolic_layers/recursion_mapper",
+      "engine_base": "recursion_mapper",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/symbolic_layers/recursion_mapper/test_run_engine.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/symbolic_layers/recursion_mapper/test_run_engine.py",
+      "test_sha256": "b19e044b765a9db869f1e92f21e59405051a88218dce3d75b8b5513d49cbd233",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/recursive_agent_kernel",
+      "cwd": "/home/nic/aiweb/engines/recursive_agent_kernel",
+      "engine_base": "recursive_agent_kernel",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/recursive_agent_kernel/test_agent_kernel.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/recursive_agent_kernel/test_agent_kernel.py",
+      "test_sha256": "d9b53e4fd8647808f0549d649de813d208c76503dc7f83ad4e16f9159c6998d8",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/recursive_field_breather",
+      "cwd": "/home/nic/aiweb/engines/recursive_field_breather",
+      "engine_base": "recursive_field_breather",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/recursive_field_breather/test_field_breather.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/recursive_field_breather/test_field_breather.py",
+      "test_sha256": "c0655a96ca1d8fa7cb89495e6f33c49b662369d7d0ce57ae3794c64c9ab72a83",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/recursive_field_engine",
+      "cwd": "/home/nic/aiweb/engines/recursive_field_engine",
+      "engine_base": "recursive_field_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/recursive_field_engine/field_memory_binder/test_memory_binder_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/recursive_field_engine/field_memory_binder/test_memory_binder_core.py",
+      "test_sha256": "54401bed2501f63858ce1737d42ca7e620ab08fa72416dd827ed11eb1141b09a",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/recursive_field_engine",
+      "cwd": "/home/nic/aiweb/engines/recursive_field_engine",
+      "engine_base": "recursive_field_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/recursive_field_engine/test_recursive_field.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/recursive_field_engine/test_recursive_field.py",
+      "test_sha256": "5e36714b5ad1dd2d2fe58713695117db772e0b19596d96394fd3c9a49a6ea8e6",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/recursive_field_engine",
+      "cwd": "/home/nic/aiweb/engines/recursive_field_engine",
+      "engine_base": "recursive_field_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/recursive_field_engine/test_recursive_field_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/recursive_field_engine/test_recursive_field_core.py",
+      "test_sha256": "e286beb9fa4605702681bfea318190d84fb3a854a3e36f79732c6f13fce7db37",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/runtime_wrappers/recursive_field_stack",
+      "cwd": "/home/nic/aiweb/runtime_wrappers/recursive_field_stack",
+      "engine_base": "recursive_field_stack",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/runtime_wrappers/recursive_field_stack/test_recursive_field_stack_loader.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/runtime_wrappers/recursive_field_stack/test_recursive_field_stack_loader.py",
+      "test_sha256": "3526a1cd433dacf483cd66d4a5465c0e78856219954f316a280482b4c62c4220",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "engines/recursive_verification_engine",
+      "cwd": "/home/nic/aiweb/engines/recursive_verification_engine",
+      "engine_base": "recursive_verification_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/recursive_verification_engine/test_recursive_verification.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/recursive_verification_engine/test_recursive_verification.py",
+      "test_sha256": "2e69478e8baecc30c799c2226d921822437fcef1f92a32131065aedbb3b30b1d",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/resonance_charge_meter",
+      "cwd": "/home/nic/aiweb/engines/resonance_charge_meter",
+      "engine_base": "resonance_charge_meter",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/resonance_charge_meter/test_charge_meter.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/resonance_charge_meter/test_charge_meter.py",
+      "test_sha256": "f4bd87fdff88f750dfc71beacef6a63c529667f91b4a2dd207d63d1cd24d0b1f",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/symbolic_layers/resonance_display",
+      "cwd": "/home/nic/aiweb/symbolic_layers/resonance_display",
+      "engine_base": "resonance_display",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/symbolic_layers/resonance_display/test_resonance_display_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/symbolic_layers/resonance_display/test_resonance_display_core.py",
+      "test_sha256": "c2d0fe4961887e5b11a0b7cd828006f4326a26ba2bafa6aa0f859927614cb8b0",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/symbolic_layers/resonance_display",
+      "cwd": "/home/nic/aiweb/symbolic_layers/resonance_display",
+      "engine_base": "resonance_display",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/symbolic_layers/resonance_display/test_run_engine.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/symbolic_layers/resonance_display/test_run_engine.py",
+      "test_sha256": "de5ccbade2ad706a16020b41cabf163a0e41efdea45368582e84c64a200cd4ca",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/resonance_visualizer_engine",
+      "cwd": "/home/nic/aiweb/engines/resonance_visualizer_engine",
+      "engine_base": "resonance_visualizer_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/resonance_visualizer_engine/test_visualizer.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/resonance_visualizer_engine/test_visualizer.py",
+      "test_sha256": "9b6b8b514f3c69f6a3da511b51bc94ac34a0e0f93137c04cfe7c89d026493005",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/resurrection_planner",
+      "cwd": "/home/nic/aiweb/engines/resurrection_planner",
+      "engine_base": "resurrection_planner",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/resurrection_planner/test_resurrection_planner_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/resurrection_planner/test_resurrection_planner_core.py",
+      "test_sha256": "5ec49a53c11515e9c03eefb7aafddfb443ac4c42de36ab25d5aacc7fcd33a350",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "projects/recursive_lmm_grok1/engines/revisit_previous_tasks",
+      "cwd": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/revisit_previous_tasks",
+      "engine_base": "revisit_previous_tasks",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/revisit_previous_tasks/test_resurrection.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/revisit_previous_tasks/test_resurrection.py",
+      "test_sha256": "1a2a1a193b5c75796d76ca8b84d3fbe6b4e6aefc7d1096f31217fbe43fa0d757",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/seed_manager",
+      "cwd": "/home/nic/aiweb/engines/seed_manager",
+      "engine_base": "seed_manager",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/seed_manager/test_seed.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/seed_manager/test_seed.py",
+      "test_sha256": "6fe0caa1737b2f1e1cac80767b3e31b364e57c6664c64af280293e0e0ead7396",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/spc_memory_migrator",
+      "cwd": "/home/nic/aiweb/engines/spc_memory_migrator",
+      "engine_base": "spc_memory_migrator",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/spc_memory_migrator/test_spc_migrator_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/spc_memory_migrator/test_spc_migrator_core.py",
+      "test_sha256": "1254c8b82308ee9b4116305d0e65f6b50351b0b1d62c7ebcd787cbe5ba1d8d69",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/runtime_wrappers/stack_breather_phase2",
+      "cwd": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2",
+      "engine_base": "stack_breather_phase2",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/test_stack_breather_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/runtime_wrappers/stack_breather_phase2/test_stack_breather_core.py",
+      "test_sha256": "5fc4900d95e90775a5b815bea55c1105efc2ee960ccec3eec2a4048dc75308e8",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/stack_linker_breather",
+      "cwd": "/home/nic/aiweb/engines/stack_linker_breather",
+      "engine_base": "stack_linker_breather",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py",
+      "test_sha256": "2297b612ec1a6c6edb63a9959dea57d7b22d9d35472f9741bd671b261b0b0951",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/symbolic_capacitor_engine",
+      "cwd": "/home/nic/aiweb/engines/symbolic_capacitor_engine",
+      "engine_base": "symbolic_capacitor_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/symbolic_capacitor_engine/resonance_decay_tracker/test_decay_tracker_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/symbolic_capacitor_engine/resonance_decay_tracker/test_decay_tracker_core.py",
+      "test_sha256": "1c89eb93bd41f14b604bdafbcb34592071f44eeb45fd79fd4eff91b99c37a76d",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/runtime_wrappers/symbolic_cognition_stack",
+      "cwd": "/home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack",
+      "engine_base": "symbolic_cognition_stack",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack/test_symbolic_cognition_stack_loader.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack/test_symbolic_cognition_stack_loader.py",
+      "test_sha256": "54f82c33329bbcab5d85d256ed92462b13412346ecc6225fbe5c61eb5e6aecc3",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/symbolic_drift_visualizer",
+      "cwd": "/home/nic/aiweb/engines/symbolic_drift_visualizer",
+      "engine_base": "symbolic_drift_visualizer",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/symbolic_drift_visualizer/test_drift_visualizer_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/symbolic_drift_visualizer/test_drift_visualizer_core.py",
+      "test_sha256": "d4b144f355b005bcabe30e42c849eabc1042852df6a94b77a37f71818de2755a",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/symbolic_feedback_loop_engine",
+      "cwd": "/home/nic/aiweb/engines/symbolic_feedback_loop_engine",
+      "engine_base": "symbolic_feedback_loop_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/symbolic_feedback_loop_engine/test_feedback_loop.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/symbolic_feedback_loop_engine/test_feedback_loop.py",
+      "test_sha256": "c9f9eadccb5a768ad365462e2c3fbcce4d4e474f3232cd91731c7c0e00f0a5d5",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/symbolic_glyph_engine",
+      "cwd": "/home/nic/aiweb/engines/symbolic_glyph_engine",
+      "engine_base": "symbolic_glyph_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/symbolic_glyph_engine/test_glyph_core.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/symbolic_glyph_engine/test_glyph_core.py",
+      "test_sha256": "88cc690ebe0031849c75c60f189052809efebe4dd82865a129eb07b3c358a497",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/runtime_wrappers/symbolic_layers_stack",
+      "cwd": "/home/nic/aiweb/runtime_wrappers/symbolic_layers_stack",
+      "engine_base": "symbolic_layers_stack",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/runtime_wrappers/symbolic_layers_stack/test_symbolic_layers_stack_loader.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/runtime_wrappers/symbolic_layers_stack/test_symbolic_layers_stack_loader.py",
+      "test_sha256": "73bc89acf7ef0d9209a2c4c58fbc634c4cab56847cfc281a091d79d41e4191f1",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/symbolic_policy_engine",
+      "cwd": "/home/nic/aiweb/engines/symbolic_policy_engine",
+      "engine_base": "symbolic_policy_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/symbolic_policy_engine/test_policy.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/symbolic_policy_engine/test_policy.py",
+      "test_sha256": "f401afcd8a274cbf78affdf20f77d44de1582fe0aa966ec7d7455889e75e1d7e",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/system_log_engine",
+      "cwd": "/home/nic/aiweb/engines/system_log_engine",
+      "engine_base": "system_log_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/system_log_engine/test_system_log.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/system_log_engine/test_system_log.py",
+      "test_sha256": "6f9265fde3d091f8b0ccae6ec1904c3f9723bab8cddf5b818777049bb379933b",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/tier_enforcer",
+      "cwd": "/home/nic/aiweb/engines/tier_enforcer",
+      "engine_base": "tier_enforcer",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/tier_enforcer/test_tier_enforcer.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/tier_enforcer/test_tier_enforcer.py",
+      "test_sha256": "43dfaf56cf055d46c66006175a6cbeca225cbb17458873183ff6728e1faceae6",
+      "timeout_seconds": 20
+    },
+    {
+      "canonical_path": "aiweb/engines/tone_engine",
+      "cwd": "/home/nic/aiweb/engines/tone_engine",
+      "engine_base": "tone_engine",
+      "planned_command": [
+        "/home/nic/forge/.venv/bin/python3",
+        "/home/nic/aiweb/engines/tone_engine/test_tone_engine.py"
+      ],
+      "source_inventory_status": "SAFE_TEST_CANDIDATE_FOUND",
+      "test_path": "/home/nic/aiweb/engines/tone_engine/test_tone_engine.py",
+      "test_sha256": "4f6bf92d20cd9ede2558dcc3cc5f6b72131d6c96b9870acb4b859b4334a15e0c",
+      "timeout_seconds": 20
+    }
+  ]
+}

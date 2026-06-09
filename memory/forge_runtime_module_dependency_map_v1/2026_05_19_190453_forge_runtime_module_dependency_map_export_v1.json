@@ -1,0 +1,63 @@
+{
+  "active_patch": "Patch 156 \u2014 Runtime Module Dependency Map",
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "live_restore_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "roadmap_append_only": true
+  },
+  "blockers": [
+    {
+      "id": "B02",
+      "summary": "Live apply remains locked. This is expected before runtime build writes.",
+      "type": "live_write"
+    },
+    {
+      "id": "B03",
+      "summary": "12 canonical engines still have source authority gaps.",
+      "type": "source_authority"
+    }
+  ],
+  "canonical_engine_count": 0,
+  "created_at": "2026-05-19T19:04:29",
+  "current_phase": "S19B \u2014 Runtime Module Dependency Map",
+  "dependency_rows": [],
+  "domain_count": 0,
+  "domain_summary": [],
+  "export_note": "Patch 156 export; planning only; no live runtime writes.",
+  "exported_at": "2026-05-19T19:04:53",
+  "live_build_ready": false,
+  "next_commands": [
+    "forge-runtime-module-map-export",
+    "forge-build-sequence",
+    "forge-dashboard-roadmap-build",
+    "forge-status-api-build",
+    "forge-dashboard-build",
+    "Install Patch 157 when ready"
+  ],
+  "next_patch": "Patch 157 \u2014 Runtime Build Plan / First Safe Module Candidate",
+  "plain_english": "Forge has mapped canonical AI.Web runtime modules into dependency domains for planning. This does not authorize live runtime writes.",
+  "planning_ready": false,
+  "recommended_next_patch": "Patch 157 \u2014 Runtime Build Plan / First Safe Module Candidate",
+  "report_type": "FORGE_RUNTIME_MODULE_DEPENDENCY_MAP_V1",
+  "schema_version": "forge_runtime_module_dependency_map_v1_patch156",
+  "status": "FORGE_RUNTIME_MODULE_DEPENDENCY_MAP_HAS_PLANNING_BLOCKERS",
+  "summary": {
+    "canonical_engines": 0,
+    "canonical_tests_fail": 0,
+    "canonical_tests_pass": 67,
+    "domains": 0,
+    "engine_file_writes": 0,
+    "expected_commands": 586,
+    "live_build_ready": false,
+    "patch_apply_authority": false,
+    "planning_ready": false,
+    "project_file_writes": 0,
+    "roadmap_mutation_policy": "APPEND_ONLY",
+    "tools": 510,
+    "trust_level": 5.0
+  }
+}

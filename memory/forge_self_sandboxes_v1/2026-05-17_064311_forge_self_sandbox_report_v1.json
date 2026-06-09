@@ -1,0 +1,141 @@
+{
+  "authority": {
+    "live_self_write_authority": false,
+    "mode": "SANDBOX_ONLY",
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "sandbox_only": true,
+    "shell_execution_authority": false
+  },
+  "checks": [
+    {
+      "name": "py_compile_main",
+      "path": "/home/nic/forge/memory/forge_self_sandboxes_v1/sandboxes/FSSB-2026-05-17_064303/files/main.py",
+      "status": "PASS"
+    },
+    {
+      "expected_command_count": 395,
+      "name": "expected_command_scan",
+      "path": "/home/nic/forge/memory/forge_self_sandboxes_v1/sandboxes/FSSB-2026-05-17_064303/files/main.py",
+      "required_patch122_missing": [
+        "forge-self-sandbox-policy",
+        "forge-self-sandbox-plan",
+        "forge-self-sandbox-apply",
+        "forge-self-sandbox-show",
+        "forge-self-sandbox-clean",
+        "forge-self-sandbox-export"
+      ],
+      "status": "FAIL"
+    },
+    {
+      "name": "tool_registry_json_parse",
+      "path": "/home/nic/forge/memory/forge_self_sandboxes_v1/sandboxes/FSSB-2026-05-17_064303/files/config/tool_registry.json",
+      "status": "PASS",
+      "tool_count": 319,
+      "trust": 5.0
+    }
+  ],
+  "copied_count": 9,
+  "copied_entries": [
+    {
+      "copied": true,
+      "ok": true,
+      "problem": null,
+      "source": "/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/main.py",
+      "source_sha256": "7e61e2129abbcadedf4d3e36fb9a5214f6a0e28d78cffa50777dbf44641f89d8",
+      "target": "/home/nic/forge/memory/forge_self_sandboxes_v1/sandboxes/FSSB-2026-05-17_064303/files/main.py",
+      "target_sha256": "7e61e2129abbcadedf4d3e36fb9a5214f6a0e28d78cffa50777dbf44641f89d8"
+    },
+    {
+      "copied": true,
+      "ok": true,
+      "problem": null,
+      "source": "/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/config/tool_registry.json",
+      "source_sha256": "7a83fa1a69176510793ad8a042253cb860b2eb00bbc5b9e5410cac1f6fc9686e",
+      "target": "/home/nic/forge/memory/forge_self_sandboxes_v1/sandboxes/FSSB-2026-05-17_064303/files/config/tool_registry.json",
+      "target_sha256": "7a83fa1a69176510793ad8a042253cb860b2eb00bbc5b9e5410cac1f6fc9686e"
+    },
+    {
+      "copied": true,
+      "ok": true,
+      "problem": null,
+      "source": "/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/config/session_scope.json",
+      "source_sha256": "2f8412e6e37eafa09c334d79aa5f23d3a6d93d6dbe83e441e7fa860788a49d1a",
+      "target": "/home/nic/forge/memory/forge_self_sandboxes_v1/sandboxes/FSSB-2026-05-17_064303/files/config/session_scope.json",
+      "target_sha256": "2f8412e6e37eafa09c334d79aa5f23d3a6d93d6dbe83e441e7fa860788a49d1a"
+    },
+    {
+      "copied": true,
+      "ok": true,
+      "problem": null,
+      "source": "/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/config/approved_paths.json",
+      "source_sha256": "80c98f351a0ffe369ac7acd08c4390e8901dd003b7ce1448cdc3d1093b06f7c6",
+      "target": "/home/nic/forge/memory/forge_self_sandboxes_v1/sandboxes/FSSB-2026-05-17_064303/files/config/approved_paths.json",
+      "target_sha256": "80c98f351a0ffe369ac7acd08c4390e8901dd003b7ce1448cdc3d1093b06f7c6"
+    },
+    {
+      "copied": true,
+      "ok": true,
+      "problem": null,
+      "source": "/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+      "source_sha256": "b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab",
+      "target": "/home/nic/forge/memory/forge_self_sandboxes_v1/sandboxes/FSSB-2026-05-17_064303/files/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+      "target_sha256": "b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab"
+    },
+    {
+      "copied": true,
+      "ok": true,
+      "problem": null,
+      "source": "/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/memory/forge_self_updates_v1/latest_forge_self_update_proposal_v1.json",
+      "source_sha256": "daafb01638b38bc9d885e1c6d766cca8e8ff13d060264faadb4d1d7dbd92cdf3",
+      "target": "/home/nic/forge/memory/forge_self_sandboxes_v1/sandboxes/FSSB-2026-05-17_064303/files/memory/forge_self_updates_v1/latest_forge_self_update_proposal_v1.json",
+      "target_sha256": "daafb01638b38bc9d885e1c6d766cca8e8ff13d060264faadb4d1d7dbd92cdf3"
+    },
+    {
+      "copied": true,
+      "ok": true,
+      "problem": null,
+      "source": "/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/memory/forge_self_updates_v1/latest_forge_self_update_verification_v1.json",
+      "source_sha256": "8e3991b3488b52481d4718cfcd05b6a681ab40e1ec923b132a25cbe9065e7a32",
+      "target": "/home/nic/forge/memory/forge_self_sandboxes_v1/sandboxes/FSSB-2026-05-17_064303/files/memory/forge_self_updates_v1/latest_forge_self_update_verification_v1.json",
+      "target_sha256": "8e3991b3488b52481d4718cfcd05b6a681ab40e1ec923b132a25cbe9065e7a32"
+    },
+    {
+      "copied": true,
+      "ok": true,
+      "problem": null,
+      "source": "/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/memory/llm_plans_v1/latest_llm_plan_template_v1.json",
+      "source_sha256": "cb0d0eb158550670447d1eb47e0cdc2c12b3c88b5590488ccf9ff96bee91a18e",
+      "target": "/home/nic/forge/memory/forge_self_sandboxes_v1/sandboxes/FSSB-2026-05-17_064303/files/memory/llm_plans_v1/latest_llm_plan_template_v1.json",
+      "target_sha256": "cb0d0eb158550670447d1eb47e0cdc2c12b3c88b5590488ccf9ff96bee91a18e"
+    },
+    {
+      "copied": true,
+      "ok": true,
+      "problem": null,
+      "source": "/home/nic/forge/memory/forge_self_snapshots_v1/snapshots/FSS-2026-05-17_063610/files/memory/forge_master_status_v1/latest_forge_master_status_report_v1.json",
+      "source_sha256": "8539bf216a389d99208f391fe112bb657bb55d5429736f1ce2e9a04bf3ed4fb8",
+      "target": "/home/nic/forge/memory/forge_self_sandboxes_v1/sandboxes/FSSB-2026-05-17_064303/files/memory/forge_master_status_v1/latest_forge_master_status_report_v1.json",
+      "target_sha256": "8539bf216a389d99208f391fe112bb657bb55d5429736f1ce2e9a04bf3ed4fb8"
+    }
+  ],
+  "created_at": "2026-05-17T06:43:11",
+  "live_apply_eligible": false,
+  "live_apply_reason": "Patch 122 validates sandboxing only. Future patches must bind tests, approval, and explicit self-update apply gates before live writes.",
+  "next_commands": [
+    "forge-self-sandbox-show report",
+    "forge-self-sandbox-export",
+    "forge-next"
+  ],
+  "plain_english": "Forge built and checked a sandbox copy. Live Forge files were not changed.",
+  "plan_path": "/home/nic/forge/memory/forge_self_sandboxes_v1/latest_forge_self_sandbox_plan_v1.json",
+  "problems": [
+    "check_failed:expected_command_scan:['forge-self-sandbox-policy', 'forge-self-sandbox-plan', 'forge-self-sandbox-apply', 'forge-self-sandbox-show', 'forge-self-sandbox-clean', 'forge-self-sandbox-export']"
+  ],
+  "report_type": "FORGE_SELF_SANDBOX_REPORT_V1",
+  "sandbox_id": "FSSB-2026-05-17_064303",
+  "sandbox_root": "/home/nic/forge/memory/forge_self_sandboxes_v1/sandboxes/FSSB-2026-05-17_064303",
+  "schema_version": "forge_self_update_sandbox_v1_patch122",
+  "status": "FORGE_SELF_SANDBOX_APPLY_BLOCKED_OR_FAILED",
+  "warnings": []
+}

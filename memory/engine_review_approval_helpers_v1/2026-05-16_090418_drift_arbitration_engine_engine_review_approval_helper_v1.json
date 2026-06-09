@@ -1,0 +1,98 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "bound_file_count": 12,
+  "candidate_path": "/home/nic/aiweb/engines/drift_arbitration_engine",
+  "created_at": "2026-05-16_090418",
+  "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_drift_arbitration_engine_engine_review_evidence_crosscheck_v1.json",
+  "crosscheck_sha256": "bb28dd6f1c7cbe432c81e0a33092643f46b27cc401dd12cd5dfc0460bc9c6c59",
+  "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_085347_drift_arbitration_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "f951b474365a20ebef668c2f6d5aa8176b4eb0b1800067eea91a2282cdfb45c3",
+  "engine_family": "drift_arbitration_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_drift_arbitration_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "1d99454a1bbd833acf5c0be92462ee27f2eaa014da056f2fae128d772a4ba708",
+  "evidence_id": "EEB-caf4c9b35c20c0c1",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "test_drift_arbitration.py",
+      "run.py",
+      "README.md",
+      "test_log.txt",
+      "engine_manifest.json",
+      "drift_arbitration_engine_frozen_v1/test_drift_arbitration.py",
+      "drift_arbitration_engine_frozen_v1/run.py",
+      "drift_arbitration_engine_frozen_v1/README.md",
+      "drift_arbitration_engine_frozen_v1/test_log.txt",
+      "drift_arbitration_engine_frozen_v1/engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "detect_drift",
+      "Drift",
+      "Function",
+      "instability",
+      "recursive",
+      "field",
+      "loop",
+      "integrity",
+      "and",
+      "drift",
+      "factor",
+      "arbitration",
+      "trigger",
+      "auto",
+      "correction",
+      "engine",
+      "version",
+      "description",
+      "Web",
+      "Runtime"
+    ],
+    "imports_mentioned": [
+      "from run import detect_drift",
+      "import json"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 24.954,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "e0d4f0e4c52671cbd92058e5461d5f3bf7bd6a460981294d0832b201172477b4",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nMonitors loop integrity and drift factors in a recursive field system to detect instability, log arbitration events, and trigger corrections when thresholds are breached.  \n\nLikely System Role:  \nA core runtime component for maintaining stability in AI.Web's recursive field engine, acting as a drift detection and resolution mechanism.  \n\nEvidence Used:  \n- `test_drift_arbitration.py`: Simulates drift detection with hardcoded test cases.  \n- `run.py`: Implements `detect_drift()` logic using thresholds (drift ≥0.30, integrity ≤0.70).  \n- `README.md`: Describes engine functions, thresholds, and logging behavior.  \n- `engine_manifest.json`: Confirms versioning and description of drift detection logic.  \n- `test_log.txt`: Shows example drift detection output.  \n\nRisks / Uncertainties:  \n- Thresholds (0.30/0.70) may need calibration for real-world data.  \n- Auto-correct is disabled by default, risking delayed responses to drift.  \n- Integration with entropy buffer (test files) may not be fully validated.  \n\nRecommendation Draft:  \nValidate threshold tuning with production data. Confirm entropy buffer integration stability. Enable auto-correct only after rigorous testing.  \n\nSuggested Nic Action:  \nApprove threshold parameters and entropy buffer integration validation. Schedule production testing for drift detection accuracy."
+  },
+  "llm_visible_review_excerpt": "Plain-English Purpose:  \nMonitors loop integrity and drift factors in a recursive field system to detect instability, log arbitration events, and trigger corrections when thresholds are breached.  \n\nLikely System Role:  \nA core runtime component for maintaining stability in AI.Web's recursive field engine, acting as a drift detection and resolution mechanism.  \n\nEvidence Used:  \n- `test_drift_arbitration.py`: Simulates drift detection with hardcoded test cases.  \n- `run.py`: Implements `detect_drift()` logic using thresholds (drift ≥0.30, integrity ≤0.70).  \n- `README.md`: Describes engine functions, thresholds, and logging behavior.  \n- `engine_manifest.json`: Confirms versioning and description of drift detection logic.  \n- `test_log.txt`: Shows example drift detection output.  \n\nRisks / Uncertainties:  \n- Thresholds (0.30/0.70) may need calibration for real-world data.  \n- Auto-correct is disabled by default, risking delayed responses to drift.  \n- Integration with entropy buffer (test files) may not be fully validated.  \n\nRecommendation Draft:  \nValidate threshold tuning with production data. Confirm entropy buffer integration stability. Enable auto-correct only after rigorous testing.  \n\nSuggested Nic Action:  \nApprove threshold parameters and entropy buffer integration validation. Schedule production testing for drift detection accuracy.",
+  "manual_verification_rule": "Approve only if the LLM-visible claims are supported by the bound evidence shown in the Patch 102 cross-check. If unsure, defer.",
+  "ready_for_evidence_based_queue_decision": true,
+  "report_type": "ENGINE_REVIEW_APPROVAL_CHECK_V1_PATCH103",
+  "schema_version": "engine_review_approval_helper_v1_patch103",
+  "status": "EVIDENCE_APPROVAL_CHECK_READY",
+  "warnings": [
+    "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "snapshot_diff_verify_index_v1_patch84",
+  "report_type": "SNAPSHOT_VERIFY_INDEX_V1_PATCH84",
+  "created_at": "2026-05-14T20:57:09",
+  "mode": "READ_ONLY_VERIFY_INDEX_NO_RESTORE",
+  "status": "PASS",
+  "authority": {
+    "restore_authority": false,
+    "shadow_restore_authority": false,
+    "project_write_authority": false,
+    "engine_write_authority": false,
+    "delete_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false,
+    "chroma_write_authority": false,
+    "final_lockfile_authority": false,
+    "snapshot_create_authority": false
+  },
+  "counts": {
+    "snapshot_receipts": 1,
+    "passing_receipts": 1,
+    "failing_receipts": 0
+  },
+  "snapshot_receipts": [
+    {
+      "receipt_path": "/home/nic/forge/memory/snapshots_v1/2026-05-14_204425_snapshot_create_v1.json",
+      "created_at": "2026-05-14T20:44:25",
+      "status": "SNAPSHOT_CREATED_NO_RESTORE_AUTHORITY",
+      "archive_root": "/home/nic/forge/memory/snapshots_v1/2026-05-14_204425_snapshot_archive",
+      "archive_files_dir": "/home/nic/forge/memory/snapshots_v1/2026-05-14_204425_snapshot_archive/files",
+      "files_copied": 58,
+      "blocker_count": 0,
+      "warning_count": 1,
+      "verify_status": "PASS",
+      "verify_problem_count": 0,
+      "verify_warning_count": 1,
+      "verify_problems": [],
+      "verify_warnings": [
+        "Expected volatile source drift accepted for copy: /home/nic/forge/logs/forge_audit.log"
+      ]
+    }
+  ],
+  "plain_english": {
+    "meaning": "Forge verified existing snapshot-create receipts and copied snapshot files where possible.",
+    "next_safe_step": "Use snapshot-diff to compare snapshot metadata. Restore remains unavailable."
+  }
+}

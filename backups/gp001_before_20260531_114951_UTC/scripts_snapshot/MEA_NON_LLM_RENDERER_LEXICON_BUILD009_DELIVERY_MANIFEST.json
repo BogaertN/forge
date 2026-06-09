@@ -1,0 +1,81 @@
+{
+  "backward_compatibility": {
+    "build009_identity_export": "NON_LLM_RENDERER_BUILD_ID",
+    "renderer_package_BUILD_ID_preserved_as_build008": true,
+    "renderer_package_SCHEMA_VERSION_preserved_as_build008": true
+  },
+  "build_id": "RMC-NON-LLM-RENDERER-AND-SEMANTIC-LEXICON-BUILD-009",
+  "changed_files": [
+    "forge/rmc_engine_v1/renderer/__init__.py",
+    "forge/rmc_engine_v1/renderer/semantic_lexicon.py",
+    "forge/rmc_engine_v1/renderer/grammar_templates.py",
+    "forge/rmc_engine_v1/renderer/surface_realizer.py",
+    "forge/rmc_engine_v1/renderer/renderer.py",
+    "forge/scripts/README_non_llm_renderer_lexicon_build009.md",
+    "forge/scripts/MEA_NON_LLM_RENDERER_LEXICON_BUILD009_DELIVERY_MANIFEST.json",
+    "forge/scripts/SHA256SUMS_non_llm_renderer_lexicon_build009.txt",
+    "forge/scripts/test_non_llm_renderer_lexicon_build009.py",
+    "forge/scripts/non_llm_renderer_lexicon_build009_verify.py"
+  ],
+  "input_authority": "Build 008 accepted typed MEA render-admission packet only.",
+  "locked_epistemic_boundary": {
+    "claim_status": "hypothesis",
+    "discovery_permitted": false,
+    "empirical_fact_permitted": false,
+    "proof_debt_text": "0.85",
+    "required_next_action": "test_required",
+    "verified_claim_permitted": false
+  },
+  "new_runtime_files": [
+    "forge/rmc_engine_v1/renderer/semantic_lexicon.py",
+    "forge/rmc_engine_v1/renderer/grammar_templates.py",
+    "forge/rmc_engine_v1/renderer/surface_realizer.py",
+    "forge/rmc_engine_v1/renderer/renderer.py"
+  ],
+  "output_contract": "Unapproved render preview requiring Build 010 Echo Validator hardening.",
+  "prohibited_effects": {
+    "approves_user_output": false,
+    "calls_llm": false,
+    "compiles_rmc_meaning_manifest": false,
+    "creates_http_routes": false,
+    "invokes_existing_echo_validator": false,
+    "invokes_generic_output_renderer": false,
+    "mints_ct": false,
+    "modifies_ui": false,
+    "renders_public_output": false,
+    "requires_restart": false,
+    "writes_chroma": false,
+    "writes_contribution_economy": false,
+    "writes_identity_vault": false,
+    "writes_ledgers": false,
+    "writes_mea_memory": false,
+    "writes_rmc_output_memory": false
+  },
+  "purpose": "Add deterministic non-LLM render previews downstream of the verified Build 008 MEA-to-RMC admission packet without approving output.",
+  "replaced_existing_files": [
+    "forge/rmc_engine_v1/renderer/__init__.py"
+  ],
+  "required_regression_results": {
+    "build005_behavior": "41/41 PASS",
+    "build005_verify": "17/17 PASS",
+    "build006_behavior": "75/75 PASS",
+    "build006_verify": "24/24 PASS",
+    "build007_behavior": "55/55 PASS",
+    "build007_verify": "19/19 PASS",
+    "build008_behavior": "76/76 PASS",
+    "build008_verify": "23/23 PASS",
+    "build009_behavior": "107/107 PASS",
+    "build009_verify": "25/25 PASS",
+    "patch299": "60/60 PASS"
+  },
+  "schema_version": "rmc_non_llm_renderer_lexicon_delivery_manifest_v1_build009",
+  "supported_delivery_modes": [
+    "explanation",
+    "decision",
+    "warning",
+    "verification_result",
+    "next_step",
+    "refusal",
+    "uncertain_result"
+  ]
+}

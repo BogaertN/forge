@@ -1,0 +1,13 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T10:46:44",
+  "next_phase": "REVISE_OR_REVIEW_SANDBOX_RESULT",
+  "plain_english": "Sandbox ran, but it is not cleared for live apply. Review LLM/test output before next patch.",
+  "recommended_next_patch": "Revise candidate before live apply gate",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "schema_version": "forge_next_status_v1_patch137",
+  "status": "ACTION_REQUIRED"
+}

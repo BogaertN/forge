@@ -1,0 +1,38 @@
+{
+  "build_id": "GENERAL-PIPELINE-DEPENDENCY-LICENSE-REGISTRY-BUILD-GP-006",
+  "schema_version": "general_pipeline_dependency_license_registry_v1_build_gp006",
+  "depends_on": "GENERAL-PIPELINE-CAPABILITY-SERVICE-CONTRACTS-BUILD-GP-005",
+  "purpose": "Introduce deterministic dependency/license governance records and bind current services only to approved internal/preexisting runtime dependencies, without installing third-party tools or adding domains.",
+  "modified_runtime_modules": [
+    "rmc_engine_v1/general_pipeline/__init__.py",
+    "rmc_engine_v1/general_pipeline/capability_services.py",
+    "rmc_engine_v1/general_pipeline/manifest_builder.py",
+    "rmc_engine_v1/general_pipeline/pipeline.py"
+  ],
+  "new_runtime_modules": [
+    "rmc_engine_v1/general_pipeline/dependency_registry.py",
+    "rmc_engine_v1/general_pipeline/gp006_dependency_license_registry.py"
+  ],
+  "new_test_and_documentation_files": [
+    "scripts/test_general_pipeline_dependency_license_registry_build_gp006.py",
+    "scripts/general_pipeline_dependency_license_registry_build_gp006_verify.py",
+    "scripts/README_general_pipeline_dependency_license_registry_build_gp006.md",
+    "scripts/MEA_GENERAL_PIPELINE_BUILD_GP006_DELIVERY_MANIFEST.json"
+  ],
+  "boundaries": {
+    "adds_new_domain": false,
+    "third_party_dependencies_added": [],
+    "third_party_components_imported": [],
+    "third_party_components_installed": [],
+    "records_external_candidates_as_review_only": true,
+    "holds_pymupdf_pending_license_decision": true,
+    "adds_corpus_ingestion": false,
+    "changes_routes": false,
+    "changes_ui": false,
+    "writes_memory": false,
+    "writes_identity_vault": false,
+    "writes_contribution_economy": false,
+    "writes_ledgers": false,
+    "mints_ct": false
+  }
+}

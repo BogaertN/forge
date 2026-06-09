@@ -1,0 +1,45 @@
+FORGE APPLY PLAN
+══════════════════════════════════════════════════════════════════
+Proposal file   : /home/nic/forge/proposed_patches/2026-05-09_094029_PATCH_test_txt.txt
+Target file     : /home/nic/forge_test_project/test.txt
+Timestamp       : 2026-05-09T09:45:20
+Session ID      : forge_2026_05_09_093912
+Apply plan hash : 990478cdd8da1371
+══════════════════════════════════════════════════════════════════
+
+PREFLIGHT STATUS
+────────────────
+  Proposal file        : FOUND
+  Target file          : FOUND  (32 bytes)
+  Original snippet     : FOUND at line 1
+  Snippet occurrences  : 1
+  Original SHA-256     : fc0a6c04e779f517
+  Future SHA-256       : a119042030a9f3ec
+
+ROLLBACK SNAPSHOT
+─────────────────
+  Saved to   : /home/nic/forge/rollback_registry/2026-05-09_094520_ROLLBACK_test_txt.txt
+  File SHA-256 (before change) : fc0a6c04e779f517
+  ← Keep this file safe before applying any change.
+
+COMPUTED FUTURE CONTENT
+───────────────────────
+This is a AI.Web Forge test file.
+
+
+APPLY INSTRUCTION (manual — Forge does NOT apply automatically)
+───────────────────────────────────────────────────────────────
+  1. Verify rollback snapshot:  ls -lh /home/nic/forge/rollback_registry/2026-05-09_094520_ROLLBACK_test_txt.txt
+  2. Open the target file:      /home/nic/forge_test_project/test.txt
+  3. Find the original snippet (around line 1).
+  4. Replace it with the proposed snippet.
+     OR: copy the COMPUTED FUTURE CONTENT above directly into the file.
+  5. Verify the SHA-256 of the modified file matches: a119042030a9f3ec
+     Command: sha256sum /home/nic/forge_test_project/test.txt   (first 16 chars)
+  6. Run test plan: Read the file and verify the proposed text appears after manual application.
+  7. If anything goes wrong: restore from rollback at step 1.
+
+══════════════════════════════════════════════════════════════════
+No project files were modified by this preflight.
+Audit hash : 990478cdd8da1371  (PATCH_APPLY_PLAN_CREATED)
+══════════════════════════════════════════════════════════════════

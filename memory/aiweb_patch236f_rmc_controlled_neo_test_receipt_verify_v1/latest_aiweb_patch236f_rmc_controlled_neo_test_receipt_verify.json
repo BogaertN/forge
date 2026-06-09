@@ -1,0 +1,307 @@
+{
+  "agent_id": "neo.local",
+  "blockers": [],
+  "checks": [
+    {
+      "blocker": null,
+      "detail": "/home/nic/forge/memory/aiweb_patch236e_rmc_controlled_neo_test_receipt_write_v1/latest_aiweb_patch236e_rmc_controlled_neo_test_receipt_write.json",
+      "key": "patch236e_report_exists",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "parsed",
+      "key": "patch236e_report_parses",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "True",
+      "key": "patch236e_ok",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "RMC_TEST_RECEIPT_WRITTEN_GOVERNED_NEO",
+      "key": "patch236e_expected_verdict",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "neo.local",
+      "key": "target_agent_neo",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "test_receipt",
+      "key": "write_type_test_receipt",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "test_receipt",
+      "key": "forbidden_write_type_not_used",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local",
+      "key": "namespace_path_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/receipts/neo_handshake_test_20260524_121937_UTC.json",
+      "key": "receipt_path_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/receipts/neo_handshake_test_20260524_121937_UTC.json",
+      "key": "receipt_under_namespace",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/receipts/neo_handshake_test_20260524_121937_UTC.json",
+      "key": "receipt_under_receipts_dir",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "neo_handshake_test_20260524_121937_UTC.json",
+      "key": "receipt_filename_safe",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "parsed",
+      "key": "receipt_json_parses",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "neo.local",
+      "key": "receipt_agent_neo",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "public_frontline_receipt_only",
+      "key": "receipt_role_boundary_governance",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "test_receipt",
+      "key": "receipt_write_type_test_receipt",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "174adc1c00d0354dd954e1db000f482969d90bf238c5615be4bdce233c07104e",
+      "key": "receipt_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "file=174adc1c00d0354dd954e1db000f482969d90bf238c5615be4bdce233c07104e report=174adc1c00d0354dd954e1db000f482969d90bf238c5615be4bdce233c07104e",
+      "key": "receipt_hash_matches_report",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "computed=174adc1c00d0354dd954e1db000f482969d90bf238c5615be4bdce233c07104e file=174adc1c00d0354dd954e1db000f482969d90bf238c5615be4bdce233c07104e",
+      "key": "receipt_hash_valid",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "actual=c2607d96baba40638156fde38f7382f0579c8858da102e5a7d1ac141f3f2b7b7 report=c2607d96baba40638156fde38f7382f0579c8858da102e5a7d1ac141f3f2b7b7",
+      "key": "receipt_file_sha_matches_report",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "required minimal receipt keys",
+      "key": "receipt_has_required_minimal_fields",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "0.97",
+      "key": "receipt_echo_score_valid",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "bd7cdaade1c99170251f705d0aab99adedd425737ea794b64968875bfe7d9475",
+      "key": "receipt_manifest_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "receipt=f330bbc2479812404db7d5ceb2f6a80e12b58cc44c54ab8eb80c1947ccef2ad7 report=f330bbc2479812404db7d5ceb2f6a80e12b58cc44c54ab8eb80c1947ccef2ad7",
+      "key": "receipt_source_236c_hash_matches",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "receipt_boundary_identity_unchanged",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "receipt_boundary_rmc_memory_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "receipt_boundary_agent_memory_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "{'agent_memory_written': False, 'autonomous_tool_execution_performed': False, 'echoforge_creation_performed': False, 'full_chat_content_written': False, 'identity_vault_database_written': False, 'long_term_memory_written': False, 'private_memory_payloads_read': False, 'private_memory_written': False, 'protoforge2_execution_performed': False, 'rmc_memory_written': False, 'secret_values_read': False, 'secret_values_written': False, 'shared_memory_written': False}",
+      "key": "receipt_boundary_long_private_shared_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "{'agent_memory_written': False, 'autonomous_tool_execution_performed': False, 'echoforge_creation_performed': False, 'full_chat_content_written': False, 'identity_vault_database_written': False, 'long_term_memory_written': False, 'private_memory_payloads_read': False, 'private_memory_written': False, 'protoforge2_execution_performed': False, 'rmc_memory_written': False, 'secret_values_read': False, 'secret_values_written': False, 'shared_memory_written': False}",
+      "key": "receipt_boundary_secret_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "receipt_boundary_full_chat_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "receipt_boundary_autonomous_execution_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "patch236e_identity_vault_unchanged",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "patch236e_agent_memory_not_written",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "patch236e_shared_memory_not_written",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "{'agent_memory_written': False, 'autonomous_tool_execution_performed': False, 'echoforge_creation_performed': False, 'forge_owned_patch236e_report': True, 'full_chat_content_written': False, 'identity_vault_database_written': False, 'long_term_memory_written': False, 'private_memory_exposure_granted': False, 'private_memory_payloads_read': False, 'private_memory_written': False, 'protoforge2_execution_performed': False, 'rmc_test_receipt_written': True, 'rmc_write_type': 'test_receipt', 'secret_values_read': False, 'secret_values_written': False, 'shared_memory_written': False}",
+      "key": "patch236e_secret_data_not_written",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "patch236e_autonomous_execution_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "state=active_governed active=True",
+      "key": "current_neo_profile_still_active_governed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "profile=df922d109948a5e5f29d647422a22145467720577ed80ffe27da783f07cae537 receipt=df922d109948a5e5f29d647422a22145467720577ed80ffe27da783f07cae537",
+      "key": "current_neo_profile_hash_matches_receipt",
+      "ok": true
+    }
+  ],
+  "checks_passed": 38,
+  "checks_total": 38,
+  "generated_at_utc": "20260524_122603_UTC",
+  "identity_profile_state": {
+    "activation_state": "active_governed",
+    "agent_id": "neo.local",
+    "is_active": true,
+    "last_validated_at": "2026-05-24T11:56:38Z",
+    "profile_hash": "df922d109948a5e5f29d647422a22145467720577ed80ffe27da783f07cae537"
+  },
+  "memory_pollution_snapshot": {
+    "agent_memory": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/agent_memory"
+    },
+    "long_term_memory": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/long_term_memory"
+    },
+    "memories": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/memories"
+    },
+    "memory": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/memory"
+    },
+    "private_memory": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/private_memory"
+    },
+    "shared_memory_local": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/shared_memory"
+    },
+    "shared_memory_root": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared_memory"
+    },
+    "shared_root": {
+      "file_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared"
+    }
+  },
+  "name": "Controlled Neo RMC Test Receipt Verification",
+  "next_expected_step": "Patch 237 \u2014 triad governed identity status + boundary summary, after all three agents have verified controlled test_receipts.",
+  "ok": true,
+  "patch": "236F",
+  "rmc_test_receipt_file_sha256_actual": "c2607d96baba40638156fde38f7382f0579c8858da102e5a7d1ac141f3f2b7b7",
+  "rmc_test_receipt_file_sha256_reported": "c2607d96baba40638156fde38f7382f0579c8858da102e5a7d1ac141f3f2b7b7",
+  "rmc_test_receipt_hash_computed": "174adc1c00d0354dd954e1db000f482969d90bf238c5615be4bdce233c07104e",
+  "rmc_test_receipt_hash_reported": "174adc1c00d0354dd954e1db000f482969d90bf238c5615be4bdce233c07104e",
+  "rmc_test_receipt_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/receipts/neo_handshake_test_20260524_121937_UTC.json",
+  "source_patch236e_report": "/home/nic/forge/memory/aiweb_patch236e_rmc_controlled_neo_test_receipt_write_v1/latest_aiweb_patch236e_rmc_controlled_neo_test_receipt_write.json",
+  "source_patch236e_verdict": "RMC_TEST_RECEIPT_WRITTEN_GOVERNED_NEO",
+  "verdict": "RMC_TEST_RECEIPT_VERIFIED_GOVERNED_NEO",
+  "write_type": "test_receipt",
+  "writes_performed": {
+    "agent_memory_written": false,
+    "autonomous_tool_execution_performed": false,
+    "echoforge_creation_performed": false,
+    "forge_owned_patch236f_report": true,
+    "full_chat_content_written": false,
+    "identity_vault_database_written": false,
+    "long_term_memory_written": false,
+    "private_memory_written": false,
+    "protoforge2_execution_performed": false,
+    "rmc_memory_written": false,
+    "rmc_test_receipt_written": false,
+    "secret_values_read": false,
+    "secret_values_written": false,
+    "shared_memory_written": false
+  }
+}

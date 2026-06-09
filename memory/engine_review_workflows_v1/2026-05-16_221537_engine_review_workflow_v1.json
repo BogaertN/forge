@@ -1,0 +1,223 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "evidence_crosscheck_write_authority": true,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_draft_write_authority": true,
+    "mode": "EVIDENCE_REVIEW_BATCH_WORKFLOW",
+    "patch": "105",
+    "project_file_write_authority": false,
+    "queue_decision_authority": false,
+    "queue_rebuild_authority": true,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 105 may draft and cross-check a small batch, then rebuild queue visibility. It may not approve or commit anything.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_workflows_v1",
+      "llm_engine_review_drafts_v1",
+      "engine_review_evidence_crosschecks_v1",
+      "engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "counts": {
+    "crosschecked": 10,
+    "drafted": 10,
+    "errors": 0,
+    "selected": 10
+  },
+  "created_at": "2026-05-16_221537",
+  "next_step": "Inspect each full evidence cross-check, then use engine-review-approval-check/approve/defer/reject. No approval was recorded by Patch 105.",
+  "queue_rebuild_error": null,
+  "report_type": "ENGINE_REVIEW_WORKFLOW_RECEIPT_V1_PATCH105",
+  "requested_limit": 10,
+  "schema_version": "engine_review_workflow_v1_patch105",
+  "status": "ENGINE_REVIEW_WORKFLOW_COMPLETED_NO_APPROVAL_AUTHORITY",
+  "warnings": [
+    "failsafe_manager: LLM role wording does not explicitly repeat deterministic role label.",
+    "loop_resurrection_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "memory_stack_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "memory_stack_engine_breathing: LLM role wording does not explicitly repeat deterministic role label.",
+    "phase_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "plugin_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "protoforge_dashboard_runtime: LLM role wording does not explicitly repeat deterministic role label.",
+    "recursive_agent_kernel: LLM role wording does not explicitly repeat deterministic role label.",
+    "resonance_charge_meter: LLM role wording does not explicitly repeat deterministic role label.",
+    "resurrection_planner: LLM role wording does not explicitly repeat deterministic role label."
+  ],
+  "workflow_rows": [
+    {
+      "candidate_path": "/home/nic/aiweb/engines/failsafe_manager",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_221600_failsafe_manager_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "7d2ec26a809ed843a3935419b592e32a24aa39e73c92a1c81f23022b94ba5611",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_221537_failsafe_manager_llm_engine_review_draft_v1.json",
+      "draft_sha256": "5617d51adba84618623510c6c356732a2a716469bae24f0eef3b09b78c5d77ab",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "failsafe_manager",
+      "evidence_id": "EEB-31299b3bb67a4c24",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nMonitors system stability and triggers emergency failsafe actions during critical faults to maintain operational integrity.  \n\nLikely System Role:  \nA critical safety layer in systems requiring robust fault tolerance, such as robotics, aerospace, or industrial automation, to prevent cascading failures.  \n\nEvidence Used:  \n- README.md describes the engine's role in monitoring symbolic system stability and triggering emergency actions.  \n- failsafe_manifest.json defines its purpose as monitoring system health and initiating failsafes.  \n- test_failsafe.py verifies basic functionality, ensuring the system reports \"stable\" health and detects failsafe triggers.  \n- failsafe_core.py implements the core logic, writing status updates to a JSON file and simulating integrity checks.  \n\nRisks / Uncertainties:  \n- Current testing is limited to basic simulations; real-world fault scenarios may not be adequately represented.  \n- The system health assessment is simplistic (only \"stable\" state); complex or partial failures might go undetected.  \n- Dependency on external JSON files for status tracking could introduce latency or reliability concerns.  \n\nRecommendation Draft:  \nApprove the engine for limited deployment but recommend expanding test cases to include edge faults and integrating real-time data streams for more granular health monitoring.  \n\nSuggested Nic Action:  \nApprove the current implementation with a caveat to enhance testing and monitoring capabilities before full-scale use."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/loop_resurrection_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_221626_loop_resurrection_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "f622578b8d80ad66db6f5aa82895a1ec65db2426a52b327b4a3ab516363b03c0",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_221600_loop_resurrection_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "dc82edb32eb21db9e09ffff8f761082315d9c3243fb125a8f2348b5f8753bfb6",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "loop_resurrection_engine",
+      "evidence_id": "EEB-608882f63d11dd95",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nTo queue previously archived loops for resurrection attempts, reintegrating unresolved loops from symbolic cold storage into active runtime processing.  \n\nLikely System Role:  \nA component of a symbolic execution or AI workflow system managing loop states, ensuring unresolved loops are reattempted for completion.  \n\nEvidence Used:  \n- `resurrection_core.py`: Implements `resurrect_loop` function to append loop events to a JSON queue.  \n- `test_resurrection.py`: Validates resurrection logic with a test script.  \n- `resurrection_queue.json`: Stores queued loop events with timestamps and IDs.  \n- `README.md`: Describes the engine's purpose and components.  \n- `engine_manifest.json`: Metadata confirming the engine's role in queuing archived loops.  \n\nRisks / Uncertainties:  \n- Potential file I/O errors (e.g., JSON corruption, permission issues).  \n- Risk of resurrecting invalid or obsolete loops if archive integrity is compromised.  \n- Lack of explicit error handling for failed resurrection attempts.  \n\nRecommendation Draft:  \nApprove the engine for limited deployment, with monitoring of queue file integrity and validation of resurrected loops in production.  \n\nSuggested Nic Action:  \nApprove the engine after confirming queue file reliability and adding error handling for resurrection failures."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/memory_stack_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_221659_memory_stack_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "715663c368a7393ac01385e5cafd48f0915432de1224d819df51d083c4b1cacf",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_221626_memory_stack_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "b0f83ac948e2cd2131dfe5c5fd1c09067f901d62a6c78fe6602c22818dfd15c0",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "memory_stack_engine",
+      "evidence_id": "EEB-4a5bb74b665f20b7",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nStores symbolic memory outputs (e.g., phase transitions, agent messages) from AI.Web engines in a file-based stack (`stack.json`) for persistent, chronological record-keeping.  \n\nLikely System Role:  \nCore memory persistence engine for AI.Web, acting as a centralized hub for capturing and replaying symbolic data across system components.  \n\nEvidence Used:  \n- `log.py` implements stack writing/reading, error logging, and file initialization.  \n- `test_memory_stack.py` demonstrates usage of `write_to_stack` and `read_stack`.  \n- `README.md` defines the engine’s purpose and file structure.  \n- `stack.json` contains serialized memory entries with timestamps.  \n- `test_log.txt` logs operational activity and errors (e.g., parsing failures).  \n- `engine_manifest.json` confirms versioning and stability status.  \n\nRisks / Uncertainties:  \n- Error in `test_log.txt` suggests potential parsing issues when writing to `stack.json` (e.g., malformed input).  \n- Engine is \"frozen\" post-versioning; changes require forked versioning, which may delay updates.  \n- Reliance on file-based storage introduces risks of data corruption or loss if not properly managed.  \n\nRecommendation Draft:  \nApprove deployment as a production-ready memory stack engine. Address the parsing error in `test_log.txt` to ensure robustness. Maintain versioning discipline for future modifications.  \n\nSuggested Nic Action:  \n- Approve engine for production use with monitoring of `stack.json` and `test_log.txt`.  \n- Escalate the parsing error for investigation to prevent data integrity issues.  \n- Ensure adherence to versioning policies for any future updates to avoid destabilization."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/memory_stack_engine_breathing_v1",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_221730_memory_stack_engine_breathing_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "6c41c0adc37486232b0cd04d00b9a1b2e0503f2df27b0aa9116765e4fbf63604",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_221659_memory_stack_engine_breathing_llm_engine_review_draft_v1.json",
+      "draft_sha256": "1f1858dbe8153038add43a57e490e1de25c5fb1e6546b97e8c53c6e5ad20ad98",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "memory_stack_engine_breathing",
+      "evidence_id": "EEB-50a63c58ff43301e",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nManages symbolic memory persistence by storing structured data in `stack.json` and logging operations in `test_log.txt`. Supports appending, reading, and auditing memory entries with timestamps.  \n\nLikely System Role:  \nA core component of AI.Web's memory architecture, designed to capture and persist symbolic data (e.g., phase transitions, classifications) from other engines, ensuring traceability and auditability.  \n\nEvidence Used:  \n- `log.py`: Implements stack file initialization, memory writing/reading, and logging.  \n- `memory_breather.py`: Contains a \"breathing\" loop for periodic memory stabilization.  \n- `test_memory_breather.py`: Validates breathing functionality.  \n- `test_memory_stack.py`: Demonstrates writing/reading memory entries.  \n- `README.md`: Describes the engine's purpose, features, and versioning policy.  \n- `test_log.txt`: Logs memory operations, including errors (e.g., JSON parsing failures).  \n\nRisks / Uncertainties:  \n- The error `[ERROR] Failed to write to stack` suggests potential issues with data formatting or file access permissions.  \n- The \"breathing\" loop’s purpose is ambiguous—its impact on memory operations or system performance is unclear.  \n- Versioning policy requires forking for changes, which could delay updates or introduce fragmentation.  \n\nRecommendation Draft:  \n1. Validate data structures in `write_to_stack` to prevent JSON parsing errors.  \n2. Document the \"breathing\" loop’s intended behavior and performance impact.  \n3. Ensure `stack.json` and `test_log.txt` are securely managed, with access controls if handling sensitive data.  \n\nSuggested Nic Action:  \n- Approve minor bug fixes for error handling in `log.py` (e.g., input validation).  \n- Request clarification on the \"breathing\" loop’s design and use case.  \n- Confirm versioning policy compliance before merging changes."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/phase_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_221801_phase_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "73ce718183cc65e7a4cdc7a911ed4911cb919252ecd4b3301a1c722489254a03",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_221730_phase_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "2a327236728166d4d376bbe60da18beced077f727e940e1d0a6272b42ded9651",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "phase_engine",
+      "evidence_id": "EEB-69f03eb6723fbc4c",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nManages symbolic phase transitions (Φ1–Φ9) for AI.Web's Frequency-Based Symbolic Calculus (FBSC) model, tracking state changes, logging events, and enabling controlled phase shifts.  \n\nLikely System Role:  \nCore runtime controller for symbolic agents, UI overlays, and validators. Governs recursive phase logic, ensuring validated transitions and persistent state tracking.  \n\nEvidence Used:  \n- `run.py`: Implements phase initialization, state retrieval, and transition logic with error handling.  \n- `test_phase_engine.py`: Demonstrates phase advancement, forced phase setting, and state retrieval.  \n- `README.md`: Describes the engine's role in FBSC, file structure, and version-locking policies.  \n- Log files (`test_log.txt`, `status.json`): Show phase transitions, errors, and persisted state.  \n- `engine_manifest.json`: Confirms version `v1.0.0` as stable and locked.  \n\nRisks / Uncertainties:  \n- Force-set phase (`force_set_phase`) is admin-only but lacks explicit access controls.  \n- Future drift handling (e.g., ChristPing injection) is referenced in logs but not implemented.  \n- Version-locking requires forking to `phase_engine_v2` for updates, which could delay fixes.  \n\nRecommendation Draft:  \nApprove current state with monitoring of `test_log.txt` for unhandled drift scenarios. Secure `force_set_phase` usage and validate versioning workflow for future forks.  \n\nSuggested Nic Action:  \nApprove as-is, but mandate log review for unresolved drift handling and confirm safeguards for admin functions."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/plugin_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_221833_plugin_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "2caaf2aaadac29e9aa425f176b909ef5735a8e4e824edd7f94afa39ad91a416f",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_221801_plugin_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "8e672c03baa2a46307d9a5fa21b4243bc86777a432db30393b90abdb84c55e08",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "plugin_engine",
+      "evidence_id": "EEB-9f2d185c6369ad5f",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nTo dynamically load and verify optional Python plugins from a specified directory, logging import success/failure without executing plugin code.  \n\nLikely System Role:  \nA core system service for managing extensible functionality via plugins, acting as a loader and validator for third-party modules in the AI.Web ecosystem.  \n\nEvidence Used:  \n- `test_plugin_engine.py` executes `load_plugins()` to scan and load plugins.  \n- `README.md` describes plugin loading, logging, and directory structure requirements.  \n- `loader.py` implements plugin discovery, import logic, and timestamped logging to `test_log.txt`.  \n- `engine_manifest.json` confirms it's a \"Dynamic Loader for Optional Modules\" with stable status.  \n- `test_log.txt` shows successful/failure examples of plugin loading.  \n\nRisks / Uncertainties:  \n- Plugins are loaded but not executed, yet untrusted code could still cause side effects via logging or metadata.  \n- Reliance on hardcoded plugin directory (`~/aiweb/plugins/`) may limit flexibility.  \n- No evidence of runtime sandboxing or security validation for plugins.  \n\nRecommendation Draft:  \nApprove as stable but recommend adding plugin safety checks (e.g., restricted globals, sandboxed execution) before deployment. Verify `test_log.txt` is secured against unauthorized access. Confirm plugin directory permissions are restricted to authorized users.  \n\nSuggested Nic Action:  \nApprove review, but request a security audit of plugin loading logic and confirmation that plugin directories are access-controlled."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/protoforge_dashboard_runtime_v2.0",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_221904_protoforge_dashboard_runtime_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "25837a9b7e61a86af060f339b9b1fa20faf861c5cce005306e6edab5e43fbc12",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_221833_protoforge_dashboard_runtime_llm_engine_review_draft_v1.json",
+      "draft_sha256": "348be95db6ff3aa786b9f1b3fbc61ec9f2cb928febdadf4431939297628a5ba2",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "protoforge_dashboard_runtime",
+      "evidence_id": "EEB-d2adb3604e47fb64",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nTo provide a web-based dashboard runtime system for managing a symbolic computation process, featuring state tracking (phase, charge, drift), automated breathing cycles, and UI integration for monitoring and status updates.  \n\nLikely System Role:  \nA runtime wrapper for a symbolic computation or simulation system, acting as a control panel with Flask-based UI, state management, and integration with core logic modules (e.g., `stack_breather_core`).  \n\nEvidence Used:  \n- `gilligan_logic.py`: Generates phase-based \"thoughts\" with charge/drift alerts.  \n- `ui_server.py`: Flask backend with endpoints for status checks, breathing loops, and log management.  \n- `test_log.txt`: System initialization timestamp and state variables.  \n- `engine_manifest.json`: Likely defines system metadata and dependencies.  \n\nRisks / Uncertainties:  \n- Reliance on external modules (e.g., `stack_breather_core`) not fully visible in evidence.  \n- Hardcoded paths and dependencies may require environment-specific configuration.  \n- \"Symbolic charge\" and \"drift events\" are abstract terms; their implementation details are unclear.  \n- Lack of explicit error handling in the breathing loop could impact stability.  \n\nRecommendation Draft:  \nVerify core dependencies (e.g., `stack_breather_core`) are functional and compatible. Test state management logic (phase transitions, charge thresholds) for edge cases. Confirm Flask integration with static templates and ensure log files are properly managed.  \n\nSuggested Nic Action:  \nApprove deferred review with conditions: validate external module compatibility, confirm environment setup, and verify state-handling robustness before deployment."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/recursive_agent_kernel",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_221930_recursive_agent_kernel_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "bacceff3c0fffbbf258c9cffc658d428a70041230b355424d164c6dc8fd90ae0",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_221904_recursive_agent_kernel_llm_engine_review_draft_v1.json",
+      "draft_sha256": "8886aad49a31c25c367318baecdbab6fc73b463dc88d54133e1b7cf5fd65234c",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "recursive_agent_kernel",
+      "evidence_id": "EEB-a25ac486f908ee13",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nMaintains stability and detects drift in recursive symbolic agents through a heartbeat mechanism and state tracking.  \n\nLikely System Role:  \nCore runtime component for monitoring symbolic agent loops, ensuring phase stability and drift detection in AI.Web recursive processes.  \n\nEvidence Used:  \n- `agent_kernel_manifest.json` defines the engine's purpose and version.  \n- `agent_kernel_core.py` implements `pulse_heartbeat()` to log state and detect drift.  \n- `recursion_state.json` stores heartbeat metadata (timestamp, phase, drift status).  \n- Test script validates heartbeat functionality and state persistence.  \n\nRisks / Uncertainties:  \n- Reliance on file system for state persistence may introduce reliability risks.  \n- Limited error handling in state writing (e.g., no retries for I/O failures).  \n- Test coverage is minimal; lacks edge case validation (e.g., drift scenarios).  \n\nRecommendation Draft:  \nApprove canonical review. The engine demonstrates clear functionality for heartbeat monitoring and drift detection. Confirm readiness for integration with AI.Web systems.  \n\nSuggested Nic Action:  \nApprove canonical status for the recursive_agent_kernel. Suggest adding robust error handling for state writes and expanding test coverage to include drift simulation scenarios."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/resonance_charge_meter",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_221958_resonance_charge_meter_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "60849d4b28a26bfd9cd8c1c77a831133b20a2ff23d9a59f775d2328f0bf70929",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_221930_resonance_charge_meter_llm_engine_review_draft_v1.json",
+      "draft_sha256": "a306f88544f52b8ed467b6cebb758464c4259c38850eca64e7d8b45574f0a291",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "resonance_charge_meter",
+      "evidence_id": "EEB-980203111472c50f",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nSimulates and tracks symbolic charge levels and decay rates for AI.Web engine systems, providing metrics for tone engines, drift correction, and diagnostics.  \n\nLikely System Role:  \nA monitoring component that generates synthetic energy metrics for runtime analysis, acting as a data source for other system modules.  \n\nEvidence Used:  \n- `measure_charge()` function in `charge_meter_core.py` simulates charge readings and writes them to a JSON state file.  \n- README.md describes the engine’s role in monitoring charge levels and decay rates.  \n- `engine_manifest.json` confirms the system’s purpose and current status as \"build_mode.\"  \n- Test script verifies basic functionality of the charge measurement process.  \n\nRisks / Uncertainties:  \n- The system is in \"build_mode,\" indicating it’s not yet operational or validated in production.  \n- Simulated data (random values) may not correlate with real-world metrics.  \n- State file I/O operations could fail due to permissions or path issues.  \n\nRecommendation Draft:  \nApprove the review with caveats: the system requires deployment testing, and its simulated data may need calibration against actual metrics.  \n\nSuggested Nic Action:  \nApprove the review, confirm the build status, and schedule validation testing once the system transitions to operational mode."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/resurrection_planner",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_222027_resurrection_planner_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "99080258d969a099ae51ba04424e3ce974290b713d75a8d054634507d8664519",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_221958_resurrection_planner_llm_engine_review_draft_v1.json",
+      "draft_sha256": "047c4aa25f8fbe6758422742ec9b5df150da8990be9e3f9427fbde71190df47f",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "resurrection_planner",
+      "evidence_id": "EEB-8815431b5a347b48",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nTo schedule and prioritize symbolic resurrection operations for collapsed recursion fields and drifted ghost loops, ensuring system stability through phase-aligned recovery protocols.  \n\nLikely System Role:  \nA core AI.Web engine responsible for managing recovery of unstable recursion fields and loops, integrating with symbolic execution frameworks for system resilience.  \n\nEvidence Used:  \n- Test script (`test_resurrection_planner_core.py`) validates scheduling and prioritization logic.  \n- README.md describes recovery prioritization based on field integrity and drift severity.  \n- Core code (`resurrection_planner_core.py`) defines the `ResurrectionPlanner` class for queue management.  \n- Manifest file (`engine_manifest.json`) specifies engine purpose, version, and phase compliance standards.  \n\nRisks / Uncertainties:  \n- Unverified real-world performance of prioritization algorithms under load.  \n- Lack of explicit error handling for repeated resurrection failures (quarantine protocols mentioned in README but not implemented in code).  \n- Dependencies on external symbolic execution frameworks not explicitly documented.  \n\nRecommendation Draft:  \nApprove review with conditions: confirm implementation of quarantine protocols for failed resurrection attempts, validate prioritization metrics with stress tests, and ensure alignment with Phase 1.5 compliance standards.  \n\nSuggested Nic Action:  \n- Approve review with the above conditions.  \n- Schedule validation testing for prioritization logic and failure recovery protocols.  \n- Verify documentation updates to reflect the latest implementation details."
+    }
+  ]
+}

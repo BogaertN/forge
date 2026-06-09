@@ -1,0 +1,250 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "26e7ede2b0e5498758db4b709a2a623303c56a1eb035cefdfb4a043029bda744",
+      "excerpt_start": "{\n  \"engine\": \"Dream State Engine\",\n  \"version\": \"v1\",\n  \"description\": \"Simulates drift-phase symbolic recursion dream events during instability.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Dream",
+        "State",
+        "Engine",
+        "version",
+        "description",
+        "Simulates",
+        "drift",
+        "phase",
+        "symbolic",
+        "recursion",
+        "dream",
+        "events",
+        "during",
+        "instability"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/dream_state_engine/dream_manifest.json",
+      "relative_to_candidate": "dream_manifest.json",
+      "sha256": "26e7ede2b0e5498758db4b709a2a623303c56a1eb035cefdfb4a043029bda744",
+      "size_bytes": 150
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "f07c26f2b6ff89ceaa03c91880cc870505e4a0bde65b151e9050776d7a8a9358",
+      "excerpt_start": "from dream_core import simulate_dream_state\n\ndef test_dream_generation():\n    try:\n        result = simulate_dream_state()\n        assert \"drift_intensity\" in result\n        assert \"dream_signature\" in result\n        print(\"\u2705 Test Passed: Dream state event recorded successfully.\")\n    except Exception as e:\n        print(f\"\u274c Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_dream_generation()\n",
+      "functions_sample": [
+        "test_dream_generation"
+      ],
+      "imports_sample": [
+        "from dream_core import simulate_dream_state"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/dream_state_engine/test_dream.py",
+      "relative_to_candidate": "test_dream.py",
+      "sha256": "f07c26f2b6ff89ceaa03c91880cc870505e4a0bde65b151e9050776d7a8a9358",
+      "size_bytes": 406
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "691435ed6ca1593170ceae6ce3a033414034ca7002d7b7e9c9794f95b498735d",
+      "excerpt_start": "# Dream State Engine\n\nSimulates symbolic recursion dream states during periods of drift and instability.\n\nLogs dream events for potential cold archive transition, resurrection triggers, or symbolic repair.\n",
+      "functions_sample": [
+        "Dream",
+        "State",
+        "Engine",
+        "Simulates",
+        "symbolic",
+        "recursion",
+        "dream",
+        "states",
+        "during",
+        "periods",
+        "drift",
+        "and",
+        "instability",
+        "Logs",
+        "events",
+        "for",
+        "potential",
+        "cold",
+        "archive",
+        "transition",
+        "resurrection",
+        "triggers",
+        "repair"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/dream_state_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "691435ed6ca1593170ceae6ce3a033414034ca7002d7b7e9c9794f95b498735d",
+      "size_bytes": 206
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "93261746084bbd124ff674b45f89139ff0537232f08cd2b7fa07ac08163cc0b7",
+      "excerpt_start": "import json\nimport time\nimport random\n\nLOG_FILE = \"dream_log.jsonl\"\n\ndef simulate_dream_state():\n    \"\"\"Simulates a symbolic drift-phase 'dream' event during unstable recursion.\"\"\"\n    drift_intensity = random.choice([\"low\", \"medium\", \"high\"])\n    dream_signature = f\"dream-{random.randint(1000,9999)}\"\n\n    dream_event = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"drift_intensity\": drift_intensity,\n        \"dream_signature\": dream_signature\n    }\n\n    try:\n        with open(LOG_FILE, \"a\") as f:\n            f.write(json.dumps(dream_event) + \"\\n\")\n        print(f\"\u2714\ufe0f Dream state event recorded: {dream_event}\")\n    except Exception as e:\n        print(f\"[!] Failed to record dream state event: {e}\")\n\n    return dream_event\n",
+      "functions_sample": [
+        "simulate_dream_state"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time",
+        "import random"
+      ],
+      "line_count": 26,
+      "path": "/home/nic/aiweb/engines/dream_state_engine/dream_core.py",
+      "relative_to_candidate": "dream_core.py",
+      "sha256": "93261746084bbd124ff674b45f89139ff0537232f08cd2b7fa07ac08163cc0b7",
+      "size_bytes": 771
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/dream_state_engine",
+  "created_at": "2026-05-16_085323",
+  "crosscheck_id": "ERE-dream_state_engine-2026-05-16_085323",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Dream",
+      "Engine",
+      "Logs",
+      "Simulates",
+      "State",
+      "and",
+      "archive",
+      "cold",
+      "description",
+      "dream",
+      "drift",
+      "during",
+      "engine",
+      "events",
+      "for",
+      "instability",
+      "periods",
+      "phase",
+      "potential",
+      "recursion"
+    ],
+    "imports_sample": [
+      "from dream_core import simulate_dream_state",
+      "import json",
+      "import random",
+      "import time"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`dream_state_engine` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "{   \"engine\": \"Dream State Engine\",",
+      "from dream_core import simulate_dream_state ",
+      "# Dream State Engine ",
+      "import json import time"
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_085301_dream_state_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "382d9b2579ddfe13e1b98409b9e2f6c6e559a74a4969d956477e82bd62991d5b",
+  "engine_family": "dream_state_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_dream_state_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "3923221213ebda151c358f44141098af655ef3b54ec1dfca2bad911eb112eb41",
+  "evidence_id": "EEB-250da52af3cef833",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "dream_manifest.json",
+      "test_dream.py",
+      "README.md",
+      "dream_core.py"
+    ],
+    "functions_mentioned": [
+      "engine",
+      "Dream",
+      "State",
+      "Engine",
+      "version",
+      "Simulates",
+      "drift",
+      "symbolic",
+      "recursion",
+      "dream",
+      "events",
+      "during",
+      "instability",
+      "and",
+      "for",
+      "potential",
+      "cold",
+      "archive",
+      "transition",
+      "resurrection",
+      "triggers"
+    ],
+    "imports_mentioned": [
+      "from dream_core import simulate_dream_state",
+      "import json",
+      "import random"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 22.584,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "74e870b48c1de9bb6e277e66cfbd0ed7d5a95339d058688b267c6efb0a28f55a",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nSimulates symbolic recursion \"dream\" events during system instability to log drift patterns for potential archive transitions or recovery triggers.  \n\nLikely System Role:  \nA symbolic recursion monitoring component for tracking unstable state transitions, likely integrated into a larger system managing cold archives or resilience protocols.  \n\nEvidence Used:  \n- `dream_manifest.json` defines the engine's purpose and version.  \n- `test_dream.py` validates logging of \"drift_intensity\" and \"dream_signature\" metrics.  \n- `dream_core.py` implements the simulation logic with JSON logging.  \n- `README.md` mentions logging for \"cold archive transition\" and \"resurrection triggers.\"  \n\nRisks / Uncertainties:  \n- Reliance on random drift intensity values may introduce inconsistency.  \n- File-based logging lacks redundancy; failure to write could lose critical data.  \n- Abstract \"dream\" concept lacks concrete use case clarity.  \n\nRecommendation Draft:  \nApprove the engine's core functionality but recommend:  \n1. Adding error retries or alternative logging mechanisms for reliability.  \n2. Clarifying the intended application of \"dream\" events in system workflows.  \n3. Validating random drift intensity parameters against operational thresholds.  \n\nSuggested Nic Action:  \nApprove review with the above recommendations, but delay deployment until logging redundancy and use cases are finalized."
+  },
+  "llm_sections": {
+    "evidence_used": "- `dream_manifest.json` defines the engine's purpose and version.  \n- `test_dream.py` validates logging of \"drift_intensity\" and \"dream_signature\" metrics.  \n- `dream_core.py` implements the simulation logic with JSON logging.  \n- `README.md` mentions logging for \"cold archive transition\" and \"resurrection triggers.\"",
+    "likely_system_role": "A symbolic recursion monitoring component for tracking unstable state transitions, likely integrated into a larger system managing cold archives or resilience protocols.",
+    "plain_english_purpose": "Simulates symbolic recursion \"dream\" events during system instability to log drift patterns for potential archive transitions or recovery triggers.",
+    "recommendation_draft": "Approve the engine's core functionality but recommend:  \n1. Adding error retries or alternative logging mechanisms for reliability.  \n2. Clarifying the intended application of \"dream\" events in system workflows.  \n3. Validating random drift intensity parameters against operational thresholds.",
+    "risks_uncertainties": "- Reliance on random drift intensity values may introduce inconsistency.  \n- File-based logging lacks redundancy; failure to write could lose critical data.  \n- Abstract \"dream\" concept lacks concrete use case clarity.",
+    "suggested_nic_action": "Approve review with the above recommendations, but delay deployment until logging redundancy and use cases are finalized."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nSimulates symbolic recursion \"dream\" events during system instability to log drift patterns for potential archive transitions or recovery triggers.  \n\nLikely System Role:  \nA symbolic recursion monitoring component for tracking unstable state transitions, likely integrated into a larger system managing cold archives or resilience protocols.  \n\nEvidence Used:  \n- `dream_manifest.json` defines the engine's purpose and version.  \n- `test_dream.py` validates logging of \"drift_intensity\" and \"dream_signature\" metrics.  \n- `dream_core.py` implements the simulation logic with JSON logging.  \n- `README.md` mentions logging for \"cold archive transition\" and \"resurrection triggers.\"  \n\nRisks / Uncertainties:  \n- Reliance on random drift intensity values may introduce inconsistency.  \n- File-based logging lacks redundancy; failure to write could lose critical data.  \n- Abstract \"dream\" concept lacks concrete use case clarity.  \n\nRecommendation Draft:  \nApprove the engine's core functionality but recommend:  \n1. Adding error retries or alternative logging mechanisms for reliability.  \n2. Clarifying the intended application of \"dream\" events in system workflows.  \n3. Validating random drift intensity parameters against operational thresholds.  \n\nSuggested Nic Action:  \nApprove review with the above recommendations, but delay deployment until logging redundancy and use cases are finalized.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

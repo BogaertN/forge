@@ -1,0 +1,232 @@
+{
+  "boundaries": {
+    "agent_home_layer": "Identity Vault",
+    "authority_layer": "Forge",
+    "creation_simulation_request_layer": "EchoForge",
+    "execution_runtime_substrate": "ProtoForge2",
+    "memory_layer": "RMC"
+  },
+  "created_at_utc": "2026-05-23T21:26:36Z",
+  "created_by_patch": "Patch 226C.1",
+  "current": {
+    "patch": "Patch 226C",
+    "stage_id": "S19AT",
+    "status": "ACTIVE",
+    "title": "Identity Vault Profile Seed Preview / Template Repair Gate"
+  },
+  "entries": [
+    {
+      "id": "S19AC",
+      "status": "DONE",
+      "title": "Runtime Candidate Sandbox Stage Create/Verify / Forge-Owned Copy Only"
+    },
+    {
+      "id": "S19AD",
+      "status": "DONE",
+      "title": "Runtime Candidate Sandbox Copy Integrity Review / No-Write Readback Receipt"
+    },
+    {
+      "id": "S19AE",
+      "status": "DONE",
+      "title": "RMC Integration Freeze / No-Move Snapshot"
+    },
+    {
+      "id": "S19AF",
+      "status": "DONE",
+      "title": "RMC Missing Module Install / Phase Parser, Drift Arbitrator, Echo Gate"
+    },
+    {
+      "id": "S19AG",
+      "status": "DONE",
+      "title": "Forge RMC Read-Only Wrapper"
+    },
+    {
+      "id": "S19AH",
+      "status": "DONE",
+      "title": "Forge RMC Runtime Preview Check"
+    },
+    {
+      "id": "S19AI",
+      "status": "DONE",
+      "title": "Identity Vault Boundary Scan / Hygiene"
+    },
+    {
+      "id": "S19AJ",
+      "status": "DONE",
+      "title": "Identity Vault Readiness Reconcile"
+    },
+    {
+      "id": "S19AK",
+      "status": "DONE",
+      "title": "Identity Vault Read-Only Adapter"
+    },
+    {
+      "id": "S19AL",
+      "status": "DONE",
+      "title": "Identity Vault Drift Auto-Confirm Safety"
+    },
+    {
+      "id": "S19AM",
+      "status": "DONE",
+      "title": "Identity Vault DB Canonical Reconcile"
+    },
+    {
+      "id": "S19AN",
+      "status": "DONE",
+      "title": "AI.Web Service Contracts Apply"
+    },
+    {
+      "id": "S19AO",
+      "status": "DONE",
+      "title": "AI.Web Service Contracts Verify"
+    },
+    {
+      "id": "S19AP",
+      "status": "DONE",
+      "title": "Forge AI.Web Read-Only Connector Commands"
+    },
+    {
+      "id": "S19AQ",
+      "status": "DONE",
+      "title": "Identity Vault Operational Schema Alignment"
+    },
+    {
+      "id": "S19AR",
+      "status": "DONE",
+      "title": "Identity Vault Schema Migration Apply"
+    },
+    {
+      "id": "S19AS",
+      "status": "DONE",
+      "title": "Legacy Profile Migration Preview / Preserve Legacy user789"
+    },
+    {
+      "id": "S19AT",
+      "status": "ACTIVE",
+      "title": "Identity Vault Profile Seed Preview / Template Repair Gate"
+    },
+    {
+      "id": "S19AU",
+      "status": "NEXT",
+      "title": "Identity Vault Template Repair Preview"
+    },
+    {
+      "id": "S19AV",
+      "status": "FUTURE",
+      "title": "Apply Repaired Identity Vault Templates"
+    },
+    {
+      "id": "S19AW",
+      "status": "FUTURE",
+      "title": "Verify Repaired Identity Vault Templates"
+    },
+    {
+      "id": "S19AX",
+      "status": "FUTURE",
+      "title": "Write Inactive Draft Identity Vault Profiles"
+    },
+    {
+      "id": "S19AY",
+      "status": "FUTURE",
+      "title": "Verify Inactive Draft Identity Vault Profiles"
+    },
+    {
+      "id": "S19AZ",
+      "status": "FUTURE",
+      "title": "Upgrade Full Profile Read-Only Adapter"
+    },
+    {
+      "id": "S19BA",
+      "status": "FUTURE",
+      "title": "RMC Namespace Scaffold Preview"
+    },
+    {
+      "id": "S19BB",
+      "status": "FUTURE",
+      "title": "RMC Namespace Scaffold Apply / Empty Namespaces Only"
+    },
+    {
+      "id": "S19BC",
+      "status": "FUTURE",
+      "title": "Bootstrap Handshake Dry-Run v2 / Inactive Profile Respected"
+    },
+    {
+      "id": "S19BD",
+      "status": "FUTURE",
+      "title": "Agent Activation Preflight Command"
+    },
+    {
+      "id": "S19BE",
+      "status": "FUTURE",
+      "title": "Activate Gilligan as Governed Profile"
+    },
+    {
+      "id": "S19BF",
+      "status": "FUTURE",
+      "title": "Gilligan Governed Handshake"
+    },
+    {
+      "id": "S19BG",
+      "status": "FUTURE",
+      "title": "RMC Test Receipt Write"
+    },
+    {
+      "id": "S19BH",
+      "status": "FUTURE",
+      "title": "Athena Activation and Governed Handshake"
+    },
+    {
+      "id": "S19BI",
+      "status": "FUTURE",
+      "title": "Neo Activation and Governed Handshake"
+    },
+    {
+      "id": "S19BJ",
+      "status": "FUTURE",
+      "title": "ProtoForge2 Discovery Scan"
+    },
+    {
+      "id": "S19BK",
+      "status": "FUTURE",
+      "title": "ProtoForge2 Read-Only Connector"
+    },
+    {
+      "id": "S19BL",
+      "status": "FUTURE",
+      "title": "ProtoForge2 Controlled Simulation Handshake"
+    },
+    {
+      "id": "S19BM",
+      "status": "FUTURE",
+      "title": "EchoForge Discovery Scan"
+    },
+    {
+      "id": "S19BN",
+      "status": "FUTURE",
+      "title": "EchoForge Read-Only Connector"
+    },
+    {
+      "id": "S19BO",
+      "status": "FUTURE",
+      "title": "EchoForge Build-Intention Preview"
+    },
+    {
+      "id": "S19BP",
+      "status": "FUTURE",
+      "title": "Full EchoForge \u2192 Forge \u2192 ProtoForge2 \u2192 RMC Approval Loop"
+    }
+  ],
+  "next_patch": {
+    "patch": "Patch 226D",
+    "stage_id": "S19AU",
+    "title": "Identity Vault Template Repair Preview / No-Write JSON Repair Review"
+  },
+  "purpose": "Canonical AI.Web bootstrap roadmap overlay after RMC, Identity Vault, service contracts, and read-only connector work advanced beyond stale Patch 147/S19AC dashboard state.",
+  "rules": [
+    "Connect by service contracts, not tangled imports.",
+    "No live agent activation before inactive draft profiles and activation preflight pass.",
+    "No RMC memory writes before governed handshake and receipt gate pass.",
+    "No EchoForge live build without Forge patch proposal, ProtoForge2 simulation, and human approval."
+  ],
+  "schema": "aiweb.dashboard_roadmap.canonical.v1"
+}

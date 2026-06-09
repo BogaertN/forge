@@ -1,0 +1,314 @@
+{
+  "activation_command_executed": false,
+  "activation_command_installed": false,
+  "activation_gate": {
+    "activation_state": "",
+    "inactive_draft_required": true,
+    "is_active": false,
+    "live_activation_allowed_now": false,
+    "manual_activation_allowed_by_preflight_only_if_ready": false
+  },
+  "agent_id": "",
+  "blockers": [
+    {
+      "blocker": "AGENT_ID_REQUIRED",
+      "detail": "An explicit agent_id argument is required; there is no default activation target.",
+      "key": "agent_id_supplied",
+      "ok": false
+    },
+    {
+      "blocker": "AGENT_ID_NOT_IN_PATCH231_TARGETS",
+      "detail": "Allowed targets: gilligan.local, athena.local, neo.local",
+      "key": "agent_id_allowed",
+      "ok": false
+    },
+    {
+      "blocker": "PROFILE_NOT_FOUND",
+      "detail": "agent_id_required",
+      "key": "profile_exists",
+      "ok": false
+    },
+    {
+      "blocker": "PROFILE_DEEP_READ_FAILED",
+      "detail": "agent_id_required",
+      "key": "deep_profile_read_ok",
+      "ok": false
+    },
+    {
+      "blocker": "PROFILE_HASH_INVALID_OR_MISSING",
+      "detail": "None",
+      "key": "profile_hash_valid",
+      "ok": false
+    },
+    {
+      "blocker": "ACTIVATION_STATE_NOT_INACTIVE_DRAFT",
+      "detail": "activation_state=''",
+      "key": "activation_state_inactive_draft",
+      "ok": false
+    },
+    {
+      "blocker": "RMC_NAMESPACE_CHILDREN_MISSING",
+      "detail": "[{'name': 'manifests', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/manifests', 'exists': False, 'is_dir': False, 'file_count': None}, {'name': 'receipts', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/receipts', 'exists': False, 'is_dir': False, 'file_count': None}, {'name': 'echo', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/echo', 'exists': False, 'is_dir': False, 'file_count': None}, {'name': 'private_context', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/private_context', 'exists': False, 'is_dir': False, 'file_count': None}, {'name': 'phase_records', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/phase_records', 'exists': False, 'is_dir': False, 'file_count': None}]",
+      "key": "rmc_namespace_children_exist",
+      "ok": false
+    },
+    {
+      "blocker": "AGENT_PERMISSIONS_MISSING",
+      "detail": "permissions_count=None",
+      "key": "permissions_present",
+      "ok": false
+    },
+    {
+      "blocker": "AGENT_FORBIDDEN_ACTIONS_MISSING",
+      "detail": "forbidden_actions_count=None",
+      "key": "forbidden_actions_present",
+      "ok": false
+    },
+    {
+      "blocker": "MISSING_REQUIRED_PROFILE_FIELDS",
+      "detail": "agent_id, canonical_name, role, activation_state, is_active_raw, rmc_namespace, profile_hash",
+      "key": "no_missing_required_fields",
+      "ok": false
+    },
+    {
+      "blocker": "ECHO_VALIDATOR_PREFLIGHT_FAILED",
+      "detail": "ECHO_PREFLIGHT_SKIPPED_AGENT_ID_REQUIRED",
+      "key": "echo_validator_preview_passed",
+      "ok": false
+    }
+  ],
+  "checks": [
+    {
+      "blocker": "AGENT_ID_REQUIRED",
+      "detail": "An explicit agent_id argument is required; there is no default activation target.",
+      "key": "agent_id_supplied",
+      "ok": false
+    },
+    {
+      "blocker": "AGENT_ID_NOT_IN_PATCH231_TARGETS",
+      "detail": "Allowed targets: gilligan.local, athena.local, neo.local",
+      "key": "agent_id_allowed",
+      "ok": false
+    },
+    {
+      "blocker": null,
+      "detail": "{'path': '/home/nic/forge/memory/aiweb_patch231_identity_activation_approval_plan_v1/latest_aiweb_patch231_identity_activation_approval_plan.json', 'exists': True, 'ok': True, 'verdict': 'IDENTITY_ACTIVATION_APPROVAL_PLAN_WRITTEN', 'expected_verdict': 'IDENTITY_ACTIVATION_APPROVAL_PLAN_WRITTEN', 'verdict_matches': True}",
+      "key": "patch231_plan_exists",
+      "ok": true
+    },
+    {
+      "blocker": "PROFILE_NOT_FOUND",
+      "detail": "agent_id_required",
+      "key": "profile_exists",
+      "ok": false
+    },
+    {
+      "blocker": "PROFILE_DEEP_READ_FAILED",
+      "detail": "agent_id_required",
+      "key": "deep_profile_read_ok",
+      "ok": false
+    },
+    {
+      "blocker": "PROFILE_HASH_INVALID_OR_MISSING",
+      "detail": "None",
+      "key": "profile_hash_valid",
+      "ok": false
+    },
+    {
+      "blocker": "ACTIVATION_STATE_NOT_INACTIVE_DRAFT",
+      "detail": "activation_state=''",
+      "key": "activation_state_inactive_draft",
+      "ok": false
+    },
+    {
+      "blocker": null,
+      "detail": "is_active=False",
+      "key": "is_active_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "{'ok': True, 'source': 'patch229b_verify', 'report_path': '/home/nic/forge/memory/rmc_patch229b_namespace_scaffold_verify_v1/latest_rmc_patch229b_namespace_scaffold_verify.json', 'allowed_root': '/home/nic/aiweb/runtime_wrappers/ancestral_memory', 'allowed_root_exists': True, 'prior_scaffold_verified': True, 'prior_verdict': 'VERIFIED_NAMESPACE_SCAFFOLD_DIRECTORIES_ONLY'}",
+      "key": "rmc_scaffold_verified",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents",
+      "key": "rmc_namespace_exists",
+      "ok": true
+    },
+    {
+      "blocker": "RMC_NAMESPACE_CHILDREN_MISSING",
+      "detail": "[{'name': 'manifests', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/manifests', 'exists': False, 'is_dir': False, 'file_count': None}, {'name': 'receipts', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/receipts', 'exists': False, 'is_dir': False, 'file_count': None}, {'name': 'echo', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/echo', 'exists': False, 'is_dir': False, 'file_count': None}, {'name': 'private_context', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/private_context', 'exists': False, 'is_dir': False, 'file_count': None}, {'name': 'phase_records', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/phase_records', 'exists': False, 'is_dir': False, 'file_count': None}]",
+      "key": "rmc_namespace_children_exist",
+      "ok": false
+    },
+    {
+      "blocker": null,
+      "detail": "namespace=/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents allowed=/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents",
+      "key": "rmc_namespace_under_allowed_root",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "{'rmc': {'path': '/home/nic/aiweb/service_contracts/rmc.contract.json', 'exists': True, 'json_ok': True, 'role': 'Shared and agent-scoped recursive memory/meaning layer. RMC parses phase state, checks drift, compiles manifests, renders previews, and validates echo under Forge governance.', 'status': 'DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR', 'has_boundary_language': True, 'error': None}, 'identity_vault': {'path': '/home/nic/aiweb/service_contracts/identity_vault.contract.json', 'exists': True, 'json_ok': True, 'role': 'Agent identity, permissions, profile metadata, and RMC namespace pointers. Identity Vault is not an agent runtime and not the shared memory store.', 'status': 'DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR', 'has_boundary_language': True, 'error': None}}",
+      "key": "service_contracts_pass",
+      "ok": true
+    },
+    {
+      "blocker": "AGENT_PERMISSIONS_MISSING",
+      "detail": "permissions_count=None",
+      "key": "permissions_present",
+      "ok": false
+    },
+    {
+      "blocker": "AGENT_FORBIDDEN_ACTIONS_MISSING",
+      "detail": "forbidden_actions_count=None",
+      "key": "forbidden_actions_present",
+      "ok": false
+    },
+    {
+      "blocker": "MISSING_REQUIRED_PROFILE_FIELDS",
+      "detail": "agent_id, canonical_name, role, activation_state, is_active_raw, rmc_namespace, profile_hash",
+      "key": "no_missing_required_fields",
+      "ok": false
+    },
+    {
+      "blocker": "ECHO_VALIDATOR_PREFLIGHT_FAILED",
+      "detail": "ECHO_PREFLIGHT_SKIPPED_AGENT_ID_REQUIRED",
+      "key": "echo_validator_preview_passed",
+      "ok": false
+    }
+  ],
+  "checks_passed": 6,
+  "checks_total": 17,
+  "echo_validation_preview": {
+    "ok": false,
+    "verdict": "ECHO_PREFLIGHT_SKIPPED_AGENT_ID_REQUIRED"
+  },
+  "generated_at_utc": "20260524_004108_UTC",
+  "identity_profile_read": {
+    "error": "agent_id_required",
+    "found": false,
+    "ok": false
+  },
+  "important_note": "READY_FOR_MANUAL_ACTIVATION is not activation. It only means a future manual activation command may be considered.",
+  "name": "Identity Activation Preflight",
+  "next_expected_step": "Patch 231B \u2014 run and verify activation preflight for gilligan.local, athena.local, and neo.local.",
+  "ok": false,
+  "patch": "231A",
+  "plan_prerequisite": {
+    "exists": true,
+    "expected_verdict": "IDENTITY_ACTIVATION_APPROVAL_PLAN_WRITTEN",
+    "ok": true,
+    "path": "/home/nic/forge/memory/aiweb_patch231_identity_activation_approval_plan_v1/latest_aiweb_patch231_identity_activation_approval_plan.json",
+    "verdict": "IDENTITY_ACTIVATION_APPROVAL_PLAN_WRITTEN",
+    "verdict_matches": true
+  },
+  "preflight_only": true,
+  "profile_guard_summary": {
+    "error": "agent_id_required",
+    "found": false,
+    "ok": false
+  },
+  "ready_for_manual_activation": false,
+  "rmc_namespace": {
+    "allowed_root": "/home/nic/aiweb/runtime_wrappers/ancestral_memory",
+    "identity_vault_pointer": "",
+    "live_memory_write_allowed": false,
+    "resolved_absolute_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents",
+    "status": {
+      "all_expected_children_exist": false,
+      "children": [
+        {
+          "exists": false,
+          "file_count": null,
+          "is_dir": false,
+          "name": "manifests",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/manifests"
+        },
+        {
+          "exists": false,
+          "file_count": null,
+          "is_dir": false,
+          "name": "receipts",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/receipts"
+        },
+        {
+          "exists": false,
+          "file_count": null,
+          "is_dir": false,
+          "name": "echo",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/echo"
+        },
+        {
+          "exists": false,
+          "file_count": null,
+          "is_dir": false,
+          "name": "private_context",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/private_context"
+        },
+        {
+          "exists": false,
+          "file_count": null,
+          "is_dir": false,
+          "name": "phase_records",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/phase_records"
+        }
+      ],
+      "exists": true,
+      "files_or_records_written_by_this_patch": false,
+      "is_dir": true,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents"
+    }
+  },
+  "service_contracts": {
+    "identity_contract_path": "/home/nic/aiweb/service_contracts/identity_vault.contract.json",
+    "optional_contracts": {
+      "echo_validator": {
+        "error": "missing",
+        "exists": false,
+        "has_boundary_language": false,
+        "json_ok": false,
+        "path": "/home/nic/aiweb/service_contracts/echo_validator.contract.json",
+        "role": null,
+        "status": null
+      }
+    },
+    "required_contracts": {
+      "identity_vault": {
+        "error": null,
+        "exists": true,
+        "has_boundary_language": true,
+        "json_ok": true,
+        "path": "/home/nic/aiweb/service_contracts/identity_vault.contract.json",
+        "role": "Agent identity, permissions, profile metadata, and RMC namespace pointers. Identity Vault is not an agent runtime and not the shared memory store.",
+        "status": "DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR"
+      },
+      "rmc": {
+        "error": null,
+        "exists": true,
+        "has_boundary_language": true,
+        "json_ok": true,
+        "path": "/home/nic/aiweb/service_contracts/rmc.contract.json",
+        "role": "Shared and agent-scoped recursive memory/meaning layer. RMC parses phase state, checks drift, compiles manifests, renders previews, and validates echo under Forge governance.",
+        "status": "DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR"
+      }
+    },
+    "required_contracts_pass": true,
+    "rmc_contract_path": "/home/nic/aiweb/service_contracts/rmc.contract.json",
+    "root": "/home/nic/aiweb/service_contracts",
+    "root_exists": true
+  },
+  "verdict": "BLOCKED_ACTIVATION_PREFLIGHT_AGENT_ID_REQUIRED",
+  "writes_performed": {
+    "agent_identity_activation_performed": false,
+    "echoforge_creation_performed": false,
+    "env_secret_values_read": false,
+    "forge_owned_report": true,
+    "identity_vault_database_written": false,
+    "protoforge2_execution_performed": false,
+    "rmc_memory_written": false
+  }
+}

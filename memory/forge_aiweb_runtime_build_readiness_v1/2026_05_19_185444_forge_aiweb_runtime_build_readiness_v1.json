@@ -1,0 +1,148 @@
+{
+  "active_patch": "Patch 155 \u2014 AI.Web Runtime Build Readiness Map",
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "live_restore_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "roadmap_append_only": true,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-19T18:54:44",
+  "current_phase": "S19A \u2014 AI.Web Runtime Build Readiness Map",
+  "domain_rows": [
+    {
+      "blocks_live_build": false,
+      "blocks_runtime_planning": false,
+      "domain": "Forge command surface and trust",
+      "domain_id": "D01",
+      "status": "PASS",
+      "summary": "tools=504 expected_commands=580 trust=5.0"
+    },
+    {
+      "blocks_live_build": false,
+      "blocks_runtime_planning": false,
+      "domain": "Canonical engine authority",
+      "domain_id": "D02",
+      "status": "PASS",
+      "summary": "included=54 excluded=26"
+    },
+    {
+      "blocks_live_build": false,
+      "blocks_runtime_planning": false,
+      "domain": "Canonical tests",
+      "domain_id": "D03",
+      "status": "PASS",
+      "summary": "pass=67 fail=0"
+    },
+    {
+      "blocks_live_build": true,
+      "blocks_runtime_planning": false,
+      "domain": "Source authority candidate binding",
+      "domain_id": "D04",
+      "note": "Candidate documents are evidence leads only; final source authority still requires human confirmation and/or stronger source-law receipts.",
+      "status": "WARN",
+      "summary": "candidate_engines=42 source_gaps=12 final_authority_claimed=False"
+    },
+    {
+      "blocks_live_build": false,
+      "blocks_runtime_planning": false,
+      "domain": "Snapshot and shadow forensic evidence",
+      "domain_id": "D05",
+      "status": "PASS",
+      "summary": "shadow_matches_snapshot=True problems=0"
+    },
+    {
+      "blocks_live_build": true,
+      "blocks_runtime_planning": false,
+      "domain": "Live apply eligibility lock",
+      "domain_id": "D06",
+      "note": "Not eligible is expected. Runtime build planning may continue; live writes remain locked.",
+      "status": "WARN",
+      "summary": "eligible=None status=NOT_REFRESHED"
+    },
+    {
+      "blocks_live_build": false,
+      "blocks_runtime_planning": false,
+      "domain": "Deferred engine queue",
+      "domain_id": "D07",
+      "note": "Deferred engines remain visible but must not hijack the main runtime build roadmap.",
+      "status": "WARN",
+      "summary": "queue_total=26 repair_ready=1 repair_blocked=2"
+    },
+    {
+      "blocks_live_build": false,
+      "blocks_runtime_planning": false,
+      "domain": "Dashboard / operator visibility",
+      "domain_id": "D08",
+      "status": "PASS",
+      "summary": "dashboard_v2=FORGE_DASHBOARD_V2_OPERATOR_PANEL_READY status_api_next=Patch 155 \u2014 AI.Web Runtime Build Readiness Map sequence_next=Patch 156 \u2014 Runtime Module Dependency Map"
+    },
+    {
+      "blocks_live_build": false,
+      "blocks_runtime_planning": false,
+      "domain": "Patch impact risk surface",
+      "domain_id": "D09",
+      "status": "PASS",
+      "summary": "high_risk=0 medium_risk=17"
+    }
+  ],
+  "fail_count": 0,
+  "live_build_blocker_count": 2,
+  "live_build_blockers": [
+    {
+      "blocks_live_build": true,
+      "blocks_runtime_planning": false,
+      "domain": "Source authority candidate binding",
+      "domain_id": "D04",
+      "note": "Candidate documents are evidence leads only; final source authority still requires human confirmation and/or stronger source-law receipts.",
+      "status": "WARN",
+      "summary": "candidate_engines=42 source_gaps=12 final_authority_claimed=False"
+    },
+    {
+      "blocks_live_build": true,
+      "blocks_runtime_planning": false,
+      "domain": "Live apply eligibility lock",
+      "domain_id": "D06",
+      "note": "Not eligible is expected. Runtime build planning may continue; live writes remain locked.",
+      "status": "WARN",
+      "summary": "eligible=None status=NOT_REFRESHED"
+    }
+  ],
+  "live_build_ready": false,
+  "next_commands": [
+    "forge-aiweb-runtime-readiness-export",
+    "forge-build-sequence",
+    "forge-dashboard-roadmap-build",
+    "forge-status-api-build",
+    "forge-dashboard-build",
+    "Install Patch 156 when ready"
+  ],
+  "next_patch": "Patch 156 \u2014 Runtime Module Dependency Map",
+  "pass_count": 6,
+  "plain_english": "Forge is ready to map the AI.Web runtime build path, but not ready to perform live runtime writes. Source authority gaps, live apply lock requirements, rollback/human approval, and future dependency mapping still stand between planning and live build execution.",
+  "planning_blocker_count": 0,
+  "planning_blockers": [],
+  "planning_ready": true,
+  "recommended_next_patch": "Patch 156 \u2014 Runtime Module Dependency Map",
+  "report_type": "FORGE_AIWEB_RUNTIME_BUILD_READINESS_V1",
+  "schema_version": "forge_aiweb_runtime_build_readiness_v1_patch155",
+  "status": "AIWEB_RUNTIME_BUILD_READINESS_MAP_READY_PLANNING_ONLY",
+  "summary": {
+    "engine_file_writes": 0,
+    "expected_commands": 580,
+    "fail": 0,
+    "live_build_ready": false,
+    "pass": 6,
+    "patch_apply_authority": false,
+    "planning_ready": true,
+    "project_file_writes": 0,
+    "roadmap_mutation_policy": "APPEND_ONLY",
+    "tools": 504,
+    "trust_level": 5.0,
+    "warn": 3
+  },
+  "warn_count": 3
+}

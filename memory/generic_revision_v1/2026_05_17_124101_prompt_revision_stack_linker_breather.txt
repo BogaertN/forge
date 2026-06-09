@@ -1,0 +1,128 @@
+You are Forge's local LLM doing a focused sandbox-failure revision review.
+
+Goal:
+Determine the next minimal repair step for the sandboxed candidate. Do not propose live writes.
+
+You MUST choose exactly one recommendation line:
+RECOMMENDATION: APPROVE_EXISTING_CANDIDATE
+RECOMMENDATION: REVISE_CANDIDATE
+RECOMMENDATION: REVISE_SANDBOX_DEPENDENCY_PLAN
+
+Then provide:
+1. Diagnosis.
+2. Minimal next repair.
+3. Exact target file(s) to change in sandbox/candidate only.
+4. Exact tests to rerun.
+5. Why this does not require live apply yet.
+
+Current target: stack_linker_breather
+Source run status: GENERIC_SANDBOX_DEPENDENCY_TESTS_ISSUES
+Prior LLM recommendation: REVIEW_DEPENDENCY_RESULT_MANUALLY
+
+Failing stderr tail:
+Traceback (most recent call last):
+  File "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/test_stack_linker_core.py", line 3, in <module>
+    from stack_linker_breather.stack_linker_core import unified_breathe_cycle
+  File "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/stack_linker_core.py", line 5, in <module>
+    from core_breather.core_breather import breathe_phase as core_breathe
+ImportError: cannot import name 'breathe_phase' from 'core_breather.core_breather' (/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/core_breather/core_breather.py)
+
+
+Candidate target file:
+/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/stack_linker_core.py
+
+Candidate target code:
+```python
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
+
+from core_breather.core_breather import breathe_phase as core_breathe
+from recursive_field_breather.field_breather import breathe_phase as field_breathe
+import time
+import json
+
+def unified_breathe_cycle():
+    # simple combined breathing cycle
+    for phase in range(1, 10):  # Full 1-9 breathing
+        core_breathe(phase)
+        field_breathe(phase)
+        event = {
+            "timestamp": time.time(),
+            "phase": phase,
+            "stack": "core_and_field",
+            "status": "",
+        }
+
+```
+
+Test file:
+```python
+# test_stack_linker_core.py
+
+from stack_linker_breather.stack_linker_core import unified_breathe_cycle
+
+if __name__ == "__main__":
+    unified_breathe_cycle()
+
+
+def test_unified_breathe_cycle():
+    print("✅ Unified Breather Test Starting...")
+    try:
+        unified_breathe_cycle()
+    except KeyboardInterrupt:
+        print("✅ Unified Breather Test Completed (Manual Stop)")
+
+if __name__ == "__main__":
+    test_unified_breathe_cycle()
+
+
+```
+
+Core dependency file path: /home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/core_breather/core_breather.py
+Core dependency code:
+```python
+# core_breather.py
+
+import json
+import time
+from datetime import datetime
+
+class CoreBreather:
+    def __init__(self):
+        self.phase = 1
+        self.loop_count = 0
+        self.trace_file = "core_trace.jsonl"
+
+    def breathe(self):
+        timestamp = datetime.utcnow().isoformat() + "Z"
+        trace_entry = {
+            "phase": self.phase,
+            "timestamp": timestamp,
+            "loop": self.loop_count,
+            "drift": 0.0
+        }
+
+        with open(self.trace_file, "a") as f:
+            f.write(json.dumps(trace_entry) + "\n")
+
+        print(f"Breath Phase: {self.phase} | Loop: {self.loop_count} | Time: {timestamp}")
+
+        self.phase += 1
+        if self.phase > 9:
+            self.phase = 1
+            self.loop_count += 1
+
+```
+
+Recursive field dependency path: None
+Recursive field dependency code:
+```python
+None
+```
+
+Important constraints:
+- Keep this generic: use the observed imports/symbols/files, not hardcoded project lore.
+- If a dependency package exists but lacks the imported symbol, say whether the candidate import/wrapper should change or the sandbox dependency shim should expose the expected symbol.
+- Do not suggest changing live /home/nic/aiweb files yet.
+- The next output should be suitable for Forge to build another sandbox-only candidate or dependency shim.

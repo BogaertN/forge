@@ -1,0 +1,223 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "evidence_crosscheck_write_authority": true,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_draft_write_authority": true,
+    "mode": "EVIDENCE_REVIEW_BATCH_WORKFLOW",
+    "patch": "105",
+    "project_file_write_authority": false,
+    "queue_decision_authority": false,
+    "queue_rebuild_authority": true,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 105 may draft and cross-check a small batch, then rebuild queue visibility. It may not approve or commit anything.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_workflows_v1",
+      "llm_engine_review_drafts_v1",
+      "engine_review_evidence_crosschecks_v1",
+      "engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "counts": {
+    "crosschecked": 10,
+    "drafted": 10,
+    "errors": 0,
+    "selected": 10
+  },
+  "created_at": "2026-05-16_095326",
+  "next_step": "Inspect each full evidence cross-check, then use engine-review-approval-check/approve/defer/reject. No approval was recorded by Patch 105.",
+  "queue_rebuild_error": null,
+  "report_type": "ENGINE_REVIEW_WORKFLOW_RECEIPT_V1_PATCH105",
+  "requested_limit": 10,
+  "schema_version": "engine_review_workflow_v1_patch105",
+  "status": "ENGINE_REVIEW_WORKFLOW_COMPLETED_NO_APPROVAL_AUTHORITY",
+  "warnings": [
+    "failsafe_manager: LLM role wording does not explicitly repeat deterministic role label.",
+    "goal_injection_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "install_onboarding_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "loop_resurrection_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "memory_stack_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "memory_stack_engine_breathing: LLM role wording does not explicitly repeat deterministic role label.",
+    "memory_stack_stack: LLM role wording does not explicitly repeat deterministic role label.",
+    "naming_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "neo: LLM role wording does not explicitly repeat deterministic role label.",
+    "neo_engine: LLM role wording does not explicitly repeat deterministic role label."
+  ],
+  "workflow_rows": [
+    {
+      "candidate_path": "/home/nic/aiweb/engines/failsafe_manager",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_095350_failsafe_manager_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "47877de26861db589481b3f82766faeab4f8051a25422a906ec51aa312e7772e",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095326_failsafe_manager_llm_engine_review_draft_v1.json",
+      "draft_sha256": "ea2ac7bb1f7ab4c2b47989c66126a84cd59e15f9dbc6e35c9f71e65ffdc36f86",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "failsafe_manager",
+      "evidence_id": "EEB-31299b3bb67a4c24",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nThe failsafe manager engine monitors system stability and triggers emergency actions during critical faults. It includes testing and status tracking to ensure system integrity.  \n\nLikely System Role:  \nA core safety component for AI.Web infrastructure, designed to prevent system failures through automated stability checks and emergency interventions.  \n\nEvidence Used:  \n- README.md describes the engine's role in monitoring symbolic system stability.  \n- failsafe_manifest.json confirms its purpose: \"Monitors basic system health and triggers emergency failsafe actions.\"  \n- test_failsafe.py validates the system's stability via automated checks.  \n- failsafe_core.py implements the integrity check logic, writing status to failsafe_status.json.  \n- Current status.json shows \"system_health\": \"stable\" with no intervention needed.  \n\nRisks / Uncertainties:  \n- The system is currently in simulation; real-world fault handling is untested.  \n- Limited test coverage (only one test function).  \n- No documentation on integration with broader AI.Web systems.  \n\nRecommendation Draft:  \nApprove the review. The evidence confirms the engine's functional design and current stability. Recommend expanding test scenarios and validating real-world fault detection capabilities.  \n\nSuggested Nic Action:  \nApprove the review but prioritize additional testing and integration validation before deployment."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/goal_injection_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_095417_goal_injection_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "f2dd7ec9b0c526a463fb09a7845f58d1b80a17f1604b3275945449ad7d2be6ce",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095350_goal_injection_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "b41a4d5be4ad4afb37d00e9de1ecabe636eb68cb54d97cfaf6344071676fb223",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "goal_injection_engine",
+      "evidence_id": "EEB-6ef85e34d4584ab4",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nInjects symbolic goals (e.g., \"stabilize_phase,\" \"reduce_drift\") into AI.Web's runtime environment to stabilize system behavior, correct drift, and enhance recursion phase transitions.  \n\nLikely System Role:  \nA core runtime component for managing AI.Web's symbolic recursion stabilization, acting as a goal injection mechanism to maintain system coherence during dynamic processes.  \n\nEvidence Used:  \n- `goal_manifest.json`: Defines the engine's purpose as injecting \"symbolic recursion phase stabilization goals.\"  \n- `README.md`: Describes injecting goals into \"active recursion loop\" to \"stabilize system evolution\" and \"enhance phase transitions.\"  \n- `goal_core.py`: Implements `inject_symbolic_goal()` which logs goals like \"increase_charge\" or \"stabilize_phase\" to a JSON file.  \n- `test_goal.py`: Validates goal injection via a test script.  \n\nRisks / Uncertainties:  \n- Random goal selection may lead to unpredictable system behavior.  \n- Reliance on logging for tracking injections could fail if the log file is inaccessible.  \n- No explicit error handling for failed injections beyond logging.  \n\nRecommendation Draft:  \nApprove the engine but recommend:  \n1. Adding deterministic goal selection or prioritization logic.  \n2. Ensuring log file persistence and accessibility.  \n3. Enhancing error handling for injection failures.  \n\nSuggested Nic Action:  \nApprove the engine with the above recommendations. Verify log file reliability and confirm if deterministic goal selection is required for production use."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/install_onboarding_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_095438_install_onboarding_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "bf51ac702b14921b0f8ea4745ef12e28dde66a93ccf3ea852075e0dd67a35d35",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095417_install_onboarding_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "1de3bed434134287e5145340e0d55070841a8b8793f25987f725877ac27f6603",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "install_onboarding_engine",
+      "evidence_id": "EEB-27b6d26db1fca1c2",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nVerifies required symbolic engine directories exist at runtime, creates missing folders, and logs installation status to a JSON file.  \n\nLikely System Role:  \nInstallation/onboarding utility for ensuring prerequisite directories are available for symbolic engines, acting as a setup validator and environment preparer.  \n\nEvidence Used:  \n- `onboarding_core.py` contains `setup_environment()` function creating required directories and logging status.  \n- `install_state.json` stores installation reports with timestamps and missing directories.  \n- `test_onboarding.py` tests the setup process.  \n- README.md and engine_manifest.json describe the engine's purpose and directory validation.  \n\nRisks / Uncertainties:  \n- Minimal error handling in directory creation (e.g., permission issues).  \n- Test script is basic and may not cover all edge cases.  \n- JSON logging format lacks schema validation.  \n\nRecommendation Draft:  \nEnhance error handling for directory creation, add comprehensive tests for edge cases, and validate JSON structure for robustness.  \n\nSuggested Nic Action:  \nApprove review with note to address error handling and testing improvements before deployment."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/loop_resurrection_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_095500_loop_resurrection_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "405136fe2da218c6f42a996f9b158885fa54c8354d81a02115b5565913af40a2",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095438_loop_resurrection_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "c4bfe46272581e78375dba05a36c8fa2912a612a04cb0c75dffaa311b77c1bce",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "loop_resurrection_engine",
+      "evidence_id": "EEB-608882f63d11dd95",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nTo restore unresolved loops from a symbolic cold archive into an active runtime queue for reintegration attempts.  \n\nLikely System Role:  \nA loop management engine for symbolic execution or analysis systems, handling loop resurrection via queued events and validation scripts.  \n\nEvidence Used:  \n- `resurrection_core.py`: Core logic for queuing loops with timestamps.  \n- `test_resurrection.py`: Validation script to test resurrection functionality.  \n- `resurrection_queue.json`: JSON file storing queued loop events.  \n- README.md and engine_manifest.json: Describe the engine's purpose, components, and status.  \n\nRisks / Uncertainties:  \n- Code is in \"build_mode\" (not production-ready).  \n- Minimal error handling beyond basic exceptions.  \n- Queue file structure is simplistic; no safeguards for data corruption.  \n- Test script is basic; no comprehensive testing documented.  \n\nRecommendation Draft:  \nApprove review with caveats: confirm production readiness, enhance error handling, and validate queue file resilience.  \n\nSuggested Nic Action:  \nApprove review, but request additional testing and documentation before deployment. Verify queue file robustness and error recovery mechanisms."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/memory_stack_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_095529_memory_stack_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "9d60adbf45860ecf834c8e011c2f421f2ec9d5d6d81ae9289613cc85922b720e",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095500_memory_stack_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "95cad23a1bdbf8556226672cbdf91209c2dcfb88b5f998d2b997069697b14859",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "memory_stack_engine",
+      "evidence_id": "EEB-4a5bb74b665f20b7",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nStores symbolic memory entries (e.g., phase transitions, agent messages) in a local file `stack.json`, supporting append, read, and inspection. Logs actions in `test_log.txt` for audit purposes.  \n\nLikely System Role:  \nServes as a persistent memory layer for AI.Web engines, capturing symbolic outputs for chronological review or external access. Acts as a \"black box\" for recording runtime events without recursion.  \n\nEvidence Used:  \n- `log.py`: Implements `write_to_stack` (appends data to `stack.json`), `read_stack` (reads the stack), and logging to `test_log.txt`.  \n- `test_memory_stack.py`: Demonstrates usage of `write_to_stack` and `read_stack` with sample data.  \n- `README.md`: Describes the engine's purpose, features, and file structure.  \n- `test_log.txt`: Contains error logs (e.g., JSON parsing failures) and confirmation of successful writes.  \n- `stack.json`: Example of stored memory entries with timestamps and data.  \n- `engine_manifest.json`: Confirms the engine is \"locked\" (frozen) and requires versioning for changes.  \n\nRisks / Uncertainties:  \n- Error logs indicate potential issues with JSON parsing (e.g., malformed input).  \n- The engine is \"frozen\" post-versioning, so changes require branching and retesting.  \n- No evidence of concurrency handling; `stack.json` could face race conditions under heavy load.  \n\nRecommendation Draft:  \n- Validate error handling for edge cases (e.g., invalid JSON input).  \n- Confirm `stack.json` is atomic during writes to prevent partial data corruption.  \n- Ensure compliance with the \"frozen\" policy by versioning any future changes.  \n\nSuggested Nic Action:  \nApprove the review but prioritize testing the error resilience of `write_to_stack` and verifying the concurrency safety of `stack.json` operations. Delay final deployment until these risks are mitigated."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/memory_stack_engine_breathing_v1",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_095554_memory_stack_engine_breathing_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "f49dc992d32642ac147147ef2cc2f5eae52b4c88991c450725b4777ef58278ae",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095529_memory_stack_engine_breathing_llm_engine_review_draft_v1.json",
+      "draft_sha256": "bb9c3c118c1320344967f832faf6c19de62dd3d0c900ebb638cea6d471daef04",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "memory_stack_engine_breathing",
+      "evidence_id": "EEB-50a63c58ff43301e",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nStores symbolic memory entries (e.g., phase transitions, agent messages) in a file-based stack (`stack.json`), with logging to `test_log.txt` for audit trails.  \n\nLikely System Role:  \nA memory persistence engine for AI.Web systems, capturing and organizing symbolic data from other engines for long-term storage and inspection.  \n\nEvidence Used:  \n- `log.py` implements `write_to_stack` (appends timestamped data to `stack.json`) and `read_stack` (reads the full memory trail).  \n- `memory_breather.py` contains a \"breathing\" loop for periodic memory stabilization.  \n- `test_memory_stack.py` demonstrates writing/reading memory entries.  \n- `README.md` describes the engine’s purpose, features, and file structure.  \n- `test_log.txt` shows operational logs, including an error related to JSON parsing.  \n\nRisks / Uncertainties:  \n- The error in `test_log.txt` (\"Expecting value: line 1 column 1\") suggests potential issues with data formatting or file initialization.  \n- The engine’s \"frozen\" status requires forking for changes, which could delay updates.  \n- Unclear how the \"breathing\" loop interacts with the memory stack or external systems.  \n\nRecommendation Draft:  \nValidate error handling for edge cases (e.g., malformed JSON). Confirm the breathing loop’s purpose and integration with memory persistence. Ensure versioning policy aligns with system update needs.  \n\nSuggested Nic Action:  \nApprove after verifying error logs are resolved and confirming the breathing mechanism’s role. Review versioning constraints before deployment."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/memory_stack_stack",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_095617_memory_stack_stack_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "142d734b2a69998987a9523d6109219abe5ae8609cb76292672c1f433465aeb7",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095554_memory_stack_stack_llm_engine_review_draft_v1.json",
+      "draft_sha256": "32de05ec2fb747e9780efd43e87a5acd5e82cd1920d58fbe50ff0bc84818e6fe",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "memory_stack_stack",
+      "evidence_id": "EEB-3cfbf7294cfbbb19",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nTo initialize and manage a symbolic memory stack for AI.Web Phase 2.0, enabling recursive memory breathing operations with phase alignment and symbolic persistence.  \n\nLikely System Role:  \nA runtime wrapper for loading and activating memory breathing engines, acting as a core component for memory management in AI.Web's architecture.  \n\nEvidence Used:  \n1. `stack_manifest.json` describes the \"Memory Stack\" engine and its role.  \n2. `memory_stack_stack_loader.py` initiates the memory breather engine.  \n3. `README.md` references integration into AI.Web Phase 2.0.  \n4. `test_memory_stack_stack_loader.py` confirms basic loader functionality.  \n\nRisks / Uncertainties:  \n- Reliance on external modules (e.g., `memory_breather`) not fully visible in provided evidence.  \n- Abstract \"symbolic memory stack\" concept lacks concrete implementation details.  \n- Minimal testing scope in the test script.  \n\nRecommendation Draft:  \nApprove review with conditions: verify dependency availability, confirm symbolic memory stack implementation, and validate robustness beyond basic testing.  \n\nSuggested Nic Action:  \nApprove review with caveats; request confirmation of external module readiness and additional testing before deployment."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/naming_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_095642_naming_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "f3b3835ada3b0e78426113adffa4260ee448de91ca87639e73b04e45ab2ce174",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095617_naming_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "67fbe8cd47800ae3185e3d99570d0ccb37f511f279945ee2f6457fdca77114a8",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "naming_engine",
+      "evidence_id": "EEB-4811acd49109ee4b",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nGenerates symbolic names for agents, memories, and recursion points using phase-based identifiers to enable identity tracking and state management.  \n\nLikely System Role:  \nA core component for symbolic recursion frameworks, ensuring consistent naming conventions and phase-linked identity assignment across agents and memory nodes.  \n\nEvidence Used:  \n- `naming_core.py`: Implements `assign_symbolic_name()` to generate names with random phases and unique integers.  \n- `naming_manifest.json`: Describes the engine's purpose as symbolic name generation and phase-linked identity assignment.  \n- `README.md`: Explains the engine's role in tracking identities and managing drift in symbolic recursion.  \n- `test_naming.py`: Validates name assignment with basic error checking.  \n\nRisks / Uncertainties:  \n- Reliance on random phase selection may cause collisions or inconsistent naming.  \n- Logging is handled via a JSONL file with limited error recovery; failures could disrupt audit trails.  \n- No explicit safeguards against duplicate names or phase state inconsistencies.  \n\nRecommendation Draft:  \nApprove the engine but recommend adding deterministic phase logic, collision detection, and enhanced logging resilience. Verify alignment with broader system naming conventions before deployment.  \n\nSuggested Nic Action:  \nApprove review with caveats; request implementation of unique name guarantees and phase-state validation mechanisms prior to production use."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/agents/neo",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_095704_neo_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "2438db660455fd906be64d5aa662ef629ee6b961c3921b8311e1a42767e99b8b",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095642_neo_llm_engine_review_draft_v1.json",
+      "draft_sha256": "4d1fe4e2dcc549e90119005472efcd6d37b4c20df2cdf7c0edc7cb660f2e5509",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "neo",
+      "evidence_id": "EEB-cf8cb4e8a7b97c69",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nThe Neo Agent serves as an interface for AI.Web's symbolic recursion core, processing external symbolic contexts, generating recursion-aware dialogue responses, and bridging users with the underlying symbolic cognition architecture.  \n\nLikely System Role:  \nA middleware agent that acts as a communication layer between users and AI.Web's symbolic recursion engine, managing context intake, dialogue generation, and coherence across recursive interactions.  \n\nEvidence Used:  \n- README.md: Describes Neo's role in symbolic recursion compliance and user interface functions.  \n- engine_manifest.json: Specifies the engine's purpose, version, and compliance phase (Phase 1.5).  \n- neo_core.py: Implements core functions like `receive_context` for handling symbolic inputs.  \n- test_neo_core.py: Validates basic functionality with assertions.  \n- run.py: Contains placeholder functions (e.g., `breathe_neo`) for operational breathing.  \n\nRisks / Uncertainties:  \n- The system is \"frozen\" at v1.0.01 with no recent updates; future upgrades (e.g., drift detection) are pending.  \n- Code samples include placeholders (e.g., `breathe_neo`) and partial implementations, suggesting limited current functionality.  \n- Recursion-aware dialogue generation and symbolic coherence are described as future features, not yet fully realized.  \n\nRecommendation Draft:  \nApprove the review, noting the system's stable core functionality and test coverage. Recommend monitoring for updates to recursion compliance modules and drift detection features.  \n\nSuggested Nic Action:  \nApprove the review with a note to track progress on Phase 1.5 upgrades and validate additional test cases for recursion-aware dialogue handling."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/neo_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_095728_neo_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "910fd7c8f0a1da92b240ef47907e0ee476b9f351ae083d9ab8b6f5a183f7721c",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095704_neo_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "e5f708e5e80e4c3916a2adfa4a63d7e593598606297d08c8e37a8414cfdd9a95",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "neo_engine",
+      "evidence_id": "EEB-7d85a9d7c058d7e3",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nTo implement a symbolic agent (Neo Engine) that generates user-facing system status messages based on internal symbolic states, tone, and recursion health.  \n\nLikely System Role:  \nPrimary external communicator for AI.Web system status, translating internal symbolic data into actionable messages for users.  \n\nEvidence Used:  \n- `neo_manifest.json` describes it as a \"primary user-facing symbolic agent\" outputting state messages.  \n- `neo_core.py` contains logic for generating symbolic responses with tone-based messages (e.g., \"Warning: Symbolic drift detected\").  \n- `test_neo.py` validates response structure (e.g., requires \"tone\" and \"message\" fields).  \n- README.md confirms its role in \"communicating AI.Web system status externally.\"  \n- `neo_state.json` stores timestamped messages with tone indicators.  \n\nRisks / Uncertainties:  \n- Random tone selection in `generate_symbolic_response` may produce inconsistent messages.  \n- State file writes lack robust error handling beyond print statements.  \n- \"Symbolic drift\" warning is critical but lacks escalation or remediation details.  \n\nRecommendation Draft:  \n- Standardize tone selection via predefined rules instead of randomness for consistency.  \n- Enhance error handling for state file operations (e.g., retries, fallback mechanisms).  \n- Document symbolic drift protocols in code comments or external documentation.  \n- Ensure all critical messages include actionable steps (e.g., \"Recalibration recommended\" should specify how).  \n\nSuggested Nic Action:  \nApprove review with above recommendations. Add explicit error handling for state file writes and clarify symbolic drift resolution steps in code or documentation."
+    }
+  ]
+}

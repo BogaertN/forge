@@ -1,0 +1,305 @@
+{
+  "after": {
+    "agent_template_sha": "2449b3a0f0c190bbf2ec83bbb8969c8ae517b9c6a83382b401b27028b745acf0",
+    "canonical_db_sha": "757715a5aa8407b1fa0cb71476b6ee7348096411272853250967081e534be414",
+    "canonical_inventory": {
+      "exists": true,
+      "ok": true,
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/data/identity_vault.db",
+      "rows": {
+        "agent_profiles": 3,
+        "audit_logs": 0,
+        "feedback_logs": 0,
+        "session_state": 0,
+        "sqlite_sequence": 2,
+        "user_profiles": 1
+      },
+      "tables": [
+        "agent_profiles",
+        "audit_logs",
+        "feedback_logs",
+        "session_state",
+        "sqlite_sequence",
+        "user_profiles"
+      ]
+    },
+    "env_stat": {
+      "exists": true,
+      "mode": "0o664",
+      "mtime_ns": 1759221548592283936,
+      "size": 1605
+    },
+    "legacy_db_sha": "1bfcaca815f7149d32b30e261c20d0679d7182191fe55cfa63ce830c287d87b9",
+    "legacy_inventory": {
+      "exists": true,
+      "ok": true,
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/vault.db",
+      "rows": {
+        "feedback_logs": 0,
+        "profiles": 1,
+        "session_state": 1,
+        "sqlite_sequence": 0
+      },
+      "tables": [
+        "feedback_logs",
+        "profiles",
+        "session_state",
+        "sqlite_sequence"
+      ]
+    },
+    "rmc_fingerprints": {
+      "/home/nic/aiweb/rmc": {
+        "dir_count": 0,
+        "exists": false,
+        "file_count": 0,
+        "sha16": null
+      },
+      "/home/nic/aiweb/runtime_wrappers": {
+        "dir_count": 101,
+        "exists": true,
+        "file_count": 331,
+        "sha16": "f0607dea97faf4e5",
+        "truncated": false
+      },
+      "/home/nic/forge/memory": {
+        "dir_count": 290,
+        "exists": true,
+        "file_count": 5000,
+        "sha16": "c0abb234c9ce6483",
+        "truncated": true
+      }
+    },
+    "tool_registry_sha": "0c1f4153eff92a50db24ef9bb0d68b3cda4c40c70f2438e614d0494ce9fcaf6b",
+    "user_template_sha": "e02dd7a6f0d5b26dae21cb4ee85d416ea24d558961c19b0a9047bd28c8cb835e"
+  },
+  "backup_ok": true,
+  "backup_root": "/home/nic/forge/backups/patch227_identity_vault_profiles_before/20260523_221012_UTC",
+  "before": {
+    "agent_template_sha": "2449b3a0f0c190bbf2ec83bbb8969c8ae517b9c6a83382b401b27028b745acf0",
+    "canonical_db_sha": "becd76f770093361ae20a6a5ecdd7bf3016f9e05573c1dbc1f0b7439f4b6489a",
+    "canonical_inventory": {
+      "exists": true,
+      "ok": true,
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/data/identity_vault.db",
+      "rows": {
+        "agent_profiles": 0,
+        "audit_logs": 0,
+        "feedback_logs": 0,
+        "session_state": 0,
+        "sqlite_sequence": 0,
+        "user_profiles": 0
+      },
+      "tables": [
+        "agent_profiles",
+        "audit_logs",
+        "feedback_logs",
+        "session_state",
+        "sqlite_sequence",
+        "user_profiles"
+      ]
+    },
+    "env_sha": null,
+    "env_stat": {
+      "exists": true,
+      "mode": "0o664",
+      "mtime_ns": 1759221548592283936,
+      "size": 1605
+    },
+    "legacy_db_sha": "1bfcaca815f7149d32b30e261c20d0679d7182191fe55cfa63ce830c287d87b9",
+    "legacy_inventory": {
+      "exists": true,
+      "ok": true,
+      "opened_readonly": true,
+      "path": "/home/nic/identity-vault/vault.db",
+      "rows": {
+        "feedback_logs": 0,
+        "profiles": 1,
+        "session_state": 1,
+        "sqlite_sequence": 0
+      },
+      "tables": [
+        "feedback_logs",
+        "profiles",
+        "session_state",
+        "sqlite_sequence"
+      ]
+    },
+    "rmc_fingerprints": {
+      "/home/nic/aiweb/rmc": {
+        "dir_count": 0,
+        "exists": false,
+        "file_count": 0,
+        "sha16": null
+      },
+      "/home/nic/aiweb/runtime_wrappers": {
+        "dir_count": 101,
+        "exists": true,
+        "file_count": 331,
+        "sha16": "f0607dea97faf4e5",
+        "truncated": false
+      },
+      "/home/nic/forge/memory": {
+        "dir_count": 290,
+        "exists": true,
+        "file_count": 5000,
+        "sha16": "c0abb234c9ce6483",
+        "truncated": true
+      }
+    },
+    "tool_registry_sha": "0c1f4153eff92a50db24ef9bb0d68b3cda4c40c70f2438e614d0494ce9fcaf6b",
+    "user_template_sha": "e02dd7a6f0d5b26dae21cb4ee85d416ea24d558961c19b0a9047bd28c8cb835e"
+  },
+  "boundary": "writes inactive draft profile rows only to canonical Identity Vault database; no activation; no RMC writes",
+  "canonical_db": "/home/nic/identity-vault/data/identity_vault.db",
+  "findings": [
+    {
+      "code": "IV_INACTIVE_DRAFT_PROFILES_WRITTEN",
+      "level": "INFO",
+      "message": "nic_bogaert, gilligan.local, athena.local, and neo.local seeded into canonical Identity Vault."
+    },
+    {
+      "code": "IV_NO_ACTIVATION_PERFORMED",
+      "level": "INFO",
+      "message": "All seeded profiles remain inactive draft rows."
+    },
+    {
+      "code": "IV_RMC_POINTERS_ONLY",
+      "level": "INFO",
+      "message": "Agent RMC namespaces are stored as pointers only; no RMC memory records were written."
+    }
+  ],
+  "safety": {
+    "agent_identity_activation_performed": false,
+    "agent_template_sha_unchanged": true,
+    "all_seeded_profiles_inactive": true,
+    "canonical_db_changed_as_expected": true,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "forge_tool_registry_modified": false,
+    "legacy_db_sha_unchanged": true,
+    "profile_rows_expected": true,
+    "profiles_created": true,
+    "rmc_fingerprints_unchanged": true,
+    "rmc_memory_write_performed": false,
+    "tool_registry_sha_unchanged": true,
+    "user_template_sha_unchanged": true
+  },
+  "schema_issues": [],
+  "templates": {
+    "agent": {
+      "error": null,
+      "exists": true,
+      "inactive_defaults_ok": true,
+      "json_ok": true,
+      "path": "/home/nic/identity-vault/templates/agent-template.json",
+      "sha16": "2449b3a0f0c190bb",
+      "target_table": "agent_profiles",
+      "template_type": "agent_operational_identity_template"
+    },
+    "user": {
+      "error": null,
+      "exists": true,
+      "inactive_defaults_ok": true,
+      "json_ok": true,
+      "path": "/home/nic/identity-vault/templates/user-template.json",
+      "sha16": "e02dd7a6f0d5b26d",
+      "target_table": "user_profiles",
+      "template_type": "user_operational_identity_template"
+    }
+  },
+  "timestamp": "20260523_221012_UTC",
+  "validation": {
+    "agents": [
+      {
+        "activation_state": "inactive_draft",
+        "agent_id": "gilligan.local",
+        "canonical_name": "Gilligan",
+        "hash_ok": true,
+        "is_active": 0,
+        "ok": true,
+        "payload_session_state": "inactive_draft",
+        "pointer_only": true,
+        "rmc_namespace": "rmc/agents/gilligan.local",
+        "role": "Recursive Mirror / Forge-Governed Development Co-Pilot",
+        "version": "1.0.0-blueprint-draft"
+      },
+      {
+        "activation_state": "inactive_draft",
+        "agent_id": "athena.local",
+        "canonical_name": "Athena",
+        "hash_ok": true,
+        "is_active": 0,
+        "ok": true,
+        "payload_session_state": "inactive_draft",
+        "pointer_only": true,
+        "rmc_namespace": "rmc/agents/athena.local",
+        "role": "Governance / Strategy / Investor-Facing Analysis Agent",
+        "version": "1.0.0-blueprint-draft"
+      },
+      {
+        "activation_state": "inactive_draft",
+        "agent_id": "neo.local",
+        "canonical_name": "Neo",
+        "hash_ok": true,
+        "is_active": 0,
+        "ok": true,
+        "payload_session_state": "inactive_draft",
+        "pointer_only": true,
+        "rmc_namespace": "rmc/agents/neo.local",
+        "role": "Public / Frontline Assistant Identity",
+        "version": "1.0.0-blueprint-draft"
+      }
+    ],
+    "issues": [],
+    "ok": true,
+    "user": {
+      "canonical_name": "Nic Bogaert",
+      "hash_ok": true,
+      "is_active": 0,
+      "ok": true,
+      "profile_schema_version": "1.0.0-blueprint",
+      "user_id": "nic_bogaert",
+      "version": "1.0.0-blueprint-draft"
+    }
+  },
+  "verdict": "PASS",
+  "write_report": {
+    "before_target_counts": {
+      "agent_profiles:athena.local": 0,
+      "agent_profiles:gilligan.local": 0,
+      "agent_profiles:neo.local": 0,
+      "user_profiles": 0
+    },
+    "blocked_existing": [],
+    "existing": [],
+    "inserted": [
+      {
+        "id": "nic_bogaert",
+        "profile_hash": "59412c799a127fbf78ea4abdba241b2cbadf5cad36e7adf7c13924f1507d32f0",
+        "table": "user_profiles"
+      },
+      {
+        "id": "gilligan.local",
+        "profile_hash": "5b4f576f57903bc8a3ab79f41214cb75667f844a7df99e7a96be09a1868373bd",
+        "rmc_namespace": "rmc/agents/gilligan.local",
+        "table": "agent_profiles"
+      },
+      {
+        "id": "athena.local",
+        "profile_hash": "073115d88626d43eacab4b0e0aa6ae20c79cbedfaf42befea52c44e0ad3c2b1b",
+        "rmc_namespace": "rmc/agents/athena.local",
+        "table": "agent_profiles"
+      },
+      {
+        "id": "neo.local",
+        "profile_hash": "df922d109948a5e5f29d647422a22145467720577ed80ffe27da783f07cae537",
+        "rmc_namespace": "rmc/agents/neo.local",
+        "table": "agent_profiles"
+      }
+    ],
+    "validation": {}
+  }
+}

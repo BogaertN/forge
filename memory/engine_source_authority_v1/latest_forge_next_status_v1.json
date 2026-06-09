@@ -1,0 +1,18 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T08:32:02",
+  "next_commands": [
+    "engine-source-law-export",
+    "Install Patch 132 when ready"
+  ],
+  "next_phase": "LLM_SOURCE_GROUNDED_PATCH_PROPOSAL",
+  "plain_english": "Canonical engines now have source-authority domain bindings and explicit source gaps. The next safe move is to let the LLM draft source-grounded patch proposals under validation only.",
+  "recommended_next_patch": "Patch 132 \u2014 LLM Source-Grounded Patch Proposal",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "schema_version": "forge_next_status_v1_patch131",
+  "status": "NEXT_PATCH_REQUIRED"
+}

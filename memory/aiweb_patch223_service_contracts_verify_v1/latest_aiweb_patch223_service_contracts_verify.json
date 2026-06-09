@@ -1,0 +1,239 @@
+{
+  "contract_root": "/home/nic/aiweb/service_contracts",
+  "contract_root_exists": true,
+  "contracts": [
+    {
+      "empty_required_fields": [],
+      "error": "",
+      "exists": true,
+      "filename": "forge.contract.json",
+      "json_ok": true,
+      "list_field_type_errors": [],
+      "missing_fields": [],
+      "ok": true,
+      "path": "/home/nic/aiweb/service_contracts/forge.contract.json",
+      "role_keyword_hint_ok": true,
+      "sha_after": "89095c3e3e242fc1679f9e1df67b65d56f52a230fcfcf5a8589496e38b2eae23",
+      "sha_before": "89095c3e3e242fc1679f9e1df67b65d56f52a230fcfcf5a8589496e38b2eae23",
+      "summary": {
+        "allowed_reads_count": 6,
+        "allowed_writes_count": 7,
+        "audit_log_path": "/home/nic/forge/logs/forge_audit.log",
+        "commands_count": 11,
+        "forbidden_writes_count": 7,
+        "health_check_command": "forge-command-surface && forge-version",
+        "name": "forge",
+        "owner_authority": "Nic Bogaert; Forge approval gates",
+        "role": "Governing and verification layer for AI.Web. Forge owns patch proposal, sandboxing, verification, rollback records, command-surface checks, and audit receipts.",
+        "shutdown_command": "exit from Forge CLI",
+        "startup_command": "cd /home/nic/forge && source .venv/bin/activate && python main.py",
+        "test_command": "cd /home/nic/forge && source .venv/bin/activate && python main.py # then run forge-command-surface and forge-version"
+      },
+      "unchanged": true
+    },
+    {
+      "empty_required_fields": [],
+      "error": "",
+      "exists": true,
+      "filename": "rmc.contract.json",
+      "json_ok": true,
+      "list_field_type_errors": [],
+      "missing_fields": [],
+      "ok": true,
+      "path": "/home/nic/aiweb/service_contracts/rmc.contract.json",
+      "role_keyword_hint_ok": true,
+      "sha_after": "60d27a5e39181fc6944ddd4b0f10d111d394740ae9ea13f011026bc42ba5a448",
+      "sha_before": "60d27a5e39181fc6944ddd4b0f10d111d394740ae9ea13f011026bc42ba5a448",
+      "summary": {
+        "allowed_reads_count": 6,
+        "allowed_writes_count": 2,
+        "audit_log_path": "/home/nic/forge/logs/forge_audit.log and /home/nic/forge/memory/rmc_* reports",
+        "commands_count": 6,
+        "forbidden_writes_count": 5,
+        "health_check_command": "python /home/nic/forge/scripts/rmc_patch213_forge_runtime_preview_check.py",
+        "name": "rmc",
+        "owner_authority": "Forge governs access; Nic approves memory write capability",
+        "role": "Shared and agent-scoped recursive memory/meaning layer. RMC parses phase state, checks drift, compiles manifests, renders previews, and validates echo under Forge governance.",
+        "shutdown_command": "not applicable; no independent daemon in this bootstrap stage",
+        "startup_command": "imported as Python runtime wrappers by Forge; no independent daemon in this bootstrap stage",
+        "test_command": "cd /home/nic/forge && source .venv/bin/activate && python scripts/rmc_patch213_forge_runtime_preview_check.py"
+      },
+      "unchanged": true
+    },
+    {
+      "empty_required_fields": [],
+      "error": "",
+      "exists": true,
+      "filename": "identity_vault.contract.json",
+      "json_ok": true,
+      "list_field_type_errors": [],
+      "missing_fields": [],
+      "ok": true,
+      "path": "/home/nic/aiweb/service_contracts/identity_vault.contract.json",
+      "role_keyword_hint_ok": true,
+      "sha_after": "a5bbef9b1936785e60983672fd83b19942040c1329e197554f9259205ab049fb",
+      "sha_before": "a5bbef9b1936785e60983672fd83b19942040c1329e197554f9259205ab049fb",
+      "summary": {
+        "allowed_reads_count": 5,
+        "allowed_writes_count": 1,
+        "audit_log_path": "/home/nic/forge/logs/forge_audit.log and /home/nic/forge/memory/identity_vault_* reports",
+        "commands_count": 3,
+        "forbidden_writes_count": 7,
+        "health_check_command": "python /home/nic/forge/scripts/identity_vault_patch218_verify.py",
+        "name": "identity_vault",
+        "owner_authority": "Forge governs access; Nic approves identity activation",
+        "role": "Agent identity, permissions, profile metadata, and RMC namespace pointers. Identity Vault is not an agent runtime and not the shared memory store.",
+        "shutdown_command": "not applicable for read-only adapter",
+        "startup_command": "Identity Vault application startup is not required for read-only Forge metadata adapter",
+        "test_command": "cd /home/nic/forge && source .venv/bin/activate && python scripts/identity_vault_patch218_verify.py"
+      },
+      "unchanged": true
+    },
+    {
+      "empty_required_fields": [],
+      "error": "",
+      "exists": true,
+      "filename": "protoforge2.contract.json",
+      "json_ok": true,
+      "list_field_type_errors": [],
+      "missing_fields": [],
+      "ok": true,
+      "path": "/home/nic/aiweb/service_contracts/protoforge2.contract.json",
+      "role_keyword_hint_ok": true,
+      "sha_after": "9a220cbb9eba531b7360334231885042050bdffa268bd6e1af035bfb7dd820d3",
+      "sha_before": "9a220cbb9eba531b7360334231885042050bdffa268bd6e1af035bfb7dd820d3",
+      "summary": {
+        "allowed_reads_count": 4,
+        "allowed_writes_count": 2,
+        "audit_log_path": "/home/nic/forge/logs/forge_audit.log and future /home/nic/forge/memory/protoforge2_* reports",
+        "commands_count": 3,
+        "forbidden_writes_count": 6,
+        "health_check_command": "future: protoforge2-status",
+        "name": "protoforge2",
+        "owner_authority": "Forge governs execution; Nic approves live effects",
+        "role": "Future execution and simulation substrate. ProtoForge2 runs controlled tests/simulations when Forge approves a plan. It is a lab bench, not an authority layer.",
+        "shutdown_command": "future: stop through Forge-controlled sandbox command only",
+        "startup_command": "future: start through Forge-controlled sandbox command only",
+        "test_command": "future: Forge-approved ProtoForge2 smoke test"
+      },
+      "unchanged": true
+    },
+    {
+      "empty_required_fields": [],
+      "error": "",
+      "exists": true,
+      "filename": "echoforge.contract.json",
+      "json_ok": true,
+      "list_field_type_errors": [],
+      "missing_fields": [],
+      "ok": true,
+      "path": "/home/nic/aiweb/service_contracts/echoforge.contract.json",
+      "role_keyword_hint_ok": true,
+      "sha_after": "f184c1b0e09c4fb4f66c94725e00c0d5dcf5e0b95daca85298969461ad39bbd2",
+      "sha_before": "f184c1b0e09c4fb4f66c94725e00c0d5dcf5e0b95daca85298969461ad39bbd2",
+      "summary": {
+        "allowed_reads_count": 4,
+        "allowed_writes_count": 2,
+        "audit_log_path": "/home/nic/forge/logs/forge_audit.log and future /home/nic/forge/memory/echoforge_* reports",
+        "commands_count": 3,
+        "forbidden_writes_count": 7,
+        "health_check_command": "future: echoforge-status",
+        "name": "echoforge",
+        "owner_authority": "Forge governs creation; Nic approves live application",
+        "role": "Future creation/request layer for tools, simulations, and applications. EchoForge requests builds; Forge proposes, sandboxes, verifies, and applies.",
+        "shutdown_command": "future: stop only through Forge-controlled command",
+        "startup_command": "future: start only through Forge-controlled command",
+        "test_command": "future: Forge-approved EchoForge intention dry-run"
+      },
+      "unchanged": true
+    }
+  ],
+  "findings": [
+    {
+      "code": "AIWEB_SERVICE_CONTRACTS_VERIFIED",
+      "level": "INFO",
+      "message": "All five service contracts loaded, validated, and remained unchanged during verification."
+    },
+    {
+      "code": "PROTOFORGE2_ROOT_NOT_PRESENT_YET",
+      "level": "INFO",
+      "message": "ProtoForge2 root is not present yet; contract is a planned boundary placeholder."
+    },
+    {
+      "code": "ECHOFORGE_ROOT_NOT_PRESENT_YET",
+      "level": "INFO",
+      "message": "EchoForge root is not present yet; contract is a planned boundary placeholder."
+    }
+  ],
+  "mutations": {
+    "agent_identity_activation_performed": false,
+    "env_secret_values_read": false,
+    "forge_registry_modified": false,
+    "identity_vault_db_write_performed": false,
+    "rmc_memory_write_performed": false
+  },
+  "patch_id": "patch223_aiweb_service_contracts_verify",
+  "path_summary": {
+    "aiweb_root": "/home/nic/aiweb",
+    "aiweb_root_exists": true,
+    "echoforge_candidates": [
+      {
+        "exists": false,
+        "path": "/home/nic/echoforge"
+      },
+      {
+        "exists": false,
+        "path": "/home/nic/aiweb/echoforge"
+      },
+      {
+        "exists": false,
+        "path": "/home/nic/aiweb/runtime_wrappers/echoforge"
+      }
+    ],
+    "forge_root": "/home/nic/forge",
+    "forge_root_exists": true,
+    "identity_vault_adapter_exists": true,
+    "identity_vault_root": "/home/nic/identity-vault",
+    "identity_vault_root_exists": true,
+    "protoforge2_candidates": [
+      {
+        "exists": false,
+        "path": "/home/nic/protoforge2"
+      },
+      {
+        "exists": false,
+        "path": "/home/nic/aiweb/protoforge2"
+      },
+      {
+        "exists": false,
+        "path": "/home/nic/aiweb/runtime_wrappers/protoforge2"
+      }
+    ],
+    "rmc_tools_exists": true,
+    "rmc_wrappers_root": "/home/nic/aiweb/runtime_wrappers",
+    "rmc_wrappers_root_exists": true
+  },
+  "required_contracts": [
+    "forge.contract.json",
+    "rmc.contract.json",
+    "identity_vault.contract.json",
+    "protoforge2.contract.json",
+    "echoforge.contract.json"
+  ],
+  "required_fields": [
+    "name",
+    "role",
+    "allowed_reads",
+    "allowed_writes",
+    "forbidden_writes",
+    "api_or_cli_commands_exposed",
+    "audit_log_path",
+    "test_command",
+    "startup_command",
+    "shutdown_command",
+    "health_check_command",
+    "owner_authority"
+  ],
+  "timestamp": "20260523_201124_UTC",
+  "verdict": "PASS"
+}

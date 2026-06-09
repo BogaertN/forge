@@ -1,0 +1,37 @@
+{
+  "schema_version": "snapshot_plan_v1_patch80",
+  "report_type": "SNAPSHOT_PLAN_EXPORT_V1_PATCH80",
+  "created_at": "2026-05-14T20:18:21",
+  "mode": "EXPORT_ONLY_NO_COPY_NO_RESTORE",
+  "authority": {
+    "snapshot_create_authority": false,
+    "restore_authority": false,
+    "shadow_restore_authority": false,
+    "project_file_write_authority": false,
+    "engine_file_write_authority": false,
+    "delete_authority": false,
+    "quarantine_authority": false,
+    "shell_access": false,
+    "chroma_write_authority": false
+  },
+  "count": 1,
+  "plans": [
+    {
+      "path": "/home/nic/forge/memory/snapshot_plans_v1/2026-05-14_201722_snapshot_plan_v1.json",
+      "created_at": "2026-05-14T20:17:22",
+      "candidate_count": 14,
+      "relationship_related_files": 1400,
+      "authority": {
+        "snapshot_create_authority": false,
+        "restore_authority": false,
+        "shadow_restore_authority": false,
+        "project_file_write_authority": false,
+        "engine_file_write_authority": false,
+        "delete_authority": false,
+        "quarantine_authority": false,
+        "shell_access": false,
+        "chroma_write_authority": false
+      }
+    }
+  ]
+}

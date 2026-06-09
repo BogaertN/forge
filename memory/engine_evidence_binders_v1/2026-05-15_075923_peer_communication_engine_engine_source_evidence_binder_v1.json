@@ -1,0 +1,152 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/peer_communication_engine",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/peer_communication_engine",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "peer_communication_engine",
+  "evidence_id": "EEB-b4d43bbd029bc6ce",
+  "file_count": 4,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "7d95829d3e5290c52f3d74b7e44509ee40d738bbec0b18ea47687ff620d8bf55",
+      "excerpt_start": "import json\nimport time\nimport random\n\nLOG_FILE = \"peer_comm_log.jsonl\"\n\ndef simulate_peer_message():\n    peer_id = f\"peer_{random.randint(1000,9999)}\"\n    message_type = random.choice([\"status_update\", \"sync_request\", \"handshake_ack\"])\n    symbolic_charge = random.randint(20, 100)\n\n    message = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"peer_id\": peer_id,\n        \"type\": message_type,\n        \"charge_level\": symbolic_charge\n    }\n\n    try:\n        with open(LOG_FILE, \"a\") as f:\n            f.write(json.dumps(message) + \"\\n\")\n        print(f\"✔️ Sent simulated peer message: {message}\")\n    except Exception as e:\n        print(f\"[!] Failed to log peer message: {e}\")\n\n    return message\n",
+      "functions_sample": [
+        "simulate_peer_message"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time",
+        "import random"
+      ],
+      "line_count": 27,
+      "path": "/home/nic/aiweb/engines/peer_communication_engine/peer_comm_core.py",
+      "relative_to_candidate": "peer_comm_core.py",
+      "sha256": "7d95829d3e5290c52f3d74b7e44509ee40d738bbec0b18ea47687ff620d8bf55",
+      "size_bytes": 739,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "aa406602904dbec9c7a84097f8f271ad932aeb2e58f19229dd340ac8be189eba",
+      "excerpt_start": "# Peer Communication Engine\n\nThis engine simulates peer-to-peer communication between AI.Web instances, sharing symbolic charge and status updates.\n\nOutputs communication logs into `peer_comm_log.jsonl`.\n\n",
+      "functions_sample": [
+        "Peer",
+        "Communication",
+        "Engine",
+        "This",
+        "engine",
+        "simulates",
+        "peer",
+        "communication",
+        "between",
+        "Web",
+        "instances",
+        "sharing",
+        "symbolic",
+        "charge",
+        "and",
+        "status",
+        "updates",
+        "Outputs",
+        "logs",
+        "into",
+        "peer_comm_log",
+        "jsonl"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/peer_communication_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "aa406602904dbec9c7a84097f8f271ad932aeb2e58f19229dd340ac8be189eba",
+      "size_bytes": 205,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "963127e26ffbda182211b81bdd9d2cb909a12b0d333e52aca1f09d2b0c315402",
+      "excerpt_start": "from peer_comm_core import simulate_peer_message\n\ndef test_peer_communication():\n    try:\n        result = simulate_peer_message()\n        print(\"✅ Test Passed: Peer message simulated.\")\n        print(result)\n    except Exception as e:\n        print(f\"❌ Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_peer_communication()\n",
+      "functions_sample": [
+        "test_peer_communication"
+      ],
+      "imports_sample": [
+        "from peer_comm_core import simulate_peer_message"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/peer_communication_engine/test_peer_comm.py",
+      "relative_to_candidate": "test_peer_comm.py",
+      "sha256": "963127e26ffbda182211b81bdd9d2cb909a12b0d333e52aca1f09d2b0c315402",
+      "size_bytes": 335,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "b107a781e25eaebd9ab280c21cb1408a44227baead7e45a812968e1eb987b0e0",
+      "excerpt_start": "{\n  \"engine\": \"peer_communication_engine\",\n  \"version\": \"v1.0\",\n  \"status\": \"build_mode\",\n  \"description\": \"Simulates symbolic peer-to-peer messaging for recursive memory sharing.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "peer_communication_engine",
+        "version",
+        "status",
+        "build_mode",
+        "description",
+        "Simulates",
+        "symbolic",
+        "peer",
+        "messaging",
+        "for",
+        "recursive",
+        "memory",
+        "sharing"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/peer_communication_engine/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "b107a781e25eaebd9ab280c21cb1408a44227baead7e45a812968e1eb987b0e0",
+      "size_bytes": 183,
+      "suffix": ".json"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "simulate_peer_message",
+    "test_peer_communication"
+  ],
+  "warnings": []
+}

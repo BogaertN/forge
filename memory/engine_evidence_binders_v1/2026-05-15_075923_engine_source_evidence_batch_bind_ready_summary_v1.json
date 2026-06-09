@@ -1,0 +1,505 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "counts": {
+    "attempted": 80,
+    "refused": 0,
+    "written": 80
+  },
+  "created_at": "2026-05-15_075923",
+  "refused": [],
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BATCH_BIND_READY_SUMMARY_V1_PATCH96",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "written": [
+    {
+      "engine_family": "activity_log",
+      "evidence_id": "EEB-929b125c673bef05",
+      "file_count": 1,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_activity_log_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "admin_override_console",
+      "evidence_id": "EEB-7e1e67cf08853d05",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_admin_override_console_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "agent_reflection_engine",
+      "evidence_id": "EEB-efe9b78ceabc9853",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_agent_reflection_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "agents_stack",
+      "evidence_id": "EEB-e7eb75087380b7b6",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_agents_stack_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "aiweb_os",
+      "evidence_id": "EEB-7b29cb90ee5e540e",
+      "file_count": 2,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_aiweb_os_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "aiweb_os_engine",
+      "evidence_id": "EEB-f8276d394f6ec7e0",
+      "file_count": 6,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_aiweb_os_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "ascii_interpreter_engine",
+      "evidence_id": "EEB-2acca33f6ecda788",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_ascii_interpreter_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "athena",
+      "evidence_id": "EEB-4615d0bfc9a40a98",
+      "file_count": 6,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_athena_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "athena_engine",
+      "evidence_id": "EEB-77509139334c5639",
+      "file_count": 5,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_athena_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "christping_listener",
+      "evidence_id": "EEB-a757f04a6033202d",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_christping_listener_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "christping_validator_engine",
+      "evidence_id": "EEB-45c0906ffe7e9875",
+      "file_count": 8,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_christping_validator_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "cold_archive_engine",
+      "evidence_id": "EEB-bc75b62ef10a008d",
+      "file_count": 7,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_cold_archive_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "collapse_prevention_engine",
+      "evidence_id": "EEB-82b276d0748f3de8",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_collapse_prevention_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "compute_contribution_engine",
+      "evidence_id": "EEB-91df18441d00687d",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_compute_contribution_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "confusion_checker",
+      "evidence_id": "EEB-0fec7336f1df5be6",
+      "file_count": 1,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_confusion_checker_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "contribution_dashboard_engine",
+      "evidence_id": "EEB-505effd8a0bf2be3",
+      "file_count": 5,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_contribution_dashboard_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "contribution_ledger_stack",
+      "evidence_id": "EEB-e30ad0b50c5c03dd",
+      "file_count": 5,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_contribution_ledger_stack_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "control_panel_ui_engine",
+      "evidence_id": "EEB-fd254ee2e030c2ee",
+      "file_count": 9,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_control_panel_ui_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "control_stack",
+      "evidence_id": "EEB-7df4589a96005a41",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_control_stack_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "core_stack_breather",
+      "evidence_id": "EEB-df535a295e2cc3a2",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_core_stack_breather_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "core_system_stack",
+      "evidence_id": "EEB-3bf3f922354da81e",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_core_system_stack_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "document_output_formatter",
+      "evidence_id": "EEB-73405632cfb6984f",
+      "file_count": 5,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_document_output_formatter_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "dream_state_engine",
+      "evidence_id": "EEB-250da52af3cef833",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_dream_state_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "drift_analyzer_tool",
+      "evidence_id": "EEB-bed831a69b1978e5",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_drift_analyzer_tool_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "drift_arbitration_engine",
+      "evidence_id": "EEB-caf4c9b35c20c0c1",
+      "file_count": 12,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_drift_arbitration_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "drift_signature_logger",
+      "evidence_id": "EEB-3f7110ff52737f3a",
+      "file_count": 12,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_drift_signature_logger_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "echo_trace_visualizer",
+      "evidence_id": "EEB-69e88d1e442364cb",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_echo_trace_visualizer_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "entropy_monitor_engine",
+      "evidence_id": "EEB-e7babb77acece4bb",
+      "file_count": 8,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_entropy_monitor_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "external_feed_listener",
+      "evidence_id": "EEB-5f91c358437560b6",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_external_feed_listener_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "failsafe_manager",
+      "evidence_id": "EEB-31299b3bb67a4c24",
+      "file_count": 5,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_failsafe_manager_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "field_resonance_mapper",
+      "evidence_id": "EEB-3709f6df7c34236d",
+      "file_count": 8,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_field_resonance_mapper_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "fluid_memory_engine",
+      "evidence_id": "EEB-787e388492eb001b",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_fluid_memory_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "gilligan",
+      "evidence_id": "EEB-79999be700688737",
+      "file_count": 9,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_gilligan_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "gilligan_drift_correction_upgrade",
+      "evidence_id": "EEB-e5144c91abeb8497",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_gilligan_drift_correction_upgrade_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "glyph_engine",
+      "evidence_id": "EEB-249760030f1dcef2",
+      "file_count": 8,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_glyph_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "glyph_ui_overlay",
+      "evidence_id": "EEB-f1a7bbfdc6404c98",
+      "file_count": 6,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_glyph_ui_overlay_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "goal_injection_engine",
+      "evidence_id": "EEB-6ef85e34d4584ab4",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_goal_injection_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "install_onboarding_engine",
+      "evidence_id": "EEB-27b6d26db1fca1c2",
+      "file_count": 5,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_install_onboarding_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "loop_resurrection_engine",
+      "evidence_id": "EEB-608882f63d11dd95",
+      "file_count": 5,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_loop_resurrection_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "memory_stack_engine",
+      "evidence_id": "EEB-4a5bb74b665f20b7",
+      "file_count": 12,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_memory_stack_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "memory_stack_engine_breathing",
+      "evidence_id": "EEB-50a63c58ff43301e",
+      "file_count": 9,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_memory_stack_engine_breathing_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "memory_stack_stack",
+      "evidence_id": "EEB-3cfbf7294cfbbb19",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_memory_stack_stack_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "naming_engine",
+      "evidence_id": "EEB-4811acd49109ee4b",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_naming_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "neo",
+      "evidence_id": "EEB-cf8cb4e8a7b97c69",
+      "file_count": 6,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_neo_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "neo_engine",
+      "evidence_id": "EEB-7d85a9d7c058d7e3",
+      "file_count": 5,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_neo_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "peer_communication_engine",
+      "evidence_id": "EEB-b4d43bbd029bc6ce",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_peer_communication_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "phase_engine",
+      "evidence_id": "EEB-69f03eb6723fbc4c",
+      "file_count": 6,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_phase_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "plugin_engine",
+      "evidence_id": "EEB-9f2d185c6369ad5f",
+      "file_count": 6,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_plugin_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "project_brain",
+      "evidence_id": "EEB-89de7d13d526bcb6",
+      "file_count": 12,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_project_brain_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "project_memory",
+      "evidence_id": "EEB-23949a7bc582f4ff",
+      "file_count": 1,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_project_memory_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "protoforge",
+      "evidence_id": "EEB-f507208845aa44b0",
+      "file_count": 12,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_protoforge_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "protoforge_dashboard_runtime",
+      "evidence_id": "EEB-d2adb3604e47fb64",
+      "file_count": 12,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_protoforge_dashboard_runtime_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "recursion_mapper",
+      "evidence_id": "EEB-a52a83f45b9147a9",
+      "file_count": 6,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_recursion_mapper_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "recursive_agent_kernel",
+      "evidence_id": "EEB-a25ac486f908ee13",
+      "file_count": 5,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_recursive_agent_kernel_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "recursive_field_breather",
+      "evidence_id": "EEB-4e67b792942bf24f",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_recursive_field_breather_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "recursive_field_engine",
+      "evidence_id": "EEB-d33acb110fc06e11",
+      "file_count": 12,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_recursive_field_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "recursive_field_stack",
+      "evidence_id": "EEB-85488a1a05a51204",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_recursive_field_stack_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "recursive_verification_engine",
+      "evidence_id": "EEB-d20bc5816e4cbd21",
+      "file_count": 6,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_recursive_verification_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "resonance_charge_meter",
+      "evidence_id": "EEB-980203111472c50f",
+      "file_count": 5,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_resonance_charge_meter_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "resonance_display",
+      "evidence_id": "EEB-56fbe400ef70c76b",
+      "file_count": 6,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_resonance_display_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "resonance_visualizer_engine",
+      "evidence_id": "EEB-46f2483eea8aaa4e",
+      "file_count": 5,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_resonance_visualizer_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "resurrection_planner",
+      "evidence_id": "EEB-8815431b5a347b48",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_resurrection_planner_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "revisit_previous_tasks",
+      "evidence_id": "EEB-fa154cacfa6339d5",
+      "file_count": 5,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_revisit_previous_tasks_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "saved_ideas",
+      "evidence_id": "EEB-8b432e29a66e3ba3",
+      "file_count": 6,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_saved_ideas_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "seed_manager",
+      "evidence_id": "EEB-06a9287346a56399",
+      "file_count": 5,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_seed_manager_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "spc_memory_migrator",
+      "evidence_id": "EEB-af3ca030500d9a8a",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_spc_memory_migrator_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "stack_breather_phase2",
+      "evidence_id": "EEB-39c6236c8ad9679b",
+      "file_count": 6,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_stack_breather_phase2_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "stack_linker_breather",
+      "evidence_id": "EEB-0b4dcdaedc7646d1",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_stack_linker_breather_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "step_counter",
+      "evidence_id": "EEB-12d370d32d5c9c14",
+      "file_count": 12,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_step_counter_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "symbolic_capacitor_engine",
+      "evidence_id": "EEB-f009925b8d6e9b8e",
+      "file_count": 8,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_symbolic_capacitor_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "symbolic_cognition_stack",
+      "evidence_id": "EEB-9ed14b42b452620b",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_symbolic_cognition_stack_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "symbolic_drift_visualizer",
+      "evidence_id": "EEB-b585d646e1a280cc",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_symbolic_drift_visualizer_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "symbolic_feedback_loop_engine",
+      "evidence_id": "EEB-deba4d6916e5108c",
+      "file_count": 5,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_symbolic_feedback_loop_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "symbolic_glyph_engine",
+      "evidence_id": "EEB-34f45c7f8dba494d",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_symbolic_glyph_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "symbolic_layers_stack",
+      "evidence_id": "EEB-e6c855743c10f45e",
+      "file_count": 4,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_symbolic_layers_stack_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "symbolic_policy_engine",
+      "evidence_id": "EEB-9deae6c9ced516e4",
+      "file_count": 5,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_symbolic_policy_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "system_log_engine",
+      "evidence_id": "EEB-05b9803a0be968af",
+      "file_count": 6,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_system_log_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "tier_enforcer",
+      "evidence_id": "EEB-2dcdd27009bc29cd",
+      "file_count": 7,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_tier_enforcer_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "tone_engine",
+      "evidence_id": "EEB-d96806024a817bac",
+      "file_count": 5,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_tone_engine_engine_source_evidence_binder_v1.json"
+    },
+    {
+      "engine_family": "trust_guard",
+      "evidence_id": "EEB-a8385832dc4fb5a6",
+      "file_count": 1,
+      "json_path": "/home/nic/forge/memory/engine_evidence_binders_v1/2026-05-15_075923_trust_guard_engine_source_evidence_binder_v1.json"
+    }
+  ]
+}

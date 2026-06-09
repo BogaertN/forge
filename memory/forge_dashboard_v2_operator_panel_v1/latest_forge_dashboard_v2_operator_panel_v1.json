@@ -1,0 +1,132 @@
+{
+  "active_patch": "Patch 154 \u2014 Dashboard v2 / Operator Control Panel",
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "live_restore_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "server_started": false,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-19T18:38:02",
+  "current_phase": "S18A \u2014 Dashboard v2 / Operator Control Panel",
+  "next_commands": [
+    "forge-dashboard-v2-build",
+    "forge-dashboard-v2-status",
+    "forge-status-api-build",
+    "forge-dashboard-build",
+    "Install Patch 155 when ready"
+  ],
+  "next_patch": "Patch 155 \u2014 AI.Web Runtime Build Readiness Map",
+  "panel_count": 7,
+  "panels": [
+    {
+      "lines": [
+        "Current phase: S18A \u2014 Dashboard v2 / Operator Control Panel",
+        "Active patch: Patch 154 \u2014 Dashboard v2 / Operator Control Panel",
+        "Next patch: Patch 155 \u2014 AI.Web Runtime Build Readiness Map",
+        "Tools: 498",
+        "Expected commands: 574",
+        "Trust: 5.0"
+      ],
+      "panel_id": "operator_overview",
+      "severity": "INFO",
+      "status": "READY",
+      "title": "Operator Overview"
+    },
+    {
+      "lines": [
+        "May delete rows: False",
+        "May renumber rows: UNKNOWN",
+        "May repurpose IDs: UNKNOWN",
+        "Rows: 26",
+        "Rule: roadmap patches append; they do not erase the trail."
+      ],
+      "panel_id": "roadmap_append_only",
+      "severity": "GOOD",
+      "status": "LOCKED",
+      "title": "Append-Only Roadmap Law"
+    },
+    {
+      "lines": [
+        "Canonical included: 54",
+        "Canonical excluded: 26",
+        "Tests pass: 67",
+        "Tests fail: 0",
+        "Patch impact high risk: UNKNOWN"
+      ],
+      "panel_id": "canonical_truth",
+      "severity": "GOOD",
+      "status": "CLEAN",
+      "title": "Canonical Truth"
+    },
+    {
+      "lines": [
+        "Snapshot ID: forge_snapshot_2026_05_19_181211",
+        "Snapshot verify: FORGE_SNAPSHOT_CREATE_VERIFY_PASS",
+        "Snapshot files: 542",
+        "Shadow run: FORGE_SHADOW_RESTORE_RUN_PASS",
+        "Shadow copied: 542",
+        "Shadow matches snapshot: True",
+        "Live changed since snapshot: 18"
+      ],
+      "panel_id": "snapshot_shadow",
+      "severity": "GOOD",
+      "status": "READY",
+      "title": "Snapshot / Shadow Evidence"
+    },
+    {
+      "lines": [
+        "Eligible for live apply: False",
+        "Gate pass: 8",
+        "Gate warn: 0",
+        "Gate fail: 4",
+        "Expected: live apply remains locked until snapshot, sandbox/test binding, rollback, and human approval evidence all exist."
+      ],
+      "panel_id": "live_apply_lock",
+      "severity": "LOCKED",
+      "status": "FORGE_LIVE_APPLY_ELIGIBILITY_V2_READY_NOT_ELIGIBLE",
+      "title": "Live Apply Lock"
+    },
+    {
+      "lines": [
+        "Queue total: 26",
+        "Repair ready: 1",
+        "Repair blocked: 2",
+        "Next repair target: stack_linker_breather",
+        "Deferred engines stay visible without hijacking the main roadmap."
+      ],
+      "panel_id": "deferred_queue",
+      "severity": "INFO",
+      "status": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY",
+      "title": "Deferred Engine Queue"
+    },
+    {
+      "lines": [
+        "Status API: FORGE_STATUS_API_SNAPSHOT_READY",
+        "Dashboard v1: FORGE_DASHBOARD_READONLY_READY",
+        "Dashboard roadmap panel: FORGE_DASHBOARD_ROADMAP_PANEL_READY",
+        "Dashboard v1 next: Patch 154 \u2014 Dashboard v2 / Operator Control Panel",
+        "Status API next: Patch 154 \u2014 Dashboard v2 / Operator Control Panel"
+      ],
+      "panel_id": "dashboard_surfaces",
+      "severity": "INFO",
+      "status": "READY",
+      "title": "Dashboard Surfaces"
+    }
+  ],
+  "plain_english": "Patch 154 creates a read-only operator panel with gauges only. No levers, no server, no live writes.",
+  "recommended_next_patch": "Patch 155 \u2014 AI.Web Runtime Build Readiness Map",
+  "report_type": "FORGE_DASHBOARD_V2_OPERATOR_PANEL",
+  "schema_version": "forge_dashboard_v2_operator_panel_v1_patch154",
+  "status": "FORGE_DASHBOARD_V2_OPERATOR_PANEL_READY",
+  "verified_state": {
+    "expected_commands": 574,
+    "roadmap_append_only": true,
+    "source_build_sequence_status": "FORGE_BUILD_SEQUENCE_READY",
+    "tools": 498,
+    "trust_level": 5.0
+  }
+}

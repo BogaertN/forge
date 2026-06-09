@@ -1,0 +1,222 @@
+{
+  "approval_plan": {
+    "active_patch": "Patch 163 \u2014 Runtime Live Build Approval Token / Apply Plan",
+    "apply_plan": {
+      "forbidden_in_patch_163": [
+        "write_live_runtime_files",
+        "patch_apply",
+        "engine_write",
+        "live_restore"
+      ],
+      "planned_file_count": 4,
+      "planned_files": [
+        {
+          "live_path_exists": false,
+          "planned_live_path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/README.md",
+          "purpose": "human-readable module purpose, source evidence, and audit warning",
+          "relative_path": "governance_and_safety/failsafe_manager/README.md",
+          "sandbox_path": "/home/nic/forge/memory/forge_runtime_candidate_sandboxes_v1/runtime_candidate_failsafe_manager_20260519_203910/governance_and_safety/failsafe_manager/README.md",
+          "sha256": "d29cd08e2baab69a88baffd92b23453025ca66f7c5a34a0ceefef9ff07bec0a2"
+        },
+        {
+          "live_path_exists": false,
+          "planned_live_path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/runtime_manifest.json",
+          "purpose": "machine-readable candidate metadata, hashes, source authority, rollback hooks",
+          "relative_path": "governance_and_safety/failsafe_manager/runtime_manifest.json",
+          "sandbox_path": "/home/nic/forge/memory/forge_runtime_candidate_sandboxes_v1/runtime_candidate_failsafe_manager_20260519_203910/governance_and_safety/failsafe_manager/runtime_manifest.json",
+          "sha256": "5f83dfae9b02205ea410319f10c12f5e8a53fe194ef07d02b995b16b0dacd659"
+        },
+        {
+          "live_path_exists": false,
+          "planned_live_path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py",
+          "purpose": "thin runtime wrapper candidate; sandbox-only in later patch",
+          "relative_path": "governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py",
+          "sandbox_path": "/home/nic/forge/memory/forge_runtime_candidate_sandboxes_v1/runtime_candidate_failsafe_manager_20260519_203910/governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py",
+          "sha256": "3690cf4100c26e5ce686b36f652aff84571aab352cfb04ee79bf200bd533bfdc"
+        },
+        {
+          "live_path_exists": false,
+          "planned_live_path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py",
+          "purpose": "future test candidate proving manifest parse/path safety",
+          "relative_path": "governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py",
+          "sandbox_path": "/home/nic/forge/memory/forge_runtime_candidate_sandboxes_v1/runtime_candidate_failsafe_manager_20260519_203910/governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py",
+          "sha256": "648f2160af0bf60e7fb592c96d1f39951ccb77feccae1c9cfb5d4ddb0b8539ce"
+        }
+      ],
+      "requires_before_live_build": [
+        "explicit human approval token",
+        "live target backup plan",
+        "live apply dry-run",
+        "rollback plan",
+        "final confirmation gate"
+      ],
+      "status": "FORGE_RUNTIME_APPLY_PLAN_DRAFT_READY_NO_LIVE_WRITE",
+      "target_root": "/home/nic/aiweb/runtime"
+    },
+    "approval_token_status": "TEMPLATE_READY_NOT_APPROVED",
+    "approval_token_template": {
+      "approval_required_phrase": "CONFIRM_RUNTIME_LIVE_BUILD_APPROVAL_FOR_FAILSAFE_MANAGER",
+      "approval_status": "TEMPLATE_READY_NOT_APPROVED",
+      "human_approval_present": false,
+      "meaning": "This is a Forge-owned approval template only. It is not a live-build approval and cannot authorize writes.",
+      "token_id": "runtime_approval_template_01c5fbb213fb58e105b13cbb"
+    },
+    "authority": {
+      "approval_template_authority": true,
+      "engine_file_write_authority": false,
+      "forge_owned_report_write_authority": true,
+      "human_approval_authority": false,
+      "live_restore_authority": false,
+      "patch_apply_authority": false,
+      "project_file_write_authority": false,
+      "runtime_file_write_authority": false
+    },
+    "candidate": "failsafe_manager",
+    "created_at": "2026-05-19T21:20:49",
+    "current_phase": "S19I \u2014 Runtime Live Build Approval Token / Apply Plan",
+    "file_count": 4,
+    "files_verified": 4,
+    "gate_summary": {
+      "fail": 0,
+      "locked": 2,
+      "pass": 5,
+      "warn": 2
+    },
+    "gates": [
+      {
+        "blocks_live_build": false,
+        "detail": "FORGE_RUNTIME_LIVE_PREFLIGHT_READY_GATE_LOCKED",
+        "id": "A01",
+        "name": "Preflight report exists and is planning-ready",
+        "status": "PASS"
+      },
+      {
+        "blocks_live_build": false,
+        "detail": "FORGE_RUNTIME_CANDIDATE_STATIC_VERIFICATION_READY_GATE_LOCKED",
+        "id": "A02",
+        "name": "Static sandbox candidate verification clean",
+        "status": "PASS"
+      },
+      {
+        "blocks_live_build": false,
+        "detail": "files_verified=4/4",
+        "id": "A03",
+        "name": "Candidate files statically verified",
+        "status": "PASS"
+      },
+      {
+        "blocks_live_build": false,
+        "detail": "FORGE_RUNTIME_BUILD_SANDBOX_VERIFICATION_READY_PLANNING_ONLY",
+        "id": "A04",
+        "name": "Runtime sandbox verification evidence exists",
+        "status": "PASS"
+      },
+      {
+        "blocks_live_build": false,
+        "detail": "UNKNOWN",
+        "id": "A05",
+        "name": "Snapshot evidence exists",
+        "status": "WARN"
+      },
+      {
+        "blocks_live_build": false,
+        "detail": "shadow_matches_snapshot=None problems=0",
+        "id": "A06",
+        "name": "Shadow forensic diff clean",
+        "status": "WARN"
+      },
+      {
+        "blocks_live_build": false,
+        "detail": "runtime_approval_template_01c5fbb213fb58e105b13cbb",
+        "id": "A07",
+        "name": "Approval token template generated",
+        "status": "PASS"
+      },
+      {
+        "blocks_live_build": true,
+        "detail": "No approval command in Patch 163 grants write authority",
+        "id": "A08",
+        "name": "Human approval present",
+        "status": "LOCKED"
+      },
+      {
+        "blocks_live_build": true,
+        "detail": "Patch 163 builds an apply plan only; no live write authority",
+        "id": "A09",
+        "name": "Live apply authority",
+        "status": "LOCKED"
+      }
+    ],
+    "human_approval_present": false,
+    "live_build_ready": false,
+    "next_patch": "Patch 164 \u2014 Runtime Live Build Backup / Apply Dry Run",
+    "plain_english": "Patch 163 creates a Forge-owned approval token template and live apply plan draft, but does not approve or execute the runtime build.",
+    "planning_ready": true,
+    "problem_count": 0,
+    "problems": [],
+    "recommended_next_patch": "Patch 164 \u2014 Runtime Live Build Backup / Apply Dry Run",
+    "report_type": "FORGE_RUNTIME_LIVE_APPROVAL_V1",
+    "roadmap_mutation_policy": "APPEND_ONLY",
+    "schema_version": "forge_runtime_live_approval_v1_patch163",
+    "selected_candidate": {
+      "canonical_path": "aiweb/engines/failsafe_manager",
+      "canonical_status": "CANONICAL_INCLUDED",
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "dependency_kind": "canonical_runtime_module",
+      "eligible_for_planning": true,
+      "engine": "failsafe_manager",
+      "live_build_ready": false,
+      "live_write_authority": false,
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "relationship_count": 0,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "risk_level": "LOW",
+      "risk_score": 25,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "runtime_domain": "GOVERNANCE_AND_SAFETY",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+      "test_status": "PASS"
+    },
+    "status": "FORGE_RUNTIME_LIVE_APPROVAL_PLAN_READY_GATE_LOCKED"
+  },
+  "exported_at": "2026-05-19T21:21:20",
+  "next_patch": "Patch 164 \u2014 Runtime Live Build Backup / Apply Dry Run",
+  "report_type": "FORGE_RUNTIME_LIVE_APPROVAL_EXPORT_V1",
+  "roadmap_mutation_policy": "APPEND_ONLY",
+  "schema_version": "forge_runtime_live_approval_v1_patch163",
+  "token_template": {
+    "active_patch": "Patch 163 \u2014 Runtime Live Build Approval Token / Apply Plan",
+    "approval_token_status": "TEMPLATE_READY_NOT_APPROVED",
+    "approval_token_template": {
+      "approval_required_phrase": "CONFIRM_RUNTIME_LIVE_BUILD_APPROVAL_FOR_FAILSAFE_MANAGER",
+      "approval_status": "TEMPLATE_READY_NOT_APPROVED",
+      "human_approval_present": false,
+      "meaning": "This is a Forge-owned approval template only. It is not a live-build approval and cannot authorize writes.",
+      "token_id": "runtime_approval_template_01c5fbb213fb58e105b13cbb"
+    },
+    "candidate": "failsafe_manager",
+    "created_at": "2026-05-19T21:20:52",
+    "current_phase": "S19I \u2014 Runtime Live Build Approval Token / Apply Plan",
+    "human_approval_present": false,
+    "live_build_ready": false,
+    "next_patch": "Patch 164 \u2014 Runtime Live Build Backup / Apply Dry Run",
+    "plain_english": "This token is a template only. It does not approve the live build and cannot authorize runtime writes.",
+    "planning_ready": true,
+    "recommended_next_patch": "Patch 164 \u2014 Runtime Live Build Backup / Apply Dry Run",
+    "report_type": "FORGE_RUNTIME_LIVE_APPROVAL_TOKEN_TEMPLATE_V1",
+    "roadmap_mutation_policy": "APPEND_ONLY",
+    "schema_version": "forge_runtime_live_approval_v1_patch163",
+    "status": "FORGE_RUNTIME_LIVE_APPROVAL_TOKEN_TEMPLATE_READY_NOT_APPROVED"
+  }
+}

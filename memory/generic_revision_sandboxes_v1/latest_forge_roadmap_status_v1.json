@@ -1,0 +1,18 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T13:02:58",
+  "current_milestone": "LLM-driven revision sandbox rerun loop",
+  "latest_revision_sandbox_llm_recommendation": "REVISE_SANDBOX_DEPENDENCY_PLAN",
+  "latest_revision_sandbox_status": "GENERIC_REVISION_SANDBOX_TESTS_ISSUES",
+  "next_patch_sequence": [
+    "Patch 139/140 loop \u2014 revise from sandbox result",
+    "Patch 143 \u2014 Post-Apply Verification + Repair Memory Loop",
+    "Patch 144 \u2014 Generalized LLM Repair Memory Lessons"
+  ],
+  "report_type": "FORGE_ROADMAP_STATUS_V1",
+  "schema_version": "forge_roadmap_status_v1_patch141",
+  "status": "FORGE_ROADMAP_STATUS_READY"
+}

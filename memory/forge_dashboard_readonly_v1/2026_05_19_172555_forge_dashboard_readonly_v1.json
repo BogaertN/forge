@@ -1,0 +1,196 @@
+{
+  "authority": {
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ledger_mutation": false,
+    "network_opened": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "server_started": false,
+    "shell_execution_authority": false
+  },
+  "build_phase_gate": {
+    "gate_fail_count": 0,
+    "gate_pass_count": 8,
+    "gate_warn_count": 0,
+    "status": "FORGE_BUILD_PHASE_GATE_READY"
+  },
+  "build_sequence": {
+    "current_phase": "S13 \u2014 Source Authority Runtime Binder hardening",
+    "latest_sequence_path": "/home/nic/forge/memory/forge_build_sequence_v1/latest_forge_build_sequence_v1.json",
+    "next_patch": "Patch 149 \u2014 LLM Patch Proposal v2",
+    "status": "FORGE_BUILD_SEQUENCE_READY"
+  },
+  "created_at": "2026-05-19T17:25:55",
+  "dashboard_mode": "STATIC_FILE_READ_ONLY_NO_SERVER",
+  "dashboard_roadmap_panel": {
+    "latest_panel_path": "/home/nic/forge/memory/forge_dashboard_roadmap_panel_v1/latest_forge_dashboard_roadmap_panel_v1.json",
+    "panel_count": 4,
+    "status": "FORGE_DASHBOARD_ROADMAP_PANEL_READY"
+  },
+  "html_path": "/home/nic/forge/memory/forge_dashboard_readonly_v1/2026_05_19_172555_forge_dashboard_readonly_v1.html",
+  "html_sha256": "8c27c442518376d5e358b699efedeb8daf2aaf6518f63b3835cdf4fffa03cbdd",
+  "latest_html_path": "/home/nic/forge/memory/forge_dashboard_readonly_v1/latest_forge_dashboard_readonly_v1.html",
+  "next_commands": [
+    "forge-source-authority-hardening-build",
+    "forge-source-authority-hardening-export",
+    "forge-status-api-build",
+    "forge-dashboard-build",
+    "Install Patch 149 when ready"
+  ],
+  "panel_count": 11,
+  "panels": [
+    {
+      "lines": [
+        "Tools: 462",
+        "Trust: 5.0",
+        "Expected commands: 538",
+        "API mode: READ_ONLY_FILE_BACKED_CONTRACT_NO_SERVER"
+      ],
+      "panel_id": "system",
+      "status": "FORGE_STATUS_API_SNAPSHOT_READY",
+      "title": "System Status"
+    },
+    {
+      "lines": [
+        "Ledger: total=80 approved=56 deferred=24 pending=0",
+        "Included: 54",
+        "Excluded: 26",
+        "SHA: 379b6ef9852ce288b2b3551ba89aa809adac495312e62602edf5ac6fb9a3b604"
+      ],
+      "panel_id": "engines",
+      "status": "CANONICAL_LOCKFILE_PRESENT",
+      "title": "Canonical Engines"
+    },
+    {
+      "lines": [
+        "Targets: 67",
+        "Pass: 67",
+        "Fail: 0",
+        "Blocked: 0 Timeout: 0 Error: 0"
+      ],
+      "panel_id": "tests",
+      "status": "CANONICAL_TEST_RUN_COMPLETED_ALL_PASS",
+      "title": "Canonical Safe Tests"
+    },
+    {
+      "lines": [
+        "Matches: 54",
+        "Low: 37",
+        "Medium: 17",
+        "High: 0",
+        "Test issues: 0"
+      ],
+      "panel_id": "impact",
+      "status": "PATCH_IMPACT_MAP_READY",
+      "title": "Patch Impact / Risk"
+    },
+    {
+      "lines": [
+        "Rows: 54",
+        "Edges: 86",
+        "Medium-risk neighbors: 5",
+        "High-risk neighbors: 0"
+      ],
+      "panel_id": "relationships",
+      "status": "CANONICAL_ENGINE_RELATIONSHIP_MAP_READY",
+      "title": "Runtime Relationships"
+    },
+    {
+      "lines": [
+        "Excluded total: 26",
+        "Deferred total: 24",
+        "Safe to delete now: 0",
+        "Safe to quarantine now: 0",
+        "Safe to promote now: 0"
+      ],
+      "panel_id": "disposition",
+      "status": "ENGINE_DISPOSITION_REPORT_READY",
+      "title": "Excluded / Deferred Engines"
+    },
+    {
+      "lines": [
+        "Exists: True",
+        "Entries checked: 2500",
+        "Chain breaks: 0",
+        "Latest entry hash: 582ce4aad684545f"
+      ],
+      "panel_id": "audit",
+      "status": "AUDIT_OK",
+      "title": "Audit Chain"
+    },
+    {
+      "lines": [
+        "Read only: True",
+        "Project writes: False",
+        "Engine writes: False",
+        "Patch apply: False",
+        "Shell execution: False",
+        "Server started: False"
+      ],
+      "panel_id": "authority",
+      "status": "READ_ONLY",
+      "title": "Authority / Permissions"
+    },
+    {
+      "lines": [
+        "Current: S13 \u2014 Source Authority Runtime Binder hardening",
+        "Next: Patch 149 \u2014 LLM Patch Proposal v2",
+        "Panel count: 4",
+        "Panel path: /home/nic/forge/memory/forge_dashboard_roadmap_panel_v1/latest_forge_dashboard_roadmap_panel_v1.json"
+      ],
+      "panel_id": "dashboard_roadmap_panel",
+      "status": "FORGE_DASHBOARD_ROADMAP_PANEL_READY",
+      "title": "Dashboard Roadmap Panel"
+    },
+    {
+      "lines": [
+        "Current: S13 \u2014 Source Authority Runtime Binder hardening",
+        "Next: Patch 149 \u2014 LLM Patch Proposal v2",
+        "Deferred items: 2",
+        "Blocked items: 0",
+        "Roadmap source: forge_build_sequence_v1"
+      ],
+      "panel_id": "build_sequence",
+      "status": "FORGE_BUILD_SEQUENCE_READY",
+      "title": "Build Sequence"
+    },
+    {
+      "lines": [
+        "Pass: 8",
+        "Warn: 0",
+        "Fail: 0",
+        "Next: Patch 149 \u2014 LLM Patch Proposal v2",
+        "Gate source: forge_build_phase_gates_v1"
+      ],
+      "panel_id": "build_phase_gate",
+      "status": "FORGE_BUILD_PHASE_GATE_READY",
+      "title": "Build Phase Gate"
+    }
+  ],
+  "plain_english": "Static read-only Forge dashboard artifact now includes a dedicated dashboard roadmap panel. No server is started and no write controls are exposed.",
+  "recommended_next_patch": "Patch 149 \u2014 LLM Patch Proposal v2",
+  "report_type": "FORGE_DASHBOARD_READONLY_V1",
+  "schema_version": "forge_dashboard_readonly_v1_patch147",
+  "source_status_api_path": "/home/nic/forge/memory/forge_status_api_v1/latest_forge_status_api_snapshot_v1.json",
+  "source_status_api_status": "FORGE_STATUS_API_SNAPSHOT_READY",
+  "status": "FORGE_DASHBOARD_READONLY_READY",
+  "summary": {
+    "audit_chain_breaks_tail": 0,
+    "canonical_excluded": 26,
+    "canonical_included": 54,
+    "expected_commands": 538,
+    "latest_impact_high_risk": 0,
+    "latest_impact_medium_risk": 17,
+    "latest_test_fail": 0,
+    "latest_test_pass": 67,
+    "latest_test_status": "CANONICAL_TEST_RUN_COMPLETED_ALL_PASS",
+    "ledger_approved": 56,
+    "ledger_deferred": 24,
+    "ledger_pending": 0,
+    "ledger_total": 80,
+    "tools": 462,
+    "trust_level": 5.0
+  }
+}

@@ -1,0 +1,427 @@
+{
+  "contract": {
+    "allowed_writes_empty": true,
+    "canonical_database_path": "/home/nic/identity-vault/data/identity_vault.db",
+    "controlled_by": "Forge",
+    "exists": true,
+    "loaded": true,
+    "missing": [],
+    "ready": true,
+    "status": "DRAFT_NOT_ACTIVE"
+  },
+  "db_layer": {
+    "db_js_exists": true,
+    "db_js_path": "/home/nic/identity-vault/db.js",
+    "export_hits": [
+      "module_exports",
+      "exports_dot"
+    ],
+    "function_like_names": [
+      "closeDB",
+      "createSchema",
+      "current",
+      "db",
+      "decrypted",
+      "deleteProfile",
+      "encrypted",
+      "fields",
+      "getAuditTrail",
+      "getProfile",
+      "getState",
+      "initDB",
+      "logFeedback",
+      "newVersion",
+      "path",
+      "profile",
+      "saveProfile",
+      "sqlite3",
+      "stmt",
+      "updateProfile",
+      "updateState",
+      "updatedProfile",
+      "values"
+    ],
+    "key_terms": {
+      "has_module_exports": true,
+      "has_named_exports": true,
+      "mentions_canonical_identity_vault_db": false,
+      "mentions_data_directory": true,
+      "mentions_env": true,
+      "mentions_legacy_vault_db": true,
+      "uses_sqlite3": true
+    },
+    "node_check": {
+      "cmd": [
+        "node",
+        "--check",
+        "/home/nic/identity-vault/db.js"
+      ],
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    "testability_ready_static": true
+  },
+  "db_path_references": {
+    "by_code": {
+      "canonical_data_identity_vault_db": 4,
+      "database_env_reference": 24,
+      "legacy_root_vault_db": 3
+    },
+    "canonical_reference_count": 4,
+    "files_with_hits": {
+      "identity-vault/cli.js": 5,
+      "identity-vault/db.js": 4,
+      "identity-vault/plugins/example-hook.js": 3,
+      "identity-vault/scripts/init-database.js": 4,
+      "identity-vault/scripts/reset-database.js": 2,
+      "identity-vault/security.config.js": 3,
+      "identity-vault/server.js": 3,
+      "identity-vault/service_contracts/identity_vault_readonly_service_contract.draft.json": 2,
+      "identity-vault/tests/server.test.js": 2,
+      "identity-vault/utils/drift.js": 1,
+      "identity-vault/utils/encryption.js": 1,
+      "identity-vault/utils/integrations.js": 1
+    },
+    "hit_count": 31,
+    "hits_sample": [
+      {
+        "code": "legacy_root_vault_db",
+        "file": "identity-vault/db.js",
+        "line": 50,
+        "text": "// Init DB: Safe, local file-based (vault.db in project root, gitignore'd)"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/db.js",
+        "line": 98,
+        "text": "const decrypted = decrypt(row.data, process.env.ENCRYPTION_KEY);"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/db.js",
+        "line": 122,
+        "text": "const current = JSON.parse(decrypt(row.data, process.env.ENCRYPTION_KEY));"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/db.js",
+        "line": 127,
+        "text": "const encrypted = encrypt(JSON.stringify(updatedProfile), process.env.ENCRYPTION_KEY);"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/server.js",
+        "line": 10,
+        "text": "const PORT = process.env.PORT || 3000;"
+      },
+      {
+        "code": "legacy_root_vault_db",
+        "file": "identity-vault/server.js",
+        "line": 11,
+        "text": "const dbPath = path.join(__dirname, 'vault.db');"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/server.js",
+        "line": 48,
+        "text": "if (!token || token !== process.env.API_TOKEN) {"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/cli.js",
+        "line": 28,
+        "text": "if (process.env.API_TOKEN) {"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/cli.js",
+        "line": 29,
+        "text": "headers.Authorization = `Bearer ${process.env.API_TOKEN}`;"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/cli.js",
+        "line": 36,
+        "text": "url: `http://localhost:${process.env.PORT || 3000}${url}`,"
+      },
+      {
+        "code": "legacy_root_vault_db",
+        "file": "identity-vault/cli.js",
+        "line": 51,
+        "text": "const dbPath = path.join(__dirname, 'vault.db');"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/cli.js",
+        "line": 170,
+        "text": "const url = await ngrok.connect({ addr: port, authtoken: process.env.NGROK_TOKEN });"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/security.config.js",
+        "line": 57,
+        "text": "secret: process.env.SESSION_SECRET,"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/security.config.js",
+        "line": 61,
+        "text": "secure: process.env.NODE_ENV === 'production',"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/security.config.js",
+        "line": 70,
+        "text": "origin: process.env.CORS_ORIGINS?.split(',') || ['http://localhost:3000'],"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/tests/server.test.js",
+        "line": 26,
+        "text": "process.env.ENCRYPTION_KEY = mockKey;"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/tests/server.test.js",
+        "line": 27,
+        "text": "process.env.API_TOKEN = 'test_token';"
+      },
+      {
+        "code": "canonical_data_identity_vault_db",
+        "file": "identity-vault/service_contracts/identity_vault_readonly_service_contract.draft.json",
+        "line": 12,
+        "text": "\"canonical_database_path\": \"/home/nic/identity-vault/data/identity_vault.db\","
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/service_contracts/identity_vault_readonly_service_contract.draft.json",
+        "line": 12,
+        "text": "\"canonical_database_path\": \"/home/nic/identity-vault/data/identity_vault.db\","
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/utils/integrations.js",
+        "line": 87,
+        "text": "llm_config: { config_list: [{ model: 'gpt-4', api_key: process.env.OPENAI_API_KEY }] }, // Stub; use env"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/utils/encryption.js",
+        "line": 23,
+        "text": "const envKey = process.env.ENCRYPTION_KEY;"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/utils/drift.js",
+        "line": 160,
+        "text": "const confirm = process.env.AUTO_CONFIRM === 'true' || true; // Safety: Opt-in auto"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/plugins/example-hook.js",
+        "line": 21,
+        "text": "if (drift && parseFloat(process.env.DRIFT_THRESHOLD || '0.3') < drift.severity) {"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/plugins/example-hook.js",
+        "line": 26,
+        "text": "const webhookUrl = process.env.SLACK_WEBHOOK_URL;"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/plugins/example-hook.js",
+        "line": 95,
+        "text": "const expected = 'sha256=' + crypto.createHmac('sha256', process.env.HOOK_SECRET).update(JSON.stringify(data)).digest('hex');"
+      },
+      {
+        "code": "canonical_data_identity_vault_db",
+        "file": "identity-vault/scripts/init-database.js",
+        "line": 6,
+        "text": "const dataDir = path.dirname(process.env.DB_PATH || './data/identity_vault.db');"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/scripts/init-database.js",
+        "line": 6,
+        "text": "const dataDir = path.dirname(process.env.DB_PATH || './data/identity_vault.db');"
+      },
+      {
+        "code": "canonical_data_identity_vault_db",
+        "file": "identity-vault/scripts/init-database.js",
+        "line": 11,
+        "text": "const dbPath = process.env.DB_PATH || './data/identity_vault.db';"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/scripts/init-database.js",
+        "line": 11,
+        "text": "const dbPath = process.env.DB_PATH || './data/identity_vault.db';"
+      },
+      {
+        "code": "canonical_data_identity_vault_db",
+        "file": "identity-vault/scripts/reset-database.js",
+        "line": 7,
+        "text": "const dbPath = process.env.DB_PATH || './data/identity_vault.db';"
+      },
+      {
+        "code": "database_env_reference",
+        "file": "identity-vault/scripts/reset-database.js",
+        "line": 7,
+        "text": "const dbPath = process.env.DB_PATH || './data/identity_vault.db';"
+      }
+    ],
+    "legacy_vault_db_reference_count": 3,
+    "scanned_file_count": 23
+  },
+  "drift_safety": {
+    "drift_js_exists": true,
+    "drift_js_path": "/home/nic/identity-vault/utils/drift.js",
+    "high_risk_hit_count": 1,
+    "hits": [
+      {
+        "code": "RECURSIVE_FEEDBACK",
+        "context": [
+          "1: // utils/drift.js - Conceptual Drift Tracking, Contradiction Alerts, and Recursive Feedback for Vault",
+          "2: // Monitors profile updates for shifts (e.g., formality change from 'casual' to 'stoic' = drift score),",
+          "3: // flags contradictions (e.g., pushback: true but require_honest_pushback: false), triggers recursive loops."
+        ],
+        "file": "identity-vault/utils/drift.js",
+        "line": 1,
+        "text": "// utils/drift.js - Conceptual Drift Tracking, Contradiction Alerts, and Recursive Feedback for Vault"
+      },
+      {
+        "code": "RECURSIVE_FEEDBACK",
+        "context": [
+          "3: // flags contradictions (e.g., pushback: true but require_honest_pushback: false), triggers recursive loops.",
+          "4: // Features: Diff-based detection (JSON patch), semantic alerts (string similarity via Levenshtein stub),",
+          "5: // recursive feedback (simulate loops: propose fixes, confirm), log integration.",
+          "6: // Advanced: Thresholds (e.g., >0.3 similarity = alert), context-aware (compare to project_phase),",
+          "7: // ties to meta_rules (e.g., if drift_tracking: true, enforce), future: Embed LLM for semantic diff."
+        ],
+        "file": "identity-vault/utils/drift.js",
+        "line": 5,
+        "text": "// recursive feedback (simulate loops: propose fixes, confirm), log integration."
+      },
+      {
+        "code": "RECURSIVE_FEEDBACK",
+        "context": [
+          "139: }",
+          "140: ",
+          "141: // Recursive feedback: Simulate loop\u2014propose fixes, \"confirm\" (CLI stub), update/log",
+          "142: async function recursiveFeedback(profile, issue, maxIterations = 3, current = 0) {",
+          "143: if (current >= maxIterations) {"
+        ],
+        "file": "identity-vault/utils/drift.js",
+        "line": 141,
+        "text": "// Recursive feedback: Simulate loop\u2014propose fixes, \"confirm\" (CLI stub), update/log"
+      },
+      {
+        "code": "RECURSIVE_FEEDBACK",
+        "context": [
+          "155: }",
+          "156: ",
+          "157: console.log(`Recursive Feedback (Iteration ${current + 1}): ${proposal}`);",
+          "158: ",
+          "159: // Stub confirm (in CLI: readline; here: assume yes for demo, or env flag)"
+        ],
+        "file": "identity-vault/utils/drift.js",
+        "line": 157,
+        "text": "console.log(`Recursive Feedback (Iteration ${current + 1}): ${proposal}`);"
+      },
+      {
+        "code": "AUTO_CONFIRM_TERM",
+        "context": [
+          "158: ",
+          "159: // Stub confirm (in CLI: readline; here: assume yes for demo, or env flag)",
+          "160: const confirm = process.env.AUTO_CONFIRM === 'true' || true; // Safety: Opt-in auto",
+          "161: if (confirm) {",
+          "162: // Apply proposal (simple: toggle bool or revert string)"
+        ],
+        "file": "identity-vault/utils/drift.js",
+        "line": 160,
+        "text": "const confirm = process.env.AUTO_CONFIRM === 'true' || true; // Safety: Opt-in auto"
+      }
+    ],
+    "node_check": {
+      "cmd": [
+        "node",
+        "--check",
+        "/home/nic/identity-vault/utils/drift.js"
+      ],
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    "requires_patch": true,
+    "risk_codes": [
+      "AUTO_CONFIRM_TERM",
+      "RECURSIVE_FEEDBACK"
+    ],
+    "risk_hit_count": 5
+  },
+  "findings": [
+    {
+      "code": "IV_LEGACY_DB_REFERENCES",
+      "level": "WARN",
+      "message": "Code still references root-level vault.db; canonical path should be data/identity_vault.db unless migration review says otherwise."
+    },
+    {
+      "code": "IV_DRIFT_AUTO_CONFIRM_RISK",
+      "level": "WARN",
+      "message": "utils/drift.js contains high-risk confirmation/auto-approval patterns that should be disabled or gated."
+    },
+    {
+      "code": "IV_TEST_FILES_PRESENT",
+      "level": "INFO",
+      "message": "Test files exist and can be used after the DB layer is normalized."
+    }
+  ],
+  "identity_vault_root": "/home/nic/identity-vault",
+  "no_mutation_claim": {
+    "agent_identity_activation_performed": false,
+    "database_write_performed": false,
+    "env_secret_values_read": false,
+    "forge_registry_modified": false
+  },
+  "tests": {
+    "package_json_error": null,
+    "package_json_loaded": true,
+    "sample_node_checks": [
+      {
+        "file": "identity-vault/tests/server.test.js",
+        "node_check": {
+          "cmd": [
+            "node",
+            "--check",
+            "/home/nic/identity-vault/tests/server.test.js"
+          ],
+          "ok": true,
+          "returncode": 0,
+          "stderr_tail": "",
+          "stdout_tail": ""
+        }
+      }
+    ],
+    "test_file_count": 1,
+    "test_files_sample": [
+      "identity-vault/tests/server.test.js"
+    ],
+    "test_scripts": {
+      "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+      "test": "NODE_ENV=test jest --coverage --passWithNoTests",
+      "test:e2e": "NODE_ENV=test jest --testPathPattern=e2e",
+      "test:integration": "NODE_ENV=test jest --testPathPattern=integration",
+      "test:unit": "NODE_ENV=test jest --testPathPattern=unit",
+      "test:watch": "NODE_ENV=test jest --watch",
+      "type-check": "tsc --noEmit",
+      "validate": "npm run lint:check && npm run format:check && npm run test && npm run security:audit"
+    },
+    "tests_root_exists": true
+  },
+  "timestamp": "20260523_194943_UTC",
+  "verdict": "WARN"
+}

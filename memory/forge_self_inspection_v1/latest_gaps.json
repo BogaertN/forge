@@ -1,0 +1,103 @@
+{
+  "analysed_at": "20260522_195359",
+  "gaps": [
+    [
+      "file_operations",
+      "17%",
+      [
+        "read files",
+        "write files",
+        "search files",
+        "list files",
+        "copy files",
+        "delete files"
+      ]
+    ],
+    [
+      "code_analysis",
+      "0%",
+      [
+        "analyze code",
+        "find functions",
+        "check imports",
+        "detect dependencies"
+      ]
+    ],
+    [
+      "document_handling",
+      "25%",
+      [
+        "read pdf",
+        "read docx",
+        "read markdown",
+        "extract text"
+      ]
+    ],
+    [
+      "search",
+      "0%",
+      [
+        "search web",
+        "search local",
+        "search memory",
+        "search audit"
+      ]
+    ],
+    [
+      "testing",
+      "0%",
+      [
+        "run tests",
+        "validate syntax",
+        "check output"
+      ]
+    ],
+    [
+      "memory_management",
+      "0%",
+      [
+        "read memory",
+        "write memory",
+        "search memory",
+        "export memory"
+      ]
+    ],
+    [
+      "agent_planning",
+      "0%",
+      [
+        "plan tasks",
+        "break down goals",
+        "sequence steps"
+      ]
+    ],
+    [
+      "external_tools",
+      "0%",
+      [
+        "discover tools",
+        "install tools",
+        "wrap tools"
+      ]
+    ],
+    [
+      "self_modification",
+      "0%",
+      [
+        "propose commands",
+        "install commands",
+        "implement commands"
+      ]
+    ],
+    [
+      "audit",
+      "0%",
+      [
+        "verify chain",
+        "repair audit",
+        "show audit"
+      ]
+    ]
+  ],
+  "covered": []
+}

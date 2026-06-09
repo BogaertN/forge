@@ -1,0 +1,2412 @@
+{
+  "active_patch": "Patch 148 \u2014 Source Authority Runtime Binder Hardening",
+  "authority": {
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "llm_decision_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "source_authority_claimed_automatically": false
+  },
+  "candidate_rows_sample": [
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "AUDIT_LEDGER_AND_PROVENANCE",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "AUDIT_LEDGER_AND_PROVENANCE",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "AUDIT_LEDGER_AND_PROVENANCE",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "projects/recursive_lmm_grok1/engines/activity_log",
+      "engine_base": "activity_log",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "MEMORY_STATE_AND_SPC_AUTHORITY",
+        "AUDIT_LEDGER_AND_PROVENANCE"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 45,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "aiweb/engines/ascii_interpreter_engine",
+      "engine_base": "ascii_interpreter_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "GENERAL_AIWEB_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 15,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "aiweb/engines/collapse_prevention_engine",
+      "engine_base": "collapse_prevention_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "GENERAL_AIWEB_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 15,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "aiweb/engines/compute_contribution_engine",
+      "engine_base": "compute_contribution_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "GENERAL_AIWEB_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "DASHBOARD_AND_OBSERVABILITY",
+          "name": "ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf",
+          "path": "/home/nic/forge_corpus/_incoming_zip_extract/AIWEB_CORPUS_SEED/ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf",
+          "sha256": null,
+          "size_bytes": 6444524,
+          "suffix": ".pdf"
+        }
+      ],
+      "canonical_path": "aiweb/engines/contribution_dashboard_engine",
+      "engine_base": "contribution_dashboard_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "DASHBOARD_AND_OBSERVABILITY"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 28,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "aiweb/engines/control_panel_ui_engine_v1.02",
+      "engine_base": "control_panel_ui_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "GENERAL_AIWEB_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 33,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "aiweb/engines/document_output_formatter",
+      "engine_base": "document_output_formatter",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "GENERAL_AIWEB_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "AUDIT_LEDGER_AND_PROVENANCE",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "AUDIT_LEDGER_AND_PROVENANCE",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "AUDIT_LEDGER_AND_PROVENANCE",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "aiweb/engines/drift_signature_logger",
+      "engine_base": "drift_signature_logger",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL",
+        "AUDIT_LEDGER_AND_PROVENANCE"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 35,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "DASHBOARD_AND_OBSERVABILITY",
+          "name": "ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf",
+          "path": "/home/nic/forge_corpus/_incoming_zip_extract/AIWEB_CORPUS_SEED/ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf",
+          "sha256": null,
+          "size_bytes": 6444524,
+          "suffix": ".pdf"
+        }
+      ],
+      "canonical_path": "aiweb/engines/echo_trace_visualizer",
+      "engine_base": "echo_trace_visualizer",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "DASHBOARD_AND_OBSERVABILITY"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 15,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "aiweb/engines/entropy_monitor_engine",
+      "engine_base": "entropy_monitor_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "GENERAL_AIWEB_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 15,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/engines/field_resonance_mapper",
+      "engine_base": "field_resonance_mapper",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "FBSC_RPMC_SYMBOLIC_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 40,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/engines/glyph_engine",
+      "engine_base": "glyph_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "FBSC_RPMC_SYMBOLIC_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 30,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/symbolic_layers/glyph_ui_overlay",
+      "engine_base": "glyph_ui_overlay",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "FBSC_RPMC_SYMBOLIC_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 30,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "aiweb/engines/install_onboarding_engine",
+      "engine_base": "install_onboarding_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "GENERAL_AIWEB_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 40,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "aiweb/engines/loop_resurrection_engine",
+      "engine_base": "loop_resurrection_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "GENERAL_AIWEB_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 33,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/engines/phase_engine",
+      "engine_base": "phase_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "FBSC_RPMC_SYMBOLIC_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "projects/recursive_lmm_grok1/engines/project_brain",
+      "engine_base": "project_brain",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "GENERAL_AIWEB_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 28,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "projects/recursive_lmm_grok1/engines/project_memory",
+      "engine_base": "project_memory",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "MEMORY_STATE_AND_SPC_AUTHORITY"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 53,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+      "engine_base": "protoforge",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "GENERAL_AIWEB_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 50,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/symbolic_layers/recursion_mapper",
+      "engine_base": "recursion_mapper",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "FBSC_RPMC_SYMBOLIC_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 15,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/engines/recursive_agent_kernel",
+      "engine_base": "recursive_agent_kernel",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "FBSC_RPMC_SYMBOLIC_RUNTIME",
+        "AGENT_IDENTITY_AND_GOVERNANCE"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 40,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/engines/recursive_field_breather",
+      "engine_base": "recursive_field_breather",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "FBSC_RPMC_SYMBOLIC_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 40,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/engines/recursive_field_engine",
+      "engine_base": "recursive_field_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "FBSC_RPMC_SYMBOLIC_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 45,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/runtime_wrappers/recursive_field_stack",
+      "engine_base": "recursive_field_stack",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "MEMORY_STATE_AND_SPC_AUTHORITY",
+        "FBSC_RPMC_SYMBOLIC_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 40,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "engines/recursive_verification_engine",
+      "engine_base": "recursive_verification_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "FBSC_RPMC_SYMBOLIC_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 45,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/engines/resonance_charge_meter",
+      "engine_base": "resonance_charge_meter",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "FBSC_RPMC_SYMBOLIC_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 40,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "DASHBOARD_AND_OBSERVABILITY",
+          "name": "ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf",
+          "path": "/home/nic/forge_corpus/_incoming_zip_extract/AIWEB_CORPUS_SEED/ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf",
+          "sha256": null,
+          "size_bytes": 6444524,
+          "suffix": ".pdf"
+        }
+      ],
+      "canonical_path": "aiweb/symbolic_layers/resonance_display",
+      "engine_base": "resonance_display",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "FBSC_RPMC_SYMBOLIC_RUNTIME",
+        "DASHBOARD_AND_OBSERVABILITY"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 30,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "DASHBOARD_AND_OBSERVABILITY",
+          "name": "ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf",
+          "path": "/home/nic/forge_corpus/_incoming_zip_extract/AIWEB_CORPUS_SEED/ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf",
+          "sha256": null,
+          "size_bytes": 6444524,
+          "suffix": ".pdf"
+        }
+      ],
+      "canonical_path": "aiweb/engines/resonance_visualizer_engine",
+      "engine_base": "resonance_visualizer_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "FBSC_RPMC_SYMBOLIC_RUNTIME",
+        "DASHBOARD_AND_OBSERVABILITY"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 35,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "aiweb/engines/resurrection_planner",
+      "engine_base": "resurrection_planner",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "GENERAL_AIWEB_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 15,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "projects/recursive_lmm_grok1/engines/revisit_previous_tasks",
+      "engine_base": "revisit_previous_tasks",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "GENERAL_AIWEB_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 28,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "GENERAL_AIWEB_RUNTIME",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "aiweb/engines/seed_manager",
+      "engine_base": "seed_manager",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "GENERAL_AIWEB_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        }
+      ],
+      "canonical_path": "aiweb/engines/spc_memory_migrator",
+      "engine_base": "spc_memory_migrator",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "MEMORY_STATE_AND_SPC_AUTHORITY"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 23,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/runtime_wrappers/stack_breather_phase2",
+      "engine_base": "stack_breather_phase2",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "MEMORY_STATE_AND_SPC_AUTHORITY",
+        "FBSC_RPMC_SYMBOLIC_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 25,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/engines/symbolic_capacitor_engine",
+      "engine_base": "symbolic_capacitor_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "FBSC_RPMC_SYMBOLIC_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 33,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/runtime_wrappers/symbolic_cognition_stack",
+      "engine_base": "symbolic_cognition_stack",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "MEMORY_STATE_AND_SPC_AUTHORITY",
+        "FBSC_RPMC_SYMBOLIC_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 30,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "DASHBOARD_AND_OBSERVABILITY",
+          "name": "ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf",
+          "path": "/home/nic/forge_corpus/_incoming_zip_extract/AIWEB_CORPUS_SEED/ProtoForge Volume II \u2013 The Full System Dashboard Building the Symbolic Control Panel on Top of the Recursive Engine.pdf",
+          "sha256": null,
+          "size_bytes": 6444524,
+          "suffix": ".pdf"
+        }
+      ],
+      "canonical_path": "aiweb/engines/symbolic_drift_visualizer",
+      "engine_base": "symbolic_drift_visualizer",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL",
+        "FBSC_RPMC_SYMBOLIC_RUNTIME",
+        "DASHBOARD_AND_OBSERVABILITY"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 30,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/engines/symbolic_feedback_loop_engine",
+      "engine_base": "symbolic_feedback_loop_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "FBSC_RPMC_SYMBOLIC_RUNTIME",
+        "EXTERNAL_BOUNDARY_AND_PLUGIN_TRUST"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 33,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/engines/symbolic_glyph_engine",
+      "engine_base": "symbolic_glyph_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "FBSC_RPMC_SYMBOLIC_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 30,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_190136_ingest_corpus_0007.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_190136_ingest_corpus_0007.md",
+          "sha256": "52824b5fa7768c7ccd44ca59ece5bae652b3712aeda9010d7f81535c2949f5c2",
+          "size_bytes": 250,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_191056_ingest_corpus_0015.json",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_191056_ingest_corpus_0015.json",
+          "sha256": "b1aed41cee13abbfd05d7a36f3044b7576118c49911298a825658d39da109afd",
+          "size_bytes": 4566,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "MEMORY_STATE_AND_SPC_AUTHORITY",
+          "name": "2026-05-10_184836_ingest_corpus_0001.md",
+          "path": "/home/nic/forge/memory/context_library_v1/receipts/2026-05-10_184836_ingest_corpus_0001.md",
+          "sha256": "a321cd4cde99873e0e69529f3d172c65512b04d2f7fe9a6a3a4f4781a73a0d8b",
+          "size_bytes": 303,
+          "suffix": ".md"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/runtime_wrappers/symbolic_layers_stack",
+      "engine_base": "symbolic_layers_stack",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "MEMORY_STATE_AND_SPC_AUTHORITY",
+        "FBSC_RPMC_SYMBOLIC_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 30,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_191920_ingest_corpus_0013_symbolic_map.json",
+          "sha256": "611a1fdb1c34d04c7d1d055f5943d1ecc196716639c4294fa101c11b0f1aa2e1",
+          "size_bytes": 194115,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-12_163341_ingest_corpus_0027_symbolic_map.json",
+          "sha256": "5510689e511c96b8e961cff1a2834bbd6af4328f0386bef98a4642d31f90c783",
+          "size_bytes": 5441,
+          "suffix": ".json"
+        },
+        {
+          "authority_claimed": false,
+          "candidate_only": true,
+          "domain": "FBSC_RPMC_SYMBOLIC_RUNTIME",
+          "name": "2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "path": "/home/nic/forge/memory/context_library_v1/symbolic_maps/2026-05-10_190108_ingest_corpus_0006_symbolic_map.json",
+          "sha256": "cdef0fd83b0d66b07c2187cd947391b815b4796fdd8c25a5fbf8502e60f8495e",
+          "size_bytes": 127483,
+          "suffix": ".json"
+        }
+      ],
+      "canonical_path": "aiweb/engines/symbolic_policy_engine",
+      "engine_base": "symbolic_policy_engine",
+      "next_required_action": "human_confirm_source_binding",
+      "required_source_domains": [
+        "FBSC_RPMC_SYMBOLIC_RUNTIME"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 25,
+      "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION",
+      "test_status": "NO_TEST_RESULT"
+    }
+  ],
+  "created_at": "2026-05-19T17:24:51",
+  "current_phase": "S13 \u2014 Source Authority Runtime Binder hardening",
+  "domain_counts": {
+    "AGENT_IDENTITY_AND_GOVERNANCE": 4,
+    "AUDIT_LEDGER_AND_PROVENANCE": 3,
+    "CHRISTPING_CORRECTION_LAYER": 2,
+    "DASHBOARD_AND_OBSERVABILITY": 5,
+    "EXTERNAL_BOUNDARY_AND_PLUGIN_TRUST": 3,
+    "FBSC_RPMC_SYMBOLIC_RUNTIME": 22,
+    "GENERAL_AIWEB_RUNTIME": 13,
+    "MEMORY_STATE_AND_SPC_AUTHORITY": 7,
+    "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL": 7
+  },
+  "gap_rows": [
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/agent_reflection_engine",
+      "engine_base": "agent_reflection_engine",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "AGENT_IDENTITY_AND_GOVERNANCE"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "agents/athena",
+      "engine_base": "athena",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "AGENT_IDENTITY_AND_GOVERNANCE"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/athena_engine",
+      "engine_base": "athena_engine",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "AGENT_IDENTITY_AND_GOVERNANCE"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 28,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/christping_listener",
+      "engine_base": "christping_listener",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "CHRISTPING_CORRECTION_LAYER"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 58,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/christping_validator_engine",
+      "engine_base": "christping_validator_engine",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "CHRISTPING_CORRECTION_LAYER"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 15,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "projects/recursive_lmm_grok1/engines/confusion_checker",
+      "engine_base": "confusion_checker",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 45,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/drift_analyzer_tool",
+      "engine_base": "drift_analyzer_tool",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 30,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/failsafe_manager",
+      "engine_base": "failsafe_manager",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 25,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/peer_communication_engine",
+      "engine_base": "peer_communication_engine",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "EXTERNAL_BOUNDARY_AND_PLUGIN_TRUST"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/plugin_engine",
+      "engine_base": "plugin_engine",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "EXTERNAL_BOUNDARY_AND_PLUGIN_TRUST"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 25,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/tier_enforcer",
+      "engine_base": "tier_enforcer",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "projects/recursive_lmm_grok1/engines/trust_guard",
+      "engine_base": "trust_guard",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 45,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    }
+  ],
+  "gap_rows_sample": [
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/agent_reflection_engine",
+      "engine_base": "agent_reflection_engine",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "AGENT_IDENTITY_AND_GOVERNANCE"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "agents/athena",
+      "engine_base": "athena",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "AGENT_IDENTITY_AND_GOVERNANCE"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/athena_engine",
+      "engine_base": "athena_engine",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "AGENT_IDENTITY_AND_GOVERNANCE"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 28,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/christping_listener",
+      "engine_base": "christping_listener",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "CHRISTPING_CORRECTION_LAYER"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 58,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/christping_validator_engine",
+      "engine_base": "christping_validator_engine",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "CHRISTPING_CORRECTION_LAYER"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 15,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "projects/recursive_lmm_grok1/engines/confusion_checker",
+      "engine_base": "confusion_checker",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 45,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/drift_analyzer_tool",
+      "engine_base": "drift_analyzer_tool",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 30,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/failsafe_manager",
+      "engine_base": "failsafe_manager",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 25,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/peer_communication_engine",
+      "engine_base": "peer_communication_engine",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "EXTERNAL_BOUNDARY_AND_PLUGIN_TRUST"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/plugin_engine",
+      "engine_base": "plugin_engine",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "EXTERNAL_BOUNDARY_AND_PLUGIN_TRUST"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 25,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "aiweb/engines/tier_enforcer",
+      "engine_base": "tier_enforcer",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    },
+    {
+      "authority_claimed": false,
+      "candidate_source_documents": [],
+      "canonical_path": "projects/recursive_lmm_grok1/engines/trust_guard",
+      "engine_base": "trust_guard",
+      "next_required_action": "provide_or_ingest_authoritative_source_document",
+      "required_source_domains": [
+        "SAFETY_GOVERNANCE_AND_DRIFT_CONTROL"
+      ],
+      "review_status": "APPROVED",
+      "risk_level": "MEDIUM",
+      "risk_score": 45,
+      "source_authority_status": "SOURCE_AUTHORITY_GAP_RECORDED",
+      "test_status": "NO_TEST_RESULT"
+    }
+  ],
+  "next_commands": [
+    "forge-source-authority-hardening-export",
+    "forge-build-sequence",
+    "forge-status-api-build",
+    "forge-dashboard-build",
+    "Install Patch 149 when ready"
+  ],
+  "next_patch": "Patch 149 \u2014 LLM Patch Proposal v2",
+  "plain_english": "The canonical 54-engine runtime now has a refreshed source-authority binding map. Candidate documents are recorded as candidates only; final source authority still requires human confirmation and/or source-law ingestion proof.",
+  "recommended_next_patch": "Patch 149 \u2014 LLM Patch Proposal v2",
+  "report_type": "FORGE_SOURCE_AUTHORITY_HARDENING_V1",
+  "schema_version": "forge_source_authority_hardening_v1_patch148",
+  "source_map_path": "/home/nic/forge/memory/engine_source_authority_v1/2026_05_19_172451_engine_source_law_map_v1.json",
+  "source_map_sha256": "16698ec078c476d81536c24b287e7ca36926da8b411ea3a3b018d3cec53ae2b4",
+  "status": "FORGE_SOURCE_AUTHORITY_HARDENING_READY",
+  "summary": {
+    "authority_claimed_automatically": false,
+    "canonical_engines": 54,
+    "domain_count": 9,
+    "engine_file_writes": 0,
+    "engines_with_candidate_source_documents": 42,
+    "engines_with_source_authority_gaps": 12,
+    "expected_commands": 538,
+    "patch_apply_authority": false,
+    "source_candidate_files_seen": 240,
+    "tools": 462,
+    "trust_level": 5.0
+  }
+}

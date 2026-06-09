@@ -1,0 +1,78 @@
+{
+  "_comment": "Defines every tool Forge has. trust_level is the minimum level required to use it.",
+  "tools": {
+    "list_allowed_folders": {
+      "trust_level": 0.5,
+      "description": "List the currently approved and session-scoped folders Forge can access.",
+      "writes": false,
+      "executes": false
+    },
+    "list_files": {
+      "trust_level": 0.5,
+      "description": "List files inside an approved directory up to a given depth.",
+      "writes": false,
+      "executes": false
+    },
+    "read_file": {
+      "trust_level": 0.5,
+      "description": "Read the contents of a file inside an approved path.",
+      "writes": false,
+      "executes": false
+    },
+    "search_text": {
+      "trust_level": 0.5,
+      "description": "Search for a text string across files in an approved path.",
+      "writes": false,
+      "executes": false
+    },
+    "search_knowledge_base": {
+      "trust_level": 0.5,
+      "description": "Search the local ChromaDB knowledge base. Only available after indexing.",
+      "writes": false,
+      "executes": false
+    },
+    "propose_command": {
+      "trust_level": 0.6,
+      "description": "Propose a safe diagnostic shell command for Nic to run manually. Forge never executes it.",
+      "writes": false,
+      "executes": false
+    },
+    "analyze_command_output": {
+      "trust_level": 0.7,
+      "description": "Receive and store terminal output pasted by Nic for analysis. Never executes anything.",
+      "writes": false,
+      "executes": false
+    },
+    "run_safe_command": {
+      "trust_level": 1.0,
+      "description": "Execute a command from the Level 1.0 hard-coded allowlist. No shell. No user input in argv.",
+      "writes": false,
+      "executes": true
+    },
+    "write_proposed_patch": {
+      "trust_level": 2.0,
+      "description": "Write a patch proposal to ~/forge/proposed_patches/. NEVER modifies project files. Nic applies manually.",
+      "writes": false,
+      "executes": false
+    },
+    "show_diff": {
+      "trust_level": 2.0,
+      "description": "Show the diff between current file and a proposed change.",
+      "writes": false,
+      "executes": false
+    },
+    "apply_patch": {
+      "trust_level": 4.0,
+      "description": "Apply an approved patch to a file. Requires explicit Nic approval.",
+      "writes": true,
+      "executes": false
+    },
+    "run_tests": {
+      "trust_level": 5.0,
+      "description": "Run the project test suite and return output.",
+      "writes": false,
+      "executes": true
+    }
+  },
+  "current_trust_level": 2.1
+}

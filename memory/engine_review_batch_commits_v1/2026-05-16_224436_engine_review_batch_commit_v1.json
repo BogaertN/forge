@@ -1,0 +1,395 @@
+{
+  "applied_count": 13,
+  "applied_rows": [
+    {
+      "engine_family": "resurrection_planner",
+      "future_lockfile_eligible": true,
+      "target_review_status": "APPROVED"
+    },
+    {
+      "engine_family": "revisit_previous_tasks",
+      "future_lockfile_eligible": true,
+      "target_review_status": "APPROVED"
+    },
+    {
+      "engine_family": "seed_manager",
+      "future_lockfile_eligible": true,
+      "target_review_status": "APPROVED"
+    },
+    {
+      "engine_family": "spc_memory_migrator",
+      "future_lockfile_eligible": true,
+      "target_review_status": "APPROVED"
+    },
+    {
+      "engine_family": "stack_breather_phase2",
+      "future_lockfile_eligible": true,
+      "target_review_status": "APPROVED"
+    },
+    {
+      "engine_family": "stack_linker_breather",
+      "future_lockfile_eligible": true,
+      "target_review_status": "APPROVED"
+    },
+    {
+      "engine_family": "symbolic_cognition_stack",
+      "future_lockfile_eligible": true,
+      "target_review_status": "APPROVED"
+    },
+    {
+      "engine_family": "symbolic_drift_visualizer",
+      "future_lockfile_eligible": true,
+      "target_review_status": "APPROVED"
+    },
+    {
+      "engine_family": "symbolic_glyph_engine",
+      "future_lockfile_eligible": true,
+      "target_review_status": "APPROVED"
+    },
+    {
+      "engine_family": "symbolic_layers_stack",
+      "future_lockfile_eligible": true,
+      "target_review_status": "APPROVED"
+    },
+    {
+      "engine_family": "tier_enforcer",
+      "future_lockfile_eligible": true,
+      "target_review_status": "APPROVED"
+    },
+    {
+      "engine_family": "tone_engine",
+      "future_lockfile_eligible": true,
+      "target_review_status": "APPROVED"
+    },
+    {
+      "engine_family": "trust_guard",
+      "future_lockfile_eligible": true,
+      "target_review_status": "APPROVED"
+    }
+  ],
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": true,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_BATCH_COMMIT_GATE",
+    "patch": "107",
+    "project_file_write_authority": false,
+    "rule": "Patch 107 may commit Patch106 evidence-based batch queue decisions into engine_review_ledger_v1 only after queue decision, Patch103 approval helper, Patch102 cross-check, evidence binder, live candidate path, and live file SHA rechecks. It does not edit engine files or create final lockfile authority.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_batch_commits_v1",
+      "/home/nic/forge/memory/code_library_v1/manifests/engine_review_ledger_v1.json"
+    ]
+  },
+  "blockers": [],
+  "created_at": "2026-05-16_224436",
+  "ledger_backup_path": "/home/nic/forge/memory/code_library_v1/manifests/2026-05-16_224436_engine_review_ledger_before_patch107_batch_commit.json",
+  "ledger_path": "/home/nic/forge/memory/code_library_v1/manifests/engine_review_ledger_v1.json",
+  "ledger_sha256_after": "d1f6479c5fe04eda3bfdca9050e23f80e316abed87133bc79846b5a1e516d9ca",
+  "ledger_sha256_before": "efe74212ab7b4e92121bb81934f49f3c7eaf4bd45fe54774f8453ecfdd46481a",
+  "report_type": "ENGINE_REVIEW_BATCH_COMMIT_RECEIPT_V1_PATCH107",
+  "schema_version": "engine_review_batch_commit_v1_patch107",
+  "skipped_count": 49,
+  "skipped_rows": [
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "agent_reflection_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "agents_stack",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "aiweb_os",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "aiweb_os_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "ascii_interpreter_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "athena",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "athena_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "christping_validator_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "cold_archive_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "collapse_prevention_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "compute_contribution_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "confusion_checker",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "contribution_dashboard_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "contribution_ledger_stack",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "control_panel_ui_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "control_stack",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "core_stack_breather",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "core_system_stack",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "document_output_formatter",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "dream_state_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "drift_analyzer_tool",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "drift_arbitration_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "drift_signature_logger",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "echo_trace_visualizer",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "entropy_monitor_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "external_feed_listener",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "field_resonance_mapper",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "fluid_memory_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "gilligan",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "gilligan_drift_correction_upgrade",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "glyph_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "glyph_ui_overlay",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "goal_injection_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "install_onboarding_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "memory_stack_stack",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "naming_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "neo",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "neo_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "peer_communication_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "project_brain",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "project_memory",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "protoforge",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "recursion_mapper",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "recursive_field_breather",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "recursive_field_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "recursive_field_stack",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "recursive_verification_engine",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "resonance_display",
+      "reason": "not eligible"
+    },
+    {
+      "already_committed": true,
+      "blockers": [],
+      "engine_family": "resonance_visualizer_engine",
+      "reason": "not eligible"
+    }
+  ],
+  "status": "ENGINE_REVIEW_BATCH_COMMIT_APPLIED",
+  "warnings": []
+}

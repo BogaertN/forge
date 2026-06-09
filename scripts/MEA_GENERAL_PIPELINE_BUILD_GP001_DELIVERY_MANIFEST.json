@@ -1,0 +1,16 @@
+{
+  "build_id": "GENERAL-LEARNING-TO-ANSWER-PIPELINE-FOUNDATION-BUILD-GP-001",
+  "schema_version": "general_pipeline_v1_build_gp001",
+  "built_against": "GENERAL_PIPELINE_REGROUND_BASELINE_POST_BUILD010_20260531_041346_UTC (forge_source)",
+  "install_type": "additive_source_overlay_new_files_only",
+  "modifies_existing_files": false,
+  "learned_domains": ["whole_number_arithmetic", "fraction_change_capacity"],
+  "boundaries": [
+    "in_memory_only", "no_route", "no_ui", "no_llm", "no_file_io",
+    "no_memory_write", "no_chroma", "no_identity_vault", "no_ct_or_ledger"
+  ],
+  "expected_results": {
+    "behavior": "Total:35 Passed:35 Failed:0",
+    "verify": "Total:23 Passed:23 Failed:0"
+  }
+}

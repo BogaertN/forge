@@ -1,0 +1,132 @@
+{
+  "created_at": "20260520_162542",
+  "export_type": "FORGE_RUNTIME_LIVE_EXECUTION_EXPORT_V1",
+  "payload": {
+    "active_patch": "Patch 166 \u2014 Runtime Live Build Execution Plan / Receipt Gate",
+    "approval_token_status": "TEMPLATE_READY_NOT_APPROVED",
+    "authority": {
+      "engine_file_write_authority": false,
+      "forge_memory_write_only": true,
+      "patch_apply_authority": false,
+      "project_file_write_authority": false,
+      "read_only": true,
+      "runtime_file_write_authority": false,
+      "server_started": false,
+      "shell_execution_authority": false
+    },
+    "candidate": "failsafe_manager",
+    "created_at": "20260520_162508",
+    "current_phase": "S19L \u2014 Runtime Live Build Execution Plan / Receipt Gate",
+    "engine_writes": 0,
+    "gate_summary": {
+      "fail": 0,
+      "locked": 2,
+      "pass": 5,
+      "warn": 0
+    },
+    "gates": [
+      {
+        "detail": "FORGE_RUNTIME_LIVE_FINAL_APPROVAL_GATE_READY_LOCKED",
+        "id": "G01",
+        "name": "Final live gate evidence exists",
+        "status": "PASS"
+      },
+      {
+        "detail": "FORGE_RUNTIME_CANDIDATE_STATIC_VERIFICATION_READY_GATE_LOCKED",
+        "id": "G02",
+        "name": "Static candidate verification clean",
+        "status": "PASS"
+      },
+      {
+        "detail": "FORGE_RUNTIME_LIVE_BACKUP_APPLY_DRY_RUN_READY_GATE_LOCKED",
+        "id": "G03",
+        "name": "Backup/apply dry-run evidence ready",
+        "status": "PASS"
+      },
+      {
+        "detail": "approval_token_status=TEMPLATE_READY_NOT_APPROVED",
+        "id": "G04",
+        "name": "Human approval present",
+        "status": "LOCKED"
+      },
+      {
+        "detail": "Patch 166 is execution planning only; live writes remain disabled",
+        "id": "G05",
+        "name": "Live runtime write authority",
+        "status": "LOCKED"
+      },
+      {
+        "detail": "receipt template created; not executed",
+        "id": "G06",
+        "name": "Execution receipt template ready",
+        "status": "PASS"
+      },
+      {
+        "detail": "runtime_writes=0 project_writes=0 engine_writes=0",
+        "id": "G07",
+        "name": "No live execution performed",
+        "status": "PASS"
+      }
+    ],
+    "human_approval_present": false,
+    "live_build_ready": false,
+    "next_patch": "Patch 167 \u2014 Runtime Live Build Approval Capture / Execution Gate",
+    "plain_english": "Patch 166 prepares a live-build execution plan and receipt template, but performs zero live writes. The gate remains locked until explicit human approval and live-write authority exist.",
+    "planned_file_count": 4,
+    "planned_files": [
+      {
+        "live_write_planned_now": false,
+        "relative_path": "governance_and_safety/failsafe_manager/README.md",
+        "sandbox_source": "final_gate",
+        "source": "final_gate",
+        "target_relative_path": "governance_and_safety/failsafe_manager/README.md"
+      },
+      {
+        "live_write_planned_now": false,
+        "relative_path": "governance_and_safety/failsafe_manager/runtime_manifest.json",
+        "sandbox_source": "final_gate",
+        "source": "final_gate",
+        "target_relative_path": "governance_and_safety/failsafe_manager/runtime_manifest.json"
+      },
+      {
+        "live_write_planned_now": false,
+        "relative_path": "governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py",
+        "sandbox_source": "final_gate",
+        "source": "final_gate",
+        "target_relative_path": "governance_and_safety/failsafe_manager/failsafe_manager_runtime_adapter.py"
+      },
+      {
+        "live_write_planned_now": false,
+        "relative_path": "governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py",
+        "sandbox_source": "final_gate",
+        "source": "final_gate",
+        "target_relative_path": "governance_and_safety/failsafe_manager/tests/test_runtime_manifest.py"
+      }
+    ],
+    "planning_ready": true,
+    "problem_count": 0,
+    "problems": [],
+    "project_writes": 0,
+    "receipt_status": "TEMPLATE_READY_NOT_EXECUTED",
+    "receipt_template": {
+      "approval_present": false,
+      "approval_required": true,
+      "candidate": "failsafe_manager",
+      "engine_writes_performed": 0,
+      "live_execution_performed": false,
+      "notes": "Template only. Patch 166 does not perform live runtime writes.",
+      "planned_file_count": 4,
+      "project_writes_performed": 0,
+      "receipt_type": "RUNTIME_LIVE_BUILD_EXECUTION_RECEIPT_TEMPLATE",
+      "runtime_writes_performed": 0
+    },
+    "recommended_next_patch": "Patch 167 \u2014 Runtime Live Build Approval Capture / Execution Gate",
+    "report_type": "FORGE_RUNTIME_LIVE_EXECUTION_PLAN_RECEIPT_GATE_V1",
+    "roadmap_mutation_policy": "APPEND_ONLY",
+    "runtime_writes": 0,
+    "schema_version": "1.0",
+    "status": "FORGE_RUNTIME_LIVE_EXECUTION_PLAN_READY_GATE_LOCKED"
+  },
+  "source_report": "/home/nic/forge/memory/forge_runtime_live_execution_v1/latest_forge_runtime_live_execution_gate_v1.json",
+  "source_status": "FORGE_RUNTIME_LIVE_EXECUTION_PLAN_READY_GATE_LOCKED"
+}

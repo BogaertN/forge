@@ -1,0 +1,134 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_BATCH_APPROVAL_HELPER",
+    "patch": "106",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": true,
+    "rule": "Patch 106 may record Patch99-compatible queue decisions for explicitly named engines, but only after Patch102 evidence cross-check readiness. It never commits ledger changes.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_batch_approvals_v1"
+  },
+  "blockers": [],
+  "counts": {
+    "blockers": 0,
+    "recorded": 5,
+    "refused_or_error": 0,
+    "requested": 5,
+    "warnings": 5
+  },
+  "created_at": "2026-05-16_090418",
+  "decision_label": "APPROVE",
+  "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+  "manual_verification_rule": "This helper assumes Nic has already read engine-review-evidence-show for each named engine. It records queue intent only and never mutates the ledger.",
+  "report_type": "ENGINE_REVIEW_BATCH_APPROVAL_RECEIPT_V1_PATCH106",
+  "requested_engines": [
+    "control_panel_ui_engine",
+    "document_output_formatter",
+    "drift_analyzer_tool",
+    "drift_arbitration_engine",
+    "drift_signature_logger"
+  ],
+  "rows": [
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/control_panel_ui_engine_v1.02",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090418_control_panel_ui_engine_engine_review_approval_helper_v1.json",
+      "check_sha256": "62666f7be529143219df4e123464f989d99ed036607c90de9d034dbe84e5b777",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-control_panel_ui_engine-2026-05-16_090418",
+      "engine_family": "control_panel_ui_engine",
+      "evidence_id": "EEB-fd254ee2e030c2ee",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090418_control_panel_ui_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "6f9418a977cb57c008323fcdaa9ac4045e2fd4be9ce38984eb1fbf78ce9c519b",
+      "requested_decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/document_output_formatter",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090418_document_output_formatter_engine_review_approval_helper_v1.json",
+      "check_sha256": "5c0eb2c2633258f2fd26fe7a6555829c5868546e8c48825d3fa49a49d3052a00",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-document_output_formatter-2026-05-16_090418",
+      "engine_family": "document_output_formatter",
+      "evidence_id": "EEB-73405632cfb6984f",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090418_document_output_formatter_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "d78ffb75b020f390e59ea8f89cd214d8b3388b66a3d9fd323e20440527854cea",
+      "requested_decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/drift_analyzer_tool",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090418_drift_analyzer_tool_engine_review_approval_helper_v1.json",
+      "check_sha256": "c538f42530963660e6f7b14e3653782d8f4bc7f1b86e28994f2b343f39e44b17",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-drift_analyzer_tool-2026-05-16_090418",
+      "engine_family": "drift_analyzer_tool",
+      "evidence_id": "EEB-bed831a69b1978e5",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090418_drift_analyzer_tool_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "ff8a13b20fa65ef6c9fb822b678b704c38d67bfd881572d838690753a59afeb8",
+      "requested_decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/drift_arbitration_engine",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090418_drift_arbitration_engine_engine_review_approval_helper_v1.json",
+      "check_sha256": "0b5e034ad63ffaa46835f9d65df40246fb696c41bfccba6802a8a5355c78007a",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-drift_arbitration_engine-2026-05-16_090418",
+      "engine_family": "drift_arbitration_engine",
+      "evidence_id": "EEB-caf4c9b35c20c0c1",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090418_drift_arbitration_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "8d7486f6f43d258b20889204ded959364e68b1858abe762bcbf1bd81bdb12cfb",
+      "requested_decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/drift_signature_logger",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090418_drift_signature_logger_engine_review_approval_helper_v1.json",
+      "check_sha256": "1705f440a54494bb4f268fc9c3372b325e44a820864bad2ba6647018ce30f95c",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-drift_signature_logger-2026-05-16_090418",
+      "engine_family": "drift_signature_logger",
+      "evidence_id": "EEB-3f7110ff52737f3a",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090418_drift_signature_logger_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "a0790aa665a57e7aee42e492ad1da4bc21f24e1361440e3b9ecf4a1df2bce57f",
+      "requested_decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    }
+  ],
+  "schema_version": "engine_review_batch_approval_v1_patch106",
+  "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION",
+  "warnings": [
+    "control_panel_ui_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "document_output_formatter: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "drift_analyzer_tool: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "drift_arbitration_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "drift_signature_logger: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

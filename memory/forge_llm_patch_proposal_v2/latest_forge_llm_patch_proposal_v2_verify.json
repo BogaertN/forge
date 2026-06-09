@@ -1,0 +1,31 @@
+{
+  "active_patch": "Patch 149 \u2014 LLM Patch Proposal v2",
+  "authority": {
+    "engine_file_write_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "shell_execution_authority": false,
+    "verification_only": true
+  },
+  "created_at": "2026-05-19T17:33:54",
+  "next_patch": "Patch 150 \u2014 Live Apply Eligibility Gate v2",
+  "problem_count": 0,
+  "problems": [],
+  "proposal_sha256": "d0949c2402dc6a324d4063490b09d52ef7d648eeaf15b567de7989073f64faa6",
+  "proposal_status": "FORGE_LLM_PATCH_PROPOSAL_V2_DRAFT_READY_NO_WRITE_AUTHORITY",
+  "recommended_next_patch": "Patch 150 \u2014 Live Apply Eligibility Gate v2",
+  "report_type": "FORGE_LLM_PATCH_PROPOSAL_V2_VERIFY",
+  "schema_version": "forge_llm_patch_proposal_v2_verify_patch149",
+  "status": "FORGE_LLM_PATCH_PROPOSAL_V2_VERIFIED_READ_ONLY",
+  "summary": {
+    "problems": 0,
+    "target": "Patch 150 \u2014 Live Apply Eligibility Gate v2",
+    "warnings": 1,
+    "write_authority": false
+  },
+  "target": "Patch 150 \u2014 Live Apply Eligibility Gate v2",
+  "warning_count": 1,
+  "warnings": [
+    "source-authority gaps remain candidate-only: 12"
+  ]
+}

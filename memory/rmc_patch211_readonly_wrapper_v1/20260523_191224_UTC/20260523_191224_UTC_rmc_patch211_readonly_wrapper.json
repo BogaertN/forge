@@ -1,0 +1,146 @@
+{
+  "boundaries": {
+    "gilligan_wired": false,
+    "identity_vault_touched": false,
+    "read_only_wrapper_only": true,
+    "registered_tools_modified": false
+  },
+  "checks": {
+    "read_only_flag": true,
+    "runtime_presence": {
+      "aiweb/runtime_wrappers/drift_detection/drift_detector.py": true,
+      "aiweb/runtime_wrappers/echo_validator/echo_validator.py": true,
+      "aiweb/runtime_wrappers/phase_parser/phase_state_parser.py": true,
+      "aiweb/runtime_wrappers/rmc_orchestrator/rmc_orchestrator.py": true
+    },
+    "tool_registry_exists": true,
+    "tool_registry_rmc_mentions": 0,
+    "tool_registry_rmc_mentions_after": 0,
+    "wrapper_compile": true,
+    "wrapper_exists": true,
+    "wrapper_import": true
+  },
+  "failures": [],
+  "timestamp": "20260523_191224_UTC",
+  "verdict": "PASS",
+  "wrapper_path": "/home/nic/forge/agents/forge/rmc_tools.py",
+  "wrapper_smoke": {
+    "drift": {
+      "function": "rmc_drift_check_preview",
+      "ok": true,
+      "read_only": true,
+      "result": {
+        "chi_t_required": false,
+        "circuit_breaker_open": false,
+        "correction_recommended": false,
+        "drift_detected": false,
+        "entropy": 0.9178,
+        "epsilon_s": 0.0,
+        "events": [],
+        "max_severity": 0.0,
+        "phase_deviation": 0.0,
+        "projection_ready": true,
+        "recommended_action": "allow",
+        "semantic_distance": 0.0,
+        "structural_distance": 0.0,
+        "structure_status": "valid",
+        "timestamp": "2026-05-23T19:12:24.235377+00:00",
+        "transition_validity": "valid_5_to_5",
+        "verdict": "ALLOW"
+      },
+      "wrapper_version": "patch211_read_only_v1"
+    },
+    "echo": {
+      "function": "rmc_echo_validate_preview",
+      "ok": true,
+      "read_only": true,
+      "result": {
+        "accepted": true,
+        "note": "echo accepted",
+        "score": 0.9833333333333334
+      },
+      "wrapper_version": "patch211_read_only_v1"
+    },
+    "phase": {
+      "function": "rmc_phase_parse_preview",
+      "ok": true,
+      "read_only": true,
+      "result": {
+        "confidence": 0.5263,
+        "cues": [
+          {
+            "cue": "\\b(want|need|trying|goal|plan|build|make|create|help me|let's)\\b",
+            "phase": 3,
+            "phase_name": "Desire",
+            "phase_token": "desire",
+            "reason": "goal/vector cue",
+            "weight": 0.9
+          },
+          {
+            "cue": "\\b(fix|repair|correct|ground|realign|rebuild|restore|clean up|verify|audit|check)\\b",
+            "phase": 6,
+            "phase_name": "Grace",
+            "phase_token": "grace",
+            "reason": "correction cue",
+            "weight": 1.0
+          }
+        ],
+        "phase": "grace",
+        "phase_id": 6,
+        "phase_name": "Grace",
+        "phase_number": 6,
+        "phase_path_hypothesis": [
+          6
+        ],
+        "phase_role": "correction / return",
+        "routing": [
+          "drift_analyzer",
+          "correction_engine",
+          "naming_engine"
+        ],
+        "secondary_phases": [
+          3
+        ],
+        "timestamp": "2026-05-23T19:12:24.231468+00:00",
+        "warnings": []
+      },
+      "wrapper_version": "patch211_read_only_v1"
+    },
+    "pipeline": {
+      "function": "rmc_pipeline_preview",
+      "ok": true,
+      "read_only": true,
+      "result": {
+        "accepted": true,
+        "drift_detected": false,
+        "drift_verdict": "ALLOW",
+        "echo_accepted": true,
+        "echo_passed": true,
+        "echo_score": 0.9833333333333334,
+        "failed_record": null,
+        "input_text": "Verify a read-only RMC preview trace.",
+        "manifest_id": "eab0f975",
+        "memory_stored": false,
+        "metadata": {
+          "agent_id": "forge_rmc_preview",
+          "phase_history": [
+            6
+          ],
+          "pipeline_enabled": {
+            "drift": true,
+            "echo": true,
+            "memory": false
+          },
+          "processing_count": 1
+        },
+        "modality": "language",
+        "output": "Correction applied: Verify a read-only RMC preview trace.",
+        "phase": 6,
+        "phase_name": "Grace",
+        "projection_status": "READY",
+        "timestamp": "2026-05-23T19:12:24.239280+00:00"
+      },
+      "wrapper_version": "patch211_read_only_v1"
+    }
+  }
+}

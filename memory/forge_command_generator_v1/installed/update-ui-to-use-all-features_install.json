@@ -1,0 +1,8 @@
+{
+  "command_name": "update-ui-to-use-all-features",
+  "function_name": "cmd_update_ui_to_use_all_features",
+  "description": "update ui to use all features",
+  "installed_at": "20260523_001020",
+  "backup_dir": "/home/nic/forge/backups/before_install_update-ui-to-use-all-features_20260523_001020",
+  "proposal_id": "20260523_001020_cmd_update_ui_to_use_all_features"
+}

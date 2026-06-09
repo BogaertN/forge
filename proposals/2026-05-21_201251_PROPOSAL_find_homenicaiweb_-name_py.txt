@@ -1,0 +1,74 @@
+FORGE DIAGNOSTIC PROPOSAL
+══════════════════════════════════════════════════════════════════
+Title           : Lists all Python files (.py) in the current project scope
+Status          : APPROVED FOR REVIEW
+Timestamp       : 2026-05-21T20:12:51
+Session ID      : forge_2026_05_21_200502
+Forge Level     : 0.6 — Diagnostic Proposal Mode
+Proposal File   : /home/nic/forge/proposals/2026-05-21_201251_PROPOSAL_find_homenicaiweb_-name_py.txt
+══════════════════════════════════════════════════════════════════
+
+USER QUESTION
+─────────────
+forge-command-propose "list all Python files in current scope"
+
+
+PROPOSED COMMAND
+────────────────
+  find /home/nic/aiweb -name "*.py"
+
+
+PURPOSE
+───────
+Lists all Python files (.py) in the current project scope
+
+
+WHY IT IS SAFE
+──────────────
+The 'find' command is read-only and only lists files without modifying the filesystem
+
+
+RISK LEVEL
+──────────
+LOW
+
+
+VALIDATION CHECK
+────────────────
+PASS — no blocked patterns detected
+
+Blocked operators checked : &&  ;  |  $()  >  >>  ` (checked)
+Sensitive paths checked   : .ssh  .gnupg  credentials  secrets  (checked)
+Composition check         : single command only, no chaining
+
+
+APPROVED PATHS INVOLVED
+───────────────────────
+  /home/nic/aiweb
+
+
+EXPECTED OUTPUT
+───────────────
+/home/nic/aiweb/script.py
+/home/nic/aiweb/utils.py
+/home/nic/aiweb/config.py
+
+
+WHAT COULD GO WRONG
+───────────────────
+If no Python files exist, the output will be empty
+
+
+══════════════════════════════════════════════════════════════════
+MANUAL INSTRUCTION
+──────────────────
+Forge cannot execute commands. This is by design.
+
+If you choose to run this command, copy and paste it yourself:
+
+  find /home/nic/aiweb -name "*.py"
+
+Forge will never execute commands on your behalf at any trust level
+unless you explicitly enable execution mode in a future version.
+══════════════════════════════════════════════════════════════════
+Audit entry hash : 716a49d9336c9fd5

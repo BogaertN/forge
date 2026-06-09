@@ -1,0 +1,134 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_BATCH_APPROVAL_HELPER",
+    "patch": "106",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": true,
+    "rule": "Patch 106 may record Patch99-compatible queue decisions for explicitly named engines, but only after Patch102 evidence cross-check readiness. It never commits ledger changes.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_batch_approvals_v1"
+  },
+  "blockers": [],
+  "counts": {
+    "blockers": 0,
+    "recorded": 5,
+    "refused_or_error": 0,
+    "requested": 5,
+    "warnings": 5
+  },
+  "created_at": "2026-05-16_090413",
+  "decision_label": "DEFER",
+  "decision_value": "DEFERRED_FOR_MORE_REVIEW",
+  "manual_verification_rule": "This helper assumes Nic has already read engine-review-evidence-show for each named engine. It records queue intent only and never mutates the ledger.",
+  "report_type": "ENGINE_REVIEW_BATCH_APPROVAL_RECEIPT_V1_PATCH106",
+  "requested_engines": [
+    "contribution_ledger_stack",
+    "control_stack",
+    "core_stack_breather",
+    "core_system_stack",
+    "dream_state_engine"
+  ],
+  "rows": [
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090413_contribution_ledger_stack_engine_review_approval_helper_v1.json",
+      "check_sha256": "bb9a338c4342409577290265a95b31c6dde3c2907b8d1124a1bdb05909b5bb60",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-contribution_ledger_stack-2026-05-16_090413",
+      "engine_family": "contribution_ledger_stack",
+      "evidence_id": "EEB-e30ad0b50c5c03dd",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090413_contribution_ledger_stack_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "7205844aa4dc18c8cb10815c19a1c86afa845589ef281ac56bb681111b0d14a3",
+      "requested_decision": "DEFERRED_FOR_MORE_REVIEW",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/control_stack",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090413_control_stack_engine_review_approval_helper_v1.json",
+      "check_sha256": "39055452ed232ba850f4fa9c31a8d9d70e0da35c09d7e78db613f7b113381253",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-control_stack-2026-05-16_090413",
+      "engine_family": "control_stack",
+      "evidence_id": "EEB-7df4589a96005a41",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090413_control_stack_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "40438b8642a6eceae525c97c2099e4b3b22bffe96fcc16e9de62f9840bf82ba1",
+      "requested_decision": "DEFERRED_FOR_MORE_REVIEW",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/core_stack_breather",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090413_core_stack_breather_engine_review_approval_helper_v1.json",
+      "check_sha256": "cdce2f0538e47cd2c896589b4ca64508349ebe8ac6178426fa7abed1d4c380fc",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-core_stack_breather-2026-05-16_090413",
+      "engine_family": "core_stack_breather",
+      "evidence_id": "EEB-df535a295e2cc3a2",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090413_core_stack_breather_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "f01fb09479f5de7464476f8fdbfa72429377827c425561e720710922dd66e1fe",
+      "requested_decision": "DEFERRED_FOR_MORE_REVIEW",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/core_system_stack",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090413_core_system_stack_engine_review_approval_helper_v1.json",
+      "check_sha256": "9b1394a2df807b0e2bfbd9faf8fbcddfc09c16f2f76d58882c2dc0b7ce4890b8",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-core_system_stack-2026-05-16_090413",
+      "engine_family": "core_system_stack",
+      "evidence_id": "EEB-3bf3f922354da81e",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090413_core_system_stack_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "95df83dde6907ce7580dd7578e8208c96e875cf8265b80dd5d1dbfb786b9b430",
+      "requested_decision": "DEFERRED_FOR_MORE_REVIEW",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/dream_state_engine",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_090413_dream_state_engine_engine_review_approval_helper_v1.json",
+      "check_sha256": "b9f91cb4db048df32795e0277027fe59cbc84421d1ae9e8f0fc73ec283de5acc",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-dream_state_engine-2026-05-16_090413",
+      "engine_family": "dream_state_engine",
+      "evidence_id": "EEB-250da52af3cef833",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_090413_dream_state_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "c1acad98019804b299eb614c964fa21800e426338ae1b0ebdea218aba2e61d56",
+      "requested_decision": "DEFERRED_FOR_MORE_REVIEW",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    }
+  ],
+  "schema_version": "engine_review_batch_approval_v1_patch106",
+  "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION",
+  "warnings": [
+    "contribution_ledger_stack: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "control_stack: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "core_stack_breather: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "core_system_stack: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.",
+    "dream_state_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

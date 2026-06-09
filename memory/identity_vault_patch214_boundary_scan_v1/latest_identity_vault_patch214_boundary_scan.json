@@ -1,0 +1,381 @@
+{
+  "boundary": {
+    "does_not_activate_agent_identities": true,
+    "does_not_modify_databases": true,
+    "does_not_modify_identity_vault": true,
+    "does_not_read_env_values": true,
+    "read_only": true,
+    "writes_only_under": "forge/memory/identity_vault_patch214_boundary_scan_v1"
+  },
+  "findings": [
+    {
+      "code": "IV_NODE_MODULES_PRESENT",
+      "finding": "node_modules is present and should not be packaged into future patches.",
+      "severity": "WARN"
+    },
+    {
+      "code": "IV_ENV_PRESENT",
+      "finding": ".env is present. Do not package it; rotate secrets if it was shared outside the machine.",
+      "severity": "WARN"
+    },
+    {
+      "code": "IV_MULTIPLE_DATABASES",
+      "finding": "Multiple database files found (2). A canonical database path must be selected before integration.",
+      "severity": "WARN"
+    },
+    {
+      "code": "IV_GITIGNORE_DB_RULE_MISSING",
+      "finding": ".gitignore does not clearly ignore local database/runtime state files.",
+      "severity": "INFO"
+    }
+  ],
+  "git_status": {
+    "is_git_repo": true,
+    "status": {
+      "cmd": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": " M .env.example\n M package.json\n M server.js\n M utils/encryption.js\n?? .dockerignore\n?? Dockerfile\n?? data/\n?? docker-compose.dev.yml\n?? docker-compose.yml\n?? install.sh\n?? nginx.conf\n?? scripts/\n?? security.config.js\n"
+    },
+    "status_checked": true
+  },
+  "identity_vault_scan": {
+    "database_hits": [
+      {
+        "exists": true,
+        "is_dir": false,
+        "is_file": true,
+        "mode_octal": "0o644",
+        "mtime": "2025-09-24T08:46:31.831127+00:00",
+        "path": "identity-vault/data/identity_vault.db",
+        "sha256": "d185eb83a37a9be907ff6525deb241778772fbc7fcc51794efc4c94ab6ecf32f",
+        "size_bytes": 57344
+      },
+      {
+        "exists": true,
+        "is_dir": false,
+        "is_file": true,
+        "mode_octal": "0o644",
+        "mtime": "2025-09-30T09:03:50.055894+00:00",
+        "path": "identity-vault/vault.db",
+        "sha256": "1bfcaca815f7149d32b30e261c20d0679d7182191fe55cfa63ce830c287d87b9",
+        "size_bytes": 36864
+      }
+    ],
+    "gitignore": {
+      "has_db_rule": false,
+      "has_env_rule": true,
+      "has_node_modules_rule": true
+    },
+    "important_files": {
+      ".env": {
+        "exists": true,
+        "is_dir": false,
+        "is_file": true,
+        "mode_octal": "0o664",
+        "mtime": "2025-09-30T08:39:08.592284+00:00",
+        "path": "identity-vault/.env",
+        "sha256": "cf889320efcfdfa308b810d435219af658dc1ff33bb4f9229a8d9c33ca8dc2f2",
+        "size_bytes": 1605
+      },
+      ".env.example": {
+        "exists": true,
+        "is_dir": false,
+        "is_file": true,
+        "mode_octal": "0o664",
+        "mtime": "2025-09-23T16:41:34.445573+00:00",
+        "path": "identity-vault/.env.example",
+        "sha256": "7a03ca41c258f7d900899466561662c58e60158f490d9a220ac47467ac8f5274",
+        "size_bytes": 6787
+      },
+      ".gitignore": {
+        "exists": true,
+        "is_dir": false,
+        "is_file": true,
+        "mode_octal": "0o664",
+        "mtime": "2025-09-15T01:29:52.926947+00:00",
+        "path": "identity-vault/.gitignore",
+        "sha256": "d9785d6c0f8b0c5f98ebbac3d97eb34ecef31449f55fab298614a97a5f4c6b96",
+        "size_bytes": 860
+      },
+      "README.md": {
+        "exists": true,
+        "is_dir": false,
+        "is_file": true,
+        "mode_octal": "0o664",
+        "mtime": "2025-09-23T09:06:37.150747+00:00",
+        "path": "identity-vault/README.md",
+        "sha256": "fca8549b72e56c3023c56779854de6e51cf8204cc69c06bff2a4296df93512ca",
+        "size_bytes": 15334
+      },
+      "package.json": {
+        "exists": true,
+        "is_dir": false,
+        "is_file": true,
+        "mode_octal": "0o664",
+        "mtime": "2025-09-23T16:37:32.414162+00:00",
+        "path": "identity-vault/package.json",
+        "sha256": "263684c468dd7b5070d1cb2f14b0a8b32f792a8f88f942ac7d88b41ae9dae010",
+        "size_bytes": 5554
+      },
+      "server.js": {
+        "exists": true,
+        "is_dir": false,
+        "is_file": true,
+        "mode_octal": "0o664",
+        "mtime": "2025-09-30T08:59:31.599610+00:00",
+        "path": "identity-vault/server.js",
+        "sha256": "526e4f9dd1e5e7560a6f49b37dc88a5faf93302b9959f8a4bc7873b1768d062b",
+        "size_bytes": 12800
+      }
+    },
+    "large_dirs_present": [
+      "identity-vault/node_modules"
+    ],
+    "lock_files": [
+      {
+        "exists": true,
+        "is_dir": false,
+        "is_file": true,
+        "mode_octal": "0o664",
+        "mtime": "2025-09-15T01:51:00.036941+00:00",
+        "path": "identity-vault/package-lock.json",
+        "sha256": "014cd98e083d50827a4cc55f8248394fa7b681eccd43276bf643cf74b1fd0fab",
+        "size_bytes": 323295
+      }
+    ],
+    "node_modules_present": true,
+    "package_json": {
+      "dependency_names": [
+        "@langchain/core",
+        "archiver",
+        "bcryptjs",
+        "chalk",
+        "commander",
+        "compression",
+        "cors",
+        "crypto-js",
+        "dotenv",
+        "express",
+        "express-rate-limit",
+        "express-validator",
+        "fs-extra",
+        "helmet",
+        "ipfs-core",
+        "joi",
+        "json-diff",
+        "jsonwebtoken",
+        "lodash",
+        "moment",
+        "morgan",
+        "multer",
+        "multiformats",
+        "ngrok",
+        "node-cron",
+        "node-fetch",
+        "prom-client",
+        "snarkjs",
+        "socket.io",
+        "sqlite3",
+        "uuid",
+        "winston",
+        "winston-daily-rotate-file",
+        "ws"
+      ],
+      "dev_dependency_names": [
+        "@semantic-release/changelog",
+        "@semantic-release/git",
+        "@semantic-release/github",
+        "@types/archiver",
+        "@types/bcryptjs",
+        "@types/cors",
+        "@types/crypto-js",
+        "@types/express",
+        "@types/jest",
+        "@types/jsonwebtoken",
+        "@types/lodash",
+        "@types/multer",
+        "@types/node",
+        "@types/uuid",
+        "@types/ws",
+        "eslint",
+        "eslint-config-airbnb-base",
+        "eslint-plugin-import",
+        "eslint-plugin-jest",
+        "eslint-plugin-security",
+        "husky",
+        "jest",
+        "lint-staged",
+        "nodemon",
+        "prettier",
+        "semantic-release",
+        "snyk",
+        "supertest",
+        "ts-jest",
+        "tsx",
+        "typedoc",
+        "typescript"
+      ],
+      "name": "identity-vault",
+      "scripts": [
+        "build",
+        "build:docs",
+        "cli",
+        "db:backup",
+        "db:migrate",
+        "db:restore",
+        "db:seed",
+        "debug",
+        "deploy",
+        "dev",
+        "docker:build",
+        "docker:build:dev",
+        "docker:logs",
+        "docker:run",
+        "docker:run:dev",
+        "docker:shell",
+        "docker:stop",
+        "format",
+        "format:check",
+        "health",
+        "install:dev",
+        "k8s:delete",
+        "k8s:deploy",
+        "lint",
+        "lint:check",
+        "monitoring:start",
+        "monitoring:stop",
+        "postinstall",
+        "preinstall",
+        "prepare",
+        "release",
+        "release:dry",
+        "security:audit",
+        "security:scan",
+        "start",
+        "test",
+        "test:e2e",
+        "test:integration",
+        "test:unit",
+        "test:watch",
+        "type-check",
+        "validate"
+      ],
+      "version": "1.0.0"
+    },
+    "root": "identity-vault",
+    "root_exists": true,
+    "runtime_dirs": [
+      "identity-vault/data"
+    ],
+    "sensitive_hits": [
+      {
+        "exists": true,
+        "is_dir": false,
+        "is_file": true,
+        "mode_octal": "0o664",
+        "mtime": "2025-09-30T08:39:08.592284+00:00",
+        "path": "identity-vault/.env",
+        "sha256": "cf889320efcfdfa308b810d435219af658dc1ff33bb4f9229a8d9c33ca8dc2f2",
+        "size_bytes": 1605
+      },
+      {
+        "exists": true,
+        "is_dir": false,
+        "is_file": true,
+        "mode_octal": "0o664",
+        "mtime": "2025-09-23T16:41:34.445573+00:00",
+        "path": "identity-vault/.env.example",
+        "sha256": "7a03ca41c258f7d900899466561662c58e60158f490d9a220ac47467ac8f5274",
+        "size_bytes": 6787
+      }
+    ],
+    "top_level_entries": [
+      ".dockerignore",
+      ".env",
+      ".env.example",
+      ".git",
+      ".gitignore",
+      "API_Reference.md",
+      "Design_Manual_System_Blueprint.md",
+      "Dockerfile",
+      "Identity_Vault_Pro.md",
+      "Integrating_Legacy_LLMs.md",
+      "Product_Overview_Solution_Brief.md",
+      "Quick_Setup_Features_Guide.md",
+      "README.md",
+      "Security_Guide.md",
+      "Troubleshooting_Guide.md",
+      "User_Manual.md",
+      "cli.js",
+      "data",
+      "db.js",
+      "docker-compose.dev.yml",
+      "docker-compose.yml",
+      "install.sh",
+      "nginx.conf",
+      "node_modules",
+      "package-lock.json",
+      "package.json",
+      "plugins",
+      "public",
+      "routes",
+      "schemas.js",
+      "scripts",
+      "security.config.js",
+      "server.js",
+      "templates",
+      "tests",
+      "utils",
+      "vault.db"
+    ]
+  },
+  "sqlite_schema_summaries": [
+    {
+      "error": null,
+      "ok": true,
+      "path": "identity-vault/data/identity_vault.db",
+      "read_attempted": true,
+      "row_counts": {
+        "agent_profiles": 0,
+        "audit_logs": 0,
+        "feedback_logs": 0,
+        "session_state": 0,
+        "user_profiles": 0
+      },
+      "tables": [
+        "agent_profiles",
+        "audit_logs",
+        "feedback_logs",
+        "session_state",
+        "sqlite_sequence",
+        "user_profiles"
+      ],
+      "views": []
+    },
+    {
+      "error": null,
+      "ok": true,
+      "path": "identity-vault/vault.db",
+      "read_attempted": true,
+      "row_counts": {
+        "feedback_logs": 0,
+        "profiles": 1,
+        "session_state": 1
+      },
+      "tables": [
+        "feedback_logs",
+        "profiles",
+        "session_state",
+        "sqlite_sequence"
+      ],
+      "views": []
+    }
+  ],
+  "timestamp": "20260523_192940_UTC",
+  "verdict": "PASS"
+}

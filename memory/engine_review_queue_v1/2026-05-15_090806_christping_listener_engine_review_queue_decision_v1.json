@@ -1,0 +1,29 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "HUMAN_REVIEW_QUEUE_ONLY_NO_LEDGER_MUTATION",
+    "patch": "99",
+    "project_write_authority": false,
+    "rule": "Patch 99 queues LLM draft reviews for Nic. It records approve/defer/reject intent only. Patch 100 is required to commit ledger changes after SHA re-verification.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_queue_v1"
+  },
+  "candidate_path": "/home/nic/aiweb/engines/christping_listener",
+  "created_at": "2026-05-15_090806",
+  "decision_id": "ERQ-christping_listener-2026-05-15_090806",
+  "draft_id": "LER-christping_listener-2026-05-15_085820",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_085820_christping_listener_llm_engine_review_draft_v1.json",
+  "draft_sha256": "a81c99382837d58bae2ea5119578df8a790d8a26b9291fc29108e5047ef9754d",
+  "engine_family": "christping_listener",
+  "evidence_binder_sha256": "1411d3e18a37430d8cb552d7cc2494c0ac84d976102d5a0de096b27237cdb2e3",
+  "evidence_id": "EEB-a757f04a6033202d",
+  "human_queue_decision": "APPROVED_FOR_FUTURE_COMMIT",
+  "report_type": "ENGINE_REVIEW_QUEUE_DECISION_V1_PATCH99",
+  "schema_version": "engine_review_queue_v1_patch99",
+  "stale_evidence_rule": "Patch 100 must re-read the candidate path and confirm current SHA matches this evidence binder before any canonical ledger commit.",
+  "status": "HUMAN_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION"
+}

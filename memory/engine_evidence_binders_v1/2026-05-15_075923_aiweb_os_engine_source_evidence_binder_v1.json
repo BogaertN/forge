@@ -1,0 +1,83 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/runtime_wrappers/aiweb_os_v1",
+  "candidate_path_resolved": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "aiweb_os",
+  "evidence_id": "EEB-7b29cb90ee5e540e",
+  "file_count": 2,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "79d66f45d8bd1daaedaa1a59d670a7190019b9e0d2d4b01c0befd382207d8960",
+      "excerpt_start": "import sys\nimport os\nimport importlib.util\n\n# --- Dynamic Module Loader ---\ndef load_module(name, path):\n    spec = importlib.util.spec_from_file_location(name, path)\n    mod = importlib.util.module_from_spec(spec)\n    spec.loader.exec_module(mod)\n    return mod\n\n# --- Absolute Paths to Each Frozen Engine ---\nbase = os.path.abspath(\"../../engines\")\n\nos_engine     = load_module(\"os_engine\",     f\"{base}/aiweb_os_engine_frozen_v1/run.py\")\nphase_engine  = load_module(\"phase_engine\",  f\"{base}/phase_engine_frozen_v1/run.py\")\ntier_enforcer = load_module(\"tier_enforcer\", f\"{base}/tier_enforcer_frozen_v1/run.py\")\nmemory_stack  = load_module(\"memory_stack\",  f\"{base}/memory_stack_engine_frozen_v1/log.py\")\nsys_logger    = load_module(\"sys_logger\",    f\"{base}/system_log_engine_frozen_v1/log_event.py\")\nplugin_loader = load_module(\"plugin_loader\", f\"{base}/plugin_engine_frozen_v1/loader.py\")\n\nprint(\"\\n=== 🧪 AI.Web System Test Harness ===\")\n\ntry:\n    print(\"\\n[OS ENGINE] Booting...\")\n    result = os_engine.execute_command(\"ping\")\n    print(\"OS Engine:\", result)\nexcept Exception as e:\n    print(\"OS Engine: FAIL\", e)\n\ntry:\n    print(\"\\n[PHASE ENGINE] Initializing...\")\n    result = phase_engine.init_phase_state()\n    print(\"Phase Init:\", result)\n    result = phase_engine.move_to_next_phase()\n    print(\"Phase Step:\", result)\nexcept Exception as e:\n    print(\"Phase Engine: FAIL\", e)\n\ntry:\n    print(\"\\n[TIER ENFORCER] Validating output...\")\n    result = tier_enforcer.enforce_tier(\"This tool helps you journal clearly.\")\n    print(\"Tier Enforcer Output:\", result)\nexcept Exception as e:\n    print(\"Tier Enforcer: FAIL\", e)\n\ntry:\n    print(\"\\n[MEMORY STACK] Writing test entry...\")\n    memory_stack.write_to_stack({\"source\": \"test\", \"note\": \"phase step\"})\n    print(\"Memory Stack: PASS\")\nexcept Exception as e:\n    print(\"Memory Stack: FAIL\", e)\n\ntry:\n    print(\"\\n[SYSTEM LOGGER] Logging system event...\")\n    sys_logger.log_event(\"test_harness\", \"System test running\", status=\"info\")\n    print(\"System Logger: PASS\")\nexcept Exception as e:\n    print(\"System Logger: FAIL\", e)\n\ntry:\n    print(\"\\n[PLUGIN ENGINE] Attempting to load plugins...\")\n    plugin_loader.load_plugins()\n    print(\"Plugin Loader: PASS\")\nexcept Exception as e:\n    print(\"Plugin Loader: FAIL\", e)\n\nprint(\"\\n✅ SYSTEM TEST COMPLETE\")\n\n",
+      "functions_sample": [
+        "load_module"
+      ],
+      "imports_sample": [
+        "import sys",
+        "import os",
+        "import importlib.util"
+      ],
+      "line_count": 70,
+      "path": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1/run_system_test.py",
+      "relative_to_candidate": "run_system_test.py",
+      "sha256": "79d66f45d8bd1daaedaa1a59d670a7190019b9e0d2d4b01c0befd382207d8960",
+      "size_bytes": 2316,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "excerpt_start": "",
+      "functions_sample": [],
+      "imports_sample": [],
+      "line_count": 0,
+      "path": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1/test_log.txt",
+      "relative_to_candidate": "test_log.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "suffix": ".txt"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "DEFERRED",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "load_module"
+  ],
+  "warnings": []
+}

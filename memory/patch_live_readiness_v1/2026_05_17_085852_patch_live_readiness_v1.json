@@ -1,0 +1,238 @@
+{
+  "authority": {
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "forge_self_write_authority": false,
+    "ledger_mutation_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "readiness_only": true,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-17T08:58:52",
+  "eligible_for_live_apply": false,
+  "gates": [
+    {
+      "blocking": true,
+      "evidence": {
+        "path": "/home/nic/forge/memory/llm_patch_proposals_v1/latest_llm_source_grounded_patch_proposal_v1.json",
+        "sha256": "e90ab8dfb492c0107322fcc59682c3b51299eca75df8c4ba9ad163da3c678248"
+      },
+      "gate": "source_grounded_proposal_exists",
+      "pass": true,
+      "reason": "latest source-grounded proposal packet present",
+      "status": "PASS"
+    },
+    {
+      "blocking": true,
+      "evidence": {
+        "path": "/home/nic/forge/memory/llm_patch_proposals_v1/latest_llm_source_grounded_patch_verification_v1.json",
+        "sha256": "691c64082f93ad4e68691633d7ced1c4ed04f24009c85195ef432c6ef891ff64"
+      },
+      "gate": "source_grounded_proposal_verified",
+      "pass": true,
+      "reason": "proposal verification has zero problems",
+      "status": "PASS"
+    },
+    {
+      "blocking": true,
+      "evidence": {
+        "duration_ms": 61823,
+        "model": "qwen3:8b",
+        "raw_response_sha256": "1012112b23adf83a3863086745216caaa0f69735c45ef68fb5adb9ba1216ae12"
+      },
+      "gate": "visible_local_llm_called",
+      "pass": true,
+      "reason": "local Ollama model call captured with raw response",
+      "status": "PASS"
+    },
+    {
+      "blocking": true,
+      "evidence": {
+        "primary_target": "/home/nic/aiweb/engines/stack_linker_breather",
+        "under_aiweb": true
+      },
+      "gate": "target_file_scope_valid",
+      "pass": true,
+      "reason": "primary target exists under /home/nic/aiweb",
+      "status": "PASS"
+    },
+    {
+      "blocking": true,
+      "evidence": {
+        "count": 1
+      },
+      "gate": "test_target_scope_valid",
+      "pass": true,
+      "reason": "test targets exist under /home/nic/aiweb",
+      "status": "PASS"
+    },
+    {
+      "blocking": true,
+      "evidence": {
+        "authority_claimed": false,
+        "candidate_count": 6
+      },
+      "gate": "source_evidence_candidate_bound",
+      "pass": true,
+      "reason": "candidate source evidence exists with observed hashes",
+      "status": "PASS"
+    },
+    {
+      "blocking": true,
+      "evidence": {
+        "risk_level": "MEDIUM",
+        "risk_score": 65
+      },
+      "gate": "patch_impact_known",
+      "pass": true,
+      "reason": "target exists in patch impact map",
+      "status": "PASS"
+    },
+    {
+      "blocking": true,
+      "evidence": {
+        "target_test_status": "ISSUES",
+        "test_run_status": "CANONICAL_TEST_RUN_COMPLETED_WITH_ISSUES"
+      },
+      "gate": "safe_test_result_known",
+      "pass": true,
+      "reason": "latest canonical safe-test run is recorded",
+      "status": "PASS"
+    },
+    {
+      "blocking": true,
+      "evidence": {
+        "latest_failures": [
+          {
+            "problem": null,
+            "status": "FAIL",
+            "stderr_tail": "Traceback (most recent call last):\n  File \"/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py\", line 3, in <module>\n    from stack_linker_breather.stack_linker_core import unified_breathe_cycle\nModuleNotFoundError: No module named 'stack_linker_breather'\n",
+            "test_path": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+          }
+        ],
+        "target_test_status": "ISSUES"
+      },
+      "gate": "target_tests_currently_pass",
+      "pass": false,
+      "reason": "target currently has known test issue; repair patch not live-apply eligible yet",
+      "status": "FAIL"
+    },
+    {
+      "blocking": true,
+      "evidence": {
+        "rollback_needs": [
+          "snapshot_or_file_backup_before_live_patch",
+          "current_sha_readback_before_apply",
+          "post_write_disk_verification"
+        ]
+      },
+      "gate": "rollback_plan_present",
+      "pass": true,
+      "reason": "rollback plan requirements are recorded",
+      "status": "PASS"
+    },
+    {
+      "blocking": true,
+      "evidence": {
+        "path": "/home/nic/forge/memory/forge_self_snapshots_v1/latest_forge_self_snapshot_v1.json",
+        "status": null
+      },
+      "gate": "fresh_snapshot_required",
+      "pass": false,
+      "reason": "no verified relevant snapshot found in this gate input",
+      "status": "FAIL"
+    },
+    {
+      "blocking": true,
+      "evidence": {
+        "path": "/home/nic/forge/memory/forge_self_sandboxes_v1/latest_forge_self_sandbox_report_v1.json",
+        "status": "FORGE_SELF_SANDBOX_APPLIED_AND_CHECKED"
+      },
+      "gate": "sandbox_pass_required",
+      "pass": true,
+      "reason": "sandbox report exists and passed",
+      "status": "PASS"
+    },
+    {
+      "blocking": true,
+      "evidence": {},
+      "gate": "human_approval_recorded",
+      "pass": false,
+      "reason": "no explicit human approval token/receipt has been recorded for live apply",
+      "status": "FAIL"
+    }
+  ],
+  "inputs": {
+    "canonical_lockfile": {
+      "exists": true,
+      "path": "/home/nic/forge/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+      "sha256": "b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab"
+    },
+    "live_llm_draft": {
+      "exists": true,
+      "path": "/home/nic/forge/memory/llm_live_patch_drafts_v1/latest_llm_live_patch_draft_v1.json",
+      "sha256": "987150f7153692f5049c3d74df4431247c26e7f5256101d51fd02e3937333e4e"
+    },
+    "patch_impact": {
+      "exists": true,
+      "path": "/home/nic/forge/memory/patch_impact_v1/latest_patch_impact_map_v1.json",
+      "sha256": "405a07bf3f8842fe5210dbc891dbe7c68b1e604c73268d03728fbc8c1659ed98"
+    },
+    "proposal": {
+      "exists": true,
+      "path": "/home/nic/forge/memory/llm_patch_proposals_v1/latest_llm_source_grounded_patch_proposal_v1.json",
+      "sha256": "e90ab8dfb492c0107322fcc59682c3b51299eca75df8c4ba9ad163da3c678248"
+    },
+    "proposal_verification": {
+      "exists": true,
+      "path": "/home/nic/forge/memory/llm_patch_proposals_v1/latest_llm_source_grounded_patch_verification_v1.json",
+      "sha256": "691c64082f93ad4e68691633d7ced1c4ed04f24009c85195ef432c6ef891ff64"
+    },
+    "relationship_map": {
+      "exists": true,
+      "path": "/home/nic/forge/memory/canonical_engine_relationships_v1/latest_canonical_engine_relationship_map_v1.json",
+      "sha256": "1f06340729a2c283e6db78924e4e3d96f85f7863813d8c4c2cbf92c8fe3aa1ca"
+    },
+    "self_sandbox": {
+      "exists": true,
+      "path": "/home/nic/forge/memory/forge_self_sandboxes_v1/latest_forge_self_sandbox_report_v1.json",
+      "sha256": "439ae7e3d4d2a3a5f39e3277b7bf2cbf6bb3fc48c6e509de901191dda291398b"
+    },
+    "self_snapshot": {
+      "exists": false,
+      "path": "/home/nic/forge/memory/forge_self_snapshots_v1/latest_forge_self_snapshot_v1.json",
+      "sha256": null
+    },
+    "source_authority": {
+      "exists": true,
+      "path": "/home/nic/forge/memory/engine_source_authority_v1/latest_engine_source_law_map_v1.json",
+      "sha256": "841710e052716d4be4c03c9599f0e4d55b4ac5670ef0075f7c473650748965bd"
+    },
+    "test_run": {
+      "exists": true,
+      "path": "/home/nic/forge/memory/canonical_engine_test_runs_v1/latest_canonical_engine_test_run_report_v1.json",
+      "sha256": "71d86bec9e179939ba6bd16833623f06c05db1458cbd436d809a5e85ee62ab9a"
+    }
+  },
+  "plain_english": "Read-only Patch Lifecycle 2.0 gate matrix. It explains why a proposed repair is or is not eligible for live apply. It does not apply patches.",
+  "problems": [
+    "target_tests_currently_pass: target currently has known test issue; repair patch not live-apply eligible yet",
+    "fresh_snapshot_required: no verified relevant snapshot found in this gate input",
+    "human_approval_recorded: no explicit human approval token/receipt has been recorded for live apply"
+  ],
+  "recommended_next_patch": "Patch 134 \u2014 Gated repair for stack_linker_breather import/test issue",
+  "report_type": "PATCH_LIVE_READINESS_V1",
+  "schema_version": "patch_live_readiness_v1_patch133",
+  "status": "PATCH_LIFECYCLE_2_GATE_MATRIX_READY",
+  "summary": {
+    "blocking_failures": 3,
+    "eligible_for_live_apply": false,
+    "gates_total": 13,
+    "known_test_issue": true,
+    "recommended_next_patch": "Patch 134 \u2014 Gated repair for stack_linker_breather import/test issue",
+    "warnings": 0
+  },
+  "target": "stack_linker_breather",
+  "warnings": []
+}

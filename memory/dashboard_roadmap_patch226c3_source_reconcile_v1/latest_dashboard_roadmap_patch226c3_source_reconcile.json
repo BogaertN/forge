@@ -1,0 +1,67 @@
+{
+  "timestamp": "20260523_214752_UTC",
+  "verdict": "PASS",
+  "backup": "/home/nic/forge/backups/patch226c3_dashboard_roadmap_source_reconcile_before/20260523_214752_UTC/main.py",
+  "changed": true,
+  "restored_on_failure": false,
+  "changes": [
+    "replace_all:Dashboard Roadmap Panel Status — Patch 226C.1 count=1",
+    "replace_all:Dashboard Roadmap Panel List — Patch 226C.1 count=1",
+    "replace_all:Dashboard Roadmap Panel Build — Patch 147 count=1",
+    "replace_all:Forge Roadmap Status — Build Sequence / Patch 146 count=1",
+    "replace_all:elif rid == \"S19AC\": count=2",
+    "replace_all:elif rid == \"S19AD\": count=1",
+    "replace_all:payload[\"current_phase\"] = \"S19AC — Runtime Candidate Sandbox Stage Create/Verif count=1",
+    "replace_all:payload[\"active_patch\"] = \"Patch 183 — Runtime Candidate Sandbox Stage Create/Ve count=1",
+    "replace_all:payload[\"next_patch\"] = \"Patch 184 — Runtime Candidate Sandbox Copy Integrity Re count=1",
+    "replace_all:payload[\"recommended_next_patch\"] = \"Patch 184 — Runtime Candidate Sandbox Copy  count=1",
+    "replace_all:\"next_patch\": \"Patch 184 — Runtime Candidate Sandbox Copy Integrity Review / No- count=1",
+    "replace_all:\"recommended_next_patch\": \"Patch 184 — Runtime Candidate Sandbox Copy Integrity  count=1",
+    "replace_all:rows.append({\"id\":\"S19AC\",\"status\":\"NEXT\",\"title\":\"Identity Vault Profile Seed P count=1",
+    "replace_all:rows.append({\"id\":\"S19AC\",\"status\":\"ACTIVE\",\"title\":\"Identity Vault Profile Seed count=1",
+    "replace_all:rows.append({\"id\":\"S19AD\",\"status\":\"NEXT\",\"title\":\"Runtime Candidate Sandbox Cop count=1",
+    "insert:canonical_aiweb_bootstrap_rows_after_s19ad"
+  ],
+  "compile": {
+    "attempted": true,
+    "ok": true,
+    "returncode": 0,
+    "stderr_tail": ""
+  },
+  "static": {
+    "target_current_present": true,
+    "target_next_present": true,
+    "marker_present": true,
+    "s19aq_present": true,
+    "s19ax_present": true,
+    "s19bp_present": true,
+    "s19at_active_present": true,
+    "s19au_next_present": true,
+    "s19ac_done_present": true,
+    "s19ad_done_present": true,
+    "old_current_assignment_absent": true,
+    "old_next_assignment_absent": true,
+    "ok": true
+  },
+  "safety": {
+    "tool_registry_sha_unchanged": true,
+    "canonical_db_sha_unchanged": true,
+    "legacy_db_sha_unchanged": true,
+    "env_stat_unchanged": true,
+    "identity_vault_db_write_performed": false,
+    "forge_tool_registry_modified": false,
+    "main_py_modified": true
+  },
+  "findings": [
+    {
+      "level": "INFO",
+      "code": "ROADMAP_SOURCE_RECONCILED",
+      "message": "main.py static roadmap source now contains S19AT active and Patch 226D next state."
+    },
+    {
+      "level": "INFO",
+      "code": "CANONICAL_ROWS_PRESENT",
+      "message": "Canonical AI.Web bootstrap rows S19AC-S19BP are present in the roadmap source."
+    }
+  ]
+}

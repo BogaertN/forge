@@ -1,0 +1,8 @@
+{
+  "latest_request_id": "llm_tool_request_2026-05-14_194137_737eb8f2dc742d1e",
+  "latest_request_path": "/home/nic/forge/memory/llm_memory_v1/tool_requests/llm_tool_request_2026-05-14_194137_737eb8f2dc742d1e.json",
+  "latest_status": "REFUSED",
+  "latest_tool_name": "patch-apply",
+  "schema_version": "llm_tool_gateway_v1_patch76",
+  "updated_at": "2026-05-14T19:41:37"
+}

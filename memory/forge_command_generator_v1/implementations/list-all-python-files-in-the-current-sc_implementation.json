@@ -1,0 +1,13 @@
+{
+  "command_name": "list-all-python-files-in-the-current-sc",
+  "function_name": "cmd_list_all_python_files_in_the_current_sc",
+  "description": "list all Python files in the current scope",
+  "generated_at": "20260522_054025",
+  "model": "qwen3:8b",
+  "elapsed_seconds": 14.697,
+  "generated_body": "from agents.forge.memory import write_audit_entry\n    scope = Path(get_session_paths()[0])\n    results = [p.relative_to(scope) for p in scope.rglob('*.py') if not p.name.startswith('.')]\n    print()\n    print('\u2500\u2500 list all Python files in the curren \u2500\u2500')\n    for item in results:\n        print(f'  {item}')  \n    print()\n    write_audit_entry(session_id, 'CMD_LIST_ALL_PYTHON_FILES_IN_THE_CURRENT_SC_EXECUTED', str(scope), str(len(results)), 'done')",
+  "full_function": "def cmd_list_all_python_files_in_the_current_sc(session_id: str):\n    \"\"\"\n    list all Python files in the current scope\n\n    LLM-implemented via qwen3:8b by forge-command-implement\n    \"\"\"\n    from agents.forge.memory import write_audit_entry\n    scope = Path(get_session_paths()[0])\n    results = [p.relative_to(scope) for p in scope.rglob('*.py') if not p.name.startswith('.')]\n    print()\n    print('\u2500\u2500 list all Python files in the curren \u2500\u2500')\n    for item in results:\n        print(f'  {item}')  \n    print()\n    write_audit_entry(session_id, 'CMD_LIST_ALL_PYTHON_FILES_IN_THE_CURRENT_SC_EXECUTED', str(scope), str(len(results)), 'done')\n",
+  "status": "IMPLEMENTATION_INSTALLED",
+  "installed": true,
+  "installed_at": "20260522_054116"
+}

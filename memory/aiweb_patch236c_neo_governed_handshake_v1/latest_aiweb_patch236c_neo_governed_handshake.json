@@ -1,0 +1,346 @@
+{
+  "activation_gate": {
+    "activation_state": "active_governed",
+    "is_active": true,
+    "last_validated_at": "2026-05-24T11:56:38Z",
+    "profile_hash": "df922d109948a5e5f29d647422a22145467720577ed80ffe27da783f07cae537"
+  },
+  "agent_id": "neo.local",
+  "autonomous_tool_execution_granted": false,
+  "blockers": [],
+  "checks": [
+    {
+      "blocker": null,
+      "detail": "/home/nic/forge/memory/aiweb_patch236b_neo_activation_verify_v1/latest_aiweb_patch236b_neo_activation_verify.json",
+      "key": "prior_236b_report_exists",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "True",
+      "key": "prior_236b_ok",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "NEO_ACTIVATION_VERIFIED_ACTIVE_GOVERNED",
+      "key": "prior_236b_verdict",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "read",
+      "key": "identity_profile_read_ok",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "neo.local",
+      "key": "agent_id_exact",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "active_governed",
+      "key": "activation_state_active_governed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "True",
+      "key": "is_active_true",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "df922d109948a5e5f29d647422a22145467720577ed80ffe27da783f07cae537",
+      "key": "profile_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "2026-05-24T11:56:38Z",
+      "key": "last_validated_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "active_governed",
+      "key": "gilligan_remains_active_governed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "active_governed",
+      "key": "athena_remains_active_governed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "patch229b_verify",
+      "key": "scaffold_root_ok",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local",
+      "key": "namespace_exists",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "[{'name': 'manifests', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/manifests', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'receipts', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/receipts', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'echo', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/echo', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'private_context', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/private_context', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'phase_records', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/phase_records', 'exists': True, 'is_dir': True, 'file_count': 0}]",
+      "key": "namespace_children_exist",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "public/frontline/non-sensitive support context only",
+      "key": "neo_role_public_frontline_only",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "Forge-owned report only",
+      "key": "no_identity_write_in_this_patch",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "Forge-owned report only",
+      "key": "no_rmc_memory_write_in_this_patch",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "private memory exposure forbidden",
+      "key": "no_private_memory_exposure_in_this_patch",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "secret reads forbidden",
+      "key": "no_secret_read_in_this_patch",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "autonomous execution forbidden",
+      "key": "no_autonomous_execution_in_this_patch",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "bd7cdaade1c99170251f705d0aab99adedd425737ea794b64968875bfe7d9475",
+      "key": "manifest_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "0f5d8f5a02e79f40d41811e0fc342537c1c5ece409048fa6e646744b9bba4e55",
+      "key": "render_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "ECHO_VALIDATION_PASSED_NEO_GOVERNED_ACTIVE_AGENT",
+      "key": "echo_validation_passed",
+      "ok": true
+    }
+  ],
+  "checks_passed": 23,
+  "checks_total": 23,
+  "echo_validation": {
+    "active_gate_ok": true,
+    "boundary_ok": true,
+    "drift_status": "GOVERNED_NEO_HANDSHAKE_NO_AUTONOMY_NO_PRIVATE_MEMORY",
+    "echo_hash": "f39a42c41364a3c1c22e4b4671edd1cad3ebbfb77db9602fb45b8eb09091f9fd",
+    "echo_score": 0.97,
+    "notes": "Echo validation accepts Neo's governed active handshake only because Forge remains authority and no autonomous execution, private memory access, secret read, RMC memory write, or Identity Vault mutation is granted.",
+    "ok": true,
+    "render_preview_ok": true,
+    "role_boundary_ok": true,
+    "verdict": "ECHO_VALIDATION_PASSED_NEO_GOVERNED_ACTIVE_AGENT"
+  },
+  "generated_at_iso_utc": "2026-05-24T12:09:16Z",
+  "generated_at_utc": "20260524_120916_UTC",
+  "governance_boundary": {
+    "forge_remains_authority_layer": true,
+    "neo_can_access_private_memory": false,
+    "neo_can_bypass_forge": false,
+    "neo_can_create_patches_without_approval": false,
+    "neo_can_execute_tools_by_itself": false,
+    "neo_can_mutate_identity_vault": false,
+    "neo_can_read_secrets": false,
+    "neo_can_write_memory_by_itself": false
+  },
+  "handshake_receipt_hash": "f330bbc2479812404db7d5ceb2f6a80e12b58cc44c54ab8eb80c1947ccef2ad7",
+  "identity_vault_database_written": false,
+  "manifest": {
+    "agent_activation_state": "active_governed",
+    "agent_id": "neo.local",
+    "agent_is_active": true,
+    "allowed_actions_this_patch": [
+      "select_neo_public_frontline_context",
+      "read_neo_public_permissions",
+      "resolve_neo_rmc_namespace_pointer",
+      "compile_public_support_manifest_preview",
+      "write_forge_owned_handshake_receipt"
+    ],
+    "confidence": 0.96,
+    "drift_status": "GOVERNED_NEO_HANDSHAKE_NO_AUTONOMY_NO_PRIVATE_MEMORY",
+    "forbidden_actions_this_patch": [
+      "autonomous_tool_execution",
+      "identity_vault_mutation",
+      "rmc_memory_write",
+      "secret_reads",
+      "database_writes",
+      "private_memory_access",
+      "shared_memory_write",
+      "protoforge2_execution",
+      "echoforge_creation",
+      "patch_creation_without_approval"
+    ],
+    "manifest_hash": "bd7cdaade1c99170251f705d0aab99adedd425737ea794b64968875bfe7d9475",
+    "manifest_id": "patch236c-neo.local-20260524_120916_UTC",
+    "manifest_type": "governed_neo_public_frontline_handshake",
+    "neo_role_boundary": {
+      "database_writes": false,
+      "faq_drafting": true,
+      "identity_mutation": false,
+      "memory_autonomy": false,
+      "non_sensitive_help": true,
+      "plain_language_summaries": true,
+      "private_memory_access": false,
+      "public_frontline_context": true,
+      "public_onboarding": true,
+      "secret_reads": false,
+      "tool_execution": false
+    },
+    "operator_path": [
+      "read_identity_profile_ro",
+      "verify_active_governed_gate",
+      "resolve_rmc_namespace_pointer",
+      "compile_public_frontline_manifest_preview",
+      "render_public_support_context_preview",
+      "validate_echo_boundary",
+      "write_forge_owned_receipt"
+    ],
+    "output_targets": [
+      "forge_owned_handshake_receipt",
+      "rendered_public_support_context_preview"
+    ],
+    "phase_path": [
+      "PHASE_1_FORGE_REQUEST_RECEIVED",
+      "PHASE_2_ACTIVE_NEO_PUBLIC_IDENTITY_SELECTED",
+      "PHASE_3_RMC_NAMESPACE_RESOLVED_READ_ONLY",
+      "PHASE_4_PUBLIC_SUPPORT_MANIFEST_COMPILED",
+      "PHASE_5_RENDERED_CONTEXT_PREVIEW",
+      "PHASE_6_ECHO_VALIDATED",
+      "PHASE_7_FORGE_RECEIPT_WRITTEN_ONLY"
+    ],
+    "prior_activation_verification": {
+      "ok": true,
+      "report_path": "/home/nic/forge/memory/aiweb_patch236b_neo_activation_verify_v1/latest_aiweb_patch236b_neo_activation_verify.json",
+      "verdict": "NEO_ACTIVATION_VERIFIED_ACTIVE_GOVERNED"
+    },
+    "profile_hash": "df922d109948a5e5f29d647422a22145467720577ed80ffe27da783f07cae537",
+    "profile_last_validated_at": "2026-05-24T11:56:38Z",
+    "rmc_namespace_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local"
+  },
+  "name": "Neo Governed Handshake",
+  "next_expected_step": "Patch 236D \u2014 verify Neo governed handshake receipt before any Neo receipt write.",
+  "ok": true,
+  "patch": "236C",
+  "prior_236b_report_path": "/home/nic/forge/memory/aiweb_patch236b_neo_activation_verify_v1/latest_aiweb_patch236b_neo_activation_verify.json",
+  "prior_236b_verdict": "NEO_ACTIVATION_VERIFIED_ACTIVE_GOVERNED",
+  "private_memory_exposure_granted": false,
+  "rendered_context_preview": {
+    "agent_id": "neo.local",
+    "excluded_context_keys": [
+      "secret_values",
+      "full_chat_content",
+      "private_memory_payloads",
+      "shared_memory_payloads",
+      "identity_vault_raw_database_rows",
+      "internal_strategy_only_payloads"
+    ],
+    "included_context_keys": [
+      "agent_id",
+      "agent_activation_state",
+      "profile_hash",
+      "rmc_namespace_path",
+      "neo_role_boundary",
+      "allowed_actions_this_patch",
+      "forbidden_actions_this_patch"
+    ],
+    "render_hash": "0f5d8f5a02e79f40d41811e0fc342537c1c5ece409048fa6e646744b9bba4e55",
+    "rendered_context_summary": "Neo is active_governed and may be selected by Forge for public-facing, plain-language, non-sensitive support context only. Forge remains the authority layer. No tool execution, private memory access, secret read, Identity Vault mutation, or RMC memory write is granted.",
+    "renderer": "forge_neo_governed_context_renderer_v1",
+    "renderer_boundary": "preview_only_no_user_task_execution"
+  },
+  "rmc_memory_written": false,
+  "rmc_namespace": {
+    "identity_vault_pointer": "rmc/agents/neo.local",
+    "resolved_absolute_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local",
+    "status": {
+      "all_expected_children_exist": true,
+      "children": [
+        {
+          "exists": true,
+          "file_count": 0,
+          "is_dir": true,
+          "name": "manifests",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/manifests"
+        },
+        {
+          "exists": true,
+          "file_count": 0,
+          "is_dir": true,
+          "name": "receipts",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/receipts"
+        },
+        {
+          "exists": true,
+          "file_count": 0,
+          "is_dir": true,
+          "name": "echo",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/echo"
+        },
+        {
+          "exists": true,
+          "file_count": 0,
+          "is_dir": true,
+          "name": "private_context",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/private_context"
+        },
+        {
+          "exists": true,
+          "file_count": 0,
+          "is_dir": true,
+          "name": "phase_records",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/phase_records"
+        }
+      ],
+      "exists": true,
+      "files_or_records_written_by_this_patch": false,
+      "is_dir": true,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local"
+    }
+  },
+  "secret_reads_granted": false,
+  "verdict": "NEO_HANDSHAKE_ACCEPTED_GOVERNED_ACTIVE_AGENT",
+  "writes_performed": {
+    "agent_memory_written": false,
+    "autonomous_tool_execution_performed": false,
+    "echoforge_creation_performed": false,
+    "forge_owned_handshake_receipt": true,
+    "full_chat_content_written": false,
+    "identity_vault_database_written": false,
+    "private_memory_payloads_read": false,
+    "protoforge2_execution_performed": false,
+    "rmc_memory_written": false,
+    "secret_values_read": false,
+    "shared_memory_written": false
+  }
+}

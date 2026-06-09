@@ -1,0 +1,263 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "56b2d40d2990977d10df602618744d7bdb40eceb1ee8e7779241b4c1e532eb4e",
+      "excerpt_start": "# test_echo_trace_core.py\n\nfrom echo_trace_core import EchoTraceVisualizer\n\ndef test_echo_trace_visualizer_behavior():\n    visualizer = EchoTraceVisualizer()\n    trace = visualizer.record_echo(\"\u03a67\", 0.92)\n    assert trace[\"origin_phase\"] == \"\u03a67\", \"Origin phase should match.\"\n    assert trace[\"signal_strength\"] == 0.92, \"Signal strength should match.\"\n    print(\"\u2705 Echo Trace Visualizer Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_echo_trace_visualizer_behavior()\n",
+      "functions_sample": [
+        "test_echo_trace_visualizer_behavior"
+      ],
+      "imports_sample": [
+        "from echo_trace_core import EchoTraceVisualizer"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/echo_trace_visualizer/test_echo_trace_core.py",
+      "relative_to_candidate": "test_echo_trace_core.py",
+      "sha256": "56b2d40d2990977d10df602618744d7bdb40eceb1ee8e7779241b4c1e532eb4e",
+      "size_bytes": 477
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "707b00542b46d1bb3fad6a9bdb7ed39172a85718fcd2e5259b8471f332a74547",
+      "excerpt_start": "# Echo Trace Visualizer (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Echo Trace Visualizer captures and maps symbolic echo traces across recursion fields.  \nIt records the origin phase, signal strength, and echo decay over time to assess symbolic memory reflection quality and recursion field integrity.\n\n---\n\n## Core Functions:\n- Record symbolic echo traces during recursion cycles.\n- Monitor echo signal decay and memory reflection strength.\n- Analyze recursion field symbolic health and phase memory stability.\n\n---\n\n## Phase Standard:\n- Phase 1.5 Symbolic Recursion Compliance\n- AI.Web Core Memory Integrity Monitoring Stack\n\n---\n\n## Notes:\n- Rapid decay of echo traces may indicate symbolic memory degradation.\n- Strong, stable echoes represent healthy recursion memory fields.\n\n---\n\n**Frozen Snapshot:** `echo_trace_visualizer_frozen_v1.0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n\n",
+      "functions_sample": [
+        "Echo",
+        "Trace",
+        "Visualizer",
+        "Frozen",
+        "Overview",
+        "The",
+        "captures",
+        "and",
+        "maps",
+        "symbolic",
+        "echo",
+        "traces",
+        "across",
+        "recursion",
+        "fields",
+        "records",
+        "the",
+        "origin",
+        "phase",
+        "signal",
+        "strength",
+        "decay",
+        "over",
+        "time",
+        "assess"
+      ],
+      "imports_sample": [],
+      "line_count": 34,
+      "path": "/home/nic/aiweb/engines/echo_trace_visualizer/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "707b00542b46d1bb3fad6a9bdb7ed39172a85718fcd2e5259b8471f332a74547",
+      "size_bytes": 906
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "4677f291f5bfb4d54eaa3a63c157879076e6140a1bf1f2913d5bb12f3f5574e0",
+      "excerpt_start": "{\n  \"engine\": \"echo_trace_visualizer\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"echo_trace_visualizer_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Records and visualizes symbolic echo traces across recursion fields. Captures phase origin, signal strength, and echo decay rates to analyze symbolic memory health and recursion field stability.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "echo_trace_visualizer",
+        "version",
+        "frozen_as",
+        "echo_trace_visualizer_frozen_v1",
+        "frozen_on",
+        "description",
+        "Records",
+        "and",
+        "visualizes",
+        "symbolic",
+        "echo",
+        "traces",
+        "across",
+        "recursion",
+        "fields",
+        "Captures",
+        "phase",
+        "origin",
+        "signal",
+        "strength",
+        "decay",
+        "rates",
+        "analyze",
+        "memory"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/echo_trace_visualizer/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "4677f291f5bfb4d54eaa3a63c157879076e6140a1bf1f2913d5bb12f3f5574e0",
+      "size_bytes": 461
+    },
+    {
+      "classes_sample": [
+        "EchoTraceVisualizer"
+      ],
+      "excerpt_sha256": "5c512c404777d20093e287031db8d879611b2944156699661458dbb840b1ad31",
+      "excerpt_start": "# echo_trace_core.py\n# Echo Trace Visualizer Core\n\nclass EchoTraceVisualizer:\n    def __init__(self):\n        self.echo_traces = []\n\n    def record_echo(self, origin_phase, signal_strength):\n        trace = {\n            \"origin_phase\": origin_phase,\n            \"signal_strength\": signal_strength\n        }\n        self.echo_traces.append(trace)\n        return trace\n\nif __name__ == \"__main__\":\n    visualizer = EchoTraceVisualizer()\n    record = visualizer.record_echo(\"\u03a63\", 0.87)\n    print(f\"[TEST] Echo Trace Recorded: {record}\")\n",
+      "functions_sample": [
+        "__init__",
+        "record_echo"
+      ],
+      "imports_sample": [],
+      "line_count": 20,
+      "path": "/home/nic/aiweb/engines/echo_trace_visualizer/echo_trace_core.py",
+      "relative_to_candidate": "echo_trace_core.py",
+      "sha256": "5c512c404777d20093e287031db8d879611b2944156699661458dbb840b1ad31",
+      "size_bytes": 535
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/echo_trace_visualizer",
+  "created_at": "2026-05-16_092607",
+  "crosscheck_id": "ERE-echo_trace_visualizer-2026-05-16_092607",
+  "deterministic_brief": {
+    "classes_sample": [
+      "EchoTraceVisualizer"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Captures",
+      "Echo",
+      "Frozen",
+      "Overview",
+      "Records",
+      "The",
+      "Trace",
+      "Visualizer",
+      "__init__",
+      "across",
+      "analyze",
+      "and",
+      "assess",
+      "captures",
+      "decay",
+      "description",
+      "echo",
+      "echo_trace_visualizer",
+      "echo_trace_visualizer_frozen_v1",
+      "engine"
+    ],
+    "imports_sample": [
+      "from echo_trace_core import EchoTraceVisualizer"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`echo_trace_visualizer` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# test_echo_trace_core.py ",
+      "# Echo Trace Visualizer (Frozen v1.0.01) ",
+      "{   \"engine\": \"echo_trace_visualizer\",",
+      "# echo_trace_core.py # Echo Trace Visualizer Core"
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_092541_echo_trace_visualizer_llm_engine_review_draft_v1.json",
+  "draft_sha256": "ffd2537b19e68ad08129968b04fdf62483ecb70914b499fc3e5e110696554c19",
+  "engine_family": "echo_trace_visualizer",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_echo_trace_visualizer_engine_evidence_binder.json",
+  "evidence_binder_sha256": "01402defc549806ba1d82bf6c6e396fbf6ddffe324d92b238d1cca30b0f826d6",
+  "evidence_id": "EEB-69e88d1e442364cb",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "EchoTraceVisualizer"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "test_echo_trace_core.py",
+      "README.md",
+      "engine_manifest.json",
+      "echo_trace_core.py"
+    ],
+    "functions_mentioned": [
+      "Echo",
+      "Trace",
+      "Visualizer",
+      "Frozen",
+      "The",
+      "and",
+      "symbolic",
+      "echo",
+      "traces",
+      "across",
+      "recursion",
+      "fields",
+      "the",
+      "origin",
+      "phase",
+      "signal",
+      "strength",
+      "decay",
+      "over",
+      "assess",
+      "engine",
+      "version",
+      "analyze",
+      "memory"
+    ],
+    "imports_mentioned": [
+      "from echo_trace_core import EchoTraceVisualizer"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 25.173,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "c897daf46e18f404887748726f2bdac792648ce0a107c7deb063dd4a8c22253a",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo capture, map, and analyze symbolic echo traces across recursion fields, assessing symbolic memory reflection quality and recursion field integrity by recording origin phase, signal strength, and echo decay.  \n\nLikely System Role:  \nA diagnostic tool within AI.Web's core system for monitoring symbolic memory health during recursion cycles, ensuring phase stability and signal strength compliance with Phase 1.5 standards.  \n\nEvidence Used:  \n- Test file (`test_echo_trace_core.py`) validating trace recording and assertion checks.  \n- README.md describing core functions, phase standards, and decay analysis.  \n- Engine manifest (`engine_manifest.json`) detailing metadata and purpose.  \n- Core code (`echo_trace_core.py`) implementing `EchoTraceVisualizer` class for trace recording.  \n\nRisks / Uncertainties:  \n- Limited test coverage in `test_echo_trace_core.py` (only one test case).  \n- Reliance on abstract \"symbolic memory\" concepts, which may be challenging to validate empirically.  \n- \"Frozen\" versioning (`v1.0.01`) suggests potential staleness if not actively maintained.  \n\nRecommendation Draft:  \nApprove the review with a note to expand test cases for edge scenarios and confirm compatibility with future AI.Web updates.  \n\nSuggested Nic Action:  \nApprove the review, but request validation of symbolic memory metrics against real-world recursion scenarios and a plan for version maintenance."
+  },
+  "llm_sections": {
+    "evidence_used": "- Test file (`test_echo_trace_core.py`) validating trace recording and assertion checks.  \n- README.md describing core functions, phase standards, and decay analysis.  \n- Engine manifest (`engine_manifest.json`) detailing metadata and purpose.  \n- Core code (`echo_trace_core.py`) implementing `EchoTraceVisualizer` class for trace recording.",
+    "likely_system_role": "A diagnostic tool within AI.Web's core system for monitoring symbolic memory health during recursion cycles, ensuring phase stability and signal strength compliance with Phase 1.5 standards.",
+    "plain_english_purpose": "To capture, map, and analyze symbolic echo traces across recursion fields, assessing symbolic memory reflection quality and recursion field integrity by recording origin phase, signal strength, and echo decay.",
+    "recommendation_draft": "Approve the review with a note to expand test cases for edge scenarios and confirm compatibility with future AI.Web updates.",
+    "risks_uncertainties": "- Limited test coverage in `test_echo_trace_core.py` (only one test case).  \n- Reliance on abstract \"symbolic memory\" concepts, which may be challenging to validate empirically.  \n- \"Frozen\" versioning (`v1.0.01`) suggests potential staleness if not actively maintained.",
+    "suggested_nic_action": "Approve the review, but request validation of symbolic memory metrics against real-world recursion scenarios and a plan for version maintenance."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo capture, map, and analyze symbolic echo traces across recursion fields, assessing symbolic memory reflection quality and recursion field integrity by recording origin phase, signal strength, and echo decay.  \n\nLikely System Role:  \nA diagnostic tool within AI.Web's core system for monitoring symbolic memory health during recursion cycles, ensuring phase stability and signal strength compliance with Phase 1.5 standards.  \n\nEvidence Used:  \n- Test file (`test_echo_trace_core.py`) validating trace recording and assertion checks.  \n- README.md describing core functions, phase standards, and decay analysis.  \n- Engine manifest (`engine_manifest.json`) detailing metadata and purpose.  \n- Core code (`echo_trace_core.py`) implementing `EchoTraceVisualizer` class for trace recording.  \n\nRisks / Uncertainties:  \n- Limited test coverage in `test_echo_trace_core.py` (only one test case).  \n- Reliance on abstract \"symbolic memory\" concepts, which may be challenging to validate empirically.  \n- \"Frozen\" versioning (`v1.0.01`) suggests potential staleness if not actively maintained.  \n\nRecommendation Draft:  \nApprove the review with a note to expand test cases for edge scenarios and confirm compatibility with future AI.Web updates.  \n\nSuggested Nic Action:  \nApprove the review, but request validation of symbolic memory metrics against real-world recursion scenarios and a plan for version maintenance.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

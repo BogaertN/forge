@@ -1,0 +1,268 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "c760a2f535e77b4e469dcc8ee41a5519b2178723f8441925bbe1d8b48052dbb5",
+      "excerpt_start": "[\n  {\n    \"seed_id\": \"cab4bdff-3360-44b2-bc8d-73590a95a7cd\",\n    \"type\": \"symbolic_memory\",\n    \"created_at\": \"2025-04-26T23:49:29.484735Z\",\n    \"status\": \"active\"\n  }\n]",
+      "functions_sample": [
+        "seed_id",
+        "cab4bdff",
+        "bc8d",
+        "type",
+        "symbolic_memory",
+        "created_at",
+        "status",
+        "active"
+      ],
+      "imports_sample": [],
+      "line_count": 8,
+      "path": "/home/nic/aiweb/engines/seed_manager/seed_bank.json",
+      "relative_to_candidate": "seed_bank.json",
+      "sha256": "c760a2f535e77b4e469dcc8ee41a5519b2178723f8441925bbe1d8b48052dbb5",
+      "size_bytes": 169
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "2ad603313cd8f3e1c37859c0ac18f9c11cb6c84a166fd00e7612c04ab5832dbc",
+      "excerpt_start": "import json\nimport uuid\nimport datetime\n\nSEED_STORAGE = \"seed_bank.json\"\n\ndef generate_seed(seed_type=\"symbolic_memory\"):\n    seed = {\n        \"seed_id\": str(uuid.uuid4()),\n        \"type\": seed_type,\n        \"created_at\": datetime.datetime.utcnow().isoformat() + \"Z\",\n        \"status\": \"active\"\n    }\n    try:\n        try:\n            with open(SEED_STORAGE, \"r\") as f:\n                seeds = json.load(f)\n        except (FileNotFoundError, json.JSONDecodeError):\n            seeds = []\n\n        seeds.append(seed)\n\n        with open(SEED_STORAGE, \"w\") as f:\n            json.dump(seeds, f, indent=2)\n\n        print(f\"\u2714\ufe0f New symbolic seed generated: {seed}\")\n        return seed\n    except Exception as e:\n        print(f\"[!] Failed to generate seed: {e}\")\n        return None\n",
+      "functions_sample": [
+        "generate_seed"
+      ],
+      "imports_sample": [
+        "import json",
+        "import uuid",
+        "import datetime"
+      ],
+      "line_count": 31,
+      "path": "/home/nic/aiweb/engines/seed_manager/seed_core.py",
+      "relative_to_candidate": "seed_core.py",
+      "sha256": "2ad603313cd8f3e1c37859c0ac18f9c11cb6c84a166fd00e7612c04ab5832dbc",
+      "size_bytes": 782
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "cb1492d5b15513d9ca622cbd7636fbbfb6043652cfef1a608db5d898a9270d07",
+      "excerpt_start": "{\n  \"engine\": \"Seed Manager\",\n  \"version\": \"v1\",\n  \"description\": \"Generates and manages symbolic seeds for memory recursion and recovery strategies.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Seed",
+        "Manager",
+        "version",
+        "description",
+        "Generates",
+        "and",
+        "manages",
+        "symbolic",
+        "seeds",
+        "for",
+        "memory",
+        "recursion",
+        "recovery",
+        "strategies"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/seed_manager/seed_manifest.json",
+      "relative_to_candidate": "seed_manifest.json",
+      "sha256": "cb1492d5b15513d9ca622cbd7636fbbfb6043652cfef1a608db5d898a9270d07",
+      "size_bytes": 153
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "21be0611885c4470294d274b9490100ed94e1bacb1034a74f7b5df4dc4208b55",
+      "excerpt_start": "# Seed Manager Engine\n\nCreates and manages symbolic seeds.\n\nSeeds are used for memory recursion, loop recovery, and symbolic drift correction.\n\n",
+      "functions_sample": [
+        "Seed",
+        "Manager",
+        "Engine",
+        "Creates",
+        "and",
+        "manages",
+        "symbolic",
+        "seeds",
+        "Seeds",
+        "are",
+        "used",
+        "for",
+        "memory",
+        "recursion",
+        "loop",
+        "recovery",
+        "drift",
+        "correction"
+      ],
+      "imports_sample": [],
+      "line_count": 7,
+      "path": "/home/nic/aiweb/engines/seed_manager/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "21be0611885c4470294d274b9490100ed94e1bacb1034a74f7b5df4dc4208b55",
+      "size_bytes": 144
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "6fe0caa1737b2f1e1cac80767b3e31b364e57c6664c64af280293e0e0ead7396",
+      "excerpt_start": "from seed_core import generate_seed\n\ndef test_seed_generation():\n    try:\n        seed = generate_seed()\n        assert \"seed_id\" in seed\n        assert seed[\"status\"] == \"active\"\n        print(\"\u2705 Test Passed: Seed created successfully.\")\n    except Exception as e:\n        print(f\"\u274c Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_seed_generation()\n",
+      "functions_sample": [
+        "test_seed_generation"
+      ],
+      "imports_sample": [
+        "from seed_core import generate_seed"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/seed_manager/test_seed.py",
+      "relative_to_candidate": "test_seed.py",
+      "sha256": "6fe0caa1737b2f1e1cac80767b3e31b364e57c6664c64af280293e0e0ead7396",
+      "size_bytes": 362
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/seed_manager",
+  "created_at": "2026-05-16_223224",
+  "crosscheck_id": "ERE-seed_manager-2026-05-16_223224",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Creates",
+      "Engine",
+      "Generates",
+      "Manager",
+      "Seed",
+      "Seeds",
+      "active",
+      "and",
+      "are",
+      "bc8d",
+      "cab4bdff",
+      "correction",
+      "created_at",
+      "description",
+      "drift",
+      "engine",
+      "for",
+      "generate_seed",
+      "loop",
+      "manages"
+    ],
+    "imports_sample": [
+      "from seed_core import generate_seed",
+      "import datetime",
+      "import json",
+      "import uuid"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`seed_manager` appears to be a local AI.Web engine/component. The bound source evidence includes 5 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "[   {",
+      "import json import uuid",
+      "{   \"engine\": \"Seed Manager\",",
+      "# Seed Manager Engine "
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_223152_seed_manager_llm_engine_review_draft_v1.json",
+  "draft_sha256": "bad5714b3bf37185a94385de0624e12589924e456cf4c76007d45efc5a721620",
+  "engine_family": "seed_manager",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_seed_manager_engine_evidence_binder.json",
+  "evidence_binder_sha256": "ccc8dd09226d72b63ac090dca9789a7c5d2e57c9d091042d3de4ba08bb9367ad",
+  "evidence_id": "EEB-06a9287346a56399",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "seed_bank.json",
+      "seed_core.py",
+      "seed_manifest.json",
+      "README.md",
+      "test_seed.py"
+    ],
+    "functions_mentioned": [
+      "type",
+      "symbolic_memory",
+      "status",
+      "active",
+      "generate_seed",
+      "engine",
+      "Seed",
+      "and",
+      "manages",
+      "symbolic",
+      "seeds",
+      "for",
+      "memory",
+      "recursion",
+      "recovery",
+      "strategies",
+      "Engine",
+      "Seeds",
+      "used",
+      "loop",
+      "drift",
+      "correction"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "import uuid",
+      "from seed_core import generate_seed"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 31.649,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "9ffaadd131f07f0594c171b40a93ce2fe34454d97fb9630282ee6b7cced51f98",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nManages symbolic seeds for memory recursion, loop recovery, and symbolic drift correction in AI systems.  \n\nLikely System Role:  \nCore component for generating and maintaining symbolic memory seeds to enable recursive processing and recovery strategies in AI workflows.  \n\nEvidence Used:  \n- `seed_bank.json`: Stores active symbolic seeds with metadata (ID, type, creation timestamp).  \n- `seed_core.py`: Implements `generate_seed()` to create seeds with UUIDs and persist them to JSON.  \n- `seed_manifest.json`: Defines engine purpose and functionality.  \n- `README.md`: Describes seed usage for memory recursion and recovery.  \n- `test_seed.py`: Validates seed generation and status checks.  \n\nRisks / Uncertainties:  \n- Reliance on JSON file storage may introduce serialization/deserialization risks.  \n- No explicit error handling for concurrent seed generation or file corruption.  \n- Limited to \"symbolic_memory\" type; no support for other seed categories.  \n\nRecommendation Draft:  \nApprove with caveats: Confirm robustness of JSON file handling, expand seed type flexibility, and validate integration with AI.Web's memory management systems.  \n\nSuggested Nic Action:  \nApprove review, but require verification of edge cases (e.g., concurrent writes, corrupted files) and confirmation of compatibility with AI.Web's memory recursion frameworks."
+  },
+  "llm_sections": {
+    "evidence_used": "- `seed_bank.json`: Stores active symbolic seeds with metadata (ID, type, creation timestamp).  \n- `seed_core.py`: Implements `generate_seed()` to create seeds with UUIDs and persist them to JSON.  \n- `seed_manifest.json`: Defines engine purpose and functionality.  \n- `README.md`: Describes seed usage for memory recursion and recovery.  \n- `test_seed.py`: Validates seed generation and status checks.",
+    "likely_system_role": "Core component for generating and maintaining symbolic memory seeds to enable recursive processing and recovery strategies in AI workflows.",
+    "plain_english_purpose": "Manages symbolic seeds for memory recursion, loop recovery, and symbolic drift correction in AI systems.",
+    "recommendation_draft": "Approve with caveats: Confirm robustness of JSON file handling, expand seed type flexibility, and validate integration with AI.Web's memory management systems.",
+    "risks_uncertainties": "- Reliance on JSON file storage may introduce serialization/deserialization risks.  \n- No explicit error handling for concurrent seed generation or file corruption.  \n- Limited to \"symbolic_memory\" type; no support for other seed categories.",
+    "suggested_nic_action": "Approve review, but require verification of edge cases (e.g., concurrent writes, corrupted files) and confirmation of compatibility with AI.Web's memory recursion frameworks."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nManages symbolic seeds for memory recursion, loop recovery, and symbolic drift correction in AI systems.  \n\nLikely System Role:  \nCore component for generating and maintaining symbolic memory seeds to enable recursive processing and recovery strategies in AI workflows.  \n\nEvidence Used:  \n- `seed_bank.json`: Stores active symbolic seeds with metadata (ID, type, creation timestamp).  \n- `seed_core.py`: Implements `generate_seed()` to create seeds with UUIDs and persist them to JSON.  \n- `seed_manifest.json`: Defines engine purpose and functionality.  \n- `README.md`: Describes seed usage for memory recursion and recovery.  \n- `test_seed.py`: Validates seed generation and status checks.  \n\nRisks / Uncertainties:  \n- Reliance on JSON file storage may introduce serialization/deserialization risks.  \n- No explicit error handling for concurrent seed generation or file corruption.  \n- Limited to \"symbolic_memory\" type; no support for other seed categories.  \n\nRecommendation Draft:  \nApprove with caveats: Confirm robustness of JSON file handling, expand seed type flexibility, and validate integration with AI.Web's memory management systems.  \n\nSuggested Nic Action:  \nApprove review, but require verification of edge cases (e.g., concurrent writes, corrupted files) and confirmation of compatibility with AI.Web's memory recursion frameworks.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

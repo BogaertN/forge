@@ -1,0 +1,58 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_BATCH_APPROVAL_HELPER",
+    "patch": "106",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": true,
+    "rule": "Patch 106 may record Patch99-compatible queue decisions for explicitly named engines, but only after Patch102 evidence cross-check readiness. It never commits ledger changes.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_batch_approvals_v1"
+  },
+  "blockers": [],
+  "counts": {
+    "blockers": 0,
+    "recorded": 1,
+    "refused_or_error": 0,
+    "requested": 1,
+    "warnings": 1
+  },
+  "created_at": "2026-05-16_074606",
+  "decision_label": "APPROVE",
+  "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+  "manual_verification_rule": "This helper assumes Nic has already read engine-review-evidence-show for each named engine. It records queue intent only and never mutates the ledger.",
+  "report_type": "ENGINE_REVIEW_BATCH_APPROVAL_RECEIPT_V1_PATCH106",
+  "requested_engines": [
+    "ascii_interpreter_engine"
+  ],
+  "rows": [
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/ascii_interpreter_engine",
+      "check_path": "/home/nic/forge/memory/engine_review_approval_helpers_v1/2026-05-16_074606_ascii_interpreter_engine_engine_review_approval_helper_v1.json",
+      "check_sha256": "dbaf5335c8e30033d64fb098aab7bce20d162f5483998f5abb3b4f38f66cc43d",
+      "check_status": "EVIDENCE_APPROVAL_CHECK_READY",
+      "decision_id": "ERQ103-ascii_interpreter_engine-2026-05-16_074606",
+      "engine_family": "ascii_interpreter_engine",
+      "evidence_id": "EEB-2acca33f6ecda788",
+      "queue_decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-16_074606_ascii_interpreter_engine_engine_review_queue_decision_v1.json",
+      "queue_decision_sha256": "92569e10caf36734eb71bab68e8592e830e8ede860da4ba7a2cec0ee08da086c",
+      "requested_decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "status": "BATCH_QUEUE_DECISION_RECORDED_NO_LEDGER_MUTATION",
+      "warnings": [
+        "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    }
+  ],
+  "schema_version": "engine_review_batch_approval_v1_patch106",
+  "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION",
+  "warnings": [
+    "ascii_interpreter_engine: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

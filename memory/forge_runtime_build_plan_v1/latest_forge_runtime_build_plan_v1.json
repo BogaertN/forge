@@ -1,0 +1,472 @@
+{
+  "active_patch": "Patch 157 \u2014 Runtime Build Plan / First Safe Module Candidate",
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "live_restore_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "roadmap_append_only": true,
+    "shell_execution_authority": false
+  },
+  "blockers": [
+    {
+      "id": "B01",
+      "summary": "Live runtime writes remain locked. Patch 157 only selects a planning candidate.",
+      "type": "live_write"
+    },
+    {
+      "id": "B02",
+      "summary": "Source authority is candidate/unknown for runtime modules until explicitly bound.",
+      "type": "source_authority"
+    },
+    {
+      "id": "B03",
+      "summary": "A runtime build sandbox plan is still required before any live write.",
+      "type": "sandbox"
+    }
+  ],
+  "candidate_shortlist": [
+    {
+      "canonical_path": "aiweb/engines/failsafe_manager",
+      "canonical_status": "CANONICAL_INCLUDED",
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "dependency_kind": "canonical_runtime_module",
+      "eligible_for_planning": true,
+      "engine": "failsafe_manager",
+      "live_build_ready": false,
+      "live_write_authority": false,
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "relationship_count": 0,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "risk_level": "LOW",
+      "risk_score": 25,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "runtime_domain": "GOVERNANCE_AND_SAFETY",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+      "test_status": "PASS"
+    },
+    {
+      "canonical_path": "aiweb/engines/phase_engine",
+      "canonical_status": "CANONICAL_INCLUDED",
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "dependency_kind": "canonical_runtime_module",
+      "eligible_for_planning": true,
+      "engine": "phase_engine",
+      "live_build_ready": false,
+      "live_write_authority": false,
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "relationship_count": 0,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+      "test_status": "PASS"
+    },
+    {
+      "canonical_path": "aiweb/engines/loop_resurrection_engine",
+      "canonical_status": "CANONICAL_INCLUDED",
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "dependency_kind": "canonical_runtime_module",
+      "eligible_for_planning": true,
+      "engine": "loop_resurrection_engine",
+      "live_build_ready": false,
+      "live_write_authority": false,
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "relationship_count": 1,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "risk_level": "LOW",
+      "risk_score": 33,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "runtime_domain": "MEMORY_AND_RESONANCE",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+      "test_status": "PASS"
+    },
+    {
+      "canonical_path": "aiweb/engines/symbolic_capacitor_engine",
+      "canonical_status": "CANONICAL_INCLUDED",
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "dependency_kind": "canonical_runtime_module",
+      "eligible_for_planning": true,
+      "engine": "symbolic_capacitor_engine",
+      "live_build_ready": false,
+      "live_write_authority": false,
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "relationship_count": 1,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "risk_level": "LOW",
+      "risk_score": 33,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "runtime_domain": "MEMORY_AND_RESONANCE",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+      "test_status": "PASS"
+    },
+    {
+      "canonical_path": "aiweb/engines/christping_validator_engine",
+      "canonical_status": "CANONICAL_INCLUDED",
+      "cautions": [],
+      "dependency_kind": "canonical_runtime_module",
+      "eligible_for_planning": true,
+      "engine": "christping_validator_engine",
+      "live_build_ready": false,
+      "live_write_authority": false,
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "relationship_count": 0,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "risk_level": "LOW",
+      "risk_score": 15,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "runtime_domain": "DRIFT_AND_CORRECTION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+      "test_status": "PASS"
+    },
+    {
+      "canonical_path": "aiweb/runtime_wrappers/stack_breather_phase2",
+      "canonical_status": "CANONICAL_INCLUDED",
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "dependency_kind": "canonical_runtime_module",
+      "eligible_for_planning": true,
+      "engine": "stack_breather_phase2",
+      "live_build_ready": false,
+      "live_write_authority": false,
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "relationship_count": 0,
+      "required_human_checks": [
+        "verify_active_primary_supersedes_frozen_candidate",
+        "compare_multiple_active_variants"
+      ],
+      "risk_level": "LOW",
+      "risk_score": 25,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "runtime_domain": "DRIFT_AND_CORRECTION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+      "test_status": "PASS"
+    },
+    {
+      "canonical_path": "aiweb/engines/drift_analyzer_tool",
+      "canonical_status": "CANONICAL_INCLUDED",
+      "cautions": [],
+      "dependency_kind": "canonical_runtime_module",
+      "eligible_for_planning": true,
+      "engine": "drift_analyzer_tool",
+      "live_build_ready": false,
+      "live_write_authority": false,
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "relationship_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "risk_level": "LOW",
+      "risk_score": 30,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "runtime_domain": "DRIFT_AND_CORRECTION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+      "test_status": "PASS"
+    },
+    {
+      "canonical_path": "aiweb/engines/symbolic_drift_visualizer",
+      "canonical_status": "CANONICAL_INCLUDED",
+      "cautions": [],
+      "dependency_kind": "canonical_runtime_module",
+      "eligible_for_planning": true,
+      "engine": "symbolic_drift_visualizer",
+      "live_build_ready": false,
+      "live_write_authority": false,
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "relationship_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "risk_level": "LOW",
+      "risk_score": 30,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "runtime_domain": "DRIFT_AND_CORRECTION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+      "test_status": "PASS"
+    },
+    {
+      "canonical_path": "aiweb/engines/peer_communication_engine",
+      "canonical_status": "CANONICAL_INCLUDED",
+      "cautions": [],
+      "dependency_kind": "canonical_runtime_module",
+      "eligible_for_planning": true,
+      "engine": "peer_communication_engine",
+      "live_build_ready": false,
+      "live_write_authority": false,
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "relationship_count": 0,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "risk_level": "LOW",
+      "risk_score": 20,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "runtime_domain": "SYSTEM_RUNTIME_AND_TOOLS",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+      "test_status": "PASS"
+    },
+    {
+      "canonical_path": "aiweb/engines/plugin_engine",
+      "canonical_status": "CANONICAL_INCLUDED",
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "dependency_kind": "canonical_runtime_module",
+      "eligible_for_planning": true,
+      "engine": "plugin_engine",
+      "live_build_ready": false,
+      "live_write_authority": false,
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "relationship_count": 0,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "risk_level": "LOW",
+      "risk_score": 25,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "runtime_domain": "SYSTEM_RUNTIME_AND_TOOLS",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+      "test_status": "PASS"
+    },
+    {
+      "canonical_path": "projects/recursive_lmm_grok1/engines/project_brain",
+      "canonical_status": "CANONICAL_INCLUDED",
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "dependency_kind": "canonical_runtime_module",
+      "eligible_for_planning": true,
+      "engine": "project_brain",
+      "live_build_ready": false,
+      "live_write_authority": false,
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "relationship_count": 1,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "risk_level": "LOW",
+      "risk_score": 28,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "runtime_domain": "SYSTEM_RUNTIME_AND_TOOLS",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+      "test_status": "PASS"
+    },
+    {
+      "canonical_path": "aiweb/engines/resurrection_planner",
+      "canonical_status": "CANONICAL_INCLUDED",
+      "cautions": [],
+      "dependency_kind": "canonical_runtime_module",
+      "eligible_for_planning": true,
+      "engine": "resurrection_planner",
+      "live_build_ready": false,
+      "live_write_authority": false,
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "relationship_count": 0,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "risk_level": "LOW",
+      "risk_score": 15,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "runtime_domain": "MEMORY_AND_RESONANCE",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+      "test_status": "PASS"
+    }
+  ],
+  "created_at": "2026-05-19T19:21:03",
+  "current_phase": "S19C \u2014 Runtime Build Plan / First Safe Module Candidate",
+  "gates": [
+    {
+      "detail": "FORGE_RUNTIME_MODULE_DEPENDENCY_MAP_READY_PLANNING_ONLY",
+      "id": "G01",
+      "name": "Runtime module map exists",
+      "status": "PASS"
+    },
+    {
+      "detail": 54,
+      "id": "G02",
+      "name": "Canonical engines mapped",
+      "status": "PASS"
+    },
+    {
+      "detail": "failsafe_manager",
+      "id": "G03",
+      "name": "Candidate selected",
+      "status": "PASS"
+    },
+    {
+      "detail": "PASS",
+      "id": "G04",
+      "name": "Candidate has passing canonical test",
+      "status": "PASS"
+    },
+    {
+      "detail": "LOW",
+      "id": "G05",
+      "name": "Candidate risk is not high",
+      "status": "PASS"
+    },
+    {
+      "detail": "planning-only",
+      "id": "G06",
+      "name": "Live writes remain locked",
+      "status": "PASS"
+    },
+    {
+      "detail": "no deletion/renumber/repurpose",
+      "id": "G07",
+      "name": "Roadmap append-only law preserved",
+      "status": "PASS"
+    }
+  ],
+  "live_build_ready": false,
+  "next_commands": [
+    "forge-runtime-build-plan-export",
+    "forge-build-sequence",
+    "forge-dashboard-roadmap-build",
+    "forge-status-api-build",
+    "forge-dashboard-build",
+    "Install Patch 158 when ready"
+  ],
+  "next_patch": "Patch 158 \u2014 Runtime Build Sandbox Plan / Dry Run",
+  "plain_english": "Forge selected the first safe runtime module build candidate for planning only. No runtime files are written.",
+  "planning_ready": true,
+  "recommended_next_patch": "Patch 158 \u2014 Runtime Build Sandbox Plan / Dry Run",
+  "report_type": "FORGE_RUNTIME_BUILD_PLAN_V1",
+  "runtime_module_map_domain_count": 7,
+  "runtime_module_map_engine_count": 54,
+  "runtime_module_map_status": "FORGE_RUNTIME_MODULE_DEPENDENCY_MAP_READY_PLANNING_ONLY",
+  "schema_version": "forge_runtime_build_plan_v1_patch157",
+  "selected_candidate": {
+    "canonical_path": "aiweb/engines/failsafe_manager",
+    "canonical_status": "CANONICAL_INCLUDED",
+    "cautions": [
+      "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+    ],
+    "dependency_kind": "canonical_runtime_module",
+    "eligible_for_planning": true,
+    "engine": "failsafe_manager",
+    "live_build_ready": false,
+    "live_write_authority": false,
+    "live_write_ready": false,
+    "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+    "priority": "P1_CORE",
+    "relationship_count": 0,
+    "required_human_checks": [
+      "compare_multiple_active_variants",
+      "inspect_high_duplicate_variant_count"
+    ],
+    "risk_level": "LOW",
+    "risk_score": 25,
+    "rollback_needs": [
+      "snapshot_or_file_backup_before_live_patch",
+      "current_sha_readback_before_apply",
+      "post_write_disk_verification"
+    ],
+    "runtime_domain": "GOVERNANCE_AND_SAFETY",
+    "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+    "test_status": "PASS"
+  },
+  "shortlist_count": 12,
+  "status": "FORGE_RUNTIME_BUILD_PLAN_READY_PLANNING_ONLY"
+}

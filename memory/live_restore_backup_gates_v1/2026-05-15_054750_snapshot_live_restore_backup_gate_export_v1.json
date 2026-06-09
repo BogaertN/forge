@@ -1,0 +1,55 @@
+{
+  "schema_version": "snapshot_live_restore_backup_gate_v1_patch92",
+  "report_type": "SNAPSHOT_LIVE_RESTORE_BACKUP_GATE_EXPORT_V1_PATCH92",
+  "created_at": "2026-05-15T05:47:50",
+  "mode": "EXPORT_ONLY_NO_BACKUP_COPY_NO_LIVE_RESTORE_NO_PROJECT_WRITE",
+  "authority": {
+    "backup_gate_receipt_authority": true,
+    "backup_plan_authority": true,
+    "backup_copy_authority": false,
+    "restore_authority": false,
+    "live_restore_authority": false,
+    "project_file_write_authority": false,
+    "engine_file_write_authority": false,
+    "delete_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false,
+    "chroma_write_authority": false,
+    "final_lockfile_authority": false
+  },
+  "count": 1,
+  "reports": [
+    {
+      "path": "/home/nic/forge/memory/live_restore_backup_gates_v1/2026-05-15_054728_snapshot_live_restore_backup_gate_v1.json",
+      "created_at": "2026-05-15T05:47:28",
+      "status": "LIVE_RESTORE_BACKUP_GATE_READY_WITH_WARNINGS_NO_AUTHORITY",
+      "backup_gate_id": "LBG-2de0cfe4e1fe6c66bd537765",
+      "source_dry_run_id": "LRD-4a17a2a56b36f85fa9dee7ff",
+      "counts": {
+        "gate_files_bound": 58,
+        "live_files_requiring_backup_before_restore": 58,
+        "future_overwrite_candidates": 4,
+        "future_create_candidates": 0,
+        "already_matching_snapshot": 54,
+        "blockers": 0,
+        "warnings": 13,
+        "source_dry_run_gate_problems": 0,
+        "source_dry_run_gate_warnings": 9
+      },
+      "authority": {
+        "backup_gate_receipt_authority": true,
+        "backup_plan_authority": true,
+        "backup_copy_authority": false,
+        "restore_authority": false,
+        "live_restore_authority": false,
+        "project_file_write_authority": false,
+        "engine_file_write_authority": false,
+        "delete_authority": false,
+        "quarantine_authority": false,
+        "shell_execution_authority": false,
+        "chroma_write_authority": false,
+        "final_lockfile_authority": false
+      }
+    }
+  ]
+}

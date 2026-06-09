@@ -1,0 +1,43 @@
+{
+  "boundaries": {
+    "adds_corpus_ingestion": false,
+    "adds_new_domain": false,
+    "changes_routes": false,
+    "changes_ui": false,
+    "existing_domain_migrated": "linear_equation_one_unknown",
+    "mints_ct": false,
+    "modifies_mea_modules": false,
+    "parser_implementation": "aiweb_owned_stdlib_strict_token_grammar_parser",
+    "promotes_external_dependency": false,
+    "solver_adapter_implementation": "aiweb_owned_exact_fraction_safe_adapter",
+    "third_party_components_imported": [],
+    "third_party_components_installed": [],
+    "writes_contribution_economy": false,
+    "writes_identity_vault": false,
+    "writes_ledgers": false,
+    "writes_memory": false
+  },
+  "build_id": "GENERAL-PIPELINE-STRICT-TYPED-AST-SAFE-ADAPTER-BUILD-GP-007",
+  "depends_on": "GENERAL-PIPELINE-DEPENDENCY-LICENSE-REGISTRY-BUILD-GP-006",
+  "modified_runtime_files": [
+    "rmc_engine_v1/general_pipeline/__init__.py",
+    "rmc_engine_v1/general_pipeline/capability_services.py",
+    "rmc_engine_v1/general_pipeline/dependency_registry.py",
+    "rmc_engine_v1/general_pipeline/domains_equations.py",
+    "rmc_engine_v1/general_pipeline/manifest_builder.py",
+    "rmc_engine_v1/general_pipeline/pipeline.py"
+  ],
+  "new_runtime_files": [
+    "rmc_engine_v1/general_pipeline/typed_ast.py",
+    "rmc_engine_v1/general_pipeline/safe_solver_adapters.py",
+    "rmc_engine_v1/general_pipeline/gp007_strict_typed_ast.py"
+  ],
+  "new_verification_files": [
+    "scripts/test_general_pipeline_strict_typed_ast_build_gp007.py",
+    "scripts/general_pipeline_strict_typed_ast_build_gp007_verify.py",
+    "scripts/README_general_pipeline_strict_typed_ast_build_gp007.md",
+    "scripts/MEA_GENERAL_PIPELINE_BUILD_GP007_DELIVERY_MANIFEST.json"
+  ],
+  "purpose": "Migrate the existing one-unknown linear-equation execution path onto a strict, full-input typed AST and Forge-owned safe exact-arithmetic solver adapter boundary.",
+  "schema_version": "general_pipeline_strict_typed_ast_safe_adapter_v1_build_gp007"
+}

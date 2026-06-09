@@ -1,0 +1,5 @@
+{
+  "engine": "Failsafe Manager",
+  "version": "v1",
+  "description": "Monitors basic system health and triggers emergency failsafe actions if needed."
+}

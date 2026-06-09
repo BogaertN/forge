@@ -1,0 +1,186 @@
+You are Forge's local repair-review LLM. Your job is to review a proposed candidate diff BEFORE Forge is allowed to sandbox it.
+
+STRICT SCOPE:
+- Do not propose broad refactors.
+- Do not discuss Chroma, ingestion receipts, embeddings, or unrelated corpus metadata.
+- Focus only on the candidate repair and the failing file/test evidence below.
+- You are reviewing; Forge will not apply your answer directly.
+
+REQUIRED OUTPUT FORMAT:
+RECOMMENDATION: APPROVE_CANDIDATE or REVISE_CANDIDATE or REJECT_CANDIDATE
+MINIMALITY: one short sentence
+CORRECTNESS: one short sentence
+RISK: LOW or MEDIUM or HIGH, with one sentence
+TESTS_TO_RUN: list the exact tests/checks Forge should run next
+IF_REVISE: exact change needed, or NONE
+
+TARGET:
+stack_linker_breather
+
+TARGET_FILE:
+/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py
+
+ORIGINAL FAILURE / PROBE STDERR:
+Traceback (most recent call last):
+  File "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py", line 3, in <module>
+    from stack_linker_breather.stack_linker_core import unified_breathe_cycle
+  File "/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py", line 19
+    "status": "
+              ^
+SyntaxError: unterminated string literal (detected at line 19)
+
+
+ORIGINAL FILE CONTEXT AROUND FAILURE:
+1: import sys
+2: import os
+3: sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
+4: 
+5: from core_breather.core_breather import breathe_phase as core_breathe
+6: from recursive_field_breather.field_breather import breathe_phase as field_breathe
+7: import time
+8: import json
+9: 
+10: def unified_breathe_cycle():
+11:     # simple combined breathing cycle
+12:     for phase in range(1, 10):  # Full 1-9 breathing
+13:         core_breathe(phase)
+14:         field_breathe(phase)
+15:         event = {
+16:             "timestamp": time.time(),
+17:             "phase": phase,
+18:             "stack": "core_and_field",
+19:             "status": "
+
+PRIOR FOCUSED LLM REPAIR PROPOSAL:
+Thinking...
+Okay, let's tackle this problem. The user provided a JSON structure with various pieces of evidence about a Python failure. The main issue seems to be a syntax error in the stack_linker_core.py file, specifically at line 19. The error message points out an unterminated string literal, which means a string wasn't closed properly.
+
+Looking at the code snippet from stack_linker_core.py, line 19 is part of a dictionary where the "status" key has a string that's not closed. The line shows "status\": \"", which suggests that the string was started but not ended. So, the developer probably intended to have a value for "status" but forgot to close the quotes. 
+
+The diagnosis should point out that the syntax error is due to an unterminated string in the event dictionary. The root cause is the missing closing quote for the "status" string. The minimal repair strategy would be to add the missing quote. 
+
+Looking at the exact region, the line in question is line 19 of stack_linker_core.py. The proposed edit is to add a closing double quote after "status". The files_to_inspect_before_apply should include the stack_linker_core.py since that's where the error is. The tests_to_run_after_change would be the test_stack_linker_core.py to ensure the fix works. 
+
+The risk level is medium because modifying the code could introduce other issues, but since it's a syntax fix, it's relatively low risk. Uncertainties might include whether the "status" field was meant to have a value, but given the context, adding the quote is the logical fix. Forbidden actions include not editing files, so the repair must be a syntax fix without changing functionality. 
+
+I need to make sure the JSON structure matches the required format, with exact paths and line regions. Also, the proposed edit should be precise, adding the missing quote. The human approval questions might ask if the "status" field should have a specific value, but since the original code didn't close the string, the fix is straightforward.
+...done thinking.
+
+{
+  "diagnosis": "Syntax error due to unterminated string literal in the event dictionary",
+  "root_cause": "Missing closing double quote for the \"status\" string literal at line 19",
+  "minimal_repair_strategy": "Add missing closing double quote to terminate the string literal",
+  "proposed_file_changes": [
+    {
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py",
+      "exact_region": "line 19",
+      "reason": "Unterminated string literal detected in event dictionary",
+      "proposed_edit_summary": "Add closing double quote to complete \"status\" string"
+    }
+  ],
+  "files_to_inspect_before_apply": [
+    "/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py"
+  ],
+  "tests_to_run_after_change": [
+    "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+  ],
+  "rollback_plan": [
+    "Revert stack_linker_core.py to previous SHA: f34d77a31cdd9a5cc551aa922626eec469c665c2f85e7cd4d06fe6866721736f"
+  ],
+  "risk_level": "MEDIUM",
+  "uncertainties": [
+    "Uncertain if \"status\" field requires additional content beyond the string closure"
+  ],
+  "evidence_used": [
+    "direct_failure_stderr",
+    "code_context_snippets",
+    "error_locations"
+  ],
+  "human_approval_questions": [
+    "Should the \"status\" field have additional content beyond the string closure?"
+  ],
+  "forbidden_actions": [
+    "do_not_edit_files",
+    "do_not_broaden_scope"
+  ]
+}
+
+
+
+CANDIDATE DIFF:
+--- a//home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py
++++ b//home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py (candidate only)
+@@ -16,4 +16,5 @@
+             "timestamp": time.time(),
+             "phase": phase,
+             "stack": "core_and_field",
+-            "status": "
++            "status": "",
++        }
+
+
+CANDIDATE FILE COPY:
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
+
+from core_breather.core_breather import breathe_phase as core_breathe
+from recursive_field_breather.field_breather import breathe_phase as field_breathe
+import time
+import json
+
+def unified_breathe_cycle():
+    # simple combined breathing cycle
+    for phase in range(1, 10):  # Full 1-9 breathing
+        core_breathe(phase)
+        field_breathe(phase)
+        event = {
+            "timestamp": time.time(),
+            "phase": phase,
+            "stack": "core_and_field",
+            "status": "",
+        }
+
+
+CANDIDATE COMPILE RESULT:
+{
+  "candidate_compile_path": "/home/nic/forge/memory/generic_repair_candidates_v1/compile_tmp/stack_linker_core.py.candidate_compile.py",
+  "error": null,
+  "py_compile_status": "PASS",
+  "returncode": 0
+}
+
+CANDIDATE VERIFICATION RESULT:
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true
+  },
+  "candidate_status": "GENERIC_REPAIR_CANDIDATE_READY_NO_LIVE_WRITE",
+  "created_at": "2026-05-17T10:23:49",
+  "next_commands": [
+    "generic-repair-candidate-export",
+    "Install Patch 137 \u2014 Generic Repair Sandbox Candidate"
+  ],
+  "problems": [],
+  "report_type": "GENERIC_REPAIR_CANDIDATE_VERIFICATION_V1",
+  "schema_version": "generic_repair_candidate_verification_v1_patch136",
+  "status": "GENERIC_REPAIR_CANDIDATE_VERIFIED_READY_FOR_SANDBOX",
+  "target_file": "/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py"
+}
+
+PATCH IMPACT SUMMARY:
+{
+  "high_risk": null,
+  "low_risk": null,
+  "matches": null,
+  "medium_risk": null,
+  "no_test_result": null,
+  "status": "PATCH_IMPACT_MAP_READY",
+  "test_issues": null
+}
+
+AUTHORITY:
+- You cannot write files.
+- Forge will save your answer and require deterministic checks plus human approval later.

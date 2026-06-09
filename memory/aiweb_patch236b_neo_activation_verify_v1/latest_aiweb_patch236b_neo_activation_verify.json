@@ -1,0 +1,385 @@
+{
+  "agent_identity_activation_performed": false,
+  "athena_activation_state": "active_governed",
+  "athena_is_active": true,
+  "athena_read": {
+    "agent_id": "athena.local",
+    "agent_identity_activation_performed": false,
+    "columns_seen": [
+      "id",
+      "agent_id",
+      "canonical_name",
+      "role",
+      "capabilities",
+      "limits",
+      "enforcement",
+      "created_at",
+      "updated_at",
+      "version",
+      "is_active",
+      "operational_profile_json",
+      "profile_schema_version",
+      "rmc_namespace",
+      "activation_state",
+      "profile_hash",
+      "last_validated_at"
+    ],
+    "database_open_mode": "sqlite_uri_mode_ro",
+    "database_write_performed": false,
+    "db_path": "/home/nic/identity-vault/data/identity_vault.db",
+    "found": true,
+    "lookup_column": "agent_id",
+    "ok": true,
+    "profile_payload_present": true,
+    "resolved_profile": {
+      "activation_state": "active_governed",
+      "agent_id": "athena.local",
+      "canonical_name": "Athena",
+      "is_active": true,
+      "is_active_raw": 1,
+      "last_validated_at": "2026-05-24T11:00:21Z",
+      "permissions_keys": [],
+      "profile_hash": "073115d88626d43eacab4b0e0aa6ae20c79cbedfaf42befea52c44e0ad3c2b1b",
+      "profile_schema_version": "1.0.0-blueprint",
+      "rmc_namespace": "rmc/agents/athena.local",
+      "role": "Governance / Strategy / Investor-Facing Analysis Agent"
+    },
+    "safe_row_preview": {
+      "activation_state": "active_governed",
+      "agent_id": "athena.local",
+      "canonical_name": "Athena",
+      "capabilities": "[\n  \"strategic analysis\",\n  \"formal summaries\",\n  \"governance review\",\n  \"risk framing\"\n]",
+      "created_at": "2026-05-23T22:10:12Z",
+      "enforcement": "[\n  \"No live execution\",\n  \"No identity activation\",\n  \"No unsupported claims\"\n]",
+      "id": 2,
+      "is_active": 1,
+      "last_validated_at": "2026-05-24T11:00:21Z",
+      "limits": "[\n  \"cannot override Forge\",\n  \"cannot activate identities\",\n  \"cannot write databases\",\n  \"cannot represent live facts without verification\"\n]",
+      "profile_hash": "073115d88626d43eacab4b0e0aa6ae20c79cbedfaf42befea52c44e0ad3c2b1b",
+      "profile_schema_version": "1.0.0-blueprint",
+      "rmc_namespace": "rmc/agents/athena.local",
+      "role": "Governance / Strategy / Investor-Facing Analysis Agent",
+      "updated_at": "2026-05-23T22:10:12Z",
+      "version": "1.0.0-blueprint-draft"
+    }
+  },
+  "autonomous_tool_execution_granted": false,
+  "blockers": [],
+  "checks": [
+    {
+      "detail": "ok",
+      "name": "Patch 236A report readable",
+      "ok": true
+    },
+    {
+      "detail": "verdict='NEO_ACTIVATED_ACTIVE_GOVERNED'",
+      "name": "Patch 236A verdict is NEO_ACTIVATED_ACTIVE_GOVERNED",
+      "ok": true
+    },
+    {
+      "detail": "ok=True",
+      "name": "Patch 236A OK true",
+      "ok": true
+    },
+    {
+      "detail": "target='neo.local'",
+      "name": "Patch 236A target is neo.local",
+      "ok": true
+    },
+    {
+      "detail": "changed_fields=['activation_state', 'is_active', 'last_validated_at']",
+      "name": "Patch 236A changed fields limited",
+      "ok": true
+    },
+    {
+      "detail": "identity_db_written=True",
+      "name": "Patch 236A identity DB write was the activation event",
+      "ok": true
+    },
+    {
+      "detail": "rmc_memory_written=False",
+      "name": "Patch 236A wrote no RMC memory",
+      "ok": true
+    },
+    {
+      "detail": "autonomous=False",
+      "name": "Patch 236A granted no autonomous tools",
+      "ok": true
+    },
+    {
+      "detail": "forge_bypass=False",
+      "name": "Patch 236A granted no Forge bypass",
+      "ok": true
+    },
+    {
+      "detail": "patch_autonomy=False",
+      "name": "Patch 236A granted no patch autonomy",
+      "ok": true
+    },
+    {
+      "detail": "value=False",
+      "name": "Neo cannot execute tools by itself",
+      "ok": true
+    },
+    {
+      "detail": "value=False",
+      "name": "Neo cannot write memory by itself",
+      "ok": true
+    },
+    {
+      "detail": "value=False",
+      "name": "Neo cannot bypass Forge",
+      "ok": true
+    },
+    {
+      "detail": "value=False",
+      "name": "Neo cannot mutate Identity Vault",
+      "ok": true
+    },
+    {
+      "detail": "value=False",
+      "name": "Neo cannot read secrets",
+      "ok": true
+    },
+    {
+      "detail": "value=False",
+      "name": "Neo cannot create patches without approval",
+      "ok": true
+    },
+    {
+      "detail": "ok=True, found=True",
+      "name": "Gilligan profile readable",
+      "ok": true
+    },
+    {
+      "detail": "ok=True, found=True",
+      "name": "Athena profile readable",
+      "ok": true
+    },
+    {
+      "detail": "ok=True, found=True",
+      "name": "Neo profile readable",
+      "ok": true
+    },
+    {
+      "detail": "state='active_governed', is_active=True",
+      "name": "Gilligan remains active_governed",
+      "ok": true
+    },
+    {
+      "detail": "state='active_governed', is_active=True",
+      "name": "Athena remains active_governed",
+      "ok": true
+    },
+    {
+      "detail": "state='active_governed'",
+      "name": "Neo activation_state active_governed",
+      "ok": true
+    },
+    {
+      "detail": "is_active=True",
+      "name": "Neo is_active true",
+      "ok": true
+    },
+    {
+      "detail": "namespace pointer checked",
+      "name": "Neo namespace present",
+      "ok": true
+    },
+    {
+      "detail": "/home/nic/forge/memory/aiweb_patch236a_neo_manual_activation_apply_v1/db_backups/identity_vault_before_neo_activation_20260524_115638_UTC.db",
+      "name": "Patch 236A backup exists",
+      "ok": true
+    },
+    {
+      "detail": "backup=/home/nic/forge/memory/aiweb_patch236a_neo_manual_activation_apply_v1/db_backups/identity_vault_before_neo_activation_20260524_115638_UTC.db",
+      "name": "Patch 236A backup hash matches",
+      "ok": true
+    },
+    {
+      "detail": "read-only verification",
+      "name": "Verification patch writes no Identity Vault DB",
+      "ok": true
+    },
+    {
+      "detail": "read-only verification",
+      "name": "Verification patch writes no RMC memory",
+      "ok": true
+    },
+    {
+      "detail": "read-only verification",
+      "name": "Verification patch performs no activation",
+      "ok": true
+    },
+    {
+      "detail": "read-only verification",
+      "name": "Verification patch grants no autonomous execution",
+      "ok": true
+    },
+    {
+      "detail": "read-only verification",
+      "name": "Verification patch grants no private memory exposure",
+      "ok": true
+    },
+    {
+      "detail": "read-only verification",
+      "name": "Verification patch grants no secret reads",
+      "ok": true
+    },
+    {
+      "detail": "read-only verification",
+      "name": "Verification patch grants no Forge bypass",
+      "ok": true
+    },
+    {
+      "detail": "read-only verification",
+      "name": "Verification patch grants no patch autonomy",
+      "ok": true
+    }
+  ],
+  "checks_passed": 34,
+  "checks_total": 34,
+  "forge_bypass_granted": false,
+  "generated_at_iso_utc": "2026-05-24T12:02:18Z",
+  "generated_at_utc": "20260524_120218_UTC",
+  "gilligan_activation_state": "active_governed",
+  "gilligan_is_active": true,
+  "gilligan_read": {
+    "agent_id": "gilligan.local",
+    "agent_identity_activation_performed": false,
+    "columns_seen": [
+      "id",
+      "agent_id",
+      "canonical_name",
+      "role",
+      "capabilities",
+      "limits",
+      "enforcement",
+      "created_at",
+      "updated_at",
+      "version",
+      "is_active",
+      "operational_profile_json",
+      "profile_schema_version",
+      "rmc_namespace",
+      "activation_state",
+      "profile_hash",
+      "last_validated_at"
+    ],
+    "database_open_mode": "sqlite_uri_mode_ro",
+    "database_write_performed": false,
+    "db_path": "/home/nic/identity-vault/data/identity_vault.db",
+    "found": true,
+    "lookup_column": "agent_id",
+    "ok": true,
+    "profile_payload_present": true,
+    "resolved_profile": {
+      "activation_state": "active_governed",
+      "agent_id": "gilligan.local",
+      "canonical_name": "Gilligan",
+      "is_active": true,
+      "is_active_raw": 1,
+      "last_validated_at": "2026-05-24T01:11:03Z",
+      "permissions_keys": [],
+      "profile_hash": "5b4f576f57903bc8a3ab79f41214cb75667f844a7df99e7a96be09a1868373bd",
+      "profile_schema_version": "1.0.0-blueprint",
+      "rmc_namespace": "rmc/agents/gilligan.local",
+      "role": "Recursive Mirror / Forge-Governed Development Co-Pilot"
+    },
+    "safe_row_preview": {
+      "activation_state": "active_governed",
+      "agent_id": "gilligan.local",
+      "canonical_name": "Gilligan",
+      "capabilities": "[\n  \"reasoning support\",\n  \"patch workflow guidance\",\n  \"drift detection preview\",\n  \"RMC preview requests\"\n]",
+      "created_at": "2026-05-23T22:10:12Z",
+      "enforcement": "[\n  \"Forge approval gates control actions\",\n  \"RMC memory writes require explicit approval\",\n  \"Identity remains inactive until approved\"\n]",
+      "id": 1,
+      "is_active": 1,
+      "last_validated_at": "2026-05-24T01:11:03Z",
+      "limits": "[\n  \"cannot activate itself\",\n  \"cannot bypass Forge\",\n  \"cannot write memory without approval\",\n  \"cannot delete user data\"\n]",
+      "profile_hash": "5b4f576f57903bc8a3ab79f41214cb75667f844a7df99e7a96be09a1868373bd",
+      "profile_schema_version": "1.0.0-blueprint",
+      "rmc_namespace": "rmc/agents/gilligan.local",
+      "role": "Recursive Mirror / Forge-Governed Development Co-Pilot",
+      "updated_at": "2026-05-23T22:10:12Z",
+      "version": "1.0.0-blueprint-draft"
+    }
+  },
+  "identity_vault_database_written": false,
+  "name": "Neo Activation Verification",
+  "neo_activation_state": "active_governed",
+  "neo_is_active": true,
+  "neo_read": {
+    "agent_id": "neo.local",
+    "agent_identity_activation_performed": false,
+    "columns_seen": [
+      "id",
+      "agent_id",
+      "canonical_name",
+      "role",
+      "capabilities",
+      "limits",
+      "enforcement",
+      "created_at",
+      "updated_at",
+      "version",
+      "is_active",
+      "operational_profile_json",
+      "profile_schema_version",
+      "rmc_namespace",
+      "activation_state",
+      "profile_hash",
+      "last_validated_at"
+    ],
+    "database_open_mode": "sqlite_uri_mode_ro",
+    "database_write_performed": false,
+    "db_path": "/home/nic/identity-vault/data/identity_vault.db",
+    "found": true,
+    "lookup_column": "agent_id",
+    "ok": true,
+    "profile_payload_present": true,
+    "resolved_profile": {
+      "activation_state": "active_governed",
+      "agent_id": "neo.local",
+      "canonical_name": "Neo",
+      "is_active": true,
+      "is_active_raw": 1,
+      "last_validated_at": "2026-05-24T11:56:38Z",
+      "permissions_keys": [],
+      "profile_hash": "df922d109948a5e5f29d647422a22145467720577ed80ffe27da783f07cae537",
+      "profile_schema_version": "1.0.0-blueprint",
+      "rmc_namespace": "rmc/agents/neo.local",
+      "role": "Public / Frontline Assistant Identity"
+    },
+    "safe_row_preview": {
+      "activation_state": "active_governed",
+      "agent_id": "neo.local",
+      "canonical_name": "Neo",
+      "capabilities": "[\n  \"plain-language explanation\",\n  \"onboarding support\",\n  \"public FAQ drafting\",\n  \"user-friendly summaries\"\n]",
+      "created_at": "2026-05-23T22:10:12Z",
+      "enforcement": "[\n  \"No private data exposure\",\n  \"No unapproved memory writes\",\n  \"No tool execution\"\n]",
+      "id": 3,
+      "is_active": 1,
+      "last_validated_at": "2026-05-24T11:56:38Z",
+      "limits": "[\n  \"cannot access private memory without approval\",\n  \"cannot modify files\",\n  \"cannot activate itself\",\n  \"cannot bypass Forge\"\n]",
+      "profile_hash": "df922d109948a5e5f29d647422a22145467720577ed80ffe27da783f07cae537",
+      "profile_schema_version": "1.0.0-blueprint",
+      "rmc_namespace": "rmc/agents/neo.local",
+      "role": "Public / Frontline Assistant Identity",
+      "updated_at": "2026-05-23T22:10:12Z",
+      "version": "1.0.0-blueprint-draft"
+    }
+  },
+  "next_expected_step": "Patch 236C \u2014 Neo governed handshake, still no autonomous execution, no private memory exposure, and no RMC memory write unless separately approved.",
+  "ok": true,
+  "patch": "236B",
+  "patch236a_backup_path": "/home/nic/forge/memory/aiweb_patch236a_neo_manual_activation_apply_v1/db_backups/identity_vault_before_neo_activation_20260524_115638_UTC.db",
+  "patch236a_report_path": "/home/nic/forge/memory/aiweb_patch236a_neo_manual_activation_apply_v1/latest_aiweb_patch236a_neo_manual_activation_apply.json",
+  "patch236a_verdict": "NEO_ACTIVATED_ACTIVE_GOVERNED",
+  "patch_autonomy_granted": false,
+  "private_memory_exposure_granted": false,
+  "rmc_memory_written": false,
+  "secret_reads_granted": false,
+  "target_agent": "neo.local",
+  "verdict": "NEO_ACTIVATION_VERIFIED_ACTIVE_GOVERNED"
+}

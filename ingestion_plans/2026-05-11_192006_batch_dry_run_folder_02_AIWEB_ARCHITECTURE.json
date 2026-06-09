@@ -1,0 +1,42 @@
+{
+  "report_type": "BATCH_DRY_RUN",
+  "phase": "B_multi_document_ingestion_planning",
+  "dry_run_id": "2026-05-11_192006_batch_dry_run_folder_02_AIWEB_ARCHITECTURE",
+  "timestamp": "2026-05-11T19:20:06",
+  "session_id": "forge_2026_05_11_191913",
+  "source_batch_plan": "/home/nic/forge/ingestion_plans/2026-05-11_191958_batch_plan_folder_02_AIWEB_ARCHITECTURE.json",
+  "source_batch_plan_id": "2026-05-11_191958_batch_plan_folder_02_AIWEB_ARCHITECTURE",
+  "target": "folder:02_AIWEB_ARCHITECTURE",
+  "no_chroma_write": true,
+  "no_embedding": true,
+  "ready_count": 1,
+  "ok_count": 1,
+  "failed_count": 0,
+  "items": [
+    {
+      "corpus_id": "corpus_0029",
+      "filename": "Unified Algebra for Recursive Cognitive Architectures_.docx",
+      "relative_path": "02_AIWEB_ARCHITECTURE/Unified Algebra for Recursive Cognitive Architectures_.docx",
+      "absolute_path": "/home/nic/forge_corpus/02_AIWEB_ARCHITECTURE/Unified Algebra for Recursive Cognitive Architectures_.docx",
+      "corpus_folder": "02_AIWEB_ARCHITECTURE",
+      "authority": "unknown",
+      "status": "current",
+      "priority": "high",
+      "index_eligible": true,
+      "source_type": "docx",
+      "sha256_16": "0d5861537cdb6df0",
+      "source_authority_weight": 0.8,
+      "source_authority_tier": "AIWEB_ARCHITECTURE",
+      "source_authority_reason": "AI.Web architecture source",
+      "already_ingested": false,
+      "existing_receipt": "",
+      "recommended_action": "READY_FOR_DRY_RUN",
+      "dry_run_status": "OK",
+      "dry_run_plan_path": "/home/nic/forge/ingestion_plans/2026-05-11_192006_dry_run_corpus_0029.json",
+      "chunk_count": 151,
+      "max_chars": 1800,
+      "source_hash": "0d5861537cdb6df0",
+      "issues": []
+    }
+  ]
+}

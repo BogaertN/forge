@@ -1,0 +1,45 @@
+{
+  "argv_shape": [
+    "ollama",
+    "run",
+    "<model>",
+    "<prompt>"
+  ],
+  "authority": {
+    "arbitrary_shell_authority": false,
+    "engine_file_write_authority": false,
+    "fixed_ollama_subprocess_only": true,
+    "ledger_mutation_authority": false,
+    "model_generation_called": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "writes_forge_memory_reports_only": true
+  },
+  "created_at": "2026-05-17T08:50:34",
+  "duration_ms": 61823,
+  "model": "qwen3:8b",
+  "prompt_path": "/home/nic/forge/memory/llm_live_patch_drafts_v1/2026_05_17_084932_prompt_stack_linker_breather.txt",
+  "prompt_sha256": "7524fba83e04a41f4ae3d45d1a59bac179405eb0585d9f2a841d070dea6ca478",
+  "provider": "ollama",
+  "raw_response_path": "/home/nic/forge/memory/llm_live_patch_drafts_v1/2026_05_17_084932_response_raw_stack_linker_breather.txt",
+  "raw_response_preview": "Thinking...\nOkay, let's tackle this problem. The user is facing a Python import error in the stack_linker_breather test. The error is a ModuleNotFoundError for 'stack_linker_breather'. The key here is understanding why the import is failing.\n\nFirst, looking at the evidence packet, the test file is trying to import from 'stack_linker_breather.stack_linker_core'. The error suggests that the module 'stack_linker_breather' isn't found. In Python, when you import a module, the directory containing the module must be in the Python path, or the module must be in a directory that's part of the Python path.\n\nThe target_files section shows that the primary target is '/home/nic/aiweb/engines/stack_linker_breather'. So the directory structure should have a package named 'stack_linker_breather' with an __init__.py file. If that's missing, Python won't recognize it as a package. But the user mentioned not to modify files, so maybe the directory isn't properly structured or the Python path isn't set correctly.\n\nWait, the user can't modify files, so the solution must be to adjust the environment or the import path. However, the problem is that the test is trying to import from a package that doesn't exist. The minimal change hypothesis would be that the package isn't properly installed or the directory isn't in the Python path. But since the user can't modify files, maybe the issue is that the directory isn't recognized as a package. So the fix would involve ensuring that the directory has an __init__.py file, but the user can't edit files. Hmm, that's a problem.\n\nAlternatively, maybe the test is in a different directory that's not in the Python path. The test file is in '/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py', which is inside the package directory. If the directory doesn't have an __init__.py, Python won't treat it as a package. But again, the user can't modify files. So perhaps the solution is to adjust the Python path to include the parent direc",
+  "raw_response_sha256": "1012112b23adf83a3863086745216caaa0f69735c45ef68fb5adb9ba1216ae12",
+  "recommended_next_patch": "Patch 133 \u2014 Patch Lifecycle 2.0 Gate Matrix",
+  "report_type": "LLM_LIVE_PATCH_DRAFT_V1",
+  "returncode": 0,
+  "schema_version": "llm_live_patch_draft_v1_patch132R",
+  "shell_false": true,
+  "source_grounded_proposal_path": "/home/nic/forge/memory/llm_patch_proposals_v1/latest_llm_source_grounded_patch_proposal_v1.json",
+  "source_grounded_proposal_sha256": "e90ab8dfb492c0107322fcc59682c3b51299eca75df8c4ba9ad163da3c678248",
+  "status": "LLM_LIVE_PATCH_DRAFT_READY",
+  "stderr_path": "/home/nic/forge/memory/llm_live_patch_drafts_v1/2026_05_17_084932_response_stderr_stack_linker_breather.txt",
+  "stderr_preview": "\u001b[?2026h\u001b[?25l\u001b[1G\u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2838 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2838 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u283c \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2834 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2826 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2807 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u280f \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u280b \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2839 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2838 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u283c \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2826 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2827 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2807 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2807 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u280b \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2819 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2839 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u283c \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2834 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2826 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2826 \u001b[K\u001b[?25h\u001b[?2026l\u001b",
+  "stderr_sha256": "71e8c0f52d5baaab46b47e65f2e9eafdcce15f37183778ac404bcdc810236aa9",
+  "summary": {
+    "duration_ms": 61823,
+    "returncode": 0,
+    "status": "LLM_LIVE_PATCH_DRAFT_READY",
+    "target": "stack_linker_breather"
+  },
+  "target": "stack_linker_breather"
+}

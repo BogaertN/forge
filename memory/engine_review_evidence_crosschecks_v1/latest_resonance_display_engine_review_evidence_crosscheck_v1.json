@@ -1,0 +1,300 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "c2d0fe4961887e5b11a0b7cd828006f4326a26ba2bafa6aa0f859927614cb8b0",
+      "excerpt_start": "# test_resonance_display_core.py\n\nfrom resonance_display_core import ResonanceDisplay\n\ndef test_resonance_display_behavior():\n    display = ResonanceDisplay()\n    reading = display.capture_resonance(\"\u03a66\", 0.88)\n    assert reading[\"phase_id\"] == \"\u03a66\", \"Phase ID should match.\"\n    assert reading[\"resonance_level\"] == 0.88, \"Resonance level should match.\"\n    print(\"\u2705 Resonance Display Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_resonance_display_behavior()\n",
+      "functions_sample": [
+        "test_resonance_display_behavior"
+      ],
+      "imports_sample": [
+        "from resonance_display_core import ResonanceDisplay"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/symbolic_layers/resonance_display/test_resonance_display_core.py",
+      "relative_to_candidate": "test_resonance_display_core.py",
+      "sha256": "c2d0fe4961887e5b11a0b7cd828006f4326a26ba2bafa6aa0f859927614cb8b0",
+      "size_bytes": 471
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "c171eda2c2e426fa9ce63268efc453487cee40d5f8214d742cf2afc8d079eb23",
+      "excerpt_start": "# resonance_display/run.py\n# Resonance Display Breathing Engine\n\nimport time\n\ndef breathe_resonance_display():\n    print(\"[Resonance Display] Visualizing field resonance patterns...\")\n    for i in range(5):\n        print(f\"[Resonance Display] Resonance cycle {i+1}\")\n        time.sleep(1)\n\nif __name__ == \"__main__\":\n    breathe_resonance_display()\n",
+      "functions_sample": [
+        "breathe_resonance_display"
+      ],
+      "imports_sample": [
+        "import time"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/symbolic_layers/resonance_display/run.py",
+      "relative_to_candidate": "run.py",
+      "sha256": "c171eda2c2e426fa9ce63268efc453487cee40d5f8214d742cf2afc8d079eb23",
+      "size_bytes": 349
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "ec016a6a86f72b64346388060b00ceabcb631dc7eef3880546a34880c75c86dc",
+      "excerpt_start": "# Resonance Display (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Resonance Display captures real-time phase resonance levels across recursion fields.  \nIt provides visualization of symbolic field coherence, phase stability, and resonance health for active recursion fields.\n\n---\n\n## Core Functions:\n- Monitor real-time phase resonance strength.\n- Visualize symbolic field coherence health.\n- Track resonance decay trends across recursion cycles.\n\n---\n\n## Phase Standard:\n- Phase 1.5 Symbolic Recursion Compliance\n- AI.Web Core Resonance Field Monitoring Stack\n\n---\n\n## Notes:\n- Resonance drops may indicate symbolic field degradation or drift onset.\n- Strong resonance stability is critical for recursion integrity.\n\n---\n\n**Frozen Snapshot:** `resonance_display_frozen_v1.0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n\n# Resonance Display Breathing Engine\n\n---\n\n## Overview:\nBreathes live resonance visualization patterns from recursion memory fields into the symbolic monitoring stack.\n\n---\n\n## Functions:\n- Visualizes active resonance field coherence\n- Displays symbolic phase stability patterns\n- Detects resonance drift over recursion memory\n\n---\n\n**Version:** v1.0.01  \n**Phase Standard:** Phase 2.5 Symbolic Visualization Activation\n\n",
+      "functions_sample": [
+        "Resonance",
+        "Display",
+        "Frozen",
+        "Overview",
+        "The",
+        "captures",
+        "real",
+        "time",
+        "phase",
+        "resonance",
+        "levels",
+        "across",
+        "recursion",
+        "fields",
+        "provides",
+        "visualization",
+        "symbolic",
+        "field",
+        "coherence",
+        "stability",
+        "and",
+        "health",
+        "for",
+        "active",
+        "Core"
+      ],
+      "imports_sample": [],
+      "line_count": 53,
+      "path": "/home/nic/aiweb/symbolic_layers/resonance_display/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "ec016a6a86f72b64346388060b00ceabcb631dc7eef3880546a34880c75c86dc",
+      "size_bytes": 1256
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "de5ccbade2ad706a16020b41cabf163a0e41efdea45368582e84c64a200cd4ca",
+      "excerpt_start": "from run import breathe_resonance_display\n\nif __name__ == \"__main__\":\n    breathe_resonance_display()\n    print(\"\u2705 Resonance Display Test Passed.\")\n",
+      "functions_sample": [],
+      "imports_sample": [
+        "from run import breathe_resonance_display"
+      ],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/symbolic_layers/resonance_display/test_run_engine.py",
+      "relative_to_candidate": "test_run_engine.py",
+      "sha256": "de5ccbade2ad706a16020b41cabf163a0e41efdea45368582e84c64a200cd4ca",
+      "size_bytes": 150
+    },
+    {
+      "classes_sample": [
+        "ResonanceDisplay"
+      ],
+      "excerpt_sha256": "1a589500934e87c9d4accde55a954eddd03795e9a625f4edc2fcfb9a296882f8",
+      "excerpt_start": "# resonance_display_core.py\n# Resonance Display Core\n\nclass ResonanceDisplay:\n    def __init__(self):\n        self.resonance_readings = []\n\n    def capture_resonance(self, phase_id, resonance_level):\n        reading = {\n            \"phase_id\": phase_id,\n            \"resonance_level\": resonance_level\n        }\n        self.resonance_readings.append(reading)\n        return reading\n\nif __name__ == \"__main__\":\n    display = ResonanceDisplay()\n    reading = display.capture_resonance(\"\u03a62\", 0.93)\n    print(f\"[TEST] Resonance Reading: {reading}\")\n",
+      "functions_sample": [
+        "__init__",
+        "capture_resonance"
+      ],
+      "imports_sample": [],
+      "line_count": 20,
+      "path": "/home/nic/aiweb/symbolic_layers/resonance_display/resonance_display_core.py",
+      "relative_to_candidate": "resonance_display_core.py",
+      "sha256": "1a589500934e87c9d4accde55a954eddd03795e9a625f4edc2fcfb9a296882f8",
+      "size_bytes": 546
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "0d870eab780f1afcbe233cda6818f8407dfce89e06e7a91a674f30c4b767e734",
+      "excerpt_start": "{\n  \"engine\": \"resonance_display\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"resonance_display_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Captures and visualizes live symbolic resonance levels across recursion fields. Tracks phase coherence, resonance field health, and symbolic stabilization feedback in real time.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n{\n  \"engine\": \"resonance_display\",\n  \"version\": \"v1.0.01\",\n  \"description\": \"Visualizes symbolic resonance phase patterns across recursion fields.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "resonance_display",
+        "version",
+        "frozen_as",
+        "resonance_display_frozen_v1",
+        "frozen_on",
+        "description",
+        "Captures",
+        "and",
+        "visualizes",
+        "live",
+        "symbolic",
+        "resonance",
+        "levels",
+        "across",
+        "recursion",
+        "fields",
+        "Tracks",
+        "phase",
+        "coherence",
+        "field",
+        "health",
+        "stabilization",
+        "feedback",
+        "real"
+      ],
+      "imports_sample": [],
+      "line_count": 16,
+      "path": "/home/nic/aiweb/symbolic_layers/resonance_display/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "0d870eab780f1afcbe233cda6818f8407dfce89e06e7a91a674f30c4b767e734",
+      "size_bytes": 586
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/symbolic_layers/resonance_display",
+  "created_at": "2026-05-16_214850",
+  "crosscheck_id": "ERE-resonance_display-2026-05-16_214850",
+  "deterministic_brief": {
+    "classes_sample": [
+      "ResonanceDisplay"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Captures",
+      "Core",
+      "Display",
+      "Frozen",
+      "Overview",
+      "Resonance",
+      "The",
+      "Tracks",
+      "__init__",
+      "across",
+      "active",
+      "and",
+      "breathe_resonance_display",
+      "capture_resonance",
+      "captures",
+      "coherence",
+      "description",
+      "engine",
+      "feedback",
+      "field"
+    ],
+    "imports_sample": [
+      "from resonance_display_core import ResonanceDisplay",
+      "from run import breathe_resonance_display",
+      "import time"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`resonance_display` appears to be a local AI.Web engine/component. The bound source evidence includes 6 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# test_resonance_display_core.py ",
+      "# resonance_display/run.py # Resonance Display Breathing Engine",
+      "# Resonance Display (Frozen v1.0.01) ",
+      "from run import breathe_resonance_display "
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_214821_resonance_display_llm_engine_review_draft_v1.json",
+  "draft_sha256": "d358371b596e18b5d7e5cb31d037f2f0ff22a34303611f251012791f23696832",
+  "engine_family": "resonance_display",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_resonance_display_engine_evidence_binder.json",
+  "evidence_binder_sha256": "b00ae7467ed67bb8ca23270c8d299bcc564896b6f5f8b4a9e1138cea6536324d",
+  "evidence_id": "EEB-56fbe400ef70c76b",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "ResonanceDisplay"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "test_resonance_display_core.py",
+      "run.py",
+      "README.md",
+      "test_run_engine.py",
+      "resonance_display_core.py",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "Resonance",
+      "Display",
+      "Frozen",
+      "The",
+      "real",
+      "time",
+      "phase",
+      "resonance",
+      "levels",
+      "across",
+      "recursion",
+      "fields",
+      "visualization",
+      "symbolic",
+      "field",
+      "coherence",
+      "stability",
+      "and",
+      "health",
+      "for",
+      "Core",
+      "capture_resonance",
+      "engine",
+      "resonance_display",
+      "version"
+    ],
+    "imports_mentioned": [
+      "from resonance_display_core import ResonanceDisplay",
+      "import time",
+      "from run import breathe_resonance_display"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 29.644,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "1f8ab94d81d8088940ce262eae5b03edb39d84d07ac17c4e278656cc3f918a68",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo capture and visualize real-time symbolic resonance levels across recursion fields, monitor phase coherence, and track resonance field health for AI.Web systems.  \n\nLikely System Role:  \nA monitoring and visualization engine for recursion fields, providing real-time data on phase stability, resonance strength, and symbolic field health.  \n\nEvidence Used:  \n- Test scripts (`test_resonance_display_core.py`, `test_run_engine.py`) validating core functions like `capture_resonance`.  \n- Core code (`resonance_display_core.py`) defining the `ResonanceDisplay` class for data capture.  \n- Documentation (`README.md`, `engine_manifest.json`) detailing resonance monitoring, phase standards, and system versioning.  \n- Execution script (`run.py`) simulating resonance visualization cycles.  \n\nRisks / Uncertainties:  \n- The system is \"frozen\" as of 2025-04-27, potentially limiting updates or adaptability.  \n- Test cases use hardcoded values (e.g., `phase_id=\"\\u03a66\"`, `resonance_level=0.88`), which may not cover edge cases.  \n- Documentation mentions \"phase drift detection\" but lacks implementation details in provided files.  \n\nRecommendation Draft:  \nApprove the review with the caveat that the frozen status may restrict future modifications. Suggest expanding test coverage for edge cases and clarifying phase drift detection logic in documentation.  \n\nSuggested Nic Action:  \nApprove the review, noting the frozen date and testing limitations. Recommend validating phase drift detection implementation in subsequent updates."
+  },
+  "llm_sections": {
+    "evidence_used": "- Test scripts (`test_resonance_display_core.py`, `test_run_engine.py`) validating core functions like `capture_resonance`.  \n- Core code (`resonance_display_core.py`) defining the `ResonanceDisplay` class for data capture.  \n- Documentation (`README.md`, `engine_manifest.json`) detailing resonance monitoring, phase standards, and system versioning.  \n- Execution script (`run.py`) simulating resonance visualization cycles.",
+    "likely_system_role": "A monitoring and visualization engine for recursion fields, providing real-time data on phase stability, resonance strength, and symbolic field health.",
+    "plain_english_purpose": "To capture and visualize real-time symbolic resonance levels across recursion fields, monitor phase coherence, and track resonance field health for AI.Web systems.",
+    "recommendation_draft": "Approve the review with the caveat that the frozen status may restrict future modifications. Suggest expanding test coverage for edge cases and clarifying phase drift detection logic in documentation.",
+    "risks_uncertainties": "- The system is \"frozen\" as of 2025-04-27, potentially limiting updates or adaptability.  \n- Test cases use hardcoded values (e.g., `phase_id=\"\\u03a66\"`, `resonance_level=0.88`), which may not cover edge cases.  \n- Documentation mentions \"phase drift detection\" but lacks implementation details in provided files.",
+    "suggested_nic_action": "Approve the review, noting the frozen date and testing limitations. Recommend validating phase drift detection implementation in subsequent updates."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo capture and visualize real-time symbolic resonance levels across recursion fields, monitor phase coherence, and track resonance field health for AI.Web systems.  \n\nLikely System Role:  \nA monitoring and visualization engine for recursion fields, providing real-time data on phase stability, resonance strength, and symbolic field health.  \n\nEvidence Used:  \n- Test scripts (`test_resonance_display_core.py`, `test_run_engine.py`) validating core functions like `capture_resonance`.  \n- Core code (`resonance_display_core.py`) defining the `ResonanceDisplay` class for data capture.  \n- Documentation (`README.md`, `engine_manifest.json`) detailing resonance monitoring, phase standards, and system versioning.  \n- Execution script (`run.py`) simulating resonance visualization cycles.  \n\nRisks / Uncertainties:  \n- The system is \"frozen\" as of 2025-04-27, potentially limiting updates or adaptability.  \n- Test cases use hardcoded values (e.g., `phase_id=\"\\u03a66\"`, `resonance_level=0.88`), which may not cover edge cases.  \n- Documentation mentions \"phase drift detection\" but lacks implementation details in provided files.  \n\nRecommendation Draft:  \nApprove the review with the caveat that the frozen status may restrict future modifications. Suggest expanding test coverage for edge cases and clarifying phase drift detection logic in documentation.  \n\nSuggested Nic Action:  \nApprove the review, noting the frozen date and testing limitations. Recommend validating phase drift detection implementation in subsequent updates.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

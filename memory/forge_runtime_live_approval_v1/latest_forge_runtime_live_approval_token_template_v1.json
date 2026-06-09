@@ -1,0 +1,24 @@
+{
+  "active_patch": "Patch 163 \u2014 Runtime Live Build Approval Token / Apply Plan",
+  "approval_token_status": "TEMPLATE_READY_NOT_APPROVED",
+  "approval_token_template": {
+    "approval_required_phrase": "CONFIRM_RUNTIME_LIVE_BUILD_APPROVAL_FOR_FAILSAFE_MANAGER",
+    "approval_status": "TEMPLATE_READY_NOT_APPROVED",
+    "human_approval_present": false,
+    "meaning": "This is a Forge-owned approval template only. It is not a live-build approval and cannot authorize writes.",
+    "token_id": "runtime_approval_template_01c5fbb213fb58e105b13cbb"
+  },
+  "candidate": "failsafe_manager",
+  "created_at": "2026-05-19T21:20:52",
+  "current_phase": "S19I \u2014 Runtime Live Build Approval Token / Apply Plan",
+  "human_approval_present": false,
+  "live_build_ready": false,
+  "next_patch": "Patch 164 \u2014 Runtime Live Build Backup / Apply Dry Run",
+  "plain_english": "This token is a template only. It does not approve the live build and cannot authorize runtime writes.",
+  "planning_ready": true,
+  "recommended_next_patch": "Patch 164 \u2014 Runtime Live Build Backup / Apply Dry Run",
+  "report_type": "FORGE_RUNTIME_LIVE_APPROVAL_TOKEN_TEMPLATE_V1",
+  "roadmap_mutation_policy": "APPEND_ONLY",
+  "schema_version": "forge_runtime_live_approval_v1_patch163",
+  "status": "FORGE_RUNTIME_LIVE_APPROVAL_TOKEN_TEMPLATE_READY_NOT_APPROVED"
+}

@@ -1,0 +1,42 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_BATCH_APPROVAL_HELPER",
+    "patch": "106",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "rule": "Patch 106 may record Patch99-compatible queue decisions for explicitly named engines, but only after Patch102 evidence cross-check readiness. It never commits ledger changes.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_batch_approvals_v1"
+  },
+  "counts": {
+    "receipts": 1
+  },
+  "created_at": "2026-05-15_142139",
+  "receipts": [
+    {
+      "counts": {
+        "blockers": 0,
+        "recorded": 1,
+        "refused_or_error": 0,
+        "requested": 1,
+        "warnings": 1
+      },
+      "decision_value": "APPROVED_FOR_FUTURE_COMMIT",
+      "engines": [
+        "agent_reflection_engine"
+      ],
+      "path": "/home/nic/forge/memory/engine_review_batch_approvals_v1/2026-05-15_142116_engine_review_batch_approval_v1.json",
+      "sha256": "e70f5b604bbc7f8ec71dbd8ee9a78e3769ac4cd5e82a22fa373c7a9baea81efa",
+      "status": "ENGINE_REVIEW_BATCH_APPROVAL_RECORDED_NO_LEDGER_MUTATION"
+    }
+  ],
+  "report_type": "ENGINE_REVIEW_BATCH_APPROVAL_EXPORT_V1_PATCH106",
+  "schema_version": "engine_review_batch_approval_v1_patch106"
+}

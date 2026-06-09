@@ -1,0 +1,8 @@
+{
+  "command_name": "update-agent-file",
+  "function_name": "cmd_update_agent_file",
+  "description": "update agent file",
+  "installed_at": "20260522_100108",
+  "backup_dir": "/home/nic/forge/backups/before_install_update-agent-file_20260522_100108",
+  "proposal_id": "20260522_100047_cmd_update_agent_file"
+}

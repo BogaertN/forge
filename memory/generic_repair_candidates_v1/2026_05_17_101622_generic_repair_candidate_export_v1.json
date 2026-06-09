@@ -1,0 +1,20 @@
+{
+  "authority": {
+    "export_only": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false
+  },
+  "candidate_path": "/home/nic/forge/memory/generic_repair_candidates_v1/latest_generic_repair_candidate_v1.json",
+  "candidate_sha256": "3832a847c6cf3161070464a620dd8c2c1b7a1073a75c4bf6992b1147a0059b7b",
+  "candidate_status": "GENERIC_REPAIR_CANDIDATE_BUILT_WITH_COMPILE_ISSUES",
+  "created_at": "2026-05-17T10:16:22",
+  "diff_path": "/home/nic/forge/memory/generic_repair_candidates_v1/2026_05_17_101557_candidate.diff",
+  "recommended_next_patch": "Resolve candidate blockers before sandboxing",
+  "report_type": "GENERIC_REPAIR_CANDIDATE_EXPORT_V1",
+  "schema_version": "generic_repair_candidate_export_v1_patch136",
+  "status": "GENERIC_REPAIR_CANDIDATE_EXPORT_READY",
+  "target_file": "/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py",
+  "verification_path": "/home/nic/forge/memory/generic_repair_candidates_v1/latest_generic_repair_candidate_verification_v1.json",
+  "verification_sha256": "5eb5104a02f2902bf2fcb339b657ddf0e2cf4aa686f8b19cc98f2445ec5712c2",
+  "verification_status": "GENERIC_REPAIR_CANDIDATE_VERIFICATION_BLOCKED"
+}

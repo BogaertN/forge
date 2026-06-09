@@ -1,0 +1,74 @@
+FORGE DIAGNOSTIC PROPOSAL
+══════════════════════════════════════════════════════════════════
+Title           : Displays system memory usage statistics in a human-readable format.
+Status          : APPROVED FOR REVIEW
+Timestamp       : 2026-05-22T09:18:55
+Session ID      : forge_2026_05_22_091531
+Forge Level     : 0.6 — Diagnostic Proposal Mode
+Proposal File   : /home/nic/forge/proposals/2026-05-22_091855_PROPOSAL_free_-h.txt
+══════════════════════════════════════════════════════════════════
+
+USER QUESTION
+─────────────
+orge-roadmap-append S20K NEXT "Add memory search command"
+
+
+PROPOSED COMMAND
+────────────────
+  free -h
+
+
+PURPOSE
+───────
+Displays system memory usage statistics in a human-readable format.
+
+
+WHY IT IS SAFE
+──────────────
+This command only reads system memory information and does not modify any files or settings.
+
+
+RISK LEVEL
+──────────
+LOW
+
+
+VALIDATION CHECK
+────────────────
+PASS — no blocked patterns detected
+
+Blocked operators checked : &&  ;  |  $()  >  >>  ` (checked)
+Sensitive paths checked   : .ssh  .gnupg  credentials  secrets  (checked)
+Composition check         : single command only, no chaining
+
+
+APPROVED PATHS INVOLVED
+───────────────────────
+  (no approved paths explicitly referenced)
+
+
+EXPECTED OUTPUT
+───────────────
+              total        used        free      shared  buff/cache   available
+Mem:           62Gi       7.8Gi       46Gi       179Mi       9.5Gi       54Gi
+Swap:         16Gi       1.2Gi       14Gi
+
+
+WHAT COULD GO WRONG
+───────────────────
+The output format might vary slightly depending on the system's kernel version or locale settings.
+
+
+══════════════════════════════════════════════════════════════════
+MANUAL INSTRUCTION
+──────────────────
+Forge cannot execute commands. This is by design.
+
+If you choose to run this command, copy and paste it yourself:
+
+  free -h
+
+Forge will never execute commands on your behalf at any trust level
+unless you explicitly enable execution mode in a future version.
+══════════════════════════════════════════════════════════════════
+Audit entry hash : 2d3f796ef1298d88

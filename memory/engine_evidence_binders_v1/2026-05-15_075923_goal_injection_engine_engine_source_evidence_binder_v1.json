@@ -1,0 +1,156 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/goal_injection_engine",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/goal_injection_engine",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "goal_injection_engine",
+  "evidence_id": "EEB-6ef85e34d4584ab4",
+  "file_count": 4,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "933e4994fa84ba92951b3a92550f62abe9d91588e10e20060360fe9dc8ca2086",
+      "excerpt_start": "{\n  \"engine\": \"Goal Injection Engine\",\n  \"version\": \"v1\",\n  \"description\": \"Injects symbolic recursion phase stabilization goals into the runtime environment.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Goal",
+        "Injection",
+        "Engine",
+        "version",
+        "description",
+        "Injects",
+        "symbolic",
+        "recursion",
+        "phase",
+        "stabilization",
+        "goals",
+        "into",
+        "the",
+        "runtime",
+        "environment"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/goal_injection_engine/goal_manifest.json",
+      "relative_to_candidate": "goal_manifest.json",
+      "sha256": "933e4994fa84ba92951b3a92550f62abe9d91588e10e20060360fe9dc8ca2086",
+      "size_bytes": 162,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "5ce92e3c874f8b4c7daff233d60e1d2c0e97ce6ed9376c4fd0e1fb61e5a96c53",
+      "excerpt_start": "# Goal Injection Engine\n\nInjects symbolic stabilization or expansion goals into the active recursion loop.\n\nStabilizes system evolution, corrects drift, and enhances phase transitions in the AI.Web runtime.\n",
+      "functions_sample": [
+        "Goal",
+        "Injection",
+        "Engine",
+        "Injects",
+        "symbolic",
+        "stabilization",
+        "expansion",
+        "goals",
+        "into",
+        "the",
+        "active",
+        "recursion",
+        "loop",
+        "Stabilizes",
+        "system",
+        "evolution",
+        "corrects",
+        "drift",
+        "and",
+        "enhances",
+        "phase",
+        "transitions",
+        "Web",
+        "runtime"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/goal_injection_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "5ce92e3c874f8b4c7daff233d60e1d2c0e97ce6ed9376c4fd0e1fb61e5a96c53",
+      "size_bytes": 207,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "bf232d89e73e217e17bb09b33c838912868b9481ed6397ca1eab4dd5b8b91823",
+      "excerpt_start": "from goal_core import inject_symbolic_goal\n\ndef test_goal_injection():\n    try:\n        result = inject_symbolic_goal()\n        assert \"goal\" in result\n        print(\"✅ Test Passed: Symbolic goal injected successfully.\")\n    except Exception as e:\n        print(f\"❌ Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_goal_injection()\n",
+      "functions_sample": [
+        "test_goal_injection"
+      ],
+      "imports_sample": [
+        "from goal_core import inject_symbolic_goal"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/goal_injection_engine/test_goal.py",
+      "relative_to_candidate": "test_goal.py",
+      "sha256": "bf232d89e73e217e17bb09b33c838912868b9481ed6397ca1eab4dd5b8b91823",
+      "size_bytes": 343,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "ae3ab4adeafe439f7b02fdd4e85586d6eb1b36acd8829c599c8cd27824493442",
+      "excerpt_start": "import json\nimport time\nimport random\n\nLOG_FILE = \"goal_log.jsonl\"\n\ndef inject_symbolic_goal():\n    \"\"\"Simulates injecting a symbolic recursion stabilization goal.\"\"\"\n    goal = random.choice([\"increase_charge\", \"reduce_drift\", \"stabilize_phase\", \"expand_seed\", \"consolidate_memory\"])\n\n    goal_event = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"goal\": goal\n    }\n\n    try:\n        with open(LOG_FILE, \"a\") as f:\n            f.write(json.dumps(goal_event) + \"\\n\")\n        print(f\"✔️ Symbolic goal injected: {goal_event}\")\n    except Exception as e:\n        print(f\"[!] Failed to record goal injection: {e}\")\n\n    return goal_event\n\n",
+      "functions_sample": [
+        "inject_symbolic_goal"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time",
+        "import random"
+      ],
+      "line_count": 25,
+      "path": "/home/nic/aiweb/engines/goal_injection_engine/goal_core.py",
+      "relative_to_candidate": "goal_core.py",
+      "sha256": "ae3ab4adeafe439f7b02fdd4e85586d6eb1b36acd8829c599c8cd27824493442",
+      "size_bytes": 677,
+      "suffix": ".py"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "test_goal_injection",
+    "inject_symbolic_goal"
+  ],
+  "warnings": []
+}

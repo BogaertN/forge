@@ -1,0 +1,8 @@
+{
+  "_comment": "Permanent approved paths. Set by Nic. Forge cannot access anything outside these paths.",
+  "_instructions": "Add absolute paths only. These persist across all sessions.",
+  "paths": [
+    "/home/nic/forge_test_project",
+    "/home/nic/aiweb"
+  ]
+}

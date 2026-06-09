@@ -1,0 +1,29 @@
+{
+  "allowed_types": [
+    "pybullet_fixed_falling_cube",
+    "symbolic_frequency_probe"
+  ],
+  "approval_state": "manual_command_required",
+  "blockers": [],
+  "forge_ui_modified": false,
+  "generated_at_utc": "20260525_003128_UTC",
+  "identity_vault_written": false,
+  "implementation_root": "/home/nic/aiweb/runtime_wrappers/protoforge_sandbox_substrate_v0",
+  "name": "ProtoForge Simulation Plan",
+  "ok": true,
+  "patch": "239",
+  "plan": {
+    "description": "Fixed procedural PyBullet DIRECT falling-cube simulation; no GUI, URDF, mesh, or user code.",
+    "iterations": "1",
+    "phase_history": "1,2,3,4",
+    "prompt": "Forge-approved fixed PyBullet DIRECT falling cube smoke",
+    "simulation_type": "pybullet_fixed_falling_cube"
+  },
+  "plan_id": "pfplan_20260525_003128_8f2d72d227",
+  "requested_type": "pybullet_fixed_falling_cube",
+  "rmc_live_memory_written": false,
+  "run_command": "forge-protoforge-simulation-run-approved",
+  "simulation_executed": false,
+  "simulation_type": "pybullet_fixed_falling_cube",
+  "verdict": "PROTOFORGE_SIMULATION_PLAN_READY"
+}

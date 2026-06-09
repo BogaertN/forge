@@ -1,0 +1,55 @@
+{
+  "authority": "Forge-owned dry-run preview only. No AI.Web runtime/project/engine files were created.",
+  "candidate": {
+    "canonical_path": "aiweb/engines/failsafe_manager",
+    "canonical_status": "CANONICAL_INCLUDED",
+    "cautions": [
+      "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+    ],
+    "dependency_kind": "canonical_runtime_module",
+    "eligible_for_planning": true,
+    "engine": "failsafe_manager",
+    "live_build_ready": false,
+    "live_write_authority": false,
+    "live_write_ready": false,
+    "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+    "priority": "P1_CORE",
+    "relationship_count": 0,
+    "required_human_checks": [
+      "compare_multiple_active_variants",
+      "inspect_high_duplicate_variant_count"
+    ],
+    "risk_level": "LOW",
+    "risk_score": 25,
+    "rollback_needs": [
+      "snapshot_or_file_backup_before_live_patch",
+      "current_sha_readback_before_apply",
+      "post_write_disk_verification"
+    ],
+    "runtime_domain": "GOVERNANCE_AND_SAFETY",
+    "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+    "test_status": "PASS"
+  },
+  "created_at": "2026-05-19T19:53:44",
+  "future_paths_not_created": [
+    {
+      "authority": "future path only; not created",
+      "created_by_patch_158": false,
+      "kind": "future_runtime_module_directory",
+      "path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager"
+    },
+    {
+      "authority": "future path only; not created",
+      "created_by_patch_158": false,
+      "kind": "future_runtime_module_manifest",
+      "path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/runtime_manifest.json"
+    },
+    {
+      "authority": "future path only; not created",
+      "created_by_patch_158": false,
+      "kind": "future_runtime_module_readme",
+      "path": "/home/nic/aiweb/runtime/governance_and_safety/failsafe_manager/README.md"
+    }
+  ],
+  "sandbox_id": "runtime_sandbox_failsafe_manager_2026_05_19_195344"
+}

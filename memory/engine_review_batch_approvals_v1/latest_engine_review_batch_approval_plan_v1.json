@@ -1,0 +1,129 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_BATCH_APPROVAL_HELPER",
+    "patch": "106",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "rule": "Patch 106 may record Patch99-compatible queue decisions for explicitly named engines, but only after Patch102 evidence cross-check readiness. It never commits ledger changes.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_batch_approvals_v1"
+  },
+  "counts": {
+    "crosschecks": 5,
+    "ready_for_batch_decision": 5,
+    "undecided_ready": 3,
+    "with_existing_queue_decision": 2
+  },
+  "created_at": "2026-05-15_142028",
+  "latest_workflow_engines": [
+    "agent_reflection_engine"
+  ],
+  "next_step": "Read each evidence cross-check first, then explicitly approve/defer/reject named engines. Do not approve from summary alone.",
+  "report_type": "ENGINE_REVIEW_BATCH_APPROVAL_PLAN_V1_PATCH106",
+  "rows": [
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/activity_log",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_activity_log_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "50ecd7db791a24589f780d214b80def2e07dbd836ea2a38d1aad1eb4e1f17bb4",
+      "engine_family": "activity_log",
+      "evidence_id": "EEB-929b125c673bef05",
+      "existing_queue_decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "latest_workflow_item": false,
+      "llm_called": true,
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "ready_for_batch_decision": true,
+      "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "suggested_check_command": "engine-review-batch-approval-show activity_log",
+      "suggested_review_command": "engine-review-evidence-show activity_log",
+      "warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/admin_override_console",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_admin_override_console_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "dfd7ee9597f01c4968a7329178f8a0b9047cb4e919d35d493bfebb285874287c",
+      "engine_family": "admin_override_console",
+      "evidence_id": "EEB-7e1e67cf08853d05",
+      "existing_queue_decision": "DEFERRED_FOR_MORE_REVIEW",
+      "latest_workflow_item": false,
+      "llm_called": true,
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "ready_for_batch_decision": true,
+      "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "suggested_check_command": "engine-review-batch-approval-show admin_override_console",
+      "suggested_review_command": "engine-review-evidence-show admin_override_console",
+      "warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/engines/agent_reflection_engine",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_agent_reflection_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "61b670851a8db1682f0e7e09e8dd26eae156de95c9c7661f14ee17e87ef6f86b",
+      "engine_family": "agent_reflection_engine",
+      "evidence_id": "EEB-efe9b78ceabc9853",
+      "existing_queue_decision": null,
+      "latest_workflow_item": true,
+      "llm_called": true,
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "ready_for_batch_decision": true,
+      "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "suggested_check_command": "engine-review-batch-approval-show agent_reflection_engine",
+      "suggested_review_command": "engine-review-evidence-show agent_reflection_engine",
+      "warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/agents_stack",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_agents_stack_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "49db6076bd1c890d6c40c7956d93b046bf14443fcfb076442590f98c6d766bbc",
+      "engine_family": "agents_stack",
+      "evidence_id": "EEB-e7eb75087380b7b6",
+      "existing_queue_decision": null,
+      "latest_workflow_item": false,
+      "llm_called": true,
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "ready_for_batch_decision": true,
+      "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "suggested_check_command": "engine-review-batch-approval-show agents_stack",
+      "suggested_review_command": "engine-review-evidence-show agents_stack",
+      "warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    },
+    {
+      "blockers": [],
+      "candidate_path": "/home/nic/aiweb/runtime_wrappers/aiweb_os_v1",
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_aiweb_os_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "19947501f38cdb7e663397d187e465c0adc39a10a6b0ee8b5ccb59a306e633a6",
+      "engine_family": "aiweb_os",
+      "evidence_id": "EEB-7b29cb90ee5e540e",
+      "existing_queue_decision": null,
+      "latest_workflow_item": false,
+      "llm_called": true,
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "ready_for_batch_decision": true,
+      "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "suggested_check_command": "engine-review-batch-approval-show aiweb_os",
+      "suggested_review_command": "engine-review-evidence-show aiweb_os",
+      "warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ]
+    }
+  ],
+  "schema_version": "engine_review_batch_approval_v1_patch106",
+  "status": "ENGINE_REVIEW_BATCH_APPROVAL_PLAN_READY_NO_LEDGER_AUTHORITY"
+}

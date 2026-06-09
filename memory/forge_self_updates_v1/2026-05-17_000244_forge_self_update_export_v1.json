@@ -1,0 +1,22 @@
+{
+  "authority": {
+    "live_self_write_authority": false,
+    "mode": "EXPORT_ONLY",
+    "patch_apply_authority": false,
+    "project_file_write_authority": false
+  },
+  "created_at": "2026-05-17T00:02:44",
+  "latest_proposal_status": "FORGE_SELF_UPDATE_PROPOSAL_READY_NO_WRITE_AUTHORITY",
+  "latest_verification_status": "FORGE_SELF_UPDATE_PROPOSAL_VERIFIED_NO_WRITE_AUTHORITY",
+  "next_commands": [
+    "forge-next",
+    "forge-roadmap-status",
+    "Install Patch 121 when ready"
+  ],
+  "plain_english": "Exports the proposal-only Forge self-update gate state. No live files are changed.",
+  "proposal_path": "/home/nic/forge/memory/forge_self_updates_v1/latest_forge_self_update_proposal_v1.json",
+  "report_type": "FORGE_SELF_UPDATE_EXPORT_V1",
+  "schema_version": "forge_self_update_export_v1_patch120",
+  "status": "FORGE_SELF_UPDATE_EXPORT_READY",
+  "verification_path": "/home/nic/forge/memory/forge_self_updates_v1/latest_forge_self_update_verification_v1.json"
+}

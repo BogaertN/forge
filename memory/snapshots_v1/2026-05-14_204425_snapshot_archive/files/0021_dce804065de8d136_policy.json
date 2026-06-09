@@ -1,0 +1,32 @@
+{
+  "allowed_storage": [
+    "/home/nic/forge/memory/llm_memory_v1",
+    "/home/nic/forge/memory/llm_memory_v1/turns",
+    "/home/nic/forge/memory/llm_memory_v1/corrections",
+    "/home/nic/forge/memory/llm_memory_v1/conversations",
+    "/home/nic/forge/memory/llm_memory_v1/indexes",
+    "/home/nic/forge/memory/llm_memory_v1/exports"
+  ],
+  "authority": {
+    "canonical_engine_authority": false,
+    "chroma_write_authority": false,
+    "direct_patch_authority": false,
+    "project_file_write_authority": false,
+    "shell_access": false
+  },
+  "core_rule": "Model memory is advisory only. Forge truth must be backed by receipts, files, hashes, manifests, or audit.",
+  "forbidden_storage": [
+    "hidden chain-of-thought",
+    "credentials, API keys, tokens, passwords, secrets, private keys",
+    "raw shell execution transcripts containing secrets",
+    "unscoped project writes",
+    "Chroma/vector writes without future explicit ingestion protocol"
+  ],
+  "hidden_chain_of_thought_stored": false,
+  "initialized_at": "2026-05-14T19:30:17",
+  "mode": "Forge-owned LLM memory receipts only",
+  "policy": "Patch 75 LLM Memory Ledger",
+  "purpose": "Preserve LLM-facing user request summaries, final answer summaries, recommendations, corrections, tool references, outcomes, and next-step context.",
+  "root": "/home/nic/forge/memory/llm_memory_v1",
+  "schema_version": "llm_memory_v1_patch75"
+}

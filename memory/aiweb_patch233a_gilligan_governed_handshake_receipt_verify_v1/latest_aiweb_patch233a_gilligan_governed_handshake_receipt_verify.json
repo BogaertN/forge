@@ -1,0 +1,193 @@
+{
+  "agent_id": "gilligan.local",
+  "blockers": [],
+  "checks": [
+    {
+      "blocker": null,
+      "detail": "/home/nic/forge/memory/aiweb_patch233_gilligan_governed_handshake_v1/latest_aiweb_patch233_gilligan_governed_handshake.json",
+      "key": "patch233_report_exists",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "True",
+      "key": "patch233_ok",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "HANDSHAKE_ACCEPTED_GOVERNED_ACTIVE_AGENT",
+      "key": "patch233_verdict",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "gilligan.local",
+      "key": "agent_id_gilligan",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "active_governed",
+      "key": "active_governed_gate_used",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "True",
+      "key": "is_active_true",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "profile_hash_present check in Patch 233",
+      "key": "profile_hash_checked_in_patch233",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local",
+      "key": "namespace_pointer_used",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local",
+      "key": "namespace_resolved_to_gilligan",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local",
+      "key": "namespace_exists",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "[{'exists': True, 'file_count': 0, 'is_dir': True, 'name': 'manifests', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/manifests'}, {'exists': True, 'file_count': 0, 'is_dir': True, 'name': 'receipts', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/receipts'}, {'exists': True, 'file_count': 0, 'is_dir': True, 'name': 'echo', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/echo'}, {'exists': True, 'file_count': 0, 'is_dir': True, 'name': 'private_context', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/private_context'}, {'exists': True, 'file_count': 0, 'is_dir': True, 'name': 'phase_records', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/phase_records'}]",
+      "key": "namespace_children_exist",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "manifest object present",
+      "key": "manifest_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "governed_active_agent_handshake",
+      "key": "manifest_type_governed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "expected=a64cb2920d1ba753e15fef63945e88d2f30e2ae9bfb760b6eeb885e9d09908ea actual=a64cb2920d1ba753e15fef63945e88d2f30e2ae9bfb760b6eeb885e9d09908ea",
+      "key": "manifest_hash_valid",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "c22e01ade0bdc76306c5896499975e76b8b2db58c7bcf57e637ad7a3bd60e9e0",
+      "key": "render_preview_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "ECHO_VALIDATION_PASSED_GOVERNED_ACTIVE_AGENT",
+      "key": "echo_validation_passed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "0.97",
+      "key": "echo_score_high",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "95a12d4349eda9d484c53593394e4a90f72b7c84d38d3f5ec7959dbcc2704081",
+      "key": "receipt_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "expected=95a12d4349eda9d484c53593394e4a90f72b7c84d38d3f5ec7959dbcc2704081 actual=95a12d4349eda9d484c53593394e4a90f72b7c84d38d3f5ec7959dbcc2704081",
+      "key": "receipt_hash_valid",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "True",
+      "key": "forge_owned_receipt_written",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "identity_vault_not_written",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "rmc_memory_not_written",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "writes=False boundary=False",
+      "key": "autonomous_execution_false",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "protoforge2_not_executed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "False",
+      "key": "echoforge_not_invoked",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "secrets=False full_chat=False",
+      "key": "no_secret_or_full_chat_write",
+      "ok": true
+    }
+  ],
+  "checks_passed": 26,
+  "checks_total": 26,
+  "echo_validation": {
+    "echo_hash": "ae6d58e73feee360ca0ca074bca357bb87202dbf0f8b1b377979d3710740263c",
+    "echo_score": 0.97,
+    "verdict": "ECHO_VALIDATION_PASSED_GOVERNED_ACTIVE_AGENT"
+  },
+  "generated_at_utc": "20260524_012713_UTC",
+  "name": "Gilligan Governed Handshake Receipt Verification",
+  "next_expected_step": "Patch 234 \u2014 controlled RMC test receipt write, not full memory, if user approves.",
+  "ok": true,
+  "patch": "233A",
+  "recomputed_manifest_hash": "a64cb2920d1ba753e15fef63945e88d2f30e2ae9bfb760b6eeb885e9d09908ea",
+  "recomputed_receipt_hash": "95a12d4349eda9d484c53593394e4a90f72b7c84d38d3f5ec7959dbcc2704081",
+  "rmc_namespace": {
+    "identity_vault_pointer": "rmc/agents/gilligan.local",
+    "resolved_absolute_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local"
+  },
+  "source_patch233_receipt_hash": "95a12d4349eda9d484c53593394e4a90f72b7c84d38d3f5ec7959dbcc2704081",
+  "source_patch233_report": "/home/nic/forge/memory/aiweb_patch233_gilligan_governed_handshake_v1/latest_aiweb_patch233_gilligan_governed_handshake.json",
+  "source_patch233_verdict": "HANDSHAKE_ACCEPTED_GOVERNED_ACTIVE_AGENT",
+  "verdict": "GILLIGAN_GOVERNED_HANDSHAKE_RECEIPT_VERIFIED",
+  "writes_performed": {
+    "agent_identity_activation_performed": false,
+    "autonomous_tool_execution_performed": false,
+    "echoforge_creation_performed": false,
+    "forge_owned_verification_report": true,
+    "identity_vault_database_written": false,
+    "protoforge2_execution_performed": false,
+    "rmc_memory_written": false
+  }
+}

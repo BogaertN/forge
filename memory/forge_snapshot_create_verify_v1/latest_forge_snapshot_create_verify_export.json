@@ -1,0 +1,23 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "export_only": true,
+    "live_restore_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false
+  },
+  "created_at": "2026-05-19T18:12:56",
+  "created_file_count": 542,
+  "next_patch": "Patch 153 \u2014 Shadow Restore / Forensic Diff",
+  "problem_count": 0,
+  "report_type": "FORGE_SNAPSHOT_CREATE_VERIFY_EXPORT",
+  "schema_version": "forge_snapshot_create_verify_v1_patch152",
+  "snapshot_id": "forge_snapshot_2026_05_19_181211",
+  "snapshot_root": "/home/nic/forge/memory/forge_snapshots_v1/forge_snapshot_2026_05_19_181211",
+  "snapshot_status": "FORGE_SNAPSHOT_CREATE_READY",
+  "source_snapshot_sha256": "f31215acae640d96f04142265ebb1f65e5050b90dacac8bfaeda3b90b633e210",
+  "source_verification_sha256": "85f378e423815b47b47e40cf4c2e1af2ebcb631925cface05aa0e9aa9c99ebaf",
+  "status": "FORGE_SNAPSHOT_CREATE_VERIFY_EXPORT_READY",
+  "verification_status": "FORGE_SNAPSHOT_CREATE_VERIFY_PASS",
+  "verified_file_count": 542
+}

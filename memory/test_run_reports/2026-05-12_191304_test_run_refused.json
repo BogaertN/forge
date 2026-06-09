@@ -1,0 +1,11 @@
+{
+  "patch": "64",
+  "report_name": "test_run_refused",
+  "source": "manual",
+  "status": "REFUSED",
+  "reason": "path contains shell metacharacters or pipeline syntax",
+  "target": "main.py; rm -rf /",
+  "argv": [],
+  "shell": false,
+  "timestamp": "2026-05-12T19:13:04"
+}

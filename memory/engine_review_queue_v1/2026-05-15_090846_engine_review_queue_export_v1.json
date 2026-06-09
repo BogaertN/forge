@@ -1,0 +1,37 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "HUMAN_REVIEW_QUEUE_ONLY_NO_LEDGER_MUTATION",
+    "patch": "99",
+    "project_write_authority": false,
+    "rule": "Patch 99 queues LLM draft reviews for Nic. It records approve/defer/reject intent only. Patch 100 is required to commit ledger changes after SHA re-verification.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_queue_v1"
+  },
+  "counts": {
+    "approved_for_future_commit": 0,
+    "deferred_for_more_review": 0,
+    "drafts_in_queue": 0,
+    "rejected_from_canonical_review": 0,
+    "undecided": 0
+  },
+  "created_at": "2026-05-15_090846",
+  "decisions": [
+    {
+      "decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "decision_id": "ERQ-christping_listener-2026-05-15_090806",
+      "engine_family": "christping_listener",
+      "path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-15_090806_christping_listener_engine_review_queue_decision_v1.json",
+      "sha256": "49555a9d251f20d107a07701bdd9b8f2ece743314f1295d94c66329a493209ab"
+    }
+  ],
+  "next_step": "Patch 100 commits approved decisions only after live candidate SHA re-verification.",
+  "queue_report_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-15_090846_engine_review_queue_v1.json",
+  "queue_report_sha256": "a5c67acf422bcc7a8dd675a900d4e2b1159c7da11be273a76693a2ba74db1be2",
+  "report_type": "ENGINE_REVIEW_QUEUE_EXPORT_V1_PATCH99",
+  "schema_version": "engine_review_queue_v1_patch99"
+}

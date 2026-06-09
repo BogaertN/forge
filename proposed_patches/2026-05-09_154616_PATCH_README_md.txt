@@ -1,0 +1,63 @@
+FORGE PATCH PROPOSAL
+══════════════════════════════════════════════════════════════════
+Target file     : /home/nic/aiweb/runtime_wrappers/symbolic_cognition_stack/README.md
+Timestamp       : 2026-05-09T15:46:16
+Session ID      : forge_2026_05_09_154447
+Forge Level     : 2.0 — Patch Proposal Engine
+Risk level      : LOW
+Proposal file   : /home/nic/forge/proposed_patches/2026-05-09_154616_PATCH_README_md.txt
+══════════════════════════════════════════════════════════════════
+
+PROBLEM SUMMARY
+───────────────
+Add a short documentation note explaining what the symbolic cognition stack loader does.
+
+
+ORIGINAL (current content of target region)
+────────────────────────────────────────────
+## Engines Activated:
+- symbolic_feedback_loop_engine_frozen_v1
+- cold_archive_engine_frozen_v1
+- loop_resurrection_engine_frozen_v1
+- resonance_charge_meter_frozen_v1
+
+
+PROPOSED CHANGE
+───────────────
+## Engines Activated:
+- symbolic_feedback_loop_engine_frozen_v1
+- cold_archive_engine_frozen_v1
+- loop_resurrection_engine_frozen_v1
+- resonance_charge_meter_frozen_v1
+
+---
+
+## Runtime Loader:
+- `symbolic_cognition_stack_loader.py` starts the four frozen engine runtimes sequentially from the AI.Web engines directory.
+
+
+REASONING
+─────────
+This is a documentation-only patch. It records the loader behavior confirmed during read-only runtime mapping without changing the loader or any engine code.
+
+
+TEST PLAN
+─────────
+Read the README and verify the Runtime Loader section appears after the Engines Activated list.
+
+
+ROLLBACK NOTES
+──────────────
+Remove the Runtime Loader section and leave the Engines Activated list unchanged.
+
+
+══════════════════════════════════════════════════════════════════
+IMPORTANT: THIS IS A PROPOSAL ONLY.
+
+No project files were created, edited, moved, deleted, or executed.
+Forge only wrote this proposal inside ~/forge/proposed_patches/.
+
+To apply this change, Nic must manually edit the target file.
+A future Forge apply-patch command may be added at a higher trust level.
+══════════════════════════════════════════════════════════════════
+Audit entry hash : cd516ac2f3aceb86

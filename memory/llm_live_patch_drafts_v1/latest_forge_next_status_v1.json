@@ -1,0 +1,18 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T08:51:32",
+  "next_commands": [
+    "llm-live-export",
+    "Install Patch 133 when ready"
+  ],
+  "next_phase": "PATCH_LIFECYCLE_2_GATE_MATRIX",
+  "plain_english": "Forge has proven a visible local LLM call for source-grounded patch drafting.",
+  "recommended_next_patch": "Patch 133 \u2014 Patch Lifecycle 2.0 Gate Matrix",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "schema_version": "forge_next_status_v1_patch132R",
+  "status": "NEXT_PATCH_REQUIRED"
+}

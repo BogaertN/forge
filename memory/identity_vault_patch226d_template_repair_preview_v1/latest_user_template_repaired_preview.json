@@ -1,0 +1,90 @@
+{
+  "defaults": {
+    "activation_state": "inactive_draft",
+    "is_active": 0,
+    "version": "1.0.0-blueprint-draft"
+  },
+  "indexed_columns": [
+    "user_id",
+    "canonical_name",
+    "version",
+    "is_active",
+    "created_at",
+    "updated_at",
+    "profile_schema_version",
+    "profile_hash",
+    "last_validated_at"
+  ],
+  "lookup_field": "user_id",
+  "operational_profile_json": {
+    "canonical_name": "{{canonical_name}}",
+    "identity_tags": [],
+    "interaction_preferences": {
+      "beginner_friendly": true,
+      "confirmation_required": true,
+      "no_boxes": true,
+      "plain_language": true,
+      "pushback": true,
+      "step_by_step": true
+    },
+    "last_updated": "2026-05-23T21:54:54Z",
+    "legacy_migration_reference": {
+      "source_database": null,
+      "source_id": null,
+      "status": "none_or_preserve_as_reference_only"
+    },
+    "meta_rules": {
+      "forbidden_actions": [
+        "activate agent identities without approval",
+        "write to RMC memory without approval",
+        "read secret values",
+        "package secrets or dependency folders"
+      ],
+      "require_context_carryover": true,
+      "require_honest_pushback": true
+    },
+    "project_affiliations": [],
+    "project_context": {
+      "current_project": "AI.Web bootstrap integration",
+      "goals": [],
+      "phase": "Identity Vault normalization",
+      "subsystems": [
+        "Forge",
+        "RMC",
+        "Identity Vault",
+        "ProtoForge2",
+        "EchoForge"
+      ]
+    },
+    "session_state": {
+      "last_action": null,
+      "last_feedback": null,
+      "phase": "draft_inactive",
+      "timestamp": "2026-05-23T21:54:54Z",
+      "waiting_for": "manual review"
+    },
+    "user_id": "{{user_id}}",
+    "version": "1.0.0-blueprint-draft"
+  },
+  "profile_schema_version": "1.0.0-blueprint",
+  "required_fields": [
+    "user_id",
+    "canonical_name",
+    "version",
+    "last_updated",
+    "interaction_preferences",
+    "meta_rules",
+    "project_context",
+    "session_state",
+    "identity_tags",
+    "project_affiliations",
+    "legacy_migration_reference"
+  ],
+  "safety_rules": [
+    "Template must not contain secret values.",
+    "Template must not activate a profile.",
+    "Template must not contain database connection strings."
+  ],
+  "target_table": "user_profiles",
+  "template_type": "user_operational_identity_template"
+}

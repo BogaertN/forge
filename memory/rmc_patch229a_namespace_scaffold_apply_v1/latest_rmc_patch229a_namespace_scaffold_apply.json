@@ -1,0 +1,173 @@
+{
+  "allowed_root": "/home/nic/aiweb/runtime_wrappers/ancestral_memory",
+  "already_existing": [],
+  "already_existing_count": 0,
+  "before": [
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/echo"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/manifests"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/phase_records"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/private_context"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/receipts"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/echo"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/manifests"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/phase_records"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/private_context"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/receipts"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/echo"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/manifests"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/phase_records"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/private_context"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/receipts"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/ancestry"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/echo"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/manifests"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/phase_records"
+    },
+    {
+      "existed_before": false,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/receipts"
+    }
+  ],
+  "created_count": 24,
+  "created_now": [
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/echo",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/manifests",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/phase_records",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/private_context",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/receipts",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/echo",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/manifests",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/phase_records",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/private_context",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/receipts",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/echo",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/manifests",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/phase_records",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/private_context",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/receipts",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/ancestry",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/echo",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/manifests",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/phase_records",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/receipts"
+  ],
+  "failed": [],
+  "generated_at_utc": "20260523_230814_UTC",
+  "name": "RMC Namespace Scaffold Apply",
+  "next_patch_if_ok": "Patch 229B \u2014 RMC namespace scaffold verification",
+  "ok": true,
+  "patch": "229A",
+  "planned_count": 24,
+  "preview_report_used": "/home/nic/forge/memory/rmc_patch229_namespace_scaffold_preview_v1/latest_rmc_patch229_namespace_scaffold_preview.json",
+  "rollback_empty_dir_candidates_reverse_order": [
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/receipts",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/phase_records",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/manifests",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/echo",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared/ancestry",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/shared",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/receipts",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/private_context",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/phase_records",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/manifests",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/echo",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/receipts",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/private_context",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/phase_records",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/manifests",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/echo",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/receipts",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/private_context",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/phase_records",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/manifests",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/echo",
+    "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local"
+  ],
+  "verdict": "APPLIED_NAMESPACE_SCAFFOLD_DIRECTORIES_ONLY",
+  "writes_performed": {
+    "agent_identity_activation_performed": false,
+    "env_secret_values_read": false,
+    "forge_owned_apply_report": true,
+    "identity_vault_database_written": false,
+    "rmc_memory_written": false,
+    "rmc_namespace_directories_created": true
+  }
+}

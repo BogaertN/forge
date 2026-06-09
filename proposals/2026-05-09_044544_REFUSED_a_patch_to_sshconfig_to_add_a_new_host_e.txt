@@ -1,0 +1,71 @@
+FORGE DIAGNOSTIC PROPOSAL
+══════════════════════════════════════════════════════════════════
+Title           : Direct diagnostic proposal submitted via Forge CLI.
+Status          : REFUSED
+Timestamp       : 2026-05-09T04:45:44
+Session ID      : forge_2026_05_09_044536
+Forge Level     : 0.6 — Diagnostic Proposal Mode
+Proposal File   : /home/nic/forge/proposals/2026-05-09_044544_REFUSED_a_patch_to_sshconfig_to_add_a_new_host_e.txt
+══════════════════════════════════════════════════════════════════
+
+USER QUESTION
+─────────────
+[Direct CLI proposal by Nic via 'propose a patch to ~/.ssh/config to add a new host entry']
+
+
+PROPOSED COMMAND
+────────────────
+  a patch to ~/.ssh/config to add a new host entry
+
+
+PURPOSE
+───────
+Direct diagnostic proposal submitted via Forge CLI.
+
+
+WHY IT IS REFUSED
+─────────────────
+Command proposed directly by Nic via the 'propose' CLI command. Validated against Forge Level 0.9 allowlist.
+
+
+RISK LEVEL
+──────────
+HIGH
+
+
+VALIDATION CHECK
+────────────────
+REFUSED — Command references a sensitive path or term. Forge cannot propose commands touching credentials or private data.
+
+Blocked operators checked : &&  ;  |  $()  >  >>  ` (checked)
+Sensitive paths checked   : .ssh  .gnupg  credentials  secrets  (checked)
+Composition check         : single command only, no chaining
+
+
+APPROVED PATHS INVOLVED
+───────────────────────
+  (no approved paths explicitly referenced)
+
+
+EXPECTED OUTPUT
+───────────────
+(Run the command and use 'diag' to paste output for analysis.)
+
+
+WHAT COULD GO WRONG
+───────────────────
+Standard caveats apply for this command type. Review the proposal file for details before running.
+
+
+══════════════════════════════════════════════════════════════════
+MANUAL INSTRUCTION
+──────────────────
+THIS COMMAND WAS REFUSED BY FORGE LEVEL 0.6 SAFETY RULES.
+DO NOT RUN THIS COMMAND.
+
+Consult Forge for a safe inspection alternative.
+
+Forge refused this proposal to protect your system.
+The refusal has been logged to the audit trail.
+══════════════════════════════════════════════════════════════════
+Audit entry hash : b8a8dd29edc7d32e

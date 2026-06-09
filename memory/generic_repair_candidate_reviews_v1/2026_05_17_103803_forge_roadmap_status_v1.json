@@ -1,0 +1,17 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T10:38:03",
+  "current_milestone": "LLM candidate review gate active",
+  "llm_candidate_review_status": "GENERIC_REPAIR_CANDIDATE_LLM_REVIEW_VERIFIED_READY_FOR_SANDBOX",
+  "next_patch_sequence": [
+    "Patch 137 \u2014 Generic Repair Sandbox Candidate",
+    "Patch 138 \u2014 Human Approval + Live Apply Gate",
+    "Patch 139 \u2014 Re-run Canonical Test + Update Impact Reports"
+  ],
+  "report_type": "FORGE_ROADMAP_STATUS_V1",
+  "schema_version": "forge_roadmap_status_v1_patch136L",
+  "status": "FORGE_ROADMAP_STATUS_READY"
+}

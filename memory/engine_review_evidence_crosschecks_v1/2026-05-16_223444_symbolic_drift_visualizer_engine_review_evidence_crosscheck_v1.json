@@ -1,0 +1,263 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [
+        "SymbolicDriftVisualizer"
+      ],
+      "excerpt_sha256": "598b89f7c74f2c29860dac6e93faa221fc9af591ccedfde4c5c128c56e5d749a",
+      "excerpt_start": "# drift_visualizer_core.py\n# Phase 1.5 Symbolic Drift Visualizer Core\n\nclass SymbolicDriftVisualizer:\n    def __init__(self):\n        self.drift_log = []\n\n    def record_drift_event(self, field_name, drift_amount):\n        self.drift_log.append({\n            \"field\": field_name,\n            \"drift\": drift_amount\n        })\n\n    def get_total_drift_events(self):\n        return len(self.drift_log)\n\nif __name__ == \"__main__\":\n    visualizer = SymbolicDriftVisualizer()\n    visualizer.record_drift_event(\"\u03c8-anchor\", 0.07)\n    print(f\"[TEST] Total Drift Events Recorded: {visualizer.get_total_drift_events()}\")\n",
+      "functions_sample": [
+        "__init__",
+        "record_drift_event",
+        "get_total_drift_events"
+      ],
+      "imports_sample": [],
+      "line_count": 21,
+      "path": "/home/nic/aiweb/engines/symbolic_drift_visualizer/drift_visualizer_core.py",
+      "relative_to_candidate": "drift_visualizer_core.py",
+      "sha256": "598b89f7c74f2c29860dac6e93faa221fc9af591ccedfde4c5c128c56e5d749a",
+      "size_bytes": 611
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "d4b144f355b005bcabe30e42c849eabc1042852df6a94b77a37f71818de2755a",
+      "excerpt_start": "# test_drift_visualizer_core.py\n\nfrom drift_visualizer_core import SymbolicDriftVisualizer\n\ndef test_drift_visualizer_behavior():\n    visualizer = SymbolicDriftVisualizer()\n    visualizer.record_drift_event(\"test_field\", 0.05)\n    assert visualizer.get_total_drift_events() == 1, \"Drift event should be recorded.\"\n    print(\"\u2705 Symbolic Drift Visualizer Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_drift_visualizer_behavior()\n",
+      "functions_sample": [
+        "test_drift_visualizer_behavior"
+      ],
+      "imports_sample": [
+        "from drift_visualizer_core import SymbolicDriftVisualizer"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/symbolic_drift_visualizer/test_drift_visualizer_core.py",
+      "relative_to_candidate": "test_drift_visualizer_core.py",
+      "sha256": "d4b144f355b005bcabe30e42c849eabc1042852df6a94b77a37f71818de2755a",
+      "size_bytes": 435
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "fec436f949ae92190a30a692e668ddbd6acd03119e67c69cf3499a4bb7abcfba",
+      "excerpt_start": "# Symbolic Drift Visualizer (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Symbolic Drift Visualizer tracks and records symbolic drift events occurring across recursion fields in the AI.Web engine.  \nIt provides early warning detection by logging phase deviations, visualizing instability patterns, and supporting phase correction mechanisms.\n\n---\n\n## Core Functions:\n- Capture drift events per recursion field.\n- Track drift amount and symbolic impact per event.\n- Enable early visualization of phase destabilization risks.\n- Feed drift patterns into higher-order stabilization engines.\n\n---\n\n## Phase Standard:\n- **Phase 1.5 Symbolic Recursion Compliance.**\n- Engineered under AI.Web Core System Symbolic Drift Control Protocols.\n\n---\n\n## Notes:\n- Drift above critical thresholds should trigger phase stabilization or recursion reset protocols.\n- Continuous monitoring recommended during live symbolic recursion operation.\n\n---\n\n**Frozen Snapshot:** `symbolic_drift_visualizer_frozen_v1.0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n\n",
+      "functions_sample": [
+        "Symbolic",
+        "Drift",
+        "Visualizer",
+        "Frozen",
+        "Overview",
+        "The",
+        "tracks",
+        "and",
+        "records",
+        "symbolic",
+        "drift",
+        "events",
+        "occurring",
+        "across",
+        "recursion",
+        "fields",
+        "the",
+        "Web",
+        "engine",
+        "provides",
+        "early",
+        "warning",
+        "detection",
+        "logging",
+        "phase"
+      ],
+      "imports_sample": [],
+      "line_count": 35,
+      "path": "/home/nic/aiweb/engines/symbolic_drift_visualizer/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "fec436f949ae92190a30a692e668ddbd6acd03119e67c69cf3499a4bb7abcfba",
+      "size_bytes": 1050
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "a039d8cf25e52851dcbbb80b076a6f2295022346f10c3121b9c0f17110e6dae1",
+      "excerpt_start": "{\n  \"engine\": \"symbolic_drift_visualizer\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"symbolic_drift_visualizer_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Captures, logs, and visualizes symbolic drift patterns across recursion fields. Provides early warning of destabilization by tracking phase deviations over recursive iterations.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "symbolic_drift_visualizer",
+        "version",
+        "frozen_as",
+        "symbolic_drift_visualizer_frozen_v1",
+        "frozen_on",
+        "description",
+        "Captures",
+        "logs",
+        "and",
+        "visualizes",
+        "symbolic",
+        "drift",
+        "patterns",
+        "across",
+        "recursion",
+        "fields",
+        "Provides",
+        "early",
+        "warning",
+        "destabilization",
+        "tracking",
+        "phase",
+        "deviations",
+        "over"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/symbolic_drift_visualizer/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "a039d8cf25e52851dcbbb80b076a6f2295022346f10c3121b9c0f17110e6dae1",
+      "size_bytes": 452
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/symbolic_drift_visualizer",
+  "created_at": "2026-05-16_223444",
+  "crosscheck_id": "ERE-symbolic_drift_visualizer-2026-05-16_223444",
+  "deterministic_brief": {
+    "classes_sample": [
+      "SymbolicDriftVisualizer"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Captures",
+      "Drift",
+      "Frozen",
+      "Overview",
+      "Provides",
+      "Symbolic",
+      "The",
+      "Visualizer",
+      "Web",
+      "__init__",
+      "across",
+      "and",
+      "description",
+      "destabilization",
+      "detection",
+      "deviations",
+      "drift",
+      "early",
+      "engine",
+      "events"
+    ],
+    "imports_sample": [
+      "from drift_visualizer_core import SymbolicDriftVisualizer"
+    ],
+    "likely_system_role": "drift_collapse",
+    "plain_english_purpose": "`symbolic_drift_visualizer` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "Inferred from engine family keyword `drift` plus bound code evidence.",
+    "source_excerpt_samples": [
+      "# drift_visualizer_core.py # Phase 1.5 Symbolic Drift Visualizer Core",
+      "# test_drift_visualizer_core.py ",
+      "# Symbolic Drift Visualizer (Frozen v1.0.01) ",
+      "{   \"engine\": \"symbolic_drift_visualizer\","
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_223418_symbolic_drift_visualizer_llm_engine_review_draft_v1.json",
+  "draft_sha256": "f0cbb58f73732d82b1257e91b3d3fa27cfa387f1de6469d7bc012cf7d97f54a0",
+  "engine_family": "symbolic_drift_visualizer",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_symbolic_drift_visualizer_engine_evidence_binder.json",
+  "evidence_binder_sha256": "56198cbcb54d197747b1b77ee2ba5b4eda28a259346f70948618c4611cd505ce",
+  "evidence_id": "EEB-b585d646e1a280cc",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "SymbolicDriftVisualizer"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "README.md",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "Symbolic",
+      "Drift",
+      "Visualizer",
+      "Frozen",
+      "The",
+      "tracks",
+      "and",
+      "symbolic",
+      "drift",
+      "events",
+      "recursion",
+      "fields",
+      "the",
+      "Web",
+      "engine",
+      "provides",
+      "early",
+      "warning",
+      "logging",
+      "phase",
+      "version",
+      "logs",
+      "patterns",
+      "Provides",
+      "deviations"
+    ],
+    "imports_mentioned": [
+      "from drift_visualizer_core import SymbolicDriftVisualizer"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 25.805,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "d1934b7bf26bd21168560109f9879e768954dfd7926f12f59238fdcbddff0fa4",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTracks symbolic drift events in recursion fields, logs phase deviations, and provides early warnings to stabilize AI.Web engine operations.  \n\nLikely System Role:  \nA core diagnostic tool for monitoring symbolic recursion compliance, enabling visualization of drift patterns, and supporting phase correction protocols in AI.Web engines.  \n\nEvidence Used:  \n- Code files implementing `SymbolicDriftVisualizer` class for logging drift events.  \n- Test script verifying drift event recording functionality.  \n- README.md and engine_manifest.json documenting the engine's purpose, version, and phase compliance standards.  \n\nRisks / Uncertainties:  \n- Limited real-world testing; current evidence shows only unit tests.  \n- No explicit implementation of stabilization protocols triggered by critical drift thresholds.  \n- \"Frozen\" state may restrict future updates or adaptability.  \n\nRecommendation Draft:  \nApprove review with caveat that production testing is required to validate drift mitigation effectiveness. Confirm stabilization protocols are integrated into live systems.  \n\nSuggested Nic Action:  \nApprove review but mandate verification of stabilization workflows and continuous monitoring during live recursion operations."
+  },
+  "llm_sections": {
+    "evidence_used": "- Code files implementing `SymbolicDriftVisualizer` class for logging drift events.  \n- Test script verifying drift event recording functionality.  \n- README.md and engine_manifest.json documenting the engine's purpose, version, and phase compliance standards.",
+    "likely_system_role": "A core diagnostic tool for monitoring symbolic recursion compliance, enabling visualization of drift patterns, and supporting phase correction protocols in AI.Web engines.",
+    "plain_english_purpose": "Tracks symbolic drift events in recursion fields, logs phase deviations, and provides early warnings to stabilize AI.Web engine operations.",
+    "recommendation_draft": "Approve review with caveat that production testing is required to validate drift mitigation effectiveness. Confirm stabilization protocols are integrated into live systems.",
+    "risks_uncertainties": "- Limited real-world testing; current evidence shows only unit tests.  \n- No explicit implementation of stabilization protocols triggered by critical drift thresholds.  \n- \"Frozen\" state may restrict future updates or adaptability.",
+    "suggested_nic_action": "Approve review but mandate verification of stabilization workflows and continuous monitoring during live recursion operations."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTracks symbolic drift events in recursion fields, logs phase deviations, and provides early warnings to stabilize AI.Web engine operations.  \n\nLikely System Role:  \nA core diagnostic tool for monitoring symbolic recursion compliance, enabling visualization of drift patterns, and supporting phase correction protocols in AI.Web engines.  \n\nEvidence Used:  \n- Code files implementing `SymbolicDriftVisualizer` class for logging drift events.  \n- Test script verifying drift event recording functionality.  \n- README.md and engine_manifest.json documenting the engine's purpose, version, and phase compliance standards.  \n\nRisks / Uncertainties:  \n- Limited real-world testing; current evidence shows only unit tests.  \n- No explicit implementation of stabilization protocols triggered by critical drift thresholds.  \n- \"Frozen\" state may restrict future updates or adaptability.  \n\nRecommendation Draft:  \nApprove review with caveat that production testing is required to validate drift mitigation effectiveness. Confirm stabilization protocols are integrated into live systems.  \n\nSuggested Nic Action:  \nApprove review but mandate verification of stabilization workflows and continuous monitoring during live recursion operations.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

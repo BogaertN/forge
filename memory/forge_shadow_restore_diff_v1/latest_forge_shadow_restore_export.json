@@ -1,0 +1,29 @@
+{
+  "authority": {
+    "audit_log_overwrite": false,
+    "engine_file_write_authority": false,
+    "export_only": true,
+    "forge_owned_shadow_write": true,
+    "live_restore_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "shadow_restore_write": true,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-19T18:26:32",
+  "diff_status": "FORGE_SHADOW_RESTORE_FORENSIC_DIFF_READY",
+  "next_patch": "Patch 154 \u2014 Dashboard v2 / Operator Control Panel",
+  "plan_status": "FORGE_SHADOW_RESTORE_PLAN_READY",
+  "problem_count": 0,
+  "recommended_next_patch": "Patch 154 \u2014 Dashboard v2 / Operator Control Panel",
+  "report_type": "FORGE_SHADOW_RESTORE_EXPORT",
+  "run_status": "FORGE_SHADOW_RESTORE_RUN_PASS",
+  "schema_version": "forge_shadow_restore_diff_v1_patch153",
+  "shadow_id": "shadow_restore_2026_05_19_182609",
+  "shadow_root": "/home/nic/forge/memory/forge_shadow_restores_v1/shadow_restore_2026_05_19_182609",
+  "snapshot_id": "forge_snapshot_2026_05_19_181211",
+  "source_diff_sha256": "862e3cf0e1fcb4b4dfb4f122fc4d1232e3d3312bbaffceca863dd14fea948772",
+  "source_plan_sha256": "727f7d8a2a4fb989417690b311179297437c5af7ed07155f7f847e7033bb4711",
+  "source_run_sha256": "d92abe87ccdf823a195855da97100e42c806e1982816072f99d21995340610d6",
+  "status": "FORGE_SHADOW_RESTORE_EXPORT_READY"
+}

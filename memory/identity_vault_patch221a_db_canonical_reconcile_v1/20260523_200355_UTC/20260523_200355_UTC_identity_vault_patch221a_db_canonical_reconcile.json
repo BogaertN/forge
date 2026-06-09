@@ -1,0 +1,263 @@
+{
+  "backup_report": {
+    "cli.js": "COPIED",
+    "db.js": "COPIED",
+    "scripts/init-database.js": "COPIED",
+    "scripts/reset-database.js": "COPIED",
+    "server.js": "COPIED",
+    "service_contracts/identity_vault_readonly_service_contract.draft.json": "COPIED",
+    "tests/db.canonical.test.js": "COPIED"
+  },
+  "backup_root": "/home/nic/forge/backups/patch221a_identity_vault_db_canonical_reconcile_before/20260523_200355_UTC",
+  "boundary": {
+    "does_not_modify": [
+      "Identity Vault DB contents",
+      ".env",
+      "node_modules",
+      "Forge registry",
+      "RMC memory",
+      "AI.Web wrappers",
+      "agent identity activation state"
+    ],
+    "env_secret_values_read": false,
+    "modifies": "selected Identity Vault JS path references and tests/db.canonical.test.js only, after backup"
+  },
+  "canonical_db_summary": {
+    "exists": true,
+    "ok": true,
+    "opened_readonly": true,
+    "path": "/home/nic/identity-vault/data/identity_vault.db",
+    "row_counts": {
+      "agent_profiles": 0,
+      "audit_logs": 0,
+      "feedback_logs": 0,
+      "session_state": 0,
+      "sqlite_sequence": 0,
+      "user_profiles": 0
+    },
+    "tables": [
+      "agent_profiles",
+      "audit_logs",
+      "feedback_logs",
+      "session_state",
+      "sqlite_sequence",
+      "user_profiles"
+    ]
+  },
+  "files_changed": [
+    "db.js",
+    "tests/db.canonical.test.js"
+  ],
+  "findings": [
+    [
+      "INFO",
+      "IV_LEGACY_RUNTIME_DB_REFS_CLEARED",
+      "No root-level legacy vault.db references remain in targeted JS runtime/test files."
+    ],
+    [
+      "INFO",
+      "IV_NODE_SYNTAX_OK",
+      "All targeted JS files pass node --check."
+    ],
+    [
+      "INFO",
+      "IV_PROTECTED_SNAPSHOTS_UNCHANGED",
+      ".env, canonical DB, legacy DB, and draft contract hashes/stat metadata remained unchanged."
+    ],
+    [
+      "INFO",
+      "IV_CANONICAL_DB_READONLY_OK",
+      "Canonical DB opens read-only after reconciliation."
+    ],
+    [
+      "INFO",
+      "IV_OPTIONAL_FOCUSED_JEST_OK",
+      "Focused canonical DB Jest test passed."
+    ]
+  ],
+  "legacy_db_summary": {
+    "exists": true,
+    "ok": true,
+    "opened_readonly": true,
+    "path": "/home/nic/identity-vault/vault.db",
+    "row_counts": {
+      "feedback_logs": 0,
+      "profiles": 1,
+      "session_state": 1,
+      "sqlite_sequence": 0
+    },
+    "tables": [
+      "feedback_logs",
+      "profiles",
+      "session_state",
+      "sqlite_sequence"
+    ]
+  },
+  "legacy_ref_count_after": 0,
+  "legacy_ref_count_before": 3,
+  "legacy_refs_after": {},
+  "legacy_refs_before": {
+    "db.js": [
+      {
+        "line": 50,
+        "snippet": "// Init DB: Safe, local file-based (vault.db in project root, gitignore'd)"
+      }
+    ],
+    "tests/db.canonical.test.js": [
+      {
+        "line": 3,
+        "snippet": "// This test is static on purpose: it proves code defaults do not fall back to root vault.db."
+      },
+      {
+        "line": 22,
+        "snippet": "test('db.js does not directly default to root-level vault.db', () => {"
+      }
+    ]
+  },
+  "next_safe_step": "If this passes, create the five AI.Web service contract draft files under /home/nic/aiweb/service_contracts/ and verify them before adding Forge read-only connector commands.",
+  "no_mutation": {
+    "agent_identity_activation_performed": false,
+    "canonical_db_sha_unchanged": true,
+    "contract_sha_unchanged": true,
+    "database_write_performed": false,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "forge_tool_registry_modified": false,
+    "legacy_db_sha_unchanged": true
+  },
+  "optional_focused_jest": {
+    "cmd": [
+      "npx",
+      "jest",
+      "tests/db.canonical.test.js",
+      "--runInBand",
+      "--silent"
+    ],
+    "ok": true,
+    "returncode": 0,
+    "stderr_tail": "[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`\nPASS tests/db.canonical.test.js\n\nTest Suites: 1 passed, 1 total\nTests:       2 passed, 2 total\nSnapshots:   0 total\nTime:        0.202 s, estimated 1 s\n",
+    "stdout_tail": ""
+  },
+  "protected_after": {
+    ".env": {
+      "exists": true,
+      "mode": "0o664",
+      "sha256": "cf889320efcfdfa308b810d435219af658dc1ff33bb4f9229a8d9c33ca8dc2f2",
+      "size": 1605
+    },
+    "canonical_db": {
+      "exists": true,
+      "mode": "0o644",
+      "sha256": "d185eb83a37a9be907ff6525deb241778772fbc7fcc51794efc4c94ab6ecf32f",
+      "size": 57344
+    },
+    "contract": {
+      "exists": true,
+      "mode": "0o664",
+      "sha256": "2e1573ae148f68ea3d2035c9d5f99d633251f070f7e212e13cbde3e563343189",
+      "size": 1922
+    },
+    "legacy_db": {
+      "exists": true,
+      "mode": "0o644",
+      "sha256": "1bfcaca815f7149d32b30e261c20d0679d7182191fe55cfa63ce830c287d87b9",
+      "size": 36864
+    }
+  },
+  "protected_before": {
+    ".env": {
+      "exists": true,
+      "mode": "0o664",
+      "sha256": "cf889320efcfdfa308b810d435219af658dc1ff33bb4f9229a8d9c33ca8dc2f2",
+      "size": 1605
+    },
+    "canonical_db": {
+      "exists": true,
+      "mode": "0o644",
+      "sha256": "d185eb83a37a9be907ff6525deb241778772fbc7fcc51794efc4c94ab6ecf32f",
+      "size": 57344
+    },
+    "contract": {
+      "exists": true,
+      "mode": "0o664",
+      "sha256": "2e1573ae148f68ea3d2035c9d5f99d633251f070f7e212e13cbde3e563343189",
+      "size": 1922
+    },
+    "legacy_db": {
+      "exists": true,
+      "mode": "0o644",
+      "sha256": "1bfcaca815f7149d32b30e261c20d0679d7182191fe55cfa63ce830c287d87b9",
+      "size": 36864
+    }
+  },
+  "syntax_checks": {
+    "cli.js": {
+      "cmd": [
+        "node",
+        "--check",
+        "/home/nic/identity-vault/cli.js"
+      ],
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    "db.js": {
+      "cmd": [
+        "node",
+        "--check",
+        "/home/nic/identity-vault/db.js"
+      ],
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    "scripts/init-database.js": {
+      "cmd": [
+        "node",
+        "--check",
+        "/home/nic/identity-vault/scripts/init-database.js"
+      ],
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    "scripts/reset-database.js": {
+      "cmd": [
+        "node",
+        "--check",
+        "/home/nic/identity-vault/scripts/reset-database.js"
+      ],
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    "server.js": {
+      "cmd": [
+        "node",
+        "--check",
+        "/home/nic/identity-vault/server.js"
+      ],
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    "tests/db.canonical.test.js": {
+      "cmd": [
+        "node",
+        "--check",
+        "/home/nic/identity-vault/tests/db.canonical.test.js"
+      ],
+      "ok": true,
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    }
+  },
+  "timestamp": "20260523_200355_UTC",
+  "verdict": "PASS"
+}

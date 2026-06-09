@@ -1,0 +1,19 @@
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T10:24:01",
+  "next_commands": [
+    "generic-repair-candidate-show diff",
+    "generic-repair-candidate-export",
+    "Install Patch 137 when ready"
+  ],
+  "next_phase": "GENERIC_REPAIR_SANDBOX_CANDIDATE",
+  "plain_english": "A Forge-memory-only repair candidate has been built and verified. The next lawful move is sandboxing the candidate, not live apply.",
+  "recommended_next_patch": "Patch 137 \u2014 Generic Repair Sandbox Candidate",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "schema_version": "forge_next_status_v1_patch136",
+  "status": "NEXT_PATCH_REQUIRED"
+}

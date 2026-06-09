@@ -1,0 +1,20 @@
+{
+  "approval": "CAPTURE_AND_QUEUE_RMC_DATASET_CANDIDATE",
+  "candidate_id": "rmccand_16bc1265a11261c141",
+  "canonical_reference_files_touched": [],
+  "canonical_reference_write_allowed": false,
+  "created_at_utc": "2026-05-25T19:27:38+00:00",
+  "engine_version": "rmc_dataset_growth_v1_patch262J1R_preflight_B5",
+  "extra_context_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "growth_paths": {
+    "candidate_example": "/home/nic/forge/memory/rmc_dataset_v1/candidate_examples/20260525/rmccand_16bc1265a11261c141.json",
+    "index": "/home/nic/forge/memory/rmc_dataset_v1/indexes/events_index.jsonl",
+    "raw_event": "/home/nic/forge/memory/rmc_dataset_v1/raw_events/20260525/rmcobs_64a5833d4272772a88.json",
+    "receipt": "/home/nic/forge/memory/rmc_dataset_v1/dataset_receipts/20260525/rmcobs_64a5833d4272772a88_receipt.json",
+    "review_queue": "/home/nic/forge/memory/rmc_dataset_v1/review_queue/20260525/rmccand_16bc1265a11261c141_review.json"
+  },
+  "observation_id": "rmcobs_64a5833d4272772a88",
+  "queue_candidate": true,
+  "record_type": "rmc_dataset_capture_receipt_v1",
+  "source_input_sha256": "c4ff986ebb3e95211ccacfdfc98f77a2b38b1f1cf926b0de6b81354f544e587e"
+}

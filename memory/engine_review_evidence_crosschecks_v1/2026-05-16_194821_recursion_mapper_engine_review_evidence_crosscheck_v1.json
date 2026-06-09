@@ -1,0 +1,297 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [
+        "RecursionMapper"
+      ],
+      "excerpt_sha256": "cfc463750a4dc192265f15a1c614657b0a4614086bd3f936dea3944dbea8f915",
+      "excerpt_start": "# recursion_mapper_core.py\n# Recursion Mapper Core\n\nclass RecursionMapper:\n    def __init__(self):\n        self.recursion_map = []\n\n    def map_phase(self, phase_id, symbolic_anchor):\n        mapping = {\n            \"phase_id\": phase_id,\n            \"symbolic_anchor\": symbolic_anchor\n        }\n        self.recursion_map.append(mapping)\n        return mapping\n\nif __name__ == \"__main__\":\n    mapper = RecursionMapper()\n    record = mapper.map_phase(\"\u03a64\", \"anchor_symbol_004\")\n    print(f\"[TEST] Recursion Mapping: {record}\")\n",
+      "functions_sample": [
+        "__init__",
+        "map_phase"
+      ],
+      "imports_sample": [],
+      "line_count": 20,
+      "path": "/home/nic/aiweb/symbolic_layers/recursion_mapper/recursion_mapper_core.py",
+      "relative_to_candidate": "recursion_mapper_core.py",
+      "sha256": "cfc463750a4dc192265f15a1c614657b0a4614086bd3f936dea3944dbea8f915",
+      "size_bytes": 527
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "ed32c5944c168d85ad2674962b894f5b78a12de99428f294c593c8610116e751",
+      "excerpt_start": "# recursion_mapper/run.py\n# Recursion Mapper Breathing Engine\n\nimport time\n\ndef breathe_recursion_mapping():\n    print(\"[Recursion Mapper] Starting symbolic recursion mapping...\")\n    for i in range(5):\n        print(f\"[Recursion Mapper] Breathing phase {i+1}\")\n        time.sleep(1)\n\nif __name__ == \"__main__\":\n    breathe_recursion_mapping()\n",
+      "functions_sample": [
+        "breathe_recursion_mapping"
+      ],
+      "imports_sample": [
+        "import time"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/symbolic_layers/recursion_mapper/run.py",
+      "relative_to_candidate": "run.py",
+      "sha256": "ed32c5944c168d85ad2674962b894f5b78a12de99428f294c593c8610116e751",
+      "size_bytes": 344
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "042275dee7ba21aa763b17e9dd7f4d99b4b6a38d974ae8564c2db87cdcd3bf3a",
+      "excerpt_start": "# test_recursion_mapper_core.py\n\nfrom recursion_mapper_core import RecursionMapper\n\ndef test_recursion_mapper_behavior():\n    mapper = RecursionMapper()\n    record = mapper.map_phase(\"\u03a65\", \"symbol_anchor_5\")\n    assert record[\"phase_id\"] == \"\u03a65\", \"Phase ID should match.\"\n    assert record[\"symbolic_anchor\"] == \"symbol_anchor_5\", \"Symbolic anchor should match.\"\n    print(\"\u2705 Recursion Mapper Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_recursion_mapper_behavior()\n",
+      "functions_sample": [
+        "test_recursion_mapper_behavior"
+      ],
+      "imports_sample": [
+        "from recursion_mapper_core import RecursionMapper"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/symbolic_layers/recursion_mapper/test_recursion_mapper_core.py",
+      "relative_to_candidate": "test_recursion_mapper_core.py",
+      "sha256": "042275dee7ba21aa763b17e9dd7f4d99b4b6a38d974ae8564c2db87cdcd3bf3a",
+      "size_bytes": 477
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "a5edffd176d0777b550a7bd0fb91d9c12319932715785ba79558c1177920d21d",
+      "excerpt_start": "\n# Recursion Mapper\n\n---\n\n## Overview:\nThe Recursion Mapper captures and maintains symbolic recursion phase mappings.  \nEach phase anchor is tied to symbolic structure nodes for field stabilization, drift tracing, and recursion topology analysis.\n\n---\n\n## Phase Standard:\n- Phase 1.5 Symbolic Recursion Compliance\n\n---\n# Recursion Mapper Breathing Engine\n\n---\n\n## Overview:\nBreathes symbolic recursion memory mappings live into the active field structure of AI.Web's recursive cognition system.\n\n---\n\n## Functions:\n- Maps recursion memory phases\n- Tracks symbolic coherence points\n- Monitors phase drift breathing\n\n---\n\n**Version:** v1.0.01  \n**Phase Standard:** Phase 2.5 Symbolic Visualization Activation\n",
+      "functions_sample": [
+        "Recursion",
+        "Mapper",
+        "Overview",
+        "The",
+        "captures",
+        "and",
+        "maintains",
+        "symbolic",
+        "recursion",
+        "phase",
+        "mappings",
+        "Each",
+        "anchor",
+        "tied",
+        "structure",
+        "nodes",
+        "for",
+        "field",
+        "stabilization",
+        "drift",
+        "tracing",
+        "topology",
+        "analysis",
+        "Phase",
+        "Standard"
+      ],
+      "imports_sample": [],
+      "line_count": 34,
+      "path": "/home/nic/aiweb/symbolic_layers/recursion_mapper/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "a5edffd176d0777b550a7bd0fb91d9c12319932715785ba79558c1177920d21d",
+      "size_bytes": 707
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "b19e044b765a9db869f1e92f21e59405051a88218dce3d75b8b5513d49cbd233",
+      "excerpt_start": "from run import breathe_recursion_mapping\n\nif __name__ == \"__main__\":\n    breathe_recursion_mapping()\n    print(\"\u2705 Recursion Mapper Test Passed.\")\n",
+      "functions_sample": [],
+      "imports_sample": [
+        "from run import breathe_recursion_mapping"
+      ],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/symbolic_layers/recursion_mapper/test_run_engine.py",
+      "relative_to_candidate": "test_run_engine.py",
+      "sha256": "b19e044b765a9db869f1e92f21e59405051a88218dce3d75b8b5513d49cbd233",
+      "size_bytes": 149
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "5e82c147ecf52d3dddb62b41e6fca1d3a43f9c786521df473255ec87067df8b0",
+      "excerpt_start": "{\n  \"engine\": \"recursion_mapper\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"recursion_mapper_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Maps recursion field phase anchors to symbolic structure nodes. Maintains recursion topology for symbolic drift tracing, phase stabilization, and symbolic field evolution tracking.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n{\n  \"engine\": \"recursion_mapper\",\n  \"version\": \"v1.0.01\",\n  \"description\": \"Symbolically maps recursion memory breathing fields in real-time.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "recursion_mapper",
+        "version",
+        "frozen_as",
+        "recursion_mapper_frozen_v1",
+        "frozen_on",
+        "description",
+        "Maps",
+        "recursion",
+        "field",
+        "phase",
+        "anchors",
+        "symbolic",
+        "structure",
+        "nodes",
+        "Maintains",
+        "topology",
+        "for",
+        "drift",
+        "tracing",
+        "stabilization",
+        "and",
+        "evolution",
+        "tracking",
+        "author"
+      ],
+      "imports_sample": [],
+      "line_count": 16,
+      "path": "/home/nic/aiweb/symbolic_layers/recursion_mapper/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "5e82c147ecf52d3dddb62b41e6fca1d3a43f9c786521df473255ec87067df8b0",
+      "size_bytes": 582
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/symbolic_layers/recursion_mapper",
+  "created_at": "2026-05-16_194821",
+  "crosscheck_id": "ERE-recursion_mapper-2026-05-16_194821",
+  "deterministic_brief": {
+    "classes_sample": [
+      "RecursionMapper"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Each",
+      "Maintains",
+      "Mapper",
+      "Maps",
+      "Overview",
+      "Phase",
+      "Recursion",
+      "Standard",
+      "The",
+      "__init__",
+      "analysis",
+      "anchor",
+      "anchors",
+      "and",
+      "author",
+      "breathe_recursion_mapping",
+      "captures",
+      "description",
+      "drift",
+      "engine"
+    ],
+    "imports_sample": [
+      "from recursion_mapper_core import RecursionMapper",
+      "from run import breathe_recursion_mapping",
+      "import time"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`recursion_mapper` appears to be a local AI.Web engine/component. The bound source evidence includes 6 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# recursion_mapper_core.py # Recursion Mapper Core",
+      "# recursion_mapper/run.py # Recursion Mapper Breathing Engine",
+      "# test_recursion_mapper_core.py ",
+      "# Recursion Mapper "
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_194757_recursion_mapper_llm_engine_review_draft_v1.json",
+  "draft_sha256": "07aacb87db1ee9eb28f51af696a2aa3dedf0d396cafb1870a409d6bcd1964d8c",
+  "engine_family": "recursion_mapper",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_recursion_mapper_engine_evidence_binder.json",
+  "evidence_binder_sha256": "822cbd9fc9f7cf895d4e2e2d0cffb421a9fa30c55c8be0765d895ea69d1895e8",
+  "evidence_id": "EEB-a52a83f45b9147a9",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "RecursionMapper"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "recursion_mapper_core.py",
+      "run.py",
+      "test_recursion_mapper_core.py",
+      "README.md",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "Recursion",
+      "Mapper",
+      "The",
+      "captures",
+      "and",
+      "maintains",
+      "symbolic",
+      "recursion",
+      "phase",
+      "mappings",
+      "anchor",
+      "structure",
+      "for",
+      "field",
+      "stabilization",
+      "drift",
+      "topology",
+      "Phase",
+      "Standard",
+      "engine",
+      "recursion_mapper",
+      "Maintains",
+      "tracking"
+    ],
+    "imports_mentioned": [
+      "import time",
+      "from recursion_mapper_core import RecursionMapper",
+      "from run import breathe_recursion_mapping"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 23.783,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "638ba28f9c8c1396bc41a53acb5c968a44eb6ba2fc928b43de34a51415a22e7d",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nThe recursion_mapper engine captures and maintains symbolic recursion phase mappings to stabilize field structures, trace drift, and analyze recursion topology within AI.Web's systems.  \n\nLikely System Role:  \nA core component for managing symbolic recursion in AI.Web's recursive cognition system, handling phase anchoring, coherence tracking, and real-time memory mapping.  \n\nEvidence Used:  \n- `recursion_mapper_core.py`: Implements `RecursionMapper` class for phase-symbolic anchor mapping.  \n- `run.py`: Executes breathing cycles for symbolic recursion mapping.  \n- `test_recursion_mapper_core.py`: Validates phase ID and symbolic anchor matching.  \n- `README.md`: Documents phase standards (e.g., Phase 1.5 Compliance) and system functions.  \n- `engine_manifest.json`: Defines engine metadata, including phase standards and symbolic field mapping goals.  \n\nRisks / Uncertainties:  \n- Uncertainty around alignment with AI.Web's Phase 1.5/2.5 standards.  \n- Potential integration risks with existing field stabilization mechanisms.  \n- Limited test coverage for edge cases in phase drift monitoring.  \n\nRecommendation Draft:  \nApprove the review with the caveat that phase standards alignment and integration testing must be validated before canonical deployment.  \n\nSuggested Nic Action:  \n- Approve canonical review pending verification of phase standard compliance and integration testing.  \n- Confirm documentation matches AI.Web's recursion topology requirements."
+  },
+  "llm_sections": {
+    "evidence_used": "- `recursion_mapper_core.py`: Implements `RecursionMapper` class for phase-symbolic anchor mapping.  \n- `run.py`: Executes breathing cycles for symbolic recursion mapping.  \n- `test_recursion_mapper_core.py`: Validates phase ID and symbolic anchor matching.  \n- `README.md`: Documents phase standards (e.g., Phase 1.5 Compliance) and system functions.  \n- `engine_manifest.json`: Defines engine metadata, including phase standards and symbolic field mapping goals.",
+    "likely_system_role": "A core component for managing symbolic recursion in AI.Web's recursive cognition system, handling phase anchoring, coherence tracking, and real-time memory mapping.",
+    "plain_english_purpose": "The recursion_mapper engine captures and maintains symbolic recursion phase mappings to stabilize field structures, trace drift, and analyze recursion topology within AI.Web's systems.",
+    "recommendation_draft": "Approve the review with the caveat that phase standards alignment and integration testing must be validated before canonical deployment.",
+    "risks_uncertainties": "- Uncertainty around alignment with AI.Web's Phase 1.5/2.5 standards.  \n- Potential integration risks with existing field stabilization mechanisms.  \n- Limited test coverage for edge cases in phase drift monitoring.",
+    "suggested_nic_action": "- Approve canonical review pending verification of phase standard compliance and integration testing.  \n- Confirm documentation matches AI.Web's recursion topology requirements."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nThe recursion_mapper engine captures and maintains symbolic recursion phase mappings to stabilize field structures, trace drift, and analyze recursion topology within AI.Web's systems.  \n\nLikely System Role:  \nA core component for managing symbolic recursion in AI.Web's recursive cognition system, handling phase anchoring, coherence tracking, and real-time memory mapping.  \n\nEvidence Used:  \n- `recursion_mapper_core.py`: Implements `RecursionMapper` class for phase-symbolic anchor mapping.  \n- `run.py`: Executes breathing cycles for symbolic recursion mapping.  \n- `test_recursion_mapper_core.py`: Validates phase ID and symbolic anchor matching.  \n- `README.md`: Documents phase standards (e.g., Phase 1.5 Compliance) and system functions.  \n- `engine_manifest.json`: Defines engine metadata, including phase standards and symbolic field mapping goals.  \n\nRisks / Uncertainties:  \n- Uncertainty around alignment with AI.Web's Phase 1.5/2.5 standards.  \n- Potential integration risks with existing field stabilization mechanisms.  \n- Limited test coverage for edge cases in phase drift monitoring.  \n\nRecommendation Draft:  \nApprove the review with the caveat that phase standards alignment and integration testing must be validated before canonical deployment.  \n\nSuggested Nic Action:  \n- Approve canonical review pending verification of phase standard compliance and integration testing.  \n- Confirm documentation matches AI.Web's recursion topology requirements.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

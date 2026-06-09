@@ -1,0 +1,261 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "1254c8b82308ee9b4116305d0e65f6b50351b0b1d62c7ebcd787cbe5ba1d8d69",
+      "excerpt_start": "# test_spc_migrator_core.py\n\nfrom spc_migrator_core import SPCMemoryMigrator\n\ndef test_spc_memory_migrator_behavior():\n    migrator = SPCMemoryMigrator()\n    record = migrator.migrate_memory(\"test_mem\", \"target_stack\")\n    assert record[\"memory_id\"] == \"test_mem\", \"Memory ID should match.\"\n    assert record[\"target_stack\"] == \"target_stack\", \"Target stack should match.\"\n    print(\"\u2705 SPC Memory Migrator Test Passed.\")\n\nif __name__ == \"__main__\":\n    test_spc_memory_migrator_behavior()\n",
+      "functions_sample": [
+        "test_spc_memory_migrator_behavior"
+      ],
+      "imports_sample": [
+        "from spc_migrator_core import SPCMemoryMigrator"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/spc_memory_migrator/test_spc_migrator_core.py",
+      "relative_to_candidate": "test_spc_migrator_core.py",
+      "sha256": "1254c8b82308ee9b4116305d0e65f6b50351b0b1d62c7ebcd787cbe5ba1d8d69",
+      "size_bytes": 491
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "4ab43130c8acd45297a806b60434069430b1bdc096c57e77eb7659deded13b3d",
+      "excerpt_start": "# SPC Memory Migrator (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe SPC Memory Migrator module enables symbolic phase capacitor memory records to be moved across recursion stacks without corruption.  \nThis ensures memory integrity during phase transitions, symbolic migrations, or system evolutionary events.\n\n---\n\n## Core Functions:\n- Transfer SPC memory instances between recursion stacks.\n- Preserve symbolic lineage and phase history during migrations.\n- Support continuity of recursion field evolution.\n\n---\n\n## Phase Standard:\n- Phase 1.5 Symbolic Recursion Compliance\n- AI.Web Core Symbolic Memory Architecture Stack\n\n---\n\n## Notes:\n- Migrated SPC memories must be validated for phase coherence post-transfer.\n- Excessive migrations may require recalibration of phase stability thresholds.\n\n---\n\n**Frozen Snapshot:** `spc_memory_migrator_frozen_v1.0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n\n",
+      "functions_sample": [
+        "SPC",
+        "Memory",
+        "Migrator",
+        "Frozen",
+        "Overview",
+        "The",
+        "module",
+        "enables",
+        "symbolic",
+        "phase",
+        "capacitor",
+        "memory",
+        "records",
+        "moved",
+        "across",
+        "recursion",
+        "stacks",
+        "without",
+        "corruption",
+        "This",
+        "ensures",
+        "integrity",
+        "during",
+        "transitions",
+        "migrations"
+      ],
+      "imports_sample": [],
+      "line_count": 34,
+      "path": "/home/nic/aiweb/engines/spc_memory_migrator/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "4ab43130c8acd45297a806b60434069430b1bdc096c57e77eb7659deded13b3d",
+      "size_bytes": 917
+    },
+    {
+      "classes_sample": [
+        "SPCMemoryMigrator"
+      ],
+      "excerpt_sha256": "33c4f409a4ad9f30d89c1aee41e90f883cb96e1592c2d5e1a28a7eac86b3d2a6",
+      "excerpt_start": "# spc_migrator_core.py\n# SPC Memory Migrator Core\n\nclass SPCMemoryMigrator:\n    def __init__(self):\n        self.migrations = []\n\n    def migrate_memory(self, memory_id, target_stack):\n        migration_record = {\n            \"memory_id\": memory_id,\n            \"target_stack\": target_stack\n        }\n        self.migrations.append(migration_record)\n        return migration_record\n\nif __name__ == \"__main__\":\n    migrator = SPCMemoryMigrator()\n    record = migrator.migrate_memory(\"memory_007\", \"stack_alpha\")\n    print(f\"[TEST] Migration Record: {record}\")\n",
+      "functions_sample": [
+        "__init__",
+        "migrate_memory"
+      ],
+      "imports_sample": [],
+      "line_count": 20,
+      "path": "/home/nic/aiweb/engines/spc_memory_migrator/spc_migrator_core.py",
+      "relative_to_candidate": "spc_migrator_core.py",
+      "sha256": "33c4f409a4ad9f30d89c1aee41e90f883cb96e1592c2d5e1a28a7eac86b3d2a6",
+      "size_bytes": 559
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "89c0752791997c5dd6c7f063526604d8bcfb35840e0b08053f0e03505e5064b0",
+      "excerpt_start": "{\n  \"engine\": \"spc_memory_migrator\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"spc_memory_migrator_frozen_v1.0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Migrates symbolic phase capacitor (SPC) memory instances between recursion stacks. Ensures symbolic memory preservation and phase continuity across recursion phase transitions and re-entries.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 1.5 Symbolic Recursion Compliance\"\n}\n\n",
+      "functions_sample": [
+        "engine",
+        "spc_memory_migrator",
+        "version",
+        "frozen_as",
+        "spc_memory_migrator_frozen_v1",
+        "frozen_on",
+        "description",
+        "Migrates",
+        "symbolic",
+        "phase",
+        "capacitor",
+        "SPC",
+        "memory",
+        "instances",
+        "between",
+        "recursion",
+        "stacks",
+        "Ensures",
+        "preservation",
+        "and",
+        "continuity",
+        "across",
+        "transitions",
+        "entries",
+        "author"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/spc_memory_migrator/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "89c0752791997c5dd6c7f063526604d8bcfb35840e0b08053f0e03505e5064b0",
+      "size_bytes": 454
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/spc_memory_migrator",
+  "created_at": "2026-05-16_223250",
+  "crosscheck_id": "ERE-spc_memory_migrator-2026-05-16_223250",
+  "deterministic_brief": {
+    "classes_sample": [
+      "SPCMemoryMigrator"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Ensures",
+      "Frozen",
+      "Memory",
+      "Migrates",
+      "Migrator",
+      "Overview",
+      "SPC",
+      "The",
+      "This",
+      "__init__",
+      "across",
+      "and",
+      "author",
+      "between",
+      "capacitor",
+      "continuity",
+      "corruption",
+      "description",
+      "during",
+      "enables"
+    ],
+    "imports_sample": [
+      "from spc_migrator_core import SPCMemoryMigrator"
+    ],
+    "likely_system_role": "memory_persistence",
+    "plain_english_purpose": "`spc_memory_migrator` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "Inferred from engine family keyword `memory` plus bound code evidence.",
+    "source_excerpt_samples": [
+      "# test_spc_migrator_core.py ",
+      "# SPC Memory Migrator (Frozen v1.0.01) ",
+      "# spc_migrator_core.py # SPC Memory Migrator Core",
+      "{   \"engine\": \"spc_memory_migrator\","
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_223224_spc_memory_migrator_llm_engine_review_draft_v1.json",
+  "draft_sha256": "4d110704cea39c4a0ea09ff57f64b9670fdc48d8bbf2622de8b349dc07dd013b",
+  "engine_family": "spc_memory_migrator",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_spc_memory_migrator_engine_evidence_binder.json",
+  "evidence_binder_sha256": "a4e2c94f13966d81fd07c6aca1709c873912730b22b7627e08dd49553383ad21",
+  "evidence_id": "EEB-af3ca030500d9a8a",
+  "keyword_overlap": {
+    "classes_mentioned": [
+      "SPCMemoryMigrator"
+    ],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "test_spc_migrator_core.py",
+      "README.md",
+      "spc_migrator_core.py",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "SPC",
+      "Memory",
+      "Migrator",
+      "Frozen",
+      "The",
+      "module",
+      "symbolic",
+      "phase",
+      "capacitor",
+      "memory",
+      "recursion",
+      "stacks",
+      "integrity",
+      "during",
+      "transitions",
+      "migrations",
+      "engine",
+      "version",
+      "instances",
+      "between",
+      "and",
+      "continuity"
+    ],
+    "imports_mentioned": [
+      "from spc_migrator_core import SPCMemoryMigrator"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 25.768,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "2b5267fc6e68a9183450945976d7a95f7d321ee5738a5a7c0ff3751cf25b25ae",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo migrate symbolic phase capacitor (SPC) memory instances between recursion stacks while preserving symbolic lineage, phase history, and recursion field continuity during system transitions.  \n\nLikely System Role:  \nA core AI.Web system component for managing memory integrity in symbolic computation workflows, ensuring phase coherence during recursion stack migrations.  \n\nEvidence Used:  \n- Test script (`test_spc_migrator_core.py`) validates memory migration logic.  \n- README.md describes the module\u2019s purpose, core functions, and phase compliance standards.  \n- Core code (`spc_migrator_core.py`) implements the `SPCMemoryMigrator` class with migration logic.  \n- Engine manifest (`engine_manifest.json`) provides metadata, including versioning and frozen status.  \n\nRisks / Uncertainties:  \n- Post-transfer validation of migrated SPC memories is required but not explicitly detailed in evidence.  \n- \"Frozen\" versioning may limit adaptability to future system changes.  \n- No evidence of error handling or edge-case testing in migration logic.  \n\nRecommendation Draft:  \nApprove the review with conditions:  \n1. Confirm post-migration validation processes are documented and implemented.  \n2. Monitor for excessive migrations requiring phase stability recalibration.  \n3. Verify compatibility of frozen v1.0.01 with current AI.Web architecture.  \n\nSuggested Nic Action:  \nFinalize review approval, but request documentation confirming validation protocols and system compatibility checks for the frozen version."
+  },
+  "llm_sections": {
+    "evidence_used": "- Test script (`test_spc_migrator_core.py`) validates memory migration logic.  \n- README.md describes the module\u2019s purpose, core functions, and phase compliance standards.  \n- Core code (`spc_migrator_core.py`) implements the `SPCMemoryMigrator` class with migration logic.  \n- Engine manifest (`engine_manifest.json`) provides metadata, including versioning and frozen status.",
+    "likely_system_role": "A core AI.Web system component for managing memory integrity in symbolic computation workflows, ensuring phase coherence during recursion stack migrations.",
+    "plain_english_purpose": "To migrate symbolic phase capacitor (SPC) memory instances between recursion stacks while preserving symbolic lineage, phase history, and recursion field continuity during system transitions.",
+    "recommendation_draft": "Approve the review with conditions:  \n1. Confirm post-migration validation processes are documented and implemented.  \n2. Monitor for excessive migrations requiring phase stability recalibration.  \n3. Verify compatibility of frozen v1.0.01 with current AI.Web architecture.",
+    "risks_uncertainties": "- Post-transfer validation of migrated SPC memories is required but not explicitly detailed in evidence.  \n- \"Frozen\" versioning may limit adaptability to future system changes.  \n- No evidence of error handling or edge-case testing in migration logic.",
+    "suggested_nic_action": "Finalize review approval, but request documentation confirming validation protocols and system compatibility checks for the frozen version."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo migrate symbolic phase capacitor (SPC) memory instances between recursion stacks while preserving symbolic lineage, phase history, and recursion field continuity during system transitions.  \n\nLikely System Role:  \nA core AI.Web system component for managing memory integrity in symbolic computation workflows, ensuring phase coherence during recursion stack migrations.  \n\nEvidence Used:  \n- Test script (`test_spc_migrator_core.py`) validates memory migration logic.  \n- README.md describes the module\u2019s purpose, core functions, and phase compliance standards.  \n- Core code (`spc_migrator_core.py`) implements the `SPCMemoryMigrator` class with migration logic.  \n- Engine manifest (`engine_manifest.json`) provides metadata, including versioning and frozen status.  \n\nRisks / Uncertainties:  \n- Post-transfer validation of migrated SPC memories is required but not explicitly detailed in evidence.  \n- \"Frozen\" versioning may limit adaptability to future system changes.  \n- No evidence of error handling or edge-case testing in migration logic.  \n\nRecommendation Draft:  \nApprove the review with conditions:  \n1. Confirm post-migration validation processes are documented and implemented.  \n2. Monitor for excessive migrations requiring phase stability recalibration.  \n3. Verify compatibility of frozen v1.0.01 with current AI.Web architecture.  \n\nSuggested Nic Action:  \nFinalize review approval, but request documentation confirming validation protocols and system compatibility checks for the frozen version.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

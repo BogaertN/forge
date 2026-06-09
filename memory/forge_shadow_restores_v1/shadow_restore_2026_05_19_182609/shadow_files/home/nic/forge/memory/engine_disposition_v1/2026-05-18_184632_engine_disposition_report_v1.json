@@ -1,0 +1,644 @@
+{
+  "schema_version": "engine_disposition_report_v1_patch117",
+  "report_type": "ENGINE_DISPOSITION_REPORT_V1",
+  "created_at": "2026-05-18T18:46:32",
+  "status": "ENGINE_DISPOSITION_REPORT_READY",
+  "purpose": "Classify final-lockfile excluded/deferred engines after canonical engine review closure.",
+  "authority": {
+    "mode": "READ_ONLY_DISPOSITION_REPORT_ONLY",
+    "writes": [
+      "/home/nic/forge/memory/engine_disposition_v1"
+    ],
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "final_lockfile_write_authority": false,
+    "quarantine_authority": false,
+    "delete_authority": false,
+    "chroma_write_authority": false,
+    "shell_execution_authority": false,
+    "llm_autonomous_decision_authority": false
+  },
+  "source_final_lockfile": {
+    "path": "/home/nic/forge/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+    "sha256": "b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab",
+    "canonical_authority": true,
+    "actual_lockfile_written": true,
+    "included_count": 55,
+    "excluded_count": 25
+  },
+  "source_ledger": {
+    "path": "/home/nic/forge/memory/code_library_v1/manifests/engine_review_ledger_v1.json",
+    "sha256": "2b3f8607ccca69ebcb1aa91260bc00dd4cbaded0c8e935dcd3968e827ba23e58",
+    "entries": 80
+  },
+  "counts": {
+    "excluded_total": 25,
+    "by_bucket": {
+      "authority_or_external_control_deferred": 3,
+      "runtime_wrapper_or_stack_deferred": 6,
+      "deferred_hold_family": 6,
+      "general_deferred_review": 3,
+      "approved_hold_family_excluded": 2,
+      "memory_archive_or_state_deferred": 2,
+      "agent_identity_deferred": 3
+    },
+    "by_review_status": {
+      "DEFERRED": 23,
+      "APPROVED": 2
+    },
+    "approved_hold_excluded": 2,
+    "deferred_total": 23,
+    "safe_to_delete_now": 0,
+    "safe_to_quarantine_now": 0,
+    "safe_to_promote_now": 0
+  },
+  "next_phase": "FORGE_MASTER_STATUS_REPORT",
+  "recommended_next_patch": "Patch 118 — Forge Master Status Report",
+  "next_commands": [
+    "engine-disposition-show latest",
+    "engine-disposition-export",
+    "forge-next",
+    "Install Patch 118 when ready"
+  ],
+  "rows": [
+    {
+      "index": 1,
+      "engine_base": "admin_override_console",
+      "recommended_keep_path": "aiweb/engines/admin_override_console",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "review_status_deferred",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "authority_or_external_control_deferred",
+      "bucket_reason": "Authority, external input, or goal-injection surface deferred because misuse could affect system behavior.",
+      "recommended_next_action": "Require stricter permission, trust-guard, and input-boundary review before future promotion.",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch104 evidence commit from Patch103 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-7e1e67cf08853d05; decision_sha=d727a461aea9b54abac95a44bd99e52016275a3165ba950ae9d8c2c01a34ba9e; binder_sha=216bf8587e441a40305be77b174b4a945efdec163c933067d6fd44dc5bcb354b; crosscheck_sha=dfd7ee9597f01c4968a7329178f8a0b9047cb4e919d35d493bfebb285874287c.",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 2,
+      "engine_base": "agents_stack",
+      "recommended_keep_path": "aiweb/runtime_wrappers/agents_stack",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "draft_decision": "DRAFT_KEEP_ACTIVE_PRIMARY_OVER_FROZEN_CANDIDATE",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "runtime_wrapper_or_stack_deferred",
+      "bucket_reason": "Wrapper/stack layer deferred because it may depend on multiple engines, imports, or runtime ordering.",
+      "recommended_next_action": "Map dependencies and test wrapper startup before any future promotion.",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "verify_active_primary_supersedes_frozen_candidate",
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-e7eb75087380b7b6; batch_receipt_sha=1259c4a4345a78b45a7b1432c9d9c3e6051d023584167703c26e68b30c411013; queue_decision_sha=6ad220e3e10ff4aeba1675eb8f07d1b6311991ca9e604c2f9cb99d4ae94c9937; approval_helper_sha=91cae716fe286ad90f1987be4d2ee5de1fa74799be23210b60ca3e160e33cfba; binder_sha=03de35cf02a987df13447f5dce8cabecf8143df1cdcbe6ed1e2b347e07085256; crosscheck_sha=49db6076bd1c890d6c40c79",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 3,
+      "engine_base": "aiweb_os",
+      "recommended_keep_path": "aiweb/runtime_wrappers/aiweb_os_v1",
+      "review_status": "DEFERRED",
+      "is_hold_family": true,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred by human review",
+      "draft_decision": "HOLD_TEST_ONLY_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "deferred_hold_family",
+      "bucket_reason": "Deferred and marked hold-family, usually because the candidate/family needs manual architectural comparison.",
+      "recommended_next_action": "Keep as held evidence. Compare family variants before any future promotion.",
+      "decision_confidence": "manual",
+      "variant_count": 2,
+      "required_human_checks": [
+        "test_only_candidate_requires_human_review"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch 73 batch-deferred held family; architect review required before any future override",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 4,
+      "engine_base": "aiweb_os_engine",
+      "recommended_keep_path": "aiweb/engines/aiweb_os_engine",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "general_deferred_review",
+      "bucket_reason": "Deferred by human review and excluded from the final canonical lockfile.",
+      "recommended_next_action": "Keep for later evidence review; do not delete or quarantine automatically.",
+      "decision_confidence": "medium_high",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-f8276d394f6ec7e0; batch_receipt_sha=9dbc8726d666b86638282bf57e0ffba722797de0a0ce83b8eeff954860f4f8ce; queue_decision_sha=92429cee815bb800cd2f49ec09f2956d3575fa2c66faded465e5022caa5d5671; approval_helper_sha=042cdafd37ffb8e7a75bddf69e5747e232b2ec9eb734cd9dd9ee59725398c0c5; binder_sha=789279d7cf03d4f626d84b91f16a874bf0edbbf0c199a9cfb5b84218cc1383c1; crosscheck_sha=82770b8d2889f4876d1cafc",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 5,
+      "engine_base": "cold_archive_engine",
+      "recommended_keep_path": "aiweb/engines/cold_archive_engine_frozen_v1",
+      "review_status": "APPROVED",
+      "is_hold_family": true,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "hold_family_requires_manual_review",
+      "draft_decision": "HOLD_ARCHIVE_AMBIGUITY_REVIEW",
+      "exclusion_reason": "hold family excluded",
+      "disposition_bucket": "approved_hold_family_excluded",
+      "bucket_reason": "Approved by review, but intentionally excluded because the family is marked hold.",
+      "recommended_next_action": "Manual architect review before future lockfile eligibility; do not delete or quarantine automatically.",
+      "decision_confidence": "manual",
+      "variant_count": 10,
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "frozen_candidate_requires_human_review",
+        "archive_or_backup_candidate_requires_human_review",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=APPROVED_FOR_FUTURE_COMMIT; evidence_id=EEB-bc75b62ef10a008d; batch_receipt_sha=2950200cbcb170bbf99c6dfcd9d282ba24d9ff7256f97e2b02442f8cc69982e5; queue_decision_sha=2ab725cef8616ab79ef82562558c6dad355842ce775c32a3d47081f6151c1944; approval_helper_sha=a55cd114ca8dcabd3f93ccd523a5c51b44d29b32147c1480fb4e2398e55f14d7; binder_sha=a76cfc16fb9c09d0df58796218cfa81bbfdce8e509c70b3feb6847243e07b522; crosscheck_sha=43f0d96d1aa331fc4224b",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 6,
+      "engine_base": "contribution_ledger_stack",
+      "recommended_keep_path": "aiweb/runtime_wrappers/contribution_ledger_stack",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "runtime_wrapper_or_stack_deferred",
+      "bucket_reason": "Wrapper/stack layer deferred because it may depend on multiple engines, imports, or runtime ordering.",
+      "recommended_next_action": "Map dependencies and test wrapper startup before any future promotion.",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-e30ad0b50c5c03dd; batch_receipt_sha=4cc2c3abdcfb3b178e10e31a6719533ddc91147bdcc71f0298d79dad6dcfb479; queue_decision_sha=7205844aa4dc18c8cb10815c19a1c86afa845589ef281ac56bb681111b0d14a3; approval_helper_sha=bb9a338c4342409577290265a95b31c6dde3c2907b8d1124a1bdb05909b5bb60; binder_sha=64387a06c3856d7819118fa391d1117e2e7ffc1dbb6b6f5cfe08fa531138fb3f; crosscheck_sha=ddf9fd81072bbf7e407e019",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 7,
+      "engine_base": "control_stack",
+      "recommended_keep_path": "aiweb/runtime_wrappers/control_stack",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "runtime_wrapper_or_stack_deferred",
+      "bucket_reason": "Wrapper/stack layer deferred because it may depend on multiple engines, imports, or runtime ordering.",
+      "recommended_next_action": "Map dependencies and test wrapper startup before any future promotion.",
+      "decision_confidence": "medium",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-7df4589a96005a41; batch_receipt_sha=4cc2c3abdcfb3b178e10e31a6719533ddc91147bdcc71f0298d79dad6dcfb479; queue_decision_sha=40438b8642a6eceae525c97c2099e4b3b22bffe96fcc16e9de62f9840bf82ba1; approval_helper_sha=39055452ed232ba850f4fa9c31a8d9d70e0da35c09d7e78db613f7b113381253; binder_sha=511cd71e6a4413f537dd4913e0d91914e927992607a95b39769c9acb4be75b2d; crosscheck_sha=e602f5754f09d993c4ecab4",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 8,
+      "engine_base": "core_stack_breather",
+      "recommended_keep_path": "aiweb/engines/core_stack_breather",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "runtime_wrapper_or_stack_deferred",
+      "bucket_reason": "Wrapper/stack layer deferred because it may depend on multiple engines, imports, or runtime ordering.",
+      "recommended_next_action": "Map dependencies and test wrapper startup before any future promotion.",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-df535a295e2cc3a2; batch_receipt_sha=4cc2c3abdcfb3b178e10e31a6719533ddc91147bdcc71f0298d79dad6dcfb479; queue_decision_sha=f01fb09479f5de7464476f8fdbfa72429377827c425561e720710922dd66e1fe; approval_helper_sha=cdce2f0538e47cd2c896589b4ca64508349ebe8ac6178426fa7abed1d4c380fc; binder_sha=7d27f56536c1cc9f4c8da05bde28d553fe2e9bb53678f4416413751b5d6ecb5f; crosscheck_sha=6798fbd0c436134f0553e8e",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 9,
+      "engine_base": "core_system_stack",
+      "recommended_keep_path": "aiweb/runtime_wrappers/core_system_stack",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "runtime_wrapper_or_stack_deferred",
+      "bucket_reason": "Wrapper/stack layer deferred because it may depend on multiple engines, imports, or runtime ordering.",
+      "recommended_next_action": "Map dependencies and test wrapper startup before any future promotion.",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-3bf3f922354da81e; batch_receipt_sha=4cc2c3abdcfb3b178e10e31a6719533ddc91147bdcc71f0298d79dad6dcfb479; queue_decision_sha=95df83dde6907ce7580dd7578e8208c96e875cf8265b80dd5d1dbfb786b9b430; approval_helper_sha=9b1394a2df807b0e2bfbd9faf8fbcddfc09c16f2f76d58882c2dc0b7ce4890b8; binder_sha=47570e3f7445fd4a90f1c66c15c6005225d12170377860ce89da8d9143c9d72f; crosscheck_sha=505408be061f8ca1781651c",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 10,
+      "engine_base": "dream_state_engine",
+      "recommended_keep_path": "aiweb/engines/dream_state_engine",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "memory_archive_or_state_deferred",
+      "bucket_reason": "Memory/archive/state layer deferred because persistence and data durability need stronger testing.",
+      "recommended_next_action": "Run persistence, corruption, backup, and recovery tests before future promotion.",
+      "decision_confidence": "medium",
+      "variant_count": 8,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-250da52af3cef833; batch_receipt_sha=4cc2c3abdcfb3b178e10e31a6719533ddc91147bdcc71f0298d79dad6dcfb479; queue_decision_sha=c1acad98019804b299eb614c964fa21800e426338ae1b0ebdea218aba2e61d56; approval_helper_sha=b9f91cb4db048df32795e0277027fe59cbc84421d1ae9e8f0fc73ec283de5acc; binder_sha=3923221213ebda151c358f44141098af655ef3b54ec1dfca2bad911eb112eb41; crosscheck_sha=1ed3e812f5930a7c63046d6",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 11,
+      "engine_base": "drift_arbitration_engine",
+      "recommended_keep_path": "aiweb/engines/drift_arbitration_engine",
+      "review_status": "APPROVED",
+      "is_hold_family": true,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "hold_family_requires_manual_review",
+      "draft_decision": "HOLD_FROZEN_CANDIDATE_REVIEW",
+      "exclusion_reason": "hold family excluded",
+      "disposition_bucket": "approved_hold_family_excluded",
+      "bucket_reason": "Approved by review, but intentionally excluded because the family is marked hold.",
+      "recommended_next_action": "Manual architect review before future lockfile eligibility; do not delete or quarantine automatically.",
+      "decision_confidence": "manual",
+      "variant_count": 11,
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "frozen_candidate_requires_human_review",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=APPROVED_FOR_FUTURE_COMMIT; evidence_id=EEB-caf4c9b35c20c0c1; batch_receipt_sha=ce2acd43e07637852b02da089622048b37b2410d9e1c66bed32ff11cf676c7c4; queue_decision_sha=8d7486f6f43d258b20889204ded959364e68b1858abe762bcbf1bd81bdb12cfb; approval_helper_sha=0b5e034ad63ffaa46835f9d65df40246fb696c41bfccba6802a8a5355c78007a; binder_sha=1d99454a1bbd833acf5c0be92462ee27f2eaa014da056f2fae128d772a4ba708; crosscheck_sha=bb28dd6f1c7cbe432c81e",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 12,
+      "engine_base": "external_feed_listener",
+      "recommended_keep_path": "aiweb/engines/external_feed_listener",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "authority_or_external_control_deferred",
+      "bucket_reason": "Authority, external input, or goal-injection surface deferred because misuse could affect system behavior.",
+      "recommended_next_action": "Require stricter permission, trust-guard, and input-boundary review before future promotion.",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-5f91c358437560b6; batch_receipt_sha=d00dfe743f7bc781131891d32edaaa73cc99f4e8b6af220d798d6179f919007b; queue_decision_sha=a481b6ed765d009041874a2730c37098e42d072599d190da992fc8f96a56b0fc; approval_helper_sha=a0851eeb6b6dfb9f63bc68bb152edea84d6e87a589e9fb2991837d9e94603b0c; binder_sha=d4c98a1c5f3a44a1e4ec14d850b62d6ed3aee30395dd67756eabe7b3ca705047; crosscheck_sha=f17fa1ec2d84ad0477d8e35",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 13,
+      "engine_base": "fluid_memory_engine",
+      "recommended_keep_path": "aiweb/engines/fluid_memory_engine",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "memory_archive_or_state_deferred",
+      "bucket_reason": "Memory/archive/state layer deferred because persistence and data durability need stronger testing.",
+      "recommended_next_action": "Run persistence, corruption, backup, and recovery tests before future promotion.",
+      "decision_confidence": "medium",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-787e388492eb001b; batch_receipt_sha=d00dfe743f7bc781131891d32edaaa73cc99f4e8b6af220d798d6179f919007b; queue_decision_sha=658bd2dec161418ccb18b205e21d65ed8d227684b751cf093573df6f8508003e; approval_helper_sha=7c05a7a3ffe188bc953d5cbf91e0de4275831749843c1cc267f388faa72bbf1f; binder_sha=37813c9b9781f3b2dbef3e8e93a6bf7e1b48da38cd9042297763d50dafe0f475; crosscheck_sha=199a232ec3c94b595933993",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 14,
+      "engine_base": "gilligan",
+      "recommended_keep_path": "agents/gilligan",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "agent_identity_deferred",
+      "bucket_reason": "Agent identity/runtime layer deferred; this should not be finalized only from engine evidence.",
+      "recommended_next_action": "Review agent role, memory boundaries, safety scope, and runtime responsibilities before promotion.",
+      "decision_confidence": "low",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-79999be700688737; batch_receipt_sha=d00dfe743f7bc781131891d32edaaa73cc99f4e8b6af220d798d6179f919007b; queue_decision_sha=154af011851ed63f3f8750d698ec83efb41fc3b66a2a8c852f5c7522227f819d; approval_helper_sha=b54de1332a4f99134d30d8ef1c525692e3f9c3172acf4ed6078f56f3a9d796c2; binder_sha=f03cf6f7c20506af2a458929afa81f33b8e7accdd8a13cbfcc43347ee31e8d78; crosscheck_sha=b6886b26af45e144ecf527f",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 15,
+      "engine_base": "gilligan_drift_correction_upgrade",
+      "recommended_keep_path": "aiweb/engines/gilligan_drift_correction_upgrade",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "general_deferred_review",
+      "bucket_reason": "Deferred by human review and excluded from the final canonical lockfile.",
+      "recommended_next_action": "Keep for later evidence review; do not delete or quarantine automatically.",
+      "decision_confidence": "medium",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-e5144c91abeb8497; batch_receipt_sha=d00dfe743f7bc781131891d32edaaa73cc99f4e8b6af220d798d6179f919007b; queue_decision_sha=d6b025519bb89957562190f0ce25870e1445482c45140a8a64eb3bc09708c37d; approval_helper_sha=7240275ab2e1d4568f0eecd7be4014f3c43ae10fe6af4a1e4c7bcb5ee6b1bc73; binder_sha=b0e924b3da8941f712023e10e77e3b1282975c484290187715a8c65debd5032d; crosscheck_sha=e8ff61f805f378209adb340",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 16,
+      "engine_base": "goal_injection_engine",
+      "recommended_keep_path": "aiweb/engines/goal_injection_engine",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "authority_or_external_control_deferred",
+      "bucket_reason": "Authority, external input, or goal-injection surface deferred because misuse could affect system behavior.",
+      "recommended_next_action": "Require stricter permission, trust-guard, and input-boundary review before future promotion.",
+      "decision_confidence": "medium",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-6ef85e34d4584ab4; batch_receipt_sha=70ae2bb047ae88d98fdfa8bce80bcb925a6047c2ee8c844f58d8bb1e1aac783b; queue_decision_sha=48efccdcf8e2f48a5f1f6a0630c87ef9b6450b830a32ca00661ce335e7063c9c; approval_helper_sha=bfdc19076e4970137be34cd4c6763dea490ab62dc46961b8dc741b4c3e188655; binder_sha=f5d7712606253ff0126c1f72db9481bd28f083b5c9bbfe96cb952c8b21ace10e; crosscheck_sha=f2dd7ec9b0c526a463fb09a",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 17,
+      "engine_base": "memory_stack_engine",
+      "recommended_keep_path": "aiweb/engines/memory_stack_engine",
+      "review_status": "DEFERRED",
+      "is_hold_family": true,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred by human review",
+      "draft_decision": "HOLD_FROZEN_CANDIDATE_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "deferred_hold_family",
+      "bucket_reason": "Deferred and marked hold-family, usually because the candidate/family needs manual architectural comparison.",
+      "recommended_next_action": "Keep as held evidence. Compare family variants before any future promotion.",
+      "decision_confidence": "manual",
+      "variant_count": 6,
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "frozen_candidate_requires_human_review",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch 73 batch-deferred held family; architect review required before any future override",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 18,
+      "engine_base": "memory_stack_engine_breathing",
+      "recommended_keep_path": "aiweb/engines/memory_stack_engine_breathing_v1",
+      "review_status": "DEFERRED",
+      "is_hold_family": true,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred by human review",
+      "draft_decision": "HOLD_FOR_MANUAL_ARCHITECT_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "deferred_hold_family",
+      "bucket_reason": "Deferred and marked hold-family, usually because the candidate/family needs manual architectural comparison.",
+      "recommended_next_action": "Keep as held evidence. Compare family variants before any future promotion.",
+      "decision_confidence": "manual",
+      "variant_count": 7,
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch 73 batch-deferred held family; architect review required before any future override",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 19,
+      "engine_base": "memory_stack_stack",
+      "recommended_keep_path": "aiweb/runtime_wrappers/memory_stack_stack",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "runtime_wrapper_or_stack_deferred",
+      "bucket_reason": "Wrapper/stack layer deferred because it may depend on multiple engines, imports, or runtime ordering.",
+      "recommended_next_action": "Map dependencies and test wrapper startup before any future promotion.",
+      "decision_confidence": "medium",
+      "variant_count": 2,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-3cfbf7294cfbbb19; batch_receipt_sha=70ae2bb047ae88d98fdfa8bce80bcb925a6047c2ee8c844f58d8bb1e1aac783b; queue_decision_sha=d87c64dd3f516e2d903df1a00428d57ae5fba30d5dfe1235217938645aafa7b0; approval_helper_sha=31cc217fb5e292022da4595a6aba55e95bd185ccd49a70579cb6c1e8a8e140c8; binder_sha=9671c6450d1b805aa7d563e2a8409b015e174fbdac4aceafb8914b35cbb469e9; crosscheck_sha=142d734b2a69998987a9523",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 20,
+      "engine_base": "naming_engine",
+      "recommended_keep_path": "aiweb/engines/naming_engine",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "general_deferred_review",
+      "bucket_reason": "Deferred by human review and excluded from the final canonical lockfile.",
+      "recommended_next_action": "Keep for later evidence review; do not delete or quarantine automatically.",
+      "decision_confidence": "medium",
+      "variant_count": 6,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-4811acd49109ee4b; batch_receipt_sha=70ae2bb047ae88d98fdfa8bce80bcb925a6047c2ee8c844f58d8bb1e1aac783b; queue_decision_sha=a02d9a09ec8749622bbdd04e414fc3d62831ac796ea890e15f722f3ae42bb717; approval_helper_sha=3a707f54bf5a42e2e8a46f1231e76d305ae4660c6eaf4be731cbfd6be978912c; binder_sha=5f6b96734761c8a864e30ecdf44ee917031dc44420583d0705ff29d2d0ed5967; crosscheck_sha=f3b3835ada3b0e78426113a",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 21,
+      "engine_base": "neo",
+      "recommended_keep_path": "agents/neo",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "agent_identity_deferred",
+      "bucket_reason": "Agent identity/runtime layer deferred; this should not be finalized only from engine evidence.",
+      "recommended_next_action": "Review agent role, memory boundaries, safety scope, and runtime responsibilities before promotion.",
+      "decision_confidence": "low",
+      "variant_count": 4,
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-cf8cb4e8a7b97c69; batch_receipt_sha=70ae2bb047ae88d98fdfa8bce80bcb925a6047c2ee8c844f58d8bb1e1aac783b; queue_decision_sha=5ff42974c3f9c321e12076de0f243a61a6a3627dd3f35a6ae116480021aaceba; approval_helper_sha=320920be0f2b65acf82801798a05de2e99ae2adae2d78d4e949194005af0e1cd; binder_sha=83119e8c9ff3c9910c5ef71082a3111bc03f919937ee103a4949109b1188dbaf; crosscheck_sha=2438db660455fd906be64d5",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 22,
+      "engine_base": "neo_engine",
+      "recommended_keep_path": "aiweb/engines/neo_engine",
+      "review_status": "DEFERRED",
+      "is_hold_family": false,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred_by_evidence_based_batch_review",
+      "draft_decision": "DRAFT_KEEP_AFTER_HUMAN_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "agent_identity_deferred",
+      "bucket_reason": "Agent identity/runtime layer deferred; this should not be finalized only from engine evidence.",
+      "recommended_next_action": "Review agent role, memory boundaries, safety scope, and runtime responsibilities before promotion.",
+      "decision_confidence": "medium",
+      "variant_count": 10,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "cautions": [],
+      "review_note_summary": "Patch107 batch evidence commit from Patch106 queue decision. Decision=DEFERRED_FOR_MORE_REVIEW; evidence_id=EEB-7d85a9d7c058d7e3; batch_receipt_sha=70ae2bb047ae88d98fdfa8bce80bcb925a6047c2ee8c844f58d8bb1e1aac783b; queue_decision_sha=0cc0a7bc0556bd4946800959bf2ff5c166b0058c6633ed18f7e624860020d61c; approval_helper_sha=f97116c58f1e626579d49dc4df31dc1ccef86b5a0cf80db9404cd918a2a5fa28; binder_sha=d9c922f8d413981b255ae52f3e144e26ef8a29cc3c7949afd88264d691c5dd33; crosscheck_sha=910fd7c8f0a1da92b240ef4",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 23,
+      "engine_base": "protoforge_dashboard_runtime",
+      "recommended_keep_path": "runtime_wrappers/protoforge_dashboard_runtime_v2.0",
+      "review_status": "DEFERRED",
+      "is_hold_family": true,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred by human review",
+      "draft_decision": "HOLD_FOR_MANUAL_ARCHITECT_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "deferred_hold_family",
+      "bucket_reason": "Deferred and marked hold-family, usually because the candidate/family needs manual architectural comparison.",
+      "recommended_next_action": "Keep as held evidence. Compare family variants before any future promotion.",
+      "decision_confidence": "manual",
+      "variant_count": 2,
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "compare_multiple_active_variants"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "review_note_summary": "Patch 73 batch-deferred held family; architect review required before any future override",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 24,
+      "engine_base": "saved_ideas",
+      "recommended_keep_path": "projects/recursive_lmm_grok1/engines/saved_ideas",
+      "review_status": "DEFERRED",
+      "is_hold_family": true,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred by human review",
+      "draft_decision": "HOLD_ARCHIVE_AMBIGUITY_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "deferred_hold_family",
+      "bucket_reason": "Deferred and marked hold-family, usually because the candidate/family needs manual architectural comparison.",
+      "recommended_next_action": "Keep as held evidence. Compare family variants before any future promotion.",
+      "decision_confidence": "manual",
+      "variant_count": 2,
+      "required_human_checks": [
+        "archive_or_backup_candidate_requires_human_review"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "review_note_summary": "Patch 73 batch-deferred held family; architect review required before any future override",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    },
+    {
+      "index": 25,
+      "engine_base": "step_counter",
+      "recommended_keep_path": "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1",
+      "review_status": "DEFERRED",
+      "is_hold_family": true,
+      "future_lockfile_eligible": false,
+      "future_lockfile_block_reason": "deferred by human review",
+      "draft_decision": "HOLD_FROZEN_CANDIDATE_REVIEW",
+      "exclusion_reason": "deferred by human review",
+      "disposition_bucket": "deferred_hold_family",
+      "bucket_reason": "Deferred and marked hold-family, usually because the candidate/family needs manual architectural comparison.",
+      "recommended_next_action": "Keep as held evidence. Compare family variants before any future promotion.",
+      "decision_confidence": "manual",
+      "variant_count": 2,
+      "required_human_checks": [
+        "frozen_candidate_requires_human_review"
+      ],
+      "cautions": [
+        "recommended path is not under primary aiweb root"
+      ],
+      "review_note_summary": "Patch 73 batch-deferred held family; architect review required before any future override",
+      "safe_current_action": "read-only disposition only; no delete, no quarantine, no promotion, no engine writes"
+    }
+  ]
+}

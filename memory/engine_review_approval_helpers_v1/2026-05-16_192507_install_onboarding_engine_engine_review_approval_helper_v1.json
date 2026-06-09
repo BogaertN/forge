@@ -1,0 +1,98 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "bound_file_count": 5,
+  "candidate_path": "/home/nic/aiweb/engines/install_onboarding_engine",
+  "created_at": "2026-05-16_192507",
+  "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_install_onboarding_engine_engine_review_evidence_crosscheck_v1.json",
+  "crosscheck_sha256": "bf51ac702b14921b0f8ea4745ef12e28dde66a93ccf3ea852075e0dd67a35d35",
+  "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_095417_install_onboarding_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "1de3bed434134287e5145340e0d55070841a8b8793f25987f725877ac27f6603",
+  "engine_family": "install_onboarding_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_install_onboarding_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "2818059cd122866747c15023d2389e9ecf29967befcb06a5d149234a3601526b",
+  "evidence_id": "EEB-27b6d26db1fca1c2",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "onboarding_core.py",
+      "install_state.json",
+      "test_onboarding.py",
+      "README.md",
+      "engine_manifest.json"
+    ],
+    "functions_mentioned": [
+      "setup_environment",
+      "timestamp",
+      "status",
+      "Install",
+      "Onboarding",
+      "Engine",
+      "Verifies",
+      "all",
+      "required",
+      "symbolic",
+      "engine",
+      "directories",
+      "are",
+      "runtime",
+      "Creates",
+      "missing",
+      "folders",
+      "and",
+      "logs",
+      "onboarding",
+      "install_state",
+      "json",
+      "directory",
+      "environment"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "import time",
+      "from onboarding_core import setup_environment"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 20.382,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "2aee296afe47a2775612c446cf3b143438b222bbd144d8b8dd9fc0cbf511eb62",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nVerifies required symbolic engine directories exist at runtime, creates missing folders, and logs installation status to a JSON file.  \n\nLikely System Role:  \nInstallation/onboarding utility for ensuring prerequisite directories are available for symbolic engines, acting as a setup validator and environment preparer.  \n\nEvidence Used:  \n- `onboarding_core.py` contains `setup_environment()` function creating required directories and logging status.  \n- `install_state.json` stores installation reports with timestamps and missing directories.  \n- `test_onboarding.py` tests the setup process.  \n- README.md and engine_manifest.json describe the engine's purpose and directory validation.  \n\nRisks / Uncertainties:  \n- Minimal error handling in directory creation (e.g., permission issues).  \n- Test script is basic and may not cover all edge cases.  \n- JSON logging format lacks schema validation.  \n\nRecommendation Draft:  \nEnhance error handling for directory creation, add comprehensive tests for edge cases, and validate JSON structure for robustness.  \n\nSuggested Nic Action:  \nApprove review with note to address error handling and testing improvements before deployment."
+  },
+  "llm_visible_review_excerpt": "Plain-English Purpose:  \nVerifies required symbolic engine directories exist at runtime, creates missing folders, and logs installation status to a JSON file.  \n\nLikely System Role:  \nInstallation/onboarding utility for ensuring prerequisite directories are available for symbolic engines, acting as a setup validator and environment preparer.  \n\nEvidence Used:  \n- `onboarding_core.py` contains `setup_environment()` function creating required directories and logging status.  \n- `install_state.json` stores installation reports with timestamps and missing directories.  \n- `test_onboarding.py` tests the setup process.  \n- README.md and engine_manifest.json describe the engine's purpose and directory validation.  \n\nRisks / Uncertainties:  \n- Minimal error handling in directory creation (e.g., permission issues).  \n- Test script is basic and may not cover all edge cases.  \n- JSON logging format lacks schema validation.  \n\nRecommendation Draft:  \nEnhance error handling for directory creation, add comprehensive tests for edge cases, and validate JSON structure for robustness.  \n\nSuggested Nic Action:  \nApprove review with note to address error handling and testing improvements before deployment.",
+  "manual_verification_rule": "Approve only if the LLM-visible claims are supported by the bound evidence shown in the Patch 102 cross-check. If unsure, defer.",
+  "ready_for_evidence_based_queue_decision": true,
+  "report_type": "ENGINE_REVIEW_APPROVAL_CHECK_V1_PATCH103",
+  "schema_version": "engine_review_approval_helper_v1_patch103",
+  "status": "EVIDENCE_APPROVAL_CHECK_READY",
+  "warnings": [
+    "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

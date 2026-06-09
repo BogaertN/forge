@@ -1,0 +1,12 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "project_file_write_authority": false
+  },
+  "created_at": "2026-05-17T10:23:18",
+  "example": "generic-repair-candidate-build latest CONFIRM_BUILD_GENERIC_REPAIR_CANDIDATE",
+  "report_type": "GENERIC_REPAIR_CANDIDATE_REFUSAL_V1",
+  "required_token": "CONFIRM_BUILD_GENERIC_REPAIR_CANDIDATE",
+  "schema_version": "generic_repair_candidate_refusal_v1_patch136",
+  "status": "GENERIC_REPAIR_CANDIDATE_BUILD_REFUSED_CONFIRM_TOKEN_REQUIRED"
+}

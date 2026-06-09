@@ -1,0 +1,119 @@
+{
+  "api_mode": "READ_ONLY_FILE_BACKED_CONTRACT_NO_SERVER",
+  "audit": {
+    "chain_breaks": 0,
+    "entries_checked": 2500,
+    "exists": true,
+    "latest_entry_hash": "c4bed5a92c5a9e13"
+  },
+  "authority": {
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ledger_mutation": false,
+    "network_opened": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "server_started": false,
+    "shell_execution_authority": false
+  },
+  "canonical_engine_lockfile": {
+    "canonical_authority": true,
+    "excluded": 25,
+    "exists": true,
+    "included": 55,
+    "path": "/home/nic/forge/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+    "sha256": "b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab"
+  },
+  "created_at": "2026-05-17T07:36:09",
+  "endpoints": {
+    "/audit": "Audit-tail continuity status.",
+    "/disposition": "Deferred/excluded engine disposition summary.",
+    "/engines": "Canonical engine lockfile summary and SHA.",
+    "/impact": "Latest patch impact map summary.",
+    "/relationships": "Latest canonical relationship map summary.",
+    "/roadmap": "Current phase and recommended next patch.",
+    "/status": "Complete read-only Forge status snapshot.",
+    "/tests": "Latest canonical safe-test run summary."
+  },
+  "latest_disposition": {
+    "path": "/home/nic/forge/memory/engine_disposition_v1/latest_engine_disposition_report_v1.json",
+    "status": "ENGINE_DISPOSITION_REPORT_READY",
+    "summary": {}
+  },
+  "latest_master_status": {
+    "path": "/home/nic/forge/memory/forge_master_status_v1/latest_forge_master_status_report_v1.json",
+    "status": "FORGE_MASTER_STATUS_READY"
+  },
+  "latest_patch_impact": {
+    "path": "/home/nic/forge/memory/patch_impact_v1/latest_patch_impact_map_v1.json",
+    "status": "PATCH_IMPACT_MAP_READY",
+    "summary": {
+      "high_risk": 0,
+      "low_risk": 37,
+      "matches": 55,
+      "medium_risk": 18,
+      "no_test_result": 5,
+      "targets_requested": "all",
+      "test_issues": 1
+    }
+  },
+  "latest_relationship_map": {
+    "path": "/home/nic/forge/memory/canonical_engine_relationships_v1/latest_canonical_engine_relationship_map_v1.json",
+    "status": "CANONICAL_ENGINE_RELATIONSHIP_MAP_READY",
+    "summary": {}
+  },
+  "latest_self_sandbox": {
+    "path": "/home/nic/forge/memory/forge_self_sandboxes_v1/latest_forge_self_sandbox_report_v1.json",
+    "status": "FORGE_SELF_SANDBOX_APPLIED_AND_CHECKED"
+  },
+  "latest_self_snapshot": {
+    "path": null,
+    "status": null
+  },
+  "latest_test_run": {
+    "path": "/home/nic/forge/memory/canonical_engine_test_runs_v1/latest_canonical_engine_test_run_report_v1.json",
+    "status": "CANONICAL_TEST_RUN_COMPLETED_WITH_ISSUES",
+    "summary": {}
+  },
+  "ledger_summary": {
+    "approved": 0,
+    "deferred": 0,
+    "pending": 0,
+    "total": 0
+  },
+  "next_commands": [
+    "forge-status-api-export",
+    "Install Patch 128 when ready"
+  ],
+  "plain_english": "Read-only local status API snapshot. This writes Forge-owned status JSON only; it does not start a server, open a port, mutate project files, run shell commands, or apply patches.",
+  "recommended_next_patch": "Patch 128 \u2014 Dashboard Read-Only View",
+  "report_type": "FORGE_STATUS_API_SNAPSHOT_V1",
+  "schema_version": "forge_status_api_snapshot_v1_patch127",
+  "status": "FORGE_STATUS_API_SNAPSHOT_READY",
+  "summary": {
+    "audit_chain_breaks_tail": 0,
+    "canonical_excluded": 25,
+    "canonical_included": 55,
+    "canonical_lockfile_exists": true,
+    "expected_commands": 423,
+    "latest_impact_high_risk": 0,
+    "latest_impact_medium_risk": 18,
+    "latest_impact_status": "PATCH_IMPACT_MAP_READY",
+    "latest_test_fail": null,
+    "latest_test_status": "CANONICAL_TEST_RUN_COMPLETED_WITH_ISSUES",
+    "ledger_approved": 0,
+    "ledger_deferred": 0,
+    "ledger_pending": 0,
+    "ledger_total": 0,
+    "tools": 347,
+    "trust_level": 5.0
+  },
+  "tool_state": {
+    "expected_command_count": 423,
+    "registry_path": "/home/nic/forge/config/tool_registry.json",
+    "registry_sha256": "132ab4cf0f7955e95bb5544b440847b7a916562aff5912ea37ebeee975a27dc0",
+    "tool_count": 347,
+    "trust_level": 5.0
+  }
+}

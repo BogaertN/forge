@@ -1,0 +1,12 @@
+PATCH 61 SANDBOX SMOKE APPLY PLAN
+=================================
+Target file: /home/nic/forge/patch_sandbox_smoke_tests/targets/patch61_sandbox_smoke_target.txt
+Original SHA: 6d5560c9fbfb9663
+Future SHA: 0072e8a8b8f859d5
+Rollback path: FORGE_OWNED_SMOKE_TARGET_NO_PROJECT_ROLLBACK_REQUIRED
+
+COMPUTED FUTURE CONTENT
+=======================
+Forge Patch 61 sandbox smoke target
+state: sandboxed
+purpose: prove sandbox rehearsal without modifying AI.Web project files

@@ -1,0 +1,97 @@
+{
+  "schema_version": "engine_review_commit_v1_patch100",
+  "report_type": "ENGINE_REVIEW_COMMIT_PLAN_V1_PATCH100",
+  "created_at": "2026-05-15_123842",
+  "status": "ENGINE_REVIEW_COMMIT_PLAN_READY",
+  "authority": {
+    "patch": "100",
+    "mode": "CANONICAL_DECISION_COMMITTER_LEDGER_ONLY",
+    "writes": [
+      "/home/nic/forge/memory/code_library_v1/manifests/engine_review_ledger_v1.json",
+      "/home/nic/forge/memory/engine_review_commits_v1"
+    ],
+    "human_review_ledger_write_authority": false,
+    "canonical_decision_authority": false,
+    "final_lockfile_authority": false,
+    "engine_file_write_authority": false,
+    "project_file_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "shell_execution_authority": false,
+    "chroma_write_authority": false,
+    "ingestion_write_authority": false,
+    "quarantine_authority": false,
+    "delete_authority": false,
+    "rule": "Patch 100 may update the human review ledger only from Patch 99 queue decisions after stale-evidence re-verification. It does not create final canonical authority or modify engine files."
+  },
+  "source_queue_decision_count": 1,
+  "ledger_path": "/home/nic/forge/memory/code_library_v1/manifests/engine_review_ledger_v1.json",
+  "ledger_sha256_at_plan_time": "3f0af0874087943fbee00c591a63cc2c94ae4301c3d2dd1a9d0cd412a44cefdf",
+  "counts": {
+    "decision_receipts": 1,
+    "ready_for_commit": 1,
+    "blocked": 0,
+    "approved_ready": 1,
+    "deferred_ready": 0,
+    "rejected_ready": 0,
+    "blockers": 0,
+    "warnings": 0
+  },
+  "commit_rows": [
+    {
+      "engine_family": "christping_listener",
+      "queue_decision": "APPROVED_FOR_FUTURE_COMMIT",
+      "commit_status_if_applied": "APPROVED",
+      "ready_for_commit": true,
+      "decision_path": "/home/nic/forge/memory/engine_review_queue_v1/2026-05-15_090806_christping_listener_engine_review_queue_decision_v1.json",
+      "decision_sha256": "49555a9d251f20d107a07701bdd9b8f2ece743314f1295d94c66329a493209ab",
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-15_085820_christping_listener_llm_engine_review_draft_v1.json",
+      "draft_sha256_current": "a81c99382837d58bae2ea5119578df8a790d8a26b9291fc29108e5047ef9754d",
+      "evidence_id": "EEB-a757f04a6033202d",
+      "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_christping_listener_engine_evidence_binder.json",
+      "evidence_binder_sha256_current": "1411d3e18a37430d8cb552d7cc2494c0ac84d976102d5a0de096b27237cdb2e3",
+      "candidate_path": "/home/nic/aiweb/engines/christping_listener",
+      "candidate_path_exists_now": true,
+      "ledger_entry_found": true,
+      "ledger_current_review_status": "APPROVED",
+      "ledger_is_hold_family": false,
+      "future_lockfile_eligible_if_applied": true,
+      "live_evidence_file_checks": [
+        {
+          "path": "/home/nic/aiweb/engines/christping_listener/listener_config.json",
+          "expected_sha256_from_evidence_binder": "0740b668e8a3136f5e1f019b5b81f137f9741f3481f11293c3d3619b99d266d3",
+          "current_sha256": "0740b668e8a3136f5e1f019b5b81f137f9741f3481f11293c3d3619b99d266d3",
+          "exists_now": true,
+          "sha_match": true
+        },
+        {
+          "path": "/home/nic/aiweb/engines/christping_listener/README.md",
+          "expected_sha256_from_evidence_binder": "c8f7c7ef2e96bfec995a9e1f81445d529837da67dd7b1eb1af9dba44211f013b",
+          "current_sha256": "c8f7c7ef2e96bfec995a9e1f81445d529837da67dd7b1eb1af9dba44211f013b",
+          "exists_now": true,
+          "sha_match": true
+        },
+        {
+          "path": "/home/nic/aiweb/engines/christping_listener/christ_listener.py",
+          "expected_sha256_from_evidence_binder": "28272b5541abd5bbc7374f99ed3a80c251eb24d9f0df8a1fe22570a587f8e7f4",
+          "current_sha256": "28272b5541abd5bbc7374f99ed3a80c251eb24d9f0df8a1fe22570a587f8e7f4",
+          "exists_now": true,
+          "sha_match": true
+        },
+        {
+          "path": "/home/nic/aiweb/engines/christping_listener/engine_manifest.json",
+          "expected_sha256_from_evidence_binder": "3661878d7c34a9e04d872bff0df3102683f1e7a3622f62839b3195d3466cc924",
+          "current_sha256": "3661878d7c34a9e04d872bff0df3102683f1e7a3622f62839b3195d3466cc924",
+          "exists_now": true,
+          "sha_match": true
+        }
+      ],
+      "blockers": [],
+      "warnings": []
+    }
+  ],
+  "blockers": [],
+  "warnings": [],
+  "required_confirm_token_for_apply": "CONFIRM_COMMIT_APPROVED_QUEUE",
+  "stale_evidence_refusal": "If any candidate path/file SHA changed since the evidence binder, apply must refuse with REFUSED_STALE_ENGINE_EVIDENCE.",
+  "next_step": "Run engine-review-commit-apply CONFIRM_COMMIT_APPROVED_QUEUE only if this plan has ready rows and zero blockers."
+}

@@ -1,0 +1,665 @@
+{
+  "forge_code_mentions": {
+    "agent": {
+      "exists": true,
+      "hits": {
+        "drift": 0,
+        "echo": 0,
+        "gilligan": 0,
+        "phase_parse": 0,
+        "recursive manifest": 0,
+        "rmc": 0
+      },
+      "path": "/home/nic/forge/agents/forge/agent.py"
+    },
+    "context_builder": {
+      "exists": true,
+      "hits": {
+        "drift": 0,
+        "echo": 0,
+        "gilligan": 0,
+        "phase_parse": 0,
+        "recursive manifest": 0,
+        "rmc": 0
+      },
+      "path": "/home/nic/forge/agents/forge/context_builder.py"
+    },
+    "memory": {
+      "exists": true,
+      "hits": {
+        "drift": 0,
+        "echo": 0,
+        "gilligan": 0,
+        "phase_parse": 0,
+        "recursive manifest": 0,
+        "rmc": 0
+      },
+      "path": "/home/nic/forge/agents/forge/memory.py"
+    },
+    "tools": {
+      "exists": true,
+      "hits": {
+        "drift": 0,
+        "echo": 0,
+        "gilligan": 0,
+        "phase_parse": 0,
+        "recursive manifest": 0,
+        "rmc": 0
+      },
+      "path": "/home/nic/forge/agents/forge/tools.py"
+    }
+  },
+  "forge_framework": {
+    "agent": {
+      "exists": true,
+      "path": "/home/nic/forge/agents/forge/agent.py"
+    },
+    "context_builder": {
+      "exists": true,
+      "path": "/home/nic/forge/agents/forge/context_builder.py"
+    },
+    "memory": {
+      "exists": true,
+      "path": "/home/nic/forge/agents/forge/memory.py"
+    },
+    "tool_registry": {
+      "exists": true,
+      "path": "/home/nic/forge/config/tool_registry.json"
+    },
+    "tools": {
+      "exists": true,
+      "path": "/home/nic/forge/agents/forge/tools.py"
+    }
+  },
+  "forge_root": "/home/nic/forge",
+  "home": "/home/nic",
+  "next_safe_step": "If this report passes, create Patch 211 to add a read-only `agents/forge/rmc_tools.py` wrapper and a standalone verifier. Do not register RMC tools in the live Forge dispatch surface until the wrapper itself passes import and no-write smoke tests.",
+  "optional_imports": [
+    {
+      "class": null,
+      "class_ok": null,
+      "error": null,
+      "import_ok": true,
+      "instantiation_ok": null,
+      "module": "ancestral_memory.ancestral_memory",
+      "module_file": "/home/nic/aiweb/runtime_wrappers/rmc_orchestrator/../ancestral_memory/ancestral_memory.py",
+      "module_surface": {
+        "classes": [
+          {
+            "module": "datetime",
+            "name": "datetime"
+          },
+          {
+            "module": "datetime",
+            "name": "timezone"
+          },
+          {
+            "module": "pathlib",
+            "name": "Path"
+          },
+          {
+            "module": "ancestral_memory.ancestral_memory",
+            "name": "MemoryRecord"
+          },
+          {
+            "module": "ancestral_memory.ancestral_memory",
+            "name": "AncestralMemory"
+          }
+        ],
+        "functions": []
+      },
+      "surface": null
+    },
+    {
+      "class": null,
+      "class_ok": null,
+      "error": null,
+      "import_ok": true,
+      "instantiation_ok": null,
+      "module": "manifest_compiler.manifest_compiler",
+      "module_file": "/home/nic/aiweb/runtime_wrappers/rmc_orchestrator/../manifest_compiler/manifest_compiler.py",
+      "module_surface": {
+        "classes": [
+          {
+            "module": "datetime",
+            "name": "datetime"
+          },
+          {
+            "module": "datetime",
+            "name": "timezone"
+          },
+          {
+            "module": "manifest_compiler.manifest_compiler",
+            "name": "CandidatePath"
+          },
+          {
+            "module": "manifest_compiler.manifest_compiler",
+            "name": "Manifest"
+          },
+          {
+            "module": "manifest_compiler.manifest_compiler",
+            "name": "CandidatePathGenerator"
+          },
+          {
+            "module": "manifest_compiler.manifest_compiler",
+            "name": "CoherenceValidator"
+          },
+          {
+            "module": "manifest_compiler.manifest_compiler",
+            "name": "ManifestCompiler"
+          }
+        ],
+        "functions": [
+          {
+            "name": "dataclass",
+            "signature": "(cls=None, /, *, init=True, repr=True, eq=True, order=False, unsafe_hash=False, frozen=False, match_args=True, kw_only=False, slots=False, weakref_slot=False)"
+          },
+          {
+            "name": "field",
+            "signature": "(*, default=<dataclasses._MISSING_TYPE object at 0x748576a8aba0>, default_factory=<dataclasses._MISSING_TYPE object at 0x748576a8aba0>, init=True, repr=True, hash=None, compare=True, metadata=None, kw_only=<dataclasses._MISSING_TYPE object at 0x748576a8aba0>)"
+          }
+        ]
+      },
+      "surface": null
+    },
+    {
+      "class": null,
+      "class_ok": null,
+      "error": null,
+      "import_ok": true,
+      "instantiation_ok": null,
+      "module": "output_renderer.output_renderer",
+      "module_file": "/home/nic/aiweb/runtime_wrappers/rmc_orchestrator/../output_renderer/output_renderer.py",
+      "module_surface": {
+        "classes": [
+          {
+            "module": "datetime",
+            "name": "datetime"
+          },
+          {
+            "module": "datetime",
+            "name": "timezone"
+          },
+          {
+            "module": "output_renderer.output_renderer",
+            "name": "RenderResult"
+          },
+          {
+            "module": "output_renderer.output_renderer",
+            "name": "LanguageRenderer"
+          },
+          {
+            "module": "output_renderer.output_renderer",
+            "name": "CodeRenderer"
+          },
+          {
+            "module": "output_renderer.output_renderer",
+            "name": "GlyphRenderer"
+          },
+          {
+            "module": "output_renderer.output_renderer",
+            "name": "PacketRenderer"
+          },
+          {
+            "module": "output_renderer.output_renderer",
+            "name": "OutputRenderer"
+          }
+        ],
+        "functions": []
+      },
+      "surface": null
+    }
+  ],
+  "proposed_read_only_tools": [
+    {
+      "name": "rmc_phase_parse_preview",
+      "purpose": "Parse supplied text into a phase-state preview without writing memory.",
+      "required_class": "PhaseStateParser",
+      "required_module": "phase_parser.phase_state_parser",
+      "write_scope": "none"
+    },
+    {
+      "name": "rmc_drift_check_preview",
+      "purpose": "Check supplied text/phase context for drift risk without applying correction or writing memory.",
+      "required_class": "DriftArbitrator",
+      "required_module": "drift_detection.drift_detector",
+      "write_scope": "none"
+    },
+    {
+      "name": "rmc_echo_validate_preview",
+      "purpose": "Compare a rendered output against a manifest-like object without writing memory.",
+      "required_class": "EchoGate",
+      "required_module": "echo_validator.echo_validator",
+      "write_scope": "none"
+    },
+    {
+      "name": "rmc_orchestrator_preview",
+      "purpose": "Run a dry preview through RMC orchestration and return trace/manifest/rendering status only.",
+      "required_class": "RMCOrchestrator",
+      "required_module": "rmc_orchestrator.rmc_orchestrator",
+      "write_scope": "none unless the live orchestrator already writes internally; must be verified before enabling"
+    }
+  ],
+  "required_imports": [
+    {
+      "class": "PhaseStateParser",
+      "class_ok": true,
+      "error": null,
+      "import_ok": true,
+      "instantiation_ok": true,
+      "module": "phase_parser.phase_state_parser",
+      "module_file": "/home/nic/aiweb/runtime_wrappers/phase_parser/phase_state_parser.py",
+      "module_surface": {
+        "classes": [
+          {
+            "module": "datetime",
+            "name": "datetime"
+          },
+          {
+            "module": "datetime",
+            "name": "timezone"
+          },
+          {
+            "module": "phase_parser.phase_state_parser",
+            "name": "PhaseCue"
+          },
+          {
+            "module": "phase_parser.phase_state_parser",
+            "name": "PhaseState"
+          },
+          {
+            "module": "phase_parser.phase_state_parser",
+            "name": "PhaseStateParser"
+          }
+        ],
+        "functions": [
+          {
+            "name": "dataclass",
+            "signature": "(cls=None, /, *, init=True, repr=True, eq=True, order=False, unsafe_hash=False, frozen=False, match_args=True, kw_only=False, slots=False, weakref_slot=False)"
+          },
+          {
+            "name": "field",
+            "signature": "(*, default=<dataclasses._MISSING_TYPE object at 0x748576a8aba0>, default_factory=<dataclasses._MISSING_TYPE object at 0x748576a8aba0>, init=True, repr=True, hash=None, compare=True, metadata=None, kw_only=<dataclasses._MISSING_TYPE object at 0x748576a8aba0>)"
+          }
+        ]
+      },
+      "surface": {
+        "methods": [
+          {
+            "name": "parse",
+            "signature": "(input_text: 'str', context: 'Dict | None' = None) -> 'Dict'"
+          },
+          {
+            "name": "parse_state",
+            "signature": "(input_text: 'str', context: 'Dict | None' = None) -> 'PhaseState'"
+          }
+        ],
+        "type": "PhaseStateParser"
+      }
+    },
+    {
+      "class": "PhaseStateParser",
+      "class_ok": true,
+      "error": null,
+      "import_ok": true,
+      "instantiation_ok": true,
+      "module": "phase_state_parser.phase_state_parser",
+      "module_file": "/home/nic/aiweb/runtime_wrappers/phase_state_parser/phase_state_parser.py",
+      "module_surface": {
+        "classes": [
+          {
+            "module": "pathlib",
+            "name": "Path"
+          },
+          {
+            "module": "_rmc_phase_parser_impl",
+            "name": "PhaseCue"
+          },
+          {
+            "module": "_rmc_phase_parser_impl",
+            "name": "PhaseState"
+          },
+          {
+            "module": "_rmc_phase_parser_impl",
+            "name": "PhaseStateParser"
+          }
+        ],
+        "functions": [
+          {
+            "name": "module_from_spec",
+            "signature": "(spec)"
+          },
+          {
+            "name": "spec_from_file_location",
+            "signature": "(name, location=None, *, loader=None, submodule_search_locations=<object object at 0x748576d78150>)"
+          }
+        ]
+      },
+      "surface": {
+        "methods": [
+          {
+            "name": "parse",
+            "signature": "(input_text: 'str', context: 'Dict | None' = None) -> 'Dict'"
+          },
+          {
+            "name": "parse_state",
+            "signature": "(input_text: 'str', context: 'Dict | None' = None) -> 'PhaseState'"
+          }
+        ],
+        "type": "PhaseStateParser"
+      }
+    },
+    {
+      "class": "DriftArbitrator",
+      "class_ok": true,
+      "error": null,
+      "import_ok": true,
+      "instantiation_ok": true,
+      "module": "drift_detection.drift_detector",
+      "module_file": "/home/nic/aiweb/runtime_wrappers/drift_detection/drift_detector.py",
+      "module_surface": {
+        "classes": [
+          {
+            "module": "collections",
+            "name": "Counter"
+          },
+          {
+            "module": "datetime",
+            "name": "datetime"
+          },
+          {
+            "module": "datetime",
+            "name": "timezone"
+          },
+          {
+            "module": "typing",
+            "name": "Any"
+          },
+          {
+            "module": "drift_detection.drift_detector",
+            "name": "DriftEvent"
+          },
+          {
+            "module": "drift_detection.drift_detector",
+            "name": "DriftArbitrator"
+          }
+        ],
+        "functions": [
+          {
+            "name": "dataclass",
+            "signature": "(cls=None, /, *, init=True, repr=True, eq=True, order=False, unsafe_hash=False, frozen=False, match_args=True, kw_only=False, slots=False, weakref_slot=False)"
+          },
+          {
+            "name": "field",
+            "signature": "(*, default=<dataclasses._MISSING_TYPE object at 0x748576a8aba0>, default_factory=<dataclasses._MISSING_TYPE object at 0x748576a8aba0>, init=True, repr=True, hash=None, compare=True, metadata=None, kw_only=<dataclasses._MISSING_TYPE object at 0x748576a8aba0>)"
+          }
+        ]
+      },
+      "surface": {
+        "methods": [
+          {
+            "name": "evaluate",
+            "signature": "(text: 'str', current_phase: 'int', phase_history: 'List[int] | None' = None, expected_shape: 'Any | None' = None, memory_baseline: 'str | None' = None) -> 'Dict'"
+          },
+          {
+            "name": "reset_circuit",
+            "signature": "() -> 'None'"
+          }
+        ],
+        "type": "DriftArbitrator"
+      }
+    },
+    {
+      "class": "DriftArbitrator",
+      "class_ok": true,
+      "error": null,
+      "import_ok": true,
+      "instantiation_ok": true,
+      "module": "drift_arbitrator.drift_arbitrator",
+      "module_file": "/home/nic/aiweb/runtime_wrappers/drift_arbitrator/drift_arbitrator.py",
+      "module_surface": {
+        "classes": [
+          {
+            "module": "pathlib",
+            "name": "Path"
+          },
+          {
+            "module": "_rmc_drift_detector_impl",
+            "name": "DriftEvent"
+          },
+          {
+            "module": "_rmc_drift_detector_impl",
+            "name": "DriftArbitrator"
+          }
+        ],
+        "functions": [
+          {
+            "name": "module_from_spec",
+            "signature": "(spec)"
+          },
+          {
+            "name": "spec_from_file_location",
+            "signature": "(name, location=None, *, loader=None, submodule_search_locations=<object object at 0x748576d78150>)"
+          }
+        ]
+      },
+      "surface": {
+        "methods": [
+          {
+            "name": "evaluate",
+            "signature": "(text: 'str', current_phase: 'int', phase_history: 'List[int] | None' = None, expected_shape: 'Any | None' = None, memory_baseline: 'str | None' = None) -> 'Dict'"
+          },
+          {
+            "name": "reset_circuit",
+            "signature": "() -> 'None'"
+          }
+        ],
+        "type": "DriftArbitrator"
+      }
+    },
+    {
+      "class": "EchoGate",
+      "class_ok": true,
+      "error": null,
+      "import_ok": true,
+      "instantiation_ok": true,
+      "module": "echo_validator.echo_validator",
+      "module_file": "/home/nic/aiweb/runtime_wrappers/echo_validator/echo_validator.py",
+      "module_surface": {
+        "classes": [
+          {
+            "module": "datetime",
+            "name": "datetime"
+          },
+          {
+            "module": "datetime",
+            "name": "timezone"
+          },
+          {
+            "module": "echo_validator.echo_validator",
+            "name": "EchoCheck"
+          },
+          {
+            "module": "echo_validator.echo_validator",
+            "name": "EchoReport"
+          },
+          {
+            "module": "echo_validator.echo_validator",
+            "name": "EchoGate"
+          }
+        ],
+        "functions": [
+          {
+            "name": "dataclass",
+            "signature": "(cls=None, /, *, init=True, repr=True, eq=True, order=False, unsafe_hash=False, frozen=False, match_args=True, kw_only=False, slots=False, weakref_slot=False)"
+          },
+          {
+            "name": "field",
+            "signature": "(*, default=<dataclasses._MISSING_TYPE object at 0x748576a8aba0>, default_factory=<dataclasses._MISSING_TYPE object at 0x748576a8aba0>, init=True, repr=True, hash=None, compare=True, metadata=None, kw_only=<dataclasses._MISSING_TYPE object at 0x748576a8aba0>)"
+          }
+        ]
+      },
+      "surface": {
+        "methods": [
+          {
+            "name": "validate",
+            "signature": "(manifest: 'Dict', rendered_output: 'str', modality: 'str' = 'language') -> 'Tuple[bool, float, str]'"
+          },
+          {
+            "name": "validate_report",
+            "signature": "(manifest: 'Dict', rendered_output: 'str', modality: 'str' = 'language') -> 'EchoReport'"
+          }
+        ],
+        "type": "EchoGate"
+      }
+    },
+    {
+      "class": "EchoGate",
+      "class_ok": true,
+      "error": null,
+      "import_ok": true,
+      "instantiation_ok": true,
+      "module": "echo_gate.echo_gate",
+      "module_file": "/home/nic/aiweb/runtime_wrappers/echo_gate/echo_gate.py",
+      "module_surface": {
+        "classes": [
+          {
+            "module": "pathlib",
+            "name": "Path"
+          },
+          {
+            "module": "_rmc_echo_validator_impl",
+            "name": "EchoCheck"
+          },
+          {
+            "module": "_rmc_echo_validator_impl",
+            "name": "EchoReport"
+          },
+          {
+            "module": "_rmc_echo_validator_impl",
+            "name": "EchoGate"
+          }
+        ],
+        "functions": [
+          {
+            "name": "module_from_spec",
+            "signature": "(spec)"
+          },
+          {
+            "name": "spec_from_file_location",
+            "signature": "(name, location=None, *, loader=None, submodule_search_locations=<object object at 0x748576d78150>)"
+          }
+        ]
+      },
+      "surface": {
+        "methods": [
+          {
+            "name": "validate",
+            "signature": "(manifest: 'Dict', rendered_output: 'str', modality: 'str' = 'language') -> 'Tuple[bool, float, str]'"
+          },
+          {
+            "name": "validate_report",
+            "signature": "(manifest: 'Dict', rendered_output: 'str', modality: 'str' = 'language') -> 'EchoReport'"
+          }
+        ],
+        "type": "EchoGate"
+      }
+    },
+    {
+      "class": "RMCOrchestrator",
+      "class_ok": true,
+      "error": null,
+      "import_ok": true,
+      "instantiation_ok": true,
+      "module": "rmc_orchestrator.rmc_orchestrator",
+      "module_file": "/home/nic/aiweb/runtime_wrappers/rmc_orchestrator/rmc_orchestrator.py",
+      "module_surface": {
+        "classes": [
+          {
+            "module": "datetime",
+            "name": "datetime"
+          },
+          {
+            "module": "datetime",
+            "name": "timezone"
+          },
+          {
+            "module": "typing",
+            "name": "Any"
+          },
+          {
+            "module": "phase_parser.phase_state_parser",
+            "name": "PhaseStateParser"
+          },
+          {
+            "module": "ancestral_memory.ancestral_memory",
+            "name": "AncestralMemory"
+          },
+          {
+            "module": "drift_detection.drift_detector",
+            "name": "DriftArbitrator"
+          },
+          {
+            "module": "manifest_compiler.manifest_compiler",
+            "name": "ManifestCompiler"
+          },
+          {
+            "module": "output_renderer.output_renderer",
+            "name": "OutputRenderer"
+          },
+          {
+            "module": "echo_validator.echo_validator",
+            "name": "EchoGate"
+          },
+          {
+            "module": "rmc_orchestrator.rmc_orchestrator",
+            "name": "RMCResult"
+          },
+          {
+            "module": "rmc_orchestrator.rmc_orchestrator",
+            "name": "RMCOrchestrator"
+          }
+        ],
+        "functions": []
+      },
+      "surface": {
+        "methods": [
+          {
+            "name": "get_drift_history",
+            "signature": "() -> 'List[Dict[str, Any]]'"
+          },
+          {
+            "name": "get_memory_state",
+            "signature": "() -> 'Dict[str, Any]'"
+          },
+          {
+            "name": "get_phase_history",
+            "signature": "() -> 'List[int]'"
+          },
+          {
+            "name": "memory_summary",
+            "signature": "() -> 'Dict[str, Any]'"
+          },
+          {
+            "name": "process",
+            "signature": "(input_text: 'str', modality: 'Optional[str]' = None, store_to_memory: 'bool' = True) -> 'RMCResult'"
+          },
+          {
+            "name": "reset_history",
+            "signature": "() -> 'None'"
+          }
+        ],
+        "type": "RMCOrchestrator"
+      }
+    }
+  ],
+  "runtime_wrappers": "/home/nic/aiweb/runtime_wrappers",
+  "timestamp": "20260523_185525_UTC",
+  "tool_registry": {
+    "current_trust_level": 5.0,
+    "exists": true,
+    "path": "/home/nic/forge/config/tool_registry.json",
+    "rmc_mentions": 0
+  },
+  "verdict": "PASS"
+}

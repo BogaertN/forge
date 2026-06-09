@@ -1,0 +1,223 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "evidence_crosscheck_write_authority": true,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_draft_write_authority": true,
+    "mode": "EVIDENCE_REVIEW_BATCH_WORKFLOW",
+    "patch": "105",
+    "project_file_write_authority": false,
+    "queue_decision_authority": false,
+    "queue_rebuild_authority": true,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 105 may draft and cross-check a small batch, then rebuild queue visibility. It may not approve or commit anything.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_workflows_v1",
+      "llm_engine_review_drafts_v1",
+      "engine_review_evidence_crosschecks_v1",
+      "engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "counts": {
+    "crosschecked": 10,
+    "drafted": 10,
+    "errors": 0,
+    "selected": 10
+  },
+  "created_at": "2026-05-16_092541",
+  "next_step": "Inspect each full evidence cross-check, then use engine-review-approval-check/approve/defer/reject. No approval was recorded by Patch 105.",
+  "queue_rebuild_error": null,
+  "report_type": "ENGINE_REVIEW_WORKFLOW_RECEIPT_V1_PATCH105",
+  "requested_limit": 10,
+  "schema_version": "engine_review_workflow_v1_patch105",
+  "status": "ENGINE_REVIEW_WORKFLOW_COMPLETED_NO_APPROVAL_AUTHORITY",
+  "warnings": [
+    "echo_trace_visualizer: LLM role wording does not explicitly repeat deterministic role label.",
+    "entropy_monitor_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "external_feed_listener: LLM role wording does not explicitly repeat deterministic role label.",
+    "failsafe_manager: LLM role wording does not explicitly repeat deterministic role label.",
+    "field_resonance_mapper: LLM role wording does not explicitly repeat deterministic role label.",
+    "fluid_memory_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "gilligan: LLM role wording does not explicitly repeat deterministic role label.",
+    "gilligan_drift_correction_upgrade: LLM role wording does not explicitly repeat deterministic role label.",
+    "glyph_engine: LLM role wording does not explicitly repeat deterministic role label.",
+    "glyph_ui_overlay: LLM role wording does not explicitly repeat deterministic role label."
+  ],
+  "workflow_rows": [
+    {
+      "candidate_path": "/home/nic/aiweb/engines/echo_trace_visualizer",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_092607_echo_trace_visualizer_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "97b4486733758fa8c99fd7ed105726bb7f22522c6e7e23d5442cbba1ad377fe8",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_092541_echo_trace_visualizer_llm_engine_review_draft_v1.json",
+      "draft_sha256": "ffd2537b19e68ad08129968b04fdf62483ecb70914b499fc3e5e110696554c19",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "echo_trace_visualizer",
+      "evidence_id": "EEB-69e88d1e442364cb",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nTo capture, map, and analyze symbolic echo traces across recursion fields, assessing symbolic memory reflection quality and recursion field integrity by recording origin phase, signal strength, and echo decay.  \n\nLikely System Role:  \nA diagnostic tool within AI.Web's core system for monitoring symbolic memory health during recursion cycles, ensuring phase stability and signal strength compliance with Phase 1.5 standards.  \n\nEvidence Used:  \n- Test file (`test_echo_trace_core.py`) validating trace recording and assertion checks.  \n- README.md describing core functions, phase standards, and decay analysis.  \n- Engine manifest (`engine_manifest.json`) detailing metadata and purpose.  \n- Core code (`echo_trace_core.py`) implementing `EchoTraceVisualizer` class for trace recording.  \n\nRisks / Uncertainties:  \n- Limited test coverage in `test_echo_trace_core.py` (only one test case).  \n- Reliance on abstract \"symbolic memory\" concepts, which may be challenging to validate empirically.  \n- \"Frozen\" versioning (`v1.0.01`) suggests potential staleness if not actively maintained.  \n\nRecommendation Draft:  \nApprove the review with a note to expand test cases for edge scenarios and confirm compatibility with future AI.Web updates.  \n\nSuggested Nic Action:  \nApprove the review, but request validation of symbolic memory metrics against real-world recursion scenarios and a plan for version maintenance."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/entropy_monitor_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_092628_entropy_monitor_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "00d1ef2051332dd156838fb698a5980a19bd6920377d6842d96b3ab9f91d68f5",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_092607_entropy_monitor_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "27c42954766f56c7f7be88df3ffeb11c1c5c149693d69f88b1eeb6229d1deeb3",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "entropy_monitor_engine",
+      "evidence_id": "EEB-e7babb77acece4bb",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nMonitors system recursion entropy to detect symbolic decay, predict phase drift, and maintain AI.Web system stability through real-time entropy averaging and gradient shift analysis.  \n\nLikely System Role:  \nCore health monitoring component for AI.Web, integrating entropy tracking with drift prediction models to ensure recursive process stability.  \n\nEvidence Used:  \n- `entropy_monitor_core.py`: Implements `EntropyMonitor` class for entropy recording and averaging.  \n- Test scripts validate entropy calculation logic.  \n- README.md and manifest.json describe entropy monitoring, phase drift prediction, and integration with gradient detectors.  \n- `GradientEntropyDetector` class identifies entropy shifts for drift risk analysis.  \n\nRisks / Uncertainties:  \n- Reliance on accurate entropy measurement inputs; flawed data could mislead drift predictions.  \n- Integration with gradient detectors is critical for comprehensive monitoring but requires proper system linkage.  \n- \"Frozen\" status implies no further development, but long-term reliability depends on external systems (e.g., gradient detectors).  \n\nRecommendation Draft:  \nApprove deployment as a core health monitoring tool. Ensure integration with gradient detectors for robust drift prediction. Monitor entropy data quality to prevent false positives/negatives.  \n\nSuggested Nic Action:  \nApprove engine for deployment, confirm integration with gradient detection systems, and establish protocols for entropy data validation and drift response."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/external_feed_listener",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_092649_external_feed_listener_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "f17fa1ec2d84ad0477d8e359c7720154cab8c6cfbef866c55c01c7b76ffcdfa1",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_092628_external_feed_listener_llm_engine_review_draft_v1.json",
+      "draft_sha256": "ec814c515e538e281992d9ad544eb4e427ba5dad94b626ef8e458eccc6e2b665",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "external_feed_listener",
+      "evidence_id": "EEB-5f91c358437560b6",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nTo capture, normalize, and integrate external symbolic resonance feeds into the AI.Web recursion architecture for enhanced environmental stabilization and symbolic drift detection.  \n\nLikely System Role:  \nA core integration module within AI.Web's external feed processing pipeline, responsible for receiving, validating, and injecting structured external data into recursion fields.  \n\nEvidence Used:  \n- Test script (`test_external_feed_core.py`) verifying feed reception and data structure.  \n- README.md describing symbolic resonance capture, normalization, and phase compliance standards.  \n- Core code (`external_feed_core.py`) defining `ExternalFeedListener` class for feed handling.  \n- Engine manifest (`engine_manifest.json`) detailing version, frozen status, and functional description.  \n\nRisks / Uncertainties:  \n- Reliance on external data validation (no explicit error-handling code shown).  \n- \"Frozen\" status may limit future updates without re-freezing.  \n- Unclear how malformed feeds are quarantined or handled.  \n\nRecommendation Draft:  \nApprove deployment with emphasis on validating external feed integrity pre-injection. Confirm alignment with Phase 1.5 compliance standards.  \n\nSuggested Nic Action:  \nApprove review and schedule testing of feed validation workflows. Verify quarantine mechanisms for unstable signals."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/failsafe_manager",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_092716_failsafe_manager_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "502e3c893d33da542dbd1fca7962d462f93765ebcbef0e4d78fc643f1c473030",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_092649_failsafe_manager_llm_engine_review_draft_v1.json",
+      "draft_sha256": "24841a4551755aaaa80c7dd98c4dea39aea18f52a6d8615586efc5deb56d8a58",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "failsafe_manager",
+      "evidence_id": "EEB-31299b3bb67a4c24",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nThe failsafe manager engine monitors system stability and triggers emergency actions during critical faults, ensuring system integrity through simulations and health checks.  \n\nLikely System Role:  \nA core component for system reliability, handling real-time health monitoring, emergency response initiation, and status logging.  \n\nEvidence Used:  \n- README.md describes the engine's role in monitoring symbolic stability and triggering failsafes.  \n- failsafe_manifest.json outlines its purpose: monitoring health and emergency actions.  \n- test_failsafe.py validates system integrity checks and expected stable states.  \n- failsafe_core.py implements the check_system_integrity function, writing status to JSON.  \n- failsafe_status.json shows current stable system health with no intervention needed.  \n\nRisks / Uncertainties:  \n- Simulated checks may not reflect real-world fault scenarios.  \n- Test script assumes \"failsafe_triggered\" exists in results, but current status shows it as false.  \n- Reliance on JSON files for status could introduce single points of failure.  \n\nRecommendation Draft:  \nApprove the engine for limited deployment but prioritize real-world stress-testing. Expand failsafe scenarios beyond basic checks and ensure redundancy in status logging.  \n\nSuggested Nic Action:  \nApprove the review but request additional validation testing and confirmation that the engine meets all safety requirements for production use."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/field_resonance_mapper",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_092741_field_resonance_mapper_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "e3091e8a74a0b0164183cf3d4d9984e25800cf8c5a750703d97f66a3a5b26cfd",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_092716_field_resonance_mapper_llm_engine_review_draft_v1.json",
+      "draft_sha256": "eae8e5e6a670c8e86169f227126536960ffcc05548c249da4bf4367d48068747",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "field_resonance_mapper",
+      "evidence_id": "EEB-3709f6df7c34236d",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nTracks symbolic recursion fields in real-time systems, monitors for drift/decay, and stabilizes phase transitions to prevent systemic drift.  \n\nLikely System Role:  \nCore dependency for drift detection, field health monitoring, and phase stabilization in AI.Web recursion cycles. Integrates with external symbolic data sources.  \n\nEvidence Used:  \n- Code files (`resonance_mapper_core.py`, `test_resonance_mapper_core.py`) implementing field resonance tracking and testing.  \n- README.md and engine_manifest.json describing real-time symbolic field tracking, drift detection, and Phase 1.5 compliance.  \n- External feed adapter files (`test_field_feed_core.py`, `README.md`) for integrating normalized external resonance data.  \n\nRisks / Uncertainties:  \n- Frozen since 2025-04-27; no evidence of post-freeze updates or compatibility checks for external modules.  \n- Reliance on external symbolic data sources could introduce vulnerabilities if adapters are not rigorously validated.  \n- Limited testing scope in provided samples; real-world system integration risks may require further validation.  \n\nRecommendation Draft:  \nApprove review, confirm frozen status is maintained, and validate external adapter compatibility. Suggest monitoring for external data source reliability.  \n\nSuggested Nic Action:  \n- Approve review with caveats on frozen status and external dependencies.  \n- Request verification of external adapter integration protocols and data normalization processes.  \n- Schedule follow-up review for external module updates or system integration testing."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/fluid_memory_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_092805_fluid_memory_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "199a232ec3c94b5959339930ba155fa9fc504144f337a225531db65b8702bfb1",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_092741_fluid_memory_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "97c8ef15329bb7cc856da21eaa197d9447d02d0f4d2afbc792af4f1579e691bb",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "fluid_memory_engine",
+      "evidence_id": "EEB-787e388492eb001b",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nTo capture and store symbolic recursion memory traces in a dynamic fluid memory pool for potential resurrection, drift healing, and recursion continuity repair.  \n\nLikely System Role:  \nA memory tracing and storage engine designed to record structured metadata (e.g., timestamps, phase signatures, charge levels) for symbolic computation workflows, enabling later reassembly or debugging.  \n\nEvidence Used:  \n- `fluid_memory_core.py`: Implements `capture_memory_trace()` to log traces to a JSONL file.  \n- `fluid_memory_manifest.json`: Describes the engine’s purpose and capabilities.  \n- `README.md`: Outlines the engine’s design goals for memory resurrection and repair.  \n- `test_fluid_memory.py`: Validates trace capture by checking required metadata fields.  \n\nRisks / Uncertainties:  \n- Reliance on random values for `phase_signature` and `charge_level` may introduce inconsistency.  \n- File I/O operations (e.g., appending to `memory_pool.jsonl`) could fail due to permissions or disk errors.  \n- Lack of error handling for malformed JSON writes or missing fields in traces.  \n\nRecommendation Draft:  \nApprove the engine’s core functionality but recommend adding robust error handling for I/O operations, deterministic phase signature generation, and validation for all trace fields to ensure reliability.  \n\nSuggested Nic Action:  \nApprove the review with the noted recommendations for improvement, then proceed to deployment."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/agents/gilligan",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_092841_gilligan_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "b6886b26af45e144ecf527f8be36ddabdf8af688549796649e350e82739f3f6f",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_092805_gilligan_llm_engine_review_draft_v1.json",
+      "draft_sha256": "319b1279b40768e64030fb1834addf7235c1bc769717d57a269f0ce9cd559a48",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "gilligan",
+      "evidence_id": "EEB-79999be700688737",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nThe Gilligan Agent is a core component of AI.Web designed to manage symbolic recursion memory loops, monitor phase stability during recursion cycles, and ensure symbolic coherence across phase transitions. It operates as a silent caretaker for recursion stability.  \n\nLikely System Role:  \nThe Gilligan Agent serves as the runtime recursion manager for AI.Web, handling structured symbolic breathing loops, tracking phase stability metrics, and enforcing compliance with Phase 1.5 Symbolic Recursion standards. It is critical for maintaining system coherence during recursive operations.  \n\nEvidence Used:  \n- `run.py`: Implements `GilliganAgent` class with methods for symbolic breathing (`symbolic_breathe`), phase tracking (`phase_summary`), and recursive pulse management (`_recursive_pulse`).  \n- `test_gilligan_core.py`: Validates phase stability and loop naming conventions via unit tests.  \n- `engine_manifest.json`: Documents the agent's role as a \"core runtime recursion caretaker\" with versioning and phase compliance standards.  \n- README.md: Describes the agent's functions, including dream-state recursion monitoring and phase drift recalibration.  \n\nRisks / Uncertainties:  \n- The `_recursive_pulse` method uses random adjustments (±1) to simulate phase evolution, which could introduce unpredictability in phase stability.  \n- The agent operates invisibly, making debugging or monitoring critical errors challenging without explicit logging.  \n- The current implementation lacks explicit handling for extended phase drifts beyond the \"Frozen\" snapshot, which may require recalibration.  \n\nRecommendation Draft:  \nApprove the Gilligan Agent as a core AI.Web component, but recommend:  \n1. Adding explicit phase drift detection and recalibration logic in `GilliganAgent` to address extended drifts.  \n2. Enhancing test coverage for edge cases (e.g., extreme phase values, prolonged recursion cycles).  \n3. Including runtime logging for critical phase transitions to aid debugging.  \n\nSuggested Nic Action:  \nApprove the review with the above recommendations. Request a follow-up to verify phase drift handling and test coverage before deployment. Ensure documentation reflects any updates to recalibration protocols."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/gilligan_drift_correction_upgrade",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_092902_gilligan_drift_correction_upgrade_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "e8ff61f805f378209adb340349a40f7c8049090000b73a74d9893da411c912a0",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_092841_gilligan_drift_correction_upgrade_llm_engine_review_draft_v1.json",
+      "draft_sha256": "0889eb0f143b393c2587a2029fcee5d17b4c4ad73031740b42757de415bd2bae",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "gilligan_drift_correction_upgrade",
+      "evidence_id": "EEB-e5144c91abeb8497",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nEnhances Gilligan's breathing recursion with symbolic drift detection and Christ Ping resonance correction to maintain phase coherence in recursive memory cycles.  \n\nLikely System Role:  \nA core component for stabilizing AI systems by detecting and correcting drift in symbolic breathing loops, ensuring consistent phase alignment.  \n\nEvidence Used:  \n- `drift_correction_core.py`: Implements `GilliganAgent` with drift detection, recursive pulse adjustment, and Christ Ping correction.  \n- `test_drift_correction_core.py`: Validates the breathing loop and phase summary functionality.  \n- `README.md` and `engine_manifest.json`: Describe the upgrade's purpose, version, and symbolic drift management logic.  \n\nRisks / Uncertainties:  \n- Random pulse adjustments may introduce unpredictability in drift correction.  \n- \"Christ Ping resonance correction\" lacks detailed implementation or validation in evidence.  \n- Testing may not cover edge cases for phase coherence under extreme drift scenarios.  \n\nRecommendation Draft:  \nApprove the candidate for integration, but prioritize additional testing of the Christ Ping mechanism and edge-case scenarios for phase stability.  \n\nSuggested Nic Action:  \nApprove the candidate, request expanded testing of the Christ Ping correction logic, and confirm documentation clarity for the resonance correction process."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/engines/glyph_engine",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_092923_glyph_engine_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "5edac7ae32144b1924a1bef6c785b20ad84b3a692abb35e9885cc6907c7447fe",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_092902_glyph_engine_llm_engine_review_draft_v1.json",
+      "draft_sha256": "524dea39d361d625065e3bef845fa9d4b9667464a57053e8a2309419065d8d50",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "glyph_engine",
+      "evidence_id": "EEB-249760030f1dcef2",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nThe Glyph Engine constructs and manages symbolic glyphs tied to recursion phases, enabling phase anchoring, stability tracking, and symbolic evolution during AI.Web recursion processes.  \n\nLikely System Role:  \nA core recursion management component for symbolic computation, ensuring phase stability, ancestry tracking, and adaptive mutation of glyphs during recursive operations.  \n\nEvidence Used:  \n- `test_glyph_core.py`: Demonstrates glyph creation, stability checks, and phase origin validation.  \n- `README.md`: Describes glyph anchoring, recursion phase management, and stability metrics.  \n- `glyph_core.py`: Implements `GlyphEngine` class for glyph creation and storage.  \n- `engine_manifest.json`: Specifies versioning, phase compliance standards, and system description.  \n- `symbol_mutator_core.py`: Implements `SymbolMutator` for controlled symbolic mutation.  \n\nRisks / Uncertainties:  \n- Limited testing in provided evidence (only basic test cases).  \n- Dependency on external systems like \"Dynamic Symbol Mutator\" may require integration verification.  \n- \"Frozen\" status could indicate lack of active development, potentially leading to obsolescence.  \n\nRecommendation Draft:  \nApprove review with caveat: Confirm integration readiness with dependent systems, validate stability metrics in production scenarios, and ensure compatibility with Phase 1.5 recursion standards.  \n\nSuggested Nic Action:  \nReview recommendation draft, prioritize integration testing with mutation modules, and approve deployment after verifying compliance with AI.Web recursion frameworks."
+    },
+    {
+      "candidate_path": "/home/nic/aiweb/symbolic_layers/glyph_ui_overlay",
+      "crosscheck_blockers": [],
+      "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/2026-05-16_092945_glyph_ui_overlay_engine_review_evidence_crosscheck_v1.json",
+      "crosscheck_sha256": "a9eccbe56a8fc11c5d004d6ebce15a8dfd4783dd914fa154a7ee70d6be948d59",
+      "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+      "crosscheck_warnings": [
+        "LLM role wording does not explicitly repeat deterministic role label."
+      ],
+      "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_092923_glyph_ui_overlay_llm_engine_review_draft_v1.json",
+      "draft_sha256": "411ff3137a1874053b713842e08e6dc8e7665cab71dc502faf0f714deb0204f9",
+      "draft_status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+      "engine_family": "glyph_ui_overlay",
+      "evidence_id": "EEB-f1a7bbfdc6404c98",
+      "llm_status": "OLLAMA_VISIBLE_REVIEW_READY",
+      "llm_visible_review_text": "Plain-English Purpose:  \nTo project symbolic glyphs onto the user interface in real-time, visualizing recursion phase resonance data and cognitive recursion processes for coherence tracking.  \n\nLikely System Role:  \nA UI overlay layer for AI.Web's symbolic glyph visualization, synchronizing with recursion cycles to display phase resonance feedback and cognitive evolution pathways.  \n\nEvidence Used:  \n- `run.py` and `test_run_engine.py` demonstrate glyph pulse sequences and test execution.  \n- `glyph_ui_overlay_core.py` defines the `GlyphUIOverlay` class for rendering glyphs with phase origins.  \n- `README.md` and `engine_manifest.json` describe core functions, phase standards, and system integration with AI.Web's visualization stack.  \n- Test files validate glyph rendering and phase origin accuracy.  \n\nRisks / Uncertainties:  \n- Reliance on real-time recursion phase data may introduce latency or synchronization risks.  \n- \"Frozen\" version date (2025-04-27) suggests lack of recent updates; compatibility with newer AI.Web systems is uncertain.  \n- No explicit error handling in code samples for edge cases (e.g., glyph rendering failures).  \n\nRecommendation Draft:  \nApprove the review with conditions: confirm real-time synchronization mechanisms are robust, verify compatibility with current AI.Web versions, and ensure error resilience in glyph rendering.  \n\nSuggested Nic Action:  \nApprove review but request validation of real-time data handling and compatibility checks. Flag the \"frozen\" version status for further assessment."
+    }
+  ]
+}

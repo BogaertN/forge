@@ -1,0 +1,120 @@
+{
+  "authority": {
+    "allowed_gateway_tools": [
+      "read_file",
+      "code_related_files"
+    ],
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "forbidden_gateway_tools": [
+      "shell",
+      "patch-apply",
+      "ingest-one",
+      "ingest-batch-apply",
+      "delete",
+      "quarantine",
+      "restore",
+      "snapshot-live-restore",
+      "network",
+      "pip",
+      "npm",
+      "sudo"
+    ],
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "LLM_ENGINE_REVIEW_DRAFTS_WITH_REVIEW_LIMITED_READ_LENS",
+    "patch": "98",
+    "project_write_authority": false,
+    "rule": "The LLM may draft review recommendations from bound evidence. Nic approves separately. Forge commits only in a future gated patch.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/llm_engine_review_drafts_v1"
+  },
+  "blockers": [],
+  "candidate_path_recorded": "aiweb/engines/drift_signature_logger",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/drift_signature_logger",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-16_085412",
+  "draft_id": "LER-drift_signature_logger-2026-05-16_085412",
+  "engine_family": "drift_signature_logger",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_drift_signature_logger_engine_evidence_binder.json",
+  "evidence_binder_sha256": "5404f2d2b143990d825c7b7ddde003c9ebbb70414ef1bf85d405ad03e031d2e3",
+  "evidence_id": "EEB-3f7110ff52737f3a",
+  "file_count": 12,
+  "gateway_policy_path": "/home/nic/forge/memory/llm_memory_v1/indexes/llm_engine_review_gateway_policy.json",
+  "gateway_policy_sha256": "d7aafb5368368a7ad4afbd79668a71607d640b1f24fbb197bb9b4308e06d4da5",
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 28.007,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "d598427a4985d4ca9fe37b0d12e7b7fe8cee8c8a076bd7a1eb68f88a00952f5d",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nMonitors and logs symbolic drift events during recursion cycles to detect phase instability and predict system destabilization risks.  \n\nLikely System Role:  \nA core component of AI.Web's Phase 1.5 Symbolic Recursion Compliance, integrating with ghost loop tagging to track drift magnitude, field identifiers, and event frequency for stability prediction.  \n\nEvidence Used:  \n- `test_drift_signature_core.py`: Unit tests for logging functionality and signature tracking.  \n- `README.md`: Describes drift signature logging, phase compliance, and integration with recursion health monitoring.  \n- `drift_signature_core.py`: Implements `DriftSignatureLogger` class for storing and counting drift signatures.  \n- `drift_core.py`: Logs drift events to a JSON file with timestamps and severity levels.  \n- `engine_manifest.json`: Defines engine metadata, including its role in phase drift profiling.  \n\nRisks / Uncertainties:  \n- Reliance on file-based logging (`drift_trace.log`) could fail if disk access is restricted.  \n- \"Frozen\" version date (2025-04-27) may conflict with current deployment timelines.  \n- Integration with \"ghost loop tagging\" is undocumented, posing potential compatibility risks.  \n\nRecommendation Draft:  \nApprove the engine for Phase 1.5 compliance but prioritize:  \n1. Validating the file logging mechanism's reliability.  \n2. Confirming the \"ghost loop tagging\" integration exists and is functional.  \n3. Ensuring the frozen version date aligns with deployment schedules.  \n\nSuggested Nic Action:  \nApprove the review but request verification of the logging infrastructure and integration dependencies before deployment."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nMonitors and logs symbolic drift events during recursion cycles to detect phase instability and predict system destabilization risks.  \n\nLikely System Role:  \nA core component of AI.Web's Phase 1.5 Symbolic Recursion Compliance, integrating with ghost loop tagging to track drift magnitude, field identifiers, and event frequency for stability prediction.  \n\nEvidence Used:  \n- `test_drift_signature_core.py`: Unit tests for logging functionality and signature tracking.  \n- `README.md`: Describes drift signature logging, phase compliance, and integration with recursion health monitoring.  \n- `drift_signature_core.py`: Implements `DriftSignatureLogger` class for storing and counting drift signatures.  \n- `drift_core.py`: Logs drift events to a JSON file with timestamps and severity levels.  \n- `engine_manifest.json`: Defines engine metadata, including its role in phase drift profiling.  \n\nRisks / Uncertainties:  \n- Reliance on file-based logging (`drift_trace.log`) could fail if disk access is restricted.  \n- \"Frozen\" version date (2025-04-27) may conflict with current deployment timelines.  \n- Integration with \"ghost loop tagging\" is undocumented, posing potential compatibility risks.  \n\nRecommendation Draft:  \nApprove the engine for Phase 1.5 compliance but prioritize:  \n1. Validating the file logging mechanism's reliability.  \n2. Confirming the \"ghost loop tagging\" integration exists and is functional.  \n3. Ensuring the frozen version date aligns with deployment schedules.  \n\nSuggested Nic Action:  \nApprove the review but request verification of the logging infrastructure and integration dependencies before deployment.",
+  "plain_english_brief": {
+    "classes_sample": [
+      "DriftSignatureLogger",
+      "GhostLoopTagger"
+    ],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Captures",
+      "Drift",
+      "Frozen",
+      "Ghost",
+      "Logger",
+      "Logs",
+      "Loop",
+      "Overview",
+      "Signature",
+      "Tagged",
+      "Tagger",
+      "The",
+      "__init__",
+      "across",
+      "after",
+      "and",
+      "archives",
+      "are",
+      "coherence",
+      "description"
+    ],
+    "imports_sample": [
+      "from drift_signature_core import DriftSignatureLogger",
+      "import json",
+      "import time"
+    ],
+    "likely_system_role": "drift_collapse",
+    "plain_english_purpose": "`drift_signature_logger` appears to be a local AI.Web engine/component. The bound source evidence includes 12 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "KEEP_APPROVED_REVIEW_STATUS",
+    "risk_notes": [],
+    "role_reason": "Inferred from engine family keyword `drift` plus bound code evidence.",
+    "source_excerpt_samples": [
+      "# test_drift_signature_core.py ",
+      "# Drift Signature Logger (Frozen v1.0.01) ",
+      "# drift_signature_core.py # Drift Signature Logger Core",
+      "# drift_core.py # Drift Signature Logger Core \u2013 Phase 1.5 Standard"
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "report_type": "LLM_ENGINE_REVIEW_DRAFT_V1_PATCH98_2_REAL_LOCAL_LLM_ATTEMPT",
+  "review_status_at_draft_time": "APPROVED",
+  "schema_version": "llm_engine_review_draft_v1_patch98",
+  "stale_evidence_rule": "Patch 100 must re-read candidate path and re-verify current SHA against this evidence binder before committing any canonical decision. If changed: REFUSED_STALE_ENGINE_EVIDENCE.",
+  "status": "LLM_ENGINE_REVIEW_DRAFT_READY_FOR_HUMAN_REVIEW_NO_AUTHORITY",
+  "warnings": []
+}

@@ -1,0 +1,105 @@
+# FORGE_DASHBOARD_ROADMAP_PANEL_V1
+
+- **status**: `FORGE_DASHBOARD_ROADMAP_PANEL_READY`
+- **active_patch**: `Patch 183 — Runtime Candidate Sandbox Stage Create/Verify / Forge-Owned Copy Only`
+- **current_phase**: `S19AC — Runtime Candidate Sandbox Stage Create/Verify / Forge-Owned Copy Only`
+- **next_patch**: `Patch 184 — Runtime Candidate Sandbox Copy Integrity Review / No-Write Readback Receipt`
+- **panel_count**: `4`
+
+## Panels
+- **roadmap_overview** — `FORGE_BUILD_SEQUENCE_READY` — Roadmap Overview
+  - Current: S19AC — Runtime Candidate Sandbox Stage Create/Verify / Forge-Owned Copy Only
+  - Next: Patch 184 — Runtime Candidate Sandbox Copy Integrity Review / No-Write Readback Receipt
+  - Build rows: 56
+  - Deferred items: 2
+  - Blocked items: 0
+- **gate_summary** — `FORGE_BUILD_PHASE_GATE_READY` — Build Gate Summary
+  - Pass: 8
+  - Warn: 0
+  - Fail: 0
+  - Next gate patch: Patch 147 — Dashboard Roadmap Panel
+- **deferred_queue** — `FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY` — Deferred Engine Queue
+  - Queue total: 26
+  - Repair ready: 1
+  - Repair blocked: 2
+  - Next repair target: stack_linker_breather
+- **authority** — `READ_ONLY` — Authority
+  - Project writes: False
+  - Engine writes: False
+  - Patch apply: False
+  - Shell execution: False
+  - Server started: False
+
+## Build Sequence
+- **S01** — `DONE` — Patch law, audit, and exact truth
+- **S02** — `DONE` — Corpus and source authority foundations
+- **S03** — `DONE` — Codebase index and symbolic runtime map
+- **S04** — `DONE` — Sandbox and safe test harness
+- **S05** — `DONE` — Canonical engine authority
+- **S06** — `DONE` — Relationship and impact intelligence
+- **S07** — `DONE` — Status API and read-only dashboard
+- **S08** — `DONE` — Mode registry and permission matrix
+- **S09** — `DONE` — Roadmap V2 realignment
+- **S10** — `DONE` — Roadmap-Grounded Build Sequencer
+- **S11** — `DONE` — Deferred Engine Repair Queue
+- **S12** — `DONE` — Build Phase Gate Checker
+- **S13** — `DONE` — Dashboard Roadmap Panel
+- **S14** — `DONE` — Source Authority Runtime Binder Hardening
+- **S15** — `DONE` — LLM Patch Proposal v2
+- **S16** — `DONE` — Live Apply Eligibility Gate v2
+- **S17** — `ACTIVE` — Snapshot and forensic replay expansion
+- **S18** — `FUTURE` — Dashboard v2 / operator control panel
+- **S19** — `ACTIVE` — AI.Web runtime build through Forge
+- **S20** — `FUTURE` — Freeze, release, and recovery package
+- **S17A** — `ACTIVE` — Snapshot / Forensic Replay Plan
+- **S17B** — `NEXT` — Snapshot Create / Verify
+- **S17C** — `FUTURE` — Shadow Restore / Forensic Diff
+- **S18A** — `DONE` — Dashboard v2 / Operator Control Panel
+- **S18B** — `NEXT` — Operator Panel Status Aggregator
+- **S18C** — `FUTURE` — Operator Panel Export / Handoff View
+- **S19A** — `DONE` — AI.Web Runtime Build Readiness Map
+- **S19B** — `DONE` — Runtime Module Dependency Map
+- **S19C** — `DONE` — Runtime Build Sandbox Planner
+- **S19D** — `DONE` — Runtime Build Sandbox Plan / Dry Run
+- **S19E** — `DONE` — Runtime Build Sandbox Verification / Candidate File Plan
+- **S19F** — `DONE` — Runtime Candidate File Draft / Sandbox Candidate
+- **S19G** — `DONE` — Runtime Candidate Static Verification / Live Build Gate
+- **S19H** — `DONE` — Runtime Live Build Preflight / Human Approval Gate
+- **S19I** — `DONE` — Runtime Live Build Approval Token / Apply Plan
+- **S19J** — `DONE` — Runtime Live Build Backup / Apply Dry Run
+- **S19K** — `DONE` — Runtime Live Build Final Approval / Live Apply Gate
+- **S19L** — `DONE` — Runtime Live Build Execution Plan / Receipt Gate
+- **S19M** — `DONE` — Runtime Live Build Approval Capture / Execution Gate
+- **S19N** — `DONE` — Runtime Live Build Approval Receipt / Execution Decision Gate
+- **S19O** — `DONE` — Runtime Live Build Human Approval Token Entry Gate
+- **S19P** — `DONE` — Runtime Live Build Approval Token Validation / Final Execution Preflight
+- **S19Q** — `DONE` — Runtime Live Build Explicit Approval Capture / Apply Hold
+- **S19R** — `DONE` — Runtime Live Build Apply Hold Review / No-Write Receipt
+- **S19S** — `DONE` — Runtime Live Build Hold Continuation / Runtime Candidate Queue Return
+- **S19T** — `DONE` — Runtime Candidate Queue Review / Next Candidate Selection
+- **S19U** — `DONE` — Runtime Candidate Dry-Plan Selector / No-Write Planning Gate
+- **S19V** — `DONE` — Runtime Candidate Dry-Plan Scope Builder / No-Write File Set Review
+- **S19W** — `DONE` — Runtime Candidate Dry-Plan Dependency Review / No-Write Impact Notes
+- **S19X** — `DONE` — Runtime Candidate Dry-Plan Validation Matrix / No-Write Test Plan
+- **S19Y** — `DONE` — Runtime Candidate Dry-Plan Sandbox Readiness / No-Write Rehearsal Plan
+- **S19Z** — `DONE` — Runtime Candidate Dry-Plan Rollback Matrix / No-Write Restore Plan
+- **S19AA** — `DONE` — Runtime Candidate Sandbox Execution Preflight / No-Write Gate
+- **S19AB** — `DONE` — Runtime Candidate Sandbox Stage Manifest / No-Write Copy Plan
+- **S19AC** — `ACTIVE` — Runtime Candidate Sandbox Stage Create/Verify / Forge-Owned Copy Only
+- **S19AD** — `NEXT` — Runtime Candidate Sandbox Copy Integrity Review / No-Write Readback Receipt
+
+## Next Commands
+- `forge-build-sequence`
+- `forge-dashboard-roadmap-build`
+- `forge-status-api-build`
+- `forge-dashboard-build`
+- `Install Patch 184 — Runtime Candidate Sandbox Copy Integrity Review / No-Write Readback Receipt when ready`
+
+## Authority
+- **read_only**: `True`
+- **forge_memory_write_only**: `True`
+- **patch_apply_authority**: `False`
+- **project_file_write_authority**: `False`
+- **engine_file_write_authority**: `False`
+- **shell_execution_authority**: `False`
+- **server_started**: `False`

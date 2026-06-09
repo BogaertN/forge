@@ -1,0 +1,275 @@
+{
+  "any_file_boundary": {
+    "current_patch_accepts_arbitrary_path": false,
+    "current_patch_uses_selected_candidate_only": true,
+    "future_generalization_allowed": true,
+    "required_for_any_file": [
+      "approved scope",
+      "exact-list/exact-read",
+      "sha256 current-state record",
+      "no-write plan",
+      "sandbox rehearsal",
+      "safe tests",
+      "rollback matrix",
+      "explicit human approval token in separate live patch",
+      "post-write disk verification"
+    ]
+  },
+  "approval_token_entered": false,
+  "candidate_file_summary": {
+    "config_file_count": 8,
+    "duplicate_basenames": [
+      {
+        "basename": "README.md",
+        "count": 4
+      },
+      {
+        "basename": "failsafe_core.py",
+        "count": 4
+      },
+      {
+        "basename": "failsafe_manifest.json",
+        "count": 4
+      },
+      {
+        "basename": "failsafe_status.json",
+        "count": 4
+      },
+      {
+        "basename": "test_failsafe.py",
+        "count": 4
+      }
+    ],
+    "exact_sha_rows_present": true,
+    "extension_counts": {
+      ".json": 8,
+      ".md": 4,
+      ".py": 8
+    },
+    "file_count": 20,
+    "json_file_count": 8,
+    "python_file_count": 8,
+    "rows_preview": [
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager/README.md",
+        "relative_path": "README.md",
+        "sha256": "4b53cf65fbcda940c80b44187d36a9d25a55c9614971b7d33034a8b3ad71f249",
+        "size": 190
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager/failsafe_core.py",
+        "relative_path": "failsafe_core.py",
+        "sha256": "5b01786473d872609485ef2744ff9669efaa13c79ec788b6b165590caff273d9",
+        "size": 431
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager/failsafe_manifest.json",
+        "relative_path": "failsafe_manifest.json",
+        "sha256": "32356befa5ef8bd815babe6f2f9809f886bf889904891ab65c13643cc4e46bf8",
+        "size": 154
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager/failsafe_status.json",
+        "relative_path": "failsafe_status.json",
+        "sha256": "44b592913f2a0769c6f8eab4c40dfebb8ce9b2aba5a99cdcd35930b1818fd6aa",
+        "size": 146
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager/test_failsafe.py",
+        "relative_path": "test_failsafe.py",
+        "sha256": "fb2661677517ae8d840de8c70f135bf618b9917365f65b824d87310126a15976",
+        "size": 301
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager_frozen_v1/README.md",
+        "relative_path": "README.md",
+        "sha256": "4b53cf65fbcda940c80b44187d36a9d25a55c9614971b7d33034a8b3ad71f249",
+        "size": 190
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager_frozen_v1/failsafe_core.py",
+        "relative_path": "failsafe_core.py",
+        "sha256": "5b01786473d872609485ef2744ff9669efaa13c79ec788b6b165590caff273d9",
+        "size": 431
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager_frozen_v1/failsafe_manifest.json",
+        "relative_path": "failsafe_manifest.json",
+        "sha256": "32356befa5ef8bd815babe6f2f9809f886bf889904891ab65c13643cc4e46bf8",
+        "size": 154
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager_frozen_v1/failsafe_status.json",
+        "relative_path": "failsafe_status.json",
+        "sha256": "3a73b169667ebab2135e257663a7666ee14c2425a72066b1cbfa4b0ea8b807c6",
+        "size": 146
+      },
+      {
+        "path": "/home/nic/aiweb/engines/failsafe_manager_frozen_v1/test_failsafe.py",
+        "relative_path": "test_failsafe.py",
+        "sha256": "fb2661677517ae8d840de8c70f135bf618b9917365f65b824d87310126a15976",
+        "size": 301
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/README.md",
+        "relative_path": "README.md",
+        "sha256": "4b53cf65fbcda940c80b44187d36a9d25a55c9614971b7d33034a8b3ad71f249",
+        "size": 190
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_core.py",
+        "relative_path": "failsafe_core.py",
+        "sha256": "5b01786473d872609485ef2744ff9669efaa13c79ec788b6b165590caff273d9",
+        "size": 431
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_manager/README.md",
+        "relative_path": "failsafe_manager/README.md",
+        "sha256": "4b53cf65fbcda940c80b44187d36a9d25a55c9614971b7d33034a8b3ad71f249",
+        "size": 190
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_manager/failsafe_core.py",
+        "relative_path": "failsafe_manager/failsafe_core.py",
+        "sha256": "5b01786473d872609485ef2744ff9669efaa13c79ec788b6b165590caff273d9",
+        "size": 431
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_manager/failsafe_manifest.json",
+        "relative_path": "failsafe_manager/failsafe_manifest.json",
+        "sha256": "32356befa5ef8bd815babe6f2f9809f886bf889904891ab65c13643cc4e46bf8",
+        "size": 154
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_manager/failsafe_status.json",
+        "relative_path": "failsafe_manager/failsafe_status.json",
+        "sha256": "3a73b169667ebab2135e257663a7666ee14c2425a72066b1cbfa4b0ea8b807c6",
+        "size": 146
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_manager/test_failsafe.py",
+        "relative_path": "failsafe_manager/test_failsafe.py",
+        "sha256": "fb2661677517ae8d840de8c70f135bf618b9917365f65b824d87310126a15976",
+        "size": 301
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_manifest.json",
+        "relative_path": "failsafe_manifest.json",
+        "sha256": "32356befa5ef8bd815babe6f2f9809f886bf889904891ab65c13643cc4e46bf8",
+        "size": 154
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/failsafe_status.json",
+        "relative_path": "failsafe_status.json",
+        "sha256": "3a73b169667ebab2135e257663a7666ee14c2425a72066b1cbfa4b0ea8b807c6",
+        "size": 146
+      },
+      {
+        "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/failsafe_manager/test_failsafe.py",
+        "relative_path": "test_failsafe.py",
+        "sha256": "fb2661677517ae8d840de8c70f135bf618b9917365f65b824d87310126a15976",
+        "size": 301
+      }
+    ]
+  },
+  "created_at": "20260520_193258",
+  "engine_writes": 0,
+  "forge_owned_receipt_writes_only": true,
+  "gates": [
+    {
+      "detail": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_VALIDATION_READY_NO_WRITE_TEST_PLAN",
+      "id": "P179-G1",
+      "name": "Patch 178 validation receipt loaded",
+      "status": "OK"
+    },
+    {
+      "detail": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_SCOPE_READY_NO_WRITE_FILE_SET_REVIEW",
+      "id": "P179-G2",
+      "name": "Patch 176 scope receipt available",
+      "status": "OK"
+    },
+    {
+      "detail": "failsafe_manager",
+      "id": "P179-G3",
+      "name": "Candidate preserved",
+      "status": "OK"
+    },
+    {
+      "detail": "creates_sandbox_now=False copies_files_now=False runs_tests_now=False",
+      "id": "P179-G4",
+      "name": "Sandbox execution deferred",
+      "status": "OK"
+    },
+    {
+      "detail": "exact_sha_rows_available=True",
+      "id": "P179-G5",
+      "name": "Exact SHA rows checked for future rehearsal",
+      "status": "OK"
+    },
+    {
+      "detail": "approval token not requested; runtime/project/engine writes remain zero",
+      "id": "P179-G6",
+      "name": "Live apply remains forbidden",
+      "status": "OK"
+    }
+  ],
+  "human_approval_present": false,
+  "live_apply_allowed": false,
+  "next_patch": "Patch 180 \u2014 Runtime Candidate Dry-Plan Rollback Matrix / No-Write Restore Plan",
+  "patch": "Patch 179 \u2014 Runtime Candidate Dry-Plan Sandbox Readiness / No-Write Rehearsal Plan",
+  "problems": [],
+  "project_writes": 0,
+  "recommended_next_patch": "Patch 180 \u2014 Runtime Candidate Dry-Plan Rollback Matrix / No-Write Restore Plan",
+  "runtime_writes": 0,
+  "sandbox_execution_allowed": false,
+  "sandbox_readiness_fingerprint": "5ff14f583ad09d0d0d30ccf1e7cb0fcbe3660e32a0c1ebc32e28e61ea67affc0",
+  "sandbox_readiness_ready": true,
+  "sandbox_rehearsal_plan": {
+    "approval_token_requested": false,
+    "candidate": "failsafe_manager",
+    "copies_files_now": false,
+    "creates_sandbox_now": false,
+    "exact_sha_rows_available": true,
+    "executes_now": false,
+    "future_refusal_conditions": [
+      "missing validation receipt",
+      "missing scope receipt",
+      "candidate mismatch",
+      "missing source SHA rows",
+      "stale source SHA",
+      "duplicate basename target without exact path + SHA",
+      "attempt to run arbitrary shell command",
+      "attempt to touch .env, keys, secrets, ~/.ssh, Chroma files, node_modules, .venv, __pycache__",
+      "approval token supplied during no-write planning phase"
+    ],
+    "future_rehearsal_steps": [
+      "Load latest Patch 176 scope receipt and Patch 178 validation matrix.",
+      "Refuse if selected candidate changed or current source SHA no longer matches receipt.",
+      "Create a Forge-owned sandbox directory only in a future sandbox-execution patch.",
+      "Copy exact scoped files by absolute path into the sandbox with manifest rows: source path, relative path, size, sha256.",
+      "Run allowlisted checks inside sandbox only: py_compile for scoped Python files and JSON parse for scoped JSON/config files.",
+      "Write sandbox manifest, test report, and diff/no-diff report as Forge-owned receipts.",
+      "Keep live_apply_allowed false until rollback matrix, sandbox pass, human approval, and post-write verification exist."
+    ],
+    "plan_type": "NO_WRITE_SANDBOX_REHEARSAL_PLAN",
+    "proposed_sandbox_root_future": "/home/nic/forge/memory/forge_runtime_build_sandbox_v1/failsafe_manager_dry_rehearsal_PENDING",
+    "runs_tests_now": false,
+    "shell_allowed": false,
+    "source_file_count": 20
+  },
+  "schema_version": "forge_runtime_candidate_dry_plan_sandbox_v1_patch179",
+  "selected_candidate": "failsafe_manager",
+  "source_report": {
+    "dependency_latest": "/home/nic/forge/memory/forge_runtime_candidate_dry_plan_dependency_v1/latest_forge_runtime_candidate_dry_plan_dependency_v1.json",
+    "dependency_status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_DEPENDENCY_READY_NO_WRITE_IMPACT_NOTES",
+    "scope_latest": "/home/nic/forge/memory/forge_runtime_candidate_dry_plan_scope_v1/latest_forge_runtime_candidate_dry_plan_scope_v1.json",
+    "scope_status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_SCOPE_READY_NO_WRITE_FILE_SET_REVIEW",
+    "validation_latest": "/home/nic/forge/memory/forge_runtime_candidate_dry_plan_validation_v1/latest_forge_runtime_candidate_dry_plan_validation_v1.json",
+    "validation_status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_VALIDATION_READY_NO_WRITE_TEST_PLAN"
+  },
+  "status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_SANDBOX_READY_NO_WRITE_REHEARSAL_PLAN",
+  "token_validation_status": "NOT_REQUESTED",
+  "warnings": [
+    "Duplicate basenames remain present; future sandbox/apply must target exact path + SHA only."
+  ]
+}

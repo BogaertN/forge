@@ -1,0 +1,9 @@
+{
+  "report_type": "SYMBOLIC_RUNTIME_GAPS_PATCH59_READ_ONLY",
+  "timestamp": "2026-05-12T17:55:22",
+  "read_only": true,
+  "required_gaps": [],
+  "weak_required_mappings": [],
+  "engine_count": 425,
+  "errors": []
+}

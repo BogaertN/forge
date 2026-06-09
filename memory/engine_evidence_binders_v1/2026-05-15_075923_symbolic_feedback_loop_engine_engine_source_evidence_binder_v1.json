@@ -1,0 +1,180 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/symbolic_feedback_loop_engine",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/symbolic_feedback_loop_engine",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "symbolic_feedback_loop_engine",
+  "evidence_id": "EEB-deba4d6916e5108c",
+  "file_count": 5,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "2b63e2f4d7ced881173ba83cf60053ecc785d125a2384e965a13bbcbc25b46dd",
+      "excerpt_start": "# Symbolic Feedback Loop Engine\n\nTracks symbolic loop stability based on drift counts and charge levels.\nRecords runtime feedback into loop_trace.json for recursive memory adjustment.\n\n- `feedback_loop_core.py` — core runtime logic\n- `loop_trace.json` — output feedback data\n- `test_feedback_loop.py` — basic engine validation script\n",
+      "functions_sample": [
+        "Symbolic",
+        "Feedback",
+        "Loop",
+        "Engine",
+        "Tracks",
+        "symbolic",
+        "loop",
+        "stability",
+        "based",
+        "drift",
+        "counts",
+        "and",
+        "charge",
+        "levels",
+        "Records",
+        "runtime",
+        "feedback",
+        "into",
+        "loop_trace",
+        "json",
+        "for",
+        "recursive",
+        "memory",
+        "adjustment",
+        "feedback_loop_core"
+      ],
+      "imports_sample": [],
+      "line_count": 9,
+      "path": "/home/nic/aiweb/engines/symbolic_feedback_loop_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "2b63e2f4d7ced881173ba83cf60053ecc785d125a2384e965a13bbcbc25b46dd",
+      "size_bytes": 340,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "7803be9ededec2c6f679681c3039247ef8d4cbf74d0be2f0be9e8b858941126e",
+      "excerpt_start": "import json\nimport time\nimport random\n\nTRACE_FILE = \"loop_trace.json\"\n\ndef record_feedback(loop_stability, drift_count, charge_level):\n    entry = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"loop_stability\": loop_stability,\n        \"drift_events\": drift_count,\n        \"charge_level\": charge_level\n    }\n    try:\n        with open(TRACE_FILE, \"a\") as f:\n            f.write(json.dumps(entry) + \"\\n\")\n        print(f\"✔️ Recorded feedback entry: {entry}\")\n    except Exception as e:\n        print(f\"[!] Failed to record feedback: {e}\")\n\ndef simulate_feedback_cycle():\n    loop_stability = random.choice([\"stable\", \"weakening\", \"critical\"])\n    drift_count = random.randint(0, 5)\n    charge_level = random.randint(30, 100)\n    record_feedback(loop_stability, drift_count, charge_level)\n\nif __name__ == \"__main__\":\n    simulate_feedback_cycle()\n",
+      "functions_sample": [
+        "record_feedback",
+        "simulate_feedback_cycle"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time",
+        "import random"
+      ],
+      "line_count": 29,
+      "path": "/home/nic/aiweb/engines/symbolic_feedback_loop_engine/feedback_loop_core.py",
+      "relative_to_candidate": "feedback_loop_core.py",
+      "sha256": "7803be9ededec2c6f679681c3039247ef8d4cbf74d0be2f0be9e8b858941126e",
+      "size_bytes": 885,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "18ff1170acb4cc593b985e542f5618aed2bd67af014f19b437b1fbe7a6ed21aa",
+      "excerpt_start": "\n{\"timestamp\": \"2025-04-25T22:08:19Z\", \"loop_stability\": \"weakening\", \"drift_events\": 2, \"charge_level\": 66}\n",
+      "functions_sample": [
+        "timestamp",
+        "loop_stability",
+        "weakening",
+        "drift_events",
+        "charge_level"
+      ],
+      "imports_sample": [],
+      "line_count": 3,
+      "path": "/home/nic/aiweb/engines/symbolic_feedback_loop_engine/loop_trace.json",
+      "relative_to_candidate": "loop_trace.json",
+      "sha256": "18ff1170acb4cc593b985e542f5618aed2bd67af014f19b437b1fbe7a6ed21aa",
+      "size_bytes": 109,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "d3743b20556f3ddd36370fa1b362aefd1eee2bf8d900792f8ae1eb82bc626b3d",
+      "excerpt_start": "{\n  \"engine_name\": \"symbolic_feedback_loop_engine\",\n  \"version\": \"v1.0-dev\",\n  \"status\": \"in development\",\n  \"files\": [\n    \"feedback_loop_core.py\",\n    \"loop_trace.json\",\n    \"test_feedback_loop.py\"\n  ]\n}\n",
+      "functions_sample": [
+        "engine_name",
+        "symbolic_feedback_loop_engine",
+        "version",
+        "dev",
+        "status",
+        "development",
+        "files",
+        "feedback_loop_core",
+        "loop_trace",
+        "json",
+        "test_feedback_loop"
+      ],
+      "imports_sample": [],
+      "line_count": 11,
+      "path": "/home/nic/aiweb/engines/symbolic_feedback_loop_engine/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "d3743b20556f3ddd36370fa1b362aefd1eee2bf8d900792f8ae1eb82bc626b3d",
+      "size_bytes": 206,
+      "suffix": ".json"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "c9f9eadccb5a768ad365462e2c3fbcce4d4e474f3232cd91731c7c0e00f0a5d5",
+      "excerpt_start": "import feedback_loop_core\n\ndef test_feedback_loop_cycle():\n    try:\n        feedback_loop_core.simulate_feedback_cycle()\n        print(\"✅ Test Passed: Feedback cycle simulated.\")\n    except Exception as e:\n        print(f\"❌ Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_feedback_loop_cycle()\n\n",
+      "functions_sample": [
+        "test_feedback_loop_cycle"
+      ],
+      "imports_sample": [
+        "import feedback_loop_core"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/symbolic_feedback_loop_engine/test_feedback_loop.py",
+      "relative_to_candidate": "test_feedback_loop.py",
+      "sha256": "c9f9eadccb5a768ad365462e2c3fbcce4d4e474f3232cd91731c7c0e00f0a5d5",
+      "size_bytes": 307,
+      "suffix": ".py"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173651_code_engine_duplicates.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200356_engine_canonical_decision_draft.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {
+    "config_or_manifest": 22,
+    "documentation_or_notes": 11,
+    "engine_source": 13,
+    "indexed_source": 5,
+    "runtime_wrapper": 13,
+    "test_or_validation": 36
+  },
+  "relationship_report_found": true,
+  "relationship_report_path": "/home/nic/forge/memory/code_library_v1/manifests/2026-05-14_200919_code_relationship_intelligence_report.json",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "APPROVED",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "record_feedback",
+    "simulate_feedback_cycle",
+    "test_feedback_loop_cycle"
+  ],
+  "warnings": []
+}

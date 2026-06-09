@@ -1,0 +1,191 @@
+# Patch 107 Evidence-Based Batch Commit Plan
+
+Status: `ENGINE_REVIEW_BATCH_COMMIT_PLAN_READY`
+Eligible for commit: `5`
+Blockers: `0`
+Warnings: `71`
+
+Rows:
+
+- `agent_reflection_engine` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-efe9b78ceabc9853`
+  - Candidate: `/home/nic/aiweb/engines/agent_reflection_engine`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `agents_stack` → `DEFERRED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-e7eb75087380b7b6`
+  - Candidate: `/home/nic/aiweb/runtime_wrappers/agents_stack`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `aiweb_os` → `DEFERRED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-7b29cb90ee5e540e`
+  - Candidate: `/home/nic/aiweb/runtime_wrappers/aiweb_os_v1`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `aiweb_os_engine` → `DEFERRED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-f8276d394f6ec7e0`
+  - Candidate: `/home/nic/aiweb/engines/aiweb_os_engine`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `ascii_interpreter_engine` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-2acca33f6ecda788`
+  - Candidate: `/home/nic/aiweb/engines/ascii_interpreter_engine`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `athena` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-4615d0bfc9a40a98`
+  - Candidate: `/home/nic/aiweb/agents/athena`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `athena_engine` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-77509139334c5639`
+  - Candidate: `/home/nic/aiweb/engines/athena_engine`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `christping_validator_engine` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-45c0906ffe7e9875`
+  - Candidate: `/home/nic/aiweb/engines/christping_validator_engine`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `cold_archive_engine` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-bc75b62ef10a008d`
+  - Candidate: `/home/nic/aiweb/engines/cold_archive_engine_frozen_v1`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+  - WARNING: engine is marked hold-family; approval will not make it future-lockfile eligible
+- `collapse_prevention_engine` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-82b276d0748f3de8`
+  - Candidate: `/home/nic/aiweb/engines/collapse_prevention_engine`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `compute_contribution_engine` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-91df18441d00687d`
+  - Candidate: `/home/nic/aiweb/engines/compute_contribution_engine`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `confusion_checker` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-0fec7336f1df5be6`
+  - Candidate: `/home/nic/aiweb/projects/recursive_lmm_grok1/engines/confusion_checker`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `contribution_dashboard_engine` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-505effd8a0bf2be3`
+  - Candidate: `/home/nic/aiweb/engines/contribution_dashboard_engine`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `contribution_ledger_stack` → `DEFERRED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-e30ad0b50c5c03dd`
+  - Candidate: `/home/nic/aiweb/runtime_wrappers/contribution_ledger_stack`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `control_panel_ui_engine` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-fd254ee2e030c2ee`
+  - Candidate: `/home/nic/aiweb/engines/control_panel_ui_engine_v1.02`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `control_stack` → `DEFERRED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-7df4589a96005a41`
+  - Candidate: `/home/nic/aiweb/runtime_wrappers/control_stack`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `core_stack_breather` → `DEFERRED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-df535a295e2cc3a2`
+  - Candidate: `/home/nic/aiweb/engines/core_stack_breather`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `core_system_stack` → `DEFERRED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-3bf3f922354da81e`
+  - Candidate: `/home/nic/aiweb/runtime_wrappers/core_system_stack`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `document_output_formatter` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-73405632cfb6984f`
+  - Candidate: `/home/nic/aiweb/engines/document_output_formatter`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `dream_state_engine` → `DEFERRED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-250da52af3cef833`
+  - Candidate: `/home/nic/aiweb/engines/dream_state_engine`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `drift_analyzer_tool` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-bed831a69b1978e5`
+  - Candidate: `/home/nic/aiweb/engines/drift_analyzer_tool`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `drift_arbitration_engine` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-caf4c9b35c20c0c1`
+  - Candidate: `/home/nic/aiweb/engines/drift_arbitration_engine`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+  - WARNING: engine is marked hold-family; approval will not make it future-lockfile eligible
+- `drift_signature_logger` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-3f7110ff52737f3a`
+  - Candidate: `/home/nic/aiweb/engines/drift_signature_logger`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `echo_trace_visualizer` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-69e88d1e442364cb`
+  - Candidate: `/home/nic/aiweb/engines/echo_trace_visualizer`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `entropy_monitor_engine` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-e7babb77acece4bb`
+  - Candidate: `/home/nic/aiweb/engines/entropy_monitor_engine`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `external_feed_listener` → `DEFERRED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-5f91c358437560b6`
+  - Candidate: `/home/nic/aiweb/engines/external_feed_listener`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `field_resonance_mapper` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-3709f6df7c34236d`
+  - Candidate: `/home/nic/aiweb/engines/field_resonance_mapper`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `fluid_memory_engine` → `DEFERRED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-787e388492eb001b`
+  - Candidate: `/home/nic/aiweb/engines/fluid_memory_engine`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `gilligan` → `DEFERRED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-79999be700688737`
+  - Candidate: `/home/nic/aiweb/agents/gilligan`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `gilligan_drift_correction_upgrade` → `DEFERRED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-e5144c91abeb8497`
+  - Candidate: `/home/nic/aiweb/engines/gilligan_drift_correction_upgrade`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `glyph_engine` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-249760030f1dcef2`
+  - Candidate: `/home/nic/aiweb/engines/glyph_engine`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `glyph_ui_overlay` → `APPROVED` eligible=`False` already_committed=`True`
+  - Evidence: `EEB-f1a7bbfdc6404c98`
+  - Candidate: `/home/nic/aiweb/symbolic_layers/glyph_ui_overlay`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+  - WARNING: ledger already has target review status; skipping as already committed
+- `goal_injection_engine` → `DEFERRED` eligible=`True` already_committed=`False`
+  - Evidence: `EEB-6ef85e34d4584ab4`
+  - Candidate: `/home/nic/aiweb/engines/goal_injection_engine`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+- `memory_stack_stack` → `DEFERRED` eligible=`True` already_committed=`False`
+  - Evidence: `EEB-3cfbf7294cfbbb19`
+  - Candidate: `/home/nic/aiweb/runtime_wrappers/memory_stack_stack`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+- `naming_engine` → `DEFERRED` eligible=`True` already_committed=`False`
+  - Evidence: `EEB-4811acd49109ee4b`
+  - Candidate: `/home/nic/aiweb/engines/naming_engine`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+- `neo` → `DEFERRED` eligible=`True` already_committed=`False`
+  - Evidence: `EEB-cf8cb4e8a7b97c69`
+  - Candidate: `/home/nic/aiweb/agents/neo`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.
+- `neo_engine` → `DEFERRED` eligible=`True` already_committed=`False`
+  - Evidence: `EEB-7d85a9d7c058d7e3`
+  - Candidate: `/home/nic/aiweb/engines/neo_engine`
+  - WARNING: Cross-check warning: LLM role wording does not explicitly repeat deterministic role label.

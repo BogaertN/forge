@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-05-10T00:41:11",
+  "session_id": "forge_2026_05_10_003916",
+  "total_sources": 3,
+  "gaps": 0,
+  "results": [
+    {
+      "title": "Resonant Phase Memory Calculus: The Law of Recursion, Collapse, and Return \u2014 Full Protocol Draft",
+      "category": "RPMC Core Protocol",
+      "role": "Primary RPMC law document \u2014 defines all operators, axioms, and structure",
+      "drive_id": "1eN6in0lUcGY9RdHcAPFlJOHJNpN6ny1M",
+      "status": "registered_locally",
+      "local_id": "corpus_0003",
+      "required_for_full_authority": true,
+      "warning": ""
+    },
+    {
+      "title": "RPMC Implementation Blueprint (ProtoForge Dev Book)",
+      "category": "RPMC Implementation",
+      "role": "Engineering guide for RPMC runtime \u2014 Memory Stack, Collapse Handler, Resurrection Log",
+      "drive_id": "1L_f5I2InqyMiGKX7ERs0et9jY9-gzpVgvqmZ-VAl46E",
+      "status": "registered_locally",
+      "local_id": "corpus_0009",
+      "required_for_full_authority": true,
+      "warning": ""
+    },
+    {
+      "title": "RPMC Canonical Test Data Set v1.0",
+      "category": "RPMC Validation",
+      "role": "Benchmark for recursive memory, echo integrity, drift, and resurrection validation",
+      "drive_id": "1b8JAc-aATjD7h1Ed4KYA2kxxPkxHaX5-lDO5V5qsXsM",
+      "status": "registered_locally",
+      "local_id": "corpus_0001",
+      "required_for_full_authority": false,
+      "warning": ""
+    }
+  ],
+  "verdict": "ALL_SOURCES_REGISTERED"
+}

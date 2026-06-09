@@ -1,0 +1,30 @@
+{
+  "schema_version": "engine_disposition_export_v1_patch117",
+  "report_type": "ENGINE_DISPOSITION_EXPORT_V1",
+  "created_at": "2026-05-16T23:42:49",
+  "latest_report": "/home/nic/forge/memory/engine_disposition_v1/latest_engine_disposition_report_v1.json",
+  "latest_report_sha256": "71132fd68cb3e1e7c9fca38772909d450cd582c91d4e95804cd7131a08db1ded",
+  "counts": {
+    "excluded_total": 25,
+    "by_bucket": {
+      "authority_or_external_control_deferred": 3,
+      "runtime_wrapper_or_stack_deferred": 6,
+      "deferred_hold_family": 6,
+      "general_deferred_review": 3,
+      "approved_hold_family_excluded": 2,
+      "memory_archive_or_state_deferred": 2,
+      "agent_identity_deferred": 3
+    },
+    "by_review_status": {
+      "DEFERRED": 23,
+      "APPROVED": 2
+    },
+    "approved_hold_excluded": 2,
+    "deferred_total": 23,
+    "safe_to_delete_now": 0,
+    "safe_to_quarantine_now": 0,
+    "safe_to_promote_now": 0
+  },
+  "recommended_next_patch": "Patch 118 — Forge Master Status Report",
+  "authority": "export only; no engine writes, no ledger mutation, no quarantine, no delete"
+}

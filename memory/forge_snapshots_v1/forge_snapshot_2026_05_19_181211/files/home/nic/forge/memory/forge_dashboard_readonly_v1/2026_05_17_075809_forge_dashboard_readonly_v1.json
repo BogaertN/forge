@@ -1,0 +1,150 @@
+{
+  "authority": {
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ledger_mutation": false,
+    "network_opened": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "server_started": false,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-17T07:58:09",
+  "dashboard_mode": "STATIC_FILE_READ_ONLY_NO_SERVER",
+  "html_path": "/home/nic/forge/memory/forge_dashboard_readonly_v1/2026_05_17_075809_forge_dashboard_readonly_v1.html",
+  "html_sha256": "445c82c01555abce63181baf57a804c9040bbabed3a868148956e1b73675ec58",
+  "latest_html_path": "/home/nic/forge/memory/forge_dashboard_readonly_v1/latest_forge_dashboard_readonly_v1.html",
+  "next_commands": [
+    "forge-dashboard-export",
+    "Install Patch 129 when ready"
+  ],
+  "panel_count": 9,
+  "panels": [
+    {
+      "lines": [
+        "Tools: 351",
+        "Trust: 5.0",
+        "Expected commands: 427",
+        "API mode: READ_ONLY_FILE_BACKED_CONTRACT_NO_SERVER"
+      ],
+      "panel_id": "system",
+      "status": "FORGE_STATUS_API_SNAPSHOT_READY",
+      "title": "System Status"
+    },
+    {
+      "lines": [
+        "Ledger: total=80 approved=57 deferred=23 pending=0",
+        "Included: 55",
+        "Excluded: 25",
+        "SHA: b841a5905cea1f67f04e6d9281c47ad3240565dbcc95837704425e08b77605ab"
+      ],
+      "panel_id": "engines",
+      "status": "CANONICAL_LOCKFILE_PRESENT",
+      "title": "Canonical Engines"
+    },
+    {
+      "lines": [
+        "Targets: 68",
+        "Pass: 67",
+        "Fail: 1",
+        "Blocked: 0 Timeout: 0 Error: 0"
+      ],
+      "panel_id": "tests",
+      "status": "CANONICAL_TEST_RUN_COMPLETED_WITH_ISSUES",
+      "title": "Canonical Safe Tests"
+    },
+    {
+      "lines": [
+        "Matches: 55",
+        "Low: 37",
+        "Medium: 18",
+        "High: 0",
+        "Test issues: 1"
+      ],
+      "panel_id": "impact",
+      "status": "PATCH_IMPACT_MAP_READY",
+      "title": "Patch Impact / Risk"
+    },
+    {
+      "lines": [
+        "Rows: 55",
+        "Edges: 88",
+        "Medium-risk neighbors: 6",
+        "High-risk neighbors: 0"
+      ],
+      "panel_id": "relationships",
+      "status": "CANONICAL_ENGINE_RELATIONSHIP_MAP_READY",
+      "title": "Runtime Relationships"
+    },
+    {
+      "lines": [
+        "Excluded total: 25",
+        "Deferred total: 23",
+        "Safe to delete now: 0",
+        "Safe to quarantine now: 0",
+        "Safe to promote now: 0"
+      ],
+      "panel_id": "disposition",
+      "status": "ENGINE_DISPOSITION_REPORT_READY",
+      "title": "Excluded / Deferred Engines"
+    },
+    {
+      "lines": [
+        "Exists: True",
+        "Entries checked: 2500",
+        "Chain breaks: 0",
+        "Latest entry hash: 5113203455c6d775"
+      ],
+      "panel_id": "audit",
+      "status": "AUDIT_OK",
+      "title": "Audit Chain"
+    },
+    {
+      "lines": [
+        "Read only: True",
+        "Project writes: False",
+        "Engine writes: False",
+        "Patch apply: False",
+        "Shell execution: False",
+        "Server started: False"
+      ],
+      "panel_id": "authority",
+      "status": "READ_ONLY",
+      "title": "Authority / Permissions"
+    },
+    {
+      "lines": [
+        "Recommended next patch: Patch 129 \u2014 Mode Registry",
+        "Dashboard is read-only: gauges before levers."
+      ],
+      "panel_id": "roadmap",
+      "status": "NEXT_PATCH_REQUIRED",
+      "title": "Next Move"
+    }
+  ],
+  "plain_english": "Static read-only Forge dashboard artifact. It starts no server and exposes no write controls.",
+  "recommended_next_patch": "Patch 129 \u2014 Mode Registry",
+  "report_type": "FORGE_DASHBOARD_READONLY_V1",
+  "schema_version": "forge_dashboard_readonly_v1_patch128",
+  "source_status_api_path": "/home/nic/forge/memory/forge_status_api_v1/latest_forge_status_api_snapshot_v1.json",
+  "source_status_api_status": "FORGE_STATUS_API_SNAPSHOT_READY",
+  "status": "FORGE_DASHBOARD_READONLY_READY",
+  "summary": {
+    "audit_chain_breaks_tail": 0,
+    "canonical_excluded": 25,
+    "canonical_included": 55,
+    "expected_commands": 427,
+    "latest_impact_high_risk": 0,
+    "latest_impact_medium_risk": 18,
+    "latest_test_fail": 1,
+    "latest_test_pass": 67,
+    "latest_test_status": "CANONICAL_TEST_RUN_COMPLETED_WITH_ISSUES",
+    "ledger_approved": 57,
+    "ledger_deferred": 23,
+    "ledger_pending": 0,
+    "ledger_total": 80,
+    "tools": 351,
+    "trust_level": 5.0
+  }
+}

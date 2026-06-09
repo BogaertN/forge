@@ -1,0 +1,109 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "compile_returncode": 0,
+      "detected_missing_module": null,
+      "test_returncode": 1,
+      "test_stderr_tail": "Traceback (most recent call last):\n  File \"/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/test_stack_linker_core.py\", line 3, in <module>\n    from stack_linker_breather.stack_linker_core import unified_breathe_cycle\n  File \"/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/stack_linker_core.py\", line 5, in <module>\n    from core_breather.core_breather import breathe_phase as core_breathe\nImportError: cannot import name 'breathe_phase' from 'core_breather.core_breather' (/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/core_breather/core_breather.py)\n"
+    }
+  ],
+  "authority": {
+    "engine_file_write_authority": false,
+    "ledger_mutation_authority": false,
+    "model_generation_called": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "sandbox_only": true,
+    "shell_false": true
+  },
+  "compile_result": {
+    "argv": [
+      "/home/nic/forge/.venv/bin/python3",
+      "-m",
+      "py_compile",
+      "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/stack_linker_core.py"
+    ],
+    "cwd": "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather",
+    "ended_at": "2026-05-17T11:13:10",
+    "returncode": 0,
+    "shell": false,
+    "started_at": "2026-05-17T11:13:10",
+    "stderr": "",
+    "stdout": "",
+    "timeout": false
+  },
+  "created_at": "2026-05-17T11:15:10",
+  "dependency_actions": [
+    {
+      "chosen_dependency": {
+        "kind": "module_file",
+        "leaf_module": "core_breather",
+        "path": "/home/nic/aiweb/engines/core_stack_breather/core_breather.py",
+        "reason": "bounded_rglob_top_file_match",
+        "requested_module": "core_breather",
+        "top_level_module": "core_breather"
+      },
+      "install_result": {
+        "installed_paths": [
+          "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/core_breather/core_breather.py",
+          "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/core_breather/__init__.py"
+        ],
+        "package_dir": "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/core_breather",
+        "strategy": "copy_module_file_as_package"
+      },
+      "module": "core_breather"
+    }
+  ],
+  "failed_dependency_candidates": [],
+  "import_isolation": {
+    "live_import_leak_detected": false,
+    "mode": "dependency_augmented_sandbox_package_parent_first_no_live_engine_path_package_shims",
+    "pythonpath": [
+      "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages",
+      "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather"
+    ]
+  },
+  "llm_recommendation": "REVIEW_DEPENDENCY_RESULT_MANUALLY",
+  "llm_review": {
+    "llm_recommendation": "REVIEW_DEPENDENCY_RESULT_MANUALLY",
+    "model": "qwen3:8b",
+    "model_generation_called": true,
+    "preview": "",
+    "prompt_path": "/home/nic/forge/memory/generic_sandbox_dependency_v1/2026_05_17_111310_prompt_dependency_review_stack_linker_breather.txt",
+    "prompt_sha256": "e333990539570403d383d21f0a4861ee67dc9a1b063d7feb3ef288d3e2a7690f",
+    "provider": "ollama",
+    "raw_response_path": "/home/nic/forge/memory/generic_sandbox_dependency_v1/2026_05_17_111310_response_raw_dependency_review_stack_linker_breather.txt",
+    "raw_response_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "returncode": null,
+    "stderr_path": "/home/nic/forge/memory/generic_sandbox_dependency_v1/2026_05_17_111310_response_stderr_dependency_review_stack_linker_breather.txt",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "subprocess_shell_false": true
+  },
+  "missing_module": "core_breather",
+  "recommended_next_patch": "Continue dependency/candidate revision loop before live apply",
+  "report_type": "GENERIC_SANDBOX_DEPENDENCY_RUN_V1",
+  "sandbox_package_dir": "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather",
+  "sandbox_package_parent": "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages",
+  "sandbox_root": "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather",
+  "sandbox_target_file": "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/stack_linker_core.py",
+  "sandbox_target_sha256": "8386c8ea6e289b75e5324f98e2ce5383fc3a8bc73af2937760a299cfab1cea3c",
+  "sandbox_test_file": "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/test_stack_linker_core.py",
+  "schema_version": "generic_sandbox_dependency_run_v1_patch138R",
+  "status": "GENERIC_SANDBOX_DEPENDENCY_TESTS_ISSUES",
+  "target": "stack_linker_breather",
+  "test_result": {
+    "argv": [
+      "/home/nic/forge/.venv/bin/python3",
+      "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/test_stack_linker_core.py"
+    ],
+    "cwd": "/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather",
+    "ended_at": "2026-05-17T11:13:10",
+    "returncode": 1,
+    "shell": false,
+    "started_at": "2026-05-17T11:13:10",
+    "stderr": "Traceback (most recent call last):\n  File \"/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/test_stack_linker_core.py\", line 3, in <module>\n    from stack_linker_breather.stack_linker_core import unified_breathe_cycle\n  File \"/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/stack_linker_breather/stack_linker_core.py\", line 5, in <module>\n    from core_breather.core_breather import breathe_phase as core_breathe\nImportError: cannot import name 'breathe_phase' from 'core_breather.core_breather' (/home/nic/forge/memory/generic_sandbox_dependency_v1/sandbox_deps_2026_05_17_111310_stack_linker_breather/sandbox_packages/core_breather/core_breather.py)\n",
+    "stdout": "",
+    "timeout": false
+  }
+}

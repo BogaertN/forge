@@ -1,0 +1,441 @@
+{
+  "forge_framework": {
+    "forge/agents/forge/agent.py": true,
+    "forge/agents/forge/context_builder.py": true,
+    "forge/agents/forge/memory.py": true,
+    "forge/agents/forge/tools.py": true,
+    "forge/config/tool_registry.json": true
+  },
+  "home": "/home/nic",
+  "identity_vault_hygiene": {
+    "node_modules_present": true,
+    "root_exists": true,
+    "sensitive_or_db_hits": [
+      "identity-vault/.env",
+      "identity-vault/.env.example",
+      "identity-vault/data/identity_vault.db",
+      "identity-vault/vault.db"
+    ]
+  },
+  "rmc_modules": {
+    "ancestral_memory": {
+      "compile": {
+        "cmd": [
+          "/home/nic/forge/.venv/bin/python",
+          "-m",
+          "py_compile",
+          "/home/nic/aiweb/runtime_wrappers/ancestral_memory/ancestral_memory.py",
+          "/home/nic/aiweb/runtime_wrappers/ancestral_memory/test_ancestral_memory.py"
+        ],
+        "cwd": ".",
+        "returncode": 0,
+        "stderr_tail": "",
+        "stdout_tail": ""
+      },
+      "note": "S19AF - present; shared memory substrate",
+      "pytest": {
+        "cmd": [
+          "/home/nic/forge/.venv/bin/python",
+          "-m",
+          "pytest",
+          "/home/nic/aiweb/runtime_wrappers/ancestral_memory"
+        ],
+        "cwd": ".",
+        "returncode": 1,
+        "stderr_tail": "/home/nic/forge/.venv/bin/python: No module named pytest\n",
+        "stdout_tail": ""
+      },
+      "snapshot_path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/ancestral_memory",
+      "snapshot_tree": {
+        "exists": true,
+        "file_count": 2,
+        "hashes_first_200_files": [
+          {
+            "bytes": 9157,
+            "path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/ancestral_memory/ancestral_memory.py",
+            "sha256": "fc6263de3f880cf3081f3edeaf370f71bb265e19f22b2bb16d6acb80c8a9dc73"
+          },
+          {
+            "bytes": 7163,
+            "path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/ancestral_memory/test_ancestral_memory.py",
+            "sha256": "8d444ac4d7d28c48192431cb390bc8ebea11b144326901ba836dae8373802b29"
+          }
+        ],
+        "path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/ancestral_memory",
+        "py_file_count": 2,
+        "sample_files": [
+          "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/ancestral_memory/ancestral_memory.py",
+          "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/ancestral_memory/test_ancestral_memory.py"
+        ],
+        "test_file_count": 1,
+        "total_bytes": 16320
+      },
+      "source_exists": true,
+      "source_path": "aiweb/runtime_wrappers/ancestral_memory",
+      "tree": {
+        "exists": true,
+        "file_count": 2,
+        "hashes_first_200_files": [
+          {
+            "bytes": 9157,
+            "path": "aiweb/runtime_wrappers/ancestral_memory/ancestral_memory.py",
+            "sha256": "fc6263de3f880cf3081f3edeaf370f71bb265e19f22b2bb16d6acb80c8a9dc73"
+          },
+          {
+            "bytes": 7163,
+            "path": "aiweb/runtime_wrappers/ancestral_memory/test_ancestral_memory.py",
+            "sha256": "8d444ac4d7d28c48192431cb390bc8ebea11b144326901ba836dae8373802b29"
+          }
+        ],
+        "path": "aiweb/runtime_wrappers/ancestral_memory",
+        "py_file_count": 2,
+        "sample_files": [
+          "aiweb/runtime_wrappers/ancestral_memory/ancestral_memory.py",
+          "aiweb/runtime_wrappers/ancestral_memory/test_ancestral_memory.py"
+        ],
+        "test_file_count": 1,
+        "total_bytes": 16320
+      }
+    },
+    "drift_arbitrator": {
+      "note": "S19AG - MISSING in Patch 206 scan; required for drift arbitration",
+      "snapshot_path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/drift_arbitrator",
+      "source_exists": false,
+      "source_path": "aiweb/runtime_wrappers/drift_arbitrator"
+    },
+    "echo_gate": {
+      "note": "S19AJ - MISSING in Patch 206 scan; required for echo validation",
+      "snapshot_path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/echo_gate",
+      "source_exists": false,
+      "source_path": "aiweb/runtime_wrappers/echo_gate"
+    },
+    "manifest_compiler": {
+      "compile": {
+        "cmd": [
+          "/home/nic/forge/.venv/bin/python",
+          "-m",
+          "py_compile",
+          "/home/nic/aiweb/runtime_wrappers/manifest_compiler/manifest_compiler.py",
+          "/home/nic/aiweb/runtime_wrappers/manifest_compiler/test_manifest_compiler.py"
+        ],
+        "cwd": ".",
+        "returncode": 0,
+        "stderr_tail": "",
+        "stdout_tail": ""
+      },
+      "note": "S19AH - present; manifest compilation",
+      "pytest": {
+        "cmd": [
+          "/home/nic/forge/.venv/bin/python",
+          "-m",
+          "pytest",
+          "/home/nic/aiweb/runtime_wrappers/manifest_compiler"
+        ],
+        "cwd": ".",
+        "returncode": 1,
+        "stderr_tail": "/home/nic/forge/.venv/bin/python: No module named pytest\n",
+        "stdout_tail": ""
+      },
+      "snapshot_path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/manifest_compiler",
+      "snapshot_tree": {
+        "exists": true,
+        "file_count": 2,
+        "hashes_first_200_files": [
+          {
+            "bytes": 13790,
+            "path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/manifest_compiler/manifest_compiler.py",
+            "sha256": "267fb6e993034cf38f9facc5db27c06e53f5ad01b19eac343eaddbe78f572177"
+          },
+          {
+            "bytes": 8070,
+            "path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/manifest_compiler/test_manifest_compiler.py",
+            "sha256": "5fb86ba0c513dbedec8f204cb7d6ffb10771860b916893406da9c0cdffd6b995"
+          }
+        ],
+        "path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/manifest_compiler",
+        "py_file_count": 2,
+        "sample_files": [
+          "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/manifest_compiler/manifest_compiler.py",
+          "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/manifest_compiler/test_manifest_compiler.py"
+        ],
+        "test_file_count": 1,
+        "total_bytes": 21860
+      },
+      "source_exists": true,
+      "source_path": "aiweb/runtime_wrappers/manifest_compiler",
+      "tree": {
+        "exists": true,
+        "file_count": 2,
+        "hashes_first_200_files": [
+          {
+            "bytes": 13790,
+            "path": "aiweb/runtime_wrappers/manifest_compiler/manifest_compiler.py",
+            "sha256": "267fb6e993034cf38f9facc5db27c06e53f5ad01b19eac343eaddbe78f572177"
+          },
+          {
+            "bytes": 8070,
+            "path": "aiweb/runtime_wrappers/manifest_compiler/test_manifest_compiler.py",
+            "sha256": "5fb86ba0c513dbedec8f204cb7d6ffb10771860b916893406da9c0cdffd6b995"
+          }
+        ],
+        "path": "aiweb/runtime_wrappers/manifest_compiler",
+        "py_file_count": 2,
+        "sample_files": [
+          "aiweb/runtime_wrappers/manifest_compiler/manifest_compiler.py",
+          "aiweb/runtime_wrappers/manifest_compiler/test_manifest_compiler.py"
+        ],
+        "test_file_count": 1,
+        "total_bytes": 21860
+      }
+    },
+    "output_renderer": {
+      "compile": {
+        "cmd": [
+          "/home/nic/forge/.venv/bin/python",
+          "-m",
+          "py_compile",
+          "/home/nic/aiweb/runtime_wrappers/output_renderer/output_renderer.py",
+          "/home/nic/aiweb/runtime_wrappers/output_renderer/test_output_renderer.py"
+        ],
+        "cwd": ".",
+        "returncode": 0,
+        "stderr_tail": "",
+        "stdout_tail": ""
+      },
+      "note": "S19AI - present; output rendering",
+      "pytest": {
+        "cmd": [
+          "/home/nic/forge/.venv/bin/python",
+          "-m",
+          "pytest",
+          "/home/nic/aiweb/runtime_wrappers/output_renderer"
+        ],
+        "cwd": ".",
+        "returncode": 1,
+        "stderr_tail": "/home/nic/forge/.venv/bin/python: No module named pytest\n",
+        "stdout_tail": ""
+      },
+      "snapshot_path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/output_renderer",
+      "snapshot_tree": {
+        "exists": true,
+        "file_count": 2,
+        "hashes_first_200_files": [
+          {
+            "bytes": 11795,
+            "path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/output_renderer/output_renderer.py",
+            "sha256": "741d04e1d370419f0007d8c2d21f1ceddb59f8a557ce57e33d24f3cee6fe2437"
+          },
+          {
+            "bytes": 9584,
+            "path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/output_renderer/test_output_renderer.py",
+            "sha256": "b3e8b117b2deccf97574642b5893b0175916d614ebeac0b14a778c4616ea0e2f"
+          }
+        ],
+        "path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/output_renderer",
+        "py_file_count": 2,
+        "sample_files": [
+          "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/output_renderer/output_renderer.py",
+          "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/output_renderer/test_output_renderer.py"
+        ],
+        "test_file_count": 1,
+        "total_bytes": 21379
+      },
+      "source_exists": true,
+      "source_path": "aiweb/runtime_wrappers/output_renderer",
+      "tree": {
+        "exists": true,
+        "file_count": 2,
+        "hashes_first_200_files": [
+          {
+            "bytes": 11795,
+            "path": "aiweb/runtime_wrappers/output_renderer/output_renderer.py",
+            "sha256": "741d04e1d370419f0007d8c2d21f1ceddb59f8a557ce57e33d24f3cee6fe2437"
+          },
+          {
+            "bytes": 9584,
+            "path": "aiweb/runtime_wrappers/output_renderer/test_output_renderer.py",
+            "sha256": "b3e8b117b2deccf97574642b5893b0175916d614ebeac0b14a778c4616ea0e2f"
+          }
+        ],
+        "path": "aiweb/runtime_wrappers/output_renderer",
+        "py_file_count": 2,
+        "sample_files": [
+          "aiweb/runtime_wrappers/output_renderer/output_renderer.py",
+          "aiweb/runtime_wrappers/output_renderer/test_output_renderer.py"
+        ],
+        "test_file_count": 1,
+        "total_bytes": 21379
+      }
+    },
+    "phase_state_parser": {
+      "note": "S19AE - MISSING in Patch 206 scan; required for phase parsing",
+      "snapshot_path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/phase_state_parser",
+      "source_exists": false,
+      "source_path": "aiweb/runtime_wrappers/phase_state_parser"
+    },
+    "rmc_orchestrator": {
+      "compile": {
+        "cmd": [
+          "/home/nic/forge/.venv/bin/python",
+          "-m",
+          "py_compile",
+          "/home/nic/aiweb/runtime_wrappers/rmc_orchestrator/rmc_orchestrator.py",
+          "/home/nic/aiweb/runtime_wrappers/rmc_orchestrator/test_rmc_orchestrator.py"
+        ],
+        "cwd": ".",
+        "returncode": 0,
+        "stderr_tail": "",
+        "stdout_tail": ""
+      },
+      "note": "S19AK - present; RMC coordination",
+      "pytest": {
+        "cmd": [
+          "/home/nic/forge/.venv/bin/python",
+          "-m",
+          "pytest",
+          "/home/nic/aiweb/runtime_wrappers/rmc_orchestrator"
+        ],
+        "cwd": ".",
+        "returncode": 1,
+        "stderr_tail": "/home/nic/forge/.venv/bin/python: No module named pytest\n",
+        "stdout_tail": ""
+      },
+      "snapshot_path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/rmc_orchestrator",
+      "snapshot_tree": {
+        "exists": true,
+        "file_count": 2,
+        "hashes_first_200_files": [
+          {
+            "bytes": 6727,
+            "path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/rmc_orchestrator/rmc_orchestrator.py",
+            "sha256": "d4e1bf34a8a87d70721f429037742ed7e57ccef511cb44bba5879ec2479211d2"
+          },
+          {
+            "bytes": 7883,
+            "path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/rmc_orchestrator/test_rmc_orchestrator.py",
+            "sha256": "8284f25a2fcd7149cb59e101a5951786f149615e93df41184a251199f61686b1"
+          }
+        ],
+        "path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/rmc_orchestrator",
+        "py_file_count": 2,
+        "sample_files": [
+          "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/rmc_orchestrator/rmc_orchestrator.py",
+          "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/rmc_modules/rmc_orchestrator/test_rmc_orchestrator.py"
+        ],
+        "test_file_count": 1,
+        "total_bytes": 14610
+      },
+      "source_exists": true,
+      "source_path": "aiweb/runtime_wrappers/rmc_orchestrator",
+      "tree": {
+        "exists": true,
+        "file_count": 2,
+        "hashes_first_200_files": [
+          {
+            "bytes": 6727,
+            "path": "aiweb/runtime_wrappers/rmc_orchestrator/rmc_orchestrator.py",
+            "sha256": "d4e1bf34a8a87d70721f429037742ed7e57ccef511cb44bba5879ec2479211d2"
+          },
+          {
+            "bytes": 7883,
+            "path": "aiweb/runtime_wrappers/rmc_orchestrator/test_rmc_orchestrator.py",
+            "sha256": "8284f25a2fcd7149cb59e101a5951786f149615e93df41184a251199f61686b1"
+          }
+        ],
+        "path": "aiweb/runtime_wrappers/rmc_orchestrator",
+        "py_file_count": 2,
+        "sample_files": [
+          "aiweb/runtime_wrappers/rmc_orchestrator/rmc_orchestrator.py",
+          "aiweb/runtime_wrappers/rmc_orchestrator/test_rmc_orchestrator.py"
+        ],
+        "test_file_count": 1,
+        "total_bytes": 14610
+      }
+    }
+  },
+  "snapshot_root": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC",
+  "standalone_gilligan": {
+    "compile": {
+      "cmd": [
+        "/home/nic/forge/.venv/bin/python",
+        "-m",
+        "py_compile",
+        "/home/nic/aiweb/runtime_wrappers/gilligan_agent/gilligan_rmc_agent.py",
+        "/home/nic/aiweb/runtime_wrappers/gilligan_agent/test_gilligan_rmc_agent.py"
+      ],
+      "cwd": ".",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": ""
+    },
+    "pytest": {
+      "cmd": [
+        "/home/nic/forge/.venv/bin/python",
+        "-m",
+        "pytest",
+        "/home/nic/aiweb/runtime_wrappers/gilligan_agent"
+      ],
+      "cwd": ".",
+      "returncode": 1,
+      "stderr_tail": "/home/nic/forge/.venv/bin/python: No module named pytest\n",
+      "stdout_tail": ""
+    },
+    "snapshot_path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/retired_candidates/gilligan_agent",
+    "snapshot_tree": {
+      "exists": true,
+      "file_count": 2,
+      "hashes_first_200_files": [
+        {
+          "bytes": 11235,
+          "path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/retired_candidates/gilligan_agent/gilligan_rmc_agent.py",
+          "sha256": "6b46a78f6de3e945e718b596f71288e9184129018a6eed62465db001ff64271a"
+        },
+        {
+          "bytes": 16029,
+          "path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/retired_candidates/gilligan_agent/test_gilligan_rmc_agent.py",
+          "sha256": "f76d4fc6ddf4a885bc11b758eba9b938c880d1c8700f9fbfdb589b46c2f14d05"
+        }
+      ],
+      "path": "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/retired_candidates/gilligan_agent",
+      "py_file_count": 2,
+      "sample_files": [
+        "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/retired_candidates/gilligan_agent/gilligan_rmc_agent.py",
+        "forge/memory/rmc_integration_freeze_v1/20260523_183446_UTC/snapshots/retired_candidates/gilligan_agent/test_gilligan_rmc_agent.py"
+      ],
+      "test_file_count": 1,
+      "total_bytes": 27264
+    },
+    "source_exists": true,
+    "source_path": "aiweb/runtime_wrappers/gilligan_agent",
+    "tree": {
+      "exists": true,
+      "file_count": 2,
+      "hashes_first_200_files": [
+        {
+          "bytes": 11235,
+          "path": "aiweb/runtime_wrappers/gilligan_agent/gilligan_rmc_agent.py",
+          "sha256": "6b46a78f6de3e945e718b596f71288e9184129018a6eed62465db001ff64271a"
+        },
+        {
+          "bytes": 16029,
+          "path": "aiweb/runtime_wrappers/gilligan_agent/test_gilligan_rmc_agent.py",
+          "sha256": "f76d4fc6ddf4a885bc11b758eba9b938c880d1c8700f9fbfdb589b46c2f14d05"
+        }
+      ],
+      "path": "aiweb/runtime_wrappers/gilligan_agent",
+      "py_file_count": 2,
+      "sample_files": [
+        "aiweb/runtime_wrappers/gilligan_agent/gilligan_rmc_agent.py",
+        "aiweb/runtime_wrappers/gilligan_agent/test_gilligan_rmc_agent.py"
+      ],
+      "test_file_count": 1,
+      "total_bytes": 27264
+    }
+  },
+  "timestamp": "20260523_183446_UTC",
+  "verdict": [
+    "Freeze complete before any module movement or deletion.",
+    "Do not wire Gilligan into Forge until phase_state_parser, drift_arbitrator, and echo_gate exist and pass compile/tests.",
+    "Keep integration read-only/staged until service contracts and RMC tool wrappers are verified."
+  ]
+}

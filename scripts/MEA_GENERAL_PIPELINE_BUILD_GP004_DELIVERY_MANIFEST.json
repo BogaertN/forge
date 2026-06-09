@@ -1,0 +1,37 @@
+{
+  "adds_new_domain": false,
+  "boundaries": {
+    "adds_corpus_ingestion": false,
+    "adds_dependencies": [],
+    "adds_routes": false,
+    "adds_ui": false,
+    "in_memory_only": true,
+    "mints_ct": false,
+    "writes_contribution_economy": false,
+    "writes_identity_vault": false,
+    "writes_persistent_memory": false
+  },
+  "build_id": "GENERAL-PIPELINE-PRODUCTION-REGROUND-BUILD-GP-004",
+  "modified_modules": [
+    "__init__.py",
+    "domains.py",
+    "source_compiler.py",
+    "manifest_builder.py",
+    "governed_gate.py",
+    "pipeline.py",
+    "domains_equations.py",
+    "gp002_linear_equations.py",
+    "domains_wordproblems.py",
+    "gp003_word_problems.py"
+  ],
+  "new_modules": [
+    "capability_registry.py",
+    "gp004_production_reground.py"
+  ],
+  "new_tests": [
+    "test_general_pipeline_production_reground_build_gp004.py",
+    "general_pipeline_production_reground_build_gp004_verify.py"
+  ],
+  "schema_version": "general_pipeline_capability_registry_v1_build_gp004",
+  "title": "General Pipeline Production Reground: Strict Parse Boundary and Capability Registry Foundation"
+}

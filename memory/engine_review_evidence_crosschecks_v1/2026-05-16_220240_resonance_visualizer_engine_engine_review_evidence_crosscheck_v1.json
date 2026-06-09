@@ -1,0 +1,267 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "f345ac3ac2debcc4e70dd4c43f0675fa25fde221cf0638dce15afef891854042",
+      "excerpt_start": "import json\nimport random\nimport time\n\nOUTPUT_FILE = \"visualizer_output.json\"\n\ndef generate_resonance_snapshot():\n    \"\"\"Simulates symbolic recursion charge and drift visualization.\"\"\"\n    charge = random.randint(30, 100)\n    drift = random.choice([\"none\", \"minor\", \"major\"])\n\n    snapshot = {\n        \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime()),\n        \"charge_level\": charge,\n        \"drift_status\": drift\n    }\n\n    try:\n        with open(OUTPUT_FILE, \"w\") as f:\n            json.dump(snapshot, f, indent=2)\n        print(f\"\u2714\ufe0f Resonance snapshot generated: {snapshot}\")\n    except Exception as e:\n        print(f\"[!] Failed to write visualizer output: {e}\")\n\n    return snapshot\n",
+      "functions_sample": [
+        "generate_resonance_snapshot"
+      ],
+      "imports_sample": [
+        "import json",
+        "import random",
+        "import time"
+      ],
+      "line_count": 26,
+      "path": "/home/nic/aiweb/engines/resonance_visualizer_engine/visualizer_core.py",
+      "relative_to_candidate": "visualizer_core.py",
+      "sha256": "f345ac3ac2debcc4e70dd4c43f0675fa25fde221cf0638dce15afef891854042",
+      "size_bytes": 707
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "9b6b8b514f3c69f6a3da511b51bc94ac34a0e0f93137c04cfe7c89d026493005",
+      "excerpt_start": "from visualizer_core import generate_resonance_snapshot\n\ndef test_visualization():\n    try:\n        result = generate_resonance_snapshot()\n        assert \"charge_level\" in result\n        assert \"drift_status\" in result\n        print(\"\u2705 Test Passed: Resonance snapshot generated successfully.\")\n    except Exception as e:\n        print(f\"\u274c Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    test_visualization()\n",
+      "functions_sample": [
+        "test_visualization"
+      ],
+      "imports_sample": [
+        "from visualizer_core import generate_resonance_snapshot"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/resonance_visualizer_engine/test_visualizer.py",
+      "relative_to_candidate": "test_visualizer.py",
+      "sha256": "9b6b8b514f3c69f6a3da511b51bc94ac34a0e0f93137c04cfe7c89d026493005",
+      "size_bytes": 415
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "55231a46675fb90fb1080759a5b48f31f34f53c0cb16b6b3531a1eb8a31aeb62",
+      "excerpt_start": "# Resonance Visualizer Engine\n\nCreates simple JSON-based visual snapshots of recursion charge and symbolic drift state.\n\nDesigned for integration with dashboards, monitors, and runtime UI displays.\n",
+      "functions_sample": [
+        "Resonance",
+        "Visualizer",
+        "Engine",
+        "Creates",
+        "simple",
+        "JSON",
+        "based",
+        "visual",
+        "snapshots",
+        "recursion",
+        "charge",
+        "and",
+        "symbolic",
+        "drift",
+        "state",
+        "Designed",
+        "for",
+        "integration",
+        "with",
+        "dashboards",
+        "monitors",
+        "runtime",
+        "displays"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/resonance_visualizer_engine/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "55231a46675fb90fb1080759a5b48f31f34f53c0cb16b6b3531a1eb8a31aeb62",
+      "size_bytes": 198
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "2ba89b57235bbf4d4cb17c3dd56acfd883baaf037e120359804bc437f0d715e0",
+      "excerpt_start": "{\n  \"timestamp\": \"2025-04-27T00:35:35Z\",\n  \"charge_level\": 45,\n  \"drift_status\": \"minor\"\n}",
+      "functions_sample": [
+        "timestamp",
+        "charge_level",
+        "drift_status",
+        "minor"
+      ],
+      "imports_sample": [],
+      "line_count": 5,
+      "path": "/home/nic/aiweb/engines/resonance_visualizer_engine/visualizer_output.json",
+      "relative_to_candidate": "visualizer_output.json",
+      "sha256": "2ba89b57235bbf4d4cb17c3dd56acfd883baaf037e120359804bc437f0d715e0",
+      "size_bytes": 90
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "e2012a2bed90a1f9ccd8141320034e17eeca31fe4f9e9bebc0db2726f6319529",
+      "excerpt_start": "{\n  \"engine\": \"Resonance Visualizer Engine\",\n  \"version\": \"v1\",\n  \"description\": \"Generates symbolic recursion charge and drift visualization snapshots for UI dashboards and system logs.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Resonance",
+        "Visualizer",
+        "Engine",
+        "version",
+        "description",
+        "Generates",
+        "symbolic",
+        "recursion",
+        "charge",
+        "and",
+        "drift",
+        "visualization",
+        "snapshots",
+        "for",
+        "dashboards",
+        "system",
+        "logs"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/resonance_visualizer_engine/visualizer_manifest.json",
+      "relative_to_candidate": "visualizer_manifest.json",
+      "sha256": "e2012a2bed90a1f9ccd8141320034e17eeca31fe4f9e9bebc0db2726f6319529",
+      "size_bytes": 190
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/engines/resonance_visualizer_engine",
+  "created_at": "2026-05-16_220240",
+  "crosscheck_id": "ERE-resonance_visualizer_engine-2026-05-16_220240",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Creates",
+      "Designed",
+      "Engine",
+      "Generates",
+      "JSON",
+      "Resonance",
+      "Visualizer",
+      "and",
+      "based",
+      "charge",
+      "charge_level",
+      "dashboards",
+      "description",
+      "displays",
+      "drift",
+      "drift_status",
+      "engine",
+      "for",
+      "generate_resonance_snapshot",
+      "integration"
+    ],
+    "imports_sample": [
+      "from visualizer_core import generate_resonance_snapshot",
+      "import json",
+      "import random",
+      "import time"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`resonance_visualizer_engine` appears to be a local AI.Web engine/component. The bound source evidence includes 5 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "import json import random",
+      "from visualizer_core import generate_resonance_snapshot ",
+      "# Resonance Visualizer Engine ",
+      "{   \"timestamp\": \"2025-04-27T00:35:35Z\","
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_220216_resonance_visualizer_engine_llm_engine_review_draft_v1.json",
+  "draft_sha256": "5761a785065a994ba635d795ef71049596f609738e31f58377016e9a3866b169",
+  "engine_family": "resonance_visualizer_engine",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_resonance_visualizer_engine_engine_evidence_binder.json",
+  "evidence_binder_sha256": "96812a0feaad1827a6e101e5dca34821493a75b3a012d652df9f7082f5cbbb9d",
+  "evidence_id": "EEB-46f2483eea8aaa4e",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "visualizer_core.py",
+      "test_visualizer.py"
+    ],
+    "functions_mentioned": [
+      "Visualizer",
+      "JSON",
+      "based",
+      "visual",
+      "snapshots",
+      "recursion",
+      "charge",
+      "and",
+      "symbolic",
+      "drift",
+      "state",
+      "for",
+      "integration",
+      "with",
+      "dashboards",
+      "Generates",
+      "visualization",
+      "system",
+      "logs"
+    ],
+    "imports_mentioned": [
+      "import json",
+      "import random",
+      "import time",
+      "from visualizer_core import generate_resonance_snapshot"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 24.0,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "bfa6c7321120fc3ca7fa49eaaf98d701a56433d4c9846e02193e4ef08f91b3c4",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nGenerates JSON-based visual snapshots of recursion charge and symbolic drift states for monitoring dashboards and system logs.  \n\nLikely System Role:  \nA visualization tool for tracking AI process states (charge levels, drift status) in real-time, intended for integration with UI dashboards and logging systems.  \n\nEvidence Used:  \n- Code (`visualizer_core.py`) generates random charge levels and drift statuses, writes to JSON files.  \n- Test script (`test_visualizer.py`) validates output structure.  \n- README and manifest describe integration with dashboards and logs.  \n- Sample output JSON demonstrates data format.  \n\nRisks / Uncertainties:  \n- Random charge values may lack consistency for monitoring.  \n- No error handling for file I/O beyond basic exception catching.  \n- Unclear how this integrates with broader AI.Web systems or security protocols.  \n\nRecommendation Draft:  \nApprove review with caveats: enhance error handling for file operations, define data validation rules for charge/drift fields, and clarify integration requirements with AI.Web systems.  \n\nSuggested Nic Action:  \nVerify alignment with AI.Web's visualization needs, confirm data consistency requirements, and approve with specified improvements."
+  },
+  "llm_sections": {
+    "evidence_used": "- Code (`visualizer_core.py`) generates random charge levels and drift statuses, writes to JSON files.  \n- Test script (`test_visualizer.py`) validates output structure.  \n- README and manifest describe integration with dashboards and logs.  \n- Sample output JSON demonstrates data format.",
+    "likely_system_role": "A visualization tool for tracking AI process states (charge levels, drift status) in real-time, intended for integration with UI dashboards and logging systems.",
+    "plain_english_purpose": "Generates JSON-based visual snapshots of recursion charge and symbolic drift states for monitoring dashboards and system logs.",
+    "recommendation_draft": "Approve review with caveats: enhance error handling for file operations, define data validation rules for charge/drift fields, and clarify integration requirements with AI.Web systems.",
+    "risks_uncertainties": "- Random charge values may lack consistency for monitoring.  \n- No error handling for file I/O beyond basic exception catching.  \n- Unclear how this integrates with broader AI.Web systems or security protocols.",
+    "suggested_nic_action": "Verify alignment with AI.Web's visualization needs, confirm data consistency requirements, and approve with specified improvements."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nGenerates JSON-based visual snapshots of recursion charge and symbolic drift states for monitoring dashboards and system logs.  \n\nLikely System Role:  \nA visualization tool for tracking AI process states (charge levels, drift status) in real-time, intended for integration with UI dashboards and logging systems.  \n\nEvidence Used:  \n- Code (`visualizer_core.py`) generates random charge levels and drift statuses, writes to JSON files.  \n- Test script (`test_visualizer.py`) validates output structure.  \n- README and manifest describe integration with dashboards and logs.  \n- Sample output JSON demonstrates data format.  \n\nRisks / Uncertainties:  \n- Random charge values may lack consistency for monitoring.  \n- No error handling for file I/O beyond basic exception catching.  \n- Unclear how this integrates with broader AI.Web systems or security protocols.  \n\nRecommendation Draft:  \nApprove review with caveats: enhance error handling for file operations, define data validation rules for charge/drift fields, and clarify integration requirements with AI.Web systems.  \n\nSuggested Nic Action:  \nVerify alignment with AI.Web's visualization needs, confirm data consistency requirements, and approve with specified improvements.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

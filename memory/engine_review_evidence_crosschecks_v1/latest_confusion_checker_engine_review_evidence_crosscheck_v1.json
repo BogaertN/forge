@@ -1,0 +1,112 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "5d98b926867612b76be6ef3510c42b69c09aabd67ce20a23a77e803bebc6a66a",
+      "excerpt_start": "# drift_detection_system/run.py\n\ndef detect_drift(prompt: str) -> bool:\n    keywords = [\"loop\", \"return\", \"phase\", \"coherence\"]\n    return not any(kw in prompt.lower() for kw in keywords)\n",
+      "functions_sample": [
+        "detect_drift"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/confusion_checker/run.py",
+      "relative_to_candidate": "run.py",
+      "sha256": "5d98b926867612b76be6ef3510c42b69c09aabd67ce20a23a77e803bebc6a66a",
+      "size_bytes": 188
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/confusion_checker",
+  "created_at": "2026-05-16_080827",
+  "crosscheck_id": "ERE-confusion_checker-2026-05-16_080827",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "detect_drift"
+    ],
+    "imports_sample": [],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`confusion_checker` appears to be a local AI.Web engine/component. The bound source evidence includes 1 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "# drift_detection_system/run.py "
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_080802_confusion_checker_llm_engine_review_draft_v1.json",
+  "draft_sha256": "9d978ce695b543e1f7cb6445ec05697c288b53c39bc5e03f793231b9bb067c76",
+  "engine_family": "confusion_checker",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_confusion_checker_engine_evidence_binder.json",
+  "evidence_binder_sha256": "3166fdd52a6df46c67afe553fe567c13a3734d5df3ec350bf50851afff0fbb57",
+  "evidence_id": "EEB-0fec7336f1df5be6",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "run.py"
+    ],
+    "functions_mentioned": [
+      "detect_drift"
+    ],
+    "imports_mentioned": []
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 25.241,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "d660a6df7b997b703c47c50ae171bb15150dacb7a7e0d8e6b709e1c9e60e39ec",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo detect potential drift in prompts by checking for specific keywords that may indicate system inconsistencies or errors.  \n\nLikely System Role:  \nA drift detection mechanism within a recursive LLM system to identify prompts that might cause coherence issues or unintended behavior.  \n\nEvidence Used:  \nThe `detect_drift` function in `run.py` checks if a prompt contains keywords like \"loop\", \"return\", \"phase\", or \"coherence\". If none are found, it returns `True` (no drift detected).  \n\nRisks / Uncertainties:  \nThe keyword-based approach may miss nuanced drift patterns. The function\u2019s simplicity could lead to false negatives or overly broad classifications.  \n\nRecommendation Draft:  \nEnhance drift detection by expanding keyword coverage or integrating contextual analysis. Validate against diverse prompt examples to ensure robustness.  \n\nSuggested Nic Action:  \nReview the source law chunks to confirm alignment with system requirements. Approve refinement of the drift detection logic if additional evidence supports it."
+  },
+  "llm_sections": {
+    "evidence_used": "The `detect_drift` function in `run.py` checks if a prompt contains keywords like \"loop\", \"return\", \"phase\", or \"coherence\". If none are found, it returns `True` (no drift detected).",
+    "likely_system_role": "A drift detection mechanism within a recursive LLM system to identify prompts that might cause coherence issues or unintended behavior.",
+    "plain_english_purpose": "To detect potential drift in prompts by checking for specific keywords that may indicate system inconsistencies or errors.",
+    "recommendation_draft": "Enhance drift detection by expanding keyword coverage or integrating contextual analysis. Validate against diverse prompt examples to ensure robustness.",
+    "risks_uncertainties": "The keyword-based approach may miss nuanced drift patterns. The function\u2019s simplicity could lead to false negatives or overly broad classifications.",
+    "suggested_nic_action": "Review the source law chunks to confirm alignment with system requirements. Approve refinement of the drift detection logic if additional evidence supports it."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nTo detect potential drift in prompts by checking for specific keywords that may indicate system inconsistencies or errors.  \n\nLikely System Role:  \nA drift detection mechanism within a recursive LLM system to identify prompts that might cause coherence issues or unintended behavior.  \n\nEvidence Used:  \nThe `detect_drift` function in `run.py` checks if a prompt contains keywords like \"loop\", \"return\", \"phase\", or \"coherence\". If none are found, it returns `True` (no drift detected).  \n\nRisks / Uncertainties:  \nThe keyword-based approach may miss nuanced drift patterns. The function\u2019s simplicity could lead to false negatives or overly broad classifications.  \n\nRecommendation Draft:  \nEnhance drift detection by expanding keyword coverage or integrating contextual analysis. Validate against diverse prompt examples to ensure robustness.  \n\nSuggested Nic Action:  \nReview the source law chunks to confirm alignment with system requirements. Approve refinement of the drift detection logic if additional evidence supports it.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

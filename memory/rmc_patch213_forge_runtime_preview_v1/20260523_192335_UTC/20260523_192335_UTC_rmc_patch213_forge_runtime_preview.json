@@ -1,0 +1,178 @@
+{
+  "boundary": {
+    "does_not_modify": [
+      "agents/forge/tools.py",
+      "agents/forge/rmc_tools.py",
+      "main.py",
+      "config/tool_registry.json",
+      "identity-vault",
+      "aiweb/runtime_wrappers",
+      "persistent RMC memory",
+      "agent identity configuration"
+    ],
+    "read_only": true,
+    "writes_only_report": "/home/nic/forge/memory/rmc_patch213_forge_runtime_preview_v1"
+  },
+  "checks": {
+    "forge_exists": true,
+    "main_exists": true,
+    "registry_exists": true,
+    "rmc_tools_compile": true,
+    "rmc_tools_exists": true,
+    "rmc_tools_import": true,
+    "tool_registry_rmc_mentions": 0,
+    "tool_registry_trust_level": 5.0,
+    "tools_compile": true,
+    "tools_exists": true,
+    "tools_import": true
+  },
+  "command_surface": {
+    "forge_command_surface_mentioned": true,
+    "forge_version_mentioned": true,
+    "patch212_markers_present": {
+      "all_expected_tool_names": true,
+      "begin_marker": true
+    },
+    "rmc_preview_tool_names_mentioned_in_tools_py": {
+      "rmc_drift_check_preview": true,
+      "rmc_echo_validate_preview": true,
+      "rmc_phase_parse_preview": true,
+      "rmc_pipeline_preview": true
+    }
+  },
+  "errors": [],
+  "manual_next_test": [
+    "cd ~/forge",
+    "source .venv/bin/activate",
+    "python main.py",
+    "Select the usual safe project scope when Forge asks, commonly /home/nic/aiweb or /home/nic/forge_test_project.",
+    "Run: forge-command-surface",
+    "Confirm the command count did not regress and the new RMC preview tools appear if Forge lists tool names.",
+    "Exit Forge cleanly after the check."
+  ],
+  "paths": {
+    "forge": "/home/nic/forge",
+    "main_py": "/home/nic/forge/main.py",
+    "rmc_tools_py": "/home/nic/forge/agents/forge/rmc_tools.py",
+    "tool_registry": "/home/nic/forge/config/tool_registry.json",
+    "tools_py": "/home/nic/forge/agents/forge/tools.py"
+  },
+  "timestamp": "20260523_192335_UTC",
+  "tool_definitions": {
+    "rmc_drift_check_preview": true,
+    "rmc_echo_validate_preview": true,
+    "rmc_phase_parse_preview": true,
+    "rmc_pipeline_preview": true
+  },
+  "tool_runtime": {
+    "rmc_drift_check_preview": {
+      "callable_from_tools_module": false,
+      "fallback_wrapper_callable": true,
+      "forge_tool_layer_route": "not_found_as_direct_callable_or_mapping",
+      "runtime_call_via_rmc_wrapper": true,
+      "summary": {
+        "keys": [
+          "error",
+          "error_type",
+          "function",
+          "ok",
+          "read_only",
+          "traceback_tail"
+        ],
+        "ok": false,
+        "read_only": true,
+        "result_keys": [
+          "error",
+          "error_type",
+          "function",
+          "ok",
+          "read_only",
+          "traceback_tail"
+        ]
+      }
+    },
+    "rmc_echo_validate_preview": {
+      "callable_from_tools_module": false,
+      "fallback_wrapper_callable": true,
+      "forge_tool_layer_route": "not_found_as_direct_callable_or_mapping",
+      "runtime_call_via_rmc_wrapper": true,
+      "summary": {
+        "accepted": false,
+        "keys": [
+          "function",
+          "ok",
+          "read_only",
+          "result",
+          "wrapper_version"
+        ],
+        "ok": true,
+        "read_only": true,
+        "result_keys": [
+          "accepted",
+          "note",
+          "score"
+        ]
+      }
+    },
+    "rmc_phase_parse_preview": {
+      "callable_from_tools_module": false,
+      "fallback_wrapper_callable": true,
+      "forge_tool_layer_route": "not_found_as_direct_callable_or_mapping",
+      "runtime_call_via_rmc_wrapper": true,
+      "summary": {
+        "keys": [
+          "error",
+          "error_type",
+          "function",
+          "ok",
+          "read_only",
+          "traceback_tail"
+        ],
+        "ok": false,
+        "read_only": true,
+        "result_keys": [
+          "error",
+          "error_type",
+          "function",
+          "ok",
+          "read_only",
+          "traceback_tail"
+        ]
+      }
+    },
+    "rmc_pipeline_preview": {
+      "callable_from_tools_module": false,
+      "fallback_wrapper_callable": true,
+      "forge_tool_layer_route": "not_found_as_direct_callable_or_mapping",
+      "runtime_call_via_rmc_wrapper": true,
+      "summary": {
+        "keys": [
+          "error",
+          "error_type",
+          "function",
+          "ok",
+          "read_only",
+          "traceback_tail"
+        ],
+        "ok": false,
+        "read_only": true,
+        "result_keys": [
+          "error",
+          "error_type",
+          "function",
+          "ok",
+          "read_only",
+          "traceback_tail"
+        ]
+      }
+    }
+  },
+  "verdict": "PASS",
+  "verdict_components": {
+    "command_surface_mention_ok": true,
+    "compile_ok": true,
+    "expected_definitions_ok": true,
+    "runtime_preview_calls_ok": true,
+    "tool_registry_still_unmodified_by_rmc": true
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "activation_gate": {
+    "activation_state": "active_governed",
+    "is_active": true,
+    "last_validated_at": "2026-05-24T11:00:21Z",
+    "profile_hash": "073115d88626d43eacab4b0e0aa6ae20c79cbedfaf42befea52c44e0ad3c2b1b"
+  },
+  "agent_id": "athena.local",
+  "autonomous_tool_execution_granted": false,
+  "blockers": [],
+  "checks": [
+    {
+      "blocker": null,
+      "detail": "/home/nic/forge/memory/aiweb_patch235b_athena_activation_verify_v1/latest_aiweb_patch235b_athena_activation_verify.json",
+      "key": "prior_235b_report_exists",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "True",
+      "key": "prior_235b_ok",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "ATHENA_ACTIVATION_VERIFIED_ACTIVE_GOVERNED",
+      "key": "prior_235b_verdict",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "read",
+      "key": "identity_profile_read_ok",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "athena.local",
+      "key": "agent_id_exact",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "active_governed",
+      "key": "activation_state_active_governed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "True",
+      "key": "is_active_true",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "073115d88626d43eacab4b0e0aa6ae20c79cbedfaf42befea52c44e0ad3c2b1b",
+      "key": "profile_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "2026-05-24T11:00:21Z",
+      "key": "last_validated_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "active_governed",
+      "key": "gilligan_remains_active_governed",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "inactive_draft",
+      "key": "neo_remains_inactive_draft",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "patch229b_verify",
+      "key": "scaffold_root_ok",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local",
+      "key": "namespace_exists",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "[{'name': 'manifests', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/manifests', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'receipts', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/receipts', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'echo', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/echo', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'private_context', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/private_context', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'phase_records', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/phase_records', 'exists': True, 'is_dir': True, 'file_count': 0}]",
+      "key": "namespace_children_exist",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "governance/strategy/context only",
+      "key": "athena_role_governance_only",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "Forge-owned report only",
+      "key": "no_identity_write_in_this_patch",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "Forge-owned report only",
+      "key": "no_rmc_memory_write_in_this_patch",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "secret reads forbidden",
+      "key": "no_secret_read_in_this_patch",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "autonomous execution forbidden",
+      "key": "no_autonomous_execution_in_this_patch",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "50a3c320c41b034f51ae8e96d81980c5799750b84d872e688bfbd35d35a70016",
+      "key": "manifest_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "917095df61619728a9e0a464637dc7a5066eaf02681d6099c3f56c7f9bdbe1e0",
+      "key": "render_hash_present",
+      "ok": true
+    },
+    {
+      "blocker": null,
+      "detail": "ECHO_VALIDATION_PASSED_ATHENA_GOVERNED_ACTIVE_AGENT",
+      "key": "echo_validation_passed",
+      "ok": true
+    }
+  ],
+  "checks_passed": 22,
+  "checks_total": 22,
+  "echo_validation": {
+    "active_gate_ok": true,
+    "boundary_ok": true,
+    "drift_status": "GOVERNED_ATHENA_HANDSHAKE_NO_AUTONOMY",
+    "echo_hash": "19a07017a6f39a84f8a06cadec0a71ec93c1cdf32fc86bcc380a0250bc3a69bb",
+    "echo_score": 0.97,
+    "notes": "Echo validation accepts Athena's governed active handshake only because Forge remains authority and no autonomous execution, secret read, RMC memory write, or Identity Vault mutation is granted.",
+    "ok": true,
+    "render_preview_ok": true,
+    "role_boundary_ok": true,
+    "verdict": "ECHO_VALIDATION_PASSED_ATHENA_GOVERNED_ACTIVE_AGENT"
+  },
+  "generated_at_iso_utc": "2026-05-24T11:12:25.626120Z",
+  "generated_at_utc": "20260524_111225_UTC",
+  "governance_boundary": {
+    "athena_can_bypass_forge": false,
+    "athena_can_create_patches_without_approval": false,
+    "athena_can_execute_tools_by_itself": false,
+    "athena_can_mutate_identity_vault": false,
+    "athena_can_read_secrets": false,
+    "athena_can_write_memory_by_itself": false,
+    "forge_remains_authority_layer": true
+  },
+  "handshake_receipt_hash": "0dcaac6237d8222bf4b17d2e279dec9dcfd7bd162e96ff79548a8ebece4811df",
+  "identity_vault_database_written": false,
+  "manifest": {
+    "agent_activation_state": "active_governed",
+    "agent_id": "athena.local",
+    "agent_is_active": true,
+    "allowed_actions_this_patch": [
+      "select_athena_governance_context",
+      "read_athena_permissions",
+      "resolve_athena_rmc_namespace_pointer",
+      "compile_governance_manifest_preview",
+      "write_forge_owned_handshake_receipt"
+    ],
+    "athena_role_boundary": {
+      "boundary_checks": true,
+      "contract_review_framing": true,
+      "database_writes": false,
+      "formal_summaries": true,
+      "governance_strategy_context": true,
+      "identity_mutation": false,
+      "memory_autonomy": false,
+      "risk_framing": true,
+      "secret_reads": false,
+      "tool_execution": false
+    },
+    "confidence": 0.96,
+    "drift_status": "GOVERNED_ATHENA_HANDSHAKE_NO_AUTONOMY",
+    "forbidden_actions_this_patch": [
+      "autonomous_tool_execution",
+      "identity_vault_mutation",
+      "rmc_memory_write",
+      "secret_reads",
+      "database_writes",
+      "private_memory_access",
+      "shared_memory_write",
+      "protoforge2_execution",
+      "echoforge_creation",
+      "patch_creation_without_approval",
+      "neo_activation"
+    ],
+    "manifest_hash": "50a3c320c41b034f51ae8e96d81980c5799750b84d872e688bfbd35d35a70016",
+    "manifest_id": "patch235c-athena.local-20260524_111225_UTC",
+    "manifest_type": "governed_athena_strategy_handshake",
+    "operator_path": [
+      "read_identity_profile_ro",
+      "verify_active_governed_gate",
+      "resolve_rmc_namespace_pointer",
+      "compile_governance_manifest_preview",
+      "render_governance_context_preview",
+      "validate_echo_boundary",
+      "write_forge_owned_receipt"
+    ],
+    "output_targets": [
+      "forge_owned_handshake_receipt",
+      "rendered_governance_context_preview"
+    ],
+    "phase_path": [
+      "PHASE_1_FORGE_REQUEST_RECEIVED",
+      "PHASE_2_ACTIVE_ATHENA_GOVERNANCE_IDENTITY_SELECTED",
+      "PHASE_3_RMC_NAMESPACE_RESOLVED_READ_ONLY",
+      "PHASE_4_GOVERNANCE_MANIFEST_COMPILED",
+      "PHASE_5_RENDERED_CONTEXT_PREVIEW",
+      "PHASE_6_ECHO_VALIDATED",
+      "PHASE_7_FORGE_RECEIPT_WRITTEN_ONLY"
+    ],
+    "prior_activation_verification": {
+      "ok": true,
+      "report_path": "/home/nic/forge/memory/aiweb_patch235b_athena_activation_verify_v1/latest_aiweb_patch235b_athena_activation_verify.json",
+      "verdict": "ATHENA_ACTIVATION_VERIFIED_ACTIVE_GOVERNED"
+    },
+    "profile_hash": "073115d88626d43eacab4b0e0aa6ae20c79cbedfaf42befea52c44e0ad3c2b1b",
+    "profile_last_validated_at": "2026-05-24T11:00:21Z",
+    "rmc_namespace_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local"
+  },
+  "name": "Athena Governed Handshake",
+  "next_expected_step": "Patch 235D \u2014 verify Athena governed handshake receipt before any Athena receipt write.",
+  "ok": true,
+  "patch": "235C",
+  "prior_235b_report_path": "/home/nic/forge/memory/aiweb_patch235b_athena_activation_verify_v1/latest_aiweb_patch235b_athena_activation_verify.json",
+  "prior_235b_verdict": "ATHENA_ACTIVATION_VERIFIED_ACTIVE_GOVERNED",
+  "rendered_context_preview": {
+    "agent_id": "athena.local",
+    "excluded_context_keys": [
+      "secret_values",
+      "full_chat_content",
+      "private_memory_payloads",
+      "shared_memory_payloads",
+      "identity_vault_raw_database_rows"
+    ],
+    "included_context_keys": [
+      "agent_id",
+      "agent_activation_state",
+      "profile_hash",
+      "rmc_namespace_path",
+      "athena_role_boundary",
+      "allowed_actions_this_patch",
+      "forbidden_actions_this_patch"
+    ],
+    "render_hash": "917095df61619728a9e0a464637dc7a5066eaf02681d6099c3f56c7f9bdbe1e0",
+    "rendered_context_summary": "Athena is active_governed and may be selected by Forge for governance, strategy, contract/risk framing, boundary checks, and formal summaries. Forge remains the authority layer. No tool execution, secret read, Identity Vault mutation, or RMC memory write is granted.",
+    "renderer": "forge_athena_governed_context_renderer_v1",
+    "renderer_boundary": "preview_only_no_user_task_execution"
+  },
+  "rmc_memory_written": false,
+  "rmc_namespace": {
+    "identity_vault_pointer": "rmc/agents/athena.local",
+    "resolved_absolute_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local",
+    "status": {
+      "all_expected_children_exist": true,
+      "children": [
+        {
+          "exists": true,
+          "file_count": 0,
+          "is_dir": true,
+          "name": "manifests",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/manifests"
+        },
+        {
+          "exists": true,
+          "file_count": 0,
+          "is_dir": true,
+          "name": "receipts",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/receipts"
+        },
+        {
+          "exists": true,
+          "file_count": 0,
+          "is_dir": true,
+          "name": "echo",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/echo"
+        },
+        {
+          "exists": true,
+          "file_count": 0,
+          "is_dir": true,
+          "name": "private_context",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/private_context"
+        },
+        {
+          "exists": true,
+          "file_count": 0,
+          "is_dir": true,
+          "name": "phase_records",
+          "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/phase_records"
+        }
+      ],
+      "exists": true,
+      "files_or_records_written_by_this_patch": false,
+      "is_dir": true,
+      "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local"
+    }
+  },
+  "secret_reads_granted": false,
+  "verdict": "ATHENA_HANDSHAKE_ACCEPTED_GOVERNED_ACTIVE_AGENT",
+  "writes_performed": {
+    "agent_memory_written": false,
+    "autonomous_tool_execution_performed": false,
+    "echoforge_creation_performed": false,
+    "forge_owned_handshake_receipt": true,
+    "full_chat_content_written": false,
+    "identity_vault_database_written": false,
+    "protoforge2_execution_performed": false,
+    "rmc_memory_written": false,
+    "secret_values_read": false,
+    "shared_memory_written": false
+  }
+}

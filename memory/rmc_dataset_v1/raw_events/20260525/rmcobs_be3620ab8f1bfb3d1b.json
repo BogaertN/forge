@@ -1,0 +1,126 @@
+{
+  "approval": "CAPTURE_RMC_LLM_TURN",
+  "candidate_family": "needs_human_classification",
+  "candidate_target_dataset": "word_loop_or_transition_candidate",
+  "created_at_utc": "2026-05-25T19:05:09+00:00",
+  "drift_summary": {
+    "circuit_breaker": {
+      "reason": "",
+      "status": "not_triggered",
+      "triggered": false,
+      "triggers": {
+        "bypass_violations_present": false,
+        "circuit_breaker_threshold": 0.72,
+        "critical_catastrophic_drift": false,
+        "epsilon_s": 0.4657,
+        "epsilon_s_above_threshold": false,
+        "phase_5_to_8_projection_skip": false,
+        "threshold_label": "rmc_preflight_conservative"
+      }
+    },
+    "drift_report_id": "drift_structural_contract_03533ac7e058d776",
+    "epsilon_s": 0.4657,
+    "projection_status": "blocked_until_chi_t_correction",
+    "recommended_action": "correction_gate_required_before_candidate_generation",
+    "top_drift_classes": [
+      {
+        "drift_key": "syntactic",
+        "evidence": [
+          "schema:low_jaccard=0.25"
+        ],
+        "score": 0.48,
+        "severity": "moderate"
+      },
+      {
+        "drift_key": "semantic",
+        "evidence": [
+          "no_marker_detected"
+        ],
+        "score": 0.08,
+        "severity": "none"
+      },
+      {
+        "drift_key": "recursive",
+        "evidence": [
+          "no_marker_detected"
+        ],
+        "score": 0.08,
+        "severity": "none"
+      },
+      {
+        "drift_key": "catastrophic",
+        "evidence": [
+          "no_marker_detected"
+        ],
+        "score": 0.08,
+        "severity": "none"
+      }
+    ]
+  },
+  "extra_context": {
+    "canonical_reference_write_allowed": false,
+    "request_length": 49,
+    "request_sha256": "03533ac7e058d7760960bfadff2dd83bc73cf20c5aca716e17df3766d5c21b5f",
+    "response_length": 1003,
+    "response_preview": "Forge-governed LLM bridge result — proposal only.\nNo shell was opened. No files were written. No Forge command was executed.\n\nGoal: Wire a new command in the Operator Console\nStatus: PLAN_RETURNED (6 steps)\n\n1. forge-command-propose wire-operator-console-command\n   Proposes a new command for wiring the Operator Console\n2. forge-command-approve-proposal wire-operator-console-command  [gate: INSTALL]\n   Approves the proposal to convert it into a patch\n3. forge-command-install wire-operator-console-command  [gate: INSTALL]\n   Installs the scaffold for the new command\n4. forge-command-implement wire-operator-console-command  [gate: IMPLEMENT]\n   Qwen3 writes the real implementation code\n5. forge-command-implement-install wire-operator-console-command  [gate: IMPLEMENT]\n   Installs the real code replacing the scaffold\n6. forge-restart  [gate: RESTART]\n   Restarts Forge to activate the new command\n\nTo act on this plan, use the Safe Command Runner or terminal gates. The model did not execute it.",
+    "response_sha256": "78c123523fa01dda465da3046939e77c6c0a84e32363b8ee24297bd98de170f1",
+    "route": "operator_llm_request",
+    "stores_hidden_chain_of_thought": false
+  },
+  "law": "Raw input becomes observation only; never canonical truth.",
+  "observation_id": "rmcobs_be3620ab8f1bfb3d1b",
+  "phase_summary": {
+    "confidence": 0.283,
+    "event_id": "it_preview_03533ac7e058d776",
+    "phase_path_hypothesis": [
+      "Φ2",
+      "Φ3"
+    ],
+    "phase_primary": "Φ2",
+    "phase_secondary": [
+      "Φ3",
+      "Φ1",
+      "Φ4"
+    ],
+    "transition_warnings": []
+  },
+  "record_status": "OBSERVED_NOT_GOLD",
+  "record_type": "rmc_dataset_observation_v1",
+  "resonance_summary": {
+    "circuit_breaker_candidate": false,
+    "gate_signals": {},
+    "operator_phrase_count": 0,
+    "phase_vector": {
+      "Φ1": 0.06,
+      "Φ2": 0.06,
+      "Φ3": 0.045,
+      "Φ4": 0.075,
+      "Φ5": 0.105,
+      "Φ6": 0.03,
+      "Φ7": 0.09,
+      "Φ8": 0.06,
+      "Φ9": 0.075
+    },
+    "projection_allowed": "conditional_after_gates",
+    "recommended_route": "correction_then_naming_then_projection",
+    "resonance_event_count": 0,
+    "syntactic_firewall": {
+      "entropy": 3.9867,
+      "evidence": [
+        "syntactic_shape_ok"
+      ],
+      "score": 0.0,
+      "severity": "none",
+      "symbol_noise_ratio": 0.0204,
+      "syntactic_drift": false
+    },
+    "violations": [],
+    "word_loop_count": 0
+  },
+  "source_metadata": {
+    "input_length": 49,
+    "input_preview": "What should we wire next in the Operator Console?",
+    "input_sha256": "03533ac7e058d7760960bfadff2dd83bc73cf20c5aca716e17df3766d5c21b5f",
+    "source_kind": "operator_llm_request"
+  }
+}

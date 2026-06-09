@@ -1,0 +1,298 @@
+{
+  "any_file_boundary": {
+    "current_patch_accepts_arbitrary_path": false,
+    "future_generalization_allowed": true,
+    "required_for_any_file": [
+      "approved scope",
+      "exact-read",
+      "sha256 current-state record",
+      "no-write plan",
+      "sandbox rehearsal",
+      "safe tests",
+      "rollback copy",
+      "explicit human approval token in separate live patch",
+      "post-write disk verification"
+    ]
+  },
+  "approval_token_entered": false,
+  "candidate_file_summary": {
+    "config_file_count": 8,
+    "config_files_preview": [
+      "failsafe_manifest.json",
+      "failsafe_status.json",
+      "failsafe_manifest.json",
+      "failsafe_status.json",
+      "failsafe_manager/failsafe_manifest.json",
+      "failsafe_manager/failsafe_status.json",
+      "failsafe_manifest.json",
+      "failsafe_status.json"
+    ],
+    "duplicate_basenames": [
+      {
+        "basename": "README.md",
+        "count": 4
+      },
+      {
+        "basename": "failsafe_core.py",
+        "count": 4
+      },
+      {
+        "basename": "failsafe_manifest.json",
+        "count": 4
+      },
+      {
+        "basename": "failsafe_status.json",
+        "count": 4
+      },
+      {
+        "basename": "test_failsafe.py",
+        "count": 4
+      }
+    ],
+    "extension_counts": {
+      ".json": 8,
+      ".md": 4,
+      ".py": 8
+    },
+    "file_count": 20,
+    "json_file_count": 8,
+    "json_files_preview": [
+      "failsafe_manifest.json",
+      "failsafe_status.json",
+      "failsafe_manifest.json",
+      "failsafe_status.json",
+      "failsafe_manager/failsafe_manifest.json",
+      "failsafe_manager/failsafe_status.json",
+      "failsafe_manifest.json",
+      "failsafe_status.json"
+    ],
+    "python_file_count": 8,
+    "python_files_preview": [
+      "failsafe_core.py",
+      "test_failsafe.py",
+      "failsafe_core.py",
+      "test_failsafe.py",
+      "failsafe_core.py",
+      "failsafe_manager/failsafe_core.py",
+      "failsafe_manager/test_failsafe.py",
+      "test_failsafe.py"
+    ]
+  },
+  "created_at": "20260520_192049",
+  "engine_writes": 0,
+  "forge_owned_receipt_writes_only": true,
+  "gates": [
+    {
+      "detail": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_DEPENDENCY_READY_NO_WRITE_IMPACT_NOTES",
+      "id": "P178-G1",
+      "name": "Patch 177 dependency receipt loaded or safe warning recorded",
+      "status": "OK"
+    },
+    {
+      "detail": "failsafe_manager",
+      "id": "P178-G2",
+      "name": "Selected candidate preserved",
+      "status": "OK"
+    },
+    {
+      "detail": "checks=8",
+      "id": "P178-G3",
+      "name": "Validation matrix built without execution",
+      "status": "OK"
+    },
+    {
+      "detail": "executes_now=False shell_allowed=False",
+      "id": "P178-G4",
+      "name": "Safe-test plan is no-write/no-shell",
+      "status": "OK"
+    },
+    {
+      "detail": "required before any live apply",
+      "id": "P178-G5",
+      "name": "Rollback and sandbox remain future gates",
+      "status": "OK"
+    },
+    {
+      "detail": "approval token not requested; runtime/project/engine writes remain zero",
+      "id": "P178-G6",
+      "name": "Live apply remains forbidden",
+      "status": "OK"
+    }
+  ],
+  "human_approval_present": false,
+  "live_apply_allowed": false,
+  "next_patch": "Patch 179 \u2014 Runtime Candidate Dry-Plan Sandbox Readiness / No-Write Rehearsal Plan",
+  "patch": "Patch 178 \u2014 Runtime Candidate Dry-Plan Validation Matrix / No-Write Test Plan",
+  "problems": [],
+  "project_writes": 0,
+  "recommended_next_patch": "Patch 179 \u2014 Runtime Candidate Dry-Plan Sandbox Readiness / No-Write Rehearsal Plan",
+  "runtime_writes": 0,
+  "schema_version": "forge_runtime_candidate_dry_plan_validation_v1_patch178",
+  "selected_candidate": "failsafe_manager",
+  "source_report": {
+    "dependency_latest": "/home/nic/forge/memory/forge_runtime_candidate_dry_plan_dependency_v1/latest_forge_runtime_candidate_dry_plan_dependency_v1.json",
+    "dependency_status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_DEPENDENCY_READY_NO_WRITE_IMPACT_NOTES",
+    "scope_latest": "/home/nic/forge/memory/forge_runtime_candidate_dry_plan_scope_v1/latest_forge_runtime_candidate_dry_plan_scope_v1.json",
+    "scope_status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_SCOPE_READY_NO_WRITE_FILE_SET_REVIEW",
+    "selector_latest": "/home/nic/forge/memory/forge_runtime_candidate_dry_plan_selector_v1/latest_forge_runtime_candidate_dry_plan_selector_v1.json",
+    "selector_status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_SELECTOR_READY_NO_WRITE_PLANNING_GATE"
+  },
+  "status": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_VALIDATION_READY_NO_WRITE_TEST_PLAN",
+  "test_plan": {
+    "arbitrary_commands_allowed": false,
+    "config_targets_preview": [
+      "failsafe_manifest.json",
+      "failsafe_status.json",
+      "failsafe_manifest.json",
+      "failsafe_status.json",
+      "failsafe_manager/failsafe_manifest.json",
+      "failsafe_manager/failsafe_status.json",
+      "failsafe_manifest.json",
+      "failsafe_status.json"
+    ],
+    "executes_now": false,
+    "future_allowed_patterns": [
+      "python3 -m py_compile <scoped_python_file> via safe runner shell=False",
+      "json parse of <scoped_json_file> with Python json.load/read_text",
+      "static import/dependency scan already produced by Patch 177",
+      "sandbox-only rehearsal before live apply"
+    ],
+    "future_forbidden_patterns": [
+      "shell=True",
+      "unscoped file paths",
+      "network calls",
+      "secret/env/key reads",
+      "live project writes without fresh approval token",
+      "direct import execution of candidate modules during planning"
+    ],
+    "plan_type": "NO_WRITE_VALIDATION_TEST_PLAN",
+    "python_targets_preview": [
+      "failsafe_core.py",
+      "test_failsafe.py",
+      "failsafe_core.py",
+      "test_failsafe.py",
+      "failsafe_core.py",
+      "failsafe_manager/failsafe_core.py",
+      "failsafe_manager/test_failsafe.py",
+      "test_failsafe.py"
+    ],
+    "shell_allowed": false
+  },
+  "token_validation_status": "NOT_REQUESTED",
+  "validation_fingerprint": "6eba13bc84bec1de5f28618b1d7b0ebef2c9485c68cf1f444d54c5c80f06916b",
+  "validation_matrix": [
+    {
+      "future_check": "Load latest Patch 176 scope receipt before any sandbox or live apply.",
+      "id": "VAL-001",
+      "kind": "receipt_gate",
+      "name": "scope receipt present",
+      "no_write": true,
+      "notes": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_SCOPE_READY_NO_WRITE_FILE_SET_REVIEW",
+      "status": "PASS"
+    },
+    {
+      "future_check": "Load latest Patch 177 dependency receipt before any sandbox or live apply.",
+      "id": "VAL-002",
+      "kind": "receipt_gate",
+      "name": "dependency receipt present",
+      "no_write": true,
+      "notes": "FORGE_RUNTIME_CANDIDATE_DRY_PLAN_DEPENDENCY_READY_NO_WRITE_IMPACT_NOTES",
+      "status": "PASS"
+    },
+    {
+      "future_check": "Use safe test runner or explicit py_compile plan for scoped Python files only; shell=False; no arbitrary command strings.",
+      "id": "VAL-003",
+      "kind": "safe_test_plan",
+      "name": "python syntax plan",
+      "no_write": true,
+      "status": "PLANNED",
+      "targets": [
+        "failsafe_core.py",
+        "test_failsafe.py",
+        "failsafe_core.py",
+        "test_failsafe.py",
+        "failsafe_core.py",
+        "failsafe_manager/failsafe_core.py",
+        "failsafe_manager/test_failsafe.py",
+        "test_failsafe.py"
+      ]
+    },
+    {
+      "future_check": "Parse scoped JSON/config files without modifying them; report parse failures before sandbox.",
+      "id": "VAL-004",
+      "kind": "safe_test_plan",
+      "name": "json/config parse plan",
+      "no_write": true,
+      "status": "PLANNED",
+      "targets": [
+        "failsafe_manifest.json",
+        "failsafe_status.json",
+        "failsafe_manifest.json",
+        "failsafe_status.json",
+        "failsafe_manager/failsafe_manifest.json",
+        "failsafe_manager/failsafe_status.json",
+        "failsafe_manifest.json",
+        "failsafe_status.json"
+      ]
+    },
+    {
+      "duplicate_count": 5,
+      "duplicates": [
+        {
+          "basename": "README.md",
+          "count": 4
+        },
+        {
+          "basename": "failsafe_core.py",
+          "count": 4
+        },
+        {
+          "basename": "failsafe_manifest.json",
+          "count": 4
+        },
+        {
+          "basename": "failsafe_status.json",
+          "count": 4
+        },
+        {
+          "basename": "test_failsafe.py",
+          "count": 4
+        }
+      ],
+      "future_check": "Confirm duplicate basenames are intentional before any patch target selection.",
+      "id": "VAL-005",
+      "kind": "human_review_gate",
+      "name": "duplicate basename review",
+      "no_write": true,
+      "status": "WARN"
+    },
+    {
+      "future_check": "For every target file, capture current SHA and rollback copy before sandbox/apply.",
+      "id": "VAL-006",
+      "kind": "rollback_gate",
+      "name": "rollback matrix required",
+      "no_write": true,
+      "status": "REQUIRED_FUTURE_GATE"
+    },
+    {
+      "future_check": "Copy scoped file set into Forge-owned sandbox and run planned checks there before any live write.",
+      "id": "VAL-007",
+      "kind": "sandbox_gate",
+      "name": "sandbox rehearsal required",
+      "no_write": true,
+      "status": "REQUIRED_FUTURE_GATE"
+    },
+    {
+      "future_check": "Approval token is not accepted in Patch 178; live apply remains false.",
+      "id": "VAL-008",
+      "kind": "approval_gate",
+      "name": "live approval forbidden in this patch",
+      "no_write": true,
+      "status": "PASS"
+    }
+  ],
+  "validation_matrix_ready": true,
+  "warnings": [
+    "Duplicate basenames remain present; future file targeting must be exact path + SHA based."
+  ]
+}

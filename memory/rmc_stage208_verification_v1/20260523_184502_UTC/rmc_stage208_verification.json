@@ -1,0 +1,113 @@
+{
+  "timestamp": "20260523_184502_UTC",
+  "stage": "/home/nic/forge/staged_rmc_modules/patch208_missing_rmc_modules",
+  "compile": [
+    {
+      "file": "staged_rmc_modules/patch208_missing_rmc_modules/phase_parser/phase_state_parser.py",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "file": "staged_rmc_modules/patch208_missing_rmc_modules/drift_detection/drift_detector.py",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "file": "staged_rmc_modules/patch208_missing_rmc_modules/echo_validator/echo_validator.py",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "file": "staged_rmc_modules/patch208_missing_rmc_modules/phase_state_parser/phase_state_parser.py",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "file": "staged_rmc_modules/patch208_missing_rmc_modules/drift_arbitrator/drift_arbitrator.py",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "file": "staged_rmc_modules/patch208_missing_rmc_modules/echo_gate/echo_gate.py",
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "tests": [
+    {
+      "module": "phase_parser",
+      "test": "test_phase_state_parser.py",
+      "returncode": 0,
+      "stdout_file": "phase_parser_stdout.txt",
+      "stderr_file": "phase_parser_stderr.txt"
+    },
+    {
+      "module": "drift_detection",
+      "test": "test_drift_detector.py",
+      "returncode": 0,
+      "stdout_file": "drift_detection_stdout.txt",
+      "stderr_file": "drift_detection_stderr.txt"
+    },
+    {
+      "module": "echo_validator",
+      "test": "test_echo_validator.py",
+      "returncode": 0,
+      "stdout_file": "echo_validator_stdout.txt",
+      "stderr_file": "echo_validator_stderr.txt"
+    }
+  ],
+  "compatibility_imports": {
+    "phase_parser.phase_state_parser": "PhaseStateParser",
+    "drift_detection.drift_detector": "DriftArbitrator",
+    "echo_validator.echo_validator": "EchoGate",
+    "phase_state_parser.phase_state_parser": "PhaseStateParser",
+    "drift_arbitrator.drift_arbitrator": "DriftArbitrator",
+    "echo_gate.echo_gate": "EchoGate"
+  },
+  "smoke": {
+    "phase": {
+      "phase": "friction",
+      "phase_id": 4,
+      "phase_number": 4,
+      "phase_name": "Friction",
+      "phase_role": "constraint / obstacle",
+      "confidence": 0.5,
+      "secondary_phases": [
+        6
+      ],
+      "phase_path_hypothesis": [
+        4
+      ],
+      "routing": [
+        "memory_recaller",
+        "drift_analyzer",
+        "correction_engine"
+      ],
+      "warnings": [],
+      "cues": [
+        {
+          "phase": 4,
+          "phase_token": "friction",
+          "phase_name": "Friction",
+          "cue": "\\b(problem|issue|stuck|blocked|error|fail|missing|can't|cannot|wrong|bug)\\b",
+          "weight": 1.0,
+          "reason": "constraint/friction cue"
+        },
+        {
+          "phase": 6,
+          "phase_token": "grace",
+          "phase_name": "Grace",
+          "cue": "\\b(fix|repair|correct|ground|realign|rebuild|restore|clean up|verify|audit|check)\\b",
+          "weight": 1.0,
+          "reason": "correction cue"
+        }
+      ],
+      "timestamp": "2026-05-23T18:45:02.386517+00:00"
+    },
+    "drift_verdict": "BLOCK",
+    "echo_accepted": true,
+    "echo_score": 1.0,
+    "echo_note": "echo accepted"
+  },
+  "verdict": "PASS"
+}

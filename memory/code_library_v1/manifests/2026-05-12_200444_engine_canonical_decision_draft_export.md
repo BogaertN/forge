@@ -1,0 +1,365 @@
+# Patch 69 Engine Canonical Decision Draft
+
+Mode: DECISION DRAFT ONLY. No engine files were moved, deleted, renamed, quarantined, locked, promoted, or edited.
+
+Engines indexed: 425
+Duplicate/version families: 80
+Decision rows: 80
+
+## Decision Counts
+- DRAFT_KEEP_ACTIVE_PRIMARY_OVER_FROZEN_CANDIDATE: 3
+- DRAFT_KEEP_AFTER_HUMAN_REVIEW: 69
+- HOLD_ARCHIVE_AMBIGUITY_REVIEW: 2
+- HOLD_FOR_MANUAL_ARCHITECT_REVIEW: 2
+- HOLD_FROZEN_CANDIDATE_REVIEW: 3
+- HOLD_TEST_ONLY_REVIEW: 1
+
+## Draft Decisions
+- **protoforge** — DRAFT_KEEP_ACTIVE_PRIMARY_OVER_FROZEN_CANDIDATE / medium
+  - keep draft: `aiweb/runtime_wrappers/protoforge_v1.04_db_enabled`
+  - variants: 17
+  - checks: architect_review_required_before_lockfile, verify_active_primary_supersedes_frozen_candidate, compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **symbolic_capacitor_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium_high
+  - keep draft: `aiweb/engines/symbolic_capacitor_engine`
+  - variants: 14
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+  - cautions: core runtime role candidate; verify against symbolic-runtime-map before lockfile
+- **tone_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/tone_engine`
+  - variants: 12
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **drift_arbitration_engine** — HOLD_FROZEN_CANDIDATE_REVIEW / manual
+  - keep draft: `aiweb/engines/drift_arbitration_engine`
+  - variants: 11
+  - checks: architect_review_required_before_lockfile, frozen_candidate_requires_human_review, inspect_high_duplicate_variant_count
+- **christping_listener** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium_high
+  - keep draft: `aiweb/engines/christping_listener`
+  - variants: 10
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+  - cautions: core runtime role candidate; verify against symbolic-runtime-map before lockfile
+- **cold_archive_engine** — HOLD_ARCHIVE_AMBIGUITY_REVIEW / manual
+  - keep draft: `aiweb/engines/cold_archive_engine_frozen_v1`
+  - variants: 10
+  - checks: architect_review_required_before_lockfile, frozen_candidate_requires_human_review, archive_or_backup_candidate_requires_human_review, inspect_high_duplicate_variant_count
+- **control_panel_ui_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium_high
+  - keep draft: `aiweb/engines/control_panel_ui_engine_v1.02`
+  - variants: 10
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+  - cautions: core runtime role candidate; verify against symbolic-runtime-map before lockfile
+- **neo_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/neo_engine`
+  - variants: 10
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **symbolic_feedback_loop_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium_high
+  - keep draft: `aiweb/engines/symbolic_feedback_loop_engine`
+  - variants: 10
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+  - cautions: core runtime role candidate; verify against symbolic-runtime-map before lockfile
+- **dream_state_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/dream_state_engine`
+  - variants: 8
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **loop_resurrection_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium_high
+  - keep draft: `aiweb/engines/loop_resurrection_engine`
+  - variants: 8
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+  - cautions: core runtime role candidate; verify against symbolic-runtime-map before lockfile
+- **recursive_field_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/recursive_field_engine`
+  - variants: 8
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **resonance_charge_meter** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium_high
+  - keep draft: `aiweb/engines/resonance_charge_meter`
+  - variants: 8
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+  - cautions: core runtime role candidate; verify against symbolic-runtime-map before lockfile
+- **memory_stack_engine_breathing** — HOLD_FOR_MANUAL_ARCHITECT_REVIEW / manual
+  - keep draft: `aiweb/engines/memory_stack_engine_breathing_v1`
+  - variants: 7
+  - checks: architect_review_required_before_lockfile, compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **agent_reflection_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/agent_reflection_engine`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **aiweb_os_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium_high
+  - keep draft: `aiweb/engines/aiweb_os_engine`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+  - cautions: core runtime role candidate; verify against symbolic-runtime-map before lockfile
+- **athena_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/athena_engine`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **compute_contribution_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/compute_contribution_engine`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **contribution_dashboard_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/contribution_dashboard_engine`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **document_output_formatter** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/document_output_formatter`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **failsafe_manager** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium_high
+  - keep draft: `aiweb/engines/failsafe_manager`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+  - cautions: core runtime role candidate; verify against symbolic-runtime-map before lockfile
+- **fluid_memory_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/fluid_memory_engine`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **goal_injection_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/goal_injection_engine`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **memory_stack_engine** — HOLD_FROZEN_CANDIDATE_REVIEW / manual
+  - keep draft: `aiweb/engines/memory_stack_engine`
+  - variants: 6
+  - checks: architect_review_required_before_lockfile, frozen_candidate_requires_human_review, inspect_high_duplicate_variant_count
+- **naming_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/naming_engine`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **peer_communication_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/peer_communication_engine`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **plugin_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium_high
+  - keep draft: `aiweb/engines/plugin_engine`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+  - cautions: core runtime role candidate; verify against symbolic-runtime-map before lockfile
+- **recursive_agent_kernel** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium_high
+  - keep draft: `aiweb/engines/recursive_agent_kernel`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+  - cautions: core runtime role candidate; verify against symbolic-runtime-map before lockfile
+- **resonance_visualizer_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/resonance_visualizer_engine`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **seed_manager** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/seed_manager`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **symbolic_policy_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium_high
+  - keep draft: `aiweb/engines/symbolic_policy_engine`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+  - cautions: core runtime role candidate; verify against symbolic-runtime-map before lockfile
+- **system_log_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium_high
+  - keep draft: `aiweb/engines/system_log_engine`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+  - cautions: core runtime role candidate; verify against symbolic-runtime-map before lockfile
+- **tier_enforcer** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/tier_enforcer`
+  - variants: 6
+  - checks: compare_multiple_active_variants, inspect_high_duplicate_variant_count
+- **drift_signature_logger** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium_high
+  - keep draft: `aiweb/engines/drift_signature_logger`
+  - variants: 5
+  - checks: compare_multiple_active_variants
+  - cautions: core runtime role candidate; verify against symbolic-runtime-map before lockfile
+- **phase_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium_high
+  - keep draft: `aiweb/engines/phase_engine`
+  - variants: 5
+  - checks: compare_multiple_active_variants
+  - cautions: core runtime role candidate; verify against symbolic-runtime-map before lockfile
+- **stack_breather_phase2** — DRAFT_KEEP_ACTIVE_PRIMARY_OVER_FROZEN_CANDIDATE / low
+  - keep draft: `aiweb/runtime_wrappers/stack_breather_phase2`
+  - variants: 5
+  - checks: verify_active_primary_supersedes_frozen_candidate, compare_multiple_active_variants
+  - cautions: recommended path is not under primary aiweb root
+- **admin_override_console** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/admin_override_console`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **agents_stack** — DRAFT_KEEP_ACTIVE_PRIMARY_OVER_FROZEN_CANDIDATE / medium
+  - keep draft: `aiweb/runtime_wrappers/agents_stack`
+  - variants: 4
+  - checks: verify_active_primary_supersedes_frozen_candidate, compare_multiple_active_variants
+- **athena** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / low
+  - keep draft: `agents/athena`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+  - cautions: recommended path is not under primary aiweb root
+- **christping_validator_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/christping_validator_engine`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **collapse_prevention_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/collapse_prevention_engine`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **contribution_ledger_stack** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/runtime_wrappers/contribution_ledger_stack`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **core_stack_breather** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/core_stack_breather`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **core_system_stack** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/runtime_wrappers/core_system_stack`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **drift_analyzer_tool** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/drift_analyzer_tool`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **echo_trace_visualizer** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/echo_trace_visualizer`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **entropy_monitor_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/entropy_monitor_engine`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **external_feed_listener** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/external_feed_listener`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **field_resonance_mapper** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/field_resonance_mapper`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **gilligan** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / low
+  - keep draft: `agents/gilligan`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+  - cautions: recommended path is not under primary aiweb root
+- **gilligan_drift_correction_upgrade** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/gilligan_drift_correction_upgrade`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **glyph_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/glyph_engine`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **glyph_ui_overlay** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/symbolic_layers/glyph_ui_overlay`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **install_onboarding_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/install_onboarding_engine`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **neo** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / low
+  - keep draft: `agents/neo`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+  - cautions: recommended path is not under primary aiweb root
+- **recursive_field_breather** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/recursive_field_breather`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **recursive_field_stack** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/runtime_wrappers/recursive_field_stack`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **resonance_display** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/symbolic_layers/resonance_display`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **resurrection_planner** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/resurrection_planner`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **spc_memory_migrator** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/spc_memory_migrator`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **symbolic_cognition_stack** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/runtime_wrappers/symbolic_cognition_stack`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **symbolic_drift_visualizer** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/symbolic_drift_visualizer`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **symbolic_glyph_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/symbolic_glyph_engine`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **symbolic_layers_stack** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/runtime_wrappers/symbolic_layers_stack`
+  - variants: 4
+  - checks: compare_multiple_active_variants
+- **activity_log** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / low
+  - keep draft: `projects/recursive_lmm_grok1/engines/activity_log`
+  - variants: 2
+  - checks: compare_multiple_active_variants
+  - cautions: recommended path is not under primary aiweb root
+- **aiweb_os** — HOLD_TEST_ONLY_REVIEW / manual
+  - keep draft: `aiweb/runtime_wrappers/aiweb_os_v1`
+  - variants: 2
+  - checks: test_only_candidate_requires_human_review
+- **ascii_interpreter_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/ascii_interpreter_engine`
+  - variants: 2
+  - checks: compare_multiple_active_variants
+- **confusion_checker** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / low
+  - keep draft: `projects/recursive_lmm_grok1/engines/confusion_checker`
+  - variants: 2
+  - checks: compare_multiple_active_variants
+  - cautions: recommended path is not under primary aiweb root
+- **control_stack** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/runtime_wrappers/control_stack`
+  - variants: 2
+  - checks: compare_multiple_active_variants
+- **memory_stack_stack** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/runtime_wrappers/memory_stack_stack`
+  - variants: 2
+  - checks: compare_multiple_active_variants
+- **project_brain** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / low
+  - keep draft: `projects/recursive_lmm_grok1/engines/project_brain`
+  - variants: 2
+  - checks: compare_multiple_active_variants
+  - cautions: recommended path is not under primary aiweb root
+- **project_memory** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / low
+  - keep draft: `projects/recursive_lmm_grok1/engines/project_memory`
+  - variants: 2
+  - checks: compare_multiple_active_variants
+  - cautions: recommended path is not under primary aiweb root
+- **protoforge_dashboard_runtime** — HOLD_FOR_MANUAL_ARCHITECT_REVIEW / manual
+  - keep draft: `runtime_wrappers/protoforge_dashboard_runtime_v2.0`
+  - variants: 2
+  - checks: architect_review_required_before_lockfile, compare_multiple_active_variants
+  - cautions: recommended path is not under primary aiweb root
+- **recursion_mapper** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/symbolic_layers/recursion_mapper`
+  - variants: 2
+  - checks: compare_multiple_active_variants
+- **recursive_verification_engine** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / low
+  - keep draft: `engines/recursive_verification_engine`
+  - variants: 2
+  - checks: compare_multiple_active_variants
+  - cautions: recommended path is not under primary aiweb root
+- **revisit_previous_tasks** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / low
+  - keep draft: `projects/recursive_lmm_grok1/engines/revisit_previous_tasks`
+  - variants: 2
+  - checks: compare_multiple_active_variants
+  - cautions: recommended path is not under primary aiweb root
+- **saved_ideas** — HOLD_ARCHIVE_AMBIGUITY_REVIEW / manual
+  - keep draft: `projects/recursive_lmm_grok1/engines/saved_ideas`
+  - variants: 2
+  - checks: archive_or_backup_candidate_requires_human_review
+  - cautions: recommended path is not under primary aiweb root
+- **stack_linker_breather** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / medium
+  - keep draft: `aiweb/engines/stack_linker_breather`
+  - variants: 2
+  - checks: compare_multiple_active_variants
+- **step_counter** — HOLD_FROZEN_CANDIDATE_REVIEW / manual
+  - keep draft: `projects/recursive_lmm_grok1/engines/step_counter_frozen_v1`
+  - variants: 2
+  - checks: frozen_candidate_requires_human_review
+  - cautions: recommended path is not under primary aiweb root
+- **trust_guard** — DRAFT_KEEP_AFTER_HUMAN_REVIEW / low
+  - keep draft: `projects/recursive_lmm_grok1/engines/trust_guard`
+  - variants: 2
+  - checks: compare_multiple_active_variants
+  - cautions: recommended path is not under primary aiweb root

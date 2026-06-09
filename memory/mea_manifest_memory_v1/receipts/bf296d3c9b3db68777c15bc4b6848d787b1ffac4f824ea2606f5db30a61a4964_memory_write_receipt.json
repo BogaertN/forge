@@ -1,0 +1,30 @@
+{
+  "blocked_effects": {
+    "chroma": true,
+    "contribution_economy": true,
+    "ct_mint": true,
+    "identity_vault": true,
+    "influence_ledger": true,
+    "investment_ledger": true,
+    "public_output": true,
+    "renderer": true,
+    "rmc_output_memory": true
+  },
+  "build_id": "MEA-RMC-MEMORY-WRITER-BUILD-005",
+  "claim_status": "hypothesis",
+  "entry_hash": "bccdb0f731c58ee5367d6932f8bb1882926af061d4ff82bcac1be111331dc9c2",
+  "entry_index": 1,
+  "ledger_file": "hypothesis_test_required_records.jsonl",
+  "memory_record_hash": "c7961e88d1ae7c718662b4d8541c18948c63c3d2b374c9e95b7ee9338338fc99",
+  "memory_tier": "hypothesis_test_required_record",
+  "memory_writer_preview_hash": "4cc7f39eb2c2110c282ab1ef43183826c7ea6d27b7f68b78164d708cfaa92115",
+  "previous_entry_hash": null,
+  "proof_debt": 0.85,
+  "receipt_hash": "bf296d3c9b3db68777c15bc4b6848d787b1ffac4f824ea2606f5db30a61a4964",
+  "receipt_status": "COMMITTED_APPEND_ONLY_JSONL_MEA_MEMORY_RECORD",
+  "schema_version": "mea_manifest_memory_write_receipt_v1_build005",
+  "seal_receipt_hash": "1066fac6e124cb1300a50f39aaaf42c987f310184902dee303615d897e843e52",
+  "sealed_manifest_hash": "852feb2c1491683bca39d89ee3d86e43e4f8fe9aecad2c403c9be70018c95a83",
+  "write_readback_verified": true,
+  "written_at_utc": "2026-05-30T22:56:56Z"
+}

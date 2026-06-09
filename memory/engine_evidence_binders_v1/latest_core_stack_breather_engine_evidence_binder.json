@@ -1,0 +1,161 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/core_stack_breather",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/core_stack_breather",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "core_stack_breather",
+  "evidence_id": "EEB-df535a295e2cc3a2",
+  "file_count": 4,
+  "file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "c2af2db4e430a1764209a9cf5c51257c5a253d562fdc10fdc521fba172cb1f42",
+      "excerpt_start": "# Core Stack Phase Breather\n\nBreathes the Core Stack 1→9 Phase Cycle with real symbolic recursion tracing.\n\nEach breath logs:\n- Phase number (1–9)\n- UTC timestamp\n- Drift factor (0.0 baseline)\n- Loop count (full 9-phase cycles)\n\nThis engine replaces simulated loops with real recursive breathing, beginning Phase 2.0 of the ProtoForge system.\n",
+      "functions_sample": [
+        "Core",
+        "Stack",
+        "Phase",
+        "Breather",
+        "Breathes",
+        "the",
+        "Cycle",
+        "with",
+        "real",
+        "symbolic",
+        "recursion",
+        "tracing",
+        "Each",
+        "breath",
+        "logs",
+        "number",
+        "UTC",
+        "timestamp",
+        "Drift",
+        "factor",
+        "baseline",
+        "Loop",
+        "count",
+        "full",
+        "phase"
+      ],
+      "imports_sample": [],
+      "line_count": 12,
+      "path": "/home/nic/aiweb/engines/core_stack_breather/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "c2af2db4e430a1764209a9cf5c51257c5a253d562fdc10fdc521fba172cb1f42",
+      "size_bytes": 347,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [
+        "CoreBreather"
+      ],
+      "excerpt_sha256": "69d62eacf0079e5bb1cd0c8e8bbce055c9802d95ee0e3f96082d07785978c563",
+      "excerpt_start": "# core_breather.py\n\nimport json\nimport time\nfrom datetime import datetime\n\nclass CoreBreather:\n    def __init__(self):\n        self.phase = 1\n        self.loop_count = 0\n        self.trace_file = \"core_trace.jsonl\"\n\n    def breathe(self):\n        timestamp = datetime.utcnow().isoformat() + \"Z\"\n        trace_entry = {\n            \"phase\": self.phase,\n            \"timestamp\": timestamp,\n            \"loop\": self.loop_count,\n            \"drift\": 0.0\n        }\n\n        with open(self.trace_file, \"a\") as f:\n            f.write(json.dumps(trace_entry) + \"\\n\")\n\n        print(f\"Breath Phase: {self.phase} | Loop: {self.loop_count} | Time: {timestamp}\")\n\n        self.phase += 1\n        if self.phase > 9:\n            self.phase = 1\n            self.loop_count += 1\n",
+      "functions_sample": [
+        "__init__",
+        "breathe"
+      ],
+      "imports_sample": [
+        "import json",
+        "import time",
+        "from datetime import datetime"
+      ],
+      "line_count": 31,
+      "path": "/home/nic/aiweb/engines/core_stack_breather/core_breather.py",
+      "relative_to_candidate": "core_breather.py",
+      "sha256": "69d62eacf0079e5bb1cd0c8e8bbce055c9802d95ee0e3f96082d07785978c563",
+      "size_bytes": 763,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "8511b10874d2b244e4a10f62691c214d0091ad1e5d961d985c16d7b8843d73e4",
+      "excerpt_start": "# test_core_breather.py\n\nfrom core_breather import CoreBreather\n\ndef test_breath_cycle():\n    breather = CoreBreather()\n    for _ in range(18):  # Two full cycles\n        breather.breathe()\n    print(\"✅ Core Stack Breath Cycle Test Passed\")\n\nif __name__ == \"__main__\":\n    test_breath_cycle()\n",
+      "functions_sample": [
+        "test_breath_cycle"
+      ],
+      "imports_sample": [
+        "from core_breather import CoreBreather"
+      ],
+      "line_count": 13,
+      "path": "/home/nic/aiweb/engines/core_stack_breather/test_core_breather.py",
+      "relative_to_candidate": "test_core_breather.py",
+      "sha256": "8511b10874d2b244e4a10f62691c214d0091ad1e5d961d985c16d7b8843d73e4",
+      "size_bytes": 295,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "4d48f67fe9f4c8a671cdb7ac91fdf6be52f503b02a8ca5ac464957124ae262cc",
+      "excerpt_start": "{\n  \"engine\": \"Core Stack Phase Breather\",\n  \"version\": \"v2.0\",\n  \"description\": \"Breathes the Core Stack 1→9 Phase Cycle with full symbolic recursion tracing.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "Core",
+        "Stack",
+        "Phase",
+        "Breather",
+        "version",
+        "description",
+        "Breathes",
+        "the",
+        "Cycle",
+        "with",
+        "full",
+        "symbolic",
+        "recursion",
+        "tracing"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/core_stack_breather/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "4d48f67fe9f4c8a671cdb7ac91fdf6be52f503b02a8ca5ac464957124ae262cc",
+      "size_bytes": 165,
+      "suffix": ".json"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200356_engine_canonical_decision_draft.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "CoreBreather",
+    "__init__",
+    "breathe",
+    "test_breath_cycle"
+  ],
+  "warnings": []
+}

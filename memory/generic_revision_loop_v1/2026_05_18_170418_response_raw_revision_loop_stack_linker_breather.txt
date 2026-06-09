@@ -1,0 +1,20 @@
+Thinking...
+Okay, let's see. The problem here is an ImportError: cannot import name 'breathe_phase' from 'recursive_field_breather.field_breather'. The candidate code is trying to import 'breathe_phase' as field_breathe from the field_breather module. But the dependency file, field_breather.py, doesn't have a function named breathe_phase. Instead, it has a class FieldBreather with a breathe() method.
+
+So the candidate is trying to import a function that doesn't exist. The dependency exposes a class with a breathe method. According to the decision rule, if the candidate imports a missing function but the dependency has a class with the same method name, we should revise the candidate to use the class instead. 
+
+The current candidate code is importing the breathe_phase function, which isn't present. The correct approach would be to use the FieldBreather class and call its breathe method. So the fix is to change the import statement to use the class and adjust the code to instantiate the class and call the method. 
+
+Therefore, the recommendation is to REVISE_CANDIDATE and use the CLASS_BREATHER_WRAPPER. The missing symbol is breathe_phase, and the class name is FieldBreather. The method name is breathe. The alias in the candidate code is field_breathe, which should be replaced with an instance of the class calling the breathe method. The tests need to be rerun to check if the changes resolve the import error.
+...done thinking.
+
+RECOMMENDATION: REVISE_CANDIDATE
+CANDIDATE_ACTION: USE_CLASS_BREATHER_WRAPPER
+IMPORT_MODULE: recursive_field_breather.field_breather
+MISSING_SYMBOL: breathe_phase
+CLASS_NAME: FieldBreather
+METHOD_NAME: breathe
+ALIAS_NAME: field_breathe
+RATIONALE: The candidate incorrectly imports a missing function 'breathe_phase' from a module that only exposes a class with a 'breathe()' method. We need to replace the function import with class-based usage.
+TESTS_TO_RERUN: sandbox_packages/stack_linker_breather/test_stack_linker_core.py
+

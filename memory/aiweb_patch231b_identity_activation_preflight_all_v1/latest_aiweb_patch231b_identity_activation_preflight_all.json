@@ -1,0 +1,1186 @@
+{
+  "activation_command_executed": false,
+  "activation_command_installed": false,
+  "agent_results": [
+    {
+      "activation_state": "inactive_draft",
+      "agent_id": "gilligan.local",
+      "agent_report_path": "/home/nic/forge/memory/aiweb_patch231b_identity_activation_preflight_all_v1/gilligan.local_preflight_231b_latest.json",
+      "blocker_count": 0,
+      "checks_passed": 17,
+      "checks_total": 17,
+      "is_active": false,
+      "namespace_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local",
+      "ok": true,
+      "ready_for_manual_activation": true,
+      "source_patch231a_report": {
+        "activation_command_executed": false,
+        "activation_command_installed": false,
+        "activation_gate": {
+          "activation_state": "inactive_draft",
+          "inactive_draft_required": true,
+          "is_active": false,
+          "live_activation_allowed_now": false,
+          "manual_activation_allowed_by_preflight_only_if_ready": true
+        },
+        "agent_id": "gilligan.local",
+        "blockers": [],
+        "checks": [
+          {
+            "blocker": null,
+            "detail": "An explicit agent_id argument is required; there is no default activation target.",
+            "key": "agent_id_supplied",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "Allowed targets: gilligan.local, athena.local, neo.local",
+            "key": "agent_id_allowed",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "{'path': '/home/nic/forge/memory/aiweb_patch231_identity_activation_approval_plan_v1/latest_aiweb_patch231_identity_activation_approval_plan.json', 'exists': True, 'ok': True, 'verdict': 'IDENTITY_ACTIVATION_APPROVAL_PLAN_WRITTEN', 'expected_verdict': 'IDENTITY_ACTIVATION_APPROVAL_PLAN_WRITTEN', 'verdict_matches': True}",
+            "key": "patch231_plan_exists",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "agent_id",
+            "key": "profile_exists",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "agent_id",
+            "key": "deep_profile_read_ok",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "present_for_preflight",
+            "key": "profile_hash_valid",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "activation_state='inactive_draft'",
+            "key": "activation_state_inactive_draft",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "is_active=False",
+            "key": "is_active_false",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "{'ok': True, 'source': 'patch229b_verify', 'report_path': '/home/nic/forge/memory/rmc_patch229b_namespace_scaffold_verify_v1/latest_rmc_patch229b_namespace_scaffold_verify.json', 'allowed_root': '/home/nic/aiweb/runtime_wrappers/ancestral_memory', 'allowed_root_exists': True, 'prior_scaffold_verified': True, 'prior_verdict': 'VERIFIED_NAMESPACE_SCAFFOLD_DIRECTORIES_ONLY'}",
+            "key": "rmc_scaffold_verified",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local",
+            "key": "rmc_namespace_exists",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "[{'name': 'manifests', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/manifests', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'receipts', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/receipts', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'echo', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/echo', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'private_context', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/private_context', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'phase_records', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/phase_records', 'exists': True, 'is_dir': True, 'file_count': 0}]",
+            "key": "rmc_namespace_children_exist",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "namespace=/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local allowed=/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents",
+            "key": "rmc_namespace_under_allowed_root",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "{'rmc': {'path': '/home/nic/aiweb/service_contracts/rmc.contract.json', 'exists': True, 'json_ok': True, 'role': 'Shared and agent-scoped recursive memory/meaning layer. RMC parses phase state, checks drift, compiles manifests, renders previews, and validates echo under Forge governance.', 'status': 'DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR', 'has_boundary_language': True, 'error': None}, 'identity_vault': {'path': '/home/nic/aiweb/service_contracts/identity_vault.contract.json', 'exists': True, 'json_ok': True, 'role': 'Agent identity, permissions, profile metadata, and RMC namespace pointers. Identity Vault is not an agent runtime and not the shared memory store.', 'status': 'DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR', 'has_boundary_language': True, 'error': None}}",
+            "key": "service_contracts_pass",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "permissions_count=1",
+            "key": "permissions_present",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "forbidden_actions_count=5",
+            "key": "forbidden_actions_present",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "all required fields present",
+            "key": "no_missing_required_fields",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "ECHO_PREFLIGHT_PREVIEW_VALID",
+            "key": "echo_validator_preview_passed",
+            "ok": true
+          }
+        ],
+        "checks_passed": 17,
+        "checks_total": 17,
+        "echo_validation_preview": {
+          "live_echo_validator_called": false,
+          "ok": true,
+          "rendered_preview": "Activation preflight for gilligan.local: profile inactive_draft, namespace verified, manual activation not installed, no RMC memory write, no Identity Vault DB write.",
+          "rmc_memory_write_allowed": false,
+          "verdict": "ECHO_PREFLIGHT_PREVIEW_VALID"
+        },
+        "generated_at_utc": "20260524_005322_UTC",
+        "identity_profile_read": {
+          "agent_id": "gilligan.local",
+          "agent_identity_activation_performed": false,
+          "columns_seen": [
+            "id",
+            "agent_id",
+            "canonical_name",
+            "role",
+            "capabilities",
+            "limits",
+            "enforcement",
+            "created_at",
+            "updated_at",
+            "version",
+            "is_active",
+            "operational_profile_json",
+            "profile_schema_version",
+            "rmc_namespace",
+            "activation_state",
+            "profile_hash",
+            "last_validated_at"
+          ],
+          "database_open_mode": "sqlite_uri_mode_ro",
+          "database_write_performed": false,
+          "db_path": "/home/nic/identity-vault/data/identity_vault.db",
+          "found": true,
+          "lookup_column": "agent_id",
+          "ok": true,
+          "profile_payload_present": true,
+          "resolved_profile": {
+            "activation_state": "inactive_draft",
+            "agent_id": "gilligan.local",
+            "canonical_name": "Gilligan",
+            "is_active": false,
+            "is_active_raw": 0,
+            "last_validated_at": "2026-05-23T22:10:12Z",
+            "permissions_keys": [],
+            "profile_hash": "5b4f576f57903bc8a3ab79f41214cb75667f844a7df99e7a96be09a1868373bd",
+            "profile_schema_version": "1.0.0-blueprint",
+            "rmc_namespace": "rmc/agents/gilligan.local",
+            "role": "Recursive Mirror / Forge-Governed Development Co-Pilot"
+          },
+          "safe_row_preview": {
+            "activation_state": "inactive_draft",
+            "agent_id": "gilligan.local",
+            "canonical_name": "Gilligan",
+            "capabilities": "[\n  \"reasoning support\",\n  \"patch workflow guidance\",\n  \"drift detection preview\",\n  \"RMC preview requests\"\n]",
+            "created_at": "2026-05-23T22:10:12Z",
+            "enforcement": "[\n  \"Forge approval gates control actions\",\n  \"RMC memory writes require explicit approval\",\n  \"Identity remains inactive until approved\"\n]",
+            "id": 1,
+            "is_active": 0,
+            "last_validated_at": "2026-05-23T22:10:12Z",
+            "limits": "[\n  \"cannot activate itself\",\n  \"cannot bypass Forge\",\n  \"cannot write memory without approval\",\n  \"cannot delete user data\"\n]",
+            "profile_hash": "5b4f576f57903bc8a3ab79f41214cb75667f844a7df99e7a96be09a1868373bd",
+            "profile_schema_version": "1.0.0-blueprint",
+            "rmc_namespace": "rmc/agents/gilligan.local",
+            "role": "Recursive Mirror / Forge-Governed Development Co-Pilot",
+            "updated_at": "2026-05-23T22:10:12Z",
+            "version": "1.0.0-blueprint-draft"
+          }
+        },
+        "important_note": "READY_FOR_MANUAL_ACTIVATION is not activation. It only means a future manual activation command may be considered.",
+        "name": "Identity Activation Preflight",
+        "next_expected_step": "Patch 231B \u2014 run and verify activation preflight for gilligan.local, athena.local, and neo.local.",
+        "ok": true,
+        "patch": "231A",
+        "plan_prerequisite": {
+          "exists": true,
+          "expected_verdict": "IDENTITY_ACTIVATION_APPROVAL_PLAN_WRITTEN",
+          "ok": true,
+          "path": "/home/nic/forge/memory/aiweb_patch231_identity_activation_approval_plan_v1/latest_aiweb_patch231_identity_activation_approval_plan.json",
+          "verdict": "IDENTITY_ACTIVATION_APPROVAL_PLAN_WRITTEN",
+          "verdict_matches": true
+        },
+        "preflight_only": true,
+        "profile_guard_summary": {
+          "agent_id": "gilligan.local",
+          "agent_identity_activation_performed": false,
+          "columns_seen": [
+            "id",
+            "agent_id",
+            "canonical_name",
+            "role",
+            "capabilities",
+            "limits",
+            "enforcement",
+            "created_at",
+            "updated_at",
+            "version",
+            "is_active",
+            "operational_profile_json",
+            "profile_schema_version",
+            "rmc_namespace",
+            "activation_state",
+            "profile_hash",
+            "last_validated_at"
+          ],
+          "database_open_mode": "sqlite_uri_mode_ro",
+          "database_write_performed": false,
+          "db_path": "/home/nic/identity-vault/data/identity_vault.db",
+          "forbidden_actions_count": 5,
+          "forbidden_actions_present": true,
+          "found": true,
+          "identity_keys": [],
+          "lookup_column": "agent_id",
+          "memory_keys": [],
+          "ok": true,
+          "payload_column": "operational_profile_json",
+          "permissions_count": 1,
+          "permissions_keys": [],
+          "permissions_present": true,
+          "preflight_profile_fingerprint_sha256_16": "d8e7873e6c9afe2b",
+          "profile_hash_check": "present_for_preflight",
+          "profile_hash_present": true,
+          "profile_hash_preview": "5b4f576f57903bc8\u2026",
+          "profile_payload_keys": [
+            "agent_id",
+            "authority",
+            "canonical_name",
+            "capabilities",
+            "description",
+            "enforcement_rules",
+            "forbidden_actions",
+            "last_action",
+            "last_feedback",
+            "last_updated",
+            "limitations",
+            "log_fields",
+            "permissions",
+            "persona",
+            "quotes_or_character_inspiration",
+            "rmc_namespace",
+            "role",
+            "session_state",
+            "special_style_notes",
+            "symbolic_signature",
+            "timestamp",
+            "version",
+            "voice_style"
+          ],
+          "profile_payload_present": true,
+          "profile_service_contract_refs_count": 0,
+          "safety_keys": [],
+          "service_contract_keys": []
+        },
+        "ready_for_manual_activation": true,
+        "rmc_namespace": {
+          "allowed_root": "/home/nic/aiweb/runtime_wrappers/ancestral_memory",
+          "identity_vault_pointer": "rmc/agents/gilligan.local",
+          "live_memory_write_allowed": false,
+          "resolved_absolute_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local",
+          "status": {
+            "all_expected_children_exist": true,
+            "children": [
+              {
+                "exists": true,
+                "file_count": 0,
+                "is_dir": true,
+                "name": "manifests",
+                "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/manifests"
+              },
+              {
+                "exists": true,
+                "file_count": 0,
+                "is_dir": true,
+                "name": "receipts",
+                "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/receipts"
+              },
+              {
+                "exists": true,
+                "file_count": 0,
+                "is_dir": true,
+                "name": "echo",
+                "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/echo"
+              },
+              {
+                "exists": true,
+                "file_count": 0,
+                "is_dir": true,
+                "name": "private_context",
+                "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/private_context"
+              },
+              {
+                "exists": true,
+                "file_count": 0,
+                "is_dir": true,
+                "name": "phase_records",
+                "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/phase_records"
+              }
+            ],
+            "exists": true,
+            "files_or_records_written_by_this_patch": false,
+            "is_dir": true,
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local"
+          }
+        },
+        "service_contracts": {
+          "identity_contract_path": "/home/nic/aiweb/service_contracts/identity_vault.contract.json",
+          "optional_contracts": {
+            "echo_validator": {
+              "error": "missing",
+              "exists": false,
+              "has_boundary_language": false,
+              "json_ok": false,
+              "path": "/home/nic/aiweb/service_contracts/echo_validator.contract.json",
+              "role": null,
+              "status": null
+            }
+          },
+          "required_contracts": {
+            "identity_vault": {
+              "error": null,
+              "exists": true,
+              "has_boundary_language": true,
+              "json_ok": true,
+              "path": "/home/nic/aiweb/service_contracts/identity_vault.contract.json",
+              "role": "Agent identity, permissions, profile metadata, and RMC namespace pointers. Identity Vault is not an agent runtime and not the shared memory store.",
+              "status": "DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR"
+            },
+            "rmc": {
+              "error": null,
+              "exists": true,
+              "has_boundary_language": true,
+              "json_ok": true,
+              "path": "/home/nic/aiweb/service_contracts/rmc.contract.json",
+              "role": "Shared and agent-scoped recursive memory/meaning layer. RMC parses phase state, checks drift, compiles manifests, renders previews, and validates echo under Forge governance.",
+              "status": "DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR"
+            }
+          },
+          "required_contracts_pass": true,
+          "rmc_contract_path": "/home/nic/aiweb/service_contracts/rmc.contract.json",
+          "root": "/home/nic/aiweb/service_contracts",
+          "root_exists": true
+        },
+        "verdict": "READY_FOR_MANUAL_ACTIVATION",
+        "writes_performed": {
+          "agent_identity_activation_performed": false,
+          "echoforge_creation_performed": false,
+          "env_secret_values_read": false,
+          "forge_owned_report": true,
+          "identity_vault_database_written": false,
+          "protoforge2_execution_performed": false,
+          "rmc_memory_written": false
+        }
+      },
+      "verdict": "READY_FOR_MANUAL_ACTIVATION"
+    },
+    {
+      "activation_state": "inactive_draft",
+      "agent_id": "athena.local",
+      "agent_report_path": "/home/nic/forge/memory/aiweb_patch231b_identity_activation_preflight_all_v1/athena.local_preflight_231b_latest.json",
+      "blocker_count": 0,
+      "checks_passed": 17,
+      "checks_total": 17,
+      "is_active": false,
+      "namespace_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local",
+      "ok": true,
+      "ready_for_manual_activation": true,
+      "source_patch231a_report": {
+        "activation_command_executed": false,
+        "activation_command_installed": false,
+        "activation_gate": {
+          "activation_state": "inactive_draft",
+          "inactive_draft_required": true,
+          "is_active": false,
+          "live_activation_allowed_now": false,
+          "manual_activation_allowed_by_preflight_only_if_ready": true
+        },
+        "agent_id": "athena.local",
+        "blockers": [],
+        "checks": [
+          {
+            "blocker": null,
+            "detail": "An explicit agent_id argument is required; there is no default activation target.",
+            "key": "agent_id_supplied",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "Allowed targets: gilligan.local, athena.local, neo.local",
+            "key": "agent_id_allowed",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "{'path': '/home/nic/forge/memory/aiweb_patch231_identity_activation_approval_plan_v1/latest_aiweb_patch231_identity_activation_approval_plan.json', 'exists': True, 'ok': True, 'verdict': 'IDENTITY_ACTIVATION_APPROVAL_PLAN_WRITTEN', 'expected_verdict': 'IDENTITY_ACTIVATION_APPROVAL_PLAN_WRITTEN', 'verdict_matches': True}",
+            "key": "patch231_plan_exists",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "agent_id",
+            "key": "profile_exists",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "agent_id",
+            "key": "deep_profile_read_ok",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "present_for_preflight",
+            "key": "profile_hash_valid",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "activation_state='inactive_draft'",
+            "key": "activation_state_inactive_draft",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "is_active=False",
+            "key": "is_active_false",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "{'ok': True, 'source': 'patch229b_verify', 'report_path': '/home/nic/forge/memory/rmc_patch229b_namespace_scaffold_verify_v1/latest_rmc_patch229b_namespace_scaffold_verify.json', 'allowed_root': '/home/nic/aiweb/runtime_wrappers/ancestral_memory', 'allowed_root_exists': True, 'prior_scaffold_verified': True, 'prior_verdict': 'VERIFIED_NAMESPACE_SCAFFOLD_DIRECTORIES_ONLY'}",
+            "key": "rmc_scaffold_verified",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local",
+            "key": "rmc_namespace_exists",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "[{'name': 'manifests', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/manifests', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'receipts', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/receipts', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'echo', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/echo', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'private_context', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/private_context', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'phase_records', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/phase_records', 'exists': True, 'is_dir': True, 'file_count': 0}]",
+            "key": "rmc_namespace_children_exist",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "namespace=/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local allowed=/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents",
+            "key": "rmc_namespace_under_allowed_root",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "{'rmc': {'path': '/home/nic/aiweb/service_contracts/rmc.contract.json', 'exists': True, 'json_ok': True, 'role': 'Shared and agent-scoped recursive memory/meaning layer. RMC parses phase state, checks drift, compiles manifests, renders previews, and validates echo under Forge governance.', 'status': 'DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR', 'has_boundary_language': True, 'error': None}, 'identity_vault': {'path': '/home/nic/aiweb/service_contracts/identity_vault.contract.json', 'exists': True, 'json_ok': True, 'role': 'Agent identity, permissions, profile metadata, and RMC namespace pointers. Identity Vault is not an agent runtime and not the shared memory store.', 'status': 'DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR', 'has_boundary_language': True, 'error': None}}",
+            "key": "service_contracts_pass",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "permissions_count=1",
+            "key": "permissions_present",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "forbidden_actions_count=4",
+            "key": "forbidden_actions_present",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "all required fields present",
+            "key": "no_missing_required_fields",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "ECHO_PREFLIGHT_PREVIEW_VALID",
+            "key": "echo_validator_preview_passed",
+            "ok": true
+          }
+        ],
+        "checks_passed": 17,
+        "checks_total": 17,
+        "echo_validation_preview": {
+          "live_echo_validator_called": false,
+          "ok": true,
+          "rendered_preview": "Activation preflight for athena.local: profile inactive_draft, namespace verified, manual activation not installed, no RMC memory write, no Identity Vault DB write.",
+          "rmc_memory_write_allowed": false,
+          "verdict": "ECHO_PREFLIGHT_PREVIEW_VALID"
+        },
+        "generated_at_utc": "20260524_005322_UTC",
+        "identity_profile_read": {
+          "agent_id": "athena.local",
+          "agent_identity_activation_performed": false,
+          "columns_seen": [
+            "id",
+            "agent_id",
+            "canonical_name",
+            "role",
+            "capabilities",
+            "limits",
+            "enforcement",
+            "created_at",
+            "updated_at",
+            "version",
+            "is_active",
+            "operational_profile_json",
+            "profile_schema_version",
+            "rmc_namespace",
+            "activation_state",
+            "profile_hash",
+            "last_validated_at"
+          ],
+          "database_open_mode": "sqlite_uri_mode_ro",
+          "database_write_performed": false,
+          "db_path": "/home/nic/identity-vault/data/identity_vault.db",
+          "found": true,
+          "lookup_column": "agent_id",
+          "ok": true,
+          "profile_payload_present": true,
+          "resolved_profile": {
+            "activation_state": "inactive_draft",
+            "agent_id": "athena.local",
+            "canonical_name": "Athena",
+            "is_active": false,
+            "is_active_raw": 0,
+            "last_validated_at": "2026-05-23T22:10:12Z",
+            "permissions_keys": [],
+            "profile_hash": "073115d88626d43eacab4b0e0aa6ae20c79cbedfaf42befea52c44e0ad3c2b1b",
+            "profile_schema_version": "1.0.0-blueprint",
+            "rmc_namespace": "rmc/agents/athena.local",
+            "role": "Governance / Strategy / Investor-Facing Analysis Agent"
+          },
+          "safe_row_preview": {
+            "activation_state": "inactive_draft",
+            "agent_id": "athena.local",
+            "canonical_name": "Athena",
+            "capabilities": "[\n  \"strategic analysis\",\n  \"formal summaries\",\n  \"governance review\",\n  \"risk framing\"\n]",
+            "created_at": "2026-05-23T22:10:12Z",
+            "enforcement": "[\n  \"No live execution\",\n  \"No identity activation\",\n  \"No unsupported claims\"\n]",
+            "id": 2,
+            "is_active": 0,
+            "last_validated_at": "2026-05-23T22:10:12Z",
+            "limits": "[\n  \"cannot override Forge\",\n  \"cannot activate identities\",\n  \"cannot write databases\",\n  \"cannot represent live facts without verification\"\n]",
+            "profile_hash": "073115d88626d43eacab4b0e0aa6ae20c79cbedfaf42befea52c44e0ad3c2b1b",
+            "profile_schema_version": "1.0.0-blueprint",
+            "rmc_namespace": "rmc/agents/athena.local",
+            "role": "Governance / Strategy / Investor-Facing Analysis Agent",
+            "updated_at": "2026-05-23T22:10:12Z",
+            "version": "1.0.0-blueprint-draft"
+          }
+        },
+        "important_note": "READY_FOR_MANUAL_ACTIVATION is not activation. It only means a future manual activation command may be considered.",
+        "name": "Identity Activation Preflight",
+        "next_expected_step": "Patch 231B \u2014 run and verify activation preflight for gilligan.local, athena.local, and neo.local.",
+        "ok": true,
+        "patch": "231A",
+        "plan_prerequisite": {
+          "exists": true,
+          "expected_verdict": "IDENTITY_ACTIVATION_APPROVAL_PLAN_WRITTEN",
+          "ok": true,
+          "path": "/home/nic/forge/memory/aiweb_patch231_identity_activation_approval_plan_v1/latest_aiweb_patch231_identity_activation_approval_plan.json",
+          "verdict": "IDENTITY_ACTIVATION_APPROVAL_PLAN_WRITTEN",
+          "verdict_matches": true
+        },
+        "preflight_only": true,
+        "profile_guard_summary": {
+          "agent_id": "athena.local",
+          "agent_identity_activation_performed": false,
+          "columns_seen": [
+            "id",
+            "agent_id",
+            "canonical_name",
+            "role",
+            "capabilities",
+            "limits",
+            "enforcement",
+            "created_at",
+            "updated_at",
+            "version",
+            "is_active",
+            "operational_profile_json",
+            "profile_schema_version",
+            "rmc_namespace",
+            "activation_state",
+            "profile_hash",
+            "last_validated_at"
+          ],
+          "database_open_mode": "sqlite_uri_mode_ro",
+          "database_write_performed": false,
+          "db_path": "/home/nic/identity-vault/data/identity_vault.db",
+          "forbidden_actions_count": 4,
+          "forbidden_actions_present": true,
+          "found": true,
+          "identity_keys": [],
+          "lookup_column": "agent_id",
+          "memory_keys": [],
+          "ok": true,
+          "payload_column": "operational_profile_json",
+          "permissions_count": 1,
+          "permissions_keys": [],
+          "permissions_present": true,
+          "preflight_profile_fingerprint_sha256_16": "4d0ad0ccd412ace0",
+          "profile_hash_check": "present_for_preflight",
+          "profile_hash_present": true,
+          "profile_hash_preview": "073115d88626d43e\u2026",
+          "profile_payload_keys": [
+            "agent_id",
+            "authority",
+            "canonical_name",
+            "capabilities",
+            "description",
+            "enforcement_rules",
+            "forbidden_actions",
+            "last_action",
+            "last_feedback",
+            "last_updated",
+            "limitations",
+            "log_fields",
+            "permissions",
+            "persona",
+            "quotes_or_character_inspiration",
+            "rmc_namespace",
+            "role",
+            "session_state",
+            "special_style_notes",
+            "symbolic_signature",
+            "timestamp",
+            "version",
+            "voice_style"
+          ],
+          "profile_payload_present": true,
+          "profile_service_contract_refs_count": 0,
+          "safety_keys": [],
+          "service_contract_keys": []
+        },
+        "ready_for_manual_activation": true,
+        "rmc_namespace": {
+          "allowed_root": "/home/nic/aiweb/runtime_wrappers/ancestral_memory",
+          "identity_vault_pointer": "rmc/agents/athena.local",
+          "live_memory_write_allowed": false,
+          "resolved_absolute_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local",
+          "status": {
+            "all_expected_children_exist": true,
+            "children": [
+              {
+                "exists": true,
+                "file_count": 0,
+                "is_dir": true,
+                "name": "manifests",
+                "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/manifests"
+              },
+              {
+                "exists": true,
+                "file_count": 0,
+                "is_dir": true,
+                "name": "receipts",
+                "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/receipts"
+              },
+              {
+                "exists": true,
+                "file_count": 0,
+                "is_dir": true,
+                "name": "echo",
+                "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/echo"
+              },
+              {
+                "exists": true,
+                "file_count": 0,
+                "is_dir": true,
+                "name": "private_context",
+                "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/private_context"
+              },
+              {
+                "exists": true,
+                "file_count": 0,
+                "is_dir": true,
+                "name": "phase_records",
+                "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local/phase_records"
+              }
+            ],
+            "exists": true,
+            "files_or_records_written_by_this_patch": false,
+            "is_dir": true,
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/athena.local"
+          }
+        },
+        "service_contracts": {
+          "identity_contract_path": "/home/nic/aiweb/service_contracts/identity_vault.contract.json",
+          "optional_contracts": {
+            "echo_validator": {
+              "error": "missing",
+              "exists": false,
+              "has_boundary_language": false,
+              "json_ok": false,
+              "path": "/home/nic/aiweb/service_contracts/echo_validator.contract.json",
+              "role": null,
+              "status": null
+            }
+          },
+          "required_contracts": {
+            "identity_vault": {
+              "error": null,
+              "exists": true,
+              "has_boundary_language": true,
+              "json_ok": true,
+              "path": "/home/nic/aiweb/service_contracts/identity_vault.contract.json",
+              "role": "Agent identity, permissions, profile metadata, and RMC namespace pointers. Identity Vault is not an agent runtime and not the shared memory store.",
+              "status": "DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR"
+            },
+            "rmc": {
+              "error": null,
+              "exists": true,
+              "has_boundary_language": true,
+              "json_ok": true,
+              "path": "/home/nic/aiweb/service_contracts/rmc.contract.json",
+              "role": "Shared and agent-scoped recursive memory/meaning layer. RMC parses phase state, checks drift, compiles manifests, renders previews, and validates echo under Forge governance.",
+              "status": "DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR"
+            }
+          },
+          "required_contracts_pass": true,
+          "rmc_contract_path": "/home/nic/aiweb/service_contracts/rmc.contract.json",
+          "root": "/home/nic/aiweb/service_contracts",
+          "root_exists": true
+        },
+        "verdict": "READY_FOR_MANUAL_ACTIVATION",
+        "writes_performed": {
+          "agent_identity_activation_performed": false,
+          "echoforge_creation_performed": false,
+          "env_secret_values_read": false,
+          "forge_owned_report": true,
+          "identity_vault_database_written": false,
+          "protoforge2_execution_performed": false,
+          "rmc_memory_written": false
+        }
+      },
+      "verdict": "READY_FOR_MANUAL_ACTIVATION"
+    },
+    {
+      "activation_state": "inactive_draft",
+      "agent_id": "neo.local",
+      "agent_report_path": "/home/nic/forge/memory/aiweb_patch231b_identity_activation_preflight_all_v1/neo.local_preflight_231b_latest.json",
+      "blocker_count": 0,
+      "checks_passed": 17,
+      "checks_total": 17,
+      "is_active": false,
+      "namespace_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local",
+      "ok": true,
+      "ready_for_manual_activation": true,
+      "source_patch231a_report": {
+        "activation_command_executed": false,
+        "activation_command_installed": false,
+        "activation_gate": {
+          "activation_state": "inactive_draft",
+          "inactive_draft_required": true,
+          "is_active": false,
+          "live_activation_allowed_now": false,
+          "manual_activation_allowed_by_preflight_only_if_ready": true
+        },
+        "agent_id": "neo.local",
+        "blockers": [],
+        "checks": [
+          {
+            "blocker": null,
+            "detail": "An explicit agent_id argument is required; there is no default activation target.",
+            "key": "agent_id_supplied",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "Allowed targets: gilligan.local, athena.local, neo.local",
+            "key": "agent_id_allowed",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "{'path': '/home/nic/forge/memory/aiweb_patch231_identity_activation_approval_plan_v1/latest_aiweb_patch231_identity_activation_approval_plan.json', 'exists': True, 'ok': True, 'verdict': 'IDENTITY_ACTIVATION_APPROVAL_PLAN_WRITTEN', 'expected_verdict': 'IDENTITY_ACTIVATION_APPROVAL_PLAN_WRITTEN', 'verdict_matches': True}",
+            "key": "patch231_plan_exists",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "agent_id",
+            "key": "profile_exists",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "agent_id",
+            "key": "deep_profile_read_ok",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "present_for_preflight",
+            "key": "profile_hash_valid",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "activation_state='inactive_draft'",
+            "key": "activation_state_inactive_draft",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "is_active=False",
+            "key": "is_active_false",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "{'ok': True, 'source': 'patch229b_verify', 'report_path': '/home/nic/forge/memory/rmc_patch229b_namespace_scaffold_verify_v1/latest_rmc_patch229b_namespace_scaffold_verify.json', 'allowed_root': '/home/nic/aiweb/runtime_wrappers/ancestral_memory', 'allowed_root_exists': True, 'prior_scaffold_verified': True, 'prior_verdict': 'VERIFIED_NAMESPACE_SCAFFOLD_DIRECTORIES_ONLY'}",
+            "key": "rmc_scaffold_verified",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local",
+            "key": "rmc_namespace_exists",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "[{'name': 'manifests', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/manifests', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'receipts', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/receipts', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'echo', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/echo', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'private_context', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/private_context', 'exists': True, 'is_dir': True, 'file_count': 0}, {'name': 'phase_records', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/phase_records', 'exists': True, 'is_dir': True, 'file_count': 0}]",
+            "key": "rmc_namespace_children_exist",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "namespace=/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local allowed=/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents",
+            "key": "rmc_namespace_under_allowed_root",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "{'rmc': {'path': '/home/nic/aiweb/service_contracts/rmc.contract.json', 'exists': True, 'json_ok': True, 'role': 'Shared and agent-scoped recursive memory/meaning layer. RMC parses phase state, checks drift, compiles manifests, renders previews, and validates echo under Forge governance.', 'status': 'DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR', 'has_boundary_language': True, 'error': None}, 'identity_vault': {'path': '/home/nic/aiweb/service_contracts/identity_vault.contract.json', 'exists': True, 'json_ok': True, 'role': 'Agent identity, permissions, profile metadata, and RMC namespace pointers. Identity Vault is not an agent runtime and not the shared memory store.', 'status': 'DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR', 'has_boundary_language': True, 'error': None}}",
+            "key": "service_contracts_pass",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "permissions_count=1",
+            "key": "permissions_present",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "forbidden_actions_count=4",
+            "key": "forbidden_actions_present",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "all required fields present",
+            "key": "no_missing_required_fields",
+            "ok": true
+          },
+          {
+            "blocker": null,
+            "detail": "ECHO_PREFLIGHT_PREVIEW_VALID",
+            "key": "echo_validator_preview_passed",
+            "ok": true
+          }
+        ],
+        "checks_passed": 17,
+        "checks_total": 17,
+        "echo_validation_preview": {
+          "live_echo_validator_called": false,
+          "ok": true,
+          "rendered_preview": "Activation preflight for neo.local: profile inactive_draft, namespace verified, manual activation not installed, no RMC memory write, no Identity Vault DB write.",
+          "rmc_memory_write_allowed": false,
+          "verdict": "ECHO_PREFLIGHT_PREVIEW_VALID"
+        },
+        "generated_at_utc": "20260524_005322_UTC",
+        "identity_profile_read": {
+          "agent_id": "neo.local",
+          "agent_identity_activation_performed": false,
+          "columns_seen": [
+            "id",
+            "agent_id",
+            "canonical_name",
+            "role",
+            "capabilities",
+            "limits",
+            "enforcement",
+            "created_at",
+            "updated_at",
+            "version",
+            "is_active",
+            "operational_profile_json",
+            "profile_schema_version",
+            "rmc_namespace",
+            "activation_state",
+            "profile_hash",
+            "last_validated_at"
+          ],
+          "database_open_mode": "sqlite_uri_mode_ro",
+          "database_write_performed": false,
+          "db_path": "/home/nic/identity-vault/data/identity_vault.db",
+          "found": true,
+          "lookup_column": "agent_id",
+          "ok": true,
+          "profile_payload_present": true,
+          "resolved_profile": {
+            "activation_state": "inactive_draft",
+            "agent_id": "neo.local",
+            "canonical_name": "Neo",
+            "is_active": false,
+            "is_active_raw": 0,
+            "last_validated_at": "2026-05-23T22:10:12Z",
+            "permissions_keys": [],
+            "profile_hash": "df922d109948a5e5f29d647422a22145467720577ed80ffe27da783f07cae537",
+            "profile_schema_version": "1.0.0-blueprint",
+            "rmc_namespace": "rmc/agents/neo.local",
+            "role": "Public / Frontline Assistant Identity"
+          },
+          "safe_row_preview": {
+            "activation_state": "inactive_draft",
+            "agent_id": "neo.local",
+            "canonical_name": "Neo",
+            "capabilities": "[\n  \"plain-language explanation\",\n  \"onboarding support\",\n  \"public FAQ drafting\",\n  \"user-friendly summaries\"\n]",
+            "created_at": "2026-05-23T22:10:12Z",
+            "enforcement": "[\n  \"No private data exposure\",\n  \"No unapproved memory writes\",\n  \"No tool execution\"\n]",
+            "id": 3,
+            "is_active": 0,
+            "last_validated_at": "2026-05-23T22:10:12Z",
+            "limits": "[\n  \"cannot access private memory without approval\",\n  \"cannot modify files\",\n  \"cannot activate itself\",\n  \"cannot bypass Forge\"\n]",
+            "profile_hash": "df922d109948a5e5f29d647422a22145467720577ed80ffe27da783f07cae537",
+            "profile_schema_version": "1.0.0-blueprint",
+            "rmc_namespace": "rmc/agents/neo.local",
+            "role": "Public / Frontline Assistant Identity",
+            "updated_at": "2026-05-23T22:10:12Z",
+            "version": "1.0.0-blueprint-draft"
+          }
+        },
+        "important_note": "READY_FOR_MANUAL_ACTIVATION is not activation. It only means a future manual activation command may be considered.",
+        "name": "Identity Activation Preflight",
+        "next_expected_step": "Patch 231B \u2014 run and verify activation preflight for gilligan.local, athena.local, and neo.local.",
+        "ok": true,
+        "patch": "231A",
+        "plan_prerequisite": {
+          "exists": true,
+          "expected_verdict": "IDENTITY_ACTIVATION_APPROVAL_PLAN_WRITTEN",
+          "ok": true,
+          "path": "/home/nic/forge/memory/aiweb_patch231_identity_activation_approval_plan_v1/latest_aiweb_patch231_identity_activation_approval_plan.json",
+          "verdict": "IDENTITY_ACTIVATION_APPROVAL_PLAN_WRITTEN",
+          "verdict_matches": true
+        },
+        "preflight_only": true,
+        "profile_guard_summary": {
+          "agent_id": "neo.local",
+          "agent_identity_activation_performed": false,
+          "columns_seen": [
+            "id",
+            "agent_id",
+            "canonical_name",
+            "role",
+            "capabilities",
+            "limits",
+            "enforcement",
+            "created_at",
+            "updated_at",
+            "version",
+            "is_active",
+            "operational_profile_json",
+            "profile_schema_version",
+            "rmc_namespace",
+            "activation_state",
+            "profile_hash",
+            "last_validated_at"
+          ],
+          "database_open_mode": "sqlite_uri_mode_ro",
+          "database_write_performed": false,
+          "db_path": "/home/nic/identity-vault/data/identity_vault.db",
+          "forbidden_actions_count": 4,
+          "forbidden_actions_present": true,
+          "found": true,
+          "identity_keys": [],
+          "lookup_column": "agent_id",
+          "memory_keys": [],
+          "ok": true,
+          "payload_column": "operational_profile_json",
+          "permissions_count": 1,
+          "permissions_keys": [],
+          "permissions_present": true,
+          "preflight_profile_fingerprint_sha256_16": "b7c68fd3e6efc461",
+          "profile_hash_check": "present_for_preflight",
+          "profile_hash_present": true,
+          "profile_hash_preview": "df922d109948a5e5\u2026",
+          "profile_payload_keys": [
+            "agent_id",
+            "authority",
+            "canonical_name",
+            "capabilities",
+            "description",
+            "enforcement_rules",
+            "forbidden_actions",
+            "last_action",
+            "last_feedback",
+            "last_updated",
+            "limitations",
+            "log_fields",
+            "permissions",
+            "persona",
+            "quotes_or_character_inspiration",
+            "rmc_namespace",
+            "role",
+            "session_state",
+            "special_style_notes",
+            "symbolic_signature",
+            "timestamp",
+            "version",
+            "voice_style"
+          ],
+          "profile_payload_present": true,
+          "profile_service_contract_refs_count": 0,
+          "safety_keys": [],
+          "service_contract_keys": []
+        },
+        "ready_for_manual_activation": true,
+        "rmc_namespace": {
+          "allowed_root": "/home/nic/aiweb/runtime_wrappers/ancestral_memory",
+          "identity_vault_pointer": "rmc/agents/neo.local",
+          "live_memory_write_allowed": false,
+          "resolved_absolute_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local",
+          "status": {
+            "all_expected_children_exist": true,
+            "children": [
+              {
+                "exists": true,
+                "file_count": 0,
+                "is_dir": true,
+                "name": "manifests",
+                "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/manifests"
+              },
+              {
+                "exists": true,
+                "file_count": 0,
+                "is_dir": true,
+                "name": "receipts",
+                "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/receipts"
+              },
+              {
+                "exists": true,
+                "file_count": 0,
+                "is_dir": true,
+                "name": "echo",
+                "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/echo"
+              },
+              {
+                "exists": true,
+                "file_count": 0,
+                "is_dir": true,
+                "name": "private_context",
+                "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/private_context"
+              },
+              {
+                "exists": true,
+                "file_count": 0,
+                "is_dir": true,
+                "name": "phase_records",
+                "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local/phase_records"
+              }
+            ],
+            "exists": true,
+            "files_or_records_written_by_this_patch": false,
+            "is_dir": true,
+            "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/neo.local"
+          }
+        },
+        "service_contracts": {
+          "identity_contract_path": "/home/nic/aiweb/service_contracts/identity_vault.contract.json",
+          "optional_contracts": {
+            "echo_validator": {
+              "error": "missing",
+              "exists": false,
+              "has_boundary_language": false,
+              "json_ok": false,
+              "path": "/home/nic/aiweb/service_contracts/echo_validator.contract.json",
+              "role": null,
+              "status": null
+            }
+          },
+          "required_contracts": {
+            "identity_vault": {
+              "error": null,
+              "exists": true,
+              "has_boundary_language": true,
+              "json_ok": true,
+              "path": "/home/nic/aiweb/service_contracts/identity_vault.contract.json",
+              "role": "Agent identity, permissions, profile metadata, and RMC namespace pointers. Identity Vault is not an agent runtime and not the shared memory store.",
+              "status": "DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR"
+            },
+            "rmc": {
+              "error": null,
+              "exists": true,
+              "has_boundary_language": true,
+              "json_ok": true,
+              "path": "/home/nic/aiweb/service_contracts/rmc.contract.json",
+              "role": "Shared and agent-scoped recursive memory/meaning layer. RMC parses phase state, checks drift, compiles manifests, renders previews, and validates echo under Forge governance.",
+              "status": "DRAFT_BOUNDARY_CONTRACT_NOT_CONNECTOR"
+            }
+          },
+          "required_contracts_pass": true,
+          "rmc_contract_path": "/home/nic/aiweb/service_contracts/rmc.contract.json",
+          "root": "/home/nic/aiweb/service_contracts",
+          "root_exists": true
+        },
+        "verdict": "READY_FOR_MANUAL_ACTIVATION",
+        "writes_performed": {
+          "agent_identity_activation_performed": false,
+          "echoforge_creation_performed": false,
+          "env_secret_values_read": false,
+          "forge_owned_report": true,
+          "identity_vault_database_written": false,
+          "protoforge2_execution_performed": false,
+          "rmc_memory_written": false
+        }
+      },
+      "verdict": "READY_FOR_MANUAL_ACTIVATION"
+    }
+  ],
+  "all_ready_for_manual_activation": true,
+  "blockers": [],
+  "generated_at_utc": "20260524_005322_UTC",
+  "important_note": "READY_FOR_MANUAL_ACTIVATION is not activation. It only means future manual activation may be considered under a separate explicit approval gate.",
+  "name": "Multi-Agent Activation Preflight Verification",
+  "next_expected_step": "Patch 232 \u2014 manual activation command design/preflight, not activation, unless the user explicitly approves the activation route after reviewing receipts.",
+  "ok": true,
+  "patch": "231B",
+  "preflight_only": true,
+  "ready_agents_count": 3,
+  "required_result_for_future_activation_consideration": "All target agents must be READY_FOR_MANUAL_ACTIVATION under read-only preflight.",
+  "target_agents": [
+    "gilligan.local",
+    "athena.local",
+    "neo.local"
+  ],
+  "target_agents_count": 3,
+  "verdict": "ALL_TARGET_AGENTS_READY_FOR_MANUAL_ACTIVATION",
+  "writes_performed": {
+    "agent_identity_activation_performed": false,
+    "echoforge_creation_performed": false,
+    "env_secret_values_read": false,
+    "forge_owned_batch_report": true,
+    "forge_owned_per_agent_231b_reports": true,
+    "identity_vault_database_written": false,
+    "protoforge2_execution_performed": false,
+    "rmc_memory_written": false
+  }
+}

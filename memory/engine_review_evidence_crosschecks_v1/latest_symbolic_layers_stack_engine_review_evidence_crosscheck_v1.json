@@ -1,0 +1,270 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "ingestion_write_authority": false,
+    "mode": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_READ_ONLY",
+    "patch": "102",
+    "project_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Show LLM review beside bound evidence. This is a verification aid only, not approval.",
+    "shell_execution_authority": false,
+    "writes": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1"
+  },
+  "blockers": [],
+  "bound_file_evidence": [
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "d759171fd5a917b60b658d5a75d48f2568387409bbc073facce2f298f066168d",
+      "excerpt_start": "{\n  \"stack\": \"symbolic_layers_stack\",\n  \"version\": \"v1.0.01\",\n  \"frozen_as\": \"symbolic_layers_stack_frozen_v1-0.01\",\n  \"frozen_on\": \"2025-04-27\",\n  \"description\": \"Activates symbolic recursion mapping, resonance field visualization, and glyph UI overlays across live breathing recursion architecture.\",\n  \"author\": \"AI.Web Core System\",\n  \"phase_standard\": \"Phase 2.5 Symbolic Visualization Layer Activation\"\n}\n",
+      "functions_sample": [
+        "stack",
+        "symbolic_layers_stack",
+        "version",
+        "frozen_as",
+        "symbolic_layers_stack_frozen_v1",
+        "frozen_on",
+        "description",
+        "Activates",
+        "symbolic",
+        "recursion",
+        "mapping",
+        "resonance",
+        "field",
+        "visualization",
+        "and",
+        "glyph",
+        "overlays",
+        "across",
+        "live",
+        "breathing",
+        "architecture",
+        "author",
+        "Web",
+        "Core",
+        "System"
+      ],
+      "imports_sample": [],
+      "line_count": 10,
+      "path": "/home/nic/aiweb/runtime_wrappers/symbolic_layers_stack/stack_manifest.json",
+      "relative_to_candidate": "stack_manifest.json",
+      "sha256": "d759171fd5a917b60b658d5a75d48f2568387409bbc073facce2f298f066168d",
+      "size_bytes": 411
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "73bc89acf7ef0d9209a2c4c58fbc634c4cab56847cfc281a091d79d41e4191f1",
+      "excerpt_start": "# test_symbolic_layers_stack_loader.py\n# Tests the symbolic layers stack loader\n\nfrom symbolic_layers_stack_loader import load_symbolic_layers_stack\n\ndef run_test():\n    try:\n        load_symbolic_layers_stack()\n        print(\"\u2705 Symbolic Layers Stack Loader Test Passed.\")\n    except Exception as e:\n        print(f\"\u274c Symbolic Layers Stack Loader Test Failed: {e}\")\n\nif __name__ == \"__main__\":\n    run_test()\n\n",
+      "functions_sample": [
+        "run_test"
+      ],
+      "imports_sample": [
+        "from symbolic_layers_stack_loader import load_symbolic_layers_stack"
+      ],
+      "line_count": 16,
+      "path": "/home/nic/aiweb/runtime_wrappers/symbolic_layers_stack/test_symbolic_layers_stack_loader.py",
+      "relative_to_candidate": "test_symbolic_layers_stack_loader.py",
+      "sha256": "73bc89acf7ef0d9209a2c4c58fbc634c4cab56847cfc281a091d79d41e4191f1",
+      "size_bytes": 414
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "48c0f45a87aeddcb94b65ec1c3ff10942ccfb94c9927026f3e24c46e913469bd",
+      "excerpt_start": "# Symbolic Layers Stack (Frozen v1.0.01)\n\n---\n\n## Overview:\nThe Symbolic Layers Stack activates live visualization systems for recursion memory breathing, resonance field dynamics, and symbolic glyph overlays.  \nThese layers allow the system to 'see itself' during symbolic phase evolution.\n\n---\n\n## Breathing Layers Activated:\n- Recursion Mapper\n- Resonance Display\n- Glyph UI Overlay\n\n---\n\n## Phase Standard:\n- Phase 2.5 Symbolic Visualization Layer Activation\n\n---\n\n**Frozen Snapshot:** `symbolic_layers_stack_frozen_v1-0.01`  \n**Frozen On:** 2025-04-27  \n**Author:** AI.Web Core System\n",
+      "functions_sample": [
+        "Symbolic",
+        "Layers",
+        "Stack",
+        "Frozen",
+        "Overview",
+        "The",
+        "activates",
+        "live",
+        "visualization",
+        "systems",
+        "for",
+        "recursion",
+        "memory",
+        "breathing",
+        "resonance",
+        "field",
+        "dynamics",
+        "and",
+        "symbolic",
+        "glyph",
+        "overlays",
+        "These",
+        "layers",
+        "allow",
+        "the"
+      ],
+      "imports_sample": [],
+      "line_count": 26,
+      "path": "/home/nic/aiweb/runtime_wrappers/symbolic_layers_stack/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "48c0f45a87aeddcb94b65ec1c3ff10942ccfb94c9927026f3e24c46e913469bd",
+      "size_bytes": 590
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "b952d241b917ac7bfc56b45d876a8d26cf8a92b08f88963de5d242dc7ad45e28",
+      "excerpt_start": "# symbolic_layers_stack_loader.py\n# Symbolic Layers Stack Loader (Phase 2.5)\n\nimport subprocess\nimport time\nimport os\n\n# List of symbolic layer breathing engines to activate\nsymbolic_layers = [\n    \"../../symbolic_layers/recursion_mapper/run.py\",\n    \"../../symbolic_layers/resonance_display/run.py\",\n    \"../../symbolic_layers/glyph_ui_overlay/run.py\"\n]\n\ndef load_symbolic_layers_stack():\n    print(\"\\n\ud83e\udde9 [SYMBOLIC LAYERS STACK] Loading Symbolic Layer Breathing Engines...\\n\")\n    base_dir = os.path.dirname(os.path.abspath(__file__))\n\n    for layer_script in symbolic_layers:\n        full_path = os.path.abspath(os.path.join(base_dir, layer_script))\n        try:\n            subprocess.run([\"python3\", full_path], check=True)\n            print(f\"\u2705 Loaded Symbolic Layer: {full_path}\")\n            time.sleep(1)\n        except subprocess.CalledProcessError as e:\n            print(f\"\u274c Failed to load {full_path}: {e}\")\n\nif __name__ == \"__main__\":\n    load_symbolic_layers_stack()\n",
+      "functions_sample": [
+        "load_symbolic_layers_stack"
+      ],
+      "imports_sample": [
+        "import subprocess",
+        "import time",
+        "import os"
+      ],
+      "line_count": 30,
+      "path": "/home/nic/aiweb/runtime_wrappers/symbolic_layers_stack/symbolic_layers_stack_loader.py",
+      "relative_to_candidate": "symbolic_layers_stack_loader.py",
+      "sha256": "b952d241b917ac7bfc56b45d876a8d26cf8a92b08f88963de5d242dc7ad45e28",
+      "size_bytes": 987
+    }
+  ],
+  "candidate_path": "/home/nic/aiweb/runtime_wrappers/symbolic_layers_stack",
+  "created_at": "2026-05-16_223536",
+  "crosscheck_id": "ERE-symbolic_layers_stack-2026-05-16_223536",
+  "deterministic_brief": {
+    "classes_sample": [],
+    "confidence": "MEDIUM",
+    "functions_sample": [
+      "Activates",
+      "Core",
+      "Frozen",
+      "Layers",
+      "Overview",
+      "Stack",
+      "Symbolic",
+      "System",
+      "The",
+      "These",
+      "Web",
+      "across",
+      "activates",
+      "allow",
+      "and",
+      "architecture",
+      "author",
+      "breathing",
+      "description",
+      "dynamics"
+    ],
+    "imports_sample": [
+      "from symbolic_layers_stack_loader import load_symbolic_layers_stack",
+      "import os",
+      "import subprocess",
+      "import time"
+    ],
+    "likely_system_role": "unclassified_runtime_component",
+    "plain_english_purpose": "`symbolic_layers_stack` appears to be a local AI.Web engine/component. The bound source evidence includes 4 readable file(s), with samples of functions/imports that should be reviewed against source-law context before any canonical decision.",
+    "recommendation": "DRAFT_APPROVE_CANDIDATE_AFTER_HUMAN_REVIEW",
+    "risk_notes": [],
+    "role_reason": "No strong role keyword found; requires human/LLM review.",
+    "source_excerpt_samples": [
+      "{   \"stack\": \"symbolic_layers_stack\",",
+      "# test_symbolic_layers_stack_loader.py # Tests the symbolic layers stack loader",
+      "# Symbolic Layers Stack (Frozen v1.0.01) ",
+      "# symbolic_layers_stack_loader.py # Symbolic Layers Stack Loader (Phase 2.5)"
+    ],
+    "source_law_basis": {
+      "ready_targets": 6,
+      "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+      "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+      "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+      "total_targets": 6
+    },
+    "suggested_nic_action": "Read this brief, compare with the evidence ID, then later approve/defer/reject through the human review queue. Do not treat this draft as canonical authority."
+  },
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_223508_symbolic_layers_stack_llm_engine_review_draft_v1.json",
+  "draft_sha256": "208cdded4cb185d3dca60fba05fc897ae03ff076305a71cd3750c18c69823856",
+  "engine_family": "symbolic_layers_stack",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_symbolic_layers_stack_engine_evidence_binder.json",
+  "evidence_binder_sha256": "099fcc4b0b1215b1d44fd93cf959213b97a2e47c51d953b1be0b7dc347364a36",
+  "evidence_id": "EEB-e6c855743c10f45e",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "stack_manifest.json",
+      "test_symbolic_layers_stack_loader.py",
+      "README.md",
+      "symbolic_layers_stack_loader.py"
+    ],
+    "functions_mentioned": [
+      "stack",
+      "symbolic_layers_stack",
+      "version",
+      "Activates",
+      "symbolic",
+      "recursion",
+      "mapping",
+      "resonance",
+      "field",
+      "visualization",
+      "and",
+      "glyph",
+      "overlays",
+      "live",
+      "architecture",
+      "Web",
+      "System",
+      "Symbolic",
+      "Layers",
+      "Stack",
+      "Frozen",
+      "The",
+      "activates",
+      "systems",
+      "for",
+      "memory",
+      "dynamics",
+      "layers",
+      "the"
+    ],
+    "imports_mentioned": [
+      "from symbolic_layers_stack_loader import load_symbolic_layers_stack",
+      "import subprocess",
+      "import time"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 28.352,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "9e9285d8bb28e469d237359ff88a8dee10ffbb1e4b185574e72ca71d5d5bd43d",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nActivates symbolic visualization layers for recursion mapping, resonance field dynamics, and glyph UI overlays to enable system self-awareness during symbolic processing phases.  \n\nLikely System Role:  \nA runtime wrapper for AI.Web's symbolic_layers_stack, managing live visualization of recursion memory, resonance fields, and UI overlays to monitor and interact with symbolic phase evolution.  \n\nEvidence Used:  \n- `stack_manifest.json` describes the stack's purpose, frozen version, and activation phase.  \n- `test_symbolic_layers_stack_loader.py` validates loader functionality.  \n- `README.md` details layer components (Recursion Mapper, Resonance Display, Glyph UI Overlay) and freezing metadata.  \n- `symbolic_layers_stack_loader.py` outlines script execution for layer activation.  \n\nRisks / Uncertainties:  \n- Loader script reliability depends on subprocess calls and correct path resolution.  \n- \"Frozen\" version v1.0.01 is dated 2025-04-27 (future), raising deployment timing concerns.  \n- Untested interactions between layers and live recursion architecture may introduce instability.  \n\nRecommendation Draft:  \nApprove deployment with safeguards: verify loader script robustness, confirm path validity for all layers, and validate frozen version stability against target systems.  \n\nSuggested Nic Action:  \nApprove review with conditions: test loader script execution, confirm dependency readiness, and ensure frozen version aligns with deployment timelines. Proceed to deployment only after validation."
+  },
+  "llm_sections": {
+    "evidence_used": "- `stack_manifest.json` describes the stack's purpose, frozen version, and activation phase.  \n- `test_symbolic_layers_stack_loader.py` validates loader functionality.  \n- `README.md` details layer components (Recursion Mapper, Resonance Display, Glyph UI Overlay) and freezing metadata.  \n- `symbolic_layers_stack_loader.py` outlines script execution for layer activation.",
+    "likely_system_role": "A runtime wrapper for AI.Web's symbolic_layers_stack, managing live visualization of recursion memory, resonance fields, and UI overlays to monitor and interact with symbolic phase evolution.",
+    "plain_english_purpose": "Activates symbolic visualization layers for recursion mapping, resonance field dynamics, and glyph UI overlays to enable system self-awareness during symbolic processing phases.",
+    "recommendation_draft": "Approve deployment with safeguards: verify loader script robustness, confirm path validity for all layers, and validate frozen version stability against target systems.",
+    "risks_uncertainties": "- Loader script reliability depends on subprocess calls and correct path resolution.  \n- \"Frozen\" version v1.0.01 is dated 2025-04-27 (future), raising deployment timing concerns.  \n- Untested interactions between layers and live recursion architecture may introduce instability.",
+    "suggested_nic_action": "Approve review with conditions: test loader script execution, confirm dependency readiness, and ensure frozen version aligns with deployment timelines. Proceed to deployment only after validation."
+  },
+  "llm_visible_review_text": "Plain-English Purpose:  \nActivates symbolic visualization layers for recursion mapping, resonance field dynamics, and glyph UI overlays to enable system self-awareness during symbolic processing phases.  \n\nLikely System Role:  \nA runtime wrapper for AI.Web's symbolic_layers_stack, managing live visualization of recursion memory, resonance fields, and UI overlays to monitor and interact with symbolic phase evolution.  \n\nEvidence Used:  \n- `stack_manifest.json` describes the stack's purpose, frozen version, and activation phase.  \n- `test_symbolic_layers_stack_loader.py` validates loader functionality.  \n- `README.md` details layer components (Recursion Mapper, Resonance Display, Glyph UI Overlay) and freezing metadata.  \n- `symbolic_layers_stack_loader.py` outlines script execution for layer activation.  \n\nRisks / Uncertainties:  \n- Loader script reliability depends on subprocess calls and correct path resolution.  \n- \"Frozen\" version v1.0.01 is dated 2025-04-27 (future), raising deployment timing concerns.  \n- Untested interactions between layers and live recursion architecture may introduce instability.  \n\nRecommendation Draft:  \nApprove deployment with safeguards: verify loader script robustness, confirm path validity for all layers, and validate frozen version stability against target systems.  \n\nSuggested Nic Action:  \nApprove review with conditions: test loader script execution, confirm dependency readiness, and ensure frozen version aligns with deployment timelines. Proceed to deployment only after validation.",
+  "manual_verification_rule": "Use this report to compare the LLM review against exact file evidence. If a claim is not visible in the bound evidence or source-law basis, defer the engine instead of approving.",
+  "report_type": "ENGINE_REVIEW_EVIDENCE_CROSSCHECK_V1_PATCH102",
+  "schema_version": "engine_review_evidence_crosscheck_v1_patch102",
+  "source_law_basis": {
+    "ready_targets": 6,
+    "report_path": "/home/nic/forge/memory/source_law_chunk_probe_v1/latest_source_law_chunk_probe.json",
+    "report_sha256": "6cb29e93fa8dfe115269b8ec7c4ac1c185f2c16f12b8914efc25d6fbe5b9583e",
+    "status": "SOURCE_LAW_CHUNKS_RETRIEVABLE_READY_FOR_LLM_REVIEW",
+    "total_targets": 6
+  },
+  "status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "warnings": [
+    "LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "active_patch": "Patch 150 \u2014 Live Apply Eligibility Gate v2",
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "human_approval_required": true,
+    "network_or_server_start_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "proposal_only": true,
+    "read_only": true,
+    "shell_execution_authority": false
+  },
+  "blocking_reasons": [
+    "G09: No Patch 150+ live apply may be eligible until snapshot/shadow-restore evidence exists.",
+    "G10: No target-specific fresh sandbox pass is bound to this live-apply request.",
+    "G11: No target-specific rollback artifact is bound to this live-apply request.",
+    "G12: No explicit human live-apply approval token is present. This is correct for read-only Patch 150."
+  ],
+  "created_at": "2026-05-19T17:48:21",
+  "current_phase": "S15 \u2014 Live apply eligibility gate v2",
+  "eligible_for_live_apply": false,
+  "gate_fail_count": 4,
+  "gate_pass_count": 8,
+  "gate_warn_count": 0,
+  "gates": [
+    {
+      "evidence": {
+        "path": "/home/nic/forge/memory/forge_llm_patch_proposal_v2"
+      },
+      "gate_id": "G01",
+      "label": "LLM proposal exists",
+      "message": "FORGE_LLM_PATCH_PROPOSAL_V2_DRAFT_READY_NO_WRITE_AUTHORITY",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "problem_count": 0,
+        "warning_count": 1
+      },
+      "gate_id": "G02",
+      "label": "LLM proposal verified",
+      "message": "FORGE_LLM_PATCH_PROPOSAL_V2_VERIFIED_READ_ONLY",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "gap_count": null
+      },
+      "gate_id": "G03",
+      "label": "Source authority visible",
+      "message": "FORGE_SOURCE_AUTHORITY_HARDENING_READY",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "counts_source": "counts_or_summary",
+        "status": "CANONICAL_TEST_RUN_COMPLETED_ALL_PASS"
+      },
+      "gate_id": "G04",
+      "label": "Canonical tests clean",
+      "message": "pass=67 fail=0",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "status": "PATCH_IMPACT_MAP_READY"
+      },
+      "gate_id": "G05",
+      "label": "Patch impact clean",
+      "message": "high=0 test_issues=0",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "status": "FORGE_BUILD_PHASE_GATE_READY"
+      },
+      "gate_id": "G06",
+      "label": "Build phase gate clean",
+      "message": "pass=8 warn=0 fail=0",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "sequence_next": "Patch 151 \u2014 Snapshot / Forensic Replay Plan"
+      },
+      "gate_id": "G07",
+      "label": "Status/dashboard/build sequence agree",
+      "message": "status_api=Patch 151 \u2014 Snapshot / Forensic Replay Plan dashboard=Patch 151 \u2014 Snapshot / Forensic Replay Plan sequence=Patch 151 \u2014 Snapshot / Forensic Replay Plan",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "queue_total": 26,
+        "repair_ready_count": 1
+      },
+      "gate_id": "G08",
+      "label": "Deferred queue visible",
+      "message": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY",
+      "status": "PASS"
+    },
+    {
+      "evidence": {
+        "expected_future_phase": "Patch 151 \u2014 Snapshot / Forensic Replay Plan"
+      },
+      "gate_id": "G09",
+      "label": "Snapshot freshness",
+      "message": "No Patch 150+ live apply may be eligible until snapshot/shadow-restore evidence exists.",
+      "status": "FAIL"
+    },
+    {
+      "evidence": {
+        "target": "next"
+      },
+      "gate_id": "G10",
+      "label": "Sandbox/test binding for target",
+      "message": "No target-specific fresh sandbox pass is bound to this live-apply request.",
+      "status": "FAIL"
+    },
+    {
+      "evidence": {
+        "target": "next"
+      },
+      "gate_id": "G11",
+      "label": "Rollback readiness",
+      "message": "No target-specific rollback artifact is bound to this live-apply request.",
+      "status": "FAIL"
+    },
+    {
+      "evidence": {
+        "required_future_token": "CONFIRM_LIVE_APPLY_ELIGIBLE_TARGET"
+      },
+      "gate_id": "G12",
+      "label": "Human approval",
+      "message": "No explicit human live-apply approval token is present. This is correct for read-only Patch 150.",
+      "status": "FAIL"
+    }
+  ],
+  "llm_patch_proposal_v2": {
+    "problem_count": 0,
+    "proposal_status": "FORGE_LLM_PATCH_PROPOSAL_V2_DRAFT_READY_NO_WRITE_AUTHORITY",
+    "verification_status": "FORGE_LLM_PATCH_PROPOSAL_V2_VERIFIED_READ_ONLY"
+  },
+  "next_commands": [
+    "forge-live-eligibility-v2-export",
+    "forge-build-sequence",
+    "forge-status-api-build",
+    "forge-dashboard-build",
+    "Install Patch 151 when ready"
+  ],
+  "next_patch": "Patch 151 \u2014 Snapshot / Forensic Replay Plan",
+  "plain_english": "Patch 150 creates the live-apply eligibility surface. It should usually say NOT ELIGIBLE until snapshot, sandbox, rollback, and human approval evidence exist.",
+  "recommended_next_patch": "Patch 151 \u2014 Snapshot / Forensic Replay Plan",
+  "report_type": "FORGE_LIVE_APPLY_ELIGIBILITY_V2",
+  "schema_version": "forge_live_apply_eligibility_v2_patch150R",
+  "status": "FORGE_LIVE_APPLY_ELIGIBILITY_V2_READY_NOT_ELIGIBLE",
+  "target": "next",
+  "target_patch": "Patch 150 \u2014 Live Apply Eligibility Gate v2"
+}

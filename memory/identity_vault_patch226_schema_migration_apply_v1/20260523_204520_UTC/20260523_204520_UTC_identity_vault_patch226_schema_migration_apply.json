@@ -1,0 +1,279 @@
+{
+  "after": {
+    "agent_columns": [
+      "id",
+      "agent_id",
+      "canonical_name",
+      "role",
+      "capabilities",
+      "limits",
+      "enforcement",
+      "created_at",
+      "updated_at",
+      "version",
+      "is_active",
+      "operational_profile_json",
+      "profile_schema_version",
+      "rmc_namespace",
+      "activation_state",
+      "profile_hash",
+      "last_validated_at"
+    ],
+    "indexes": [
+      "idx_agent_profiles_activation_state",
+      "idx_agent_profiles_agent_id",
+      "idx_agent_profiles_rmc_namespace",
+      "idx_audit_logs_profile",
+      "idx_feedback_logs_profile",
+      "idx_session_state_profile",
+      "idx_user_profiles_user_id",
+      "sqlite_autoindex_agent_profiles_1",
+      "sqlite_autoindex_user_profiles_1"
+    ],
+    "opened_readonly": true,
+    "row_counts": {
+      "agent_profiles": 0,
+      "audit_logs": 0,
+      "feedback_logs": 0,
+      "session_state": 0,
+      "user_profiles": 0
+    },
+    "user_columns": [
+      "id",
+      "user_id",
+      "canonical_name",
+      "interaction_preferences",
+      "meta_rules",
+      "session_defaults",
+      "drift_tracking",
+      "created_at",
+      "updated_at",
+      "version",
+      "is_active",
+      "operational_profile_json",
+      "profile_schema_version",
+      "profile_hash",
+      "last_validated_at"
+    ]
+  },
+  "backup": {
+    "aiweb_identity_contract": {
+      "copied": true,
+      "dest": "/home/nic/forge/backups/patch226_identity_vault_schema_migration_before/20260523_204520_UTC/contracts/identity_vault.contract.json",
+      "sha256": "a5bbef9b1936785e60983672fd83b19942040c1329e197554f9259205ab049fb",
+      "source": "/home/nic/aiweb/service_contracts/identity_vault.contract.json"
+    },
+    "canonical_db": {
+      "copied": true,
+      "dest": "/home/nic/forge/backups/patch226_identity_vault_schema_migration_before/20260523_204520_UTC/databases/data_identity_vault.db",
+      "sha256": "d185eb83a37a9be907ff6525deb241778772fbc7fcc51794efc4c94ab6ecf32f",
+      "source": "/home/nic/identity-vault/data/identity_vault.db"
+    },
+    "identity_contract_draft": {
+      "copied": true,
+      "dest": "/home/nic/forge/backups/patch226_identity_vault_schema_migration_before/20260523_204520_UTC/contracts/identity_vault_readonly_service_contract.draft.json",
+      "sha256": "2e1573ae148f68ea3d2035c9d5f99d633251f070f7e212e13cbde3e563343189",
+      "source": "/home/nic/identity-vault/service_contracts/identity_vault_readonly_service_contract.draft.json"
+    },
+    "legacy_db": {
+      "copied": true,
+      "dest": "/home/nic/forge/backups/patch226_identity_vault_schema_migration_before/20260523_204520_UTC/databases/vault.db",
+      "sha256": "1bfcaca815f7149d32b30e261c20d0679d7182191fe55cfa63ce830c287d87b9",
+      "source": "/home/nic/identity-vault/vault.db"
+    },
+    "tool_registry": {
+      "copied": true,
+      "dest": "/home/nic/forge/backups/patch226_identity_vault_schema_migration_before/20260523_204520_UTC/forge/tool_registry.json",
+      "sha256": "0c1f4153eff92a50db24ef9bb0d68b3cda4c40c70f2438e614d0494ce9fcaf6b",
+      "source": "/home/nic/forge/config/tool_registry.json"
+    }
+  },
+  "backup_root": "/home/nic/forge/backups/patch226_identity_vault_schema_migration_before/20260523_204520_UTC",
+  "before": {
+    "agent_columns": [
+      "id",
+      "agent_id",
+      "canonical_name",
+      "role",
+      "capabilities",
+      "limits",
+      "enforcement",
+      "created_at",
+      "updated_at",
+      "version",
+      "is_active"
+    ],
+    "row_counts": {
+      "agent_profiles": 0,
+      "audit_logs": 0,
+      "feedback_logs": 0,
+      "session_state": 0,
+      "user_profiles": 0
+    },
+    "user_columns": [
+      "id",
+      "user_id",
+      "canonical_name",
+      "interaction_preferences",
+      "meta_rules",
+      "session_defaults",
+      "drift_tracking",
+      "created_at",
+      "updated_at",
+      "version",
+      "is_active"
+    ]
+  },
+  "boundary": [
+    "This patch applies only the approved Identity Vault schema migration needed for full operational profile payload support.",
+    "It backs up the canonical and legacy SQLite databases before migration.",
+    "It adds JSON payload/profile metadata columns and indexes only.",
+    "It does not create live agent profiles or activate identities.",
+    "It does not modify .env, node_modules, Forge registry, service contracts, RMC memory, or AI.Web wrappers.",
+    "It does not read .env secret values; only stat metadata is compared."
+  ],
+  "canonical_db": "/home/nic/identity-vault/data/identity_vault.db",
+  "env_stat": {
+    "after": {
+      "exists": true,
+      "mode": "0o664",
+      "mtime_ns": 1759221548592283936,
+      "size": 1605
+    },
+    "before": {
+      "exists": true,
+      "mode": "0o664",
+      "mtime_ns": 1759221548592283936,
+      "size": 1605
+    }
+  },
+  "findings": [
+    {
+      "code": "IV_SCHEMA_MIGRATION_APPLIED",
+      "level": "INFO",
+      "message": "Operational profile JSON payload and metadata columns are present on canonical Identity Vault tables."
+    },
+    {
+      "code": "IV_INDEXES_READY",
+      "level": "INFO",
+      "message": "Required lookup indexes are present for agent_id, activation_state, rmc_namespace, and user_id."
+    },
+    {
+      "code": "IV_NO_PROFILE_ROWS_CREATED",
+      "level": "INFO",
+      "message": "Schema migration did not create live user or agent profile rows."
+    },
+    {
+      "code": "IV_IDENTITIES_REMAIN_INACTIVE",
+      "level": "INFO",
+      "message": "No identity activation was performed."
+    }
+  ],
+  "hashes": {
+    "after": {
+      "aiweb_identity_contract": "a5bbef9b1936785e60983672fd83b19942040c1329e197554f9259205ab049fb",
+      "canonical_db": "becd76f770093361ae20a6a5ecdd7bf3016f9e05573c1dbc1f0b7439f4b6489a",
+      "identity_contract_draft": "2e1573ae148f68ea3d2035c9d5f99d633251f070f7e212e13cbde3e563343189",
+      "legacy_db": "1bfcaca815f7149d32b30e261c20d0679d7182191fe55cfa63ce830c287d87b9",
+      "tool_registry": "0c1f4153eff92a50db24ef9bb0d68b3cda4c40c70f2438e614d0494ce9fcaf6b"
+    },
+    "before": {
+      "aiweb_identity_contract": "a5bbef9b1936785e60983672fd83b19942040c1329e197554f9259205ab049fb",
+      "canonical_db": "d185eb83a37a9be907ff6525deb241778772fbc7fcc51794efc4c94ab6ecf32f",
+      "identity_contract_draft": "2e1573ae148f68ea3d2035c9d5f99d633251f070f7e212e13cbde3e563343189",
+      "legacy_db": "1bfcaca815f7149d32b30e261c20d0679d7182191fe55cfa63ce830c287d87b9",
+      "tool_registry": "0c1f4153eff92a50db24ef9bb0d68b3cda4c40c70f2438e614d0494ce9fcaf6b"
+    }
+  },
+  "legacy_db": "/home/nic/identity-vault/vault.db",
+  "no_live_profile_checks": {
+    "agent_rows_after": 0,
+    "agent_rows_before": 0,
+    "live_agent_profiles_created": false,
+    "user_profiles_created": false,
+    "user_rows_after": 0,
+    "user_rows_before": 0
+  },
+  "patch_id": "patch226_identity_vault_schema_migration_apply",
+  "required_checks": {
+    "agent_required_present": true,
+    "indexes_present": true,
+    "missing_agent_columns": [],
+    "missing_indexes": [],
+    "missing_user_columns": [],
+    "user_required_present": true
+  },
+  "safety": {
+    "agent_identity_activation_performed": false,
+    "aiweb_identity_contract_unchanged": true,
+    "canonical_db_schema_changed_expected": true,
+    "database_content_rows_created": false,
+    "database_write_performed": true,
+    "env_secret_values_read": false,
+    "env_stat_unchanged": true,
+    "forge_tool_registry_modified": false,
+    "identity_contract_draft_unchanged": true,
+    "legacy_db_unchanged": true,
+    "schema_migration_executed": true
+  },
+  "sql_actions": [
+    {
+      "sql": "ALTER TABLE agent_profiles ADD COLUMN operational_profile_json TEXT NOT NULL DEFAULT '{}'",
+      "status": "EXECUTED"
+    },
+    {
+      "sql": "ALTER TABLE agent_profiles ADD COLUMN profile_schema_version TEXT NOT NULL DEFAULT '1.0.0-blueprint'",
+      "status": "EXECUTED"
+    },
+    {
+      "sql": "ALTER TABLE agent_profiles ADD COLUMN rmc_namespace TEXT",
+      "status": "EXECUTED"
+    },
+    {
+      "sql": "ALTER TABLE agent_profiles ADD COLUMN activation_state TEXT NOT NULL DEFAULT 'inactive'",
+      "status": "EXECUTED"
+    },
+    {
+      "sql": "ALTER TABLE agent_profiles ADD COLUMN profile_hash TEXT",
+      "status": "EXECUTED"
+    },
+    {
+      "sql": "ALTER TABLE agent_profiles ADD COLUMN last_validated_at TEXT",
+      "status": "EXECUTED"
+    },
+    {
+      "sql": "ALTER TABLE user_profiles ADD COLUMN operational_profile_json TEXT NOT NULL DEFAULT '{}'",
+      "status": "EXECUTED"
+    },
+    {
+      "sql": "ALTER TABLE user_profiles ADD COLUMN profile_schema_version TEXT NOT NULL DEFAULT '1.0.0-blueprint'",
+      "status": "EXECUTED"
+    },
+    {
+      "sql": "ALTER TABLE user_profiles ADD COLUMN profile_hash TEXT",
+      "status": "EXECUTED"
+    },
+    {
+      "sql": "ALTER TABLE user_profiles ADD COLUMN last_validated_at TEXT",
+      "status": "EXECUTED"
+    },
+    {
+      "sql": "CREATE INDEX IF NOT EXISTS idx_agent_profiles_agent_id ON agent_profiles(agent_id)",
+      "status": "EXECUTED_OR_ALREADY_PRESENT"
+    },
+    {
+      "sql": "CREATE INDEX IF NOT EXISTS idx_agent_profiles_activation_state ON agent_profiles(activation_state)",
+      "status": "EXECUTED_OR_ALREADY_PRESENT"
+    },
+    {
+      "sql": "CREATE INDEX IF NOT EXISTS idx_agent_profiles_rmc_namespace ON agent_profiles(rmc_namespace)",
+      "status": "EXECUTED_OR_ALREADY_PRESENT"
+    },
+    {
+      "sql": "CREATE INDEX IF NOT EXISTS idx_user_profiles_user_id ON user_profiles(user_id)",
+      "status": "EXECUTED_OR_ALREADY_PRESENT"
+    }
+  ],
+  "timestamp": "20260523_204520_UTC",
+  "verdict": "PASS"
+}

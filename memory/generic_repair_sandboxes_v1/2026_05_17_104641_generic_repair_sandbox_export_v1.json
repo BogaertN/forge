@@ -1,0 +1,18 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only_export": true
+  },
+  "created_at": "2026-05-17T10:46:41",
+  "llm_recommendation": "REVISE_CANDIDATE",
+  "plan_status": "GENERIC_REPAIR_SANDBOX_PLAN_READY",
+  "recommended_next_patch": "Revise candidate before live apply gate",
+  "report_type": "GENERIC_REPAIR_SANDBOX_EXPORT_V1",
+  "run_status": "GENERIC_REPAIR_SANDBOX_TESTS_ISSUES",
+  "sandbox_root": "/home/nic/forge/memory/generic_repair_sandboxes_v1/sandbox_2026_05_17_104421_stack_linker_breather",
+  "schema_version": "generic_repair_sandbox_export_v1_patch137",
+  "status": "GENERIC_REPAIR_SANDBOX_EXPORT_READY",
+  "target": "stack_linker_breather",
+  "test_status": "ISSUES_OR_NOT_RUN"
+}

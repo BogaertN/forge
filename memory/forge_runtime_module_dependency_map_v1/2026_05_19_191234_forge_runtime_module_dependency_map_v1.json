@@ -1,0 +1,652 @@
+{
+  "active_patch": "Patch 156 \u2014 Runtime Module Dependency Map",
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "live_restore_authority": false,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "roadmap_append_only": true
+  },
+  "blockers": [
+    {
+      "id": "B02",
+      "summary": "Live apply remains locked. This is expected before runtime build writes.",
+      "type": "live_write"
+    },
+    {
+      "id": "B03",
+      "summary": "12 canonical engines still have source authority gaps.",
+      "type": "source_authority"
+    }
+  ],
+  "canonical_engine_count": 54,
+  "created_at": "2026-05-19T19:12:34",
+  "current_phase": "S19B \u2014 Runtime Module Dependency Map",
+  "dependency_rows": [
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "christping_listener",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "runtime_domain": "DRIFT_AND_CORRECTION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "christping_validator_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "runtime_domain": "DRIFT_AND_CORRECTION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "drift_analyzer_tool",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "runtime_domain": "DRIFT_AND_CORRECTION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "drift_signature_logger",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "runtime_domain": "DRIFT_AND_CORRECTION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "stack_breather_phase2",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "runtime_domain": "DRIFT_AND_CORRECTION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "symbolic_drift_visualizer",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "runtime_domain": "DRIFT_AND_CORRECTION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "phase_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "failsafe_manager",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "runtime_domain": "GOVERNANCE_AND_SAFETY",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "loop_resurrection_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "runtime_domain": "MEMORY_AND_RESONANCE",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "symbolic_capacitor_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "runtime_domain": "MEMORY_AND_RESONANCE",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "system_log_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "runtime_domain": "SYSTEM_RUNTIME_AND_TOOLS",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "collapse_prevention_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "runtime_domain": "DRIFT_AND_CORRECTION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "confusion_checker",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "runtime_domain": "DRIFT_AND_CORRECTION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "recursive_field_breather",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "runtime_domain": "DRIFT_AND_CORRECTION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "recursive_field_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "runtime_domain": "DRIFT_AND_CORRECTION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "recursive_field_stack",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "runtime_domain": "DRIFT_AND_CORRECTION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "trust_guard",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "runtime_domain": "DRIFT_AND_CORRECTION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "project_memory",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "runtime_domain": "MEMORY_AND_RESONANCE",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "resurrection_planner",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "runtime_domain": "MEMORY_AND_RESONANCE",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "spc_memory_migrator",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "runtime_domain": "MEMORY_AND_RESONANCE",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "activity_log",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "runtime_domain": "SYSTEM_RUNTIME_AND_TOOLS",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "peer_communication_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "runtime_domain": "SYSTEM_RUNTIME_AND_TOOLS",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "plugin_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "runtime_domain": "SYSTEM_RUNTIME_AND_TOOLS",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "project_brain",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P2_SUPPORTING_CORE",
+      "runtime_domain": "SYSTEM_RUNTIME_AND_TOOLS",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "agent_reflection_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "AGENT_ORCHESTRATION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "athena",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "AGENT_ORCHESTRATION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "athena_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "AGENT_ORCHESTRATION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "recursive_agent_kernel",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "AGENT_ORCHESTRATION",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "ascii_interpreter_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "entropy_monitor_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "field_resonance_mapper",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "glyph_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "protoforge",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "recursion_mapper",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "recursive_verification_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "resonance_charge_meter",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "resonance_display",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "revisit_previous_tasks",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "seed_manager",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "symbolic_cognition_stack",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "symbolic_feedback_loop_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "symbolic_glyph_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "symbolic_layers_stack",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "tone_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GENERAL_RUNTIME",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "compute_contribution_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GOVERNANCE_AND_SAFETY",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "symbolic_policy_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GOVERNANCE_AND_SAFETY",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "tier_enforcer",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "GOVERNANCE_AND_SAFETY",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "contribution_dashboard_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "INTERFACE_AND_OPERATOR_SURFACE",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "control_panel_ui_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "INTERFACE_AND_OPERATOR_SURFACE",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "document_output_formatter",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "INTERFACE_AND_OPERATOR_SURFACE",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "echo_trace_visualizer",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "INTERFACE_AND_OPERATOR_SURFACE",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "glyph_ui_overlay",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "INTERFACE_AND_OPERATOR_SURFACE",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "install_onboarding_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "INTERFACE_AND_OPERATOR_SURFACE",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    },
+    {
+      "canonical_status": "CANONICAL_INCLUDED",
+      "dependency_kind": "canonical_runtime_module",
+      "engine": "resonance_visualizer_engine",
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P3_INTERFACE_OR_EXTENSION",
+      "runtime_domain": "INTERFACE_AND_OPERATOR_SURFACE",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN"
+    }
+  ],
+  "domain_count": 7,
+  "domain_summary": [
+    {
+      "domain": "AGENT_ORCHESTRATION",
+      "p1_core": 0,
+      "p2_supporting_core": 0,
+      "p3_interface_or_extension": 4,
+      "total": 4
+    },
+    {
+      "domain": "DRIFT_AND_CORRECTION",
+      "p1_core": 6,
+      "p2_supporting_core": 6,
+      "p3_interface_or_extension": 0,
+      "total": 12
+    },
+    {
+      "domain": "GENERAL_RUNTIME",
+      "p1_core": 1,
+      "p2_supporting_core": 0,
+      "p3_interface_or_extension": 16,
+      "total": 17
+    },
+    {
+      "domain": "GOVERNANCE_AND_SAFETY",
+      "p1_core": 1,
+      "p2_supporting_core": 0,
+      "p3_interface_or_extension": 3,
+      "total": 4
+    },
+    {
+      "domain": "INTERFACE_AND_OPERATOR_SURFACE",
+      "p1_core": 0,
+      "p2_supporting_core": 0,
+      "p3_interface_or_extension": 7,
+      "total": 7
+    },
+    {
+      "domain": "MEMORY_AND_RESONANCE",
+      "p1_core": 2,
+      "p2_supporting_core": 3,
+      "p3_interface_or_extension": 0,
+      "total": 5
+    },
+    {
+      "domain": "SYSTEM_RUNTIME_AND_TOOLS",
+      "p1_core": 1,
+      "p2_supporting_core": 4,
+      "p3_interface_or_extension": 0,
+      "total": 5
+    }
+  ],
+  "live_build_ready": false,
+  "next_commands": [
+    "forge-runtime-module-map-export",
+    "forge-build-sequence",
+    "forge-dashboard-roadmap-build",
+    "forge-status-api-build",
+    "forge-dashboard-build",
+    "Install Patch 157 when ready"
+  ],
+  "next_patch": "Patch 157 \u2014 Runtime Build Plan / First Safe Module Candidate",
+  "plain_english": "Forge has mapped canonical AI.Web runtime modules into dependency domains for planning. This does not authorize live runtime writes.",
+  "planning_ready": true,
+  "recommended_next_patch": "Patch 157 \u2014 Runtime Build Plan / First Safe Module Candidate",
+  "report_type": "FORGE_RUNTIME_MODULE_DEPENDENCY_MAP_V1",
+  "schema_version": "forge_runtime_module_dependency_map_v1_patch156",
+  "status": "FORGE_RUNTIME_MODULE_DEPENDENCY_MAP_READY_PLANNING_ONLY",
+  "summary": {
+    "canonical_engines": 54,
+    "canonical_tests_fail": 0,
+    "canonical_tests_pass": 67,
+    "domains": 7,
+    "engine_file_writes": 0,
+    "expected_commands": 586,
+    "live_build_ready": false,
+    "patch_apply_authority": false,
+    "planning_ready": true,
+    "project_file_writes": 0,
+    "roadmap_mutation_policy": "APPEND_ONLY",
+    "tools": 510,
+    "trust_level": 5.0
+  }
+}

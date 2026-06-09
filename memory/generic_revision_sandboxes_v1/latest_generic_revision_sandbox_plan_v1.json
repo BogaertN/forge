@@ -1,0 +1,48 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "sandbox_only": true,
+    "subprocess_shell_false": true
+  },
+  "candidate_file_path": "/home/nic/forge/memory/generic_revision_candidates_v1/2026_05_18_170530_revision_loop_candidate_2026_05_17_125228_revision_candidate_2026_05_17_102321_candidate_stack_linker_core.py",
+  "candidate_sha256": "4ed82164b5f29c0c7f1163829a60a35c8e91bcb721bf196256554f88c4f4f784",
+  "created_at": "2026-05-18T18:26:04",
+  "dependency_candidates": [
+    {
+      "kind": "module_file",
+      "path": "/home/nic/aiweb/engines/core_stack_breather/core_breather.py",
+      "reason": "bounded_rglob_module_file_match",
+      "requested_module": "core_breather"
+    },
+    {
+      "kind": "package_dir",
+      "path": "/home/nic/aiweb/engines/recursive_field_breather",
+      "reason": "direct_engine_package_dir_match",
+      "requested_module": "recursive_field_breather"
+    }
+  ],
+  "dependency_roots": [
+    "core_breather",
+    "recursive_field_breather"
+  ],
+  "import_roots": [
+    "core_breather",
+    "json",
+    "os",
+    "recursive_field_breather",
+    "stack_linker_breather",
+    "sys",
+    "time"
+  ],
+  "missing_dependency_candidates": [],
+  "problems": [],
+  "report_type": "GENERIC_REVISION_SANDBOX_PLAN_V1",
+  "required_token": "CONFIRM_RUN_GENERIC_REVISION_SANDBOX",
+  "schema_version": "generic_revision_sandbox_v1_patch141",
+  "status": "GENERIC_REVISION_SANDBOX_PLAN_READY",
+  "target": "stack_linker_breather",
+  "target_engine_dir": "/home/nic/aiweb/engines/stack_linker_breather",
+  "target_file": "/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py",
+  "test_file": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+}

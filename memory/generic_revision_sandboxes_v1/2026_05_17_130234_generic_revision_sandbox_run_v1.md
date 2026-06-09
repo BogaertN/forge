@@ -1,0 +1,122 @@
+# GENERIC_REVISION_SANDBOX_RUN_V1
+
+Status: GENERIC_REVISION_SANDBOX_TESTS_ISSUES
+
+- target: stack_linker_breather
+- recommended_next_patch: Patch 139/140 loop — revise candidate or dependency plan from LLM review
+- sandbox_status: GENERIC_REVISION_SANDBOX_TESTS_ISSUES
+- llm_recommendation: REVISE_SANDBOX_DEPENDENCY_PLAN
+
+```json
+{
+  "authority": {
+    "engine_file_write_authority": false,
+    "ledger_mutation_authority": false,
+    "model_generation_called": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "sandbox_only": true,
+    "shell_false": true
+  },
+  "compile_result": {
+    "argv": [
+      "/home/nic/forge/.venv/bin/python3",
+      "-m",
+      "py_compile",
+      "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/stack_linker_breather/stack_linker_core.py"
+    ],
+    "cwd": "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/stack_linker_breather",
+    "ended_at": "2026-05-17T13:01:53",
+    "returncode": 0,
+    "shell": false,
+    "started_at": "2026-05-17T13:01:53",
+    "stderr": "",
+    "stdout": "",
+    "timeout": false
+  },
+  "created_at": "2026-05-17T13:02:34",
+  "dependency_actions": [
+    {
+      "chosen_dependency": {
+        "kind": "module_file",
+        "path": "/home/nic/aiweb/engines/core_stack_breather/core_breather.py",
+        "reason": "bounded_rglob_module_file_match",
+        "requested_module": "core_breather"
+      },
+      "install_result": {
+        "installed_paths": [
+          "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/core_breather/core_breather.py",
+          "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/core_breather/__init__.py"
+        ],
+        "package_dir": "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/core_breather",
+        "strategy": "copy_module_file_as_package"
+      },
+      "requested_module": "core_breather"
+    },
+    {
+      "chosen_dependency": {
+        "kind": "package_dir",
+        "path": "/home/nic/aiweb/engines/recursive_field_breather",
+        "reason": "direct_engine_package_dir_match",
+        "requested_module": "recursive_field_breather"
+      },
+      "install_result": {
+        "installed_paths": [
+          "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/recursive_field_breather"
+        ],
+        "package_dir": "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/recursive_field_breather",
+        "strategy": "copy_package_dir"
+      },
+      "requested_module": "recursive_field_breather"
+    }
+  ],
+  "failed_dependency_candidates": [],
+  "import_isolation": {
+    "live_import_leak_detected": false,
+    "mode": "generic_revision_sandbox_package_parent_first_no_live_engine_path",
+    "pythonpath": [
+      "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages",
+      "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather"
+    ]
+  },
+  "llm_recommendation": "REVISE_SANDBOX_DEPENDENCY_PLAN",
+  "llm_review": {
+    "llm_recommendation": "REVISE_SANDBOX_DEPENDENCY_PLAN",
+    "model": "qwen3:8b",
+    "model_generation_called": true,
+    "preview": "Thinking...\nOkay, let's see. The user is getting an ImportError when trying to import 'breathe_phase' from 'recursive_field_breather.field_breather'. The error message says that the module can't be found. \n\nLooking at the dependency actions, the 'recursive_field_breather' is installed as a package directory. But maybe the 'field_breather.py' file isn't in the right place or doesn't have the correct exports. The test is trying to import 'breathe_phase' from 'recursive_field_breather.field_breather', which suggests that the module structure expects 'field_breather.py' to be in the 'recursive_field_breather' directory and that 'breathe_phase' is a function exported there.\n\nWait, the error path is '/home/nic/forge/.../recursive_field_breather/field_breather.py'. So the file exists, but perhaps the function 'breathe_phase' isn't defined there, or maybe the file isn't properly structured. Alternatively, maybe the package isn't set up correctly, so when importing, it's not finding the function.\n\nAnother angle: the candidate code imports 'breathe_phase as field_breathe' from 'recursive_field_breather.field_breather'. If the 'field_breather.py' doesn't have a function named 'breathe_phase', that would cause the error. So the problem might be that the 'recursive_field_breather' package doesn't have the required function.\n\nBut the dependency action says that the 'recursive_field_breather' is copied as a package directory. If the original 'recursive_field_breather' directory has a 'field_breather.py' with 'breathe_phase', then the import should work. However, maybe the 'field_breather.py' isn't in the correct location within the package. For example, if the package structure is such that 'field_breather' is a subpackage, but it's not properly structured with an __init__.py or the like.\n\nAlternatively, maybe the 'breathe_phase' function is defined in a different module within 'recursive_field_breather', but the import path is incorrect. The error suggests that the import is looking for 'field_breather' as a module within 'recursive_field_breather', but maybe the actual module is named differently or the function isn't exported.\n\nSince the test is failing with an import error, the issue is likely in the dependencies. The sandbox's dependency plan might not have correctly installed the required modules or their exports. Therefore, the recommendation would be to revise the sandbox dependency plan to ensure that 'recursive_field_breather' is properly set up with the necessary files and exports.\n...done thinking.\n\nThe ImportError indicates the `breathe_phase` function is missing from the expected module. The sandbox dependency plan likely failed to correctly install or structure the `recursive_field_breather` package, preventing the import. \n\nRECOMMENDATION: REVISE_SANDBOX_DEPENDENCY_PLAN\n\n",
+    "prompt_path": "/home/nic/forge/memory/generic_revision_sandboxes_v1/2026_05_17_130153_prompt_revision_sandbox_review_stack_linker_breather.txt",
+    "prompt_sha256": "6d7c0efcdd61ef1c22c98fd75d9dc26b12c2949f35e5a20aafbe3cb74f1e4ef4",
+    "provider": "ollama",
+    "raw_response_path": "/home/nic/forge/memory/generic_revision_sandboxes_v1/2026_05_17_130153_response_raw_revision_sandbox_review_stack_linker_breather.txt",
+    "raw_response_sha256": "94356604ec09b7b1d54fd3d04d7100729c2e9cf7be66523de59600d6b351eef2",
+    "returncode": 0,
+    "shell": false,
+    "stderr_path": "/home/nic/forge/memory/generic_revision_sandboxes_v1/2026_05_17_130153_response_stderr_revision_sandbox_review_stack_linker_breather.txt"
+  },
+  "problems": [],
+  "recommended_next_patch": "Patch 139/140 loop \u2014 revise candidate or dependency plan from LLM review",
+  "report_type": "GENERIC_REVISION_SANDBOX_RUN_V1",
+  "sandbox_package_parent": "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages",
+  "sandbox_root": "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather",
+  "sandbox_status": "GENERIC_REVISION_SANDBOX_TESTS_ISSUES",
+  "sandbox_target_package": "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/stack_linker_breather",
+  "schema_version": "generic_revision_sandbox_v1_patch141",
+  "status": "GENERIC_REVISION_SANDBOX_TESTS_ISSUES",
+  "target": "stack_linker_breather",
+  "test_result": {
+    "argv": [
+      "/home/nic/forge/.venv/bin/python3",
+      "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/stack_linker_breather/test_stack_linker_core.py"
+    ],
+    "cwd": "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/stack_linker_breather",
+    "ended_at": "2026-05-17T13:01:53",
+    "returncode": 1,
+    "shell": false,
+    "started_at": "2026-05-17T13:01:53",
+    "stderr": "Traceback (most recent call last):\n  File \"/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/stack_linker_breather/test_stack_linker_core.py\", line 3, in <module>\n    from stack_linker_breather.stack_linker_core import unified_breathe_cycle\n  File \"/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/stack_linker_breather/stack_linker_core.py\", line 6, in <module>\n    from recursive_field_breather.field_breather import breathe_phase as field_breathe\nImportError: cannot import name 'breathe_phase' from 'recursive_field_breather.field_breather' (/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/recursive_field_breather/field_breather.py)\n",
+    "stdout": "",
+    "timeout": false
+  }
+}
+```

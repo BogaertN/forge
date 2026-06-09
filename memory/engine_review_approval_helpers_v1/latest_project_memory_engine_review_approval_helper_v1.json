@@ -1,0 +1,70 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "engine_file_write_authority": false,
+    "final_lockfile_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "mode": "EVIDENCE_BASED_APPROVAL_HELPER",
+    "patch": "103",
+    "project_file_write_authority": false,
+    "queue_decision_write_authority": false,
+    "review_ledger_write_authority": false,
+    "rule": "Patch 103 may record a queue decision only after a Patch 102 evidence cross-check exists. It never mutates the review ledger or engine files.",
+    "shell_execution_authority": false,
+    "writes": [
+      "/home/nic/forge/memory/engine_review_approval_helpers_v1",
+      "/home/nic/forge/memory/engine_review_queue_v1"
+    ]
+  },
+  "blockers": [],
+  "bound_file_count": 1,
+  "candidate_path": "/home/nic/aiweb/projects/recursive_lmm_grok1/engines/project_memory",
+  "created_at": "2026-05-16_193958",
+  "crosscheck_path": "/home/nic/forge/memory/engine_review_evidence_crosschecks_v1/latest_project_memory_engine_review_evidence_crosscheck_v1.json",
+  "crosscheck_sha256": "5105fadcb85e5b71fc7a8ad55f065bc16e5f2ac59679cfdfba5091a7829026fa",
+  "crosscheck_status": "EVIDENCE_CROSSCHECK_READY_NO_AUTHORITY",
+  "draft_path": "/home/nic/forge/memory/llm_engine_review_drafts_v1/2026-05-16_193257_project_memory_llm_engine_review_draft_v1.json",
+  "draft_sha256": "48af8cc0d70b56217c51d1aedc11de3dc545ee4457e92656531bb0a72cc32c0f",
+  "engine_family": "project_memory",
+  "evidence_binder_path": "/home/nic/forge/memory/engine_evidence_binders_v1/latest_project_memory_engine_evidence_binder.json",
+  "evidence_binder_sha256": "11383fd0802bbf5a5570d524233a2d88581a848cad1373f711e45eab06a49b17",
+  "evidence_id": "EEB-23949a7bc582f4ff",
+  "keyword_overlap": {
+    "classes_mentioned": [],
+    "evidence_terms_present": [],
+    "file_names_mentioned": [
+      "run.py"
+    ],
+    "functions_mentioned": [
+      "log_to_memory"
+    ],
+    "imports_mentioned": [
+      "import os, json",
+      "from datetime import datetime"
+    ]
+  },
+  "llm_invocation": {
+    "called": true,
+    "elapsed_seconds": 19.397,
+    "error": null,
+    "hidden_reasoning_stored": false,
+    "model": "qwen3:8b",
+    "prompt_sha256": "52676a2dddf572fe56c7c36087e4cf1f2465972b86f6c3e59b33cb87c64a05d9",
+    "provider": "ollama",
+    "raw_contains_think_block": true,
+    "status": "OLLAMA_VISIBLE_REVIEW_READY",
+    "timeout_seconds": 180,
+    "visible_response": "Plain-English Purpose:  \nTo record session events with timestamps and content in a JSONL file for memory tracking.  \n\nLikely System Role:  \nA logging/memory management component for tracking interactions or state changes in a session-based system.  \n\nEvidence Used:  \n- Code snippet from `run.py` demonstrating `log_to_memory` function for writing structured event logs.  \n- Imports (`os`, `json`, `datetime`) and file path indicating system for persistent session data storage.  \n\nRisks / Uncertainties:  \n- No evidence of data security measures or retention policies for logged content.  \n- Ambiguity about integration with other systems or purpose beyond basic logging.  \n\nRecommendation Draft:  \nApprove review with clarification on data security, retention, and system integration. Verify alignment with broader project goals.  \n\nSuggested Nic Action:  \nApprove review and request additional context on data handling and system integration to mitigate risks."
+  },
+  "llm_visible_review_excerpt": "Plain-English Purpose:  \nTo record session events with timestamps and content in a JSONL file for memory tracking.  \n\nLikely System Role:  \nA logging/memory management component for tracking interactions or state changes in a session-based system.  \n\nEvidence Used:  \n- Code snippet from `run.py` demonstrating `log_to_memory` function for writing structured event logs.  \n- Imports (`os`, `json`, `datetime`) and file path indicating system for persistent session data storage.  \n\nRisks / Uncertainties:  \n- No evidence of data security measures or retention policies for logged content.  \n- Ambiguity about integration with other systems or purpose beyond basic logging.  \n\nRecommendation Draft:  \nApprove review with clarification on data security, retention, and system integration. Verify alignment with broader project goals.  \n\nSuggested Nic Action:  \nApprove review and request additional context on data handling and system integration to mitigate risks.",
+  "manual_verification_rule": "Approve only if the LLM-visible claims are supported by the bound evidence shown in the Patch 102 cross-check. If unsure, defer.",
+  "ready_for_evidence_based_queue_decision": true,
+  "report_type": "ENGINE_REVIEW_APPROVAL_CHECK_V1_PATCH103",
+  "schema_version": "engine_review_approval_helper_v1_patch103",
+  "status": "EVIDENCE_APPROVAL_CHECK_READY",
+  "warnings": [
+    "Cross-check warning: LLM role wording does not explicitly repeat deterministic role label."
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "user_id": "",
+  "canonical_name": "",
+  "spirit_name": "",
+  "project_affiliations": [
+    // e.g., "ProjectX", "Team Alpha", "Personal Portfolio"
+  ],
+  "identity_tags": [
+    // e.g., "creative_coder", "analytical_thinker", "visionary_leader"
+  ],
+  "version": "1.0.0",
+  "last_updated": "",
+  "project_context": {
+    "current_project": "",
+    "phase": "",
+    "current_files": [
+      // e.g., "requirements.docx", "main.py"
+    ],
+    "active_collaborators": [
+      // e.g., "Alice Smith", "Bob Lee"
+    ],
+    "subsystems": [
+      // e.g., "API Gateway", "UI/UX", "Database"
+    ],
+    "goals": [
+      // e.g., "Finish MVP", "Document core logic", "Launch beta"
+    ]
+  },
+  "interaction_preferences": {
+    "formality": "",
+    "depth": "",
+    "step_by_step": false,
+    "beginner_friendly": false,
+    "plain_language": false,
+    "no_boxes": false,
+    "pushback": false,
+    "critique_mandatory": false,
+    "confirmation_required": false,
+    "formatting_rules": [
+      // e.g., "always start with a summary", "no code blocks unless asked"
+    ]
+  },
+  "meta_rules": {
+    "recursive_feedback": false,
+    "drift_tracking": false,
+    "contradiction_alerts": false,
+    "require_honest_pushback": false,
+    "preserve_session_memory": false,
+    "require_context_carryover": false,
+    "log_all_exchanges": false,
+    "always_explain_decisions": false,
+    "safe_words": [
+      // e.g., "pause", "stop"
+    ],
+    "forbidden_actions": [
+      // e.g., "skip steps", "summarize before context"
+    ]
+  },
+  "session_state": {
+    "phase": "",
+    "waiting_for": "",
+    "last_feedback": "",
+    "last_action": "",
+    "timestamp": ""
+  }
+}

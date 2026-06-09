@@ -1,0 +1,18 @@
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "read_only": true
+  },
+  "created_at": "2026-05-17T07:03:51",
+  "next_commands": [
+    "canonical-test-run-show latest",
+    "canonical-test-run-export",
+    "Install Patch 125 when ready"
+  ],
+  "next_phase": "CANONICAL_ENGINE_RELATIONSHIP_MAP",
+  "plain_english": "Canonical safe test runner has a report. The next safe move is mapping canonical engine relationships.",
+  "recommended_next_patch": "Patch 125 — Canonical Engine Relationship Map",
+  "report_type": "FORGE_NEXT_STATUS_V1",
+  "schema_version": "forge_next_status_v1_patch124",
+  "status": "NEXT_PATCH_REQUIRED"
+}

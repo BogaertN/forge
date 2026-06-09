@@ -1,0 +1,256 @@
+{
+  "items": [
+    {
+      "id": "S20A",
+      "status": "DONE",
+      "title": "Forge Self-Modification Foundation \u2014 Command propose/install pipeline (P184-186)"
+    },
+    {
+      "id": "S20B",
+      "status": "DONE",
+      "title": "LLM-Assisted Implementation \u2014 Qwen3 writes real command bodies (P187-193)"
+    },
+    {
+      "id": "S20C",
+      "status": "DONE",
+      "title": "External Tool Discovery \u2014 PyPI search, install, wrap (P194-195)"
+    },
+    {
+      "id": "S20D",
+      "status": "DONE",
+      "title": "Forge Self-Inspection \u2014 Self-scan, gap analysis, Qwen3 suggestions (P196)"
+    },
+    {
+      "id": "S20E",
+      "status": "DONE",
+      "title": "Smart Restart \u2014 Session diff, RESTART confirmation, relaunch in place (P197)"
+    },
+    {
+      "id": "S20F",
+      "status": "ACTIVE",
+      "title": "Roadmap Live Update \u2014 Sequence auto-sync, append/mark commands (P198)"
+    },
+    {
+      "id": "S20G",
+      "status": "NEXT",
+      "title": "Document Reading \u2014 Read PDF, DOCX, Markdown from scope"
+    },
+    {
+      "id": "S20H",
+      "status": "FUTURE",
+      "title": "Memory Search \u2014 Query forge memory by keyword and date"
+    },
+    {
+      "id": "S20I",
+      "status": "FUTURE",
+      "title": "Local File Search \u2014 Search file contents in scope"
+    },
+    {
+      "id": "S20J",
+      "status": "FUTURE",
+      "title": "Test Runner Integration \u2014 Run approved tests from Forge"
+    },
+    {
+      "id": "S19AC",
+      "status": "DONE",
+      "title": "(status override from forge-roadmap-mark)",
+      "_override": true
+    },
+    {
+      "id": "S19AD",
+      "status": "DONE",
+      "title": "(status override from forge-roadmap-mark)",
+      "_override": true
+    },
+    {
+      "id": "S20K",
+      "status": "NEXT",
+      "title": "Add memory search command"
+    },
+    {
+      "id": "S19AE",
+      "status": "DONE",
+      "title": "RMC Integration Freeze / No-Move Snapshot"
+    },
+    {
+      "id": "S19AF",
+      "status": "DONE",
+      "title": "RMC Missing Module Install / Phase Parser, Drift Arbitrator, Echo Gate"
+    },
+    {
+      "id": "S19AG",
+      "status": "DONE",
+      "title": "Forge RMC Read-Only Wrapper"
+    },
+    {
+      "id": "S19AH",
+      "status": "DONE",
+      "title": "Forge RMC Runtime Preview Check"
+    },
+    {
+      "id": "S19AI",
+      "status": "DONE",
+      "title": "Identity Vault Boundary Scan / Hygiene"
+    },
+    {
+      "id": "S19AJ",
+      "status": "DONE",
+      "title": "Identity Vault Readiness Reconcile"
+    },
+    {
+      "id": "S19AK",
+      "status": "DONE",
+      "title": "Identity Vault Read-Only Adapter"
+    },
+    {
+      "id": "S19AL",
+      "status": "DONE",
+      "title": "Identity Vault Drift Auto-Confirm Safety"
+    },
+    {
+      "id": "S19AM",
+      "status": "DONE",
+      "title": "Identity Vault DB Canonical Reconcile"
+    },
+    {
+      "id": "S19AN",
+      "status": "DONE",
+      "title": "AI.Web Service Contracts Apply"
+    },
+    {
+      "id": "S19AO",
+      "status": "DONE",
+      "title": "AI.Web Service Contracts Verify"
+    },
+    {
+      "id": "S19AP",
+      "status": "DONE",
+      "title": "Forge AI.Web Read-Only Connector Commands"
+    },
+    {
+      "id": "S19AQ",
+      "status": "FUTURE",
+      "title": "Identity Vault \u2014 persistent agent identity across sessions"
+    },
+    {
+      "id": "S19AR",
+      "status": "DONE",
+      "title": "Identity Vault Schema Migration Apply"
+    },
+    {
+      "id": "S19AS",
+      "status": "DONE",
+      "title": "Legacy Profile Migration Preview / Preserve Legacy user789"
+    },
+    {
+      "id": "S19AT",
+      "status": "ACTIVE",
+      "title": "Identity Vault Profile Seed Preview / Template Repair Gate"
+    },
+    {
+      "id": "S19AU",
+      "status": "NEXT",
+      "title": "Identity Vault Template Repair Preview"
+    },
+    {
+      "id": "S19AV",
+      "status": "FUTURE",
+      "title": "Apply Repaired Identity Vault Templates"
+    },
+    {
+      "id": "S19AW",
+      "status": "FUTURE",
+      "title": "Verify Repaired Identity Vault Templates"
+    },
+    {
+      "id": "S19AY",
+      "status": "FUTURE",
+      "title": "Verify Inactive Draft Identity Vault Profiles"
+    },
+    {
+      "id": "S19AZ",
+      "status": "FUTURE",
+      "title": "Upgrade Full Profile Read-Only Adapter"
+    },
+    {
+      "id": "S19BA",
+      "status": "FUTURE",
+      "title": "RMC Namespace Scaffold Preview"
+    },
+    {
+      "id": "S19BB",
+      "status": "FUTURE",
+      "title": "RMC Namespace Scaffold Apply / Empty Namespaces Only"
+    },
+    {
+      "id": "S19BC",
+      "status": "FUTURE",
+      "title": "Bootstrap Handshake Dry-Run v2 / Inactive Profile Respected"
+    },
+    {
+      "id": "S19BD",
+      "status": "FUTURE",
+      "title": "Agent Activation Preflight Command"
+    },
+    {
+      "id": "S19BE",
+      "status": "FUTURE",
+      "title": "Activate Gilligan as Governed Profile"
+    },
+    {
+      "id": "S19BF",
+      "status": "FUTURE",
+      "title": "Gilligan Governed Handshake"
+    },
+    {
+      "id": "S19BG",
+      "status": "FUTURE",
+      "title": "RMC Test Receipt Write"
+    },
+    {
+      "id": "S19BH",
+      "status": "FUTURE",
+      "title": "Athena Activation and Governed Handshake"
+    },
+    {
+      "id": "S19BI",
+      "status": "FUTURE",
+      "title": "Neo Activation and Governed Handshake"
+    },
+    {
+      "id": "S19BJ",
+      "status": "FUTURE",
+      "title": "ProtoForge2 Discovery Scan"
+    },
+    {
+      "id": "S19BK",
+      "status": "FUTURE",
+      "title": "ProtoForge2 Read-Only Connector"
+    },
+    {
+      "id": "S19BL",
+      "status": "FUTURE",
+      "title": "ProtoForge2 Controlled Simulation Handshake"
+    },
+    {
+      "id": "S19BM",
+      "status": "FUTURE",
+      "title": "EchoForge Discovery Scan"
+    },
+    {
+      "id": "S19BN",
+      "status": "FUTURE",
+      "title": "EchoForge Read-Only Connector"
+    },
+    {
+      "id": "S19BO",
+      "status": "FUTURE",
+      "title": "EchoForge Build-Intention Preview"
+    },
+    {
+      "id": "S19BP",
+      "status": "FUTURE",
+      "title": "Full EchoForge to Forge to ProtoForge2 to RMC Approval Loop"
+    }
+  ]
+}

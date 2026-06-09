@@ -1,0 +1,26 @@
+{
+  "corrections": [],
+  "direct_patch_authority": false,
+  "disk_changed": true,
+  "disk_changed_scope": "/home/nic/forge/memory/llm_memory_v1",
+  "evidence_referenced": [],
+  "final_answer_summary": "Forge wrote a safe LLM turn receipt under memory/llm_memory_v1. This proves the ledger can remember recommendations without storing hidden chain-of-thought or touching project files.",
+  "hidden_chain_of_thought_stored": false,
+  "next_command_suggested": "llm-memory-show latest",
+  "outcome": "smoke_receipt_written",
+  "project_files_changed": false,
+  "receipt_id": "llm_turn_2026-05-14_193028_f806f8edb4b7aba8",
+  "receipt_path": "/home/nic/forge/memory/llm_memory_v1/turns/llm_turn_2026-05-14_193028_f806f8edb4b7aba8.json",
+  "receipt_type": "LLM_MEMORY_TURN_RECEIPT_V1",
+  "recommendations": [
+    "Run llm-memory-show latest, llm-memory-search patch75, llm-memory-session, and llm-memory-export."
+  ],
+  "risk_level": "LOW",
+  "schema_version": "llm_memory_v1_patch75",
+  "session_id": "forge_2026_05_14_192941",
+  "source": "manual_cli_log_turn",
+  "timestamp": "2026-05-14T19:30:28",
+  "tools_used": [],
+  "user_approved_project_write": false,
+  "user_request_summary": "Patch 75 smoke test for LLM Memory Ledger"
+}

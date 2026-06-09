@@ -1,0 +1,30 @@
+{
+  "receipt_id": "2026-05-11_183917",
+  "created_at": "2026-05-11T18:39:17",
+  "plan_path": "/home/nic/forge/memory/code_library_v1/plans/2026-05-11_183815_code_index_plan.json",
+  "manifest_path": "/home/nic/forge/memory/code_library_v1/manifests/_code_index_current.json",
+  "indexes": {
+    "files": "/home/nic/forge/memory/code_library_v1/indexes/code_files.json",
+    "chunks": "/home/nic/forge/memory/code_library_v1/indexes/code_chunks.jsonl",
+    "symbols": "/home/nic/forge/memory/code_library_v1/indexes/code_symbols.json",
+    "patch_history": "/home/nic/forge/memory/code_library_v1/indexes/patch_history.json"
+  },
+  "stats": {
+    "files": 6423,
+    "chunks": 18741,
+    "symbols": 79706,
+    "skipped": 1613,
+    "roles": {
+      "test_file": 1460,
+      "engine_definition": 1818,
+      "text_code_file": 217,
+      "readme_or_manifest": 70,
+      "python_module": 2405,
+      "config_or_manifest": 87,
+      "runtime_wrapper": 366
+    },
+    "patch_history": 31
+  },
+  "old_chroma_db_untouched": "/home/nic/forge/memory/chroma_db",
+  "code_chroma_reserved_no_vector_write_patch57": "/home/nic/forge/memory/code_library_v1/chroma_db"
+}

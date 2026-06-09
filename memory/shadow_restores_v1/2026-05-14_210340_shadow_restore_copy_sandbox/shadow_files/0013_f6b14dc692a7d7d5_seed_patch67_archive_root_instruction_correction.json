@@ -1,0 +1,15 @@
+{
+  "correction_summary": "Patch 67 install instructions assumed a nested extracted folder that did not exist. Future patch installs must inspect the archive root with find before giving copy paths.",
+  "hidden_chain_of_thought_stored": false,
+  "lesson": "Never assume archive wrapper paths. Verify extracted structure first.",
+  "project_files_changed": false,
+  "receipt_id": "seed_patch67_archive_root_instruction_correction",
+  "receipt_path": "/home/nic/forge/memory/llm_memory_v1/corrections/seed_patch67_archive_root_instruction_correction.json",
+  "receipt_type": "LLM_MEMORY_SEEDED_CORRECTION_V1",
+  "schema_version": "llm_memory_v1_patch75",
+  "seed_id": "patch67_archive_root_instruction_correction",
+  "session_id": "forge_2026_05_14_192941",
+  "source": "patch75_llm_memory_init",
+  "timestamp": "2026-05-14T19:30:17",
+  "user_approved_project_write": false
+}

@@ -1,0 +1,41 @@
+{
+  "checks": {
+    "agent_identity_activation_performed": false,
+    "all_commands_present": true,
+    "connector_module_compile": true,
+    "database_write_performed": false,
+    "env_secret_values_read": false,
+    "function_marker_present": true,
+    "helper_smoke_ok": true,
+    "main_compile": true,
+    "route_marker_present": true,
+    "tool_registry_mentions": 0,
+    "tool_registry_unmodified_by_connectors": true
+  },
+  "command_presence": {
+    "forge-agent-list": true,
+    "forge-agent-show": true,
+    "forge-identity-status": true,
+    "forge-rmc-status": true,
+    "forge-rmc-test-status": true,
+    "forge-system-boundary-map": true
+  },
+  "errors": [],
+  "findings": [
+    {
+      "code": "AIWEB_READONLY_CONNECTORS_VERIFIED",
+      "level": "INFO",
+      "message": "Read-only connector commands and helper functions verified."
+    }
+  ],
+  "helper_smoke": {
+    "forge_agent_list": true,
+    "forge_agent_show": true,
+    "forge_identity_status": true,
+    "forge_rmc_status": true,
+    "forge_rmc_test_status": true,
+    "forge_system_boundary_map": true
+  },
+  "timestamp": "20260523_202124_UTC",
+  "verdict": "PASS"
+}

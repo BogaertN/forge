@@ -1,0 +1,231 @@
+{
+  "boundary": {
+    "agent_identity_activation_performed": false,
+    "database_write_performed": false,
+    "does_not_modify": [
+      "Identity Vault databases",
+      ".env",
+      "node_modules",
+      "Forge registry",
+      "RMC memory",
+      "AI.Web wrappers",
+      "agent identity activation state"
+    ],
+    "env_secret_values_read": false,
+    "modifies": [
+      "identity-vault/utils/drift.js"
+    ]
+  },
+  "checks": {
+    "after_risk": {
+      "forced_true_present": false,
+      "high_risk_hit_count": 0,
+      "hits": [
+        {
+          "line": 1,
+          "risk": "INFO",
+          "text": "// utils/drift.js - Conceptual Drift Tracking, Contradiction Alerts, and Recursive Feedback for Vault"
+        },
+        {
+          "line": 2,
+          "risk": "INFO",
+          "text": "// PATCH220 SAFETY: recursive drift feedback must never auto-confirm without explicit operator approval."
+        },
+        {
+          "line": 6,
+          "risk": "INFO",
+          "text": "// recursive feedback (simulate loops: propose fixes, confirm), log integration."
+        },
+        {
+          "line": 130,
+          "risk": "INFO",
+          "text": "// Safe words empty but confirmation_required"
+        },
+        {
+          "line": 131,
+          "risk": "INFO",
+          "text": "if (prefs.confirmation_required && (!rules.safe_words || rules.safe_words.length === 0)) {"
+        },
+        {
+          "line": 133,
+          "risk": "INFO",
+          "text": "conflict: 'confirmation_required vs. safe_words',"
+        },
+        {
+          "line": 134,
+          "risk": "INFO",
+          "text": "reason: 'Confirmation needed but no safe words for halt',"
+        },
+        {
+          "line": 135,
+          "risk": "INFO",
+          "text": "fields: ['interaction_preferences.confirmation_required', 'meta_rules.safe_words']"
+        },
+        {
+          "line": 142,
+          "risk": "INFO",
+          "text": "// Recursive feedback: Simulate loop\u2014propose fixes, \"confirm\" (CLI stub), update/log"
+        },
+        {
+          "line": 158,
+          "risk": "INFO",
+          "text": "console.log(`Recursive Feedback (Iteration ${current + 1}): ${proposal}`);"
+        },
+        {
+          "line": 160,
+          "risk": "INFO",
+          "text": "// Stub confirm (in CLI: readline; here: assume yes for demo, or env flag)"
+        },
+        {
+          "line": 161,
+          "risk": "MEDIUM",
+          "text": "const confirm = process.env.IDENTITY_VAULT_ALLOW_DRIFT_AUTO_CONFIRM === 'true' && process.env.IDENTITY_VAULT_DRIFT_APPROVAL_TOKEN === 'MANUAL_REVIEW_APPROVED'; // Safety: explicit opt-in only; never auto-confirm by default"
+        },
+        {
+          "line": 162,
+          "risk": "INFO",
+          "text": "if (confirm) {"
+        },
+        {
+          "line": 175,
+          "risk": "INFO",
+          "text": "console.log('Awaiting confirmation... (stub)');"
+        },
+        {
+          "line": 183,
+          "risk": "INFO",
+          "text": "confirmed: confirm,"
+        },
+        {
+          "line": 187,
+          "risk": "INFO",
+          "text": "if (confirm && current < maxIterations - 1) {"
+        }
+      ],
+      "legacy_auto_confirm_env_present": true,
+      "risk_hit_count": 16,
+      "safe_env_flag_present": true,
+      "safe_env_token_present": true
+    },
+    "after_sha256": "480a5a16e49b308675ee6139e92f1ff3aaba010783b2fb2ad3f482baa316ae1d",
+    "backup_created": true,
+    "before_risk": {
+      "forced_true_present": true,
+      "high_risk_hit_count": 1,
+      "hits": [
+        {
+          "line": 1,
+          "risk": "INFO",
+          "text": "// utils/drift.js - Conceptual Drift Tracking, Contradiction Alerts, and Recursive Feedback for Vault"
+        },
+        {
+          "line": 5,
+          "risk": "INFO",
+          "text": "// recursive feedback (simulate loops: propose fixes, confirm), log integration."
+        },
+        {
+          "line": 129,
+          "risk": "INFO",
+          "text": "// Safe words empty but confirmation_required"
+        },
+        {
+          "line": 130,
+          "risk": "INFO",
+          "text": "if (prefs.confirmation_required && (!rules.safe_words || rules.safe_words.length === 0)) {"
+        },
+        {
+          "line": 132,
+          "risk": "INFO",
+          "text": "conflict: 'confirmation_required vs. safe_words',"
+        },
+        {
+          "line": 133,
+          "risk": "INFO",
+          "text": "reason: 'Confirmation needed but no safe words for halt',"
+        },
+        {
+          "line": 134,
+          "risk": "INFO",
+          "text": "fields: ['interaction_preferences.confirmation_required', 'meta_rules.safe_words']"
+        },
+        {
+          "line": 141,
+          "risk": "INFO",
+          "text": "// Recursive feedback: Simulate loop\u2014propose fixes, \"confirm\" (CLI stub), update/log"
+        },
+        {
+          "line": 157,
+          "risk": "INFO",
+          "text": "console.log(`Recursive Feedback (Iteration ${current + 1}): ${proposal}`);"
+        },
+        {
+          "line": 159,
+          "risk": "INFO",
+          "text": "// Stub confirm (in CLI: readline; here: assume yes for demo, or env flag)"
+        },
+        {
+          "line": 160,
+          "risk": "HIGH",
+          "text": "const confirm = process.env.AUTO_CONFIRM === 'true' || true; // Safety: Opt-in auto"
+        },
+        {
+          "line": 161,
+          "risk": "INFO",
+          "text": "if (confirm) {"
+        },
+        {
+          "line": 174,
+          "risk": "INFO",
+          "text": "console.log('Awaiting confirmation... (stub)');"
+        },
+        {
+          "line": 182,
+          "risk": "INFO",
+          "text": "confirmed: confirm,"
+        },
+        {
+          "line": 186,
+          "risk": "INFO",
+          "text": "if (confirm && current < maxIterations - 1) {"
+        }
+      ],
+      "legacy_auto_confirm_env_present": true,
+      "risk_hit_count": 15,
+      "safe_env_flag_present": false,
+      "safe_env_token_present": false
+    },
+    "before_sha256": "c02428f7c266d932e1e0bb9546e2bac79038ff3f205ce6fd3da04a3073840596",
+    "changed": true,
+    "changes": [
+      "Replaced exact unsafe AUTO_CONFIRM || true confirmation line.",
+      "Added Patch 220 safety marker comment."
+    ],
+    "drift_js_exists": true,
+    "node_syntax_ok": true,
+    "node_syntax_returncode": 0,
+    "node_syntax_stderr_tail": "",
+    "safe_env_flag": "IDENTITY_VAULT_ALLOW_DRIFT_AUTO_CONFIRM",
+    "safe_env_token": "IDENTITY_VAULT_DRIFT_APPROVAL_TOKEN",
+    "safe_env_token_value_required": "MANUAL_REVIEW_APPROVED"
+  },
+  "findings": [
+    {
+      "code": "IV_DRIFT_AUTO_CONFIRM_DISABLED",
+      "level": "INFO",
+      "message": "Unsafe recursive drift auto-confirm pattern was replaced with explicit two-factor environment gating."
+    },
+    {
+      "code": "IV_DRIFT_SAFETY_GATE",
+      "level": "INFO",
+      "message": "Auto-confirm now requires IDENTITY_VAULT_ALLOW_DRIFT_AUTO_CONFIRM=true and IDENTITY_VAULT_DRIFT_APPROVAL_TOKEN=MANUAL_REVIEW_APPROVED if the code path is used."
+    }
+  ],
+  "patch": "patch220_identity_vault_drift_auto_confirm_safety_apply",
+  "paths": {
+    "backup_root": "/home/nic/forge/backups/patch220_identity_vault_drift_auto_confirm_before/20260523_195332_UTC",
+    "drift_js": "/home/nic/identity-vault/utils/drift.js",
+    "identity_vault_root": "/home/nic/identity-vault"
+  },
+  "timestamp": "20260523_195332_UTC",
+  "verdict": "PASS"
+}

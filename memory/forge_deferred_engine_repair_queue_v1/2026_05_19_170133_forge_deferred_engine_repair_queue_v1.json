@@ -1,0 +1,642 @@
+{
+  "active_patch": "Patch 145 \u2014 Deferred Engine Repair Queue",
+  "authority": {
+    "engine_file_write_authority": false,
+    "forge_memory_write_only": true,
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "read_only": true,
+    "shell_execution_authority": false
+  },
+  "created_at": "2026-05-19T17:01:33",
+  "next_commands": [
+    "forge-build-sequence",
+    "forge-status-api-build",
+    "forge-dashboard-build",
+    "Install Patch 146 when ready"
+  ],
+  "next_patch": "Patch 146 \u2014 Build Phase Gate Checker",
+  "next_repair_target": {
+    "engine_base": "stack_linker_breather",
+    "note": "Visible repair target only. Main build sequence still advances to Patch 146 before reopening repair work.",
+    "queue_status": "REPAIR_EVIDENCE_PRESERVED_SANDBOX_REQUIRED",
+    "safe_next_action": "Use deferred repair queue later to reopen the preserved candidate, run dependency probe, sandbox, safe tests, then human approval before any live write."
+  },
+  "plain_english": "Deferred engines are now tracked in a repair queue. This does not repair them or promote them; it keeps their evidence visible so the main Forge roadmap can continue without losing the deferred work.",
+  "queue": [
+    {
+      "blockers": [],
+      "decision_confidence": "medium",
+      "disposition_bucket": "runtime_wrapper_or_stack_deferred",
+      "engine_base": "stack_linker_breather",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/engines/stack_linker_breather",
+        "preserved revision candidate status: GENERIC_REVISION_CANDIDATE_READY_NO_LIVE_WRITE",
+        "preserved revision candidate sha: 4ed82164b5f29c0c7f1163829a60a35c8e91bcb721bf196256554f88c4f4f784",
+        "latest revision sandbox status: GENERIC_REVISION_SANDBOX_TESTS_PASS"
+      ],
+      "priority": 10,
+      "priority_reason": "known failed canonical test removed from lockfile; repair evidence exists",
+      "queue_status": "REPAIR_EVIDENCE_PRESERVED_SANDBOX_REQUIRED",
+      "recommended_keep_path": "aiweb/engines/stack_linker_breather",
+      "recommended_next_action": "Use deferred repair queue later to reopen the preserved candidate, run dependency probe, sandbox, safe tests, then human approval before any live write.",
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 2
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "medium",
+      "disposition_bucket": "runtime_wrapper_or_stack_deferred",
+      "engine_base": "agents_stack",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/runtime_wrappers/agents_stack"
+      ],
+      "priority": 30,
+      "priority_reason": "wrapper/stack dependency layer may affect runtime ordering",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/runtime_wrappers/agents_stack",
+      "recommended_next_action": "Map dependencies and test wrapper startup before any future promotion.",
+      "required_human_checks": [
+        "verify_active_primary_supersedes_frozen_candidate",
+        "compare_multiple_active_variants"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 4
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "medium",
+      "disposition_bucket": "runtime_wrapper_or_stack_deferred",
+      "engine_base": "contribution_ledger_stack",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/runtime_wrappers/contribution_ledger_stack"
+      ],
+      "priority": 30,
+      "priority_reason": "wrapper/stack dependency layer may affect runtime ordering",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/runtime_wrappers/contribution_ledger_stack",
+      "recommended_next_action": "Map dependencies and test wrapper startup before any future promotion.",
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 4
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "medium",
+      "disposition_bucket": "runtime_wrapper_or_stack_deferred",
+      "engine_base": "control_stack",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/runtime_wrappers/control_stack"
+      ],
+      "priority": 30,
+      "priority_reason": "wrapper/stack dependency layer may affect runtime ordering",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/runtime_wrappers/control_stack",
+      "recommended_next_action": "Map dependencies and test wrapper startup before any future promotion.",
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 2
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "medium",
+      "disposition_bucket": "runtime_wrapper_or_stack_deferred",
+      "engine_base": "core_stack_breather",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/engines/core_stack_breather"
+      ],
+      "priority": 30,
+      "priority_reason": "wrapper/stack dependency layer may affect runtime ordering",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/engines/core_stack_breather",
+      "recommended_next_action": "Map dependencies and test wrapper startup before any future promotion.",
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 4
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "medium",
+      "disposition_bucket": "runtime_wrapper_or_stack_deferred",
+      "engine_base": "core_system_stack",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/runtime_wrappers/core_system_stack"
+      ],
+      "priority": 30,
+      "priority_reason": "wrapper/stack dependency layer may affect runtime ordering",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/runtime_wrappers/core_system_stack",
+      "recommended_next_action": "Map dependencies and test wrapper startup before any future promotion.",
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 4
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "medium",
+      "disposition_bucket": "runtime_wrapper_or_stack_deferred",
+      "engine_base": "memory_stack_stack",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/runtime_wrappers/memory_stack_stack"
+      ],
+      "priority": 30,
+      "priority_reason": "wrapper/stack dependency layer may affect runtime ordering",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/runtime_wrappers/memory_stack_stack",
+      "recommended_next_action": "Map dependencies and test wrapper startup before any future promotion.",
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 2
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "medium",
+      "disposition_bucket": "authority_or_external_control_deferred",
+      "engine_base": "admin_override_console",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/engines/admin_override_console"
+      ],
+      "priority": 35,
+      "priority_reason": "authority/control surface requires stricter boundary review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/engines/admin_override_console",
+      "recommended_next_action": "Require stricter permission, trust-guard, and input-boundary review before future promotion.",
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 4
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "medium",
+      "disposition_bucket": "authority_or_external_control_deferred",
+      "engine_base": "external_feed_listener",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/engines/external_feed_listener"
+      ],
+      "priority": 35,
+      "priority_reason": "authority/control surface requires stricter boundary review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/engines/external_feed_listener",
+      "recommended_next_action": "Require stricter permission, trust-guard, and input-boundary review before future promotion.",
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 4
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "medium",
+      "disposition_bucket": "authority_or_external_control_deferred",
+      "engine_base": "goal_injection_engine",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/engines/goal_injection_engine"
+      ],
+      "priority": 35,
+      "priority_reason": "authority/control surface requires stricter boundary review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/engines/goal_injection_engine",
+      "recommended_next_action": "Require stricter permission, trust-guard, and input-boundary review before future promotion.",
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 6
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "medium_high",
+      "disposition_bucket": "general_deferred_review",
+      "engine_base": "aiweb_os_engine",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/engines/aiweb_os_engine"
+      ],
+      "priority": 50,
+      "priority_reason": "normal deferred review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/engines/aiweb_os_engine",
+      "recommended_next_action": "Keep for later evidence review; do not delete or quarantine automatically.",
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 6
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "medium",
+      "disposition_bucket": "memory_archive_or_state_deferred",
+      "engine_base": "dream_state_engine",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/engines/dream_state_engine"
+      ],
+      "priority": 50,
+      "priority_reason": "normal deferred review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/engines/dream_state_engine",
+      "recommended_next_action": "Run persistence, corruption, backup, and recovery tests before future promotion.",
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 8
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "medium",
+      "disposition_bucket": "memory_archive_or_state_deferred",
+      "engine_base": "fluid_memory_engine",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/engines/fluid_memory_engine"
+      ],
+      "priority": 50,
+      "priority_reason": "normal deferred review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/engines/fluid_memory_engine",
+      "recommended_next_action": "Run persistence, corruption, backup, and recovery tests before future promotion.",
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 6
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "low",
+      "disposition_bucket": "agent_identity_deferred",
+      "engine_base": "gilligan",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: agents/gilligan"
+      ],
+      "priority": 50,
+      "priority_reason": "normal deferred review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "agents/gilligan",
+      "recommended_next_action": "Review agent role, memory boundaries, safety scope, and runtime responsibilities before promotion.",
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 4
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "medium",
+      "disposition_bucket": "general_deferred_review",
+      "engine_base": "gilligan_drift_correction_upgrade",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/engines/gilligan_drift_correction_upgrade"
+      ],
+      "priority": 50,
+      "priority_reason": "normal deferred review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/engines/gilligan_drift_correction_upgrade",
+      "recommended_next_action": "Keep for later evidence review; do not delete or quarantine automatically.",
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 4
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "medium",
+      "disposition_bucket": "general_deferred_review",
+      "engine_base": "naming_engine",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/engines/naming_engine"
+      ],
+      "priority": 50,
+      "priority_reason": "normal deferred review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/engines/naming_engine",
+      "recommended_next_action": "Keep for later evidence review; do not delete or quarantine automatically.",
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 6
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "low",
+      "disposition_bucket": "agent_identity_deferred",
+      "engine_base": "neo",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: agents/neo"
+      ],
+      "priority": 50,
+      "priority_reason": "normal deferred review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "agents/neo",
+      "recommended_next_action": "Review agent role, memory boundaries, safety scope, and runtime responsibilities before promotion.",
+      "required_human_checks": [
+        "compare_multiple_active_variants"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 4
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "medium",
+      "disposition_bucket": "agent_identity_deferred",
+      "engine_base": "neo_engine",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/engines/neo_engine"
+      ],
+      "priority": 50,
+      "priority_reason": "normal deferred review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/engines/neo_engine",
+      "recommended_next_action": "Review agent role, memory boundaries, safety scope, and runtime responsibilities before promotion.",
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 10
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "manual",
+      "disposition_bucket": "deferred_hold_family",
+      "engine_base": "aiweb_os",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/runtime_wrappers/aiweb_os_v1"
+      ],
+      "priority": 80,
+      "priority_reason": "hold family; keep archived until explicit human review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/runtime_wrappers/aiweb_os_v1",
+      "recommended_next_action": "Keep as held evidence. Compare family variants before any future promotion.",
+      "required_human_checks": [
+        "test_only_candidate_requires_human_review"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 2
+    },
+    {
+      "blockers": [
+        "not DEFERRED; treat as excluded hold/approved hold rather than repair queue target"
+      ],
+      "decision_confidence": "manual",
+      "disposition_bucket": "approved_hold_family_excluded",
+      "engine_base": "cold_archive_engine",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/engines/cold_archive_engine_frozen_v1"
+      ],
+      "priority": 80,
+      "priority_reason": "hold family; keep archived until explicit human review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/engines/cold_archive_engine_frozen_v1",
+      "recommended_next_action": "Manual architect review before future lockfile eligibility; do not delete or quarantine automatically.",
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "frozen_candidate_requires_human_review",
+        "archive_or_backup_candidate_requires_human_review",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "review_status": "APPROVED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 10
+    },
+    {
+      "blockers": [
+        "not DEFERRED; treat as excluded hold/approved hold rather than repair queue target"
+      ],
+      "decision_confidence": "manual",
+      "disposition_bucket": "approved_hold_family_excluded",
+      "engine_base": "drift_arbitration_engine",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/engines/drift_arbitration_engine"
+      ],
+      "priority": 80,
+      "priority_reason": "hold family; keep archived until explicit human review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/engines/drift_arbitration_engine",
+      "recommended_next_action": "Manual architect review before future lockfile eligibility; do not delete or quarantine automatically.",
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "frozen_candidate_requires_human_review",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "review_status": "APPROVED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 11
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "manual",
+      "disposition_bucket": "deferred_hold_family",
+      "engine_base": "memory_stack_engine",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/engines/memory_stack_engine"
+      ],
+      "priority": 80,
+      "priority_reason": "hold family; keep archived until explicit human review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/engines/memory_stack_engine",
+      "recommended_next_action": "Keep as held evidence. Compare family variants before any future promotion.",
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "frozen_candidate_requires_human_review",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 6
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "manual",
+      "disposition_bucket": "deferred_hold_family",
+      "engine_base": "memory_stack_engine_breathing",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: aiweb/engines/memory_stack_engine_breathing_v1"
+      ],
+      "priority": 80,
+      "priority_reason": "hold family; keep archived until explicit human review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "aiweb/engines/memory_stack_engine_breathing_v1",
+      "recommended_next_action": "Keep as held evidence. Compare family variants before any future promotion.",
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 7
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "manual",
+      "disposition_bucket": "deferred_hold_family",
+      "engine_base": "protoforge_dashboard_runtime",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: runtime_wrappers/protoforge_dashboard_runtime_v2.0"
+      ],
+      "priority": 80,
+      "priority_reason": "hold family; keep archived until explicit human review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "runtime_wrappers/protoforge_dashboard_runtime_v2.0",
+      "recommended_next_action": "Keep as held evidence. Compare family variants before any future promotion.",
+      "required_human_checks": [
+        "architect_review_required_before_lockfile",
+        "compare_multiple_active_variants"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 2
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "manual",
+      "disposition_bucket": "deferred_hold_family",
+      "engine_base": "saved_ideas",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: projects/recursive_lmm_grok1/engines/saved_ideas"
+      ],
+      "priority": 80,
+      "priority_reason": "hold family; keep archived until explicit human review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "projects/recursive_lmm_grok1/engines/saved_ideas",
+      "recommended_next_action": "Keep as held evidence. Compare family variants before any future promotion.",
+      "required_human_checks": [
+        "archive_or_backup_candidate_requires_human_review"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 2
+    },
+    {
+      "blockers": [],
+      "decision_confidence": "manual",
+      "disposition_bucket": "deferred_hold_family",
+      "engine_base": "step_counter",
+      "evidence_notes": [
+        "engine disposition review note present",
+        "recommended path: projects/recursive_lmm_grok1/engines/step_counter_frozen_v1"
+      ],
+      "priority": 80,
+      "priority_reason": "hold family; keep archived until explicit human review",
+      "queue_status": "NEEDS_DEPENDENCY_AND_ROLE_REVIEW",
+      "recommended_keep_path": "projects/recursive_lmm_grok1/engines/step_counter_frozen_v1",
+      "recommended_next_action": "Keep as held evidence. Compare family variants before any future promotion.",
+      "required_human_checks": [
+        "frozen_candidate_requires_human_review"
+      ],
+      "review_status": "DEFERRED",
+      "safe_current_action": "queue/report only; no engine write, no promotion, no deletion, no quarantine",
+      "variant_count": 2
+    }
+  ],
+  "queue_total": 26,
+  "repair_blocked_count": 2,
+  "repair_ready_count": 1,
+  "report_type": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_V1",
+  "schema_version": "forge_deferred_engine_repair_queue_v1_patch145",
+  "source_paths": {
+    "canonical_lockfile": "/home/nic/forge/memory/code_library_v1/manifests/engine_canonical_lockfile_v1.json",
+    "canonical_test_run": "/home/nic/forge/memory/canonical_engine_test_runs_v1/latest_canonical_engine_test_run_report_v1.json",
+    "engine_disposition": "/home/nic/forge/memory/engine_disposition_v1/latest_engine_disposition_report_v1.json",
+    "patch_impact": "/home/nic/forge/memory/patch_impact_v1/latest_patch_impact_map_v1.json",
+    "relationship_map": "/home/nic/forge/memory/canonical_engine_relationships_v1/latest_canonical_engine_relationship_map_v1.json",
+    "revision_candidate": "/home/nic/forge/memory/generic_revision_loop_v1/latest_generic_revision_loop_candidate_v1.json",
+    "revision_sandbox_run": "/home/nic/forge/memory/generic_revision_sandboxes_v1/latest_generic_revision_sandbox_run_v1.json"
+  },
+  "source_sha256": {
+    "canonical_lockfile": "379b6ef9852ce288b2b3551ba89aa809adac495312e62602edf5ac6fb9a3b604",
+    "canonical_test_run": "93c49433a79df338cd824244911a0f47299f20b7fe77a25492953bf451dad489",
+    "engine_disposition": "e3124be8354e52d9c372b271007fffecdc0bccd838a38d2aef6475e928317586",
+    "patch_impact": "add11d9881240e21983cc2e80238e81c9c6b4865fdafb2ecf0966dac79c31cbd",
+    "relationship_map": "4c13c40c50dfa91e5fb8f0455f953b7204231f39c223aafdfebf897a372ea9cc",
+    "revision_candidate": "239d3b6b75a17c2ea2aab70715a8d3c59604103f596cb40007e8cc42fb432bef",
+    "revision_sandbox_run": "a66bd64f276da06eaea687f19e3607dd98225bc392d1f8d45633924f30c2581c"
+  },
+  "status": "FORGE_DEFERRED_ENGINE_REPAIR_QUEUE_READY",
+  "verified_state": {
+    "canonical_excluded": 26,
+    "canonical_included": 54,
+    "disposition_deferred_total": 24,
+    "disposition_excluded_total": 26,
+    "expected_commands": 520,
+    "latest_test_fail": 0,
+    "latest_test_pass": 67,
+    "latest_test_status": "CANONICAL_TEST_RUN_COMPLETED_ALL_PASS",
+    "ledger_approved": 56,
+    "ledger_deferred": 24,
+    "ledger_pending": 0,
+    "patch_impact_high_risk": 0,
+    "patch_impact_matches": 54,
+    "patch_impact_test_issues": 0,
+    "previous_build_sequence_next_patch": "Patch 145 \u2014 Deferred Engine Repair Queue",
+    "previous_build_sequence_status": "FORGE_BUILD_SEQUENCE_READY",
+    "relationship_engines": null,
+    "tools": 444
+  }
+}

@@ -1,0 +1,122 @@
+You are Forge's local LLM doing a focused revision-loop review.
+
+The sandbox is isolated. Live files are NOT being edited. Your job is to decide the next minimal sandbox-only candidate change.
+
+STRICT OUTPUT FORMAT:
+RECOMMENDATION: APPROVE_EXISTING_CANDIDATE or REVISE_CANDIDATE or REVISE_SANDBOX_DEPENDENCY_PLAN
+CANDIDATE_ACTION: USE_CLASS_BREATHER_WRAPPER or NONE
+IMPORT_MODULE: module path if changing an import, else NONE
+MISSING_SYMBOL: missing imported symbol if any, else NONE
+CLASS_NAME: replacement class name if any, else NONE
+METHOD_NAME: replacement method if any, else NONE
+ALIAS_NAME: alias/function name the target file expects, else NONE
+RATIONALE: one or two sentences
+TESTS_TO_RERUN: exact test path or command
+
+Current target: stack_linker_breather
+Sandbox status: GENERIC_REVISION_SANDBOX_TESTS_ISSUES
+LLM prior sandbox recommendation: REVISE_SANDBOX_DEPENDENCY_PLAN
+
+FAILING TEST STDERR:
+Traceback (most recent call last):
+  File "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/stack_linker_breather/test_stack_linker_core.py", line 3, in <module>
+    from stack_linker_breather.stack_linker_core import unified_breathe_cycle
+  File "/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/stack_linker_breather/stack_linker_core.py", line 6, in <module>
+    from recursive_field_breather.field_breather import breathe_phase as field_breathe
+ImportError: cannot import name 'breathe_phase' from 'recursive_field_breather.field_breather' (/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/recursive_field_breather/field_breather.py)
+
+
+CURRENT SANDBOX CANDIDATE FILE:
+/home/nic/forge/memory/generic_revision_candidates_v1/2026_05_17_125228_revision_candidate_2026_05_17_102321_candidate_stack_linker_core.py
+```python
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
+
+from core_breather.core_breather import CoreBreather
+from recursive_field_breather.field_breather import breathe_phase as field_breathe
+import time
+import json
+
+_core_breather_instance = CoreBreather()
+def core_breathe(phase=None):
+    return _core_breather_instance.breathe()
+
+def unified_breathe_cycle():
+    # simple combined breathing cycle
+    for phase in range(1, 10):  # Full 1-9 breathing
+        core_breathe(phase)
+        field_breathe(phase)
+        event = {
+            "timestamp": time.time(),
+            "phase": phase,
+            "stack": "core_and_field",
+            "status": "",
+        }
+
+```
+
+DEPENDENCY FILE RELATED TO FAILURE:
+/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/recursive_field_breather/field_breather.py
+```python
+# field_breather.py
+
+import json
+import time
+from datetime import datetime
+
+class FieldBreather:
+    def __init__(self):
+        self.phase = 1
+        self.loop_count = 0
+        self.trace_file = "field_trace.jsonl"
+
+    def breathe(self):
+        timestamp = datetime.utcnow().isoformat() + "Z"
+        trace_entry = {
+            "phase": self.phase,
+            "timestamp": timestamp,
+            "loop": self.loop_count,
+            "field_amplitude": round(self.phase * 0.111, 3)  # Symbolic recursive growth
+        }
+
+        with open(self.trace_file, "a") as f:
+            f.write(json.dumps(trace_entry) + "\n")
+
+        print(f"Field Breath Phase: {self.phase} | Loop: {self.loop_count} | Amplitude: {trace_entry['field_amplitude']}")
+
+        self.phase += 1
+        if self.phase > 9:
+            self.phase = 1
+            self.loop_count += 1
+
+```
+
+TEST FILE:
+/home/nic/forge/memory/generic_revision_sandboxes_v1/sandbox_revision_2026_05_17_130153_stack_linker_breather/sandbox_packages/stack_linker_breather/test_stack_linker_core.py
+```python
+# test_stack_linker_core.py
+
+from stack_linker_breather.stack_linker_core import unified_breathe_cycle
+
+if __name__ == "__main__":
+    unified_breathe_cycle()
+
+
+def test_unified_breathe_cycle():
+    print("✅ Unified Breather Test Starting...")
+    try:
+        unified_breathe_cycle()
+    except KeyboardInterrupt:
+        print("✅ Unified Breather Test Completed (Manual Stop)")
+
+if __name__ == "__main__":
+    test_unified_breathe_cycle()
+
+
+```
+
+Decision rule:
+- If the candidate imports a missing function but the dependency exposes a class with a breathe() method, choose REVISE_CANDIDATE and USE_CLASS_BREATHER_WRAPPER.
+- Do not propose live writes.
+- Do not discuss Chroma, ingestion, embeddings, or unrelated corpus data.

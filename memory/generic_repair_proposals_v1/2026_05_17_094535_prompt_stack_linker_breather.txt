@@ -1,0 +1,144 @@
+You are Forge's local code repair proposal LLM.
+CRITICAL: Respond with JSON only. No markdown. No prose introduction. No hidden thinking transcript.
+You are NOT applying a patch. You are proposing the smallest safe repair.
+Focus on the direct Python failure, stderr, and code snippets below.
+Do NOT explain Chroma, ingestion receipts, corpus chunks, or unrelated metadata unless it directly affects the failing code.
+Use only the evidence below. Do not invent files, functions, source authority, or test results.
+
+Return exactly this JSON object shape:
+{
+  "diagnosis": "",
+  "root_cause": "",
+  "minimal_repair_strategy": "",
+  "proposed_file_changes": [
+    {"path": "", "exact_region": "", "reason": "", "proposed_edit_summary": ""}
+  ],
+  "files_to_inspect_before_apply": [],
+  "tests_to_run_after_change": [],
+  "rollback_plan": [],
+  "risk_level": "LOW|MEDIUM|HIGH",
+  "uncertainties": [],
+  "evidence_used": [],
+  "human_approval_questions": [],
+  "forbidden_actions": []
+}
+
+FOCUSED_EVIDENCE:
+{
+  "code_context_snippets": [
+    {
+      "line_end": 15,
+      "line_start": 1,
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py",
+      "sha256": "2297b612ec1a6c6edb63a9959dea57d7b22d9d35472f9741bd671b261b0b0951",
+      "text": "0001: # test_stack_linker_core.py\n0002: \n0003: from stack_linker_breather.stack_linker_core import unified_breathe_cycle\n0004: \n0005: if __name__ == \"__main__\":\n0006:     unified_breathe_cycle()\n0007: \n0008: \n0009: def test_unified_breathe_cycle():\n0010:     print(\"✅ Unified Breather Test Starting...\")\n0011:     try:\n0012:         unified_breathe_cycle()\n0013:     except KeyboardInterrupt:\n0014:         print(\"✅ Unified Breather Test Completed (Manual Stop)\")\n0015: "
+    },
+    {
+      "line_end": 19,
+      "line_start": 7,
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py",
+      "sha256": "f34d77a31cdd9a5cc551aa922626eec469c665c2f85e7cd4d06fe6866721736f",
+      "text": "0007: import time\n0008: import json\n0009: \n0010: def unified_breathe_cycle():\n0011:     # simple combined breathing cycle\n0012:     for phase in range(1, 10):  # Full 1-9 breathing\n0013:         core_breathe(phase)\n0014:         field_breathe(phase)\n0015:         event = {\n0016:             \"timestamp\": time.time(),\n0017:             \"phase\": phase,\n0018:             \"stack\": \"core_and_field\",\n0019:             \"status\": \""
+    }
+  ],
+  "direct_failure_stderr": "Traceback (most recent call last):\n  File \"/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py\", line 3, in <module>\n    from stack_linker_breather.stack_linker_core import unified_breathe_cycle\n  File \"/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py\", line 19\n    \"status\": \"\n              ^\nSyntaxError: unterminated string literal (detected at line 19)\n",
+  "error_locations": [
+    {
+      "line": 3,
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+    },
+    {
+      "line": 19,
+      "path": "/home/nic/aiweb/engines/stack_linker_breather/stack_linker_core.py"
+    }
+  ],
+  "hard_constraints": {
+    "do_not_broaden_scope": true,
+    "do_not_claim_applied": true,
+    "do_not_discuss_chroma_or_ingestion_unless_directly_relevant_to_the_code_failure": true,
+    "do_not_edit_files": true,
+    "must_include_tests_to_rerun": true,
+    "must_include_uncertainties": true,
+    "must_name_exact_file_and_line_region": true,
+    "prefer_smallest_syntax_or_import_fix": true
+  },
+  "impact_summary": {
+    "latest_failures": [
+      {
+        "problem": null,
+        "status": "FAIL",
+        "stderr_tail": "Traceback (most recent call last):\n  File \"/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py\", line 3, in <module>\n    from stack_linker_breather.stack_linker_core import unified_breathe_cycle\nModuleNotFoundError: No module named 'stack_linker_breather'\n",
+        "test_path": "/home/nic/aiweb/engines/stack_linker_breather/test_stack_linker_core.py"
+      }
+    ],
+    "related_files": [
+      {
+        "canonical_path": "aiweb/engines/recursive_field_breather",
+        "confidence": "strong",
+        "engine_base": "recursive_field_breather",
+        "reason": "python_import_reference"
+      },
+      {
+        "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+        "confidence": "medium",
+        "engine_base": "protoforge",
+        "reason": "source_text_reference"
+      }
+    ],
+    "risk_level": "MEDIUM",
+    "risk_score": 65,
+    "rollback_needs": [
+      "snapshot_or_file_backup_before_live_patch",
+      "current_sha_readback_before_apply",
+      "post_write_disk_verification"
+    ],
+    "test_status": "ISSUES"
+  },
+  "inferred_issue": "PYTHON_SYNTAX_ERROR",
+  "relationship_summary": {
+    "neighbors": [
+      {
+        "canonical_path": "aiweb/engines/recursive_field_breather",
+        "confidence": "strong",
+        "engine_base": "recursive_field_breather",
+        "reason": "python_import_reference"
+      },
+      {
+        "canonical_path": "aiweb/runtime_wrappers/protoforge_v1.04_db_enabled",
+        "confidence": "medium",
+        "engine_base": "protoforge",
+        "reason": "source_text_reference"
+      }
+    ],
+    "python_files": [
+      "stack_linker_core.py",
+      "test_stack_linker_core.py"
+    ],
+    "risk_level": "MEDIUM",
+    "test_status": "ISSUES"
+  },
+  "source_authority_summary": {
+    "candidate_source_document_count": 6,
+    "candidate_source_samples": [
+      {
+        "authority": null,
+        "title": null
+      },
+      {
+        "authority": null,
+        "title": null
+      },
+      {
+        "authority": null,
+        "title": null
+      }
+    ],
+    "required_source_domains": [
+      "MEMORY_STATE_AND_SPC_AUTHORITY",
+      "FBSC_RPMC_SYMBOLIC_RUNTIME"
+    ],
+    "source_authority_status": "CANDIDATE_DOCUMENTS_FOUND_REQUIRES_HUMAN_CONFIRMATION"
+  },
+  "target": "stack_linker_breather",
+  "task": "Produce a minimal repair proposal for the probed Python failure. Do not apply it."
+}

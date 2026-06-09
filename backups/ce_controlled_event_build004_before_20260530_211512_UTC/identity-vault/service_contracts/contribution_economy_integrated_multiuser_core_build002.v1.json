@@ -1,0 +1,30 @@
+{
+  "schema_version": "ce_integrated_multiuser_identity_vault_service_contract_v1_build002",
+  "build_id": "CE-INTEGRATED-MULTIUSER-CORE-BUILD-002",
+  "service": "Identity Vault Contributor Authority",
+  "controlled_by": "Forge Contribution Economy Integrated Core",
+  "canonical_database_relative_path": "data/identity_vault.db",
+  "schema_extension_relative_path": "schema_extensions/contribution_economy_multiuser_authority_v2.sql",
+  "schema_extension_sha256": "339b6f4d29420c66b667ea80c7aa4ac4a104f2b6d7fa0f69a911fee58b26f5d9",
+  "identity_authority_model": "opaque_principal_reference_with_append_only_consent_and_status_events",
+  "existing_build001_nic_binding_preserved": true,
+  "new_principal_registration_requires_existing_identity_vault_user_profile": true,
+  "new_live_fake_user_enrollment_permitted": false,
+  "raw_private_identity_export_allowed": false,
+  "live_economic_consent_activation_allowed": false,
+  "live_ct_minting_activation_allowed": false,
+  "live_public_display_consent_activation_allowed": false,
+  "public_api_route_exposed": false,
+  "consent_scope_allowed_during_build002": [
+    "local_identity_storage_authorized",
+    "internal_attribution_reference_authorized",
+    "capsule_candidate_reference_authorized"
+  ],
+  "consent_scope_blocked_during_build002": [
+    "public_display_authorized",
+    "portability_authorized",
+    "economic_processing_authorized",
+    "ct_minting_authorized",
+    "investment_processing_authorized"
+  ]
+}

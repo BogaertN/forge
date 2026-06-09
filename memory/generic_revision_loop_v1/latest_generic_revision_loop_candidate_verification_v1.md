@@ -1,0 +1,32 @@
+# GENERIC_REVISION_CANDIDATE_VERIFICATION_V1
+
+Status: GENERIC_REVISION_CANDIDATE_VERIFIED_READY_FOR_SANDBOX
+
+- target: stack_linker_breather
+- recommended_next_patch: Patch 141 — Generic Revision Sandbox Rerun
+
+```json
+{
+  "authority": {
+    "patch_apply_authority": false,
+    "project_file_write_authority": false,
+    "writes_forge_memory_only": true
+  },
+  "candidate_compile": {
+    "py_compile_status": "PASS",
+    "returncode": 0,
+    "shell": false,
+    "stderr": "",
+    "stdout": ""
+  },
+  "candidate_file_path": "/home/nic/forge/memory/generic_revision_candidates_v1/2026_05_18_170530_revision_loop_candidate_2026_05_17_125228_revision_candidate_2026_05_17_102321_candidate_stack_linker_core.py",
+  "created_at": "2026-05-18T17:05:30",
+  "diff_path": "/home/nic/forge/memory/generic_revision_candidates_v1/2026_05_18_170530_revision_loop_candidate.diff",
+  "problems": [],
+  "recommended_next_patch": "Patch 141 \u2014 Generic Revision Sandbox Rerun",
+  "report_type": "GENERIC_REVISION_CANDIDATE_VERIFICATION_V1",
+  "schema_version": "generic_revision_candidate_verification_v1_patch142",
+  "status": "GENERIC_REVISION_CANDIDATE_VERIFIED_READY_FOR_SANDBOX",
+  "target": "stack_linker_breather"
+}
+```

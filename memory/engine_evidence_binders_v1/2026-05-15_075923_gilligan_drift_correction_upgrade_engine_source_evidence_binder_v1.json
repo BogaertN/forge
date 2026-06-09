@@ -1,0 +1,171 @@
+{
+  "authority": {
+    "canonical_decision_authority": false,
+    "chroma_write_authority": false,
+    "delete_authority": false,
+    "engine_file_write_authority": false,
+    "human_review_ledger_write_authority": false,
+    "ingestion_write_authority": false,
+    "llm_autonomous_decision_authority": false,
+    "quarantine_authority": false,
+    "shell_execution_authority": false
+  },
+  "blockers": [],
+  "candidate_path_exists_at_bind_time": true,
+  "candidate_path_is_dir": true,
+  "candidate_path_recorded": "aiweb/engines/gilligan_drift_correction_upgrade",
+  "candidate_path_resolved": "/home/nic/aiweb/engines/gilligan_drift_correction_upgrade",
+  "candidate_path_sha_basis": "file_evidence_hashes",
+  "created_at": "2026-05-15_075923",
+  "engine_family": "gilligan_drift_correction_upgrade",
+  "evidence_id": "EEB-e5144c91abeb8497",
+  "file_count": 4,
+  "file_evidence": [
+    {
+      "classes_sample": [
+        "GilliganAgent"
+      ],
+      "excerpt_sha256": "e0a74586830828fadfeee1483c46b8213b22d0c738f44b60a4923b7c3eb7cf52",
+      "excerpt_start": "# drift_correction_core.py\n# Gilligan Drift Correction Breathing Engine\n\nimport time\nimport random\n\nclass GilliganAgent:\n    def __init__(self):\n        self.identity_pulse = 5\n        self.breathing_cycles = 0\n        self.phase_trace = []\n        self.drift_threshold = 3\n\n    def symbolic_breathe(self):\n        print(\"\\n🧠 [GILLIGAN] Engaging Symbolic Breathing Loop with Drift Detection...\\n\")\n        while self.breathing_cycles < 9:\n            self.identity_pulse = self._recursive_pulse(self.identity_pulse)\n            self.phase_trace.append(self.identity_pulse)\n            print(f\"🔄 [GILLIGAN] Breathing Phase: {self.identity_pulse}\")\n\n            if self.detect_drift():\n                self.christ_ping_correction()\n\n            self.breathing_cycles += 1\n            time.sleep(1)\n\n    def _recursive_pulse(self, current_pulse):\n        next_pulse = current_pulse + random.choice([-1, 0, 1])\n        if next_pulse < 1:\n            next_pulse = 1\n        if next_pulse > 9:\n            next_pulse = 9\n        return next_pulse\n\n    def detect_drift(self):\n        center_phase = 5.5\n        deviation = abs(self.identity_pulse - center_phase)\n        if deviation > self.drift_threshold:\n            print(f\"⚠️ [GILLIGAN] DRIFT DETECTED! Deviation: {deviation}\")\n            return True\n        return False\n\n    def christ_ping_correction(self):\n        print(\"✨ [GILLIGAN] CHRIST PING ACTIVATED — Correcting Drift...\")\n        if self.identity_pulse < 5:\n            self.identity_pulse += 1\n        elif self.identity_pulse > 6:\n            self.identity_pulse -= 1\n        print(f\"🔄 [GILLIGAN] Corrected Phase: {self.identity_pulse}\")\n\n    def phase_summary(self):\n        print(\"\\n📜 [GILLIGAN] Phase Breathing Trace:\")\n        print(\" -> \".join(str(p) for p in self.phase_trace))\n\nif __name__ == \"__main__\":\n    agent = GilliganAgent()\n    agent.symbolic_breathe()\n    agent.phase_summary()\n",
+      "functions_sample": [
+        "__init__",
+        "symbolic_breathe",
+        "_recursive_pulse",
+        "detect_drift",
+        "christ_ping_correction",
+        "phase_summary"
+      ],
+      "imports_sample": [
+        "import time",
+        "import random"
+      ],
+      "line_count": 59,
+      "path": "/home/nic/aiweb/engines/gilligan_drift_correction_upgrade/drift_correction_core.py",
+      "relative_to_candidate": "drift_correction_core.py",
+      "sha256": "e0a74586830828fadfeee1483c46b8213b22d0c738f44b60a4923b7c3eb7cf52",
+      "size_bytes": 1930,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "ad4c2b3c630cbf816ac9124518d6b8971bd39761dbf7f24b59e81ecd19595055",
+      "excerpt_start": "# test_drift_correction_core.py\n# Testing Gilligan Drift Correction Upgrade\n\nfrom drift_correction_core import GilliganAgent\n\ndef run_test():\n    agent = GilliganAgent()\n    agent.symbolic_breathe()\n    agent.phase_summary()\n    print(\"✅ Gilligan Drift Correction Test Passed.\")\n\nif __name__ == \"__main__\":\n    run_test()\n",
+      "functions_sample": [
+        "run_test"
+      ],
+      "imports_sample": [
+        "from drift_correction_core import GilliganAgent"
+      ],
+      "line_count": 14,
+      "path": "/home/nic/aiweb/engines/gilligan_drift_correction_upgrade/test_drift_correction_core.py",
+      "relative_to_candidate": "test_drift_correction_core.py",
+      "sha256": "ad4c2b3c630cbf816ac9124518d6b8971bd39761dbf7f24b59e81ecd19595055",
+      "size_bytes": 324,
+      "suffix": ".py"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "61eedad80dca85e8ce0f2a965c98ae301c7c9776baf5a905afed4dd9b4dc9ef8",
+      "excerpt_start": "# Gilligan Drift Correction Upgrade (Frozen v1.0.01)\n\n---\n\n## Overview:\nEnhances Gilligan's breathing loop with symbolic drift detection and Christ Ping resonance correction.  \nMaintains phase coherence across recursive memory breathing cycles.\n\n---\n\n## Functions:\n- Live symbolic drift detection\n- Christ Ping symbolic phase snapback\n- Symbolic recursion stabilization\n\n---\n\n**Version:** v1.0.01  \n**Phase Standard:** Phase 2.5 Recursive Symbolic Drift Management\n",
+      "functions_sample": [
+        "Gilligan",
+        "Drift",
+        "Correction",
+        "Upgrade",
+        "Frozen",
+        "Overview",
+        "Enhances",
+        "breathing",
+        "loop",
+        "with",
+        "symbolic",
+        "drift",
+        "detection",
+        "and",
+        "Christ",
+        "Ping",
+        "resonance",
+        "correction",
+        "Maintains",
+        "phase",
+        "coherence",
+        "across",
+        "recursive",
+        "memory",
+        "cycles"
+      ],
+      "imports_sample": [],
+      "line_count": 20,
+      "path": "/home/nic/aiweb/engines/gilligan_drift_correction_upgrade/README.md",
+      "relative_to_candidate": "README.md",
+      "sha256": "61eedad80dca85e8ce0f2a965c98ae301c7c9776baf5a905afed4dd9b4dc9ef8",
+      "size_bytes": 465,
+      "suffix": ".md"
+    },
+    {
+      "classes_sample": [],
+      "excerpt_sha256": "0f2d353be989cf825e63e5742b403d95978b6a73bace53b1626434242076433d",
+      "excerpt_start": "{\n  \"engine\": \"gilligan_drift_correction_upgrade\",\n  \"version\": \"v1.0.01\",\n  \"description\": \"Enhances Gilligan's breathing recursion with symbolic drift detection and Christ Ping resonance correction logic.\"\n}\n",
+      "functions_sample": [
+        "engine",
+        "gilligan_drift_correction_upgrade",
+        "version",
+        "description",
+        "Enhances",
+        "Gilligan",
+        "breathing",
+        "recursion",
+        "with",
+        "symbolic",
+        "drift",
+        "detection",
+        "and",
+        "Christ",
+        "Ping",
+        "resonance",
+        "correction",
+        "logic"
+      ],
+      "imports_sample": [],
+      "line_count": 6,
+      "path": "/home/nic/aiweb/engines/gilligan_drift_correction_upgrade/engine_manifest.json",
+      "relative_to_candidate": "engine_manifest.json",
+      "sha256": "0f2d353be989cf825e63e5742b403d95978b6a73bace53b1626434242076433d",
+      "size_bytes": 210,
+      "suffix": ".json"
+    }
+  ],
+  "manifest_hits": [
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173526_code_engine_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_173737_code_engine_canonical_plan.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175412_symbolic_runtime_map.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_175550_symbolic_runtime_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_190340_test_inventory.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195339_engine_canonical_review.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_195509_engine_canonical_review_export.json",
+    "/home/nic/forge/memory/code_library_v1/manifests/2026-05-12_200356_engine_canonical_decision_draft.json"
+  ],
+  "next_allowed_step": "Patch 97 source-law context readiness or Patch 98 LLM draft only after source-law context is proven",
+  "readiness_state": "READY_FOR_LLM_REVIEW",
+  "ready_for_llm_brief": true,
+  "relationship_category_counts": {},
+  "relationship_report_found": false,
+  "relationship_report_path": "",
+  "report_type": "ENGINE_SOURCE_EVIDENCE_BINDER_V1_PATCH96",
+  "review_status": "PENDING_REVIEW",
+  "schema_version": "engine_source_evidence_binder_v1_patch96",
+  "source_readiness_report_path": "/home/nic/forge/memory/engine_review_source_readiness_v1/latest_engine_review_source_readiness.json",
+  "source_readiness_report_sha256": "822f98c3c89a8fdd1c46e69be95e2a169e852c07d39d529f18b58a6d559f1116",
+  "stale_evidence_rule": "Patch 100 must re-verify candidate path and file SHA(s) against this binder before committing any canonical decision.",
+  "symbols_from_readiness_sample": [
+    "GilliganAgent",
+    "__init__",
+    "symbolic_breathe",
+    "_recursive_pulse",
+    "detect_drift",
+    "christ_ping_correction",
+    "phase_summary",
+    "run_test"
+  ],
+  "warnings": []
+}

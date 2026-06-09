@@ -1,0 +1,19 @@
+{
+  "url": "https://example.com",
+  "title": "Example Domain",
+  "fetched_at": "20260524_185224",
+  "text_preview": "Example Domain Example Domain This domain is for use in documentation examples without needing permission. Avoid use in operations. Learn more",
+  "text_length": 142,
+  "source": "operator_console_page_capture",
+  "boundary": {
+    "ui_is_authority": false,
+    "forge_governs": true,
+    "executes_command": false,
+    "executes_shell": false,
+    "calls_llm": false,
+    "writes_files": true,
+    "write_scope": "forge_browser_memory_v1_only",
+    "identity_vault_write": false,
+    "rmc_live_memory_write": false
+  }
+}

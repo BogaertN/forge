@@ -1,0 +1,17 @@
+{
+  "folders": [
+    "/home/nic/forge/memory/llm_memory_v1",
+    "/home/nic/forge/memory/llm_memory_v1/conversations",
+    "/home/nic/forge/memory/llm_memory_v1/turns",
+    "/home/nic/forge/memory/llm_memory_v1/tool_requests",
+    "/home/nic/forge/memory/llm_memory_v1/recommendations",
+    "/home/nic/forge/memory/llm_memory_v1/decision_summaries",
+    "/home/nic/forge/memory/llm_memory_v1/context_snapshots",
+    "/home/nic/forge/memory/llm_memory_v1/corrections",
+    "/home/nic/forge/memory/llm_memory_v1/indexes",
+    "/home/nic/forge/memory/llm_memory_v1/exports"
+  ],
+  "last_init_session_id": "forge_2026_05_14_192941",
+  "schema_version": "llm_memory_v1_patch75",
+  "updated_at": "2026-05-14T19:30:17"
+}

@@ -1,0 +1,40 @@
+{
+  "build_id": "GENERAL-PIPELINE-MANIFEST-CONTRACT-V2-BUILD-GP-008",
+  "schema_version": "general_pipeline_manifest_contract_v2_build_gp008",
+  "depends_on": "GENERAL-PIPELINE-STRICT-TYPED-AST-SAFE-ADAPTER-BUILD-GP-007",
+  "purpose": "Require a separate hash-bound RMC trace envelope between sealed MEA state / compiled meaning and any Echo-gated answer delivery.",
+  "modified_runtime_files": [
+    "rmc_engine_v1/general_pipeline/__init__.py",
+    "rmc_engine_v1/general_pipeline/dependency_registry.py",
+    "rmc_engine_v1/general_pipeline/echo_approval.py",
+    "rmc_engine_v1/general_pipeline/meaning_and_renderer.py",
+    "rmc_engine_v1/general_pipeline/pipeline.py"
+  ],
+  "new_runtime_files": [
+    "rmc_engine_v1/general_pipeline/manifest_contract_v2.py",
+    "rmc_engine_v1/general_pipeline/gp008_manifest_contract_v2.py"
+  ],
+  "new_verification_files": [
+    "scripts/test_general_pipeline_manifest_contract_v2_build_gp008.py",
+    "scripts/general_pipeline_manifest_contract_v2_build_gp008_verify.py",
+    "scripts/README_general_pipeline_manifest_contract_v2_build_gp008.md",
+    "scripts/MEA_GENERAL_PIPELINE_BUILD_GP008_DELIVERY_MANIFEST.json"
+  ],
+  "boundaries": {
+    "modifies_mea_modules": false,
+    "adds_new_domain": false,
+    "promotes_external_dependency": false,
+    "third_party_components_installed": [],
+    "third_party_components_imported": [],
+    "adds_corpus_ingestion": false,
+    "adds_external_provenance_registry": false,
+    "writes_memory": false,
+    "writes_identity_vault": false,
+    "writes_contribution_economy": false,
+    "mints_ct": false,
+    "writes_ledgers": false,
+    "changes_routes": false,
+    "changes_ui": false,
+    "render_authority_bridge": "manifest_contract_v2_before_echo_gated_delivery"
+  }
+}

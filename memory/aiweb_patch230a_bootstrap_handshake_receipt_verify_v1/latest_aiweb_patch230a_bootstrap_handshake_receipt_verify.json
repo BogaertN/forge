@@ -1,0 +1,225 @@
+{
+  "boundary": {
+    "agent_identity_activation_performed": false,
+    "echoforge_creation_performed": false,
+    "forge_owned_verification_report_written": true,
+    "identity_vault_database_written": false,
+    "new_rmc_directories_created": false,
+    "protoforge2_execution_performed": false,
+    "rmc_memory_written": false,
+    "verification_only": true
+  },
+  "checks": [
+    {
+      "detail": "/home/nic/forge/memory/aiweb_patch230_bootstrap_handshake_dry_run_v2/latest_aiweb_patch230_bootstrap_handshake_dry_run_v2.json",
+      "name": "patch230_json_report_exists",
+      "ok": true
+    },
+    {
+      "detail": "parsed",
+      "name": "patch230_json_report_parses",
+      "ok": true
+    },
+    {
+      "detail": "/home/nic/forge/memory/aiweb_patch230_bootstrap_handshake_dry_run_v2/latest_aiweb_patch230_bootstrap_handshake_dry_run_v2.md",
+      "name": "patch230_markdown_report_exists",
+      "ok": true
+    },
+    {
+      "detail": "HANDSHAKE_DRY_RUN_PROFILE_FOUND_BUT_INACTIVE",
+      "name": "expected_inactive_gate_verdict",
+      "ok": true
+    },
+    {
+      "detail": "True",
+      "name": "patch230_report_ok_true",
+      "ok": true
+    },
+    {
+      "detail": "gilligan.local",
+      "name": "agent_is_gilligan_local",
+      "ok": true
+    },
+    {
+      "detail": "inactive_draft",
+      "name": "activation_state_inactive_draft",
+      "ok": true
+    },
+    {
+      "detail": "False",
+      "name": "is_active_false",
+      "ok": true
+    },
+    {
+      "detail": "False",
+      "name": "live_handshake_not_allowed",
+      "ok": true
+    },
+    {
+      "detail": "True",
+      "name": "forge_owned_report_was_written",
+      "ok": true
+    },
+    {
+      "detail": "False",
+      "name": "rmc_memory_not_written",
+      "ok": true
+    },
+    {
+      "detail": "False",
+      "name": "identity_vault_db_not_written",
+      "ok": true
+    },
+    {
+      "detail": "False",
+      "name": "agent_identity_not_activated",
+      "ok": true
+    },
+    {
+      "detail": "False",
+      "name": "protoforge2_not_executed",
+      "ok": true
+    },
+    {
+      "detail": "False",
+      "name": "echoforge_not_called",
+      "ok": true
+    },
+    {
+      "detail": "True",
+      "name": "identity_profile_read_ok",
+      "ok": true
+    },
+    {
+      "detail": "True",
+      "name": "identity_profile_found",
+      "ok": true
+    },
+    {
+      "detail": "sqlite_uri_mode_ro",
+      "name": "identity_database_opened_readonly",
+      "ok": true
+    },
+    {
+      "detail": "False",
+      "name": "identity_read_no_db_write",
+      "ok": true
+    },
+    {
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local",
+      "name": "namespace_path_resolved",
+      "ok": true
+    },
+    {
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local",
+      "name": "namespace_path_exists",
+      "ok": true
+    },
+    {
+      "detail": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local",
+      "name": "namespace_path_is_directory",
+      "ok": true
+    },
+    {
+      "detail": "True",
+      "name": "namespace_expected_children_exist",
+      "ok": true
+    },
+    {
+      "detail": "False",
+      "name": "namespace_live_memory_write_not_allowed",
+      "ok": true
+    },
+    {
+      "detail": "5",
+      "name": "namespace_children_checked",
+      "ok": true
+    },
+    {
+      "detail": "[{'name': 'manifests', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/manifests', 'exists': True, 'is_dir': True, 'file_count_now': 0}, {'name': 'receipts', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/receipts', 'exists': True, 'is_dir': True, 'file_count_now': 0}, {'name': 'echo', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/echo', 'exists': True, 'is_dir': True, 'file_count_now': 0}, {'name': 'private_context', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/private_context', 'exists': True, 'is_dir': True, 'file_count_now': 0}, {'name': 'phase_records', 'path': '/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/phase_records', 'exists': True, 'is_dir': True, 'file_count_now': 0}]",
+      "name": "namespace_children_no_files",
+      "ok": true
+    },
+    {
+      "detail": "['claim', 'confidence', 'drift_status', 'manifest_id', 'memory_links', 'novelty', 'operator_path', 'output_targets', 'phase_path']",
+      "name": "manifest_preview_present",
+      "ok": true
+    },
+    {
+      "detail": "CONTROLLED_BLOCK_INACTIVE_PROFILE",
+      "name": "manifest_drift_status_controlled_block",
+      "ok": true
+    },
+    {
+      "detail": "['forge_owned_report_only']",
+      "name": "manifest_output_target_forge_owned_only",
+      "ok": true
+    },
+    {
+      "detail": "True",
+      "name": "echo_validation_preview_ok",
+      "ok": true
+    }
+  ],
+  "generated_at_utc": "20260523_232656_UTC",
+  "name": "Bootstrap Handshake Receipt Verification",
+  "next_expected_step": "Patch 231 \u2014 identity activation approval plan/preflight planning, not activation yet.",
+  "ok": true,
+  "patch": "230A",
+  "source_audit": {
+    "namespace_child_summary": [
+      {
+        "exists": true,
+        "file_count_now": 0,
+        "is_dir": true,
+        "name": "manifests",
+        "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/manifests"
+      },
+      {
+        "exists": true,
+        "file_count_now": 0,
+        "is_dir": true,
+        "name": "receipts",
+        "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/receipts"
+      },
+      {
+        "exists": true,
+        "file_count_now": 0,
+        "is_dir": true,
+        "name": "echo",
+        "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/echo"
+      },
+      {
+        "exists": true,
+        "file_count_now": 0,
+        "is_dir": true,
+        "name": "private_context",
+        "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/private_context"
+      },
+      {
+        "exists": true,
+        "file_count_now": 0,
+        "is_dir": true,
+        "name": "phase_records",
+        "path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local/phase_records"
+      }
+    ],
+    "source_json_exists": true,
+    "source_json_report": "/home/nic/forge/memory/aiweb_patch230_bootstrap_handshake_dry_run_v2/latest_aiweb_patch230_bootstrap_handshake_dry_run_v2.json",
+    "source_markdown_exists": true,
+    "source_markdown_report": "/home/nic/forge/memory/aiweb_patch230_bootstrap_handshake_dry_run_v2/latest_aiweb_patch230_bootstrap_handshake_dry_run_v2.md"
+  },
+  "source_patch230_markdown": "/home/nic/forge/memory/aiweb_patch230_bootstrap_handshake_dry_run_v2/latest_aiweb_patch230_bootstrap_handshake_dry_run_v2.md",
+  "source_patch230_report": "/home/nic/forge/memory/aiweb_patch230_bootstrap_handshake_dry_run_v2/latest_aiweb_patch230_bootstrap_handshake_dry_run_v2.json",
+  "verdict": "VERIFIED_HANDSHAKE_DRY_RUN_RECEIPT_INACTIVE_GATE",
+  "verified_handshake": {
+    "activation_state": "inactive_draft",
+    "agent_id": "gilligan.local",
+    "dry_run_ok": true,
+    "dry_run_verdict": "HANDSHAKE_DRY_RUN_PROFILE_FOUND_BUT_INACTIVE",
+    "echo_preview_verdict": "ECHO_VALIDATION_PREVIEW_ONLY",
+    "is_active": false,
+    "manifest_id": "patch230-gilligan.local-20260523_232019_UTC",
+    "namespace_path": "/home/nic/aiweb/runtime_wrappers/ancestral_memory/agents/gilligan.local"
+  }
+}

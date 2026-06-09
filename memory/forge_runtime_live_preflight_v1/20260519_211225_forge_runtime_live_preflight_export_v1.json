@@ -1,0 +1,144 @@
+{
+  "exported_at": "2026-05-19T21:12:25",
+  "next_patch": "Patch 163 \u2014 Runtime Live Build Approval Token / Apply Plan",
+  "preflight": {
+    "active_patch": "Patch 162 \u2014 Runtime Live Build Preflight / Human Approval Gate",
+    "authority": {
+      "engine_file_write_authority": false,
+      "forge_owned_report_write_authority": true,
+      "human_approval_authority": false,
+      "live_restore_authority": false,
+      "patch_apply_authority": false,
+      "project_file_write_authority": false,
+      "runtime_file_write_authority": false
+    },
+    "candidate": "failsafe_manager",
+    "created_at": "2026-05-19T21:11:32",
+    "current_phase": "S19H \u2014 Runtime Live Build Preflight / Human Approval Gate",
+    "file_count": 4,
+    "files_verified": 4,
+    "gate_summary": {
+      "fail": 0,
+      "locked": 2,
+      "pass": 7
+    },
+    "gates": [
+      {
+        "blocks_live": false,
+        "detail": "FORGE_RUNTIME_CANDIDATE_STATIC_VERIFICATION_READY_GATE_LOCKED",
+        "id": "P01",
+        "name": "Static verification report exists",
+        "status": "PASS"
+      },
+      {
+        "blocks_live": false,
+        "detail": "FORGE_RUNTIME_CANDIDATE_STATIC_VERIFICATION_READY_GATE_LOCKED",
+        "id": "P02",
+        "name": "Static candidate status is gate-locked",
+        "status": "PASS"
+      },
+      {
+        "blocks_live": false,
+        "detail": "files_verified=4/4 hash_match=True static_ok=True",
+        "id": "P03",
+        "name": "Candidate files verified in sandbox",
+        "status": "PASS"
+      },
+      {
+        "blocks_live": false,
+        "detail": "live_path_exists=0",
+        "id": "P04",
+        "name": "No planned live runtime files exist yet",
+        "status": "PASS"
+      },
+      {
+        "blocks_live": false,
+        "detail": "runtime_file_write_authority=false",
+        "id": "P05",
+        "name": "Live runtime write authority is absent",
+        "status": "PASS"
+      },
+      {
+        "blocks_live": false,
+        "detail": "project=false engine=false patch_apply=false",
+        "id": "P06",
+        "name": "Project/engine/patch write authority is absent",
+        "status": "PASS"
+      },
+      {
+        "blocks_live": false,
+        "detail": "CANDIDATE_OR_UNKNOWN",
+        "id": "P07",
+        "name": "Source authority finality is honest",
+        "status": "PASS"
+      },
+      {
+        "blocks_live": true,
+        "detail": "human approval token not created by Patch 162",
+        "id": "P08",
+        "name": "Human approval token present",
+        "status": "LOCKED"
+      },
+      {
+        "blocks_live": true,
+        "detail": "preflight evidence exists but live build is not authorized",
+        "id": "P09",
+        "name": "Live build remains locked",
+        "status": "LOCKED"
+      }
+    ],
+    "human_approval_present": false,
+    "live_build_ready": false,
+    "live_path_exists_count": 0,
+    "next_patch": "Patch 163 \u2014 Runtime Live Build Approval Token / Apply Plan",
+    "plain_english": "Patch 162 proves the sandbox candidate has enough evidence for preflight review, but keeps live runtime writes locked until explicit human approval and a later apply plan exist.",
+    "planning_ready": true,
+    "problem_count": 0,
+    "problems": [],
+    "recommended_next_patch": "Patch 163 \u2014 Runtime Live Build Approval Token / Apply Plan",
+    "report_type": "FORGE_RUNTIME_LIVE_PREFLIGHT_V1",
+    "roadmap_mutation_policy": "APPEND_ONLY",
+    "schema_version": "forge_runtime_live_preflight_v1_patch162",
+    "selected_candidate": {
+      "canonical_path": "aiweb/engines/failsafe_manager",
+      "canonical_status": "CANONICAL_INCLUDED",
+      "cautions": [
+        "core runtime role candidate; verify against symbolic-runtime-map before lockfile"
+      ],
+      "dependency_kind": "canonical_runtime_module",
+      "eligible_for_planning": true,
+      "engine": "failsafe_manager",
+      "live_build_ready": false,
+      "live_write_authority": false,
+      "live_write_ready": false,
+      "notes": "Planning row only. No runtime write authority granted by Patch 156.",
+      "priority": "P1_CORE",
+      "relationship_count": 0,
+      "required_human_checks": [
+        "compare_multiple_active_variants",
+        "inspect_high_duplicate_variant_count"
+      ],
+      "risk_level": "LOW",
+      "risk_score": 25,
+      "rollback_needs": [
+        "snapshot_or_file_backup_before_live_patch",
+        "current_sha_readback_before_apply",
+        "post_write_disk_verification"
+      ],
+      "runtime_domain": "GOVERNANCE_AND_SAFETY",
+      "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+      "test_status": "PASS"
+    },
+    "source_authority_status": "CANDIDATE_OR_UNKNOWN",
+    "static_status": "FORGE_RUNTIME_CANDIDATE_STATIC_VERIFICATION_READY_GATE_LOCKED",
+    "status": "FORGE_RUNTIME_LIVE_PREFLIGHT_READY_GATE_LOCKED",
+    "tool_state": {
+      "expected_commands": 610,
+      "tools": 546,
+      "trust_level": 5.0
+    }
+  },
+  "report_type": "FORGE_RUNTIME_LIVE_PREFLIGHT_EXPORT_V1",
+  "roadmap_mutation_policy": "APPEND_ONLY",
+  "schema_version": "forge_runtime_live_preflight_v1_patch162"
+}
