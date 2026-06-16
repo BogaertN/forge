@@ -1,8 +1,54 @@
 {
-  "_comment": "Permanent approved paths. Set by Nic. Forge cannot access anything outside these paths.",
-  "_instructions": "Add absolute paths only. These persist across all sessions.",
-  "paths": [
-    "/home/nic/forge_test_project",
-    "/home/nic/aiweb"
-  ]
+  "allowed_paths": [
+    "/home/nic/forge"
+  ],
+  "allowed_roots": [
+    "/home/nic/forge"
+  ],
+  "approved_implementation_roots": [
+    "/home/nic/forge"
+  ],
+  "approved_paths": [
+    "/home/nic/forge"
+  ],
+  "approved_roots": [
+    "/home/nic/forge"
+  ],
+  "denied_source_authority_roots": [
+    "/home/nic",
+    "/home/nic/Downloads",
+    "/home/nic/aiweb",
+    "/home/nic/protoforge",
+    "/home/nic/echo-forge",
+    "/home/nic/identity-vault",
+    "/home/nic/gilligan_system"
+  ],
+  "downloads_usage": "packet_transfer_backup_result_only_not_source_authority",
+  "excluded_path_markers": [
+    ".venv",
+    "node_modules",
+    "target",
+    "dist",
+    "build",
+    "cache",
+    ".cache",
+    "runtime_state",
+    "logs",
+    "memory",
+    "private",
+    "evidence",
+    "trace",
+    "chroma",
+    "chroma_db",
+    "vector",
+    "vectors",
+    "corpus",
+    "datasets"
+  ],
+  "forge_rmc_core_authority": true,
+  "previous_config_preserved_in_backup": true,
+  "previous_config_shape": "dict",
+  "record": "SLICE0B_BOUNDARY_CONTAINMENT",
+  "schema": "aiweb.approved_paths.slice0b.v1",
+  "slice0b_boundary_status": "narrow_target_repo_only"
 }

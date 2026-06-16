@@ -1,8 +1,36 @@
 {
-  "_comment": "Per-session path restriction. Written at session start.",
-  "session_id": "forge_2026_06_09_170221",
-  "started_at": "2026-06-09T17:02:21",
-  "paths": [
-    "/home/nic/aiweb"
-  ]
+  "active_target_repo": "/home/nic/forge",
+  "allowed_paths": [
+    "/home/nic/forge"
+  ],
+  "approved_paths": [
+    "/home/nic/forge"
+  ],
+  "current_repo": "/home/nic/forge",
+  "denied_source_authority_roots": [
+    "/home/nic",
+    "/home/nic/Downloads",
+    "/home/nic/aiweb",
+    "/home/nic/protoforge",
+    "/home/nic/echo-forge",
+    "/home/nic/identity-vault",
+    "/home/nic/gilligan_system"
+  ],
+  "implementation_session": "slice0b_boundary_containment_then_slice1_preparation",
+  "no_chroma_authority": true,
+  "no_delivery_authority": true,
+  "no_embedding_authority": true,
+  "no_evidence_authority": true,
+  "no_external_resource_admission": true,
+  "no_llm_authority": true,
+  "no_memory_authority": true,
+  "no_rag_authority": true,
+  "no_vector_authority": true,
+  "previous_config_preserved_in_backup": true,
+  "previous_config_shape": "dict",
+  "record": "SLICE0B_BOUNDARY_CONTAINMENT",
+  "repo_root": "/home/nic/forge",
+  "schema": "aiweb.session_scope.slice0b.v1",
+  "slice0b_boundary_status": "active_target_repo_narrowed",
+  "target_repo": "/home/nic/forge"
 }

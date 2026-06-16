@@ -46,14 +46,14 @@ EXEC_ALLOWLIST: dict[str, dict] = {
         "description": "Show NVIDIA GPU status, driver version, and VRAM usage.",
         "risk":        "LOW",
     },
-    "ollama ps": {
-        "argv":        ["ollama", "ps"],
-        "description": "Show currently running Ollama models and their memory usage.",
+    "model_runtime_disabled_by_slice0b ps": {
+        "argv":        ["model_runtime_disabled_by_slice0b", "ps"],
+        "description": "Show currently running model_runtime_disabled_by_slice0b models and their memory usage.",
         "risk":        "LOW",
     },
-    "ollama version": {
-        "argv":        ["ollama", "--version"],
-        "description": "Show the installed Ollama version string.",
+    "model_runtime_disabled_by_slice0b version": {
+        "argv":        ["model_runtime_disabled_by_slice0b", "--version"],
+        "description": "Show the installed model_runtime_disabled_by_slice0b version string.",
         "risk":        "LOW",
     },
     "free -h": {
