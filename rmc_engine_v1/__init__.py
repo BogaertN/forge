@@ -17,6 +17,24 @@ candidate_generator — Patch 262J1R-Preflight-C (after B2 verifies)
 
 ENGINE_PACKAGE_VERSION = "rmc_engine_v1_patch271_deep_dry_run_orchestrator"
 
+FROZEN_LEGACY_EVIDENCE = {
+    "rmc_engine_v1/llm_renderer.py": {
+        "status": "withdrawn_frozen_evidence_only",
+        "runtime_authorized": False,
+        "import_authorized": False,
+        "call_authorized": False,
+        "capability_installed": False,
+    },
+    "rmc_engine_v1/chroma_connector.py": {
+        "status": "withdrawn_frozen_evidence_only",
+        "runtime_authorized": False,
+        "import_authorized": False,
+        "call_authorized": False,
+        "capability_installed": False,
+    },
+}
+
+
 MODULE_REGISTRY = {
     "phase_codex": {
         "module": "rmc_engine_v1.phase_codex",
@@ -104,35 +122,6 @@ MODULE_REGISTRY = {
     },
 
 
-    "llm_renderer": {
-        "module": "rmc_engine_v1.llm_renderer",
-        "extracted_patch": "262J1R-Preflight-C16",
-        "status": "extracted",
-        "engine_mode": "optional_local_llm_renderer_boundary_default_off",
-        "side_effect_free_when_disabled": True,
-        "default_enabled": False,
-        "writes_files": False,
-        "writes_rmc_memory": False,
-        "writes_identity_vault": False,
-        "queries_chroma": False,
-        "executes_shell": False,
-        "calls_llm_only_when_explicitly_enabled": True,
-        "endpoint_policy": "local_http_loopback_only_C16",
-        "purpose": "Allow optional local LLM text drafting inside Output Renderer while preserving deterministic default rendering and Echo Validator gating.",
-    },
-
-    "chroma_connector": {
-        "module": "rmc_engine_v1.chroma_connector",
-        "extracted_patch": "262J1R-Preflight-C15",
-        "status": "extracted",
-        "engine_mode": "read_only_chroma_context_retrieval_boundary",
-        "side_effect_free": True,
-        "writes_files": False,
-        "uses_llm": False,
-        "writes_chroma": False,
-        "queries_chroma_only_when_requested": True,
-        "purpose": "Optionally query approved context_library_v1/chroma_db chunks for Memory Recaller M_t without replacing deterministic filesystem recall.",
-    },
 
     "promotion_path": {
         "module": "rmc_engine_v1.promotion_path",

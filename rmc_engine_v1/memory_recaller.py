@@ -5,9 +5,10 @@ read-only memory recall and trace assembly on top of the already-installed
 Phase Parser, Resonance Lexicon, Drift Analyzer, and dataset/reference surfaces.
 
 This module is intentionally not an LLM hook. It does not render final
-language, approve output, write memory, mutate datasets, query Chroma, execute
-shell, or touch Identity Vault. Its job is to assemble the trace inputs the RMC
-needs before Candidate Generation can become trustworthy.
+language, approve output, write memory, mutate datasets, query Chroma or any
+vector store, execute shell, or touch Identity Vault. The withdrawn legacy
+retrieval parameters remain refusal inputs only. Its job is to assemble the
+trace inputs the RMC needs before Candidate Generation can become trustworthy.
 
 Core doctrine:
     Input Event -> Phase Parser -> Memory Recaller -> Drift Analyzer ->
@@ -31,15 +32,10 @@ from typing import Any
 from rmc_engine_v1.phase_parser import parse_phase
 from rmc_engine_v1.resonance_lexicon import analyze_resonance
 from rmc_engine_v1.drift_engine import analyze_drift
-from rmc_engine_v1.chroma_connector import (
-    DEFAULT_CHROMA_COLLECTION,
-    chroma_memory_status,
-    normalize_retrieval_backend,
-    query_chroma_memory,
-)
+from rmc_engine_v1.frozen_legacy_boundary import classify_retrieval_request
 
-ENGINE_VERSION = "rmc_memory_recaller_v1_patch262J1R_preflight_C15"
-ENGINE_MODE = "read_only_rmc_memory_recaller_trace_spine_with_optional_chroma"
+ENGINE_VERSION = "rmc_memory_recaller_v1_frozen_legacy_containment_v1"
+ENGINE_MODE = "read_only_rmc_memory_recaller_trace_spine_filesystem_only"
 DEFAULT_FORGE_ROOT = Path("/home/nic/forge")
 MAX_TEXT_BYTES = 900_000
 
@@ -379,14 +375,7 @@ def _score_node(node: dict[str, Any], input_text: str, phase_report: dict[str, A
     if node.get("source_kind") in ("ingestion_receipt", "symbolic_map_entry"):
         active_loop += 0.08
 
-    vector_similarity = 0.0
-    if node.get("source_kind") == "chroma_context_chunk":
-        try:
-            vector_similarity = max(0.0, min(1.0, float(node.get("vector_similarity") or 0.0)))
-        except Exception:
-            vector_similarity = 0.0
-
-    retrieval_weight = round(min(1.0, semantic * 0.36 + phase_relevance + ancestry_score + drift_relation + active_loop + vector_similarity * 0.28), 4)
+    retrieval_weight = round(min(1.0, semantic * 0.44 + phase_relevance + ancestry_score + drift_relation + active_loop), 4)
     evidence = []
     if overlap:
         evidence.append({"type": "semantic_overlap", "tokens": overlap[:12]})
@@ -398,8 +387,6 @@ def _score_node(node: dict[str, Any], input_text: str, phase_report: dict[str, A
         evidence.append({"type": "drift_relation", "score": round(drift_relation, 3)})
     if active_loop:
         evidence.append({"type": "active_loop_relation", "score": round(active_loop, 3)})
-    if vector_similarity:
-        evidence.append({"type": "vector_similarity", "score": round(vector_similarity, 3), "backend": "chroma"})
     out = dict(node)
     out.update({
         "retrieval_weight": retrieval_weight,
@@ -409,7 +396,6 @@ def _score_node(node: dict[str, Any], input_text: str, phase_report: dict[str, A
             "ancestry_match": round(ancestry_score, 4),
             "drift_relation": round(drift_relation, 4),
             "active_loop_relation": round(active_loop, 4),
-            "vector_similarity": round(vector_similarity, 4),
         },
         "retrieval_evidence": evidence,
     })
@@ -425,8 +411,6 @@ def _context_library_status(root: Path) -> dict[str, Any]:
         "manifests": context_root / "manifests",
         "symbolic_maps": context_root / "symbolic_maps",
         "indexes": context_root / "indexes",
-        "chroma_db": context_root / "chroma_db",
-        "legacy_chroma_db": root / "memory" / "chroma_db",
         "dataset_growth_root": dataset_root,
         "dataset_review_queue": dataset_root / "review_queue",
         "dataset_receipts": dataset_root / "dataset_receipts",
@@ -449,7 +433,9 @@ def memory_recaller_boundary() -> dict[str, Any]:
         "implements_rmc_stage": "Memory Recaller + Trace Spine through Drift Analyzer",
         "reads_context_library_json": True,
         "reads_dataset_growth_json": True,
-        "queries_chroma": "optional_when_requested_via_retrieval_backend",
+        "queries_chroma": False,
+        "queries_vector_store": False,
+        "semantic_similarity_authority": False,
         "reads_db_files": False,
         "calls_llm": False,
         "executes_shell": False,
@@ -460,11 +446,11 @@ def memory_recaller_boundary() -> dict[str, Any]:
         "approved_output": False,
         "normal_runtime_gold_mutation_allowed": False,
         "retrieval_backend_default": "filesystem",
-        "supported_retrieval_backends": ["filesystem", "chroma", "hybrid", "auto"],
-        "chroma_collection_default": DEFAULT_CHROMA_COLLECTION,
-        "note": "This module builds read-only I_t/M_t/Φ_t/D_t trace inputs. Optional Chroma retrieval is off unless requested by metadata/query param.",
+        "supported_retrieval_backends": ["filesystem"],
+        "legacy_vector_parameters_are_refusal_inputs": True,
+        "fallback_from_blocked_backend_allowed": False,
+        "note": "This module builds read-only I_t/M_t/Φ_t/D_t trace inputs from deterministic filesystem sources only.",
     }
-
 
 def build_input_event(source_text: str, source_metadata: dict[str, Any] | None = None) -> dict[str, Any]:
     source_metadata = source_metadata or {}
@@ -486,36 +472,19 @@ def build_input_event(source_text: str, source_metadata: dict[str, Any] | None =
 
 
 def recall_memory(source_text: str, source_metadata: dict[str, Any] | None = None, root: str | Path | None = None, limit: int = 12) -> dict[str, Any]:
-    """Build read-only active memory set M_t for an input event."""
-    source_metadata = source_metadata or {}
+    """Build a deterministic filesystem-only active memory set M_t."""
+    source_metadata = dict(source_metadata or {})
     root_path = _forge_root(root)
     input_event = build_input_event(source_text, source_metadata)
     phase_report = parse_phase(source_text, source_metadata)
+    retrieval_decision = classify_retrieval_request(source_metadata)
 
-    retrieval_backend = normalize_retrieval_backend(
-        source_metadata.get("retrieval_backend") or
-        source_metadata.get("memory_backend") or
-        os.environ.get("RMC_MEMORY_RETRIEVAL_BACKEND") or
-        "filesystem"
+    requested_backend = (
+        retrieval_decision.get("requested", {}).get("backend")
+        if isinstance(retrieval_decision.get("requested"), dict)
+        else source_metadata.get("retrieval_backend")
     )
-    collection_name = str(
-        source_metadata.get("chroma_collection") or
-        source_metadata.get("collection_name") or
-        os.environ.get("RMC_CHROMA_COLLECTION") or
-        DEFAULT_CHROMA_COLLECTION
-    )
-    try:
-        chroma_limit = max(1, min(int(source_metadata.get("chroma_limit") or limit or 12), 50))
-    except Exception:
-        chroma_limit = max(1, min(int(limit or 12), 50))
-
-    filesystem_enabled = retrieval_backend in ("filesystem", "hybrid", "auto")
-    chroma_enabled = retrieval_backend in ("chroma", "hybrid", "auto")
-
-    nodes: list[dict[str, Any]] = []
-    if filesystem_enabled:
-        nodes, inventory = _collect_candidate_nodes(root_path)
-    else:
+    if retrieval_decision.get("status") != "OK":
         inventory = {
             "context_root": str(root_path / "memory" / "context_library_v1"),
             "dataset_root": str(root_path / "memory" / "rmc_dataset_v1"),
@@ -523,38 +492,49 @@ def recall_memory(source_text: str, source_metadata: dict[str, Any] | None = Non
             "dataset_root_exists": (root_path / "memory" / "rmc_dataset_v1").exists(),
             "candidate_nodes_collected": 0,
             "source_counts": {},
+            "retrieval_backend_requested": requested_backend,
+            "retrieval_backend_effective": "none",
+            "fallback_performed": False,
+        }
+        return {
+            "status": "BLOCKED",
+            "reason_code": retrieval_decision.get("reason_code"),
+            "engine_version": ENGINE_VERSION,
+            "engine_mode": ENGINE_MODE,
+            "stage": "Memory Recaller",
+            "input_event": input_event,
+            "phase_report_summary": {
+                "phase_primary": _phase_state(phase_report).get("phase_primary"),
+                "phase_secondary": _phase_state(phase_report).get("phase_secondary", []),
+                "phase_path_hypothesis": _phase_state(phase_report).get("phase_path_hypothesis", []),
+                "confidence": _phase_state(phase_report).get("confidence"),
+                "transition_warnings": _phase_state(phase_report).get("transition_warnings", []),
+            },
+            "memory_state": {
+                "M_t_present": False,
+                "candidate_nodes_collected": 0,
+                "active_memory_count": 0,
+                "retrieval_dimensions": ["semantic_relevance", "phase_relevance", "ancestry", "drift_relation", "active_loop_relation"],
+                "retrieval_backend_requested": requested_backend,
+                "retrieval_backend_effective": "none",
+                "active_memory_nodes": [],
+                "source_counts_collected": {},
+                "active_source_kind_counts": {},
+                "active_memory_role_counts": {},
+                "active_phase_counts": {},
+            },
+            "legacy_retrieval_request": retrieval_decision,
+            "context_library_status": _context_library_status(root_path),
+            "inventory": inventory,
+            "fallback_performed": False,
+            "boundary": memory_recaller_boundary(),
         }
 
-    chroma_report: dict[str, Any] = chroma_memory_status(root_path, collection_name)
-    chroma_nodes: list[dict[str, Any]] = []
-    if chroma_enabled:
-        chroma_report = query_chroma_memory(
-            source_text,
-            phase_report=phase_report,
-            root=root_path,
-            limit=chroma_limit,
-            collection_name=collection_name,
-        )
-        if chroma_report.get("status") == "OK":
-            chroma_nodes = [n for n in chroma_report.get("memory_nodes", []) if isinstance(n, dict)]
-            nodes.extend(chroma_nodes)
-
-    inventory["retrieval_backend_requested"] = retrieval_backend
-    inventory["retrieval_backend_effective"] = (
-        "hybrid" if filesystem_enabled and chroma_nodes else
-        "chroma" if (not filesystem_enabled and chroma_nodes) else
-        "filesystem" if filesystem_enabled else
-        "none"
-    )
-    inventory["chroma_collection"] = collection_name
-    inventory["chroma_status"] = chroma_report.get("status")
-    inventory["chroma_reason_code"] = chroma_report.get("reason_code")
-    inventory["chroma_nodes_collected"] = len(chroma_nodes)
+    nodes, inventory = _collect_candidate_nodes(root_path)
+    inventory["retrieval_backend_requested"] = requested_backend or "filesystem"
+    inventory["retrieval_backend_effective"] = "filesystem"
     inventory["candidate_nodes_collected"] = len(nodes)
-    if chroma_nodes:
-        source_counts = dict(inventory.get("source_counts") or {})
-        source_counts["chroma_context_chunks"] = len(chroma_nodes)
-        inventory["source_counts"] = source_counts
+    inventory["fallback_performed"] = False
 
     ranked = [_score_node(node, source_text, phase_report) for node in nodes]
     ranked.sort(key=lambda n: (n.get("retrieval_weight", 0), len(n.get("retrieval_evidence", []))), reverse=True)
@@ -563,10 +543,13 @@ def recall_memory(source_text: str, source_metadata: dict[str, Any] | None = Non
     source_counts: dict[str, int] = {}
     phase_counts: dict[str, int] = {}
     for node in active:
-        role_counts[str(node.get("memory_role") or "unknown")] = role_counts.get(str(node.get("memory_role") or "unknown"), 0) + 1
-        source_counts[str(node.get("source_kind") or "unknown")] = source_counts.get(str(node.get("source_kind") or "unknown"), 0) + 1
+        role = str(node.get("memory_role") or "unknown")
+        kind = str(node.get("source_kind") or "unknown")
+        role_counts[role] = role_counts.get(role, 0) + 1
+        source_counts[kind] = source_counts.get(kind, 0) + 1
         for ph in node.get("phase_tags") or []:
             phase_counts[ph] = phase_counts.get(ph, 0) + 1
+
     return {
         "status": "OK",
         "engine_version": ENGINE_VERSION,
@@ -584,36 +567,77 @@ def recall_memory(source_text: str, source_metadata: dict[str, Any] | None = Non
             "M_t_present": True,
             "candidate_nodes_collected": inventory.get("candidate_nodes_collected", 0),
             "active_memory_count": len(active),
-            "retrieval_dimensions": ["semantic_relevance", "phase_relevance", "ancestry", "drift_relation", "active_loop_relation", "vector_similarity"],
+            "retrieval_dimensions": ["semantic_relevance", "phase_relevance", "ancestry", "drift_relation", "active_loop_relation"],
             "retrieval_backend_requested": inventory.get("retrieval_backend_requested"),
-            "retrieval_backend_effective": inventory.get("retrieval_backend_effective"),
-            "chroma_nodes_collected": inventory.get("chroma_nodes_collected", 0),
+            "retrieval_backend_effective": "filesystem",
             "active_memory_nodes": active,
             "source_counts_collected": inventory.get("source_counts", {}),
             "active_source_kind_counts": source_counts,
             "active_memory_role_counts": role_counts,
             "active_phase_counts": phase_counts,
         },
+        "legacy_retrieval_request": retrieval_decision,
         "context_library_status": _context_library_status(root_path),
-        "chroma_retrieval": chroma_report,
         "inventory": inventory,
+        "fallback_performed": False,
         "boundary": memory_recaller_boundary(),
     }
 
-
 def build_trace_spine(source_text: str, source_metadata: dict[str, Any] | None = None, root: str | Path | None = None, limit: int = 12) -> dict[str, Any]:
-    """Assemble read-only RMC trace spine through Memory Recaller and Drift Analyzer."""
-    source_metadata = source_metadata or {}
+    """Assemble the read-only RMC trace spine through deterministic memory recall."""
+    source_metadata = dict(source_metadata or {})
     input_event = build_input_event(source_text, source_metadata)
     phase_report = parse_phase(source_text, source_metadata)
     resonance_report = analyze_resonance(source_text, source_metadata)
     drift_report = analyze_drift(phase_report)
     memory_report = recall_memory(source_text, source_metadata, root=root, limit=limit)
 
+    if memory_report.get("status") != "OK":
+        return {
+            "status": "BLOCKED",
+            "reason_code": memory_report.get("reason_code"),
+            "engine_version": ENGINE_VERSION,
+            "engine_mode": "read_only_rmc_trace_spine_filesystem_only",
+            "stage": "Trace Spine",
+            "input_event": input_event,
+            "phase_report": phase_report,
+            "memory_recall": memory_report,
+            "drift_report": drift_report,
+            "symbolic_trace": {
+                "I_t": input_event,
+                "M_t": {"status": "BLOCKED", "active_memory_count": 0, "active_memory_nodes": []},
+                "Φ_t": {
+                    "phase_primary": _phase_state(phase_report).get("phase_primary"),
+                    "phase_secondary": _phase_state(phase_report).get("phase_secondary", []),
+                    "phase_path_hypothesis": _phase_state(phase_report).get("phase_path_hypothesis", []),
+                    "confidence": _phase_state(phase_report).get("confidence"),
+                },
+                "D_t": {
+                    "drift_report_id": drift_report.get("drift_report_id"),
+                    "epsilon_s": drift_report.get("epsilon_s"),
+                    "projection_status": drift_report.get("projection_status"),
+                },
+                "C_t": {"status": "NOT_IMPLEMENTED_IN_B6"},
+                "R_t": {"status": "NOT_RENDERED"},
+            },
+            "trace_spine_readiness": {
+                "input_event_present": bool(input_event.get("event_id")),
+                "phase_state_present": bool(_phase_state(phase_report).get("phase_primary")),
+                "memory_state_present": False,
+                "drift_state_present": bool(drift_report.get("drift_report_id")),
+                "candidate_generator_present": False,
+                "manifest_ready": False,
+                "rendering_allowed": False,
+                "memory_write_allowed": False,
+            },
+            "fallback_performed": False,
+            "boundary": memory_recaller_boundary(),
+        }
+
     operator_chain = [
         {"stage": "Input Event", "status": "implemented_read_only", "object": "I_t"},
         {"stage": "Phase Parser", "status": "implemented_read_only", "object": "Φ_t"},
-        {"stage": "Memory Recaller", "status": "implemented_read_only", "object": "M_t"},
+        {"stage": "Memory Recaller", "status": "implemented_read_only_filesystem_only", "object": "M_t"},
         {"stage": "Drift Analyzer", "status": "implemented_read_only", "object": "D_t"},
         {"stage": "Candidate Conclusion Generator", "status": "not_implemented_in_B6", "object": "C_t"},
         {"stage": "Renderer", "status": "not_implemented_in_B6", "object": "R_t"},
@@ -656,7 +680,7 @@ def build_trace_spine(source_text: str, source_metadata: dict[str, Any] | None =
     return {
         "status": "OK",
         "engine_version": ENGINE_VERSION,
-        "engine_mode": "read_only_rmc_trace_spine_through_memory_recaller",
+        "engine_mode": "read_only_rmc_trace_spine_filesystem_only",
         "stage": "Trace Spine",
         "input_event": input_event,
         "phase_report": phase_report,
@@ -681,5 +705,7 @@ def build_trace_spine(source_text: str, source_metadata: dict[str, Any] | None =
             "rendering_allowed": False,
             "memory_write_allowed": False,
         },
+        "fallback_performed": False,
         "boundary": memory_recaller_boundary(),
     }
+

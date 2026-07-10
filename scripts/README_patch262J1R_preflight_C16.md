@@ -1,31 +1,22 @@
-# Patch 262J1R-Preflight-C16 — Optional LLM Renderer Boundary
+# Patch 262J1R Preflight C16 — Withdrawn Historical Evidence
 
-This patch adds a default-off optional LLM text renderer inside the RMC Output Renderer path.
+## Status
 
-## Production rules
+`RETIRED / BLOCKED`
 
-- The deterministic template renderer remains the default.
-- The LLM path can only run when explicitly toggled with `llm_renderer=on`, `use_llm=true`, or `llm=true`.
-- The caller must supply `model_endpoint`.
-- C16 approves only local HTTP loopback endpoints, such as `http://localhost:11434/api/generate`.
-- Remote endpoints are refused.
-- Non-text render modes do not use the LLM path.
-- LLM text is bound to the existing sentence plan and is still checked for forbidden claims.
-- LLM text is still subject to Echo Validator before memory write or projection.
-- No files, Chroma writes, shell calls, Identity Vault writes, RMC memory writes, or canonical reference mutations are introduced.
+The former C16 optional LLM renderer proposal is retained only in Git history as
+historical evidence. It is not installed authority and must not be used as
+runtime, testing, verification, deployment, or capability documentation.
 
-## New endpoint
+Forge/RMC expression generation and rendering remain deterministic and
+non-LLM. Model endpoints, model selection, LLM clients, LLM timeouts, and LLM
+fallback behavior are prohibited.
 
-`/api/rmc/llm-renderer/status`
+The frozen evidence file `rmc_engine_v1/llm_renderer.py` must not be imported,
+called, modified, wrapped, trusted, or activated.
 
-This status endpoint is read-only and does not call a model.
+The retired C16 behavior test and verifier in the live tree intentionally return
+a non-success status. Use Git history to inspect the original proposal.
 
-## Example default deterministic render
-
-`/api/rmc/output-renderer?input=correct%20projection%20before%20naming&mode=text`
-
-## Example optional LLM render
-
-`/api/rmc/output-renderer?input=correct%20projection%20before%20naming&mode=text&llm_renderer=on&model_endpoint=http://localhost:11434/api/generate&model=qwen3:8b`
-
-The output is not approved until Echo Validator passes.
+No release, delivery, action, truth, proof, evidence, memory-write,
+production-readiness, or model authority is granted by this notice.

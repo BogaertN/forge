@@ -6,9 +6,9 @@ manifest: no μ_t means no R_t.  This module never compiles meaning, never
 calls an LLM, never writes files, never writes memory, never executes shell,
 and never treats a rendering as approved before Echo Validator exists.
 
-Patch C16 adds an optional local LLM renderer boundary for text mode. It is
-default-off, endpoint-gated, sentence-plan constrained, and still subject to
-Echo Validator. The deterministic renderer remains the default path.
+The frozen legacy LLM compatibility lane is withdrawn from live runtime
+authority. Text rendering is deterministic only. Legacy LLM-related parameters
+remain refusal inputs for compatibility and never trigger fallback behavior.
 """
 from __future__ import annotations
 
@@ -17,8 +17,9 @@ import re
 from typing import Any
 
 from rmc_engine_v1.measurement_kernel import clamp, stable_hash, stable_id
+from rmc_engine_v1.frozen_legacy_boundary import classify_llm_request
 
-ENGINE_VERSION = "rmc_output_renderer_v1_patch262J1R_preflight_C16"
+ENGINE_VERSION = "rmc_output_renderer_v1_frozen_legacy_containment_v1"
 ENGINE_MODE = "read_only_output_renderer_R_t"
 
 RENDER_MODES = {"text", "json_packet", "dashboard_state", "glyph_packet"}
@@ -86,8 +87,9 @@ def renderer_boundary() -> dict[str, Any]:
         "memory_writer_stage_present": False,
         "uses_llm": False,
         "uses_llm_by_default": False,
-        "optional_llm_renderer_available": True,
-        "calls_llm_only_when_explicitly_enabled": True,
+        "optional_llm_renderer_available": False,
+        "legacy_llm_parameters_are_refusal_inputs": True,
+        "calls_llm_only_when_explicitly_enabled": False,
         "llm_output_is_authority": False,
         "queries_chroma": False,
         "reads_db_files": False,
@@ -101,7 +103,7 @@ def renderer_boundary() -> dict[str, Any]:
         "projection_allowed": False,
         "memory_write_allowed": False,
         "read_only_means": "no filesystem or memory mutation; HTTP response rendering is allowed when μ_t exists",
-        "note": "C16 renders from μ_t only. Optional LLM text is default-off, sentence-plan constrained, and still requires Echo Validator approval.",
+        "note": "Rendering is deterministic only. Any legacy LLM request is refused before rendering; no fallback is performed.",
     }
 
 
@@ -121,14 +123,11 @@ def renderer_schema_contract() -> dict[str, Any]:
             "echo_validation_required",
         ],
         "supported_render_modes": sorted(RENDER_MODES),
-        "optional_llm_renderer": {
-            "available": True,
-            "default_enabled": False,
-            "text_mode_only": True,
-            "requires_explicit_toggle": True,
-            "requires_local_model_endpoint": True,
-            "still_subject_to_sentence_plan_validation": True,
-            "still_subject_to_echo_validation": True,
+        "legacy_llm_request_policy": {
+            "available": False,
+            "runtime_authorized": False,
+            "request_parameters_retained_for_refusal_only": True,
+            "fallback_allowed": False,
         },
         "sentence_plan_required": True,
         "sentence_plan_fields": ["core_claim", "required_qualifiers", "required_definitions", "forbidden_claims", "allowed_claim_scope", "audience", "mode"],
@@ -301,14 +300,17 @@ def _render_text_deterministic(mu: dict[str, Any], audience: str, style: str, se
     )
 
 
-def _render_text(mu: dict[str, Any], audience: str, style: str, sentence_plan: dict[str, Any], llm_options: dict[str, Any] | None = None, llm_client: Any = None) -> tuple[str, dict[str, Any]]:
+def _render_text(mu: dict[str, Any], audience: str, style: str, sentence_plan: dict[str, Any]) -> tuple[str, dict[str, Any]]:
     deterministic = _render_text_deterministic(mu, audience, style, sentence_plan)
-    from rmc_engine_v1.llm_renderer import render_text_with_optional_llm
-
-    attempt = render_text_with_optional_llm(mu, sentence_plan, deterministic, llm_options or {}, llm_client=llm_client)
-    if attempt.get("status") == "OK" and attempt.get("llm_renderer_used") and attempt.get("rendered_text"):
-        return str(attempt.get("rendered_text")), attempt
-    return deterministic, attempt
+    return deterministic, {
+        "status": "NOT_REQUESTED",
+        "reason_code": "DETERMINISTIC_RENDERING_ONLY",
+        "legacy_llm_runtime_authorized": False,
+        "llm_renderer_requested": False,
+        "llm_renderer_used": False,
+        "calls_llm": False,
+        "calls_model": False,
+    }
 
 
 def _render_json_packet(packet: dict[str, Any], mu: dict[str, Any], audience: str, style: str) -> dict[str, Any]:
@@ -372,14 +374,14 @@ def _render_glyph_packet(packet: dict[str, Any], mu: dict[str, Any]) -> dict[str
     return glyph_packet
 
 
-def _build_render_content(packet: dict[str, Any], mu: dict[str, Any], mode: str, audience: str, style: str, sentence_plan: dict[str, Any], llm_options: dict[str, Any] | None = None, llm_client: Any = None) -> tuple[Any, dict[str, Any]]:
+def _build_render_content(packet: dict[str, Any], mu: dict[str, Any], mode: str, audience: str, style: str, sentence_plan: dict[str, Any]) -> tuple[Any, dict[str, Any]]:
     if mode == "json_packet":
         return _render_json_packet(packet, mu, audience, style), {"status": "SKIPPED", "llm_renderer_requested": False, "llm_renderer_used": False, "reason": "non_text_render_mode"}
     if mode == "dashboard_state":
         return _render_dashboard_state(packet, mu), {"status": "SKIPPED", "llm_renderer_requested": False, "llm_renderer_used": False, "reason": "non_text_render_mode"}
     if mode == "glyph_packet":
         return _render_glyph_packet(packet, mu), {"status": "SKIPPED", "llm_renderer_requested": False, "llm_renderer_used": False, "reason": "non_text_render_mode"}
-    return _render_text(mu, audience, style, sentence_plan, llm_options=llm_options, llm_client=llm_client)
+    return _render_text(mu, audience, style, sentence_plan)
 
 
 def _fidelity_precheck(mu: dict[str, Any], rendered: Any, mode: str) -> dict[str, Any]:
@@ -470,7 +472,7 @@ def render_manifest(
     llm_renderer_enabled: bool | str = False,
     model_endpoint: str | None = None,
     model: str | None = None,
-    llm_timeout_seconds: float | int | str = 8.0,
+    llm_timeout_seconds: float | int | str | None = None,
     llm_client: Any = None,
 ) -> dict[str, Any]:
     """Render R_t from μ_t only.
@@ -486,6 +488,28 @@ def render_manifest(
         mode = "text"
     audience = _text(audience_profile or "operator", 80) or "operator"
     style = _text(style_mode or "standard", 80) or "standard"
+    legacy_llm_request = classify_llm_request(
+        enabled=llm_renderer_enabled,
+        model_endpoint=model_endpoint,
+        model=model,
+        timeout_seconds=llm_timeout_seconds,
+        llm_client=llm_client,
+    )
+    if legacy_llm_request.get("status") == "BLOCKED":
+        return _blocked_render(
+            {**manifest_report, "blocked_manifest_candidate": _manifest_packet(manifest_report)},
+            str(legacy_llm_request.get("reason_code") or "FROZEN_LEGACY_LLM_REQUEST_PROHIBITED"),
+            mode,
+            audience,
+            style,
+        ) | {
+            "legacy_llm_request": legacy_llm_request,
+            "llm_render_attempt": legacy_llm_request,
+            "llm_renderer_used": False,
+            "optional_llm_renderer_available": False,
+            "fallback_performed": False,
+        }
+
     packet = _manifest_packet(manifest_report)
     if not packet:
         return _blocked_render(manifest_report, "manifest_packet_missing_or_manifest_blocked", mode, audience, style)
@@ -497,20 +521,7 @@ def render_manifest(
         return _blocked_render(manifest_report, "manifest_compilation_not_allowed", mode, audience, style)
 
     sentence_plan = _sentence_plan(mu, audience, style, mode)
-    llm_options = {
-        "enabled": llm_renderer_enabled,
-        "model_endpoint": model_endpoint,
-        "model": model,
-        "timeout_seconds": llm_timeout_seconds,
-    }
-    rendered, llm_attempt = _build_render_content(packet, mu, mode, audience, style, sentence_plan, llm_options=llm_options, llm_client=llm_client)
-    if isinstance(llm_attempt, dict) and llm_attempt.get("status") == "BLOCKED" and llm_attempt.get("llm_renderer_requested"):
-        return _blocked_render({**manifest_report, "blocked_manifest_candidate": packet}, str(llm_attempt.get("failure_code") or "llm_renderer_blocked"), mode, audience, style) | {
-            "sentence_plan": sentence_plan,
-            "llm_render_attempt": llm_attempt,
-            "llm_renderer_used": False,
-            "optional_llm_renderer_available": True,
-        }
+    rendered, llm_attempt = _build_render_content(packet, mu, mode, audience, style, sentence_plan)
     sentence_guard = _sentence_plan_validation(rendered, sentence_plan)
     if not sentence_guard.get("passed"):
         return _blocked_render({**manifest_report, "blocked_manifest_candidate": packet}, str(sentence_guard.get("blocked_reason") or "sentence_plan_guard_failed"), mode, audience, style) | {
@@ -535,6 +546,7 @@ def render_manifest(
         "llm_render_attempt": llm_attempt,
         "llm_renderer_used": bool(isinstance(llm_attempt, dict) and llm_attempt.get("llm_renderer_used")),
         "llm_renderer_default_off": True,
+        "legacy_llm_runtime_authorized": False,
         "manifest_fields_preserved": REQUIRED_MU_FIELDS,
         "echo_validation_required": True,
         "approved_output": False,
@@ -571,7 +583,9 @@ def render_manifest(
         "approved_output": False,
         "llm_render_attempt": llm_attempt,
         "llm_renderer_used": bool(isinstance(llm_attempt, dict) and llm_attempt.get("llm_renderer_used")),
-        "optional_llm_renderer_available": True,
+        "optional_llm_renderer_available": False,
+        "legacy_llm_request": legacy_llm_request,
+        "fallback_performed": False,
         "glyph_packet_uses_real_renderer": True,
         "projection_allowed": False,
         "memory_write_allowed": False,
