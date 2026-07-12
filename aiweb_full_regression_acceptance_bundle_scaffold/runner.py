@@ -53,14 +53,28 @@ class CommandRunResult:
 
 
 def _materialize_command(command: RequiredCommand, forge_root: Path) -> list[str]:
+    """Materialize a catalog command for the current Forge root.
+
+    This is intentionally explicit:
+    - /home/nic/forge placeholders are replaced with the actual Forge root.
+    - Python commands are forced through -B so child runs cannot create repo
+      bytecode cache artifacts during acceptance.
+    """
     result: list[str] = []
+
     for part in command.command:
         if part == "/home/nic/forge":
             result.append(str(forge_root))
         else:
             result.append(part)
-    return result
 
+    if result:
+        executable_name = Path(result[0]).name
+        if executable_name in {"python", "python3", "python3.12", "python3.13"}:
+            if "-B" not in result[1:]:
+                result.insert(1, "-B")
+
+    return result
 
 def build_acceptance_plan() -> dict[str, object]:
     commands = active_required_commands()
@@ -85,7 +99,9 @@ def _run_one(command: RequiredCommand, forge_root: Path, result_dir: Path, timeo
 
     env = os.environ.copy()
     env["PYTHONDONTWRITEBYTECODE"] = "1"
+    env["PYTHONPYCACHEPREFIX"] = str(result_dir / "_python_cache_redirect" / command.command_id.replace(":", "_"))
     env["AIWEB_SLICE24_ACCEPTANCE_RUN"] = "1"
+    Path(env["PYTHONPYCACHEPREFIX"]).mkdir(parents=True, exist_ok=True)
     start = time.monotonic()
     try:
         completed = subprocess.run(
