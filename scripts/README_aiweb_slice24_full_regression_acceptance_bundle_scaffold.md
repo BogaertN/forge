@@ -42,3 +42,26 @@ Full acceptance run after clean commit:
 
 The full acceptance result writes `slice24_acceptance_result.json` plus command
 stdout/stderr records into the chosen result directory.
+
+## Python Cache Acceptance Policy
+
+The final acceptance context distinguishes managed-environment bytecode from
+source-tree bytecode:
+
+- `.venv/` and `venv/` are managed Python environments. Their ignored bytecode
+  does not make the Forge source tree dirty and is excluded from the cache scan.
+- `__pycache__/`, `*.pyc`, and `*.pyo` inside the active source tree remain
+  acceptance blockers.
+- The scanner is read-only. It does not remove caches.
+- Acceptance commands run with bytecode writing disabled or redirected outside
+  the repository so the proof run does not create source-tree caches.
+
+Git cleanliness and source-tree cache cleanliness are separate requirements. A
+cache may be ignored by Git and still be prohibited inside active source paths.
+
+## Structural Probe Isolation
+
+The structural verifier writes its dry acceptance result only inside a temporary
+directory outside the Forge repository. It must not create or retain
+`.slice24_structural_probe` in the live source tree. The behavior test asserts
+that no live structural-probe residue exists before or after verification.

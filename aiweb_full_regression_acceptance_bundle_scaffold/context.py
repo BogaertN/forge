@@ -14,6 +14,9 @@ from .authority import (
     REQUIRED_AIWEB_HEAD_SLICE22,
     REQUIRED_AIWEB_SUBJECT_SLICE22,
     REQUIRED_EXTERNAL_CONTEXT_CHECKS,
+    MANAGED_PYTHON_ENVIRONMENT_DIR_NAMES,
+    SOURCE_TREE_PYTHON_CACHE_DIRECTORY_NAME,
+    SOURCE_TREE_PYTHON_CACHE_SUFFIXES,
 )
 
 @dataclass(frozen=True)
@@ -98,21 +101,46 @@ def _git(repo: Path, *args: str) -> CommandCapture:
 
 
 def scan_python_cache(root: Path) -> tuple[str, ...]:
+    """Return source-tree Python cache artifacts, excluding managed environments.
+
+    Git ignores both managed virtual environments and Python bytecode, but final
+    acceptance still rejects bytecode inside the active source tree.  The scan is
+    read-only and prunes ignored build trees before descending into them.
+    """
+
     hits: list[str] = []
     if not root.exists():
         return tuple(hits)
-    for walk_root, dirs, files in os.walk(root):
+
+    excluded_directory_names = {
+        ".git",
+        "node_modules",
+        "dist",
+        "build",
+        ".next",
+        ".turbo",
+        ".cache",
+        *MANAGED_PYTHON_ENVIRONMENT_DIR_NAMES,
+    }
+
+    for walk_root, dirs, files in os.walk(root, topdown=True):
         walk_path = Path(walk_root)
-        if ".git" in walk_path.parts:
-            continue
-        if any(part in {"node_modules", "dist", "build", ".next", ".turbo", ".cache"} for part in walk_path.parts):
-            continue
+        retained_dirs: list[str] = []
+
         for dirname in dirs:
-            if dirname == "__pycache__":
+            if dirname in excluded_directory_names:
+                continue
+            if dirname == SOURCE_TREE_PYTHON_CACHE_DIRECTORY_NAME:
                 hits.append(str(walk_path / dirname))
+                continue
+            retained_dirs.append(dirname)
+
+        dirs[:] = retained_dirs
+
         for filename in files:
-            if filename.endswith((".pyc", ".pyo")):
+            if filename.endswith(SOURCE_TREE_PYTHON_CACHE_SUFFIXES):
                 hits.append(str(walk_path / filename))
+
     return tuple(sorted(hits))
 
 

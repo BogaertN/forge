@@ -17,6 +17,7 @@ from aiweb_full_regression_acceptance_bundle_scaffold.receipt import build_recei
 from aiweb_full_regression_acceptance_bundle_scaffold.runner import build_acceptance_plan, run_acceptance_bundle
 from aiweb_full_regression_acceptance_bundle_scaffold.source_guard import run_source_guards
 from aiweb_full_regression_acceptance_bundle_scaffold.verify import verify_slice24_boundary
+from aiweb_full_regression_acceptance_bundle_scaffold.context import scan_python_cache
 
 
 def main() -> int:
@@ -65,6 +66,66 @@ def main() -> int:
     guards = run_source_guards(repo)
     assert all(result.passed for result in guards), [failure for result in guards for failure in result.failures]
 
+    cache_probe = Path(tempfile.mkdtemp(prefix="slice24_cache_policy_probe_"))
+    try:
+        managed_venv_cache = cache_probe / ".venv" / "lib" / "python3.12" / "site-packages" / "sample" / "__pycache__"
+        managed_venv_cache.mkdir(parents=True)
+        (managed_venv_cache / "sample.cpython-312.pyc").write_bytes(b"managed-venv-bytecode")
+
+        managed_plain_venv_cache = cache_probe / "venv" / "lib" / "python3.12" / "site-packages" / "sample" / "__pycache__"
+        managed_plain_venv_cache.mkdir(parents=True)
+        (managed_plain_venv_cache / "sample.cpython-312.pyc").write_bytes(b"managed-plain-venv-bytecode")
+
+        before_managed_scan = tuple(
+            sorted(
+                path.relative_to(cache_probe).as_posix()
+                for path in cache_probe.rglob("*")
+            )
+        )
+        assert scan_python_cache(cache_probe) == ()
+        after_managed_scan = tuple(
+            sorted(
+                path.relative_to(cache_probe).as_posix()
+                for path in cache_probe.rglob("*")
+            )
+        )
+        assert before_managed_scan == after_managed_scan
+
+        source_cache = cache_probe / "source_package" / "__pycache__"
+        source_cache.mkdir(parents=True)
+        cached_module = source_cache / "module.cpython-312.pyc"
+        cached_module.write_bytes(b"source-bytecode")
+        source_pyc = cache_probe / "source_package" / "loose.pyc"
+        source_pyc.write_bytes(b"loose-source-bytecode")
+        source_pyo = cache_probe / "source_package" / "legacy.pyo"
+        source_pyo.write_bytes(b"source-optimized-bytecode")
+
+        expected_cache_hits = tuple(
+            sorted(
+                (
+                    str(source_cache),
+                    str(source_pyc),
+                    str(source_pyo),
+                )
+            )
+        )
+        before_source_scan = tuple(
+            sorted(
+                path.relative_to(cache_probe).as_posix()
+                for path in cache_probe.rglob("*")
+            )
+        )
+        assert scan_python_cache(cache_probe) == expected_cache_hits
+        after_source_scan = tuple(
+            sorted(
+                path.relative_to(cache_probe).as_posix()
+                for path in cache_probe.rglob("*")
+            )
+        )
+        assert before_source_scan == after_source_scan
+    finally:
+        shutil.rmtree(cache_probe, ignore_errors=True)
+
     probe_dir = Path(tempfile.mkdtemp(prefix="slice24_behavior_probe_"))
     try:
         dry = run_acceptance_bundle(repo, result_dir=probe_dir, require_clean_context=False, execute_required_commands=False)
@@ -75,8 +136,11 @@ def main() -> int:
     finally:
         shutil.rmtree(probe_dir, ignore_errors=True)
 
+    live_structural_probe = repo / ".slice24_structural_probe"
+    assert not live_structural_probe.exists()
     verify_result = verify_slice24_boundary(repo)
     assert verify_result.passed, verify_result.failures
+    assert not live_structural_probe.exists()
 
     print("AIWEB SLICE 24 SOURCE BEHAVIOR TEST: PASS")
     print(f"required_command_count={len(commands)}")

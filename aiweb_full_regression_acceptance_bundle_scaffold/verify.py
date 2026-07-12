@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from pathlib import Path
+import tempfile
 
 from .authority import SLICE24_PATCH_FILES, REQUIRED_BEHAVIOR_TESTS, REQUIRED_SLICE_VERIFIERS, REQUIRED_EXTERNAL_CONTEXT_CHECKS, REQUIRED_SOURCE_GUARDS, SLICE24_HARD_BOUNDARY
 from .catalog import active_required_commands, matrix_summary, classify_catalog_paths
@@ -81,7 +82,13 @@ def verify_slice24_boundary(root: str | Path) -> Slice24VerificationResult:
         if not result.passed:
             failures.extend(result.failures)
 
-    dry_result = run_acceptance_bundle(root, result_dir=root / ".slice24_structural_probe", require_clean_context=False, execute_required_commands=False)
+    with tempfile.TemporaryDirectory(prefix="slice24_structural_probe_") as temp_name:
+        dry_result = run_acceptance_bundle(
+            root,
+            result_dir=Path(temp_name),
+            require_clean_context=False,
+            execute_required_commands=False,
+        )
     if dry_result["summary"]["required_command_count"] != 45:
         failures.append("dry_acceptance_probe_required_command_count_not_45")
     if dry_result["accepted"] is not False:

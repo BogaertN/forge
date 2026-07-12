@@ -284,8 +284,12 @@ REQUIRED_EXTERNAL_CONTEXT_CHECKS = [{'acceptance_rule': 'required context check 
   'required_subject': 'Slice 22 operator console evidence view',
   'slice': 22}]
 
+MANAGED_PYTHON_ENVIRONMENT_DIR_NAMES = (".venv", "venv")
+SOURCE_TREE_PYTHON_CACHE_DIRECTORY_NAME = "__pycache__"
+SOURCE_TREE_PYTHON_CACHE_SUFFIXES = (".pyc", ".pyo")
+
 REQUIRED_SOURCE_GUARDS = [{'guard': 'forge_working_tree_clean_for_acceptance', 'required': True},
- {'guard': 'no_python_cache_before_or_after_run', 'required': True},
+ {'guard': 'no_source_tree_python_cache_before_or_after_run', 'required': True},
  {'guard': 'no_staged_files_for_acceptance_run', 'required': True},
  {'guard': 'slice24_files_have_no_model_network_memory_delivery_action_authority',
   'required': True},
