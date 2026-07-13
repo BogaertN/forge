@@ -171,13 +171,57 @@ def test_registry_mutation_is_rejected() -> None:
     registry = build_component_registry_record()
     first = registry.components[0]
 
-    altered_digest = replace(first, package_digest="0" * 64)
+    def with_recomputed_component_id(record, **changes):
+        altered = replace(record, **changes)
+        return replace(
+            altered,
+            component_registration_id=altered.expected_id(),
+        )
+
+    def with_recomputed_registry_id(record, components):
+        altered = replace(record, components=components)
+        return replace(altered, registry_id=altered.expected_id())
+
+    altered_digest = with_recomputed_component_id(
+        first,
+        package_digest="0" * 64,
+    )
     assert_invalid(
         validate_component_registration_record(altered_digest),
-        "stable_identifier_mismatch",
+        "component_identity_mismatch",
     )
 
-    runtime_enabled = replace(first, runtime_import_authorized=True)
+    altered_slice = with_recomputed_component_id(
+        first,
+        slice_ref="Slice 700",
+    )
+    assert_invalid(
+        validate_component_registration_record(altered_slice),
+        "component_identity_mismatch",
+    )
+
+    altered_count = with_recomputed_component_id(
+        first,
+        file_count=first.file_count + 1,
+    )
+    assert_invalid(
+        validate_component_registration_record(altered_count),
+        "component_identity_mismatch",
+    )
+
+    altered_scope = with_recomputed_component_id(
+        first,
+        accepted_scope=f"{first.accepted_scope} altered",
+    )
+    assert_invalid(
+        validate_component_registration_record(altered_scope),
+        "component_identity_mismatch",
+    )
+
+    runtime_enabled = with_recomputed_component_id(
+        first,
+        runtime_import_authorized=True,
+    )
     assert_invalid(
         validate_component_registration_record(runtime_enabled),
         "must_remain_false",
@@ -195,9 +239,34 @@ def test_registry_mutation_is_rejected() -> None:
         "evidence_component_not_runtime_component",
     )
 
-    duplicate_registry = replace(
+    unknown = build_component_registration_record(
+        slice_ref="Slice 999",
+        package_name="unauthorized_runtime_component",
+        package_digest="2" * 64,
+        file_count=1,
+        accepted_scope="unauthorized",
+    )
+    assert_invalid(
+        validate_component_registration_record(unknown),
+        "unrecognized_component",
+    )
+
+    tampered_components = (altered_digest,) + registry.components[1:]
+    tampered_registry = with_recomputed_registry_id(
         registry,
-        components=(registry.components[0],) + registry.components[:-1],
+        tampered_components,
+    )
+    assert_invalid(
+        validate_component_registry_record(tampered_registry),
+        "component_identity_set_or_order_mismatch",
+    )
+
+    duplicate_components = (
+        registry.components[0],
+    ) + registry.components[:-1]
+    duplicate_registry = with_recomputed_registry_id(
+        registry,
+        duplicate_components,
     )
     assert_invalid(
         validate_component_registry_record(duplicate_registry),

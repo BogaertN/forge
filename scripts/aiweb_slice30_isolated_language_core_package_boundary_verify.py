@@ -26,6 +26,12 @@ EXACT_PATHS = (
     "scripts/README_aiweb_slice30_isolated_language_core_package_boundary.md",
 )
 
+REPAIR_PATHS = (
+    "aiweb_language_core_bootstrap/component_registry.py",
+    "scripts/test_aiweb_slice30_isolated_language_core_package_boundary.py",
+    "scripts/aiweb_slice30_isolated_language_core_package_boundary_verify.py",
+)
+
 RUNTIME_FILES = tuple(
     path
     for path in EXACT_PATHS
@@ -134,12 +140,31 @@ def root_name(module: str | None) -> str:
     return module.split(".", 1)[0]
 
 
+def package_source_identity(
+    repo: Path,
+    package_name: str,
+) -> tuple[int, str]:
+    package_root = repo / package_name
+    paths = sorted(
+        path
+        for path in package_root.rglob("*")
+        if path.is_file()
+        and "__pycache__" not in path.parts
+        and not path.name.endswith((".pyc", ".pyo"))
+    )
+    payload = "".join(
+        f"{path.relative_to(repo).as_posix()}\t{sha256_file(path)}\n"
+        for path in paths
+    ).encode("utf-8")
+    return len(paths), hashlib.sha256(payload).hexdigest()
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("repo")
     parser.add_argument(
         "--mode",
-        choices=("precommit", "committed"),
+        choices=("precommit", "repair-precommit", "committed"),
         required=True,
     )
     args = parser.parse_args()
@@ -177,6 +202,17 @@ def main() -> int:
             else:
                 failures.append(
                     "precommit status mismatch: "
+                    + " | ".join(status_lines)
+                )
+        elif args.mode == "repair-precommit":
+            expected = {f" M {path}" for path in REPAIR_PATHS}
+            if set(status_lines) == expected:
+                passes.append(
+                    "repair-precommit status contains exactly three modified paths"
+                )
+            else:
+                failures.append(
+                    "repair-precommit status mismatch: "
                     + " | ".join(status_lines)
                 )
         else:
@@ -337,6 +373,29 @@ def main() -> int:
         failures.append("registry contains loaded or import-authorized component")
     else:
         passes.append("registry has 15 registered-not-loaded components")
+
+    for component in bundle.registry.components:
+        actual_count, actual_digest = package_source_identity(
+            repo,
+            component.package_name,
+        )
+        if actual_count != component.file_count:
+            failures.append(
+                "component source file count mismatch: "
+                f"{component.package_name}:"
+                f"expected={component.file_count}:actual={actual_count}"
+            )
+        elif actual_digest != component.package_digest:
+            failures.append(
+                "component source digest mismatch: "
+                f"{component.package_name}:"
+                f"expected={component.package_digest}:actual={actual_digest}"
+            )
+        else:
+            passes.append(
+                "component source identity preserved: "
+                f"{component.package_name}"
+            )
 
     print("=" * 72)
     print("AIWEB SLICE 30 ISOLATED LANGUAGE-CORE PACKAGE BOUNDARY VERIFIER")

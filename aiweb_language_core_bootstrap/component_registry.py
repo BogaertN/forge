@@ -131,6 +131,23 @@ _COMPONENT_SPECS: tuple[
     ),
 )
 
+_EXPECTED_COMPONENTS_BY_NAME = {
+    package_name: (
+        slice_ref,
+        package_name,
+        package_digest,
+        file_count,
+        accepted_scope,
+    )
+    for (
+        slice_ref,
+        package_name,
+        package_digest,
+        file_count,
+        accepted_scope,
+    ) in _COMPONENT_SPECS
+}
+
 PROHIBITED_RUNTIME_COMPONENTS = (
     "aiweb_end_to_end_dry_run_harness_scaffold",
     "aiweb_full_regression_acceptance_bundle_scaffold",
@@ -303,6 +320,29 @@ def validate_component_registration_record(
         ("main", "agents.forge", "rmc_engine_v1", "forge.rmc_engine_v1")
     ):
         issues.append(issue("package_name", "prohibited_runtime_prefix"))
+
+    if record.package_name not in _EXPECTED_COMPONENTS_BY_NAME:
+        issues.append(issue("package_name", "unrecognized_component"))
+    else:
+        expected = _EXPECTED_COMPONENTS_BY_NAME[record.package_name]
+        (
+            expected_slice_ref,
+            expected_package_name,
+            expected_package_digest,
+            expected_file_count,
+            expected_accepted_scope,
+        ) = expected
+        if record.slice_ref != expected_slice_ref:
+            issues.append(issue("slice_ref", "component_identity_mismatch"))
+        if record.package_name != expected_package_name:
+            issues.append(issue("package_name", "component_identity_mismatch"))
+        if record.package_digest != expected_package_digest:
+            issues.append(issue("package_digest", "component_identity_mismatch"))
+        if record.file_count != expected_file_count:
+            issues.append(issue("file_count", "component_identity_mismatch"))
+        if record.accepted_scope != expected_accepted_scope:
+            issues.append(issue("accepted_scope", "component_identity_mismatch"))
+
     require_false(
         field="runtime_import_authorized",
         value=record.runtime_import_authorized,
@@ -360,6 +400,24 @@ def validate_component_registry_record(
         issues.append(issue("components", "component_set_or_order_mismatch"))
     if len(package_names) != len(set(package_names)):
         issues.append(issue("components", "duplicate_component"))
+
+    actual_component_identities = tuple(
+        (
+            component.slice_ref,
+            component.package_name,
+            component.package_digest,
+            component.file_count,
+            component.accepted_scope,
+        )
+        for component in record.components
+    )
+    if actual_component_identities != _COMPONENT_SPECS:
+        issues.append(
+            issue(
+                "components",
+                "component_identity_set_or_order_mismatch",
+            )
+        )
 
     for component in record.components:
         report = validate_component_registration_record(component)
