@@ -1,0 +1,73 @@
+"""Slice 36A deterministic input-event and source-custody contract.
+
+This package is intentionally not imported by the bootstrap package root.
+Importing it performs no capture operation and creates no runtime authority.
+"""
+
+from .capture import (
+    build_input_custody_limits,
+    build_source_span,
+    capture_input_event,
+    default_input_custody_limits,
+    validate_input_condition,
+    validate_input_custody_limits,
+    validate_input_event,
+    validate_input_event_capture_result,
+    validate_source_span,
+)
+from .schema import (
+    ABSOLUTE_MAX_CODE_POINTS,
+    ABSOLUTE_MAX_RECORDED_CONDITIONS,
+    ABSOLUTE_MAX_UTF8_BYTES,
+    CUSTODY_SCHEMA_VERSION,
+    CUSTODY_SPEC_ID,
+    CUSTODY_SPEC_VERSION,
+    DEFAULT_MAX_CODE_POINTS,
+    DEFAULT_MAX_RECORDED_CONDITIONS,
+    DEFAULT_MAX_UTF8_BYTES,
+    MAX_IDENTITY_CODE_POINTS,
+    MAX_SEQUENCE_NUMBER,
+    UNICODE_DATABASE_VERSION,
+    InputConditionCategory,
+    InputConditionCode,
+    InputConditionRecord,
+    InputCustodyLimits,
+    InputCustodyStatus,
+    InputEventCaptureResult,
+    InputEventRecord,
+    SourceSpanBuildResult,
+    SourceSpanRecord,
+)
+
+__all__ = (
+    "ABSOLUTE_MAX_CODE_POINTS",
+    "ABSOLUTE_MAX_RECORDED_CONDITIONS",
+    "ABSOLUTE_MAX_UTF8_BYTES",
+    "CUSTODY_SCHEMA_VERSION",
+    "CUSTODY_SPEC_ID",
+    "CUSTODY_SPEC_VERSION",
+    "DEFAULT_MAX_CODE_POINTS",
+    "DEFAULT_MAX_RECORDED_CONDITIONS",
+    "DEFAULT_MAX_UTF8_BYTES",
+    "MAX_IDENTITY_CODE_POINTS",
+    "MAX_SEQUENCE_NUMBER",
+    "UNICODE_DATABASE_VERSION",
+    "InputConditionCategory",
+    "InputConditionCode",
+    "InputConditionRecord",
+    "InputCustodyLimits",
+    "InputCustodyStatus",
+    "InputEventCaptureResult",
+    "InputEventRecord",
+    "SourceSpanBuildResult",
+    "SourceSpanRecord",
+    "build_input_custody_limits",
+    "build_source_span",
+    "capture_input_event",
+    "default_input_custody_limits",
+    "validate_input_condition",
+    "validate_input_custody_limits",
+    "validate_input_event",
+    "validate_input_event_capture_result",
+    "validate_source_span",
+)
