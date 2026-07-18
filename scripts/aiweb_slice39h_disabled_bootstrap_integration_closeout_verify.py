@@ -1,0 +1,563 @@
+#!/usr/bin/env python3
+"""Visible independent verifier for AI.Web Slice 39H.
+
+The verifier is intentionally visible and single-process. In applied mode it
+executes the Slice 39H closeout test plus every inherited language-core test.
+Historical tests that require their accepted source context are executed in
+read-only temporary source views; the live repository is never rewritten.
+"""
+from __future__ import annotations
+
+import argparse
+import ast
+import hashlib
+import io
+import os
+from pathlib import Path, PurePosixPath
+import stat
+import subprocess
+import sys
+import tarfile
+import tempfile
+
+EXPECTED_HEAD = "dee9528a174ccbaf6914a2e526285286e7c3509f"
+EXPECTED_TREE = "877eb8ac882d054098802830f244b966c0a1f568"
+EXPECTED_SUBJECT = "Slice 39G MSM-v1 candidate integration"
+EXPECTED_COMMITTED_SUBJECT = (
+    "Slice 39H disabled bootstrap integration and Slice 39 closeout"
+)
+PRE_SLICE39G_CONTEXT_COMMIT = "e311e8960b96eff2015b7773b92b16bf2f0dc6a3"
+EXPECTED_PROTECTED_COUNT = 465
+EXPECTED_BEHAVIOR_CHECKS = 1568
+EXPECTED_MALFORMED_CASES = 49
+EXPECTED_REJECTIONS = 8
+
+PACKAGE_PATHS = (
+    "aiweb_language_core_bootstrap/disabled_candidate_meaning_bootstrap/__init__.py",
+    "aiweb_language_core_bootstrap/disabled_candidate_meaning_bootstrap/fixtures.py",
+    "aiweb_language_core_bootstrap/disabled_candidate_meaning_bootstrap/integration.py",
+    "aiweb_language_core_bootstrap/disabled_candidate_meaning_bootstrap/schema.py",
+    "aiweb_language_core_bootstrap/disabled_candidate_meaning_bootstrap/validation.py",
+)
+SCRIPT_PATHS = (
+    "scripts/AIWEB_SLICE39H_BOUNDARY_AND_CLOSEOUT_DECISION.md",
+    "scripts/AIWEB_SLICE39H_DISABLED_BOOTSTRAP_INTEGRATION_RUNTIME_SPEC.md",
+    "scripts/AIWEB_SLICE39H_EXACT_PAYLOAD_PATHS.txt",
+    "scripts/AIWEB_SLICE39H_PRE_SLICE39_RECOVERY_BASELINE.txt",
+    "scripts/AIWEB_SLICE39H_PROTECTED_SLICE35_39_PREDECESSOR_SHA256SUMS.txt",
+    "scripts/AIWEB_SLICE39_ACCEPTANCE_RECORD.md",
+    "scripts/README_aiweb_slice39h_disabled_bootstrap_integration_closeout.md",
+    "scripts/aiweb_slice39h_disabled_bootstrap_integration_closeout_verify.py",
+    "scripts/test_aiweb_slice39h_disabled_bootstrap_integration_closeout.py",
+)
+PAYLOAD_PATHS = tuple(sorted(PACKAGE_PATHS + SCRIPT_PATHS))
+EXECUTABLE_PATHS = {
+    "scripts/aiweb_slice39h_disabled_bootstrap_integration_closeout_verify.py",
+    "scripts/test_aiweb_slice39h_disabled_bootstrap_integration_closeout.py",
+}
+CURRENT_TEST = "scripts/test_aiweb_slice39h_disabled_bootstrap_integration_closeout.py"
+PRE_SLICE39G_CONTEXT_TEST = (
+    "scripts/test_aiweb_slice39b_39e_roadmap_continuity_correction.py"
+)
+SLICE38H_INHERITED_TEST = (
+    "scripts/test_aiweb_slice38h_disabled_bootstrap_integration_closeout.py"
+)
+INHERITED_TESTS = (
+    "scripts/test_aiweb_slice39g_meaning_structure_manifest_candidate_integration.py",
+    "scripts/test_aiweb_slice39f_deterministic_candidate_meaning_constructor.py",
+    "scripts/test_aiweb_slice39b_39e_roadmap_continuity_correction.py",
+    "scripts/test_aiweb_slice39e_candidate_set_alternative_preservation.py",
+    "scripts/test_aiweb_slice39d_candidate_semantic_content_assembly.py",
+    "scripts/test_aiweb_slice39c_complete_provenance_predecessor_custody.py",
+    "scripts/test_aiweb_slice39b_deterministic_validation_identity_versioning_lifecycle.py",
+    "scripts/test_aiweb_slice39a_candidate_meaning_core_schema.py",
+    "scripts/test_aiweb_slice38h_disabled_bootstrap_integration_closeout.py",
+    "scripts/test_aiweb_slice38g_predicate_role_frame_candidate_proposal.py",
+    "scripts/test_aiweb_slice38f_capability_family_references_effect_boundaries.py",
+    "scripts/test_aiweb_slice38e_predicate_frame_constraints_role_compatibility.py",
+    "scripts/test_aiweb_slice38d_participant_role_identity_registry.py",
+    "scripts/test_aiweb_slice38c_minimal_built_in_action_root_registry.py",
+    "scripts/test_aiweb_slice24_full_regression_acceptance_bundle_scaffold.py",
+    "scripts/test_aiweb_slice30_isolated_language_core_package_boundary.py",
+    "scripts/test_aiweb_slice31_disabled_bootstrap_adapter.py",
+    "scripts/test_aiweb_slice32_accepted_boundary_component_loading.py",
+    "scripts/test_aiweb_slice33_deterministic_trace_receipt_assembly.py",
+    "scripts/test_aiweb_slice34_bootstrap_regression_containment_acceptance.py",
+    "scripts/test_aiweb_slice35a_meaning_structure_manifest_core_schema.py",
+    "scripts/test_aiweb_slice35b_meaning_structure_manifest_deterministic_validation.py",
+    "scripts/test_aiweb_slice35c_meaning_structure_manifest_lifecycle_transition_law.py",
+    "scripts/test_aiweb_slice35d_meaning_structure_manifest_canonical_serialization.py",
+    "scripts/test_aiweb_slice35e_meaning_structure_manifest_bootstrap_integration_closeout.py",
+    "scripts/test_aiweb_slice36a_input_event_source_custody.py",
+    "scripts/test_aiweb_slice36b0_rsoc_fbsc_language_operator_contract.py",
+    "scripts/test_aiweb_slice36b_deterministic_source_field_projection.py",
+    "scripts/test_aiweb_slice36c_symbolic_grammar_operator_registry.py",
+    "scripts/test_aiweb_slice36d_resonant_operator_candidate_binding.py",
+    "scripts/test_aiweb_slice36e_candidate_resonant_phase_trail.py",
+    "scripts/test_aiweb_slice36f_scope_attachment_reference_constraints.py",
+    "scripts/test_aiweb_slice36g_deterministic_structural_derivation.py",
+    "scripts/test_aiweb_slice36h_bounded_bootstrap_integration_closeout.py",
+    "scripts/test_aiweb_slice37a_controlled_concept_authority_schema.py",
+    "scripts/test_aiweb_slice37b_deterministic_validation_identity_lifecycle.py",
+    "scripts/test_aiweb_slice37c_minimal_built_in_concept_registry.py",
+    "scripts/test_aiweb_slice37d_controlled_sense_exact_term_mapping_registry.py",
+    "scripts/test_aiweb_slice37e_semantic_class_relation_registry.py",
+    "scripts/test_aiweb_slice37f_structural_concept_candidate_proposal.py",
+    "scripts/test_aiweb_slice37g_disabled_integration_closeout.py",
+    "scripts/test_aiweb_slice38a_action_root_predicate_schema.py",
+    "scripts/test_aiweb_slice38b_deterministic_validation_identity_versioning_lifecycle.py",
+)
+PROHIBITED_IMPORT_ROOTS = {
+    "os", "pathlib", "subprocess", "socket", "urllib", "http", "requests",
+    "numpy", "torch", "tensorflow", "transformers", "sentence_transformers",
+    "sklearn", "chromadb", "langchain", "openai", "ollama", "faiss",
+}
+PROHIBITED_CALL_NAMES = {
+    "open", "exec", "eval", "compile", "__import__", "system", "popen",
+    "urlopen", "socket",
+}
+PROHIBITED_ATTRIBUTE_CALLS = {
+    "write_text", "write_bytes", "unlink", "mkdir", "makedirs", "rename",
+    "rmdir", "remove", "touch", "connect", "send", "recv",
+}
+
+
+class Verification:
+    def __init__(self) -> None:
+        self.passes = 0
+        self.failures: list[str] = []
+
+    def check(self, condition: object, label: str) -> None:
+        if condition is True:
+            self.passes += 1
+        else:
+            self.failures.append(label)
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def parse_manifest(path: Path) -> tuple[tuple[str, str], ...]:
+    records: list[tuple[str, str]] = []
+    seen: set[str] = set()
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line:
+            continue
+        digest, relative = line.split("  ", 1)
+        pure = PurePosixPath(relative)
+        if pure.is_absolute() or ".." in pure.parts or relative in seen:
+            raise ValueError(f"unsafe or duplicate manifest path: {relative}")
+        if len(digest) != 64 or any(ch not in "0123456789abcdef" for ch in digest):
+            raise ValueError(f"invalid SHA-256: {relative}")
+        seen.add(relative)
+        records.append((digest, relative))
+    return tuple(records)
+
+
+def git(repository: Path, *args: str) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        ["git", "-C", str(repository), *args],
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+
+
+def verify_git_state(
+    repository: Path,
+    mode: str,
+    verification: Verification,
+) -> None:
+    head = git(repository, "rev-parse", "HEAD")
+    tree = git(repository, "rev-parse", "HEAD^{tree}")
+    subject = git(repository, "show", "-s", "--format=%s", "HEAD")
+    staged = git(repository, "diff", "--cached", "--name-only")
+    tracked = git(repository, "diff", "--name-only")
+    untracked = git(repository, "ls-files", "--others", "--exclude-standard")
+    verification.check(
+        all(item.returncode == 0 for item in (head, tree, subject, staged, tracked, untracked)),
+        "Git inspection",
+    )
+    if mode == "applied":
+        verification.check(head.stdout.strip() == EXPECTED_HEAD, "applied head")
+        verification.check(tree.stdout.strip() == EXPECTED_TREE, "applied tree")
+        verification.check(subject.stdout.strip() == EXPECTED_SUBJECT, "applied subject")
+        verification.check(not staged.stdout.strip(), "applied staged paths zero")
+        verification.check(not tracked.stdout.strip(), "applied tracked modifications zero")
+        actual = tuple(sorted(line for line in untracked.stdout.splitlines() if line))
+        verification.check(actual == PAYLOAD_PATHS, "applied exact untracked payload")
+    elif mode == "committed":
+        parent = git(repository, "rev-parse", "HEAD^")
+        committed = git(
+            repository,
+            "diff-tree", "--no-commit-id", "--name-only", "-r", "HEAD",
+        )
+        actual = tuple(sorted(line for line in committed.stdout.splitlines() if line))
+        verification.check(
+            parent.returncode == 0 and parent.stdout.strip() == EXPECTED_HEAD,
+            "committed parent",
+        )
+        verification.check(
+            subject.stdout.strip() == EXPECTED_COMMITTED_SUBJECT,
+            "committed subject",
+        )
+        verification.check(
+            committed.returncode == 0 and actual == PAYLOAD_PATHS,
+            "committed exact payload paths",
+        )
+        verification.check(
+            not staged.stdout.strip() and not tracked.stdout.strip() and not untracked.stdout.strip(),
+            "committed repository clean",
+        )
+
+
+def static_source_checks(repository: Path, verification: Verification) -> None:
+    package = repository / "aiweb_language_core_bootstrap" / "disabled_candidate_meaning_bootstrap"
+    files = tuple(sorted(package.glob("*.py")))
+    verification.check(
+        tuple(path.name for path in files)
+        == ("__init__.py", "fixtures.py", "integration.py", "schema.py", "validation.py"),
+        "exact Slice 39H package files",
+    )
+    for path in files:
+        try:
+            text = path.read_text(encoding="utf-8")
+            tree = ast.parse(text, filename=str(path))
+        except Exception as error:
+            verification.check(False, f"AST parse {path.name}: {error}")
+            continue
+        roots: set[str] = set()
+        for node in ast.walk(tree):
+            if isinstance(node, ast.Import):
+                roots.update(alias.name.split(".", 1)[0] for alias in node.names)
+            elif isinstance(node, ast.ImportFrom) and node.module and node.level == 0:
+                roots.add(node.module.split(".", 1)[0])
+            elif isinstance(node, ast.Call):
+                if isinstance(node.func, ast.Name):
+                    verification.check(
+                        node.func.id not in PROHIBITED_CALL_NAMES,
+                        f"no direct side-effect call {path.name}:{node.func.id}",
+                    )
+                elif isinstance(node.func, ast.Attribute):
+                    verification.check(
+                        node.func.attr not in PROHIBITED_ATTRIBUTE_CALLS,
+                        f"no attribute side-effect call {path.name}:{node.func.attr}",
+                    )
+        verification.check(
+            not (roots & PROHIBITED_IMPORT_ROOTS),
+            f"no prohibited import root {path.name}",
+        )
+
+
+def parse_single_integer_marker(output: str, key: str) -> int | None:
+    prefix = f"{key}="
+    values: list[int] = []
+    for line in output.splitlines():
+        if line.startswith(prefix):
+            try:
+                values.append(int(line[len(prefix):]))
+            except ValueError:
+                return None
+    return values[0] if len(values) == 1 else None
+
+
+def stream_test(
+    command: list[str],
+    *,
+    cwd: Path,
+    env: dict[str, str],
+) -> tuple[int, str]:
+    process = subprocess.Popen(
+        command,
+        cwd=str(cwd),
+        env=env,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        bufsize=1,
+    )
+    output: list[str] = []
+    assert process.stdout is not None
+    for line in process.stdout:
+        print(line, end="", flush=True)
+        output.append(line)
+    return process.wait(), "".join(output)
+
+
+def stream_source_only_inherited_test(
+    repository: Path,
+    relative: str,
+    *,
+    env: dict[str, str],
+    verification: Verification,
+) -> tuple[int, str]:
+    with tempfile.TemporaryDirectory(prefix="aiweb_slice39h_inherited_") as temporary:
+        source_only_repository = Path(temporary)
+        try:
+            os.symlink(
+                repository / "aiweb_language_core_bootstrap",
+                source_only_repository / "aiweb_language_core_bootstrap",
+                target_is_directory=True,
+            )
+            os.symlink(
+                repository / "scripts",
+                source_only_repository / "scripts",
+                target_is_directory=True,
+            )
+        except OSError as error:
+            verification.check(False, "source-only inherited view creation")
+            return 1, f"FAIL: source-only view creation: {error}\n"
+        verification.check(
+            not (source_only_repository / ".git").exists(),
+            "source-only inherited Git metadata absent",
+        )
+        command = [
+            sys.executable,
+            "-B",
+            str(source_only_repository / relative),
+            str(source_only_repository),
+        ]
+        print("execution_context=source_only_inherited")
+        print(f"source_only_repository={source_only_repository}")
+        print(f"command={' '.join(command)}")
+        return stream_test(command, cwd=source_only_repository, env=env)
+
+
+def stream_pre_slice39g_context_test(
+    repository: Path,
+    relative: str,
+    *,
+    env: dict[str, str],
+    verification: Verification,
+) -> tuple[int, str]:
+    archive = subprocess.run(
+        ["git", "-C", str(repository), "archive", "--format=tar", PRE_SLICE39G_CONTEXT_COMMIT],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if archive.returncode != 0:
+        verification.check(False, "pre-Slice39G archive creation")
+        return 1, archive.stderr.decode("utf-8", errors="replace")
+    with tempfile.TemporaryDirectory(prefix="aiweb_slice39h_pre39g_") as temporary:
+        source_only_repository = Path(temporary)
+        try:
+            with tarfile.open(fileobj=io.BytesIO(archive.stdout), mode="r:") as handle:
+                members = handle.getmembers()
+                for member in members:
+                    pure = PurePosixPath(member.name)
+                    if pure.is_absolute() or ".." in pure.parts or member.issym() or member.islnk():
+                        raise ValueError(f"unsafe archive member: {member.name}")
+                handle.extractall(source_only_repository)
+        except Exception as error:
+            verification.check(False, "pre-Slice39G archive extraction")
+            return 1, f"FAIL: pre-Slice39G extraction: {error}\n"
+        verification.check(
+            not (source_only_repository / ".git").exists(),
+            "pre-Slice39G context Git metadata absent",
+        )
+        command = [
+            sys.executable,
+            "-B",
+            str(source_only_repository / relative),
+            str(source_only_repository),
+        ]
+        print("execution_context=accepted_pre_slice39g_source")
+        print(f"accepted_commit={PRE_SLICE39G_CONTEXT_COMMIT}")
+        print(f"source_only_repository={source_only_repository}")
+        print(f"command={' '.join(command)}")
+        return stream_test(command, cwd=source_only_repository, env=env)
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("repository")
+    parser.add_argument(
+        "--mode",
+        choices=("source", "applied", "committed"),
+        default="source",
+    )
+    args = parser.parse_args()
+    repository = Path(args.repository).resolve()
+    verification = Verification()
+
+    print("AI.WEB SLICE 39H VISIBLE INDEPENDENT VERIFIER")
+    print(f"repository={repository}")
+    print(f"mode={args.mode}")
+    print("hidden_test_workers=0")
+    print("test_output_suppression=0")
+
+    verification.check(repository.is_dir(), "repository exists")
+    verification.check(len(PAYLOAD_PATHS) == 14, "payload count 14")
+    verification.check(len(PAYLOAD_PATHS) == len(set(PAYLOAD_PATHS)), "payload unique")
+
+    protected_path = (
+        repository / "scripts" / "AIWEB_SLICE39H_PROTECTED_SLICE35_39_PREDECESSOR_SHA256SUMS.txt"
+    )
+    try:
+        protected = parse_manifest(protected_path)
+    except Exception as error:
+        verification.check(False, f"protected manifest parse: {error}")
+        protected = ()
+    verification.check(len(protected) == EXPECTED_PROTECTED_COUNT, "protected predecessor count")
+    for digest, relative in protected:
+        path = repository / relative
+        verification.check(
+            path.is_file() and not path.is_symlink(),
+            f"protected predecessor exists {relative}",
+        )
+        if path.is_file() and not path.is_symlink():
+            verification.check(
+                sha256_file(path) == digest,
+                f"protected predecessor hash {relative}",
+            )
+
+    for relative in PAYLOAD_PATHS:
+        path = repository / relative
+        verification.check(
+            path.is_file() and not path.is_symlink(),
+            f"payload exists {relative}",
+        )
+        if path.is_file() and not path.is_symlink():
+            expected_mode = 0o755 if relative in EXECUTABLE_PATHS else 0o644
+            verification.check(
+                stat.S_IMODE(path.stat().st_mode) == expected_mode,
+                f"payload mode {relative}",
+            )
+
+    exact_path_file = repository / "scripts" / "AIWEB_SLICE39H_EXACT_PAYLOAD_PATHS.txt"
+    exact_paths = tuple(
+        sorted(line for line in exact_path_file.read_text(encoding="utf-8").splitlines() if line)
+    )
+    verification.check(exact_paths == PAYLOAD_PATHS, "exact payload path authority")
+
+    if args.mode != "source":
+        verify_git_state(repository, args.mode, verification)
+    static_source_checks(repository, verification)
+
+    inherited = () if args.mode == "source" else INHERITED_TESTS
+    tests = (CURRENT_TEST, *inherited)
+    env = os.environ.copy()
+    env["PYTHONDONTWRITEBYTECODE"] = "1"
+    env["PYTHONUNBUFFERED"] = "1"
+    env.pop("PYTHONPYCACHEPREFIX", None)
+
+    test_failures = 0
+    observed_checks: int | None = None
+    observed_malformed: int | None = None
+    observed_rejections: int | None = None
+    current_output = ""
+
+    for index, relative in enumerate(tests, 1):
+        print()
+        print(f"=== VISIBLE TEST {index} OF {len(tests)} ===")
+        print(f"path={relative}")
+        print("output_begins_below")
+        if relative == PRE_SLICE39G_CONTEXT_TEST:
+            return_code, output = stream_pre_slice39g_context_test(
+                repository,
+                relative,
+                env=env,
+                verification=verification,
+            )
+        elif relative == SLICE38H_INHERITED_TEST:
+            return_code, output = stream_source_only_inherited_test(
+                repository,
+                relative,
+                env=env,
+                verification=verification,
+            )
+        else:
+            command = [
+                sys.executable,
+                "-B",
+                str(repository / relative),
+                str(repository),
+            ]
+            print(f"command={' '.join(command)}")
+            return_code, output = stream_test(command, cwd=repository, env=env)
+        print("output_ended_above")
+        print(f"return_code={return_code}")
+        verification.check(return_code == 0, f"test passed {relative}")
+        if return_code != 0:
+            test_failures += 1
+        if relative == CURRENT_TEST:
+            current_output = output
+            observed_checks = parse_single_integer_marker(output, "check_count")
+            observed_malformed = parse_single_integer_marker(output, "malformed_validation_cases")
+            observed_rejections = parse_single_integer_marker(output, "explicit_rejection_cases")
+
+    verification.check(observed_checks == EXPECTED_BEHAVIOR_CHECKS, "behavior check count")
+    verification.check(observed_malformed == EXPECTED_MALFORMED_CASES, "malformed case count")
+    verification.check(observed_rejections == EXPECTED_REJECTIONS, "rejection count")
+    required_markers = (
+        "AI.WEB SLICE 39H BEHAVIOR TEST: PASS",
+        "fixture_count=5",
+        "deterministic_repeat_count=5",
+        "zero_candidate_result_reproducibility=1",
+        "one_candidate_result_reproducibility=1",
+        "multi_candidate_result_reproducibility=1",
+        "missing_role_preservation=1",
+        "unknown_concept_preservation=1",
+        "unknown_predicate_preservation=1",
+        "conflicting_role_preservation=1",
+        "exact_staged_path_containment=1",
+        "pre_slice39_tree_recovery=1",
+        "selected_meaning_created=0",
+        "gate_outcome_created=0",
+        "truth_evidence_permission=0",
+        "route_tool_action_memory_rendering_delivery=0",
+        "final_slice39_acceptance_record_created=1",
+    )
+    for marker in required_markers:
+        verification.check(marker in current_output, f"behavior marker {marker}")
+
+    print()
+    print("=== SLICE 39H VERIFIER SUMMARY ===")
+    print(f"pass_count={verification.passes}")
+    print(f"failure_count={len(verification.failures)}")
+    for failure in verification.failures:
+        print(f"FAIL: {failure}")
+
+    if verification.failures or test_failures:
+        print("SLICE 39H VISIBLE INDEPENDENT VERIFIER: FAIL")
+        return 1
+
+    print("SLICE 39H VISIBLE INDEPENDENT VERIFIER: PASS")
+    print("protected_predecessor_files=465")
+    print(f"inherited_tests={len(inherited)}")
+    print(f"visible_total_tests={len(tests)}")
+    print("slice39h_files=14")
+    print(f"behavior_checks={observed_checks}")
+    print(f"malformed_validation_cases={observed_malformed}")
+    print(f"explicit_rejection_cases={observed_rejections}")
+    print("fixture_count=5")
+    print("deterministic_repeat_count=5")
+    print("zero_candidate_result_reproducibility=1")
+    print("one_candidate_result_reproducibility=1")
+    print("multi_candidate_result_reproducibility=1")
+    print("missing_role_preservation=1")
+    print("unknown_concept_preservation=1")
+    print("unknown_predicate_preservation=1")
+    print("conflicting_role_preservation=1")
+    print("exact_staged_path_containment=1")
+    print("pre_slice39_tree_recovery=1")
+    print("selected_meaning_created=0")
+    print("gate_outcome_created=0")
+    print("truth_evidence_permission_execution=0")
+    print("route_tool_action_memory_rendering_delivery=0")
+    print("final_slice39_acceptance_record_created=1")
+    print("hidden_test_workers=0")
+    print("test_output_suppression=0")
+    print("RESULT=PASS")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
