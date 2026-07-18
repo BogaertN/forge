@@ -1,0 +1,13 @@
+AI.Web Slice 38H Pre-Slice-38 Recovery Baseline
+
+Pre-Slice-38 commit: f891a33487ea8bc811243627f1d834be7a43f972
+Pre-Slice-38 tree:   f087c3f6cec8caecc19539628b1d4ab08b4918c1
+Baseline subject:    Slice 37G disabled integration and Slice 37 closeout
+
+Recovery proof requirements:
+1. Use a separate disposable local clone.
+2. Verify the commit object exists.
+3. Check out the exact commit in detached state inside that clone.
+4. Verify the resulting tree equals the exact tree above.
+5. Do not mutate, reset, rebase, amend or check out the live repository.
+6. Do not treat recoverability as runtime rollback authority.
