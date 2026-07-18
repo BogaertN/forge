@@ -58,10 +58,15 @@ SLICE39D_PERMANENT_BOUNDARIES = (
 )
 
 SLICE39D_DEFERRED_SCOPE = (
-    "candidate-set and alternative preservation",
+    "Slice 39E candidate-set and alternative preservation",
+    "Slice 39F deterministic CandidateMeaning state construction",
+    "Slice 39F deterministic construction receipt",
+    "Slice 39G MeaningStructureManifestV1 candidate integration",
+    "Slice 39H disabled bootstrap integration",
+    "Slice 39H final Slice 39 closeout",
     "candidate ranking",
     "candidate selection",
-    "verbal cognition gate evaluation",
+    "Slice 40 verbal cognition gate evaluation",
     "clarification question emission",
     "refusal and blocked progression",
     "selected governed meaning",

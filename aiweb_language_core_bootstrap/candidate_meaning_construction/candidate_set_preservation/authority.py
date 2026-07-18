@@ -43,7 +43,12 @@ SLICE39E_PERMANENT_BOUNDARIES = (
 )
 
 SLICE39E_DEFERRED_SCOPE = (
-    "expectancy gate",
+    "Slice 39F deterministic CandidateMeaning state construction",
+    "Slice 39F deterministic construction receipt",
+    "Slice 39G MeaningStructureManifestV1 candidate integration",
+    "Slice 39H disabled bootstrap integration",
+    "Slice 39H final Slice 39 closeout",
+    "Slice 40 expectancy gate",
     "congruity gate",
     "connectedness gate",
     "recoverable-purpose gate",

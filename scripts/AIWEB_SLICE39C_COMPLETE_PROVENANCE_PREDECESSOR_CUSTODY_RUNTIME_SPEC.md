@@ -8,37 +8,38 @@
 
 ## Inputs
 
-The public binder requires exact accepted instances of the eight predecessor results:
-
-1. input-event custody;
-2. source-field projection;
-3. resonant operator candidate binding;
-4. candidate resonant phase trails;
-5. scope, attachment, and reference constraints;
-6. deterministic structural derivation;
-7. structural concept/sense candidate proposal;
-8. predicate-role-frame candidate proposal.
+The public binder requires exact accepted instances of the eight predecessor
+results: input-event custody, source-field projection, resonant operator
+candidate binding, candidate resonant phase trails, scope/attachment/reference
+constraints, deterministic structural derivation, structural concept/sense
+candidate proposal, and predicate-role-frame candidate proposal.
 
 ## Custody proof
 
-For a non-empty Slice 38 candidate set, the binder:
+For a non-empty Slice 38 candidate set, the binder validates every predecessor,
+proves one exact source event and checksum, reconstructs every claimed source
+span, proves structural/operator/phase/scope ancestry, verifies admitted Slice 37
+and Slice 38 registry identities, preserves registry snapshot versions, builds
+an eight-stage receipt inventory, and derives deterministic provenance, lineage,
+custody, digest, and result identities.
 
-- validates every predecessor using its accepted validator;
-- proves one exact source event and checksum across the chain;
-- reconstructs every claimed source span from the original immutable input;
-- proves exact structural rule and operator application ancestry;
-- proves phase-trail, scope, attachment, and reference ancestry;
-- verifies concept, sense, action-root, predicate, participant-role, frame, effect-boundary, capability-family, frame-effect, and frame-capability identities against the admitted static registries;
-- preserves exact registry snapshot IDs and resource versions;
-- builds an eight-stage chained receipt inventory;
-- derives deterministic provenance, lineage, custody, digest, and result identities.
-
-A valid zero-candidate Slice 38 result returns `NO_CANDIDATE_PREDECESSOR` without manufacturing ancestry. A valid candidate with no capability reference preserves an exact empty capability ancestry.
+A valid zero-candidate Slice 38 result returns `NO_CANDIDATE_PREDECESSOR` without
+manufacturing ancestry. A valid candidate with no capability reference preserves
+an exact empty capability ancestry.
 
 ## Rejection law
 
-The binder fails closed for missing predecessor records, mismatched sources, mixed snapshots, fabricated spans, roles, or frames, cross-lineage merges, generated substitute ancestry, invalid versions, malformed identifiers, broken receipt chains, or downstream-authority flags.
+The binder fails closed for missing predecessor records, mismatched sources,
+mixed snapshots, fabricated spans, roles or frames, cross-lineage merges,
+generated substitute ancestry, invalid versions, malformed identifiers, broken
+receipt chains, or downstream-authority flags.
 
-## Non-authority
+## Non-authority and continuation
 
-No semantic payload construction occurs in Slice 39C. All selection, gate, truth, evidence, permission, route, action, memory, rendering, and delivery fields remain false.
+No semantic payload construction occurs in Slice 39C. All selection, gate,
+truth, evidence, permission, route, action, memory, rendering, and delivery
+fields remain false.
+
+The exact continuation is 39D content assembly, 39E set preservation, 39F actual
+CandidateMeaning construction, 39G MSM-v1 candidate custody, 39H disabled
+bootstrap integration and Slice 39 closeout, and only then Slice 40 gates.

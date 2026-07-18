@@ -34,11 +34,14 @@ SLICE39C_PERMANENT_BOUNDARIES = (
 )
 
 SLICE39C_DEFERRED_SCOPE = (
-    "candidate semantic payload construction",
-    "candidate-set construction",
-    "candidate ranking",
-    "candidate selection",
-    "verbal cognition gates",
+    "Slice 39D candidate semantic payload construction",
+    "Slice 39E candidate-set and alternative preservation",
+    "Slice 39F deterministic CandidateMeaning state construction",
+    "Slice 39F deterministic construction receipt",
+    "Slice 39G MeaningStructureManifestV1 candidate integration",
+    "Slice 39H disabled bootstrap integration",
+    "Slice 39H final Slice 39 closeout",
+    "Slice 40 verbal cognition gates",
     "selected meaning",
     "truth determination",
     "evidence validation",

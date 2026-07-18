@@ -2,40 +2,57 @@
 
 ## Purpose
 
-Provide an immutable, deterministic, fail-closed representation of candidate sets assembled from exact accepted Slice 39D candidate semantic-content results.
+Provide an immutable, deterministic, fail-closed representation of candidate
+sets assembled from exact accepted Slice 39D semantic-content results. This
+representation is input custody for Slice 39F; it is not itself a completed
+CandidateMeaning constructor result.
 
 ## Input contract
 
-The public constructor accepts one exact tuple of zero or more `CandidateSemanticContentAssemblyResult` records and the exact canonical Slice 39E profile. Every nonempty member must validate under Slice 39D, have status `ASSEMBLED`, contain its exact assembly, and share one source event and source checksum with every other member.
+The public constructor accepts one exact tuple of zero or more
+`CandidateSemanticContentAssemblyResult` records and the exact canonical Slice
+39E profile. Every nonempty member must validate under Slice 39D, have status
+`ASSEMBLED`, contain its exact assembly, and share one source event and source
+checksum with every other member.
 
 ## Zero, one, and many
 
-An empty input creates a real `ZERO_CANDIDATES` set with no fabricated source identity. One input creates a `ONE_CANDIDATE` set while leaving selection false. Two or more input occurrences create `MULTIPLE_CANDIDATES` while leaving ambiguity and selection false.
+An empty input creates a real `ZERO_CANDIDATES` set with no fabricated source
+identity. One input creates `ONE_CANDIDATE` while leaving selection false. Two
+or more input occurrences create `MULTIPLE_CANDIDATES` while leaving ambiguity
+and selection false.
 
-## Ordering
+## Ordering and exact duplicates
 
-Candidate records are ordered only by their exact deterministic Slice 39D canonical digest and result identity. This ordering exists for reproducibility and identity generation. It is never a rank, score, preference, tie-break, or evaluation.
+Ordering uses only exact deterministic Slice 39D canonical digest and result
+identity for reproducibility. It is never rank, score, preference, tie-break, or
+evaluation. Exact duplicate records remain visible through deterministic member
+and duplicate-group custody and are never silently erased.
 
-## Exact duplicates
+## Alternatives, ancestry, and candidate-specific custody
 
-An exact duplicate is an input occurrence with the same valid Slice 39D result identity as another occurrence. Unique candidate records are stored once by exact identity, while every input occurrence receives a deterministic member record and occurrence index. Duplicate groups state the primary occurrence, every duplicate member, total occurrence count, and `silently_collapsed=False`.
+Every pair of unique records receives one exact-difference alternative
+reference with `ambiguity_determined=False`. Shared ancestry preserves common
+source and exact intersections without merging lineages. Limitations, missing
+roles, conflicts, effect boundaries, and capability references remain attached
+to the candidate that carried them.
 
-## Material alternative references
+## Failure and side-effect boundary
 
-Each pair of unique candidate records receives one alternative reference. The reference lists exact fields whose governed payload or provenance differs. `materially_distinct_by_exact_content=True` means exact deterministic candidate identity differs; `ambiguity_determined=False` remains mandatory.
+Wrong types, malformed Slice 39D records, mixed source custody, profile
+substitution, identity/count/mapping changes, silent collapse, ranking,
+confidence, preference, selection, tie-breaking, ambiguity resolution, gate
+creation, or downstream authority mutation fail closed.
 
-## Shared ancestry
+The runtime performs no filesystem or network access, external-resource loading,
+model calls, embeddings, similarity, route creation, action, memory access,
+rendering, or delivery.
 
-One shared-ancestry record preserves the common source event and checksum, all distinct lineage identities, and exact intersections of source spans, structural ancestry, operator definitions, concept and sense candidates, action/predicate candidates, role-layout candidates, and predecessor receipts. `lineages_merged=False` is permanent.
+## Exact continuation
 
-## Candidate-specific custody
+Slice 39E does not end Slice 39. The required continuation is:
 
-Every member separately retains limitations, missing-role references, conflicting-role references, effect-boundary references, and capability-reference candidates from its own Slice 39D content. Set construction may not move, union, erase, or substitute those records across candidates.
-
-## Failure behavior
-
-Wrong types, malformed Slice 39D records, non-assembled results, mixed source events, mixed source checksums, profile substitutions, identity mismatches, count mismatches, mapping changes, silent duplicate collapse, ranking, confidence, preference, selection, tie-breaking, ambiguity resolution, ambiguous-state creation, or downstream authority mutations fail closed into a typed rejected result or fail independent validation.
-
-## Side-effect boundary
-
-The runtime performs no filesystem reads or writes, network access, external-resource loading, language-model calls, embeddings, semantic similarity, route creation, action, memory access, rendering, or delivery.
+1. Slice 39F — deterministic CandidateMeaning constructor and construction receipt;
+2. Slice 39G — candidate-side MeaningStructureManifestV1 integration;
+3. Slice 39H — disabled bootstrap integration and Slice 39 closeout;
+4. Slice 40 — verbal-cognition gates, only after 39H acceptance.

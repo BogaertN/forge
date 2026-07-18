@@ -23,12 +23,10 @@ The accepted Slice 39A parent files and exports remain unchanged.
 
 ## Deterministic identity law
 
-The canonical `candidate_meaning_id` is derived only from:
-
-1. the exact canonical `CandidateMeaningContent` body, excluding only its own
-   circular `content_id`; and
-2. the exact canonical `CandidateMeaningProvenance` body, excluding only its
-   own circular `provenance_id`.
+The canonical `candidate_meaning_id` is derived only from the exact canonical
+`CandidateMeaningContent` body, excluding only its own circular `content_id`,
+and the exact canonical `CandidateMeaningProvenance` body, excluding only its
+own circular `provenance_id`.
 
 Candidate semantic identity does not read or include timestamps, random values,
 process identifiers, filesystem state, environment variables, platform state,
@@ -52,62 +50,21 @@ Slice 39B declares one exact field order for each supported record type:
 - CandidateMeaningLifecycleTransitionRecord
 - CandidateMeaningGovernanceBundle
 
-Strict field-pair canonicalization rejects:
-
-- duplicate fields;
-- unknown fields;
-- missing fields;
-- unsupported record types;
-- malformed field-pair structures.
-
-No dictionary insertion order or unordered set traversal becomes identity
-authority.
+Strict field-pair canonicalization rejects duplicate, unknown, missing, or
+unsupported fields and malformed field-pair structures. No dictionary insertion
+order or unordered set traversal becomes identity authority.
 
 ## Schema and version custody
 
-`CandidateMeaningVersionCustody` preserves exact custody of:
+`CandidateMeaningVersionCustody` preserves exact custody of the Slice 39A schema,
+all record schema identities, candidate version, construction profile, Slice 37
+and Slice 38 registry snapshots, compatibility-registry snapshot, canonical
+field-order version, and SHA-256 digest algorithm.
 
-- Slice 39A schema version;
-- identity, content, provenance, alternative-reference, construction-receipt,
-  and state schema identities;
-- candidate version;
-- construction-profile identity and version;
-- Slice 37 registry snapshot identity and version;
-- Slice 38 registry snapshot identity and version;
-- compatibility-registry snapshot identity and version;
-- canonical field-order version;
-- SHA-256 digest algorithm.
+## Validation and lifecycle law
 
-Versions must use canonical `vN`, `vN.N`, or `vN.N.N` form without leading
-zeroes.
-
-## Validation law
-
-Validation is pure, deterministic, and fail-closed.
-
-It rejects:
-
-- malformed identifiers;
-- malformed SHA-256 values;
-- malformed versions;
-- duplicate tuple members;
-- empty required ancestry;
-- mismatched content, provenance, receipt, state, custody, lifecycle, and bundle
-  identities;
-- mismatched registry snapshot custody;
-- duplicated lifecycle records or transitions;
-- non-deterministic identity inputs;
-- any gate, selection, truth, evidence, permission, route, invocation, action,
-  memory, rendering, or delivery authority.
-
-Required minimum ancestry includes source spans, structural candidates,
-structural ancestry, constrained trails, phase trails, operator graphs,
-operator nodes, operator definitions, operator-key/version pairs, scope
-occurrences, and predecessor receipts.
-
-## Lifecycle law
-
-The closed construction lifecycle stages are:
+Validation is pure, deterministic, and fail-closed. The closed construction
+lifecycle stages are:
 
 1. `schema_declared`
 2. `provenance_bound`
@@ -117,33 +74,33 @@ The closed construction lifecycle stages are:
 6. `construction_incomplete`
 7. `predecessor_invalid`
 
-The closed transition matrix permits only the explicit transitions recorded in
-`CANDIDATE_MEANING_LIFECYCLE_TRANSITION_RULES`.
+Automatic lifecycle progression is prohibited. Lifecycle progression is not
+gate progression.
 
-Automatic lifecycle progression is prohibited.
-
-Lifecycle progression is not gate progression. The lifecycle layer cannot
-create selected meaning, ambiguity disposition, clarification-required state,
-refusal, blocked progression, truth, evidence validity, permission, routes,
-invocation, action, memory access, rendering, or delivery.
-
-## Deferred scope
+## Exact deferred scope
 
 Slice 39B does not:
 
 - complete predecessor binding owned by Slice 39C;
 - assemble semantic payloads owned by Slice 39D;
-- create candidate sets or alternative ranking owned by Slice 39E;
-- construct candidates at runtime;
-- adapt records into MSM-v1;
-- evaluate verbal-cognition gates;
+- preserve candidate sets and alternatives owned by Slice 39E;
+- construct actual CandidateMeaning states or construction receipts at runtime, owned by Slice 39F;
+- integrate constructed candidates into MeaningStructureManifestV1, owned by Slice 39G;
+- connect the constructor to the disabled bootstrap or close Slice 39, owned by Slice 39H;
+- evaluate verbal-cognition gates, owned by Slice 40;
 - select meaning;
 - install routes, tools, actions, memory, rendering, or delivery.
+
+Slice 40 is not the successor of Slice 39E. Slice 40 remains blocked until Slice
+39F, Slice 39G, and the Slice 39H closeout are accepted.
 
 ## Zero-effect result
 
 ```text
 runtime constructor installed = 0
+MSM candidate integration installed = 0
+Slice 39 bootstrap integration installed = 0
+Slice 39 closeout created = 0
 candidate ranking installed = 0
 gate engine installed = 0
 selected meaning installed = 0

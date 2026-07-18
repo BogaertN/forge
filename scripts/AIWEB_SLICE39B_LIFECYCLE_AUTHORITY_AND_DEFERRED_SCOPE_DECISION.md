@@ -2,8 +2,8 @@
 
 ## Decision
 
-Slice 39B is accepted for implementation only as an isolated deterministic
-governance layer around the committed Slice 39A record family.
+Slice 39B is accepted only as an isolated deterministic governance layer around
+the committed Slice 39A record family.
 
 It may calculate canonical identities, preserve exact schema and registry
 snapshot versions, validate immutable records, reject malformed or
@@ -31,11 +31,17 @@ The four committed Slice 39A package files remain byte-for-byte unchanged.
 Slice 39B is a child subpackage and is not auto-imported by the Slice 39A
 parent package.
 
-## Later authority
+## Exact deferred sequence
 
-Slice 39C remains the owner of complete predecessor and provenance custody.
-Slice 39D remains the owner of semantic content assembly.
-Slice 39E remains the owner of candidate-set and alternative preservation.
-Slice 40 remains the owner of verbal-cognition gate outcomes.
+The binding continuation after Slice 39B is:
 
-No later authority is pulled forward by this increment.
+1. Slice 39C — complete provenance and predecessor custody;
+2. Slice 39D — candidate semantic-content assembly;
+3. Slice 39E — candidate-set and alternative preservation;
+4. Slice 39F — deterministic construction of actual in-memory CandidateMeaning states and construction receipts;
+5. Slice 39G — candidate-side MeaningStructureManifestV1 custody integration;
+6. Slice 39H — disabled bootstrap integration and final Slice 39 closeout;
+7. Slice 40 — verbal-cognition gate evaluation.
+
+Slice 39B does not own any authority assigned to 39C through 39H or Slice 40.
+Slice 40 is blocked until the accepted Slice 39H closeout exists.
