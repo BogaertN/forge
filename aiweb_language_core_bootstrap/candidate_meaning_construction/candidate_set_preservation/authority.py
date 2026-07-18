@@ -1,0 +1,71 @@
+"""Slice 39E candidate-set authority boundaries."""
+
+SLICE39E_REQUIRED_BEHAVIOR = (
+    "zero candidates preserved explicitly",
+    "one candidate preserved without selection",
+    "multiple candidates preserved independently",
+    "deterministic ordering",
+    "exact duplicate detection",
+    "duplicate occurrences preserved explicitly",
+    "material alternative references",
+    "shared ancestry preservation",
+    "candidate-specific limitations",
+    "candidate-specific missing roles",
+    "candidate-specific conflicts",
+    "candidate-specific effect boundaries",
+    "candidate-specific capability references",
+)
+
+SLICE39E_PERMANENT_BOUNDARIES = (
+    "candidate set is custody, not evaluation",
+    "candidate existence is not candidate selection",
+    "one candidate is not automatically selected",
+    "multiple candidates do not automatically create ambiguity",
+    "exact duplicate detection is not semantic similarity",
+    "duplicate detection does not silently erase occurrences",
+    "material alternative means exact governed content differs",
+    "material alternative is not AmbiguousMeaningState",
+    "deterministic order is not ranking",
+    "position is not score, preference, or confidence",
+    "shared ancestry is not lineage merger",
+    "candidate-specific limitation remains attached to its candidate",
+    "candidate-specific missing role remains attached to its candidate",
+    "candidate-specific conflict remains attached to its candidate",
+    "candidate-specific effect boundary remains attached to its candidate",
+    "candidate-specific capability reference remains attached to its candidate",
+    "candidate set does not choose a best, preferred, nearest, or winning candidate",
+    "candidate set does not break ties",
+    "candidate set does not resolve ambiguity",
+    "candidate set does not evaluate verbal cognition gates",
+    "candidate set does not determine truth or evidence",
+    "candidate set does not grant permission",
+    "candidate set performs no route, action, memory, rendering, or delivery effect",
+)
+
+SLICE39E_DEFERRED_SCOPE = (
+    "expectancy gate",
+    "congruity gate",
+    "connectedness gate",
+    "recoverable-purpose gate",
+    "material ambiguity determination",
+    "AmbiguousMeaningState creation",
+    "clarification-required decision",
+    "candidate rejection or holding",
+    "candidate selection",
+    "selected meaning",
+    "truth determination",
+    "evidence validation",
+    "permission",
+    "capability availability",
+    "routing",
+    "tool or action execution",
+    "memory access",
+    "rendering",
+    "delivery",
+)
+
+__all__ = (
+    "SLICE39E_DEFERRED_SCOPE",
+    "SLICE39E_PERMANENT_BOUNDARIES",
+    "SLICE39E_REQUIRED_BEHAVIOR",
+)
