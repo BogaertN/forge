@@ -257,7 +257,24 @@ def validate_evaluation_input(value: object) -> GateCompositionValidationReport:
     result_ids = tuple(result.result_id for result in results)
     if len(set(result_ids)) != 4:
         issues.append(_issue("evaluation_input.family_results", GateCompositionValidationCode.DUPLICATE_ID, "four unique family result ids required"))
-    _tuple_text(value.family_candidate_input_refs, "evaluation_input.family_candidate_input_refs", issues, False)
+    # The four accepted gate families may lawfully evaluate the same exact
+    # GateCandidateInputReference. Preserve ordered references and validate
+    # each identifier, but do not require four different candidate records.
+    if not isinstance(value.family_candidate_input_refs, tuple):
+        issues.append(_issue(
+            "evaluation_input.family_candidate_input_refs",
+            GateCompositionValidationCode.TYPE_MISMATCH,
+            "tuple required",
+        ))
+    else:
+        if not value.family_candidate_input_refs:
+            issues.append(_issue(
+                "evaluation_input.family_candidate_input_refs",
+                GateCompositionValidationCode.DISPOSITION_BASIS_REQUIRED,
+                "non-empty tuple required",
+            ))
+        for index, item in enumerate(value.family_candidate_input_refs):
+            _text(item, f"evaluation_input.family_candidate_input_refs[{index}]", issues)
     if value.family_candidate_input_refs != tuple(result.candidate_input_ref for result in results):
         issues.append(_issue("evaluation_input.family_candidate_input_refs", GateCompositionValidationCode.CROSS_RECORD_MISMATCH, "exact ordered family candidate-input references required"))
     if isinstance(value.governance_bundles, tuple) and len(value.governance_bundles) == 4:

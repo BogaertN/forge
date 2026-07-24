@@ -18908,6 +18908,17 @@ def run_session():
                 print()
                 continue
 
+            if user_input.lower().startswith("forge-language-eligibility-hold "):
+                cmd_forge_language_eligibility_hold(user_input, session_id)
+                continue
+
+            if user_input.lower() == "forge-language-eligibility-hold":
+                print()
+                print("  Usage: forge-language-eligibility-hold <inspect|report|request> :: <exact-candidate-id> [:: <exact-predicate-candidate-id> :: <exact-role-layout-candidate-id>] :: <source request>")
+                print("  This evaluates gate custody and eligibility only. It never selects meaning or executes action.")
+                print()
+                continue
+
             _flb1_decision = _flb1_interpret(user_input, surface="forge_cli")
             if _flb1_decision.get("handled"):
                 _flb1_execute_interactive(_flb1_decision, session_id)
@@ -78069,6 +78080,7 @@ _FORGE_LANGUAGE_BRIDGE_V1_COMMANDS = (
     "forge-language-preview",
     "forge-language-candidate",
     "forge-language-selection-hold",
+    "forge-language-eligibility-hold",
 )
 for _flb1_cmd in _FORGE_LANGUAGE_BRIDGE_V1_COMMANDS:
     if _flb1_cmd not in FORGE_EXPECTED_COMMANDS:
@@ -78130,6 +78142,16 @@ def _flb4_explicit_plan(request: str, *, surface: str) -> dict | None:
     return parse_explicit_plan(request, surface=surface)
 
 
+def _flb5_status() -> dict:
+    from forge_language_bridge_v5 import bridge_status
+    return bridge_status()
+
+
+def _flb5_explicit_plan(request: str, *, surface: str) -> dict | None:
+    from forge_language_bridge_v5 import parse_explicit_plan
+    return parse_explicit_plan(request, surface=surface)
+
+
 def _flb1_print_decision(decision: dict) -> None:
     """Print one deterministic bridge decision without granting new authority."""
     print()
@@ -78156,6 +78178,7 @@ def cmd_forge_language_core_status(session_id: str) -> None:
     import json as _flb1_json
     from agents.forge.memory import write_audit_entry
     record = _flb4_status()
+    record = _flb5_status()
     print()
     print("── Forge Language-Core Replacement Status ────────────────────────")
     print(_flb1_json.dumps(record, indent=2, sort_keys=True))
@@ -78219,6 +78242,22 @@ def cmd_forge_language_selection_hold(request: str, session_id: str) -> None:
     _flb4_print_explicit_plan(
         plan,
         "── Forge Selected-Meaning Eligibility Hold Preview ──────────────",
+    )
+
+
+def cmd_forge_language_eligibility_hold(request: str, session_id: str) -> None:
+    """Evaluate exact gate custody and eligibility, then hold before selection."""
+    plan = _flb5_explicit_plan(request, surface="forge_cli_explicit_eligibility_hold")
+    if plan is None:
+        plan = {
+            "_language_bridge": {
+                "status": "INVALID_INPUT",
+                "response_text": "Explicit Bridge 5 eligibility-hold syntax required.",
+            }
+        }
+    _flb4_print_explicit_plan(
+        plan,
+        "── Forge Gate Custody and Eligibility Hold ──────────────────────",
     )
 
 
@@ -78407,6 +78446,10 @@ def _p199_is_action_request(text: str) -> bool:
 
 def _p199_call_planner(user_input: str) -> dict:
     """Use deterministic language bridges only; unsupported requests are held."""
+    bridge5_plan = _flb5_explicit_plan(user_input, surface="patch199_planner")
+    if bridge5_plan is not None:
+        return bridge5_plan
+
     bridge4_plan = _flb4_explicit_plan(user_input, surface="patch199_planner")
     if bridge4_plan is not None:
         return bridge4_plan
