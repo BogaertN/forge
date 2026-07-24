@@ -42,6 +42,40 @@ CONFIG_DIR   = FORGE_ROOT / "config"
 LOGS_DIR     = FORGE_ROOT / "logs"
 MEMORY_DIR   = FORGE_ROOT / "memory"
 
+XDG_STATE_HOME = Path(
+    os.environ.get(
+        "XDG_STATE_HOME",
+        str(Path.home() / ".local" / "state"),
+    )
+)
+RUNTIME_STATE_ROOT = XDG_STATE_HOME / "aiweb-forge" / "legacy-workshop-v1"
+RUNTIME_CONFIG_DIR = RUNTIME_STATE_ROOT / "config"
+RUNTIME_MEMORY_DIR = RUNTIME_STATE_ROOT / "memory"
+RUNTIME_APPROVED_PATHS_FILE = RUNTIME_CONFIG_DIR / "approved_paths.json"
+RUNTIME_SESSION_SCOPE_FILE = RUNTIME_CONFIG_DIR / "session_scope.json"
+
+
+def _runtime_first_existing_file(
+    runtime_path: Path,
+    source_path: Path,
+) -> Path:
+    """Return the runtime file when present, otherwise the committed source fallback."""
+    return runtime_path if runtime_path.is_file() else source_path
+
+
+def _runtime_first_existing_directory(
+    runtime_directory: Path,
+    source_directory: Path,
+) -> Path:
+    """Return a populated runtime directory, otherwise the committed source fallback."""
+    try:
+        if runtime_directory.is_dir() and any(runtime_directory.iterdir()):
+            return runtime_directory
+    except OSError:
+        pass
+    return source_directory
+
+
 # Phase I.7 — LLM memory ledger (Forge-owned receipts only; no hidden chain-of-thought)
 LLM_MEMORY_DIR = MEMORY_DIR / "llm_memory_v1"
 LLM_MEMORY_CONVERSATIONS_DIR = LLM_MEMORY_DIR / "conversations"
@@ -55,7 +89,7 @@ LLM_MEMORY_INDEXES_DIR = LLM_MEMORY_DIR / "indexes"
 LLM_MEMORY_EXPORTS_DIR = LLM_MEMORY_DIR / "exports"
 
 APPROVED_PATHS_FILE = CONFIG_DIR / "approved_paths.json"
-SESSION_SCOPE_FILE  = CONFIG_DIR / "session_scope.json"
+SESSION_SCOPE_FILE  = RUNTIME_SESSION_SCOPE_FILE
 AUDIT_LOG           = LOGS_DIR / "forge_audit.log"
 GROUNDING_RECEIPTS_DIR = FORGE_ROOT / "grounding_receipts"
 
@@ -107,8 +141,24 @@ def _load_json(path: Path) -> dict:
 
 
 def _save_json(path: Path, data: dict):
-    with open(path, "w") as f:
-        json.dump(data, f, indent=2)
+    """Atomically write a local JSON state record."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temp_path = path.with_name(
+        f".{path.name}.tmp-{os.getpid()}-{datetime.datetime.now().strftime('%Y%m%d%H%M%S%f')}"
+    )
+
+    try:
+        with open(temp_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, sort_keys=True)
+            f.write("\n")
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(temp_path, path)
+    finally:
+        try:
+            temp_path.unlink()
+        except FileNotFoundError:
+            pass
 
 
 def _make_session_id() -> str:
@@ -334,15 +384,14 @@ def _print_response(response: str):
 # ─── COMMANDS ─────────────────────────────────────────────────────────────────
 
 def cmd_approve(path_arg: str):
-    """Add a path to approved_paths.json."""
+    """Add a path to the local runtime approval overlay."""
     path = os.path.realpath(os.path.abspath(os.path.expanduser(path_arg)))
 
     if not os.path.exists(path):
         print(f"[forge] ERROR: Path does not exist: {path}")
         sys.exit(1)
 
-    data = _load_json(APPROVED_PATHS_FILE)
-    paths = data.get("paths", [])
+    paths = list(get_approved_paths())
 
     if path in paths:
         print(f"[forge] Already approved: {path}")
@@ -356,10 +405,15 @@ def cmd_approve(path_arg: str):
             sys.exit(1)
 
     paths.append(path)
-    data["paths"] = paths
-    _save_json(APPROVED_PATHS_FILE, data)
+    runtime_data = {
+        "schema": "forge.runtime_approved_paths.v1",
+        "record": "LOCAL_RUNTIME_APPROVAL_OVERLAY",
+        "paths": paths,
+    }
+    _save_json(RUNTIME_APPROVED_PATHS_FILE, runtime_data)
     print(f"[forge] Approved: {path}")
     print(f"[forge] Approved paths: {paths}")
+    print(f"[forge] Runtime approval state: {RUNTIME_APPROVED_PATHS_FILE}")
 
 
 def cmd_audit():
@@ -415,7 +469,7 @@ def _first_run_setup():
     print()
     print("[forge] No approved paths configured.")
     print("[forge] Forge needs at least one project path to work with.")
-    print("[forge] This path will be permanently stored in config/approved_paths.json")
+    print(f"[forge] This path will be stored in local runtime state: {RUNTIME_APPROVED_PATHS_FILE}")
     print()
 
     while True:
@@ -470,10 +524,12 @@ def _setup_session_scope(approved: list[str]) -> list[str]:
 
     # Write session_scope.json
     session_data = {
-        "_comment": "Per-session path restriction. Written at session start.",
+        "schema": "forge.runtime_session_scope.v1",
+        "record": "LOCAL_RUNTIME_SESSION_SCOPE",
+        "_comment": "Per-session path restriction. Written outside the source repository.",
         "session_id": "",  # filled in after session ID is created
         "started_at": datetime.datetime.now().isoformat(timespec="seconds"),
-        "paths": scope
+        "paths": scope,
     }
     _save_json(SESSION_SCOPE_FILE, session_data)
     return scope
@@ -55989,7 +56045,8 @@ def cmd_forge_roadmap_status(session_id: str) -> None:
 #   No patch apply authority. No shell execution.
 
 FORGE_BUILD_SEQUENCE_SCHEMA_VERSION = "forge_build_sequence_v1_patch144"
-FORGE_BUILD_SEQUENCE_DIR = MEMORY_DIR / "forge_build_sequence_v1"
+FORGE_BUILD_SEQUENCE_SOURCE_DIR = MEMORY_DIR / "forge_build_sequence_v1"
+FORGE_BUILD_SEQUENCE_DIR = RUNTIME_MEMORY_DIR / "forge_build_sequence_v1"
 FORGE_BUILD_SEQUENCE_STEM = "forge_build_sequence_v1"
 FORGE_BUILD_SEQUENCE_EXPORT_STEM = "forge_build_sequence_export_v1"
 
@@ -56031,8 +56088,14 @@ def _p144_safe_json(path, default=None):
     return {} if default is None else default
 
 
+def _p144_latest_sequence_path() -> Path:
+    runtime_path = FORGE_BUILD_SEQUENCE_DIR / f"latest_{FORGE_BUILD_SEQUENCE_STEM}.json"
+    source_path = FORGE_BUILD_SEQUENCE_SOURCE_DIR / f"latest_{FORGE_BUILD_SEQUENCE_STEM}.json"
+    return _runtime_first_existing_file(runtime_path, source_path)
+
+
 def _p144_latest_sequence() -> dict:
-    return _p144_safe_json(FORGE_BUILD_SEQUENCE_DIR / f"latest_{FORGE_BUILD_SEQUENCE_STEM}.json", {})
+    return _p144_safe_json(_p144_latest_sequence_path(), {})
 
 
 def _p144_write(payload: dict, stem: str):
@@ -56596,7 +56659,7 @@ def _p145_latest_revision_run() -> dict:
 
 
 def _p145_latest_sequence() -> dict:
-    return _p145_safe_json(MEMORY_DIR / "forge_build_sequence_v1" / "latest_forge_build_sequence_v1.json", {})
+    return _p145_safe_json(_p144_latest_sequence_path(), {})
 
 
 def _p145_priority(row: dict) -> tuple[int, str]:
@@ -58647,7 +58710,7 @@ def _p149_target_file(path: Path) -> dict:
 def _p149_evidence_state() -> dict:
     source_report_path = MEMORY_DIR / "forge_source_authority_hardening_v1" / "latest_forge_source_authority_hardening_v1.json"
     source_export_path = MEMORY_DIR / "forge_source_authority_hardening_v1" / "latest_forge_source_authority_hardening_export_v1.json"
-    build_sequence_path = MEMORY_DIR / "forge_build_sequence_v1" / "latest_forge_build_sequence_v1.json"
+    build_sequence_path = _p144_latest_sequence_path()
     gate_path = MEMORY_DIR / "forge_build_phase_gates_v1" / "latest_forge_build_phase_gate_v1.json"
     deferred_queue_path = MEMORY_DIR / "forge_deferred_engine_repair_queue_v1" / "latest_forge_deferred_engine_repair_queue_v1.json"
     status_api_path = MEMORY_DIR / "forge_status_api_v1" / "latest_forge_status_api_snapshot_v1.json"
@@ -75209,7 +75272,7 @@ def cmd_forge_command_install(slug: str, session_id: str):
     # Auto-update build sequence (Patch 198)
     try:
         import json as _p198_j
-        _p198_bsdir = MEMORY_DIR / "forge_build_sequence_v1"
+        _p198_bsdir = FORGE_BUILD_SEQUENCE_DIR
         _p198_bsdir.mkdir(parents=True, exist_ok=True)
         _p198_ts = _p184_now()
         _p198_rec = {"auto_updated_at": _p198_ts, "trigger": f"forge-command-install:{cmd}", "tools": len(_p198_j.loads((FORGE_ROOT / "config" / "tool_registry.json").read_text()).get("tools", {})), "lines": len((FORGE_ROOT / "main.py").read_text().splitlines())}
@@ -77673,7 +77736,12 @@ for _p198_cmd in _PATCH198_ROADMAP_COMMANDS:
         FORGE_EXPECTED_COMMANDS.append(_p198_cmd)
 
 _P198_EXTRA_SEQUENCE_KEY = "forge_patch198_extra_sequence_items"
-_P198_EXTRA_SEQUENCE_FILE = MEMORY_DIR / "forge_build_sequence_v1" / "patch198_extra_sequence.json"
+_P198_EXTRA_SEQUENCE_SOURCE_FILE = (
+    FORGE_BUILD_SEQUENCE_SOURCE_DIR / "patch198_extra_sequence.json"
+)
+_P198_EXTRA_SEQUENCE_FILE = (
+    FORGE_BUILD_SEQUENCE_DIR / "patch198_extra_sequence.json"
+)
 
 # New sequence items for what we actually built in Patches 184-197
 _P198_NEW_ITEMS = [
@@ -77691,40 +77759,63 @@ _P198_NEW_ITEMS = [
 
 
 def _p198_load_extra_sequence():
-    """Load extra sequence items from memory."""
-    if _P198_EXTRA_SEQUENCE_FILE.exists():
-        return _p198_json.loads(_P198_EXTRA_SEQUENCE_FILE.read_text())
-    return {"items": _P198_NEW_ITEMS}
+    """Load runtime roadmap state first, then the committed source fallback."""
+    path = _runtime_first_existing_file(
+        _P198_EXTRA_SEQUENCE_FILE,
+        _P198_EXTRA_SEQUENCE_SOURCE_FILE,
+    )
+    if path.is_file():
+        return _p198_json.loads(path.read_text(encoding="utf-8"))
+    return {"items": [dict(item) for item in _P198_NEW_ITEMS]}
 
 
 def _p198_save_extra_sequence(data):
-    """Save extra sequence items to memory."""
-    _P198_EXTRA_SEQUENCE_FILE.parent.mkdir(parents=True, exist_ok=True)
-    _P198_EXTRA_SEQUENCE_FILE.write_text(_p198_json.dumps(data, indent=2))
+    """Save mutable roadmap state only under the local runtime root."""
+    _save_json(_P198_EXTRA_SEQUENCE_FILE, data)
 
 
 def _p198_inject_into_build_sequence():
     """
-    Called at session start — injects extra sequence items into the stored
-    build sequence so forge-dashboard-roadmap-list shows them.
+    Inject Patch 198 roadmap items into runtime state.
+
+    Reads runtime first and the committed source tree only as a fallback.
+    It never writes under ``FORGE_ROOT / "memory"``.
     """
     try:
-        bs_dir = MEMORY_DIR / "forge_build_sequence_v1"
-        latest = sorted(bs_dir.glob("*_forge_build_sequence_v1.json"))
-        if not latest:
+        runtime_candidates = sorted(
+            FORGE_BUILD_SEQUENCE_DIR.glob("*_forge_build_sequence_v1.json")
+        )
+        source_candidates = sorted(
+            FORGE_BUILD_SEQUENCE_SOURCE_DIR.glob("*_forge_build_sequence_v1.json")
+        )
+        latest = runtime_candidates[-1] if runtime_candidates else (
+            source_candidates[-1] if source_candidates else None
+        )
+        if latest is None:
             return
-        bs = _p198_json.loads(latest[-1].read_text())
+
+        bs = _p198_json.loads(latest.read_text(encoding="utf-8"))
         extra = _p198_load_extra_sequence()
-        existing_ids = {row.get("id") for row in (bs.get("build_sequence") or [])}
+        existing_ids = {
+            row.get("id")
+            for row in (bs.get("build_sequence") or [])
+            if isinstance(row, dict)
+        }
         added = 0
-        for item in extra["items"]:
-            if item["id"] not in existing_ids:
+
+        for item in extra.get("items", []):
+            if not isinstance(item, dict):
+                continue
+            item_id = item.get("id")
+            if item_id and item_id not in existing_ids:
                 (bs.setdefault("build_sequence", [])).append(item)
+                existing_ids.add(item_id)
                 added += 1
+
         if added > 0:
             ts = _p184_now()
-            out = bs_dir / f"{ts}_forge_build_sequence_v1.json"
-            out.write_text(_p198_json.dumps(bs, indent=2))
+            out = FORGE_BUILD_SEQUENCE_DIR / f"{ts}_forge_build_sequence_v1.json"
+            _save_json(out, bs)
     except Exception:
         pass
 
@@ -78571,12 +78662,11 @@ def _p201_get_status_data():
         result["audit_tail"] = [l[:80] for l in lines[-20:] if l.strip()]
     except Exception: pass
     try:
-        rf   = MEMORY_DIR / "forge_build_sequence_v1" / "patch198_extra_sequence.json"
-        data = _j.loads(rf.read_text(encoding="utf-8"))
+        data = _p198_load_extra_sequence()
         result["roadmap"] = data.get("items", [])
     except Exception: pass
     try:
-        sd = _j.loads((CONFIG_DIR / "session_scope.json").read_text(encoding="utf-8"))
+        sd = _j.loads(SESSION_SCOPE_FILE.read_text(encoding="utf-8"))
         result["session_id"] = sd.get("session_id", "unknown")
     except Exception: pass
     result["seen_pages"] = _p201_get_seen_pages()
@@ -79364,12 +79454,24 @@ def _p245_audit_tail_v1(max_lines=80) -> dict:
     }
 
 def _p245_protoforge_reports_v1() -> dict:
-    report_dir = MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1"
+    runtime_report_dir = (
+        RUNTIME_MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1"
+    )
+    source_report_dir = (
+        MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1"
+    )
+    filenames = {
+        "status": "latest_protoforge_status.json",
+        "plan": "latest_protoforge_simulation_plan.json",
+        "run": "latest_protoforge_simulation_run.json",
+        "result": "latest_protoforge_result_show.json",
+    }
     files = {
-        "status": report_dir / "latest_protoforge_status.json",
-        "plan": report_dir / "latest_protoforge_simulation_plan.json",
-        "run": report_dir / "latest_protoforge_simulation_run.json",
-        "result": report_dir / "latest_protoforge_result_show.json",
+        name: _runtime_first_existing_file(
+            runtime_report_dir / filename,
+            source_report_dir / filename,
+        )
+        for name, filename in filenames.items()
     }
     loaded = {name: _p245_read_json_file(path) for name, path in files.items()}
     def data(name):
@@ -79428,7 +79530,8 @@ def _p245_protoforge_reports_v1() -> dict:
         "executes_simulation": False,
         "identity_vault_write": False,
         "rmc_live_memory_write": False,
-        "report_dir": str(report_dir),
+        "report_dir": str(runtime_report_dir),
+        "source_fallback_dir": str(source_report_dir),
         "summary": summary,
         "reports": loaded,
     }
@@ -79456,7 +79559,14 @@ def _p248_latest_protoforge_trace_v1() -> dict:
     Read-only. Does not execute commands, does not execute simulations,
     does not write Identity Vault, and does not write RMC live memory.
     """
-    result_report_path = MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1" / "latest_protoforge_result_show.json"
+    result_report_path = _runtime_first_existing_file(
+        RUNTIME_MEMORY_DIR
+        / "aiweb_patch239_protoforge_connector_v1"
+        / "latest_protoforge_result_show.json",
+        MEMORY_DIR
+        / "aiweb_patch239_protoforge_connector_v1"
+        / "latest_protoforge_result_show.json",
+    )
     report = _p245_read_json_file(result_report_path)
     if not report.get("ok"):
         return {
@@ -80703,6 +80813,7 @@ def _p258_receipt_dir(root: Path, limit: int = 8) -> dict:
         MEMORY_DIR / "context_library_v1" / "receipts",
         LLM_MEMORY_DIR,
         MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1",
+        RUNTIME_MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1",
     ]
     try:
         resolved = root.resolve()
@@ -80769,7 +80880,13 @@ def _p258_operator_audit_receipts_v1() -> dict:
         "context_library_receipts": _p258_receipt_dir(MEMORY_DIR / "context_library_v1" / "receipts", limit=8),
         "code_library_receipts": _p258_receipt_dir(CODE_RECEIPTS_DIR, limit=8),
         "llm_memory_receipts": _p258_receipt_dir(LLM_MEMORY_DIR, limit=8),
-        "protoforge_connector_receipts": _p258_receipt_dir(MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1", limit=8),
+        "protoforge_connector_receipts": _p258_receipt_dir(
+            _runtime_first_existing_directory(
+                RUNTIME_MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1",
+                MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1",
+            ),
+            limit=8,
+        ),
     }
 
     receipt_file_total = sum(int(v.get("files_found", 0) or 0) for k, v in receipt_dirs.items() if k != "audit_log")
@@ -81068,7 +81185,10 @@ def _p262_rmc_memory_status_v1() -> dict:
     symbolic_maps_dir = context_root / "symbolic_maps"
     chroma_dir = context_root / "chroma_db"
     legacy_chroma_dir = MEMORY_DIR / "chroma_db"
-    protoforge_receipts_dir = MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1"
+    protoforge_receipts_dir = _runtime_first_existing_directory(
+        RUNTIME_MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1",
+        MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1",
+    )
 
     directories = {
         "context_library_root": _p262_dir_summary(context_root, "Context Library v1", limit=6),
@@ -81204,6 +81324,7 @@ def _p262a_allowed_roots() -> list:
         context_root / "manifests",
         context_root / "symbolic_maps",
         MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1",
+        RUNTIME_MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1",
         FORGE_ROOT / "corpus_reports",
         FORGE_ROOT / "source_gap_reports",
         FORGE_ROOT / "ingestion_plans",
@@ -99035,7 +99156,10 @@ for _p239_cmd in PATCH239_PROTOFORGE_CONNECTOR_COMMANDS:
     if _p239_cmd not in FORGE_EXPECTED_COMMANDS:
         FORGE_EXPECTED_COMMANDS.append(_p239_cmd)
 
-P239_PROTOFORGE_CONNECTOR_DIR = MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1"
+P239_PROTOFORGE_SOURCE_DIR = MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1"
+P239_PROTOFORGE_CONNECTOR_DIR = (
+    RUNTIME_MEMORY_DIR / "aiweb_patch239_protoforge_connector_v1"
+)
 P239_PROTOFORGE_STATUS_JSON = P239_PROTOFORGE_CONNECTOR_DIR / "latest_protoforge_status.json"
 P239_PROTOFORGE_PLAN_JSON = P239_PROTOFORGE_CONNECTOR_DIR / "latest_protoforge_simulation_plan.json"
 P239_PROTOFORGE_RUN_JSON = P239_PROTOFORGE_CONNECTOR_DIR / "latest_protoforge_simulation_run.json"
@@ -99044,6 +99168,13 @@ P239_PROTOFORGE_STATUS_MD = P239_PROTOFORGE_CONNECTOR_DIR / "latest_protoforge_s
 P239_PROTOFORGE_PLAN_MD = P239_PROTOFORGE_CONNECTOR_DIR / "latest_protoforge_simulation_plan.md"
 P239_PROTOFORGE_RUN_MD = P239_PROTOFORGE_CONNECTOR_DIR / "latest_protoforge_simulation_run.md"
 P239_PROTOFORGE_RESULT_MD = P239_PROTOFORGE_CONNECTOR_DIR / "latest_protoforge_result_show.md"
+
+
+def _p239_read_report_path(runtime_path: Path) -> Path:
+    return _runtime_first_existing_file(
+        runtime_path,
+        P239_PROTOFORGE_SOURCE_DIR / runtime_path.name,
+    )
 P239_PROTOFORGE_CONTRACT_PATH = Path("/home/nic/aiweb/service_contracts/protoforge2.contract.json")
 P239_ALLOWED_SIMULATION_TYPES = {
     "symbolic_frequency_probe": {
@@ -99343,6 +99474,7 @@ def cmd_forge_protoforge_simulation_run_approved(session_id: str) -> None:
     from agents.forge.memory import write_audit_entry
     loaded = _p239_load_contract()
     stamp = _p239_now_stamp()
+    plan = None
     report = {
         "ok": False,
         "patch": "239",
@@ -99358,10 +99490,18 @@ def cmd_forge_protoforge_simulation_run_approved(session_id: str) -> None:
     if not loaded.get("ok"):
         report.update(loaded)
         report["verdict"] = "PROTOFORGE_RUN_BLOCKED_CONTRACT_INVALID"
-    elif not P239_PROTOFORGE_PLAN_JSON.exists():
-        report.update({"verdict": "PROTOFORGE_RUN_BLOCKED_NO_PLAN", "blockers": ["run forge-protoforge-simulation-plan first"]})
     else:
-        plan = json.loads(P239_PROTOFORGE_PLAN_JSON.read_text(encoding="utf-8"))
+        plan_path = _p239_read_report_path(P239_PROTOFORGE_PLAN_JSON)
+        if not plan_path.is_file():
+            report.update({
+                "verdict": "PROTOFORGE_RUN_BLOCKED_NO_PLAN",
+                "blockers": ["run forge-protoforge-simulation-plan first"],
+            })
+            plan = None
+        else:
+            plan = json.loads(plan_path.read_text(encoding="utf-8"))
+
+    if isinstance(plan, dict):
         simulation_type = plan.get("simulation_type")
         if not plan.get("ok"):
             report.update({"verdict": "PROTOFORGE_RUN_BLOCKED_PLAN_NOT_OK", "blockers": ["latest plan is not OK"]})
@@ -99438,8 +99578,11 @@ def cmd_forge_protoforge_result_show(session_id: str, requested_run_id: str = ""
     else:
         run_id = requested_run_id.strip()
         if not run_id:
-            if P239_PROTOFORGE_RUN_JSON.exists():
-                latest_run = json.loads(P239_PROTOFORGE_RUN_JSON.read_text(encoding="utf-8"))
+            run_report_path = _p239_read_report_path(P239_PROTOFORGE_RUN_JSON)
+            if run_report_path.is_file():
+                latest_run = json.loads(
+                    run_report_path.read_text(encoding="utf-8")
+                )
                 run_id = str(latest_run.get("run_id") or "")
         if not _p239_validate_run_id(run_id):
             report.update({"verdict": "PROTOFORGE_RESULT_BLOCKED_NO_VALID_RUN_ID", "blockers": ["provide a simreq_* id or run approved simulation first"]})

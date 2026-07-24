@@ -20,20 +20,119 @@ BLOCKED_PATHS_FILE  = CONFIG_DIR / "blocked_paths.json"
 FILETYPE_POLICY_FILE = CONFIG_DIR / "filetype_policy.json"
 TOOL_REGISTRY_FILE  = CONFIG_DIR / "tool_registry.json"
 
+XDG_STATE_HOME = Path(
+    os.environ.get(
+        "XDG_STATE_HOME",
+        str(Path.home() / ".local" / "state"),
+    )
+)
+RUNTIME_STATE_ROOT = XDG_STATE_HOME / "aiweb-forge" / "legacy-workshop-v1"
+RUNTIME_APPROVED_PATHS_FILE = RUNTIME_STATE_ROOT / "approved_paths.json"
+RUNTIME_SESSION_SCOPE_FILE = RUNTIME_STATE_ROOT / "session_scope.json"
+
+_APPROVED_PATH_KEYS = (
+    "paths",
+    "approved_paths",
+    "allowed_paths",
+    "approved_roots",
+    "allowed_roots",
+    "approved_implementation_roots",
+)
+_SESSION_PATH_KEYS = (
+    "paths",
+    "approved_paths",
+    "allowed_paths",
+)
+
 
 def _load_json(path: Path) -> dict:
-    with open(path, "r") as f:
-        return json.load(f)
+    with open(path, "r", encoding="utf-8") as f:
+        value = json.load(f)
+    if not isinstance(value, dict):
+        raise ValueError(f"Expected a JSON object in {path}")
+    return value
+
+
+def _load_optional_json(path: Path) -> dict:
+    try:
+        return _load_json(path)
+    except FileNotFoundError:
+        return {}
+
+
+def _paths_from_keys(data: dict, keys: tuple[str, ...]) -> list[str]:
+    paths: list[str] = []
+    seen: set[str] = set()
+
+    for key in keys:
+        values = data.get(key, [])
+        if not isinstance(values, list):
+            continue
+
+        for value in values:
+            if not isinstance(value, str) or not value.strip():
+                continue
+
+            expanded = os.path.expanduser(value.strip())
+            normalized = os.path.realpath(os.path.abspath(expanded))
+
+            if normalized in seen:
+                continue
+
+            seen.add(normalized)
+            paths.append(normalized)
+
+    return paths
 
 
 def get_approved_paths() -> list[str]:
-    data = _load_json(APPROVED_PATHS_FILE)
-    return [os.path.expanduser(p) for p in data.get("paths", [])]
+    """
+    Return the union of the accepted source baseline and the local runtime overlay.
+
+    The accepted Slice 0B source record predates the historical runtime's single
+    ``paths`` key and uses explicit approved/allowed path fields. Runtime approvals
+    live outside the Git repository and may extend, but never erase, that baseline.
+    """
+    baseline = _paths_from_keys(
+        _load_json(APPROVED_PATHS_FILE),
+        _APPROVED_PATH_KEYS,
+    )
+    runtime = _paths_from_keys(
+        _load_optional_json(RUNTIME_APPROVED_PATHS_FILE),
+        ("paths",),
+    )
+
+    result: list[str] = []
+    seen: set[str] = set()
+
+    for path in [*baseline, *runtime]:
+        if path in seen:
+            continue
+        seen.add(path)
+        result.append(path)
+
+    return result
 
 
 def get_session_paths() -> list[str]:
-    data = _load_json(SESSION_SCOPE_FILE)
-    return [os.path.expanduser(p) for p in data.get("paths", [])]
+    """
+    Return the active runtime session scope.
+
+    New sessions are stored under XDG state, outside the source repository. The
+    committed Slice 0B record remains a read-only fallback for migration and
+    recovery when no runtime session has yet been created.
+    """
+    runtime = _paths_from_keys(
+        _load_optional_json(RUNTIME_SESSION_SCOPE_FILE),
+        ("paths",),
+    )
+    if runtime:
+        return runtime
+
+    return _paths_from_keys(
+        _load_json(SESSION_SCOPE_FILE),
+        _SESSION_PATH_KEYS,
+    )
 
 
 def get_blocked_config() -> dict:

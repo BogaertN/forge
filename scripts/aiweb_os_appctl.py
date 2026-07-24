@@ -192,6 +192,7 @@ def build_env() -> dict[str, str]:
     path_parts.append(env.get("PATH", ""))
     env["PATH"] = os.pathsep.join([p for p in path_parts if p])
     env.setdefault("PYTHONUNBUFFERED", "1")
+    env.setdefault("PYTHONDONTWRITEBYTECODE", "1")
     env.setdefault("BROWSER", "none")
     return env
 
@@ -312,6 +313,13 @@ def start_backend_if_needed() -> None:
         proc = subprocess.Popen([python_bin, str(script), "supervise"], cwd=str(FORGE_ROOT), env=build_env(), stdout=out, stderr=subprocess.STDOUT, start_new_session=True)
     _write_pid(SUPERVISOR_PID, proc.pid)
     if not wait_for_port(35.0):
+        child = _pid_from_file(FORGE_CHILD_PID)
+        if child and pid_alive(child):
+            terminate_pid(child, "forge_child_startup_timeout")
+        if pid_alive(proc.pid):
+            terminate_pid(proc.pid, "forge_supervisor_startup_timeout")
+        _remove_file(FORGE_CHILD_PID)
+        _remove_file(SUPERVISOR_PID)
         raise RuntimeError(f"Forge backend did not open port {BACKEND_PORT}; see {SUPERVISOR_LOG}")
 
 
@@ -358,7 +366,12 @@ def supervise() -> int:
                         os.write(fd, (SCOPE_CHOICE + "\n").encode())
                         injected_scope = True
                         buffer = ""
-                    if injected_scope and (not injected_start) and "forge>" in buffer:
+                        continue
+
+                    # A single approved path intentionally skips the choice prompt.
+                    # The forge> prompt is the authoritative readiness signal in both
+                    # the one-path and multiple-path startup flows.
+                    if (not injected_start) and "forge>" in buffer:
                         time.sleep(0.15)
                         os.write(fd, (FORGE_UI_COMMAND + "\n").encode())
                         injected_start = True
@@ -508,9 +521,18 @@ def open_operator_window() -> int:
     if not chrome:
         opener = command_path("xdg-open")
         if not opener:
-            raise RuntimeError("No Chrome/Chromium or xdg-open available for operator window")
+            log_line(
+                LAUNCHER_LOG,
+                f"no supported browser opener found; backend remains available at {OPERATOR_URL}",
+            )
+            print(
+                "Operator Console backend is running. "
+                f"Open this URL manually: {OPERATOR_URL}"
+            )
+            return 0
         proc = subprocess.Popen([opener, OPERATOR_URL], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)
         _write_pid(WINDOW_PID, proc.pid)
+        log_line(LAUNCHER_LOG, f"operator URL handed to xdg-open pid={proc.pid} url={OPERATOR_URL}")
         return proc.pid
     args = [
         chrome,
