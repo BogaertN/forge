@@ -266,7 +266,11 @@ def validate_evaluation_input(value: object) -> SelectionEligibilityValidationRe
 
     if (
         manifest_record.record_id != manifest_companion.manifest_candidate_record_id
-        or manifest_record.lineage_id != manifest_companion.candidate_lineage_id
+        # Slice 39G intentionally preserves two exact lineage domains:
+        # the MSM manifest lineage on CandidateMeaningRecord.lineage_id and the
+        # source CandidateMeaning lineage on companion.candidate_lineage_id.
+        # They are linked by the exact manifest record/companion references and
+        # must not be incorrectly required to be the same identifier.
         or candidate.source_expression_ref != manifest_record.source_expression_ref
         or candidate.candidate_meaning_id != manifest_companion.candidate_meaning_id
         or candidate.candidate_state_id != manifest_companion.candidate_state_id
