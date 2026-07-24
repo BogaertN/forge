@@ -18869,6 +18869,28 @@ def run_session():
                 print()
                 continue
 
+            # Forge language-core replacement bridge — deterministic first.
+            if user_input.lower() == "forge-language-core-status":
+                cmd_forge_language_core_status(session_id)
+                continue
+
+            if user_input.lower().startswith("forge-language-preview "):
+                _flb1_request = user_input[len("forge-language-preview "):].strip()
+                cmd_forge_language_preview(_flb1_request, session_id)
+                continue
+
+            if user_input.lower() == "forge-language-preview":
+                print()
+                print("  Usage: forge-language-preview <natural language request>")
+                print("  This previews interpretation only. It executes nothing.")
+                print()
+                continue
+
+            _flb1_decision = _flb1_interpret(user_input, surface="forge_cli")
+            if _flb1_decision.get("handled"):
+                _flb1_execute_interactive(_flb1_decision, session_id)
+                continue
+
             # Patch 199 — Try orchestrator for natural language action requests
             if _p199_is_action_request(user_input):
                 _p199_orch_result = cmd_forge_orchestrate(user_input, session_id)
@@ -78004,6 +78026,162 @@ def cmd_forge_roadmap_sync(session_id: str):
                       str(_P198_EXTRA_SEQUENCE_FILE), str(len(extra["items"])),
                       "roadmap sync complete")
 
+
+# --- BEGIN FORGE LANGUAGE CORE REPLACEMENT BRIDGE 1 ---
+_FORGE_LANGUAGE_BRIDGE_V1_COMMANDS = (
+    "forge-language-core-status",
+    "forge-language-preview",
+)
+for _flb1_cmd in _FORGE_LANGUAGE_BRIDGE_V1_COMMANDS:
+    if _flb1_cmd not in FORGE_EXPECTED_COMMANDS:
+        FORGE_EXPECTED_COMMANDS.append(_flb1_cmd)
+
+
+def _flb1_interpret(request: str, surface: str = "forge_cli") -> dict:
+    """Run the bounded deterministic language bridge without model access."""
+    from forge_language_bridge_v1 import interpret_request
+    return interpret_request(request, surface=surface)
+
+
+def _flb1_plan(request: str, surface: str = "patch199") -> dict | None:
+    """Return a Patch-199-compatible deterministic plan when the bridge handles it."""
+    from forge_language_bridge_v1 import decision_to_plan, interpret_request
+    decision = interpret_request(request, surface=surface)
+    if not decision.get("handled"):
+        return None
+    return decision_to_plan(decision)
+
+
+def _flb1_print_decision(decision: dict) -> None:
+    """Print one deterministic bridge decision without granting new authority."""
+    print()
+    print("── Forge Deterministic Language Bridge ───────────────────────────")
+    print(f"  Status              : {decision.get('status')}")
+    print(f"  Intent              : {decision.get('intent')}")
+    print(f"  Route               : {decision.get('route') or '(none)'}")
+    if decision.get("args"):
+        print(f"  Arguments           : {decision.get('args')}")
+    print(f"  Model called        : {decision.get('calls_llm')}")
+    print(f"  Command executed    : {decision.get('executes_command')}")
+    print(f"  Source write        : {decision.get('writes_files')}")
+    print(f"  Memory write        : {decision.get('writes_memory')}")
+    if decision.get("approval_required"):
+        print(f"  Approval required   : {decision.get('approval_gate')}")
+    print()
+    print(str(decision.get("response_text") or "No bridge response."))
+    print("──────────────────────────────────────────────────────────────────")
+    print()
+
+
+def cmd_forge_language_core_status(session_id: str) -> None:
+    """Show the installed bounded bridge and the still-active unsupported fallback."""
+    import json as _flb1_json
+    from agents.forge.memory import write_audit_entry
+    from forge_language_bridge_v1 import bridge_status
+
+    record = bridge_status()
+    print()
+    print("── Forge Language-Core Replacement Status ────────────────────────")
+    print(_flb1_json.dumps(record, indent=2, sort_keys=True))
+    print("──────────────────────────────────────────────────────────────────")
+    print()
+    write_audit_entry(
+        session_id,
+        "FORGE_LANGUAGE_BRIDGE_STATUS_SHOWN",
+        "-",
+        record.get("bridge_version", ""),
+        "read-only deterministic bridge status",
+    )
+
+
+def cmd_forge_language_preview(request: str, session_id: str) -> None:
+    """Preview language interpretation only; do not execute the selected route."""
+    import json as _flb1_json
+    from agents.forge.memory import write_audit_entry
+
+    decision = _flb1_interpret(request, surface="forge_language_preview")
+    print()
+    print("── Forge Language Interpretation Preview ─────────────────────────")
+    print(_flb1_json.dumps(decision, indent=2, sort_keys=True))
+    print("──────────────────────────────────────────────────────────────────")
+    print()
+    write_audit_entry(
+        session_id,
+        "FORGE_LANGUAGE_PREVIEW_SHOWN",
+        "-",
+        decision.get("request_id", ""),
+        f"status={decision.get('status')};route={decision.get('route') or '-'}",
+    )
+
+
+def _flb1_execute_interactive(decision: dict, session_id: str) -> bool:
+    """Execute only the bridge's fixed allowlisted existing Forge route."""
+    from agents.forge.memory import write_audit_entry
+
+    if not decision.get("handled"):
+        return False
+
+    status = str(decision.get("status") or "")
+    route = str(decision.get("route") or "")
+    args = str(decision.get("args") or "")
+
+    if status != "ROUTED":
+        _flb1_print_decision(decision)
+        write_audit_entry(
+            session_id,
+            "FORGE_LANGUAGE_BRIDGE_HELD",
+            "-",
+            decision.get("request_id", ""),
+            f"status={status};gate={decision.get('approval_gate') or '-'}",
+        )
+        return True
+
+    dispatch = {
+        "status": lambda: cmd_status(),
+        "audit": lambda: cmd_audit(),
+        "forge-capabilities": lambda: cmd_forge_what_can_i_do(session_id),
+        "forge-protoforge-status": lambda: cmd_forge_protoforge_status(session_id),
+        "forge-protoforge-simulation-plan": (
+            lambda: cmd_forge_protoforge_simulation_plan(session_id, args)
+        ),
+        "forge-protoforge-result-show": (
+            lambda: cmd_forge_protoforge_result_show(session_id, args)
+        ),
+    }
+
+    handler = dispatch.get(route)
+    if handler is None:
+        held = dict(decision)
+        held.update({
+            "status": "BOUNDARY_BLOCKED",
+            "route": "",
+            "executes_command": False,
+            "response_text": (
+                "The deterministic bridge produced a route outside its fixed "
+                "allowlist. Nothing was executed."
+            ),
+        })
+        _flb1_print_decision(held)
+        write_audit_entry(
+            session_id,
+            "FORGE_LANGUAGE_BRIDGE_ROUTE_BLOCKED",
+            "-",
+            decision.get("request_id", ""),
+            f"unallowlisted_route={route}",
+        )
+        return True
+
+    write_audit_entry(
+        session_id,
+        "FORGE_LANGUAGE_BRIDGE_ROUTED",
+        route,
+        decision.get("request_id", ""),
+        f"intent={decision.get('intent')};args={args or '-'}",
+    )
+    handler()
+    return True
+# --- END FORGE LANGUAGE CORE REPLACEMENT BRIDGE 1 ---
+
 # ─── PATCH 199 — NATURAL LANGUAGE COMMAND ORCHESTRATOR ───────────────────────
 # Converts plain English requests into Forge command execution plans.
 # Qwen3 builds the plan. Forge shows it. Nic types GO. Steps execute in order.
@@ -78120,7 +78298,11 @@ def _p199_is_action_request(text: str) -> bool:
 
 
 def _p199_call_planner(user_input: str) -> dict:
-    """Ask Qwen3 to produce an execution plan for this request."""
+    """Use the deterministic bridge first, then Qwen3 only for unsupported requests."""
+    bridge_plan = _flb1_plan(user_input, surface="patch199_planner")
+    if bridge_plan is not None:
+        return bridge_plan
+
     import json as _j199
     prompt = (
         "/no_think\n"
@@ -78268,7 +78450,7 @@ def cmd_forge_orchestrate(user_input: str, session_id: str):
     print("── Forge Orchestrator ─────────────────────────────────────────────")
     print(f"  {user_input[:80]}")
     print()
-    print("  Building plan with Qwen3...")
+    print("  Building governed plan (deterministic bridge first; model fallback only if unsupported)...")
     print()
 
     plan = _p199_call_planner(user_input)
@@ -78413,7 +78595,7 @@ def cmd_forge_plan(user_input: str, session_id: str) -> None:
     print("── Forge Plan Preview ─────────────────────────────────────────────")
     print(f"  {user_input[:80]}")
     print()
-    print("  Building plan with Qwen3...")
+    print("  Building governed plan (deterministic bridge first; model fallback only if unsupported)...")
     print()
 
     plan = _p199_call_planner(user_input)
@@ -84380,6 +84562,13 @@ def _p255_format_planner_response(plan: dict, request: str) -> str:
     if not isinstance(plan, dict):
         return "Forge planner returned a non-object response. No command was run."
 
+    bridge_meta = plan.get("_language_bridge")
+    if isinstance(bridge_meta, dict) and bridge_meta.get("handled"):
+        return str(
+            bridge_meta.get("response_text")
+            or "Forge handled the request through the deterministic language bridge."
+        )
+
     if plan.get("error"):
         return f"Forge planner error: {plan.get('error')}. No command was run."
 
@@ -84488,7 +84677,21 @@ def _p255_operator_llm_request_v1(request: str) -> dict:
         "steps": [],
     }
 
-    if isinstance(plan, dict) and plan.get("error"):
+    bridge_meta = (
+        plan.get("_language_bridge")
+        if isinstance(plan, dict) and isinstance(plan.get("_language_bridge"), dict)
+        else {}
+    )
+    bridge_handled = bool(bridge_meta.get("handled"))
+    bridge_status = str(bridge_meta.get("status") or "")
+
+    if bridge_handled and bridge_status == "APPROVAL_REQUIRED":
+        kind = "approval_required"
+    elif bridge_handled and bridge_status in {"INVALID_INPUT", "BOUNDARY_BLOCKED"}:
+        kind = "deterministic_hold"
+    elif bridge_handled:
+        kind = "deterministic_route"
+    elif isinstance(plan, dict) and plan.get("error"):
         kind = "planner_error"
     elif isinstance(plan, dict) and plan.get("impossible"):
         kind = "refused_or_question"
@@ -84503,8 +84706,15 @@ def _p255_operator_llm_request_v1(request: str) -> dict:
         "request_id": _p255_request_id(request),
         "request": request,
         "created_at": started,
-        "planner_called": True,
-        "model_route": "Forge _p199_call_planner via local Ollama HTTP API",
+        "planner_called": not bridge_handled,
+        "model_route": (
+            "Forge deterministic language bridge v1"
+            if bridge_handled
+            else "Forge _p199_call_planner via local Ollama HTTP API fallback"
+        ),
+        "language_bridge_handled": bridge_handled,
+        "language_bridge_status": bridge_status if bridge_handled else "UNSUPPORTED_FALLBACK",
+        "ollama_fallback_used": not bridge_handled,
         "response_text": _p255_format_planner_response(plan if isinstance(plan, dict) else {}, request),
         "plan": plan,
         "plan_validation": validation,
