@@ -18903,24 +18903,23 @@ def run_session():
                 continue
 
             # Bridge 2 — ordinary user interpretation never falls through to Qwen/Ollama.
-            _flb2_decision = _flb2_unsupported(
+            _flb3_decision = _flb3_structural_preview(
                 user_input,
                 surface="forge_cli",
                 reason=(
-                    "No accepted deterministic Forge language route currently covers "
-                    "this request. The former ordinary agent.ask/Qwen/Ollama fallback "
-                    "is disabled. Use an explicit Forge command, type help, or inspect "
-                    "the request with forge-language-preview."
+                    "No accepted executable Forge route currently covers this request. "
+                    "Forge ran the accepted deterministic structural language-core chain "
+                    "and preserved every candidate without selecting meaning or action."
                 ),
             )
-            _flb1_print_decision(_flb2_decision)
-            from agents.forge.memory import write_audit_entry as _flb2_write_audit
-            _flb2_write_audit(
+            _flb1_print_decision(_flb3_decision)
+            from agents.forge.memory import write_audit_entry as _flb3_write_audit
+            _flb3_write_audit(
                 session_id,
-                "FORGE_LANGUAGE_BRIDGE2_UNSUPPORTED_HOLD",
+                "FORGE_LANGUAGE_BRIDGE3_STRUCTURAL_PREVIEW",
                 "-",
-                _flb2_decision.get("request_id", ""),
-                "ordinary_interpretation_model_fallback_disabled",
+                _flb3_decision.get("request_id", ""),
+                str((_flb3_decision.get("structural_preview") or {}).get("structural_status") or ""),
             )
 
     except KeyboardInterrupt:
@@ -78082,6 +78081,21 @@ def _flb2_unsupported(request: str, *, surface: str, reason: str) -> dict:
     return unsupported_request_decision(request, surface=surface, reason=reason)
 
 
+def _flb3_status() -> dict:
+    from forge_language_bridge_v3 import bridge_status
+    return bridge_status()
+
+
+def _flb3_structural_preview(request: str, *, surface: str, reason: str) -> dict:
+    from forge_language_bridge_v3 import structural_preview_decision
+    return structural_preview_decision(request, surface=surface, reason=reason)
+
+
+def _flb3_structural_plan(request: str, *, surface: str, reason: str) -> dict:
+    from forge_language_bridge_v3 import structural_preview_plan
+    return structural_preview_plan(request, surface=surface, reason=reason)
+
+
 def _flb1_print_decision(decision: dict) -> None:
     """Print one deterministic bridge decision without granting new authority."""
     print()
@@ -78107,7 +78121,7 @@ def cmd_forge_language_core_status(session_id: str) -> None:
     """Show the installed bounded bridge and the still-active unsupported fallback."""
     import json as _flb1_json
     from agents.forge.memory import write_audit_entry
-    record = _flb2_status()
+    record = _flb3_status()
     print()
     print("── Forge Language-Core Replacement Status ────────────────────────")
     print(_flb1_json.dumps(record, indent=2, sort_keys=True))
@@ -78331,14 +78345,13 @@ def _p199_call_planner(user_input: str) -> dict:
     if bridge_plan is not None:
         return bridge_plan
 
-    return _flb2_unsupported_plan(
+    return _flb3_structural_plan(
         user_input,
         surface="patch199_planner",
         reason=(
-            "No accepted deterministic Forge route currently covers this request. "
-            "The former Qwen/Ollama interpretation fallback is disabled. Use an "
-            "explicit Forge command, request a language preview, or extend the "
-            "accepted deterministic bridge in a later governed patch."
+            "No accepted executable Forge route currently covers this request. "
+            "The deterministic language core preserved the source and produced a "
+            "bounded structural preview without selecting meaning or executing action."
         ),
     )
 
