@@ -6,6 +6,9 @@ from typing import Iterable
 
 from ..governed_lifecycle import GateLifecycleStage, validate_governance_bundle
 from ..schema import VerbalCognitionGateFamily
+from ..predicate_frame_version_custody import (
+    invalid_predicate_frame_version_fields,
+)
 from .identity import (
     expected_result_digest,
     with_expected_assertion_id,
@@ -251,15 +254,19 @@ def validate_assertion(value: object) -> RecoverablePurposeValidationReport:
         "assertion_key",
     ):
         _text(getattr(value, name), f"assertion.{name}", issues)
-    for name in ("predicate_version", "frame_version"):
-        if getattr(value, name) != "v1.0.0":
-            issues.append(
-                _issue(
-                    f"assertion.{name}",
-                    RecoverablePurposeValidationCode.INVALID_VERSION,
-                    "only v1.0.0 admitted",
-                )
+    for name in invalid_predicate_frame_version_fields(
+        predicate_id=value.predicate_id,
+        predicate_version=value.predicate_version,
+        frame_id=value.frame_id,
+        frame_version=value.frame_version,
+    ):
+        issues.append(
+            _issue(
+                f"assertion.{name}",
+                RecoverablePurposeValidationCode.INVALID_VERSION,
+                "exact legacy or registry-custodied predicate/frame version required",
             )
+        )
     if not isinstance(value.distinction_kind, PurportDistinctionKind):
         issues.append(
             _issue(
@@ -535,15 +542,19 @@ def validate_evaluation_input(
         "frame_id",
     ):
         _text(getattr(value, name), f"evaluation_input.{name}", issues)
-    for name in ("predicate_version", "frame_version"):
-        if getattr(value, name) != "v1.0.0":
-            issues.append(
-                _issue(
-                    f"evaluation_input.{name}",
-                    RecoverablePurposeValidationCode.INVALID_VERSION,
-                    "only v1.0.0 admitted",
-                )
+    for name in invalid_predicate_frame_version_fields(
+        predicate_id=value.predicate_id,
+        predicate_version=value.predicate_version,
+        frame_id=value.frame_id,
+        frame_version=value.frame_version,
+    ):
+        issues.append(
+            _issue(
+                f"evaluation_input.{name}",
+                RecoverablePurposeValidationCode.INVALID_VERSION,
+                "exact legacy or registry-custodied predicate/frame version required",
             )
+        )
 
     try:
         governance = validate_governance_bundle(value.governance_bundle)
@@ -927,15 +938,19 @@ def validate_result(value: object) -> RecoverablePurposeValidationReport:
         "frame_id",
     ):
         _text(getattr(value, name), f"result.{name}", issues)
-    for name in ("predicate_version", "frame_version"):
-        if getattr(value, name) != "v1.0.0":
-            issues.append(
-                _issue(
-                    f"result.{name}",
-                    RecoverablePurposeValidationCode.INVALID_VERSION,
-                    "only v1.0.0 admitted",
-                )
+    for name in invalid_predicate_frame_version_fields(
+        predicate_id=value.predicate_id,
+        predicate_version=value.predicate_version,
+        frame_id=value.frame_id,
+        frame_version=value.frame_version,
+    ):
+        issues.append(
+            _issue(
+                f"result.{name}",
+                RecoverablePurposeValidationCode.INVALID_VERSION,
+                "exact legacy or registry-custodied predicate/frame version required",
             )
+        )
     if not isinstance(value.overall_state, RecoverablePurposeOverallState):
         issues.append(
             _issue(

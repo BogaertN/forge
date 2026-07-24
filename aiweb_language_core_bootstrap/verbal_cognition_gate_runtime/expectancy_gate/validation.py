@@ -10,6 +10,9 @@ from ..governed_lifecycle import (
     validate_governance_bundle,
 )
 from ..schema import VerbalCognitionGateFamily
+from ..predicate_frame_version_custody import (
+    invalid_predicate_frame_version_fields,
+)
 from .identity import (
     expected_result_digest,
     with_expected_evaluation_input_id,
@@ -106,9 +109,19 @@ def validate_requirement(value: object) -> ExpectancyValidationReport:
         return _ordered((_issue("requirement", ExpectancyValidationCode.TYPE_MISMATCH, "ExpectancyRequirement required"),))
     for name in ("requirement_id", "candidate_input_ref", "predicate_id", "frame_id", "requirement_key"):
         _text(getattr(value, name), f"requirement.{name}", issues)
-    for name in ("predicate_version", "frame_version"):
-        if getattr(value, name) != "v1.0.0":
-            issues.append(_issue(f"requirement.{name}", ExpectancyValidationCode.INVALID_VERSION, "exact admitted v1.0.0 required"))
+    for name in invalid_predicate_frame_version_fields(
+        predicate_id=value.predicate_id,
+        predicate_version=value.predicate_version,
+        frame_id=value.frame_id,
+        frame_version=value.frame_version,
+    ):
+        issues.append(
+            _issue(
+                f"requirement.{name}",
+                ExpectancyValidationCode.INVALID_VERSION,
+                "exact legacy or registry-custodied predicate/frame version required",
+            )
+        )
     for name in ("requirement_source_refs", "authority_refs", "subject_record_refs", "relation_refs"):
         _tuple_ids(getattr(value, name), f"requirement.{name}", issues, allow_empty=name in ("subject_record_refs", "relation_refs"))
     if not isinstance(value.minimum_count, int) or isinstance(value.minimum_count, bool) or value.minimum_count < 1:
@@ -147,9 +160,19 @@ def validate_evaluation_input(value: object) -> ExpectancyValidationReport:
     _text(value.evaluation_input_id, "input.evaluation_input_id", issues)
     for name in ("candidate_input_ref", "predicate_id", "frame_id"):
         _text(getattr(value, name), f"input.{name}", issues)
-    for name in ("predicate_version", "frame_version"):
-        if getattr(value, name) != "v1.0.0":
-            issues.append(_issue(f"input.{name}", ExpectancyValidationCode.INVALID_VERSION, "exact admitted v1.0.0 required"))
+    for name in invalid_predicate_frame_version_fields(
+        predicate_id=value.predicate_id,
+        predicate_version=value.predicate_version,
+        frame_id=value.frame_id,
+        frame_version=value.frame_version,
+    ):
+        issues.append(
+            _issue(
+                f"input.{name}",
+                ExpectancyValidationCode.INVALID_VERSION,
+                "exact legacy or registry-custodied predicate/frame version required",
+            )
+        )
     for name in ("trace_refs", "provenance_refs", "limitation_refs"):
         _tuple_ids(getattr(value, name), f"input.{name}", issues, allow_empty=name == "limitation_refs")
     issues.extend(validate_profile(value.runtime_profile).issues)

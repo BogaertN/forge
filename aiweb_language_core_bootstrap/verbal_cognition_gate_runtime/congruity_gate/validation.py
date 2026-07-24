@@ -4,6 +4,7 @@ import re
 from typing import Iterable
 from ..governed_lifecycle import GateLifecycleStage, validate_governance_bundle
 from ..schema import VerbalCognitionGateFamily
+from ..predicate_frame_version_custody import invalid_predicate_frame_version_fields
 from .identity import expected_result_digest, with_expected_assertion_id, with_expected_evaluation_input_id, with_expected_finding_id, with_expected_observation_id, with_expected_profile_id
 from .schema import *
 
@@ -39,8 +40,19 @@ def validate_assertion(value:object)->CongruityValidationReport:
     q=[]
     if not isinstance(value,CongruityAssertion): return _ordered((_i("assertion",CongruityValidationCode.TYPE_MISMATCH,"CongruityAssertion required"),))
     for n in ("assertion_id","candidate_input_ref","predicate_id","frame_id","assertion_key"): _text(getattr(value,n),f"assertion.{n}",q)
-    for n in ("predicate_version","frame_version"):
-        if getattr(value,n)!="v1.0.0": q.append(_i(f"assertion.{n}",CongruityValidationCode.INVALID_VERSION,"only v1.0.0 admitted"))
+    for n in invalid_predicate_frame_version_fields(
+        predicate_id=value.predicate_id,
+        predicate_version=value.predicate_version,
+        frame_id=value.frame_id,
+        frame_version=value.frame_version,
+    ):
+        q.append(
+            _i(
+                f"assertion.{n}",
+                CongruityValidationCode.INVALID_VERSION,
+                "exact legacy or registry-custodied predicate/frame version required",
+            )
+        )
     if not isinstance(value.assertion_kind,CongruityAssertionKind): q.append(_i("assertion.assertion_kind",CongruityValidationCode.TYPE_MISMATCH,"CongruityAssertionKind required"))
     for n in ("subject_refs","object_refs","relation_refs","assertion_source_refs","authority_refs"): _tuple(getattr(value,n),f"assertion.{n}",q,n in ("object_refs","relation_refs"))
     if type(value.required) is not bool: q.append(_i("assertion.required",CongruityValidationCode.TYPE_MISMATCH,"bool required"))
@@ -67,8 +79,19 @@ def validate_evaluation_input(value:object)->CongruityValidationReport:
     q=[]
     if not isinstance(value,CongruityEvaluationInput): return _ordered((_i("evaluation_input",CongruityValidationCode.TYPE_MISMATCH,"CongruityEvaluationInput required"),))
     for n in ("evaluation_input_id","candidate_input_ref","predicate_id","frame_id"): _text(getattr(value,n),f"evaluation_input.{n}",q)
-    for n in ("predicate_version","frame_version"):
-        if getattr(value,n)!="v1.0.0": q.append(_i(f"evaluation_input.{n}",CongruityValidationCode.INVALID_VERSION,"only v1.0.0 admitted"))
+    for n in invalid_predicate_frame_version_fields(
+        predicate_id=value.predicate_id,
+        predicate_version=value.predicate_version,
+        frame_id=value.frame_id,
+        frame_version=value.frame_version,
+    ):
+        q.append(
+            _i(
+                f"evaluation_input.{n}",
+                CongruityValidationCode.INVALID_VERSION,
+                "exact legacy or registry-custodied predicate/frame version required",
+            )
+        )
     governance=validate_governance_bundle(value.governance_bundle)
     if not governance.ok: q.append(_i("evaluation_input.governance_bundle",CongruityValidationCode.GOVERNANCE_INVALID,"governance bundle invalid"))
     try:
@@ -124,8 +147,19 @@ def validate_result(value:object)->CongruityValidationReport:
     q=[]
     if not isinstance(value,CongruityGateResult): return _ordered((_i("result",CongruityValidationCode.TYPE_MISMATCH,"CongruityGateResult required"),))
     for n in ("result_id","evaluation_input_ref","review_record_id","gate_id","gate_profile_id","candidate_input_ref","predicate_id","frame_id"): _text(getattr(value,n),f"result.{n}",q)
-    for n in ("predicate_version","frame_version"):
-        if getattr(value,n)!="v1.0.0": q.append(_i(f"result.{n}",CongruityValidationCode.INVALID_VERSION,"only v1.0.0 admitted"))
+    for n in invalid_predicate_frame_version_fields(
+        predicate_id=value.predicate_id,
+        predicate_version=value.predicate_version,
+        frame_id=value.frame_id,
+        frame_version=value.frame_version,
+    ):
+        q.append(
+            _i(
+                f"result.{n}",
+                CongruityValidationCode.INVALID_VERSION,
+                "exact legacy or registry-custodied predicate/frame version required",
+            )
+        )
     if not isinstance(value.overall_state,CongruityOverallState): q.append(_i("result.overall_state",CongruityValidationCode.TYPE_MISMATCH,"CongruityOverallState required"))
     if not isinstance(value.findings,tuple) or not value.findings: q.append(_i("result.findings",CongruityValidationCode.TYPE_MISMATCH,"non-empty tuple required"))
     if isinstance(value.findings,tuple):
