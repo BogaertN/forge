@@ -18902,11 +18902,26 @@ def run_session():
                 cmd_forge_what_can_i_do(session_id)
                 continue
 
-            # Process the question (fallback for non-action queries)
-            print()
-            print("[forge] Thinking...")
-            response = agent.ask(user_input)
-            _print_response(response)
+            # Bridge 2 — ordinary user interpretation never falls through to Qwen/Ollama.
+            _flb2_decision = _flb2_unsupported(
+                user_input,
+                surface="forge_cli",
+                reason=(
+                    "No accepted deterministic Forge language route currently covers "
+                    "this request. The former ordinary agent.ask/Qwen/Ollama fallback "
+                    "is disabled. Use an explicit Forge command, type help, or inspect "
+                    "the request with forge-language-preview."
+                ),
+            )
+            _flb1_print_decision(_flb2_decision)
+            from agents.forge.memory import write_audit_entry as _flb2_write_audit
+            _flb2_write_audit(
+                session_id,
+                "FORGE_LANGUAGE_BRIDGE2_UNSUPPORTED_HOLD",
+                "-",
+                _flb2_decision.get("request_id", ""),
+                "ordinary_interpretation_model_fallback_disabled",
+            )
 
     except KeyboardInterrupt:
         print("\n[forge] Session interrupted.")
@@ -78052,6 +78067,21 @@ def _flb1_plan(request: str, surface: str = "patch199") -> dict | None:
     return decision_to_plan(decision)
 
 
+def _flb2_status() -> dict:
+    from forge_language_bridge_v2 import bridge_status
+    return bridge_status()
+
+
+def _flb2_unsupported_plan(request: str, *, surface: str, reason: str) -> dict:
+    from forge_language_bridge_v2 import unsupported_plan
+    return unsupported_plan(request, surface=surface, reason=reason)
+
+
+def _flb2_unsupported(request: str, *, surface: str, reason: str) -> dict:
+    from forge_language_bridge_v2 import unsupported_request_decision
+    return unsupported_request_decision(request, surface=surface, reason=reason)
+
+
 def _flb1_print_decision(decision: dict) -> None:
     """Print one deterministic bridge decision without granting new authority."""
     print()
@@ -78077,9 +78107,7 @@ def cmd_forge_language_core_status(session_id: str) -> None:
     """Show the installed bounded bridge and the still-active unsupported fallback."""
     import json as _flb1_json
     from agents.forge.memory import write_audit_entry
-    from forge_language_bridge_v1 import bridge_status
-
-    record = bridge_status()
+    record = _flb2_status()
     print()
     print("── Forge Language-Core Replacement Status ────────────────────────")
     print(_flb1_json.dumps(record, indent=2, sort_keys=True))
@@ -78298,69 +78326,21 @@ def _p199_is_action_request(text: str) -> bool:
 
 
 def _p199_call_planner(user_input: str) -> dict:
-    """Use the deterministic bridge first, then Qwen3 only for unsupported requests."""
+    """Use deterministic language bridges only; unsupported requests are held."""
     bridge_plan = _flb1_plan(user_input, surface="patch199_planner")
     if bridge_plan is not None:
         return bridge_plan
 
-    import json as _j199
-    prompt = (
-        "/no_think\n"
-        "You are a Forge build planner. Forge is a local AI development tool.\n\n"
-        f"USER REQUEST: {user_input}\n\n"
-        f"{_P199_AVAILABLE_COMMANDS_REF}\n"
-        "IMPORTANT: If this request is about building/adding/creating a NEW capability:\n"
-        "  You MUST include all 6 steps: propose, approve-proposal, install, implement, implement-install, restart.\n"
-        "  Steps 4 (implement) and 5 (implement-install) are MANDATORY. Without them the command does nothing.\n\n"
-        "IMPORTANT: If this request is conversational, a question, or cannot be mapped to the\n"
-        "  commands above (e.g. edit agent.py, modify config directly, run shell commands),\n"
-        "  set impossible=true and explain why in reason.\n\n"
-        "Gates: INSTALL for forge-command-install/forge-tool-install, "
-        "IMPLEMENT for forge-command-implement-install, "
-        "WRAP-INSTALL for forge-tool-wrap-install, "
-        "RESTART for forge-restart. null for all others.\n\n"
-        "Respond ONLY with a single JSON object. No markdown. No explanation. No backticks.\n"
-        "Keep the entire response under 800 characters.\n\n"
-        '{"goal":"one sentence goal","impossible":false,"reason":"",'
-        '"steps":[{"cmd":"forge-command-propose","args":"description of command",'
-        '"description":"what this step does","gate":null}]}'
+    return _flb2_unsupported_plan(
+        user_input,
+        surface="patch199_planner",
+        reason=(
+            "No accepted deterministic Forge route currently covers this request. "
+            "The former Qwen/Ollama interpretation fallback is disabled. Use an "
+            "explicit Forge command, request a language preview, or extend the "
+            "accepted deterministic bridge in a later governed patch."
+        ),
     )
-    result = _p187_call_ollama(prompt)
-    if result["status"] != "OK":
-        return {"error": result.get("error", result["status"])}
-    raw = result["visible_response"].strip()
-    # Strip markdown fences
-    if raw.startswith("```"):
-        raw = re.sub(r"^```[^\n]*\n?", "", raw)
-        raw = re.sub(r"```\s*$", "", raw).strip()
-    # Extract JSON object
-    brace_start = raw.find("{")
-    brace_end   = raw.rfind("}")
-    if brace_start == -1 or brace_end == -1:
-        return {"error": "No JSON object in response", "raw": raw[:200]}
-    raw = raw[brace_start:brace_end + 1]
-    try:
-        return _j199.loads(raw)
-    except Exception as e:
-        return {"error": f"JSON parse failed: {e}", "raw": raw[:200]}
-    result = _p187_call_ollama(prompt)
-    if result["status"] != "OK":
-        return {"error": result.get("error", result["status"])}
-    raw = result["visible_response"].strip()
-    # Strip markdown fences if present despite instructions
-    if raw.startswith("```"):
-        raw = re.sub(r"^```[^\n]*\n?", "", raw)
-        raw = re.sub(r"```\s*$", "", raw).strip()
-    # Find the JSON object if there's surrounding text
-    brace_start = raw.find("{")
-    brace_end   = raw.rfind("}")
-    if brace_start != -1 and brace_end != -1:
-        raw = raw[brace_start:brace_end + 1]
-    try:
-        return _j199.loads(raw)
-    except Exception as e:
-        return {"error": f"JSON parse failed: {e}", "raw": raw[:300]}
-
 
 def _p199_get_latest_slug() -> str:
     """After forge-command-propose runs, find the newest proposal and return its slug."""
@@ -78442,7 +78422,7 @@ def cmd_forge_orchestrate(user_input: str, session_id: str):
     Natural language command orchestrator (Patch 199).
     Maps a plain English request to a Forge command plan, shows it,
     asks GO/ABORT, then executes step by step.
-    Returns True if handled. Returns None to fall back to agent.ask().
+    Returns True when handled or held. No ordinary interpretation model fallback is allowed.
     """
     from agents.forge.memory import write_audit_entry
 
@@ -78450,7 +78430,7 @@ def cmd_forge_orchestrate(user_input: str, session_id: str):
     print("── Forge Orchestrator ─────────────────────────────────────────────")
     print(f"  {user_input[:80]}")
     print()
-    print("  Building governed plan (deterministic bridge first; model fallback only if unsupported)...")
+    print("  Building governed plan (deterministic language bridge only; unsupported requests are held)...")
     print()
 
     plan = _p199_call_planner(user_input)
@@ -78460,9 +78440,16 @@ def cmd_forge_orchestrate(user_input: str, session_id: str):
         if "raw" in plan:
             print(f"  Raw: {plan['raw'][:200]}")
         print()
-        print("  Falling back to Forge agent response.")
+        print("  No model fallback is permitted for request interpretation.")
         print("──────────────────────────────────────────────────────────────────")
-        return None  # Signal: fall back to agent.ask()
+        write_audit_entry(
+            session_id,
+            "FORGE_ORCHESTRATE_DETERMINISTIC_HOLD",
+            "-",
+            user_input[:60].replace("\n", " ").replace("\r", " "),
+            str(plan.get("error") or "planning_error")[:80].replace("\n", " "),
+        )
+        return True
 
     if plan.get("impossible"):
         reason = plan.get("reason", "Cannot map to available Forge commands.")
@@ -78478,9 +78465,17 @@ def cmd_forge_orchestrate(user_input: str, session_id: str):
 
     steps = plan.get("steps", [])
     if not steps:
-        print("  ✗ No steps generated. Falling back to agent response.")
+        print("  ✗ No deterministic steps were generated.")
+        print("  No model fallback is permitted for request interpretation.")
         print("──────────────────────────────────────────────────────────────────")
-        return None
+        write_audit_entry(
+            session_id,
+            "FORGE_ORCHESTRATE_EMPTY_PLAN_HOLD",
+            "-",
+            user_input[:60].replace("\n", " ").replace("\r", " "),
+            "empty_deterministic_plan",
+        )
+        return True
 
     _p199_show_plan(plan, user_input)
     print("  Type GO to begin, ABORT to cancel.")
@@ -78595,7 +78590,7 @@ def cmd_forge_plan(user_input: str, session_id: str) -> None:
     print("── Forge Plan Preview ─────────────────────────────────────────────")
     print(f"  {user_input[:80]}")
     print()
-    print("  Building governed plan (deterministic bridge first; model fallback only if unsupported)...")
+    print("  Building governed plan (deterministic language bridge only; unsupported requests are held)...")
     print()
 
     plan = _p199_call_planner(user_input)
@@ -84687,7 +84682,11 @@ def _p255_operator_llm_request_v1(request: str) -> dict:
 
     if bridge_handled and bridge_status == "APPROVAL_REQUIRED":
         kind = "approval_required"
-    elif bridge_handled and bridge_status in {"INVALID_INPUT", "BOUNDARY_BLOCKED"}:
+    elif bridge_handled and bridge_status in {
+        "INVALID_INPUT",
+        "BOUNDARY_BLOCKED",
+        "UNSUPPORTED_HOLD",
+    }:
         kind = "deterministic_hold"
     elif bridge_handled:
         kind = "deterministic_route"
@@ -84706,15 +84705,11 @@ def _p255_operator_llm_request_v1(request: str) -> dict:
         "request_id": _p255_request_id(request),
         "request": request,
         "created_at": started,
-        "planner_called": not bridge_handled,
-        "model_route": (
-            "Forge deterministic language bridge v1"
-            if bridge_handled
-            else "Forge _p199_call_planner via local Ollama HTTP API fallback"
-        ),
+        "planner_called": False,
+        "model_route": "Forge deterministic language bridge v2 — no interpretation model fallback",
         "language_bridge_handled": bridge_handled,
-        "language_bridge_status": bridge_status if bridge_handled else "UNSUPPORTED_FALLBACK",
-        "ollama_fallback_used": not bridge_handled,
+        "language_bridge_status": bridge_status if bridge_handled else "UNSUPPORTED_HOLD",
+        "ollama_fallback_used": False,
         "response_text": _p255_format_planner_response(plan if isinstance(plan, dict) else {}, request),
         "plan": plan,
         "plan_validation": validation,
@@ -84736,6 +84731,8 @@ def _p255_llm_boundary() -> dict:
         "rmc_live_memory_write": False,
         "returns_proposal_only": True,
         "approval_required_for_actions": True,
+        "ordinary_interpretation_model_fallback": False,
+        "unsupported_requests_are_held": True,
     }
 
 
