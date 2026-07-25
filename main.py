@@ -30,13 +30,23 @@ from agents.forge.permissions import (
     get_session_paths,
 )
 from agents.forge.memory import (
-    SessionMemory,
     write_session_start,
     write_session_end,
     write_error_log,
     verify_audit_chain,
 )
-from agents.forge.agent import ForgeAgent
+from agents.forge.llm_authority import (
+    audit_refusal,
+    build_refusal_receipt,
+    format_refusal,
+    is_legacy_forge_llm_command,
+    raise_forge_llm_authority_removed,
+)
+from echoforge_advisory import (
+    ALLOWED_ROLES as ECHOFORGE_ADVISORY_ROLES,
+    EchoForgeAdvisoryError,
+    run_advisory as run_echoforge_advisory,
+)
 
 CONFIG_DIR   = FORGE_ROOT / "config"
 LOGS_DIR     = FORGE_ROOT / "logs"
@@ -53,6 +63,87 @@ RUNTIME_CONFIG_DIR = RUNTIME_STATE_ROOT / "config"
 RUNTIME_MEMORY_DIR = RUNTIME_STATE_ROOT / "memory"
 RUNTIME_APPROVED_PATHS_FILE = RUNTIME_CONFIG_DIR / "approved_paths.json"
 RUNTIME_SESSION_SCOPE_FILE = RUNTIME_CONFIG_DIR / "session_scope.json"
+
+
+def _handle_forge_llm_refusal(
+    raw_command: str,
+    *,
+    surface: str,
+    session_id: str,
+) -> bool:
+    """Refuse a removed Forge model lane before any command-specific code."""
+    if not is_legacy_forge_llm_command(raw_command):
+        return False
+    receipt = build_refusal_receipt(
+        raw_command,
+        surface=surface,
+        session_id=session_id,
+    )
+    audit_refusal(receipt)
+    print()
+    print(format_refusal(receipt))
+    print()
+    return True
+
+
+def cmd_echoforge_advisory(argument: str, session_id: str) -> None:
+    """Run one explicit EchoForge advisory request without Forge authority."""
+    role_text, separator, prompt = str(argument or "").partition("::")
+    role = role_text.strip().lower()
+    if not separator:
+        print()
+        print("  Usage: echoforge-advisory <role> :: <prompt>")
+        print(f"  Roles: {', '.join(sorted(ECHOFORGE_ADVISORY_ROLES))}")
+        print("  Output is advisory only and cannot route or authorize Forge.")
+        print()
+        return
+
+    try:
+        response = run_echoforge_advisory(role, prompt)
+    except EchoForgeAdvisoryError as exc:
+        from agents.forge.memory import write_audit_entry
+
+        write_audit_entry(
+            session_id,
+            "ECHOFORGE_ADVISORY_REFUSED",
+            "-",
+            role or "unknown_role",
+            exc.code,
+        )
+        print()
+        print("[echoforge] ADVISORY REQUEST REFUSED")
+        print(f"  Code   : {exc.code}")
+        print(f"  Reason : {exc.safe_message}")
+        print("  Forge authority: false")
+        print()
+        return
+
+    from agents.forge.memory import write_audit_entry
+
+    write_audit_entry(
+        session_id,
+        "ECHOFORGE_ADVISORY_COMPLETED",
+        "-",
+        response.role,
+        (
+            f"provider={response.provider}|model={response.model}|"
+            f"output_sha256={response.output_sha256}"
+        ),
+    )
+    print()
+    print("── EchoForge Advisory ─────────────────────────────────")
+    print(f"  Role              : {response.role}")
+    print(f"  Provider          : {response.provider} / {response.model}")
+    print("  Advisory only     : true")
+    print("  Forge authority   : false")
+    print("  Tool calls allowed: false")
+    print(f"  Output SHA-256    : {response.output_sha256}")
+    print()
+    print(response.content)
+    print()
+    print("  This output is not Forge meaning, permission, routing, proof, or action.")
+    print("───────────────────────────────────────────────────────")
+    print()
 
 
 def _runtime_first_existing_file(
@@ -334,7 +425,7 @@ def _print_banner(session_id: str, scope: list[str]):
     print("└───────────────────────────────────────────────────────┘")
     print(f"  Session : {session_id}")
     print(f"  Scope   : {', '.join(scope) if scope else '(none)'}")
-    print(f"  Model   : qwen3:8b via Ollama")
+    print("  Model   : none in Forge; EchoForge advisory is explicit and opt-in")
     print(f"  Audit   : {AUDIT_LOG}")
     print()
     print("  Type your question or a command. 'help' for full command list.")
@@ -4466,12 +4557,10 @@ def cmd_patch_apply_gate_status(session_id: str) -> None:
 def cmd_run(
     command_name: str,
     session_id: str,
-    agent,
 ) -> None:
     """
-    Deterministic execution mode — bypasses LLM for the run step.
+    Deterministic execution mode with no model-analysis follow-up.
     Calls runner.run_safe_command() directly in Python.
-    Then passes the output to the agent for analysis.
 
     Usage inside a Forge session: run <command_name>
     Examples:
@@ -4524,24 +4613,9 @@ def cmd_run(
         except Exception:
             pass
 
-    # Pass to agent for analysis
-    question = (
-        f"The command '{command_name}' was executed by the CLI (not by you). "
-        f"Exit code: {result['exit_code']}. "
-        f"SHA-256: {result['output_sha256']}. "
-        f"Saved to: {result['diag_path']}.\n\n"
-        f"Here is the verbatim output:\n\n"
-        f"{result['output']}\n\n"
-        f"Do NOT call run_safe_command or analyze_command_output — the execution is already complete and audited. "
-        f"Analyze the output above and explain:\n"
-        f"1. What it shows (key values and what they mean)\n"
-        f"2. Whether anything looks abnormal or worth noting\n"
-        f"3. Whether a next diagnostic step is needed"
-    )
-
-    print("[forge] Analyzing...")
-    response = agent.ask(question)
-    _print_response(response)
+    print("[forge] Deterministic run complete. No model analysis was requested.")
+    print("[forge] For optional discussion, use: echoforge-advisory <role> :: <prompt>")
+    print()
 
 
 def cmd_exact_list(directory: str, files_only: bool = False, session_id: str = "") -> None:
@@ -13771,7 +13845,6 @@ def cmd_diag_session(
     subcommand: str,
     topic_or_status: str,
     session_id_str: str,
-    agent,
 ) -> None:
     """
     diag-session start <topic>         — start a new diagnostic session
@@ -13796,7 +13869,6 @@ def cmd_diag_session(
 
         new_id = create_session(topic, session_id_str)
         _active_diag_session_id = new_id
-        agent.set_diag_session(new_id)
 
         write_audit_entry(
             session_id=session_id_str,
@@ -13847,7 +13919,6 @@ def cmd_diag_session(
 
         closed_id = _active_diag_session_id
         _active_diag_session_id = None
-        agent.set_diag_session(None)
 
         print()
         print(f"[forge] Diagnostic session closed as {raw_status.upper()}.")
@@ -13877,13 +13948,12 @@ def cmd_diag_session(
 def cmd_diag_paste(
     command: str,
     session_id: str,
-    agent,
 ) -> None:
     """
     Deterministic paste capture mode.
     Reads lines from stdin until the sentinel 'END' appears alone on a line.
     Calls analyze_command_output directly in Python — no LLM extraction involved.
-    Then passes the stored result to the agent for analysis only.
+    The stored result remains deterministic evidence; no model is called.
 
     Usage inside a Forge session: diag free -h
     """
@@ -13952,27 +14022,9 @@ def cmd_diag_paste(
         except Exception as e:
             print(f"[forge] WARNING: Could not link to diag session: {e}")
     print()
-
-    # Build the analysis question — tell the agent the capture already happened
-    # so it does not try to call analyze_command_output again
-    question = (
-        f"The terminal output from running `{command}` has already been captured "
-        f"and stored by the CLI (not by you). "
-        f"SHA-256 of stored output: {result['output_sha256']}. "
-        f"Diagnostic file: {result['diagnostic_path']}.\n\n"
-        f"Here is the verbatim output that was stored:\n\n"
-        f"{result['output_preview']}\n\n"
-        f"Do NOT call analyze_command_output — the capture is already complete and audited. "
-        f"Your job is analysis only:\n"
-        f"1. What does this output say? (literal values and what they represent)\n"
-        f"2. What does it mean? (interpretation in plain language)\n"
-        f"3. Are there any warnings, errors, or concerning values?\n"
-        f"4. Is a next diagnostic step needed? If so, call propose_command."
-    )
-
-    print("[forge] Analyzing...")
-    response = agent.ask(question)
-    _print_response(response)
+    print("[forge] Deterministic capture complete. No model analysis was requested.")
+    print("[forge] For optional discussion, use: echoforge-advisory <role> :: <prompt>")
+    print()
 
 
 def run_session():
@@ -13998,10 +14050,6 @@ def run_session():
 
     # Write session start to audit log
     write_session_start(session_id, scope)
-
-    # Initialize session memory and agent
-    memory = SessionMemory(session_id)
-    agent  = ForgeAgent(session_id, memory)
 
     # Ensure proposals directory exists
     (FORGE_ROOT / "proposals").mkdir(parents=True, exist_ok=True)
@@ -14038,6 +14086,24 @@ def run_session():
             if user_input.lower() in ("quit", "exit", "q"):
                 break
 
+            if user_input.lower().startswith("echoforge-advisory "):
+                cmd_echoforge_advisory(
+                    user_input[len("echoforge-advisory "):],
+                    session_id,
+                )
+                continue
+
+            if user_input.lower() == "echoforge-advisory":
+                cmd_echoforge_advisory("", session_id)
+                continue
+
+            if _handle_forge_llm_refusal(
+                user_input,
+                surface="forge_cli",
+                session_id=session_id,
+            ):
+                continue
+
             if user_input.lower() == "status":
                 cmd_status()
                 continue
@@ -14048,7 +14114,7 @@ def run_session():
 
             if user_input.lower().startswith("run "):
                 run_cmd = user_input[4:].strip()
-                cmd_run(run_cmd, session_id, agent)
+                cmd_run(run_cmd, session_id)
                 continue
 
             if user_input.lower() == "run":
@@ -18013,11 +18079,11 @@ def run_session():
                 parts = user_input[13:].strip().split(None, 1)
                 sub  = parts[0].lower() if parts else ""
                 rest = parts[1].strip() if len(parts) > 1 else ""
-                cmd_diag_session(sub, rest, session_id, agent)
+                cmd_diag_session(sub, rest, session_id)
                 continue
 
             if user_input.lower() == "diag-session":
-                cmd_diag_session("status", "", session_id, agent)
+                cmd_diag_session("status", "", session_id)
                 continue
 
             if user_input.lower().startswith("diag "):
@@ -18028,7 +18094,7 @@ def run_session():
                     print("  Example: diag free -h")
                     print()
                 else:
-                    cmd_diag_paste(diag_command, session_id, agent)
+                    cmd_diag_paste(diag_command, session_id)
                 continue
 
             
@@ -34685,6 +34751,10 @@ def _patch98_engine_review_prompt(engine_family: str, binder: dict, source_repor
 
 
 def _patch98_call_local_llm_for_review(engine_family: str, binder: dict, source_report: dict) -> dict:
+    raise_forge_llm_authority_removed(
+        "llm-engine-review-draft",
+        surface="forge_provider_patch98",
+    )
     """Call local Ollama for the review text. Falls back safely if unavailable; never grants authority."""
     import subprocess, time, hashlib
     prompt = _patch98_engine_review_prompt(engine_family, binder, source_report)
@@ -35102,6 +35172,11 @@ def cmd_llm_engine_review_provider(session_id: str) -> None:
 
 
 def cmd_llm_engine_review_model_test(session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "llm-engine-review-model-test",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     """Smoke-test local Ollama model availability. Usage: llm-engine-review-model-test"""
     from agents.forge.memory import write_audit_entry
     import subprocess, time
@@ -35153,6 +35228,11 @@ def cmd_llm_engine_review_model_test(session_id: str) -> None:
 
 
 def cmd_llm_engine_review_draft(engine_family: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "llm-engine-review-draft",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     """Write Patch 98 LLM engine review draft for one engine. Usage: llm-engine-review-draft <engine_family>"""
     from agents.forge.memory import write_audit_entry
     draft = _patch98_make_draft(engine_family)
@@ -35233,6 +35313,11 @@ def cmd_llm_engine_review_batch_plan(session_id: str) -> None:
 
 
 def cmd_llm_engine_review_batch_next(session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "llm-engine-review-batch-next",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     """Draft the next ready engine lacking a Patch 98 draft. Usage: llm-engine-review-batch-next"""
     from agents.forge.memory import write_audit_entry
     for binder in _patch98_all_latest_evidence_binders():
@@ -36681,6 +36766,11 @@ def cmd_llm_engine_review_batch_run_plan(session_id: str) -> None:
 
 
 def cmd_llm_engine_review_batch_run(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "llm-engine-review-batch-run",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     """Run a small Patch 101 LLM draft batch. Usage: llm-engine-review-batch-run [1-5]"""
     from agents.forge.memory import write_audit_entry
     limit = _patch101_parse_limit(arg)
@@ -49667,6 +49757,11 @@ def cmd_llm_live_probe(arg: str, session_id: str) -> None:
     write_audit_entry(session_id,"LLM_LIVE_PROBE_WRITTEN",str(jp),payload["status"],"generation_called=false")
 
 def cmd_llm_live_draft(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "llm-live-draft",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from agents.forge.memory import write_audit_entry
     parts=(arg or "").split(); target=parts[0] if parts else "stack_linker_breather"; token=parts[1] if len(parts)>1 else ""
     if token != PATCH132R_CONFIRM_TOKEN:
@@ -50892,6 +50987,11 @@ def cmd_generic_repair_plan(arg: str, session_id: str) -> None:
 
 
 def cmd_generic_repair_llm(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "generic-repair-llm",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from agents.forge.memory import write_audit_entry
     parts = (arg or "").split()
     target_arg = parts[0] if parts else "latest"
@@ -51447,6 +51547,11 @@ def cmd_generic_repair_candidate_policy(session_id: str) -> None:
 
 
 def cmd_generic_repair_candidate_build(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "generic-repair-candidate-build",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from agents.forge.memory import write_audit_entry
     arg = (arg or "latest").strip()
     parts = arg.split()
@@ -51615,6 +51720,11 @@ def cmd_generic_repair_candidate_show(arg: str, session_id: str) -> None:
 
 
 def cmd_generic_repair_candidate_verify(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "generic-repair-candidate-verify",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from agents.forge.memory import write_audit_entry
     candidate = _p136_load_json(_p136_latest_candidate_path())
     problems = []
@@ -52001,6 +52111,11 @@ def cmd_generic_repair_review_policy(session_id: str) -> None:
 
 
 def cmd_generic_repair_review_llm(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "generic-repair-review-llm",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from agents.forge.memory import write_audit_entry
     parts = (arg or "").split()
     target_arg = parts[0] if parts else "latest"
@@ -52178,6 +52293,11 @@ def cmd_generic_repair_review_show(arg: str, session_id: str) -> None:
 
 
 def cmd_generic_repair_review_verify(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "generic-repair-review-verify",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from agents.forge.memory import write_audit_entry
     review = _p136l_latest_review()
     candidate = _p136l_latest_candidate()
@@ -52436,6 +52556,11 @@ def _p137_run_cmd(argv, cwd: Path, env=None, timeout=60):
 
 
 def _p137_call_llm(prompt: str, target: str, session_id: str) -> dict:
+    raise_forge_llm_authority_removed(
+        "generic-repair-sandbox-run",
+        surface="forge_provider_patch137",
+        session_id=session_id,
+    )
     import subprocess, shutil, hashlib
     from agents.forge.memory import write_audit_entry
     P137_DIR.mkdir(parents=True, exist_ok=True)
@@ -52495,6 +52620,11 @@ def cmd_generic_repair_sandbox_policy(session_id: str) -> None:
 
 
 def cmd_generic_repair_sandbox_plan(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "generic-repair-sandbox-plan",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from agents.forge.memory import write_audit_entry
     candidate = _p137_latest_candidate()
     cand_ver = _p137_latest_candidate_verification()
@@ -52567,6 +52697,11 @@ def _p137_latest_run() -> dict:
 
 
 def cmd_generic_repair_sandbox_run(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "generic-repair-sandbox-run",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from agents.forge.memory import write_audit_entry
     parts = (arg or "").split()
     if P137_CONFIRM not in parts:
@@ -53048,6 +53183,11 @@ def _p138_run_proc(argv, cwd=None, env=None, timeout=45):
         }
 
 def _p138_call_ollama(prompt, target, session_id):
+    raise_forge_llm_authority_removed(
+        "generic-sandbox-dependency-run",
+        surface="forge_provider_patch138",
+        session_id=session_id,
+    )
     import subprocess, os, hashlib
     from pathlib import Path
     from agents.forge.memory import write_audit_entry
@@ -53125,6 +53265,11 @@ def cmd_generic_sandbox_dependency_policy(session_id: str) -> None:
     write_audit_entry(session_id, "GENERIC_SANDBOX_DEPENDENCY_POLICY", str(jp), payload["status"], "read-only policy")
 
 def cmd_generic_sandbox_dependency_plan(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "generic-sandbox-dependency-plan",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from pathlib import Path
     from agents.forge.memory import write_audit_entry
     run = _p138_latest_sandbox_run()
@@ -53180,6 +53325,11 @@ def cmd_generic_sandbox_dependency_plan(arg: str, session_id: str) -> None:
     write_audit_entry(session_id, "GENERIC_SANDBOX_DEPENDENCY_PLAN", str(jp), payload["status"], f"missing={missing}")
 
 def cmd_generic_sandbox_dependency_run(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "generic-sandbox-dependency-run",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from pathlib import Path
     import os, shutil, sys, json
     from agents.forge.memory import write_audit_entry
@@ -53632,6 +53782,11 @@ def _p139_run_proc(argv, cwd=None, env=None, timeout=240):
         }
 
 def _p139_call_ollama(prompt, target, session_id):
+    raise_forge_llm_authority_removed(
+        "generic-revision-llm",
+        surface="forge_provider_patch139",
+        session_id=session_id,
+    )
     import os
     from pathlib import Path
     from agents.forge.memory import write_audit_entry
@@ -53783,6 +53938,11 @@ def cmd_generic_revision_plan(arg: str, session_id: str) -> None:
     write_audit_entry(session_id, "GENERIC_REVISION_PLAN", str(jp), payload["status"], f"target={payload.get('target')}")
 
 def cmd_generic_revision_llm(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "generic-revision-llm",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from agents.forge.memory import write_audit_entry
     parts = str(arg or "").split()
     token_ok = "CONFIRM_CALL_GENERIC_REVISION_LLM" in parts
@@ -54146,6 +54306,11 @@ def _p140_run_proc(argv, cwd=None, env=None, timeout=240):
 
 
 def _p140_call_ollama_for_candidate_plan(prompt: str, target: str, session_id: str):
+    raise_forge_llm_authority_removed(
+        "generic-revision-candidate-build",
+        surface="forge_provider_patch140",
+        session_id=session_id,
+    )
     from agents.forge.memory import write_audit_entry
     import os
     model = os.environ.get("FORGE_LLM_MODEL", "qwen3:8b")
@@ -54323,6 +54488,11 @@ def cmd_generic_revision_candidate_policy(session_id: str) -> None:
 
 
 def cmd_generic_revision_candidate_build(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "generic-revision-candidate-build",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from agents.forge.memory import write_audit_entry
     parts = str(arg or "").split()
     if P140_CONFIRM not in parts:
@@ -54458,6 +54628,11 @@ def cmd_generic_revision_candidate_show(arg: str, session_id: str) -> None:
 
 
 def cmd_generic_revision_candidate_verify(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "generic-revision-candidate-verify",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from agents.forge.memory import write_audit_entry
     payload = _p140_latest_revision_candidate()
     problems = []
@@ -54828,6 +55003,10 @@ def _p141_run_subprocess(argv, cwd, env=None, timeout=45):
 
 
 def _p141_call_ollama(prompt, target):
+    raise_forge_llm_authority_removed(
+        "generic-revision-sandbox-run",
+        surface="forge_provider_patch141",
+    )
     import subprocess, shutil, hashlib
     from pathlib import Path
     d = _p141_dir()
@@ -54897,6 +55076,11 @@ def cmd_generic_revision_sandbox_policy(session_id: str) -> None:
 
 
 def cmd_generic_revision_sandbox_plan(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "generic-revision-sandbox-plan",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from pathlib import Path
     from agents.forge.memory import write_audit_entry
     rev = _p141_latest_revision_candidate()
@@ -54973,6 +55157,11 @@ def _p141_latest_run():
 
 
 def cmd_generic_revision_sandbox_run(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "generic-revision-sandbox-run",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from pathlib import Path
     import os, shutil, sys
     from agents.forge.memory import write_audit_entry
@@ -55390,6 +55579,11 @@ def _p142_tail(text, limit=5000):
 
 
 def _p142_call_ollama(prompt: str, target: str, session_id: str):
+    raise_forge_llm_authority_removed(
+        "generic-revision-loop-llm",
+        surface="forge_provider_patch142",
+        session_id=session_id,
+    )
     import subprocess, shutil, re
     from agents.forge.memory import write_audit_entry
     d = _p142_dir()
@@ -55577,6 +55771,11 @@ def cmd_generic_revision_loop_policy(session_id: str) -> None:
 
 
 def cmd_generic_revision_loop_llm(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "generic-revision-loop-llm",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from agents.forge.memory import write_audit_entry
     parts = str(arg or "").split()
     if P142_CONFIRM_LLM not in parts:
@@ -55614,6 +55813,11 @@ def cmd_generic_revision_loop_llm(arg: str, session_id: str) -> None:
 
 
 def cmd_generic_revision_loop_candidate(arg: str, session_id: str) -> None:
+    raise_forge_llm_authority_removed(
+        "generic-revision-loop-candidate",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     from agents.forge.memory import write_audit_entry
     import difflib, json, re
     from pathlib import Path
@@ -75580,6 +75784,10 @@ def _p187_load_install_record(slug):
 
 
 def _p187_call_ollama(prompt):
+    raise_forge_llm_authority_removed(
+        "forge-command-implement",
+        surface="forge_provider_patch187",
+    )
     """
     Call Ollama via HTTP API with think:false.
     This is faster and more reliable than the CLI subprocess approach.
@@ -75661,6 +75869,11 @@ def _p187_build_prompt(fn_name, cmd_name, description):
 
 
 def cmd_forge_command_implement(slug, session_id):
+    raise_forge_llm_authority_removed(
+        "forge-command-implement",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     """
     Ask local Qwen3 to write a real implementation for an installed scaffold command.
     The generated code is saved for review. Nothing changes in main.py until
@@ -75772,6 +75985,11 @@ def cmd_forge_command_implement(slug, session_id):
 
 
 def cmd_forge_command_implement_review(slug, session_id):
+    raise_forge_llm_authority_removed(
+        "forge-command-implement-review",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     """
     Review the LLM-generated implementation before installing it.
 
@@ -75818,6 +76036,11 @@ def cmd_forge_command_implement_review(slug, session_id):
 
 
 def cmd_forge_command_implement_install(slug, session_id):
+    raise_forge_llm_authority_removed(
+        "forge-command-implement-install",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     """
     Replace the TODO scaffold in main.py with the LLM-generated implementation.
     Requires typing IMPLEMENT to confirm. Backs up first. Auto-restores if compile fails.
@@ -76267,6 +76490,11 @@ def _p191_generate_body(fn_name: str, description: str) -> str:
 
 
 def cmd_forge_command_implement_write(slug: str, session_id: str):
+    raise_forge_llm_authority_removed(
+        "forge-command-implement-write",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     """
     Generate a real implementation for an installed command using local
     keyword-based templates. No Ollama required — works instantly.
@@ -76673,6 +76901,11 @@ def cmd_forge_tool_install(package: str, session_id: str):
 
 
 def cmd_forge_tool_wrap(package: str, session_id: str):
+    raise_forge_llm_authority_removed(
+        "forge-tool-wrap",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     """
     Generate a Forge command wrapper for an installed package using Qwen3.
     Creates a proposal that goes through the normal install pipeline.
@@ -76872,6 +77105,11 @@ def cmd_forge_tool_wrap_list(session_id: str):
 
 
 def cmd_forge_tool_wrap_install(package: str, session_id: str):
+    raise_forge_llm_authority_removed(
+        "forge-tool-wrap-install",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     """
     Install a generated tool wrapper as a live Forge command.
     Requires typing WRAP-INSTALL to confirm. Backs up main.py first.
@@ -77390,6 +77628,11 @@ def cmd_forge_self_gaps(session_id: str):
 
 
 def cmd_forge_self_suggest(session_id: str):
+    raise_forge_llm_authority_removed(
+        "forge-self-suggest",
+        surface="forge_internal_entrypoint",
+        session_id=session_id,
+    )
     """
     Ask Qwen3 to suggest new Forge commands based on the gap analysis.
     Each suggestion is saved as a command proposal ready to install.
@@ -78496,21 +78739,15 @@ def _p199_build_dispatch() -> dict:
         "forge-command-list-proposals":    lambda a, s: cmd_forge_command_list_proposals(s),
         "forge-command-approve-proposal":  lambda a, s: cmd_forge_command_approve_proposal(a, s),
         "forge-command-install":           lambda a, s: cmd_forge_command_install(a, s),
-        "forge-command-implement":         lambda a, s: cmd_forge_command_implement(a, s),
-        "forge-command-implement-review":  lambda a, s: cmd_forge_command_implement_review(a, s),
-        "forge-command-implement-install": lambda a, s: cmd_forge_command_implement_install(a, s),
         "forge-command-list-active":       lambda a, s: cmd_forge_command_list_active(s),
         "forge-tool-search":               lambda a, s: cmd_forge_tool_search(a, s),
         "forge-tool-info":                 lambda a, s: cmd_forge_tool_info(a, s),
         "forge-tool-install":              lambda a, s: cmd_forge_tool_install(a, s),
-        "forge-tool-wrap":                 lambda a, s: cmd_forge_tool_wrap(a, s),
         "forge-tool-wrap-list":            lambda a, s: cmd_forge_tool_wrap_list(s),
-        "forge-tool-wrap-install":         lambda a, s: cmd_forge_tool_wrap_install(a, s),
         "forge-tool-list":                 lambda a, s: cmd_forge_tool_list(s),
         "forge-self-scan":                 lambda a, s: cmd_forge_self_scan(s),
         "forge-self-report":               lambda a, s: cmd_forge_self_report(s),
         "forge-self-gaps":                 lambda a, s: cmd_forge_self_gaps(s),
-        "forge-self-suggest":              lambda a, s: cmd_forge_self_suggest(s),
         "forge-session-diff":              lambda a, s: cmd_forge_session_diff(s),
         "forge-restart":                   lambda a, s: cmd_forge_restart(s),
         "forge-roadmap-sync":              lambda a, s: cmd_forge_roadmap_sync(s),
@@ -78656,6 +78893,17 @@ def cmd_forge_orchestrate(user_input: str, session_id: str):
         if gate:
             print(f"     (When prompted, type: {gate})")
         print()
+
+        if is_legacy_forge_llm_command(cmd):
+            receipt = build_refusal_receipt(
+                cmd,
+                surface="patch199_orchestrator",
+                session_id=session_id,
+            )
+            audit_refusal(receipt)
+            print(format_refusal(receipt))
+            print()
+            continue
 
         if cmd not in dispatch:
             print(f"     ✗ Unknown command '{cmd}' — skipping this step.")
@@ -87934,11 +88182,29 @@ def _p201_make_handler():
                     self._ok("application/json", _j.dumps({"status":"ERROR","output":str(e)}).encode("utf-8"))
                     return
 
+                if is_legacy_forge_llm_command(cmd_name):
+                    receipt = build_refusal_receipt(
+                        cmd_name,
+                        surface="patch201_operator_api",
+                        session_id=sid,
+                    )
+                    audit_refusal(receipt)
+                    self._ok(
+                        "application/json",
+                        _j.dumps(
+                            {
+                                "status": "REFUSED",
+                                "receipt": receipt.to_dict(),
+                            },
+                            sort_keys=True,
+                        ).encode("utf-8"),
+                    )
+                    return
+
                 _SAFE = {
                     "forge-self-scan":              lambda: cmd_forge_self_scan(sid),
                     "forge-self-gaps":              lambda: cmd_forge_self_gaps(sid),
                     "forge-self-report":            lambda: cmd_forge_self_report(sid),
-                    "forge-self-suggest":           lambda: cmd_forge_self_suggest(sid),
                     "forge-session-diff":           lambda: cmd_forge_session_diff(sid),
                     "forge-roadmap-sync":           lambda: cmd_forge_roadmap_sync(sid),
                     "forge-roadmap-status":         lambda: cmd_forge_roadmap_status(sid),
@@ -87958,8 +88224,6 @@ def _p201_make_handler():
                     "forge-tool-search":            lambda: cmd_forge_tool_search(cmd_args, sid),
                     "forge-command-propose":        lambda: cmd_forge_command_propose(cmd_args, sid),
                     "forge-command-approve-proposal": lambda: cmd_forge_command_approve_proposal(cmd_args, sid),
-                    "forge-command-implement":      lambda: cmd_forge_command_implement(cmd_args, sid),
-                    "forge-command-implement-review": lambda: cmd_forge_command_implement_review(cmd_args, sid),
                     # Patch 240: ProtoForge connector commands available through Terminus UI.
                     # These call the already-installed Patch 239 connector. They do not add new
                     # Forge CLI commands and do not bypass Forge approval boundaries.
@@ -87969,10 +88233,7 @@ def _p201_make_handler():
                 }
                 _GATED = {
                     "forge-command-install":          ("INSTALL",      lambda: cmd_forge_command_install(cmd_args, sid)),
-                    "forge-command-implement-install":("IMPLEMENT",    lambda: cmd_forge_command_implement_install(cmd_args, sid)),
                     "forge-tool-install":             ("INSTALL",      lambda: cmd_forge_tool_install(cmd_args, sid)),
-                    "forge-tool-wrap":                (None,           lambda: cmd_forge_tool_wrap(cmd_args, sid)),
-                    "forge-tool-wrap-install":        ("WRAP-INSTALL", lambda: cmd_forge_tool_wrap_install(cmd_args, sid)),
                     "forge-restart":                  ("RESTART",      lambda: cmd_forge_session_diff(sid)),
                     # Patch 240: UI-side approval gate for running the latest ProtoForge plan.
                     # Planning and result display are safe; the run action requires this explicit gate.
@@ -99968,4 +100229,3 @@ def cmd_forge_protoforge_result_show(session_id: str, requested_run_id: str = ""
 
 if __name__ == "__main__":
     main()
-
