@@ -124,6 +124,109 @@ def _phase_state(phase_report: dict[str, Any]) -> dict[str, Any]:
     return phase_report
 
 
+def _language_core_admission(phase_report: dict[str, Any]) -> dict[str, Any]:
+    """Return the fail-closed Language Core admission record for RMC."""
+
+    phase_state = _phase_state(phase_report)
+    interpretation = phase_report.get("language_core_interpretation")
+    if not isinstance(interpretation, dict):
+        interpretation = {}
+    candidates = interpretation.get("candidates")
+    if not isinstance(candidates, list):
+        candidates = []
+
+    interpretation_status = str(interpretation.get("status") or "MISSING")
+    candidate_count = int(interpretation.get("candidate_count") or len(candidates))
+    negated = bool(phase_state.get("negated"))
+    phase_primary = str(phase_state.get("phase_primary") or "")
+    reason_code = (
+        phase_report.get("reason_code")
+        or interpretation.get("refusal_code")
+        or None
+    )
+    language_core_input = phase_report.get("input_event")
+    if not isinstance(language_core_input, dict):
+        language_core_input = {}
+    admitted = bool(
+        phase_report.get("status") == "OK"
+        and phase_report.get("language_core_admitted") is True
+        and interpretation_status == "INTERPRETED"
+        and candidate_count == 1
+        and not negated
+        and phase_primary in PHASES
+    )
+    if not admitted and not reason_code:
+        if interpretation_status == "AMBIGUOUS":
+            reason_code = "LC_RMC_001_AMBIGUOUS_MEANING_HELD"
+        elif negated:
+            reason_code = "LC_RMC_001_NEGATED_ACTION_HELD"
+        elif not phase_primary:
+            reason_code = "LC_RMC_001_PHASE_STATE_NOT_ADMITTED"
+        else:
+            reason_code = "LC_RMC_001_LANGUAGE_CORE_NOT_ADMITTED"
+
+    return {
+        "admitted": admitted,
+        "reason_code": reason_code,
+        "interpretation_status": interpretation_status,
+        "candidate_count": candidate_count,
+        "candidate_ids": [
+            str(item.get("candidate_id"))
+            for item in candidates
+            if isinstance(item, dict) and item.get("candidate_id")
+        ],
+        "semantic_signature": interpretation.get("semantic_signature"),
+        "source_sha256": interpretation.get("source_sha256"),
+        "source_byte_length": interpretation.get("source_byte_length"),
+        "language_core_event_id": language_core_input.get("event_id"),
+        "action_root_key": phase_state.get("action_root_key"),
+        "action_root_id": phase_state.get("action_root_id"),
+        "predicate_id": phase_state.get("predicate_id"),
+        "predicate_frame_id": phase_state.get("predicate_frame_id"),
+        "speech_act": (
+            candidates[0].get("speech_act")
+            if len(candidates) == 1 and isinstance(candidates[0], dict)
+            else None
+        ),
+        "negated": negated,
+        "selected_meaning_created": bool(
+            phase_state.get("selected_meaning_created", False)
+        ),
+    }
+
+
+def _phase_trace_state(phase_report: dict[str, Any]) -> dict[str, Any]:
+    """Preserve admitted linguistic custody in the symbolic Φ_t record."""
+
+    phase_state = _phase_state(phase_report)
+    admission = _language_core_admission(phase_report)
+    return {
+        "phase_primary": phase_state.get("phase_primary"),
+        "phase_secondary": phase_state.get("phase_secondary", []),
+        "phase_path_hypothesis": phase_state.get("phase_path_hypothesis", []),
+        "confidence": phase_state.get("confidence"),
+        "transition_warnings": phase_state.get("transition_warnings", []),
+        "interpretation_status": admission.get("interpretation_status"),
+        "language_core_admitted": admission.get("admitted", False),
+        "language_core_reason_code": admission.get("reason_code"),
+        "linguistic_candidate_count": admission.get("candidate_count", 0),
+        "linguistic_candidate_ids": admission.get("candidate_ids", []),
+        "semantic_signature": admission.get("semantic_signature"),
+        "source_sha256": admission.get("source_sha256"),
+        "source_byte_length": admission.get("source_byte_length"),
+        "language_core_event_id": admission.get("language_core_event_id"),
+        "action_root_key": admission.get("action_root_key"),
+        "action_root_id": admission.get("action_root_id"),
+        "predicate_id": admission.get("predicate_id"),
+        "predicate_frame_id": admission.get("predicate_frame_id"),
+        "speech_act": admission.get("speech_act"),
+        "negated": admission.get("negated", False),
+        "selected_meaning_created": admission.get(
+            "selected_meaning_created", False
+        ),
+    }
+
+
 def _relative(path: Path, root: Path) -> str:
     try:
         return str(path.resolve().relative_to(root.resolve()))
@@ -449,6 +552,7 @@ def memory_recaller_boundary() -> dict[str, Any]:
         "supported_retrieval_backends": ["filesystem"],
         "legacy_vector_parameters_are_refusal_inputs": True,
         "fallback_from_blocked_backend_allowed": False,
+        "requires_admitted_language_core_meaning": True,
         "note": "This module builds read-only I_t/M_t/Φ_t/D_t trace inputs from deterministic filesystem sources only.",
     }
 
@@ -471,12 +575,114 @@ def build_input_event(source_text: str, source_metadata: dict[str, Any] | None =
     }
 
 
+def _blocked_memory_recall(
+    input_event: dict[str, Any],
+    phase_report: dict[str, Any],
+    admission: dict[str, Any],
+) -> dict[str, Any]:
+    """Stop before filesystem memory inspection when Language Core holds input."""
+
+    return {
+        "status": "BLOCKED",
+        "reason_code": admission.get("reason_code"),
+        "engine_version": ENGINE_VERSION,
+        "engine_mode": ENGINE_MODE,
+        "stage": "Memory Recaller",
+        "input_event": input_event,
+        "phase_report_summary": _phase_trace_state(phase_report),
+        "language_core_admission": admission,
+        "memory_state": {
+            "M_t_present": False,
+            "candidate_nodes_collected": 0,
+            "active_memory_count": 0,
+            "retrieval_dimensions": [],
+            "retrieval_backend_requested": None,
+            "retrieval_backend_effective": "none",
+            "active_memory_nodes": [],
+            "source_counts_collected": {},
+            "active_source_kind_counts": {},
+            "active_memory_role_counts": {},
+            "active_phase_counts": {},
+        },
+        "legacy_retrieval_request": {
+            "status": "NOT_EVALUATED_LANGUAGE_CORE_HOLD"
+        },
+        "context_library_status": {
+            "status": "NOT_INSPECTED_LANGUAGE_CORE_HOLD"
+        },
+        "inventory": {
+            "candidate_nodes_collected": 0,
+            "retrieval_backend_effective": "none",
+            "fallback_performed": False,
+        },
+        "fallback_performed": False,
+        "boundary": memory_recaller_boundary(),
+    }
+
+
+def _blocked_trace_spine(
+    input_event: dict[str, Any],
+    phase_report: dict[str, Any],
+    admission: dict[str, Any],
+) -> dict[str, Any]:
+    """Return a typed no-RMC hold without recall, drift, or candidates."""
+
+    phase_trace = _phase_trace_state(phase_report)
+    return {
+        "status": "BLOCKED",
+        "reason_code": admission.get("reason_code"),
+        "engine_version": ENGINE_VERSION,
+        "engine_mode": "read_only_rmc_trace_spine_filesystem_only",
+        "stage": "Trace Spine",
+        "input_event": input_event,
+        "phase_report": phase_report,
+        "language_core_admission": admission,
+        "memory_recall": {
+            "status": "NOT_RUN_LANGUAGE_CORE_HOLD",
+            "active_memory_count": 0,
+            "active_memory_nodes": [],
+        },
+        "drift_report": {
+            "status": "NOT_RUN_LANGUAGE_CORE_HOLD",
+            "drift_report_id": None,
+        },
+        "symbolic_trace": {
+            "I_t": input_event,
+            "M_t": {
+                "status": "NOT_RUN_LANGUAGE_CORE_HOLD",
+                "active_memory_count": 0,
+                "active_memory_nodes": [],
+            },
+            "Φ_t": phase_trace,
+            "D_t": {"status": "NOT_RUN_LANGUAGE_CORE_HOLD"},
+            "C_t": {"status": "BLOCKED_LANGUAGE_CORE_HOLD"},
+            "R_t": {"status": "NOT_RENDERED"},
+        },
+        "trace_spine_readiness": {
+            "input_event_present": bool(input_event.get("event_id")),
+            "language_core_admitted": False,
+            "phase_state_present": False,
+            "memory_state_present": False,
+            "drift_state_present": False,
+            "candidate_generator_present": False,
+            "manifest_ready": False,
+            "rendering_allowed": False,
+            "memory_write_allowed": False,
+        },
+        "fallback_performed": False,
+        "boundary": memory_recaller_boundary(),
+    }
+
+
 def recall_memory(source_text: str, source_metadata: dict[str, Any] | None = None, root: str | Path | None = None, limit: int = 12) -> dict[str, Any]:
     """Build a deterministic filesystem-only active memory set M_t."""
     source_metadata = dict(source_metadata or {})
     root_path = _forge_root(root)
     input_event = build_input_event(source_text, source_metadata)
     phase_report = parse_phase(source_text, source_metadata)
+    admission = _language_core_admission(phase_report)
+    if not admission.get("admitted"):
+        return _blocked_memory_recall(input_event, phase_report, admission)
     retrieval_decision = classify_retrieval_request(source_metadata)
 
     requested_backend = (
@@ -503,13 +709,8 @@ def recall_memory(source_text: str, source_metadata: dict[str, Any] | None = Non
             "engine_mode": ENGINE_MODE,
             "stage": "Memory Recaller",
             "input_event": input_event,
-            "phase_report_summary": {
-                "phase_primary": _phase_state(phase_report).get("phase_primary"),
-                "phase_secondary": _phase_state(phase_report).get("phase_secondary", []),
-                "phase_path_hypothesis": _phase_state(phase_report).get("phase_path_hypothesis", []),
-                "confidence": _phase_state(phase_report).get("confidence"),
-                "transition_warnings": _phase_state(phase_report).get("transition_warnings", []),
-            },
+            "phase_report_summary": _phase_trace_state(phase_report),
+            "language_core_admission": admission,
             "memory_state": {
                 "M_t_present": False,
                 "candidate_nodes_collected": 0,
@@ -556,13 +757,8 @@ def recall_memory(source_text: str, source_metadata: dict[str, Any] | None = Non
         "engine_mode": ENGINE_MODE,
         "stage": "Memory Recaller",
         "input_event": input_event,
-        "phase_report_summary": {
-            "phase_primary": _phase_state(phase_report).get("phase_primary"),
-            "phase_secondary": _phase_state(phase_report).get("phase_secondary", []),
-            "phase_path_hypothesis": _phase_state(phase_report).get("phase_path_hypothesis", []),
-            "confidence": _phase_state(phase_report).get("confidence"),
-            "transition_warnings": _phase_state(phase_report).get("transition_warnings", []),
-        },
+        "phase_report_summary": _phase_trace_state(phase_report),
+        "language_core_admission": admission,
         "memory_state": {
             "M_t_present": True,
             "candidate_nodes_collected": inventory.get("candidate_nodes_collected", 0),
@@ -588,6 +784,9 @@ def build_trace_spine(source_text: str, source_metadata: dict[str, Any] | None =
     source_metadata = dict(source_metadata or {})
     input_event = build_input_event(source_text, source_metadata)
     phase_report = parse_phase(source_text, source_metadata)
+    admission = _language_core_admission(phase_report)
+    if not admission.get("admitted"):
+        return _blocked_trace_spine(input_event, phase_report, admission)
     resonance_report = analyze_resonance(source_text, source_metadata)
     drift_report = analyze_drift(phase_report)
     memory_report = recall_memory(source_text, source_metadata, root=root, limit=limit)
@@ -601,17 +800,13 @@ def build_trace_spine(source_text: str, source_metadata: dict[str, Any] | None =
             "stage": "Trace Spine",
             "input_event": input_event,
             "phase_report": phase_report,
+            "language_core_admission": admission,
             "memory_recall": memory_report,
             "drift_report": drift_report,
             "symbolic_trace": {
                 "I_t": input_event,
                 "M_t": {"status": "BLOCKED", "active_memory_count": 0, "active_memory_nodes": []},
-                "Φ_t": {
-                    "phase_primary": _phase_state(phase_report).get("phase_primary"),
-                    "phase_secondary": _phase_state(phase_report).get("phase_secondary", []),
-                    "phase_path_hypothesis": _phase_state(phase_report).get("phase_path_hypothesis", []),
-                    "confidence": _phase_state(phase_report).get("confidence"),
-                },
+                "Φ_t": _phase_trace_state(phase_report),
                 "D_t": {
                     "drift_report_id": drift_report.get("drift_report_id"),
                     "epsilon_s": drift_report.get("epsilon_s"),
@@ -622,6 +817,7 @@ def build_trace_spine(source_text: str, source_metadata: dict[str, Any] | None =
             },
             "trace_spine_readiness": {
                 "input_event_present": bool(input_event.get("event_id")),
+                "language_core_admitted": True,
                 "phase_state_present": bool(_phase_state(phase_report).get("phase_primary")),
                 "memory_state_present": False,
                 "drift_state_present": bool(drift_report.get("drift_report_id")),
@@ -652,12 +848,7 @@ def build_trace_spine(source_text: str, source_metadata: dict[str, Any] | None =
             "active_memory_node_ids": [n.get("memory_id") for n in memory_report.get("memory_state", {}).get("active_memory_nodes", [])],
             "active_memory_nodes": memory_report.get("memory_state", {}).get("active_memory_nodes", []),
         },
-        "Φ_t": {
-            "phase_primary": _phase_state(phase_report).get("phase_primary"),
-            "phase_secondary": _phase_state(phase_report).get("phase_secondary", []),
-            "phase_path_hypothesis": _phase_state(phase_report).get("phase_path_hypothesis", []),
-            "confidence": _phase_state(phase_report).get("confidence"),
-        },
+        "Φ_t": _phase_trace_state(phase_report),
         "O_t": operator_chain,
         "D_t": {
             "drift_report_id": drift_report.get("drift_report_id"),
@@ -684,6 +875,7 @@ def build_trace_spine(source_text: str, source_metadata: dict[str, Any] | None =
         "stage": "Trace Spine",
         "input_event": input_event,
         "phase_report": phase_report,
+        "language_core_admission": admission,
         "resonance_summary": {
             "resonance_event_count": len(resonance_report.get("resonance_events", [])),
             "operator_phrase_count": len(resonance_report.get("operator_phrases", [])),
@@ -697,6 +889,7 @@ def build_trace_spine(source_text: str, source_metadata: dict[str, Any] | None =
         "symbolic_trace": trace,
         "trace_spine_readiness": {
             "input_event_present": bool(input_event.get("event_id")),
+            "language_core_admitted": True,
             "phase_state_present": bool(_phase_state(phase_report).get("phase_primary")),
             "memory_state_present": True,
             "drift_state_present": bool(drift_report.get("drift_report_id")),
@@ -708,4 +901,3 @@ def build_trace_spine(source_text: str, source_metadata: dict[str, Any] | None =
         "fallback_performed": False,
         "boundary": memory_recaller_boundary(),
     }
-

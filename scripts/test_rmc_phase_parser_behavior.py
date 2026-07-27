@@ -48,10 +48,11 @@ check("T2_catalog_phi6_routing", catalog["Φ6"]["routing"] == "correction_engine
 check("T2_catalog_phi8_routing", catalog["Φ8"]["routing"] == "projection_gate")
 
 
-# ── T3: Parse returns correct structure ───────────────────────────────────────
+# ── T3: Admitted parse returns the compatibility structure ───────────────────
 
-result = parse_phase("build the new system from scratch")
+result = parse_phase("Inspect the current build status.")
 check("T3_returns_dict", isinstance(result, dict))
+check("T3_status_ok", result.get("status") == "OK")
 check("T3_has_input_event", "input_event" in result)
 check("T3_has_phase_state", "phase_state" in result)
 check("T3_has_drift_anchor", "drift_foundation_anchor" in result)
@@ -71,48 +72,56 @@ check("T3_input_event_has_raw", "x_t_raw_input_preview" in ie)
 check("T3_input_event_dry_run", ie.get("dry_run") is True)
 
 
-# ── T4: Phase detection — keyword signals work ────────────────────────────────
+# ── T4: Deterministic action-profile phase bindings ──────────────────────────
 
-# "fix" and "repair" and "correct" should lean toward Φ6
-result_phi6 = parse_phase("we need to fix and correct the drift issue before proceeding")
-primary = result_phi6["phase_state"].get("phase_primary")
-path = result_phi6["phase_state"].get("phase_path_hypothesis", [])
-check("T4_phi6_keywords_detected", "Φ6" in path or primary == "Φ6",
-      f"primary={primary!r}, path={path!r}")
-
-# "drift", "collapse", "unstable" should lean toward Φ5
-result_phi5 = parse_phase("the loop is collapsing, drift is unstable and wrong")
-primary5 = result_phi5["phase_state"].get("phase_primary")
-path5 = result_phi5["phase_state"].get("phase_path_hypothesis", [])
-check("T4_phi5_keywords_detected", "Φ5" in path5 or primary5 == "Φ5",
-      f"primary={primary5!r}, path={path5!r}")
-
-# "name", "define", "schema", "contract" should lean toward Φ7
-result_phi7 = parse_phase("we need to name and define the schema contract for the manifest")
-primary7 = result_phi7["phase_state"].get("phase_primary")
-path7 = result_phi7["phase_state"].get("phase_path_hypothesis", [])
-check("T4_phi7_keywords_detected", "Φ7" in path7 or primary7 == "Φ7",
-      f"primary={primary7!r}, path={path7!r}")
+for source, expected_phase in (
+    ("Inspect the current build status.", "Φ6"),
+    ("Report the repository state.", "Φ8"),
+    ("Can you request a read-only audit?", "Φ3"),
+):
+    bound = parse_phase(source)
+    state = bound["phase_state"]
+    check(
+        f"T4_{expected_phase}_profile_binding",
+        bound.get("status") == "OK"
+        and state.get("phase_primary") == expected_phase
+        and state.get("phase_path_hypothesis") == [expected_phase],
+        f"source={source!r}, state={state!r}",
+    )
 
 
-# ── T5: Phase skip detection ──────────────────────────────────────────────────
+# ── T5: Retired heuristics and unadmitted meanings stop ──────────────────────
 
-# Φ5→Φ8 skip should produce a phase_skip_projection_risk warning
-result_skip = parse_phase("drift loop collapse — publish ship render export public output now")
-warnings = result_skip["phase_state"].get("transition_warnings", [])
-path_skip = result_skip["phase_state"].get("phase_path_hypothesis", [])
-# The path must include both a drift phase and a projection phase for skip warning
-has_skip_warning = any(w.get("type") == "phase_skip_projection_risk" for w in warnings)
-phi5_present = "Φ5" in path_skip
-phi8_present = "Φ8" in path_skip
-check("T5_phase_skip_can_be_detected",
-      has_skip_warning or (phi5_present and phi8_present),
-      f"warnings={[w.get('type') for w in warnings]!r}, path={path_skip!r}")
-if has_skip_warning:
-    check("T5_phase_skip_warning_type",
-          any(w.get("type") == "phase_skip_projection_risk" for w in warnings))
-    check("T5_projection_warning_in_state",
-          "Projection requires" in result_skip["phase_state"].get("projection_warning", ""))
+unsupported = parse_phase(
+    "we need to fix and correct the drift issue before proceeding"
+)
+check(
+    "T5_keywords_do_not_create_phase",
+    unsupported.get("status") == "UNRESOLVED"
+    and unsupported["phase_state"].get("phase_primary") is None,
+)
+check(
+    "T5_unsupported_routes_to_hold",
+    unsupported["phase_state"].get("routing")
+    == ["stop_before_rmc_meaning_admission"],
+)
+
+ambiguous = parse_phase("Inspect the repository with the audit.")
+check(
+    "T5_ambiguity_is_held",
+    ambiguous.get("status") == "UNRESOLVED"
+    and ambiguous.get("reason_code")
+    == "LC_RMC_001_AMBIGUOUS_MEANING_HELD"
+    and ambiguous["phase_state"].get("linguistic_candidate_count") == 2,
+)
+
+negated = parse_phase("Do not verify the packet checksum.")
+check(
+    "T5_negated_action_is_held",
+    negated.get("status") == "UNRESOLVED"
+    and negated.get("reason_code") == "LC_RMC_001_NEGATED_ACTION_HELD"
+    and negated["phase_state"].get("negated") is True,
+)
 
 
 # ── T6: Empty input handled gracefully ───────────────────────────────────────
@@ -120,33 +129,39 @@ if has_skip_warning:
 result_empty = parse_phase("")
 check("T6_empty_input_returns_dict", isinstance(result_empty, dict))
 check("T6_empty_input_no_crash", "phase_state" in result_empty)
-check("T6_empty_input_fallback",
-      result_empty["phase_state"].get("phase_candidates", []) != [],
-      "fallback phase candidate generated for empty input")
+check(
+    "T6_empty_input_fails_closed",
+    result_empty.get("status") == "UNRESOLVED"
+    and result_empty["phase_state"].get("phase_primary") is None,
+)
+check(
+    "T6_empty_input_no_fallback",
+    result_empty.get("fallback_performed") is False,
+)
 
 
 # ── T7: Source metadata passthrough ──────────────────────────────────────────
 
 meta = {"source_kind": "test_fixture", "selector": "test_001"}
-result_meta = parse_phase("test with metadata", source_metadata=meta)
+result_meta = parse_phase(
+    "Inspect the current build status.", source_metadata=meta
+)
 ie_meta = result_meta.get("input_event", {})
 c_t = ie_meta.get("c_t_context_source", {})
 check("T7_source_metadata_preserved", c_t.get("source_kind") == "test_fixture")
 
 
-# ── T8: Routing includes drift_analyzer_required when Φ5 present ─────────────
+# ── T8: Only admitted meanings route to the next RMC module ─────────────────
 
-result_drift = parse_phase("drift confused collapse unstable loop slip")
-routing = result_drift["phase_state"].get("routing", [])
-path_d = result_drift["phase_state"].get("phase_path_hypothesis", [])
-if "Φ5" in path_d:
-    check("T8_phi5_adds_drift_analyzer_routing",
-          "drift_analyzer_required" in routing,
-          f"routing={routing!r}")
-else:
-    check("T8_routing_always_has_next_module",
-          any("next_module" in r or "drift" in r for r in routing),
-          f"routing={routing!r}")
+result_report = parse_phase("Report the repository state.")
+routing = result_report["phase_state"].get("routing", [])
+check(
+    "T8_admitted_routing_has_next_module",
+    result_report.get("language_core_admitted") is True
+    and "projection_gate" in routing
+    and "next_module:drift_analyzer" in routing,
+    f"routing={routing!r}",
+)
 
 
 # ── Summary ───────────────────────────────────────────────────────────────────

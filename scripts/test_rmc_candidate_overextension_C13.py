@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import pathlib
 import sys
+import tempfile
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
@@ -11,63 +12,54 @@ if str(ROOT) not in sys.path:
 
 from rmc_engine_v1.candidate_generator import generate_candidates, candidate_generator_boundary
 from rmc_engine_v1.evolutionary_drift_explorer import explore_evolutionary_drift, score_coherence
+from rmc_engine_v1.memory_recaller import build_trace_spine
 
 
 def _trace(*, similar_memory: bool) -> dict:
-    memory_content = (
-        "Preserve the active input event phase path drift report and memory links as next candidate meaning state "
-        "correction projection drift naming route through correction before projection"
-        if similar_memory else
-        "unrelated diesel maintenance invoice weather grocery list unrelated animal shelter calendar"
-    )
-    return {
-        "status": "OK",
-        "symbolic_trace": {
-            "trace_id": "rmctrace_c13_001",
-            "I_t": {
-                "event_id": "input_c13_001",
-                "raw_input_preview": "How do we correct projection drift before naming?",
-            },
-            "M_t": {
-                "active_memory_nodes": [
-                    {
-                        "memory_id": "mem_c13_1",
-                        "content": memory_content,
-                        "source_kind": "stable_memory_test",
-                        "phase_tags": ["Φ5", "Φ6", "Φ7", "Φ8"],
-                        "memory_role": "candidate_overextension_test_anchor",
-                        "confidence": "high",
-                        "prior_drift_score": 0.0,
-                        "retrieval_weight": 0.99,
-                    },
-                    {
-                        "memory_id": "mem_c13_2",
-                        "content": memory_content,
-                        "source_kind": "stable_memory_test",
-                        "phase_tags": ["Φ6", "Φ7"],
-                        "memory_role": "candidate_overextension_test_anchor",
-                        "confidence": "high",
-                        "prior_drift_score": 0.0,
-                        "retrieval_weight": 0.95,
-                    },
-                ]
-            },
-            "Φ_t": {
-                "phase_primary": "Φ6",
-                "phase_secondary": ["Φ5", "Φ7", "Φ8"],
-                "phase_path_hypothesis": ["Φ5", "Φ6", "Φ7", "Φ8"],
-                "confidence": 0.854,
-            },
-        },
-        "resonance_summary": {"phase_vector": {"Φ5": 0.3, "Φ6": 0.7, "Φ7": 0.5, "Φ8": 0.2}},
-        "drift_report": {
-            "drift_report_id": "drift_c13_001",
-            "epsilon_s": {"epsilon_s": 0.24, "sigma_res": 0.12, "D_score": 0.2, "phase_deviation_normalized": 0.1},
-            "projection_status": "blocked_until_correction_and_naming",
-            "circuit_breaker": {"triggered": False},
-            "drift_classes": [{"drift_key": "semantic", "score": 0.22}, {"drift_key": "evolutionary", "score": 0.18}],
-        },
+    if similar_memory:
+        memory_contents = [
+            "Preserve the active input event, phase path, drift report, and memory links as the next candidate meaning state. Direct Trace-Preserving Candidate Provides the conservative candidate nearest to the current trace without claiming final language. direct_trace_candidate",
+            "Route the meaning state through Φ6 correction before any naming or projection is considered. Correction-First Candidate The trace contains drift/correction pressure; lawful movement requires correction before naming and projection. correction_candidate",
+            "Use the active memory set as ancestry support for the next meaning state while preserving source, phase, confidence, and drift relation. Memory-Anchored Candidate Memory is present and phase-related; the candidate keeps ancestry attached instead of relying on surface language. memory_anchored_candidate",
+            "Explore one adjacent meaning branch while keeping memory ancestry, phase path, and drift budget visible. Bounded Evolutionary Drift Candidate Keeps novelty available without letting novelty bypass the trace or become approved output. bounded_evolutionary_candidate",
+        ]
+    else:
+        memory_contents = [
+            "unrelated diesel maintenance invoice weather grocery list",
+            "unrelated animal shelter calendar",
+        ]
+    with tempfile.TemporaryDirectory() as temporary:
+        trace = build_trace_spine(
+            "Inspect the current build status.",
+            {"source_kind": "candidate_overextension_test"},
+            root=pathlib.Path(temporary) / "forge",
+        )
+    if trace.get("status") != "OK":
+        raise AssertionError(trace)
+    trace["symbolic_trace"]["M_t"]["active_memory_nodes"] = [
+        {
+            "memory_id": f"mem_c13_{index}",
+            "content": content,
+            "source_kind": "stable_memory_test",
+            "phase_tags": ["Φ6"],
+            "memory_role": "candidate_overextension_test_anchor",
+            "confidence": "high",
+            "prior_drift_score": 0.0,
+            "retrieval_weight": 0.99,
+        }
+        for index, content in enumerate(memory_contents, start=1)
+    ]
+    trace["resonance_summary"] = {
+        "phase_vector": {"Φ5": 0.3, "Φ6": 0.7, "Φ7": 0.5, "Φ8": 0.2}
     }
+    trace["drift_report"] = {
+        "drift_report_id": "drift_c13_001",
+        "epsilon_s": {"epsilon_s": 0.24, "sigma_res": 0.12, "D_score": 0.2, "phase_deviation_normalized": 0.1},
+        "projection_status": "blocked_until_correction_and_naming",
+        "circuit_breaker": {"triggered": False},
+        "drift_classes": [{"drift_key": "semantic", "score": 0.22}, {"drift_key": "evolutionary", "score": 0.18}],
+    }
+    return trace
 
 
 def _check(name: str, condition: bool):

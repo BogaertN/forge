@@ -84,6 +84,10 @@ def candidate_generator_boundary() -> dict[str, Any]:
         "approved_output": False,
         "projection_allowed": False,
         "memory_write_allowed": False,
+        "requires_admitted_language_core_trace": True,
+        "replays_language_core_interpretation": True,
+        "exact_profile_phase_path_required": True,
+        "raw_input_keyword_branching": False,
         "uses_measurement_kernel": True,
         "overextension_gate": "candidate_novelty_delta_must_not_exceed_task_N_max_before_normal_scoring",
         "overextension_policy": "mark_overextended_and_route_to_review_or_archive_not_normal_candidate",
@@ -123,6 +127,428 @@ def _phase_state(trace_spine: dict[str, Any]) -> dict[str, Any]:
             return dict(phase_report.get("phase_state") or {})
         return dict(phase_report)
     return {}
+
+
+def _generation_admission(
+    trace_spine: dict[str, Any],
+    phase_state: dict[str, Any],
+) -> dict[str, Any]:
+    """Validate exact Language Core custody before creating C_t."""
+
+    trace_status = str(trace_spine.get("status") or "")
+    primary = str(phase_state.get("phase_primary") or "")
+    reason_code = trace_spine.get("reason_code")
+    phase_report = trace_spine.get("phase_report")
+    if not isinstance(phase_report, dict):
+        phase_report = {}
+    interpretation = phase_report.get("language_core_interpretation")
+    has_language_core_record = isinstance(interpretation, dict)
+    if not isinstance(interpretation, dict):
+        interpretation = {}
+    admission = trace_spine.get("language_core_admission")
+    if not isinstance(admission, dict):
+        admission = {}
+    report_state = phase_report.get("phase_state")
+    if not isinstance(report_state, dict):
+        report_state = {}
+    candidates = interpretation.get("candidates")
+    if not isinstance(candidates, list):
+        candidates = []
+    candidate = candidates[0] if len(candidates) == 1 else {}
+    if not isinstance(candidate, dict):
+        candidate = {}
+
+    candidate_id = str(candidate.get("candidate_id") or "")
+    semantic_signature = str(interpretation.get("semantic_signature") or "")
+    action_root_key = str(candidate.get("action_root_key") or "")
+    action_root_id = str(candidate.get("action_root_id") or "")
+    predicate_id = str(candidate.get("predicate_id") or "")
+    predicate_frame_id = str(candidate.get("frame_id") or "")
+    speech_act = str(candidate.get("speech_act") or "")
+    report_path = [
+        str(item) for item in report_state.get("phase_path_hypothesis") or []
+    ]
+    symbolic_path = [
+        str(item) for item in phase_state.get("phase_path_hypothesis") or []
+    ]
+    report_phase_candidates = report_state.get("phase_candidates")
+    if not isinstance(report_phase_candidates, list):
+        report_phase_candidates = []
+    report_phase_candidate = (
+        report_phase_candidates[0]
+        if len(report_phase_candidates) == 1
+        and isinstance(report_phase_candidates[0], dict)
+        else {}
+    )
+    report_input = phase_report.get("input_event")
+    if not isinstance(report_input, dict):
+        report_input = {}
+    top_input = trace_spine.get("input_event")
+    if not isinstance(top_input, dict):
+        top_input = {}
+    symbolic_trace = trace_spine.get("symbolic_trace")
+    if not isinstance(symbolic_trace, dict):
+        symbolic_trace = {}
+    symbolic_input = symbolic_trace.get("I_t")
+    if not isinstance(symbolic_input, dict):
+        symbolic_input = {}
+    source_text = interpretation.get("source_text")
+    source_metadata = report_input.get("c_t_context_source")
+    if not isinstance(source_metadata, dict):
+        source_metadata = {}
+    if isinstance(source_text, str):
+        source_sha256 = hashlib.sha256(
+            source_text.encode("utf-8")
+        ).hexdigest()
+        source_character_length = len(source_text)
+        source_byte_length = len(source_text.encode("utf-8"))
+    else:
+        source_sha256 = ""
+        source_character_length = -1
+        source_byte_length = -1
+    try:
+        from aiweb_language_core_bootstrap.deterministic_language_runtime import (
+            interpret_source,
+        )
+        from aiweb_language_core_bootstrap.deterministic_language_runtime.forge_profile import action_profile
+        from rmc_engine_v1.language_core_phase_adapter import interpret_phase
+
+        expected_phase = action_profile(action_root_key).phase_primary
+        replayed_interpretation = interpret_source(
+            source_text, source_metadata
+        ).to_dict()
+        replayed_phase_report = interpret_phase(source_text, source_metadata)
+    except Exception:
+        expected_phase = None
+        replayed_interpretation = None
+        replayed_phase_report = {}
+
+    replayed_phase_state = replayed_phase_report.get("phase_state")
+    if not isinstance(replayed_phase_state, dict):
+        replayed_phase_state = {}
+    replayed_input = replayed_phase_report.get("input_event")
+    if not isinstance(replayed_input, dict):
+        replayed_input = {}
+    expected_symbolic_phase = {
+        "phase_primary": replayed_phase_state.get("phase_primary"),
+        "phase_secondary": replayed_phase_state.get("phase_secondary", []),
+        "phase_path_hypothesis": replayed_phase_state.get(
+            "phase_path_hypothesis", []
+        ),
+        "confidence": replayed_phase_state.get("confidence"),
+        "transition_warnings": replayed_phase_state.get(
+            "transition_warnings", []
+        ),
+        "interpretation_status": replayed_interpretation.get("status")
+        if isinstance(replayed_interpretation, dict)
+        else None,
+        "language_core_admitted": replayed_phase_report.get(
+            "language_core_admitted", False
+        ),
+        "language_core_reason_code": replayed_phase_report.get(
+            "reason_code"
+        ),
+        "linguistic_candidate_count": len(
+            replayed_interpretation.get("candidates", [])
+        )
+        if isinstance(replayed_interpretation, dict)
+        else 0,
+        "linguistic_candidate_ids": [
+            item.get("candidate_id")
+            for item in replayed_interpretation.get("candidates", [])
+            if isinstance(item, dict) and item.get("candidate_id")
+        ]
+        if isinstance(replayed_interpretation, dict)
+        else [],
+        "semantic_signature": replayed_interpretation.get(
+            "semantic_signature"
+        )
+        if isinstance(replayed_interpretation, dict)
+        else None,
+        "source_sha256": replayed_interpretation.get("source_sha256")
+        if isinstance(replayed_interpretation, dict)
+        else None,
+        "source_byte_length": replayed_interpretation.get(
+            "source_byte_length"
+        )
+        if isinstance(replayed_interpretation, dict)
+        else None,
+        "language_core_event_id": replayed_input.get("event_id"),
+        "action_root_key": replayed_phase_state.get("action_root_key"),
+        "action_root_id": replayed_phase_state.get("action_root_id"),
+        "predicate_id": replayed_phase_state.get("predicate_id"),
+        "predicate_frame_id": replayed_phase_state.get(
+            "predicate_frame_id"
+        ),
+        "speech_act": (
+            replayed_interpretation.get("candidates", [{}])[0].get(
+                "speech_act"
+            )
+            if isinstance(replayed_interpretation, dict)
+            and len(replayed_interpretation.get("candidates", [])) == 1
+            and isinstance(
+                replayed_interpretation.get("candidates", [None])[0], dict
+            )
+            else None
+        ),
+        "negated": replayed_phase_state.get("negated", False),
+        "selected_meaning_created": replayed_phase_state.get(
+            "selected_meaning_created", False
+        ),
+    }
+    symbolic_memory = symbolic_trace.get("M_t")
+    if not isinstance(symbolic_memory, dict):
+        symbolic_memory = {}
+    expected_trace_id = None
+    if top_input.get("event_id"):
+        expected_trace_id = "rmctrace_" + hashlib.sha256(
+            (
+                str(top_input.get("event_id"))
+                + str(symbolic_memory.get("active_memory_count", 0))
+            ).encode("utf-8")
+        ).hexdigest()[:18]
+
+    custody_checks = {
+        "language_core_record_present": has_language_core_record,
+        "trace_status_ok": trace_status == "OK",
+        "phase_report_status_ok": phase_report.get("status") == "OK",
+        "phase_report_admitted": (
+            phase_report.get("language_core_admitted") is True
+        ),
+        "phase_report_candidate_eligible": (
+            phase_report.get("candidate_pipeline_eligible") is True
+        ),
+        "phase_report_replays_exactly": (
+            report_state == replayed_phase_state
+            and all(
+                phase_report.get(key) == replayed_phase_report.get(key)
+                for key in (
+                    "status",
+                    "reason_code",
+                    "language_core_admitted",
+                    "candidate_pipeline_eligible",
+                    "fallback_performed",
+                    "approved_output",
+                    "permission_granted",
+                    "route_authorized",
+                    "tool_authorized",
+                    "execution_authorized",
+                    "delivery_authorized",
+                    "writes_files",
+                    "identity_vault_write",
+                    "rmc_live_memory_write",
+                )
+            )
+        ),
+        "phase_input_event_is_bound": (
+            {
+                key: value
+                for key, value in report_input.items()
+                if key != "tau_t_generated_at_utc"
+            }
+            == {
+                key: value
+                for key, value in replayed_input.items()
+                if key != "tau_t_generated_at_utc"
+            }
+        ),
+        "symbolic_phase_replays_exactly": (
+            phase_state == expected_symbolic_phase
+        ),
+        "trace_boundary_is_clean": (
+            trace_spine.get("fallback_performed") is False
+            and trace_spine.get("trace_spine_readiness", {}).get(
+                "language_core_admitted"
+            )
+            is True
+        ),
+        "trace_id_is_bound": (
+            expected_trace_id is not None
+            and symbolic_trace.get("trace_id") == expected_trace_id
+        ),
+        "admission_record_admitted": admission.get("admitted") is True,
+        "interpretation_is_single_complete_candidate": (
+            interpretation.get("status") == "INTERPRETED"
+            and interpretation.get("coverage_complete") is True
+            and interpretation.get("metadata_authority_used") is False
+            and len(candidates) == 1
+            and candidate_id != ""
+        ),
+        "interpretation_replays_exactly": (
+            replayed_interpretation == interpretation
+        ),
+        "interpretation_grants_no_authority": all(
+            candidate.get(key) is False
+            for key in (
+                "permission_granted",
+                "execution_authorized",
+                "output_authorized",
+                "memory_write_authorized",
+            )
+        ),
+        "source_event_is_bound": (
+            source_sha256 != ""
+            and interpretation.get("source_sha256") == source_sha256
+            and interpretation.get("source_byte_length")
+            == source_byte_length
+            and report_input.get("x_t_raw_input_sha256") == source_sha256
+            and report_input.get("x_t_raw_input_length")
+            == source_character_length
+            and report_input.get("x_t_raw_input_preview")
+            == source_text[:1200]
+            and top_input.get("raw_input_sha256") == source_sha256
+            and top_input.get("raw_input_length") == source_character_length
+            and top_input.get("raw_input_preview") == source_text[:800]
+            and symbolic_input.get("event_id") == top_input.get("event_id")
+            and symbolic_input.get("raw_input_sha256") == source_sha256
+            and symbolic_input.get("raw_input_length")
+            == source_character_length
+            and symbolic_input.get("raw_input_preview") == source_text[:800]
+            and admission.get("source_sha256") == source_sha256
+            and admission.get("source_byte_length") == source_byte_length
+            and admission.get("language_core_event_id")
+            == report_input.get("event_id")
+            and phase_state.get("source_sha256") == source_sha256
+            and phase_state.get("source_byte_length") == source_byte_length
+            and phase_state.get("language_core_event_id")
+            == report_input.get("event_id")
+        ),
+        "phase_is_profile_bound": (
+            primary in PHASES
+            and expected_phase == primary
+            and report_state.get("phase_primary") == primary
+            and report_path == [expected_phase]
+            and symbolic_path == [expected_phase]
+            and report_state.get("phase_secondary") == []
+            and phase_state.get("phase_secondary") == []
+        ),
+        "phase_candidate_is_bound": (
+            report_phase_candidate.get("phase") == primary
+            and report_phase_candidate.get("linguistic_candidate_id")
+            == candidate_id
+        ),
+        "candidate_id_is_bound": (
+            admission.get("candidate_count") == 1
+            and admission.get("candidate_ids") == [candidate_id]
+            and phase_state.get("linguistic_candidate_count") == 1
+            and phase_state.get("linguistic_candidate_ids") == [candidate_id]
+        ),
+        "semantic_signature_is_bound": (
+            semantic_signature != ""
+            and admission.get("semantic_signature") == semantic_signature
+            and report_state.get("semantic_signature") == semantic_signature
+            and phase_state.get("semantic_signature") == semantic_signature
+        ),
+        "action_root_is_bound": (
+            action_root_key != ""
+            and action_root_id != ""
+            and report_state.get("action_root_key") == action_root_key
+            and report_state.get("action_root_id") == action_root_id
+            and admission.get("action_root_key") == action_root_key
+            and admission.get("action_root_id") == action_root_id
+            and phase_state.get("action_root_key") == action_root_key
+            and phase_state.get("action_root_id") == action_root_id
+        ),
+        "predicate_and_frame_are_bound": (
+            predicate_id != ""
+            and predicate_frame_id != ""
+            and report_state.get("predicate_id") == predicate_id
+            and report_state.get("predicate_frame_id") == predicate_frame_id
+            and admission.get("predicate_id") == predicate_id
+            and admission.get("predicate_frame_id") == predicate_frame_id
+            and phase_state.get("predicate_id") == predicate_id
+            and phase_state.get("predicate_frame_id") == predicate_frame_id
+        ),
+        "speech_act_is_bound": (
+            speech_act != ""
+            and admission.get("speech_act") == speech_act
+            and phase_state.get("speech_act") == speech_act
+        ),
+        "negation_and_selection_are_held": (
+            candidate.get("negated") is False
+            and candidate.get("selected") is False
+            and report_state.get("negated") is False
+            and report_state.get("selected_meaning_created") is False
+            and admission.get("negated") is False
+            and admission.get("selected_meaning_created") is False
+            and phase_state.get("negated") is False
+            and phase_state.get("selected_meaning_created") is False
+            and phase_state.get("language_core_admitted") is True
+            and phase_state.get("interpretation_status") == "INTERPRETED"
+        ),
+    }
+    admitted = bool(all(custody_checks.values()))
+    reason_code = (
+        reason_code
+        or phase_report.get("reason_code")
+        or admission.get("reason_code")
+        or interpretation.get("refusal_code")
+    )
+
+    if not admitted and not reason_code:
+        if not has_language_core_record:
+            reason_code = "LC_RMC_001_LANGUAGE_CORE_CUSTODY_MISSING"
+        elif trace_status != "OK":
+            reason_code = "RMC_TRACE_NOT_ADMITTED"
+        elif primary not in PHASES:
+            reason_code = "RMC_PHASE_STATE_NOT_ADMITTED"
+        else:
+            reason_code = "LC_RMC_001_LANGUAGE_CORE_CUSTODY_MISMATCH"
+    return {
+        "admitted": admitted,
+        "reason_code": reason_code,
+        "trace_status": trace_status or "MISSING",
+        "phase_primary": primary or None,
+        "language_core_record_present": has_language_core_record,
+        "interpretation_status": interpretation.get("status"),
+        "semantic_signature": interpretation.get("semantic_signature"),
+        "custody_checks": custody_checks,
+    }
+
+
+def _blocked_generation(
+    trace_spine: dict[str, Any],
+    phase_state: dict[str, Any],
+    admission: dict[str, Any],
+) -> dict[str, Any]:
+    """Return an empty, typed C_t hold for an unadmitted trace."""
+
+    trace_id = _trace_id(trace_spine)
+    return {
+        "status": "BLOCKED",
+        "reason_code": admission.get("reason_code"),
+        "engine_version": ENGINE_VERSION,
+        "engine_mode": ENGINE_MODE,
+        "stage": "Candidate Conclusion Generator",
+        "candidate_set_id": None,
+        "trace_id": trace_id,
+        "C_t_present": False,
+        "candidate_generation_status": {
+            "candidate_generation_allowed": False,
+            "allowed_candidate_count": 0,
+            "overextended_candidate_count": 0,
+            "total_candidate_count": 0,
+            "reason": "Language Core or RMC trace admission is held",
+            "projection_allowed": False,
+            "final_language_allowed": False,
+            "memory_write_allowed": False,
+            "manifest_allowed": False,
+        },
+        "source_trace_summary": {
+            "trace_id": trace_id,
+            "phase_primary": phase_state.get("phase_primary"),
+            "phase_path_hypothesis": _phase_path(phase_state),
+            "language_core_admission": admission,
+        },
+        "source_phase_state": phase_state,
+        "candidate_set": [],
+        "selected_candidate_preview": None,
+        "recommended_sequence": [
+            "Resolve or explicitly admit Language Core meaning before candidate generation.",
+            "Do not synthesize a fallback phase or candidate from held input.",
+        ],
+        "boundary": candidate_generator_boundary(),
+    }
 
 
 def _input_event(trace_spine: dict[str, Any]) -> dict[str, Any]:
@@ -348,15 +774,16 @@ def generate_candidates(trace_spine: dict[str, Any], *, max_candidates: int = 8)
     trace_id = _trace_id(trace_spine)
     input_event = _input_event(trace_spine)
     phase_state = _phase_state(trace_spine)
+    admission = _generation_admission(trace_spine, phase_state)
+    if not admission.get("admitted"):
+        return _blocked_generation(trace_spine, phase_state, admission)
     drift = _drift_state(trace_spine)
     nodes = _memory_nodes(trace_spine)
     vector = _phase_vector(trace_spine)
     from rmc_engine_v1.measurement_kernel import measure_candidate as _rmc_measure_candidate, measure_trace_summary as _rmc_measure_trace_summary
     trace_measurement = _rmc_measure_trace_summary(trace_spine)
     phase_path = _phase_path(phase_state)
-    primary = str(phase_state.get("phase_primary") or (phase_path[0] if phase_path else "Φ1"))
-    if primary not in PHASES:
-        primary = "Φ1"
+    primary = str(phase_state.get("phase_primary") or phase_path[0])
     eps = _epsilon(drift)
     circuit = _circuit_breaker(trace_spine, drift)
     memory_support = _memory_support(nodes, phase_path)
@@ -413,7 +840,7 @@ def generate_candidates(trace_spine: dict[str, Any], *, max_candidates: int = 8)
                 "Memory is present and phase-related; the candidate keeps ancestry attached instead of relying on surface language.",
                 allowed=True,
             ))
-        if has_phi7 or "naming" in str(input_event.get("raw_input_preview", "")).lower():
+        if has_phi7:
             candidates.append(_candidate(
                 "ct_naming", trace_id,
                 "Naming-Gate Candidate",
@@ -424,7 +851,7 @@ def generate_candidates(trace_spine: dict[str, Any], *, max_candidates: int = 8)
                 "The trace references naming. Naming can be prepared, but it cannot become projection without correction and later scoring.",
                 allowed=True,
             ))
-        if has_phi8 or "projection" in str(input_event.get("raw_input_preview", "")).lower():
+        if has_phi8:
             candidates.append(_candidate(
                 "ct_projection_gate", trace_id,
                 "Projection-Gate Hold Candidate",

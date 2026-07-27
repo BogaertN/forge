@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-"""Patch 262J1R-Preflight-B6R phase parser boundary behavior tests.
+"""LC-RMC phase parser compatibility-boundary behavior tests.
 
-Purpose:
-- prove exact/whole-word keyword matching
-- prevent Φ2 keyword `or` from matching inside `before`
-- verify correction-before-naming sequencing is parsed as Φ5→Φ6→Φ7/Φ8 context
-- keep the phase parser side-effect free and low-confidence-aware
+The predecessor B6R keyword classifier is intentionally retired. These tests
+prove that only an admitted deterministic Language Core meaning receives an
+RMC phase and that unsupported, ambiguous, and negated inputs stop.
 """
 from __future__ import annotations
 
@@ -19,15 +17,8 @@ if str(ROOT) not in sys.path:
 from rmc_engine_v1.phase_parser import parse_phase, phase_parser_boundary  # noqa: E402
 
 
-def _phase_state(text: str) -> dict:
-    return parse_phase(text, {"source_kind": "test_input"}).get("phase_state", {})
-
-
-def _candidate(state: dict, phase: str) -> dict:
-    for item in state.get("phase_candidates", []):
-        if item.get("phase") == phase:
-            return item
-    return {}
+def _report(text: str) -> dict:
+    return parse_phase(text, {"source_kind": "test_input"})
 
 
 def check(name: str, condition: bool, detail: str = "") -> None:
@@ -36,33 +27,76 @@ def check(name: str, condition: bool, detail: str = "") -> None:
 
 
 def main() -> None:
-    # The exact live regression from B6: `before` must not trigger keyword:or.
-    state = _phase_state("How do we correct projection drift before naming?")
-    phi2 = _candidate(state, "Φ2")
-    phi2_evidence = phi2.get("evidence", [])
-    check("before_does_not_emit_keyword_or", "keyword:or" not in phi2_evidence, str(phi2_evidence))
-    check("primary_not_phi2_for_correction_drift_query", state.get("phase_primary") != "Φ2", str(state))
-    check("primary_is_correction_for_correction_query", state.get("phase_primary") == "Φ6", str(state))
-    check("path_contains_drift_correction_naming", all(p in state.get("phase_path_hypothesis", []) for p in ["Φ5", "Φ6", "Φ7"]), str(state.get("phase_path_hypothesis")))
-    check("no_false_phase_skip_from_phi2_to_phi5", not any(w.get("from") == "Φ2" and w.get("to") == "Φ5" for w in state.get("transition_warnings", [])), str(state.get("transition_warnings")))
-    check("boundary_mode_reported", state.get("token_boundary_mode") == "whole_word_keyword_matching_B6R", str(state))
+    retired = _report("How do we correct projection drift before naming?")
+    retired_state = retired.get("phase_state", {})
+    check(
+        "retired_keywords_do_not_create_phi2_or_phi6",
+        retired.get("status") == "UNRESOLVED"
+        and retired_state.get("phase_primary") is None,
+        str(retired_state),
+    )
+    check(
+        "retired_query_stops_before_rmc",
+        retired_state.get("routing")
+        == ["stop_before_rmc_meaning_admission"],
+        str(retired_state),
+    )
+    check(
+        "exact_source_span_boundary_reported",
+        retired_state.get("token_boundary_mode")
+        == "lc_rmc_001_exact_source_spans",
+        str(retired_state),
+    )
 
-    # Real polarity language should still detect Φ2.
-    state2 = _phase_state("Compare either option or the opposite direction.")
-    phi2b = _candidate(state2, "Φ2")
-    check("real_or_still_detected", "keyword:or" in phi2b.get("evidence", []), str(phi2b))
-    check("real_compare_primary_phi2", state2.get("phase_primary") == "Φ2", str(state2))
+    inspect = _report("Inspect the current build status.")
+    inspect_state = inspect.get("phase_state", {})
+    check(
+        "inspect_profile_binds_phi6",
+        inspect.get("status") == "OK"
+        and inspect_state.get("phase_primary") == "Φ6"
+        and inspect_state.get("phase_path_hypothesis") == ["Φ6"],
+        str(inspect_state),
+    )
 
-    # Sequencing language should support naming gate without false polarity.
-    state3 = _phase_state("Do validation before naming the stable candidate.")
-    phi2c = _candidate(state3, "Φ2")
-    check("before_naming_no_false_or", "keyword:or" not in phi2c.get("evidence", []), str(phi2c))
-    check("before_naming_supports_phi7", "Φ7" in state3.get("phase_path_hypothesis", []), str(state3))
+    report = _report("Report the repository state.")
+    report_state = report.get("phase_state", {})
+    check(
+        "report_profile_binds_phi8",
+        report.get("status") == "OK"
+        and report_state.get("phase_primary") == "Φ8",
+        str(report_state),
+    )
 
-    # Low-confidence/unclassified input must explicitly report review status.
-    state4 = _phase_state("blargle florp zed zed")
-    check("low_confidence_status_present", state4.get("confidence_status") in {"phase_review_required", "phase_confidence_acceptable"}, str(state4))
-    check("unclassified_routes_as_seed_or_review", state4.get("confidence") <= 0.4, str(state4))
+    ambiguous = _report("Inspect the repository with the audit.")
+    ambiguous_state = ambiguous.get("phase_state", {})
+    check(
+        "ambiguous_meaning_is_held",
+        ambiguous.get("reason_code")
+        == "LC_RMC_001_AMBIGUOUS_MEANING_HELD"
+        and ambiguous_state.get("linguistic_candidate_count") == 2
+        and ambiguous_state.get("phase_primary") is None,
+        str(ambiguous_state),
+    )
+
+    negated = _report("Do not verify the packet checksum.")
+    negated_state = negated.get("phase_state", {})
+    check(
+        "negated_action_is_held",
+        negated.get("reason_code") == "LC_RMC_001_NEGATED_ACTION_HELD"
+        and negated_state.get("negated") is True
+        and negated_state.get("phase_primary") is None,
+        str(negated_state),
+    )
+
+    unknown = _report("blargle florp zed zed")
+    unknown_state = unknown.get("phase_state", {})
+    check(
+        "unknown_input_fails_closed_without_fallback",
+        unknown.get("status") == "UNRESOLVED"
+        and unknown.get("fallback_performed") is False
+        and unknown_state.get("confidence") == 0.0,
+        str(unknown_state),
+    )
 
     boundary = phase_parser_boundary()
     for key in ["side_effect_free", "calls_llm", "queries_chroma", "writes_files", "writes_rmc_memory", "writes_identity_vault"]:

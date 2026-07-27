@@ -42,12 +42,6 @@ from agents.forge.llm_authority import (
     is_legacy_forge_llm_command,
     raise_forge_llm_authority_removed,
 )
-from echoforge_advisory import (
-    ALLOWED_ROLES as ECHOFORGE_ADVISORY_ROLES,
-    EchoForgeAdvisoryError,
-    run_advisory as run_echoforge_advisory,
-)
-
 CONFIG_DIR   = FORGE_ROOT / "config"
 LOGS_DIR     = FORGE_ROOT / "logs"
 MEMORY_DIR   = FORGE_ROOT / "memory"
@@ -87,34 +81,14 @@ def _handle_forge_llm_refusal(
 
 
 def cmd_echoforge_advisory(argument: str, session_id: str) -> None:
-    """Run one explicit EchoForge advisory request without Forge authority."""
+    """Preserve the future EchoForge entry boundary without model execution."""
     role_text, separator, prompt = str(argument or "").partition("::")
     role = role_text.strip().lower()
     if not separator:
         print()
         print("  Usage: echoforge-advisory <role> :: <prompt>")
-        print(f"  Roles: {', '.join(sorted(ECHOFORGE_ADVISORY_ROLES))}")
-        print("  Output is advisory only and cannot route or authorize Forge.")
-        print()
-        return
-
-    try:
-        response = run_echoforge_advisory(role, prompt)
-    except EchoForgeAdvisoryError as exc:
-        from agents.forge.memory import write_audit_entry
-
-        write_audit_entry(
-            session_id,
-            "ECHOFORGE_ADVISORY_REFUSED",
-            "-",
-            role or "unknown_role",
-            exc.code,
-        )
-        print()
-        print("[echoforge] ADVISORY REQUEST REFUSED")
-        print(f"  Code   : {exc.code}")
-        print(f"  Reason : {exc.safe_message}")
-        print("  Forge authority: false")
+        print("  EchoForge is not implemented.")
+        print("  No model, provider, network, tool, or fallback call was made.")
         print()
         return
 
@@ -122,27 +96,22 @@ def cmd_echoforge_advisory(argument: str, session_id: str) -> None:
 
     write_audit_entry(
         session_id,
-        "ECHOFORGE_ADVISORY_COMPLETED",
+        "ECHOFORGE_ADVISORY_REFUSED",
         "-",
-        response.role,
-        (
-            f"provider={response.provider}|model={response.model}|"
-            f"output_sha256={response.output_sha256}"
-        ),
+        role or "unspecified",
+        "ECHOFORGE_NOT_IMPLEMENTED",
     )
     print()
-    print("── EchoForge Advisory ─────────────────────────────────")
-    print(f"  Role              : {response.role}")
-    print(f"  Provider          : {response.provider} / {response.model}")
-    print("  Advisory only     : true")
-    print("  Forge authority   : false")
-    print("  Tool calls allowed: false")
-    print(f"  Output SHA-256    : {response.output_sha256}")
+    print("[echoforge] NOT IMPLEMENTED")
+    print("  Code            : ECHOFORGE_NOT_IMPLEMENTED")
+    print(f"  Requested role  : {role or 'unspecified'}")
+    print(f"  Prompt received : {'yes' if prompt.strip() else 'no'}")
+    print("  Model call      : false")
+    print("  Provider call   : false")
+    print("  Network call    : false")
+    print("  Forge authority : false")
+    print("  The EchoForge entry boundary is reserved for its future governed build.")
     print()
-    print(response.content)
-    print()
-    print("  This output is not Forge meaning, permission, routing, proof, or action.")
-    print("───────────────────────────────────────────────────────")
     print()
 
 
@@ -79434,6 +79403,8 @@ def _p262z_rmc_route_manifest_entries_v1() -> list:
         {"route_key":"phase_codex","method":"GET","path":"/api/rmc/phase-codex","group":"contract","stage":"phase_codex","pipeline_label":"FBSC phase codex binding","requires_approval":False,"approval_token":None,"aliases":[]},
         {"route_key":"lexicon_audit","method":"GET","path":"/api/rmc/lexicon-audit","group":"contract","stage":"lexicon_audit","pipeline_label":"RMC lexicon audit","requires_approval":False,"approval_token":None,"aliases":[]},
         {"route_key":"resonance_lexicon","method":"GET","path":"/api/rmc/resonance-lexicon","group":"contract","stage":"resonance_lexicon","pipeline_label":"RMC resonance lexicon","requires_approval":False,"approval_token":None,"aliases":[]},
+        {"route_key":"symbolic_language_preview","method":"POST","path":"/api/rmc/symbolic-language-preview","group":"language_core","stage":"exact_operator_reference_preview","pipeline_label":"Exact imported RSOC glyph reference preview / no source binding or execution","requires_approval":False,"approval_token":None,"aliases":[]},
+        {"route_key":"ask_forge_language_core_preview","method":"POST","path":"/api/operator/ask-forge/language-core-preview","group":"language_core","stage":"forge_owned_meaning_compiler_preview","pipeline_label":"Forge-owned word-to-meaning compilation / structured RMC context / candidate wording and Echo preview / no delivery","requires_approval":False,"approval_token":None,"aliases":[]},
         {"route_key":"dataset_growth_status","method":"GET","path":"/api/rmc/dataset-growth/status","group":"dataset_growth","stage":"dataset_growth_status","pipeline_label":"Dataset growth status","requires_approval":False,"approval_token":None,"aliases":[]},
         {"route_key":"dataset_growth_capture_preview","method":"GET","path":"/api/rmc/dataset-growth/capture-preview","group":"dataset_growth","stage":"dataset_growth_capture_preview","pipeline_label":"Dataset capture preview","requires_approval":False,"approval_token":None,"aliases":[]},
         {"route_key":"dataset_growth_capture","method":"GET","path":"/api/rmc/dataset-growth/capture","group":"dataset_growth","stage":"dataset_growth_capture","pipeline_label":"Dataset observation capture","requires_approval":True,"approval_token":"CAPTURE_RMC_DATASET_OBSERVATION","aliases":[]},
@@ -82841,8 +82812,11 @@ def _p262f_resolve_source(raw_path: str) -> tuple:
         for key in ("manifest_trace", "selected_symbolic_entry", "json_data", "text_preview"):
             val = obj.get(key)
             if val:
-                pieces.append(str(val)[:400])
-    text = "\n".join(pieces)[:6000]
+                # Language Core intentionally rejects control characters.
+                # Structured memory previews are therefore flattened to
+                # ordinary spaces before they cross the interpreter boundary.
+                pieces.append(" ".join(str(val).split())[:400])
+    text = " ".join(pieces)[:6000]
     return text, {
         "source_kind": obj.get("object_kind") if isinstance(obj, dict) else "unknown",
         "selector": selector,
@@ -82864,7 +82838,8 @@ def _p262f_rmc_phase_parser_v1(raw_path: str = "/api/rmc/phase-parser") -> dict:
     engine_result = _rmc_parse_phase(source_text, source_metadata)
 
     return {
-        "status": "OK",
+        "status": engine_result.get("status", "UNRESOLVED"),
+        "reason_code": engine_result.get("reason_code"),
         "api_contract": "forge_operator_console_api_v1",
         "endpoint": "/api/rmc/phase-parser",
         "mode": "read_only_phase_parser_dry_run_B6R",
@@ -82873,11 +82848,24 @@ def _p262f_rmc_phase_parser_v1(raw_path: str = "/api/rmc/phase-parser") -> dict:
         "next_patch": "Patch 262J1R-Preflight-C — Candidate Generator Extraction",
         "input_event": engine_result.get("input_event", {}),
         "phase_state": engine_result.get("phase_state", {}),
+        "language_core_interpretation": engine_result.get(
+            "language_core_interpretation", {}
+        ),
+        "language_core_admitted": engine_result.get(
+            "language_core_admitted", False
+        ),
+        "candidate_pipeline_eligible": engine_result.get(
+            "candidate_pipeline_eligible", False
+        ),
+        "fallback_performed": engine_result.get(
+            "fallback_performed", False
+        ),
         "drift_foundation_anchor": engine_result.get("drift_foundation_anchor", {}),
         "engine_boundary": engine_result.get("engine_boundary", _rmc_phase_boundary()),
         "recommended_sequence": [
             "Use this parser as the first real RMC compiler module, not as a UI decoration.",
-            "Feed phase_state into Drift Analyzer before candidate generation.",
+            "Feed phase_state forward only when language_core_admitted is true.",
+            "A held or unresolved meaning must stop before memory, drift, or candidate generation.",
             "Do not project, write, or save any output from this dry-run parser.",
         ],
         "writes_files": False,
@@ -83658,8 +83646,10 @@ def _p262h_rmc_candidate_conclusion_v1(raw_path: str = "/api/rmc/candidate-concl
 
     trace_spine = _p262b6_rmc_trace_spine_v1(trace_path) if "_p262b6_rmc_trace_spine_v1" in globals() else {}
     engine_result = _rmc_generate_candidates(trace_spine if isinstance(trace_spine, dict) else {}, max_candidates=max_candidates)
+    engine_status = engine_result.get("status", "BLOCKED")
     return {
-        "status": engine_result.get("status", "OK"),
+        "status": engine_status,
+        "reason_code": engine_result.get("reason_code"),
         "api_contract": "forge_operator_console_api_v1",
         "endpoint": "/api/rmc/candidate-conclusion",
         "mode": "read_only_candidate_meaning_state_generation",
@@ -83668,9 +83658,14 @@ def _p262h_rmc_candidate_conclusion_v1(raw_path: str = "/api/rmc/candidate-concl
         "next_patch": "Patch 262J1R-Preflight-C2 — Evolutionary Drift Explorer / Coherence Scorer",
         "candidate_set_id": engine_result.get("candidate_set_id"),
         "C_t": {
-            "status": "IMPLEMENTED_READ_ONLY_IN_PATCH_C",
+            "status": (
+                "IMPLEMENTED_READ_ONLY_IN_PATCH_C"
+                if engine_status == "OK"
+                else "BLOCKED_LANGUAGE_CORE_OR_TRACE_HOLD"
+            ),
             "candidate_set_id": engine_result.get("candidate_set_id"),
             "candidate_count": len(engine_result.get("candidate_set", []) or []),
+            "reason_code": engine_result.get("reason_code"),
             "candidate_generation_allowed": (engine_result.get("candidate_generation_status") or {}).get("candidate_generation_allowed"),
         },
         "source_trace_spine": trace_spine,
@@ -87542,6 +87537,89 @@ def _p274_aiweb_build_manifest_v1() -> dict:
 
 
 
+# ─── TOKEN-FREE RSOC SYMBOLIC REFERENCE LAB ────────────────────────────────
+def _symbolic_language_preview_api_v1(request: object) -> dict:
+    """Expose exact glyph references without creating language authority."""
+
+    try:
+        from rmc_engine_v1.symbolic_language_lab import (
+            build_symbolic_language_preview_response,
+        )
+        return build_symbolic_language_preview_response(request)
+    except Exception:
+        return {
+            "status": "ERROR",
+            "reason_code": "symbolic_reference_preview_internal_error",
+            "api_contract": "forge_operator_console_api_v1",
+            "endpoint": "/api/rmc/symbolic-language-preview",
+            "read_only": True,
+            "boundary": {
+                "ui_is_authority": False,
+                "forge_governs": True,
+                "registry_reference_only": True,
+                "source_binding_performed": False,
+                "operator_application_performed": False,
+                "phase_assignment_performed": False,
+                "meaning_created": False,
+                "filesystem_read_performed": False,
+                "filesystem_write_performed": False,
+                "network_access_performed": False,
+                "memory_read_performed": False,
+                "memory_write_performed": False,
+                "identity_vault_write_performed": False,
+                "model_call_performed": False,
+                "tool_routing_performed": False,
+                "action_performed": False,
+                "delivery_performed": False,
+            },
+        }
+
+
+# ─── ASK FORGE — FORGE-OWNED LANGUAGE CORE RESPONSE PREVIEW ────────────────
+def _language_core_preview_api_v1(request: object) -> dict:
+    """Run the bounded meaning preview without tools, actions, or delivery."""
+
+    try:
+        from rmc_engine_v1.meaning_compiler_preview import (
+            build_language_core_preview_response,
+        )
+        return build_language_core_preview_response(request)
+    except Exception:
+        return {
+            "status": "INVALID",
+            "reason_code": "language_core_preview_internal_error",
+            "api_contract": "forge_operator_console_api_v1",
+            "endpoint": "/api/operator/ask-forge/language-core-preview",
+            "source_text": "",
+            "summary": "The Language Core preview failed closed.",
+            "reasons": ["language_core_preview_internal_error"],
+            "stages": [],
+            "meaning_candidates": [],
+            "selected_meaning": None,
+            "candidate_wording": None,
+            "echo": None,
+            "boundary": {
+                "preview_only": True,
+                "ui_is_authority": False,
+                "forge_governs": True,
+                "imported_references_are_authority": False,
+                "normalization_performed": False,
+                "model_subword_segmentation_performed": False,
+                "model_call_performed": False,
+                "embedding_performed": False,
+                "vector_retrieval_performed": False,
+                "filesystem_read_performed": False,
+                "filesystem_write_performed": False,
+                "network_access_performed": False,
+                "rmc_memory_read_performed": False,
+                "rmc_memory_write_performed": False,
+                "tool_routing_performed": False,
+                "action_performed": False,
+                "delivery_performed": False,
+            },
+        }
+
+
 # ─── GP-015 — ASK FORGE / FORGE OUTPUT LIVE VERIFIED-MATH TRACE SURFACE ───────
 def _gp015_ask_forge_math_trace_surface_v1(question: str) -> dict:
     """Invoke the installed governed math-to-Echo path and expose its receipts to the UI.
@@ -87969,7 +88047,23 @@ def _p201_make_handler():
             sid    = _P201_CURRENT_SESSION_ID[0]
 
             _p281_req_path = self.path.split("?", 1)[0]
-            if _p281_req_path == "/api/mea/memory-writer-dry-run":
+            if _p281_req_path == "/api/rmc/symbolic-language-preview":
+                try:
+                    req = _j.loads(body or b"{}")
+                except Exception:
+                    req = None
+                data = _symbolic_language_preview_api_v1(req)
+                self._ok("application/json", _j.dumps(data).encode("utf-8"))
+
+            elif _p281_req_path == "/api/operator/ask-forge/language-core-preview":
+                try:
+                    req = _j.loads(body or b"{}")
+                except Exception:
+                    req = None
+                data = _language_core_preview_api_v1(req)
+                self._ok("application/json", _j.dumps(data).encode("utf-8"))
+
+            elif _p281_req_path == "/api/mea/memory-writer-dry-run":
                 try:
                     req = _j.loads(body or b"{}")
                 except Exception as e:

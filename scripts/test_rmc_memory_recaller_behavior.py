@@ -71,7 +71,10 @@ def main() -> int:
             "review_status": "NEEDS_REVIEW",
         })
 
-        text = "How do we correct projection drift before naming and output?"
+        # LC-RMC-001 admits this exact closed-profile request as inspect/Φ6.
+        # The older free-form correction query exercised the retired keyword
+        # phase heuristic and is now intentionally held before memory recall.
+        text = "Inspect the current build status."
         report = recall_memory(text, {"source_kind": "test_input"}, root=root, limit=8)
         if report.get("status") != "OK":
             failures.append("recall_status_not_ok")
