@@ -79404,7 +79404,15 @@ def _p262z_rmc_route_manifest_entries_v1() -> list:
         {"route_key":"lexicon_audit","method":"GET","path":"/api/rmc/lexicon-audit","group":"contract","stage":"lexicon_audit","pipeline_label":"RMC lexicon audit","requires_approval":False,"approval_token":None,"aliases":[]},
         {"route_key":"resonance_lexicon","method":"GET","path":"/api/rmc/resonance-lexicon","group":"contract","stage":"resonance_lexicon","pipeline_label":"RMC resonance lexicon","requires_approval":False,"approval_token":None,"aliases":[]},
         {"route_key":"symbolic_language_preview","method":"POST","path":"/api/rmc/symbolic-language-preview","group":"language_core","stage":"exact_operator_reference_preview","pipeline_label":"Exact imported RSOC glyph reference preview / no source binding or execution","requires_approval":False,"approval_token":None,"aliases":[]},
+        {"route_key":"rsoc_law_lab_preview","method":"POST","path":"/api/rmc/rsoc-law-lab/preview","group":"language_core","stage":"typed_rsoc_law_lab_preview","pipeline_label":"Forge-owned provisional typed RSOC law lab / isolated preview only","requires_approval":False,"approval_token":None,"aliases":[]},
+        {"route_key":"ask_forge_symbolic_operator","method":"POST","path":"/api/operator/ask-forge","group":"language_core_orchestration","stage":"memory_first_symbolic_operator_interpreter","pipeline_label":"Exact source / promoted RMC first / typed Forge capabilities / governed candidate web evidence / manifest renderer and Echo / automatic read-only delivery","requires_approval":False,"approval_token":None,"aliases":[]},
         {"route_key":"ask_forge_language_core_preview","method":"POST","path":"/api/operator/ask-forge/language-core-preview","group":"language_core","stage":"forge_owned_meaning_compiler_preview","pipeline_label":"Forge-owned word-to-meaning compilation / structured RMC context / candidate wording and Echo preview / no delivery","requires_approval":False,"approval_token":None,"aliases":[]},
+        {"route_key":"language_core_delivery_prepare","method":"POST","path":"/api/operator/ask-forge/language-core-delivery/prepare","group":"language_core_delivery","stage":"exact_language_output_delivery_prepare","pipeline_label":"Revalidate one trace-bound definition rendering and issue a one-time operator challenge / no delivery","requires_approval":False,"approval_token":None,"aliases":[]},
+        {"route_key":"language_core_delivery_approve","method":"POST","path":"/api/operator/ask-forge/language-core-delivery/approve","group":"language_core_delivery","stage":"exact_language_output_operator_delivery","pipeline_label":"Explicit operator approval delivers one exact Echo-passed definition rendering / no memory write","requires_approval":True,"approval_token":"APPROVE_LANGUAGE_OUTPUT","aliases":[]},
+        {"route_key":"language_core_charter_status","method":"GET","path":"/api/rmc/language-core/charter/status","group":"language_core_governance","stage":"proposed_charter_and_exact_memory_status","pipeline_label":"Read-only proposed semantic charter and exact RMC promotion status","requires_approval":False,"approval_token":None,"aliases":[]},
+        {"route_key":"language_core_memory_prepare","method":"POST","path":"/api/rmc/language-core/memory/prepare","group":"language_core_governance","stage":"exact_memory_prepare","pipeline_label":"Prepare one allowlisted exact semantic record / response only no write","requires_approval":False,"approval_token":None,"aliases":[]},
+        {"route_key":"language_core_memory_approve","method":"POST","path":"/api/rmc/language-core/memory/approve","group":"language_core_governance","stage":"exact_memory_operator_approval","pipeline_label":"Explicit operator approval for one exact stable semantic record / receipt write only","requires_approval":True,"approval_token":"APPROVE_LANGUAGE_MEMORY","aliases":[]},
+        {"route_key":"language_core_memory_promote","method":"POST","path":"/api/rmc/language-core/memory/promote","group":"language_core_governance","stage":"exact_memory_stable_promotion","pipeline_label":"Explicit second confirmation promotes one approved exact semantic record to stable RMC","requires_approval":True,"approval_token":"PROMOTE_LANGUAGE_MEMORY","aliases":[]},
         {"route_key":"dataset_growth_status","method":"GET","path":"/api/rmc/dataset-growth/status","group":"dataset_growth","stage":"dataset_growth_status","pipeline_label":"Dataset growth status","requires_approval":False,"approval_token":None,"aliases":[]},
         {"route_key":"dataset_growth_capture_preview","method":"GET","path":"/api/rmc/dataset-growth/capture-preview","group":"dataset_growth","stage":"dataset_growth_capture_preview","pipeline_label":"Dataset capture preview","requires_approval":False,"approval_token":None,"aliases":[]},
         {"route_key":"dataset_growth_capture","method":"GET","path":"/api/rmc/dataset-growth/capture","group":"dataset_growth","stage":"dataset_growth_capture","pipeline_label":"Dataset observation capture","requires_approval":True,"approval_token":"CAPTURE_RMC_DATASET_OBSERVATION","aliases":[]},
@@ -79882,6 +79890,7 @@ def _p245_api_contract_v1() -> dict:
         {"method": "GET", "path": "/api/operator/audit-receipts", "group": "operator", "mode": "read_only_audit_receipt_status"},
         {"method": "GET", "path": "/api/operator/core-parity-smoke", "group": "operator", "mode": "read_only_core_parity_smoke_test"},
         {"method": "POST", "path": "/api/operator/llm-request", "group": "operator", "mode": "forge_governed_plan_only"},
+        {"method": "POST", "path": "/api/operator/ask-forge", "group": "operator", "mode": "memory_first_non_llm_symbolic_operator_with_candidate_web_fallback"},
         {"method": "POST", "path": "/api/operator/ask-forge/math-trace", "group": "operator", "mode": "gp015_governed_symbolic_math_echo_trace_surface"},
         {"method": "GET", "path": "/api/seen-pages", "group": "browser_memory", "mode": "read_only"},
         {"method": "POST", "path": "/api/read-page", "group": "browser_memory", "mode": "forge_browser_memory_capture_only"},
@@ -87575,6 +87584,45 @@ def _symbolic_language_preview_api_v1(request: object) -> dict:
         }
 
 
+# ─── FORGE-OWNED TYPED RSOC LAW LAB ───────────────────────────────────────
+def _rsoc_law_lab_preview_api_v1(request: object) -> dict:
+    """Run one isolated typed RSOC law preview without operational authority."""
+
+    try:
+        from rmc_engine_v1.rsoc_law_lab import (
+            build_rsoc_law_lab_preview_response,
+        )
+        return build_rsoc_law_lab_preview_response(request)
+    except Exception:
+        return {
+            "status": "ERROR",
+            "reason_code": "rsoc_law_lab_internal_error",
+            "api_contract": "forge_operator_console_api_v1",
+            "endpoint": "/api/rmc/rsoc-law-lab/preview",
+            "read_only": True,
+            "result": None,
+            "output_fields": [],
+            "boundary": {
+                "isolated_lab": True,
+                "preview_only": True,
+                "external_reference_authority": False,
+                "natural_language_tokenization_performed": False,
+                "model_called": False,
+                "embedding_used": False,
+                "vector_used": False,
+                "filesystem_read_performed": False,
+                "filesystem_write_performed": False,
+                "network_access_performed": False,
+                "live_memory_read_performed": False,
+                "live_memory_write_performed": False,
+                "operator_runtime_invoked": False,
+                "tool_routing_performed": False,
+                "action_performed": False,
+                "delivery_performed": False,
+            },
+        }
+
+
 # ─── ASK FORGE — FORGE-OWNED LANGUAGE CORE RESPONSE PREVIEW ────────────────
 def _language_core_preview_api_v1(request: object) -> dict:
     """Run the bounded meaning preview without tools, actions, or delivery."""
@@ -87620,6 +87668,157 @@ def _language_core_preview_api_v1(request: object) -> dict:
         }
 
 
+# ─── ASK FORGE — MEMORY-FIRST SYMBOLIC OPERATOR INTERPRETER ───────────────
+def _ask_forge_symbolic_operator_api_v1(request: object) -> dict:
+    """Answer through exact RMC, typed capabilities, or candidate evidence.
+
+    This adapter grants no command, tool, patch, stable-memory, or canonical
+    write authority.  The interpreter may automatically retain only a
+    content-addressed possible-answer candidate for later governed review.
+    """
+
+    try:
+        from rmc_engine_v1.operator_interpreter import answer_forge_question
+
+        return answer_forge_question(
+            request,
+            repository_root=FORGE_ROOT,
+            status_provider=_p245_forge_status_v1,
+            allow_network=True,
+            persist_candidates=True,
+        )
+    except Exception as error:
+        return {
+            "status": "ERROR",
+            "reason_code": "symbolic_operator_interpreter_failed_closed",
+            "error_type": type(error).__name__,
+            "api_contract": "forge_operator_console_api_v1",
+            "endpoint": "/api/operator/ask-forge",
+            "response_text": (
+                "Forge could not complete the governed symbolic operator path."
+            ),
+            "answer_kind": "none",
+            "sources": [],
+            "stages": [],
+            "boundary": {
+                "forge_governs": True,
+                "ui_is_authority": False,
+                "calls_llm": False,
+                "model_tokenization_performed": False,
+                "embedding_performed": False,
+                "vector_retrieval_performed": False,
+                "executes_command": False,
+                "executes_shell": False,
+                "applies_patch": False,
+                "writes_stable_memory": False,
+                "writes_canonical_memory": False,
+            },
+        }
+
+
+# ─── LANGUAGE CORE — GOVERNED EXACT-RMC PROMOTION ─────────────────────────
+def _language_core_charter_status_api_v1() -> dict:
+    """Return the immutable proposed charter and exact-memory state read-only."""
+
+    try:
+        from rmc_engine_v1.rmc_language_promotion import language_charter_status
+
+        return language_charter_status()
+    except Exception:
+        return {
+            "status": "REJECTED",
+            "reason_code": "language_charter_status_failed_closed",
+            "http_status": 409,
+            "writes_performed": False,
+            "written_refs": [],
+            "restart_required": False,
+        }
+
+
+def _language_core_memory_mutation_api_v1(
+    stage: str,
+    request: object,
+    *,
+    action_nonce: object = None,
+) -> dict:
+    """Invoke one route-governed stage; ordinary Ask Forge never calls this."""
+
+    try:
+        from rmc_engine_v1.rmc_language_promotion import (
+            approve_language_memory,
+            prepare_language_memory,
+            promote_language_memory,
+        )
+
+        if stage == "prepare":
+            return prepare_language_memory(request, local_request_verified=True)
+        if stage == "approve":
+            return approve_language_memory(
+                request,
+                action_nonce=action_nonce,
+                local_request_verified=True,
+            )
+        if stage == "promote":
+            return promote_language_memory(
+                request,
+                action_nonce=action_nonce,
+                local_request_verified=True,
+            )
+    except Exception:
+        pass
+    return {
+        "status": "REJECTED",
+        "reason_code": "language_memory_route_failed_closed",
+        "http_status": 409,
+        "writes_performed": False,
+        "written_refs": [],
+        "restart_required": False,
+    }
+
+
+# ─── ASK FORGE — OPERATOR-GATED LANGUAGE OUTPUT DELIVERY ─────────────────
+def _language_core_delivery_api_v1(
+    stage: str,
+    request: object,
+    *,
+    session_id: object,
+    action_nonce: object = None,
+) -> dict:
+    """Prepare or approve one exact, side-effect-free language delivery."""
+
+    try:
+        from rmc_engine_v1.language_core_delivery import (
+            approve_language_core_delivery,
+            prepare_language_core_delivery,
+        )
+
+        if stage == "prepare":
+            return prepare_language_core_delivery(
+                request,
+                session_id=session_id,
+                local_request_verified=True,
+            )
+        if stage == "approve":
+            return approve_language_core_delivery(
+                request,
+                session_id=session_id,
+                action_nonce=action_nonce,
+                local_request_verified=True,
+            )
+    except Exception:
+        pass
+    return {
+        "status": "REJECTED",
+        "reason_code": "language_output_delivery_route_failed_closed",
+        "http_status": 409,
+        "delivery_performed": False,
+        "answer_delivery_performed": False,
+        "writes_performed": False,
+        "written_refs": [],
+        "restart_required": False,
+    }
+
+
 # ─── GP-015 — ASK FORGE / FORGE OUTPUT LIVE VERIFIED-MATH TRACE SURFACE ───────
 def _gp015_ask_forge_math_trace_surface_v1(question: str) -> dict:
     """Invoke the installed governed math-to-Echo path and expose its receipts to the UI.
@@ -87635,7 +87834,155 @@ def _gp015_ask_forge_math_trace_surface_v1(question: str) -> dict:
 def _p201_make_handler():
     import json as _j
     class _Handler(_p201_http.BaseHTTPRequestHandler):
+        _LANGUAGE_CORE_GOVERNANCE_POST_STAGES = {
+            "/api/rmc/language-core/memory/prepare": "prepare",
+            "/api/rmc/language-core/memory/approve": "approve",
+            "/api/rmc/language-core/memory/promote": "promote",
+        }
+        _LANGUAGE_CORE_DELIVERY_POST_STAGES = {
+            "/api/operator/ask-forge/language-core-delivery/prepare": "prepare",
+            "/api/operator/ask-forge/language-core-delivery/approve": "approve",
+        }
+        _LANGUAGE_CORE_GOVERNANCE_MAX_BODY = 16 * 1024
+        _TRUSTED_BROWSER_ORIGINS = frozenset({
+            f"http://localhost:{_P201_PORT}",
+            f"http://127.0.0.1:{_P201_PORT}",
+        })
+        _TRUSTED_HOSTS = frozenset({
+            f"localhost:{_P201_PORT}",
+            f"127.0.0.1:{_P201_PORT}",
+        })
+
+        def _cors_origin(self):
+            origin = (self.headers.get("Origin") or "").rstrip("/")
+            return origin if origin in self._TRUSTED_BROWSER_ORIGINS else None
+
+        def _request_is_local(self):
+            """Reject remote-host and cross-site browser requests to the operator OS.
+
+            Requests made by local command-line diagnostics do not carry browser
+            fetch metadata, so they remain usable.  Browser traffic must be same
+            origin; this also protects legacy state-changing GET routes while they
+            are migrated to explicit POST approval contracts.
+            """
+
+            host = (self.headers.get("Host") or "").lower().rstrip(".")
+            if host not in self._TRUSTED_HOSTS:
+                return False
+            origin = (self.headers.get("Origin") or "").rstrip("/")
+            if origin and origin not in self._TRUSTED_BROWSER_ORIGINS:
+                return False
+            referer = self.headers.get("Referer") or ""
+            if referer and not any(
+                referer == allowed or referer.startswith(allowed + "/")
+                for allowed in self._TRUSTED_BROWSER_ORIGINS
+            ):
+                return False
+            fetch_site = (self.headers.get("Sec-Fetch-Site") or "").lower()
+            if fetch_site not in ("", "none", "same-origin"):
+                return False
+            return True
+
+        def _reject_untrusted_request(self):
+            body = _j.dumps({
+                "status": "FORBIDDEN",
+                "reason_code": "local_same_origin_operator_access_required",
+            }).encode("utf-8")
+            self._respond(403, "application/json", body)
+
+        def _language_governance_reject(self, status_code, reason_code):
+            self._respond(
+                status_code,
+                "application/json",
+                _j.dumps({
+                    "status": "REJECTED",
+                    "reason_code": reason_code,
+                    "http_status": int(status_code),
+                    "delivery_performed": False,
+                    "answer_delivery_performed": False,
+                    "writes_performed": False,
+                    "written_refs": [],
+                    "restart_required": False,
+                }).encode("utf-8"),
+                cache_control="no-store",
+            )
+
+        def _language_governance_browser_preflight(self, request_path):
+            """Require an unambiguous same-origin browser POST envelope."""
+
+            if self.path != request_path:
+                return 400, "language_governance_query_or_fragment_not_allowed"
+            required = {
+                "Host": None,
+                "Origin": None,
+                "Referer": None,
+                "Sec-Fetch-Site": None,
+                "Content-Type": None,
+                "Content-Length": None,
+            }
+            for header_name in required:
+                values = self.headers.get_all(header_name, [])
+                if len(values) > 1:
+                    return 400, "language_governance_headers_not_exact"
+                if not values:
+                    if header_name in {"Host", "Origin", "Referer", "Sec-Fetch-Site"}:
+                        return 403, "language_governance_same_origin_headers_required"
+                    if header_name == "Content-Type":
+                        return 415, "language_governance_json_content_type_required"
+                    return 411, "language_governance_content_length_required"
+                required[header_name] = values[0]
+            host = str(required["Host"]).lower().rstrip(".")
+            origin = str(required["Origin"]).rstrip("/")
+            referer = str(required["Referer"])
+            fetch_site = str(required["Sec-Fetch-Site"]).lower()
+            media_type = str(required["Content-Type"]).split(";", 1)[0].strip().lower()
+            if host not in self._TRUSTED_HOSTS:
+                return 403, "local_same_origin_operator_access_required"
+            if origin not in self._TRUSTED_BROWSER_ORIGINS:
+                return 403, "language_governance_origin_required"
+            if not (referer == origin or referer.startswith(origin + "/")):
+                return 403, "language_governance_referer_required"
+            if fetch_site != "same-origin":
+                return 403, "language_governance_same_origin_fetch_required"
+            if media_type != "application/json":
+                return 415, "language_governance_json_content_type_required"
+            if self.headers.get("Transfer-Encoding") is not None:
+                return 400, "language_governance_transfer_encoding_not_allowed"
+            return None
+
+        @staticmethod
+        def _language_governance_parse_json(body):
+            def _unique_object(pairs):
+                result = {}
+                for key, value in pairs:
+                    if key in result:
+                        raise ValueError("duplicate_json_key")
+                    result[key] = value
+                return result
+
+            return _j.loads(
+                body.decode("utf-8", errors="strict"),
+                object_pairs_hook=_unique_object,
+            )
+
+        def _language_governance_respond(self, data):
+            try:
+                status_code = int(data.get("http_status", 200))
+            except Exception:
+                status_code = 409
+            if status_code < 100 or status_code > 599:
+                status_code = 409
+            self._respond(
+                status_code,
+                "application/json",
+                _j.dumps(data).encode("utf-8"),
+                cache_control="no-store",
+            )
+
         def do_GET(self):
+            if not self._request_is_local():
+                self._reject_untrusted_request()
+                return
             _p249_req_path = self.path.split("?", 1)[0]
             if _p249_req_path in ("/", "/index.html"):
                 body = _p201_get_html().encode("utf-8")
@@ -87659,6 +88006,10 @@ def _p201_make_handler():
             elif _p249_req_path == "/api/rmc/route-manifest":
                 body = _j.dumps(_p262z_rmc_route_manifest_v1()).encode("utf-8")
                 self._ok("application/json", body)
+            elif _p249_req_path == "/api/rmc/language-core/charter/status":
+                self._language_governance_respond(
+                    _language_core_charter_status_api_v1()
+                )
             elif self.path == "/api/operator/core-inventory":
                 body = _j.dumps(_p252_operator_core_inventory_v1()).encode("utf-8")
                 self._ok("application/json", body)
@@ -88042,17 +88393,150 @@ def _p201_make_handler():
         def do_POST(self):
             import io as _io, contextlib as _ctx
             import json as _j, unittest.mock as _mock
-            length = int(self.headers.get("Content-Length", 0))
+            _p281_req_path = self.path.split("?", 1)[0]
+            _language_governance_stage = (
+                self._LANGUAGE_CORE_GOVERNANCE_POST_STAGES.get(_p281_req_path)
+            )
+            _language_delivery_stage = (
+                self._LANGUAGE_CORE_DELIVERY_POST_STAGES.get(_p281_req_path)
+            )
+            _language_protected_stage = (
+                _language_governance_stage
+                if _language_governance_stage is not None
+                else _language_delivery_stage
+            )
+            if not self._request_is_local():
+                if _language_protected_stage is not None:
+                    self._language_governance_reject(
+                        403, "local_same_origin_operator_access_required"
+                    )
+                else:
+                    self._reject_untrusted_request()
+                return
+
+            if _language_protected_stage is not None:
+                preflight_error = self._language_governance_browser_preflight(
+                    _p281_req_path
+                )
+                if preflight_error is not None:
+                    self._language_governance_reject(*preflight_error)
+                    return
+                raw_length = self.headers.get("Content-Length") or ""
+                if not raw_length.isdecimal():
+                    self._language_governance_reject(
+                        400, "language_governance_content_length_invalid"
+                    )
+                    return
+                length = int(raw_length)
+                if not 0 < length <= self._LANGUAGE_CORE_GOVERNANCE_MAX_BODY:
+                    self._language_governance_reject(
+                        413, "language_governance_body_size_rejected"
+                    )
+                    return
+            else:
+                try:
+                    length = int(self.headers.get("Content-Length", 0))
+                except (TypeError, ValueError):
+                    self._respond(
+                        400,
+                        "application/json",
+                        _j.dumps({
+                            "status": "INVALID",
+                            "reason_code": "content_length_invalid",
+                        }).encode("utf-8"),
+                    )
+                    return
+                if length < 0:
+                    self._respond(
+                        400,
+                        "application/json",
+                        _j.dumps({
+                            "status": "INVALID",
+                            "reason_code": "content_length_invalid",
+                        }).encode("utf-8"),
+                    )
+                    return
+                if (
+                    _p281_req_path == "/api/operator/ask-forge"
+                    and not 0 < length <= self._LANGUAGE_CORE_GOVERNANCE_MAX_BODY
+                ):
+                    self._respond(
+                        413,
+                        "application/json",
+                        _j.dumps({
+                            "status": "INVALID",
+                            "reason_code": "ask_forge_body_size_rejected",
+                            "max_body_bytes": self._LANGUAGE_CORE_GOVERNANCE_MAX_BODY,
+                        }).encode("utf-8"),
+                    )
+                    return
             body   = self.rfile.read(length)
             sid    = _P201_CURRENT_SESSION_ID[0]
 
-            _p281_req_path = self.path.split("?", 1)[0]
-            if _p281_req_path == "/api/rmc/symbolic-language-preview":
+            if _language_protected_stage is not None:
+                try:
+                    req = self._language_governance_parse_json(body)
+                except Exception:
+                    self._language_governance_reject(
+                        400, "language_governance_json_invalid_or_ambiguous"
+                    )
+                    return
+                nonce_values = self.headers.get_all("X-Forge-Action-Nonce", [])
+                if _language_protected_stage == "prepare":
+                    if nonce_values:
+                        self._language_governance_reject(
+                            400, "language_governance_unexpected_action_nonce"
+                        )
+                        return
+                    action_nonce = None
+                else:
+                    if (
+                        len(nonce_values) != 1
+                        or not nonce_values[0]
+                        or len(nonce_values[0]) > 256
+                    ):
+                        self._language_governance_reject(
+                            403, "language_governance_action_nonce_required"
+                        )
+                        return
+                    action_nonce = nonce_values[0]
+                if _language_governance_stage is not None:
+                    data = _language_core_memory_mutation_api_v1(
+                        _language_governance_stage,
+                        req,
+                        action_nonce=action_nonce,
+                    )
+                else:
+                    data = _language_core_delivery_api_v1(
+                        _language_delivery_stage,
+                        req,
+                        session_id=sid,
+                        action_nonce=action_nonce,
+                    )
+                self._language_governance_respond(data)
+
+            elif _p281_req_path == "/api/rmc/symbolic-language-preview":
                 try:
                     req = _j.loads(body or b"{}")
                 except Exception:
                     req = None
                 data = _symbolic_language_preview_api_v1(req)
+                self._ok("application/json", _j.dumps(data).encode("utf-8"))
+
+            elif _p281_req_path == "/api/rmc/rsoc-law-lab/preview":
+                try:
+                    req = _j.loads(body or b"{}")
+                except Exception:
+                    req = None
+                data = _rsoc_law_lab_preview_api_v1(req)
+                self._ok("application/json", _j.dumps(data).encode("utf-8"))
+
+            elif _p281_req_path == "/api/operator/ask-forge":
+                try:
+                    req = self._language_governance_parse_json(body)
+                except Exception:
+                    req = None
+                data = _ask_forge_symbolic_operator_api_v1(req)
                 self._ok("application/json", _j.dumps(data).encode("utf-8"))
 
             elif _p281_req_path == "/api/operator/ask-forge/language-core-preview":
@@ -88368,17 +88852,28 @@ def _p201_make_handler():
                 self.send_error(404)
 
         def do_OPTIONS(self):
+            if not self._request_is_local():
+                self._reject_untrusted_request()
+                return
             self.send_response(200)
-            for h, v in [("Access-Control-Allow-Origin","*"),
-                         ("Access-Control-Allow-Methods","GET,POST,OPTIONS"),
-                         ("Access-Control-Allow-Headers","Content-Type")]:
+            allowed_origin = self._cors_origin()
+            if allowed_origin:
+                self.send_header("Access-Control-Allow-Origin", allowed_origin)
+                self.send_header("Vary", "Origin")
+            for h, v in [("Access-Control-Allow-Methods","GET,POST,OPTIONS"),
+                         ("Access-Control-Allow-Headers","Content-Type, X-Forge-Action-Nonce")]:
                 self.send_header(h, v)
             self.end_headers()
-        def _respond(self, status_code, ct, body):
+        def _respond(self, status_code, ct, body, *, cache_control=None):
             self.send_response(int(status_code))
             self.send_header("Content-Type", ct)
             self.send_header("Content-Length", str(len(body)))
-            self.send_header("Access-Control-Allow-Origin", "*")
+            if cache_control:
+                self.send_header("Cache-Control", cache_control)
+            allowed_origin = self._cors_origin()
+            if allowed_origin:
+                self.send_header("Access-Control-Allow-Origin", allowed_origin)
+                self.send_header("Vary", "Origin")
             self.end_headers()
             self.wfile.write(body)
         def _ok(self, ct, body):
@@ -88415,7 +88910,7 @@ def cmd_forge_ui_start(session_id: str) -> None:
             def server_bind(self):
                 self.socket.setsockopt(_sock.SOL_SOCKET, _sock.SO_REUSEADDR, 1)
                 super().server_bind()
-        server = _ReuseServer(("", _P201_PORT), handler)
+        server = _ReuseServer(("127.0.0.1", _P201_PORT), handler)
         _P201_SERVER_INSTANCE[0] = server
         t = _p201_threading.Thread(target=server.serve_forever, daemon=True)
         t.start()

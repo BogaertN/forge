@@ -1,0 +1,42 @@
+{
+  "ancestry_refs": [
+    "input_event:a9ddf58794276071d220a01faf2f105b299ad07a023893a857b83511c34e6d5a",
+    "source_form:942231e51bed819b0be751d35380c315e7375f6463197a3048c85544cda8d8bf"
+  ],
+  "approval_receipt_ref": "operator_approval_receipt:9de9e0985de9c0148d8ce80968735f4f1b025b7073c026cb4cf0f7f8a03f7875",
+  "concept_refs": [
+    "forge_preview_concept:7ea34a078fd3dab9539164a727d9214aeff9b453053d078469e094becff25f62"
+  ],
+  "embedding_present": false,
+  "exact_identity_resonance_only": true,
+  "frame_key": "definition_question",
+  "grammar_rule_ref": "FORGE-GRAMMAR-V0-DEFINITION-COPULA",
+  "immutable": true,
+  "lifecycle_state": "accepted_stable",
+  "negated": false,
+  "predicate_ref": "forge_preview_predicate:fbf7bd4a66d6c0223375c58331487ee435004e27b147497c001ba69fef0b433a",
+  "provenance_chain_ref": "rmc_exact_provenance_chain:962ea82babec423a8ec1e9916c2a136d55906d2470660fe2d8e99a0897e33411",
+  "purport": "request_provisional_definition",
+  "raw_text_present": false,
+  "read_only": true,
+  "record_id": "rmc_exact_language_record:61d9441d856446c62de74dc61790ebd838bc79e9c8ce756ddaa03e427da3fc36",
+  "registry_ref": "forge_preview_registry:eba54768ad3c5e10d0e370be39e41c0b77ccc41a2163c5de028b2bd77a4eb770",
+  "relation_refs": [
+    "predicate:mean",
+    "role:definition_target:forge_preview_concept:7ea34a078fd3dab9539164a727d9214aeff9b453053d078469e094becff25f62"
+  ],
+  "role_refs": [
+    "forge_preview_role:a19234bdb7644cb0c37d4022d059dcf85fe3040a9e9f76c98a43de969c822aa0"
+  ],
+  "schema_version": "aiweb-forge-rmc-exact-language-record-v2",
+  "semantic_contract_ref": "meaning_semantic_contract:dd8e726ed729359840a1e616fd72e0c56e72c60c4465725614eb6e48d5975f25",
+  "semantic_signature_ref": "semantic_signature:31e3548c152150012b3915ebee95c2daadd35f0872b50767a6e30f700905212f",
+  "sense_refs": [
+    "forge_preview_sense:1ac5e200784743622aaf6d600ed58ab53775d3627b3da18443c6110d3a850768"
+  ],
+  "source_receipt_ref": "source_receipt:4bb1774ecc0a7827e9cc647c2bf11e08bef4c098934638a57e03ad8b97916ec2",
+  "speech_act": "definition_request",
+  "store_class": "stable",
+  "token_stream_present": false,
+  "vector_present": false
+}

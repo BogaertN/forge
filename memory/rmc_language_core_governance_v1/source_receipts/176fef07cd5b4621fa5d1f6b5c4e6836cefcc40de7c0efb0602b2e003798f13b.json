@@ -1,0 +1,50 @@
+{
+  "ancestry_refs": [
+    "input_event:269da5adf2063633ccd3f0035cb0146fcbe480ea70dcd6f2a03444809a0de991",
+    "source_form:0ace0b3757e9a98939d5107a2103a12adf13c6c3f17ee3d1454529dfdb51d84e",
+    "source_form:5145e54e52e7e9fed912b42e415ee3d0d6c73a3d8efd2966ebb9d80fc653bca9",
+    "source_form:ae3f23a63797e299f4298162caccfb4a736a63b086a4dc41f989e6575da7c764"
+  ],
+  "charter_entry_ref": "semantic_charter_replay_fixture:ff14913669c7be408373a9e8cfc602060a31dad3e6a1bcbb46253db56edf63f4",
+  "charter_ref": "governed_semantic_charter:976e7fbd7d1eb426847525062cedd9bf7a1fe8dec2499e7156b0a7ea5aafb0c8",
+  "compiler_result_ref": "meaning_compiler_preview_result:423495a5359e02c32158944e5255e95d548a07549bb3911a71579847cb62f1a5",
+  "concept_refs": [
+    "forge_preview_concept:381d527ba8096779252e9697e2d04eb00a30e87a0b265548398808eb5ce5a4d2",
+    "forge_preview_concept:44f9be3bf9d2118e3158b22dddad50492452d2bbfa4e76a36610f7daa3f56b91"
+  ],
+  "echo_receipt_ref": "meaning_echo:68c0c3c52696648fe3deab3871f1de9d0e7b57dd84aa355ce33d3962c0cd5302",
+  "echo_status": "PASS",
+  "embedding_stored": false,
+  "exact_identity_binding_verified": true,
+  "grants_runtime_authority": false,
+  "input_event_ref": "input_event:269da5adf2063633ccd3f0035cb0146fcbe480ea70dcd6f2a03444809a0de991",
+  "raw_text_stored": false,
+  "registry_ref": "forge_preview_registry:eba54768ad3c5e10d0e370be39e41c0b77ccc41a2163c5de028b2bd77a4eb770",
+  "relation_refs": [
+    "predicate:use",
+    "role:actor:forge_preview_concept:44f9be3bf9d2118e3158b22dddad50492452d2bbfa4e76a36610f7daa3f56b91",
+    "role:object:forge_preview_concept:381d527ba8096779252e9697e2d04eb00a30e87a0b265548398808eb5ce5a4d2"
+  ],
+  "role_refs": [
+    "forge_preview_role:40504b5b870482cc26ccf9befddf913742a352dead4b1dcab19943a960f3b2bb",
+    "forge_preview_role:d591038b977c6dfde5c86b61918cf842ce13cfb7f9676f593efbc351a9867431"
+  ],
+  "schema_version": "aiweb-forge-language-source-receipt-v1",
+  "selected_meaning_ref": "meaning_candidate:4965c4138f22c73d02ccbee77471a63edde34ebf7cdd39131e960d8d527047d1",
+  "semantic_contract_ref": "meaning_semantic_contract:68a3f2913627c26bb7ee3fa265056ba7b4d9ab67d36fe72f8fb9d4ac522c6821",
+  "sense_refs": [
+    "forge_preview_sense:18ce27d19297706f0e2f45f104d3ba90d13c4a2667ff7e655215a57cc441f3a1",
+    "forge_preview_sense:4dd3e2cd093af2b0722e03b248074ccf61313354f31ae19d7411a6e613e38742"
+  ],
+  "source_form_refs": [
+    "source_form:0ace0b3757e9a98939d5107a2103a12adf13c6c3f17ee3d1454529dfdb51d84e",
+    "source_form:5145e54e52e7e9fed912b42e415ee3d0d6c73a3d8efd2966ebb9d80fc653bca9",
+    "source_form:ae3f23a63797e299f4298162caccfb4a736a63b086a4dc41f989e6575da7c764"
+  ],
+  "source_receipt_id": "source_receipt:176fef07cd5b4621fa5d1f6b5c4e6836cefcc40de7c0efb0602b2e003798f13b",
+  "source_replay_verified": true,
+  "source_sha256": "0c5802be775e7f60dd39b56003b5c1e8dd19bbd59482770cb5b8d2809e574d80",
+  "token_stream_stored": false,
+  "vector_stored": false,
+  "writes_memory": false
+}

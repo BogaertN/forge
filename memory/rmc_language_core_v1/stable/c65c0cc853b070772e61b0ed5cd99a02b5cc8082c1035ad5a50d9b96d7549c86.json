@@ -1,0 +1,47 @@
+{
+  "ancestry_refs": [
+    "input_event:39074206ec74df6295a539995c9bf38d3c45f329e21bf6762c873fa9b7fd9d6a",
+    "source_form:363eb0db987a5dd44692bc9b435de62ac917ecabbb9d02bffd413644feb92313",
+    "source_form:ef998848daa0437b054026c9bc109ae577b4db4f3e843a7e95078661f7e8c6ba"
+  ],
+  "approval_receipt_ref": "operator_approval_receipt:77562c3deec55d4ffafd3e0c431d485206064e4febcf43af7c2af8b0ac1b0132",
+  "concept_refs": [
+    "forge_preview_concept:32629574dc534fe1c392946848362cf93542c227527037f9dcf02269a99320e6",
+    "forge_preview_concept:44f9be3bf9d2118e3158b22dddad50492452d2bbfa4e76a36610f7daa3f56b91"
+  ],
+  "embedding_present": false,
+  "exact_identity_resonance_only": true,
+  "frame_key": "copula_clause",
+  "grammar_rule_ref": "FORGE-GRAMMAR-V0-COPULA-ANCHOR",
+  "immutable": true,
+  "lifecycle_state": "accepted_stable",
+  "negated": false,
+  "predicate_ref": "forge_preview_predicate:a1a5236c723c11a30dc9aebc135e8affc39f5dedc180906682312bcfed3336c9",
+  "provenance_chain_ref": "rmc_exact_provenance_chain:cc2939bb91aa7daac6a8d8e1a14aaa2ec362613f881d1162c273d4b075c86ef2",
+  "purport": "assert_provisional_class_relation",
+  "raw_text_present": false,
+  "read_only": true,
+  "record_id": "rmc_exact_language_record:c65c0cc853b070772e61b0ed5cd99a02b5cc8082c1035ad5a50d9b96d7549c86",
+  "registry_ref": "forge_preview_registry:eba54768ad3c5e10d0e370be39e41c0b77ccc41a2163c5de028b2bd77a4eb770",
+  "relation_refs": [
+    "predicate:be",
+    "role:object:forge_preview_concept:32629574dc534fe1c392946848362cf93542c227527037f9dcf02269a99320e6",
+    "role:subject:forge_preview_concept:44f9be3bf9d2118e3158b22dddad50492452d2bbfa4e76a36610f7daa3f56b91"
+  ],
+  "role_refs": [
+    "forge_preview_role:0e06421c70654e990ca797a2833668be54481a6435f9284d4e8d2b721befadca",
+    "forge_preview_role:40504b5b870482cc26ccf9befddf913742a352dead4b1dcab19943a960f3b2bb"
+  ],
+  "schema_version": "aiweb-forge-rmc-exact-language-record-v2",
+  "semantic_contract_ref": "meaning_semantic_contract:7a9e25776a4070a2e2229f7e430423660333a3ef46e9d0a041711a8447267282",
+  "semantic_signature_ref": "semantic_signature:cd8cc11faa355ca1d8232cdcf50acfc92a83def4cd70095f48c0302fb55035b5",
+  "sense_refs": [
+    "forge_preview_sense:18ce27d19297706f0e2f45f104d3ba90d13c4a2667ff7e655215a57cc441f3a1",
+    "forge_preview_sense:c9790c8802eb50931deae94cc905188e3fdf92c99993ab7dba521f3493bf7769"
+  ],
+  "source_receipt_ref": "source_receipt:48890b3d0ff087cd5ae75b0ac3ba6de67ce21ca63f582148d82c9229feb281b5",
+  "speech_act": "statement",
+  "store_class": "stable",
+  "token_stream_present": false,
+  "vector_present": false
+}

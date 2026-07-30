@@ -1,0 +1,42 @@
+{
+  "ancestry_refs": [
+    "input_event:ccf30f35ceed9481d8e21ab5726cb990959ad48ae6493c19530cf951847e87a2",
+    "source_form:b4eef210e54c92a79a75a297dd6f60d4110e962042fd3b813ea8e379c8f49a37"
+  ],
+  "approval_receipt_ref": "operator_approval_receipt:5c379896d9fd3ed3755c758ae3869712ae71c4bcf1faf508e1e3ba06b19f82f5",
+  "concept_refs": [
+    "forge_preview_concept:e8c1b7526234442a60c82c5a197e5b8e53d056a9c7bae0ea294ef646b1770a5c"
+  ],
+  "embedding_present": false,
+  "exact_identity_resonance_only": true,
+  "frame_key": "imperative_request",
+  "grammar_rule_ref": "FORGE-GRAMMAR-V0-IMPERATIVE",
+  "immutable": true,
+  "lifecycle_state": "accepted_stable",
+  "negated": false,
+  "predicate_ref": "forge_preview_predicate:da03082f40b323e569d69c0e3e4e8e5c7fa2424b07c97a0869656788d438bf2d",
+  "provenance_chain_ref": "rmc_exact_provenance_chain:a4a535878ce331e1822acdf1a069610c9a86fe5b5323bffbbe2c77b73b240277",
+  "purport": "request_read_only_preview",
+  "raw_text_present": false,
+  "read_only": true,
+  "record_id": "rmc_exact_language_record:aa5454be2e9cf334650472005aa60d016264851d1bfde7ff87cefbc212370df0",
+  "registry_ref": "forge_preview_registry:eba54768ad3c5e10d0e370be39e41c0b77ccc41a2163c5de028b2bd77a4eb770",
+  "relation_refs": [
+    "predicate:inspect",
+    "role:object:forge_preview_concept:e8c1b7526234442a60c82c5a197e5b8e53d056a9c7bae0ea294ef646b1770a5c"
+  ],
+  "role_refs": [
+    "forge_preview_role:40504b5b870482cc26ccf9befddf913742a352dead4b1dcab19943a960f3b2bb"
+  ],
+  "schema_version": "aiweb-forge-rmc-exact-language-record-v2",
+  "semantic_contract_ref": "meaning_semantic_contract:affd44164adbb9790f76cf5f9d22bc66dc286532ba0893dc5b867129d6e5cac4",
+  "semantic_signature_ref": "semantic_signature:c216eae29c67a89f15b3def3f232144535b4059b73a4399cae1f14434f4b5281",
+  "sense_refs": [
+    "forge_preview_sense:088943fb25d86ca4718b92266320eb329b66ca34a225df48fc39c6823405784f"
+  ],
+  "source_receipt_ref": "source_receipt:3f99ab632638027f4f6b9c997edf7b489d6c9e1dd12dc18aa4f611f86736d885",
+  "speech_act": "request",
+  "store_class": "stable",
+  "token_stream_present": false,
+  "vector_present": false
+}

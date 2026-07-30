@@ -1,0 +1,48 @@
+{
+  "ancestry_refs": [
+    "input_event:39074206ec74df6295a539995c9bf38d3c45f329e21bf6762c873fa9b7fd9d6a",
+    "source_form:363eb0db987a5dd44692bc9b435de62ac917ecabbb9d02bffd413644feb92313",
+    "source_form:ef998848daa0437b054026c9bc109ae577b4db4f3e843a7e95078661f7e8c6ba"
+  ],
+  "charter_entry_ref": "semantic_charter_replay_fixture:6163308296845ad8adf11f9771f7ed979c11b90a5cbe6ba57e31baa56760b681",
+  "charter_ref": "governed_semantic_charter:976e7fbd7d1eb426847525062cedd9bf7a1fe8dec2499e7156b0a7ea5aafb0c8",
+  "compiler_result_ref": "meaning_compiler_preview_result:ddf55f4d82c6a3a865eab3be10f823219a740e54104b5c33d413146498382789",
+  "concept_refs": [
+    "forge_preview_concept:32629574dc534fe1c392946848362cf93542c227527037f9dcf02269a99320e6",
+    "forge_preview_concept:44f9be3bf9d2118e3158b22dddad50492452d2bbfa4e76a36610f7daa3f56b91"
+  ],
+  "echo_receipt_ref": "meaning_echo:89265791d70319aed25944a7785642333c89eee77955dec9983b398e2ca10145",
+  "echo_status": "PASS",
+  "embedding_stored": false,
+  "exact_identity_binding_verified": true,
+  "grants_runtime_authority": false,
+  "input_event_ref": "input_event:39074206ec74df6295a539995c9bf38d3c45f329e21bf6762c873fa9b7fd9d6a",
+  "raw_text_stored": false,
+  "registry_ref": "forge_preview_registry:eba54768ad3c5e10d0e370be39e41c0b77ccc41a2163c5de028b2bd77a4eb770",
+  "relation_refs": [
+    "predicate:be",
+    "role:object:forge_preview_concept:32629574dc534fe1c392946848362cf93542c227527037f9dcf02269a99320e6",
+    "role:subject:forge_preview_concept:44f9be3bf9d2118e3158b22dddad50492452d2bbfa4e76a36610f7daa3f56b91"
+  ],
+  "role_refs": [
+    "forge_preview_role:0e06421c70654e990ca797a2833668be54481a6435f9284d4e8d2b721befadca",
+    "forge_preview_role:40504b5b870482cc26ccf9befddf913742a352dead4b1dcab19943a960f3b2bb"
+  ],
+  "schema_version": "aiweb-forge-language-source-receipt-v1",
+  "selected_meaning_ref": "meaning_candidate:424cb7124d6884c4ad89ff73ffa68bf5127f76ee783a1fa06cb5af974240954a",
+  "semantic_contract_ref": "meaning_semantic_contract:7a9e25776a4070a2e2229f7e430423660333a3ef46e9d0a041711a8447267282",
+  "sense_refs": [
+    "forge_preview_sense:18ce27d19297706f0e2f45f104d3ba90d13c4a2667ff7e655215a57cc441f3a1",
+    "forge_preview_sense:c9790c8802eb50931deae94cc905188e3fdf92c99993ab7dba521f3493bf7769"
+  ],
+  "source_form_refs": [
+    "source_form:363eb0db987a5dd44692bc9b435de62ac917ecabbb9d02bffd413644feb92313",
+    "source_form:ef998848daa0437b054026c9bc109ae577b4db4f3e843a7e95078661f7e8c6ba"
+  ],
+  "source_receipt_id": "source_receipt:48890b3d0ff087cd5ae75b0ac3ba6de67ce21ca63f582148d82c9229feb281b5",
+  "source_replay_verified": true,
+  "source_sha256": "b9a271be2a8938c3ee410d5c52c706f30d009a7172d01d58275918070dcf1096",
+  "token_stream_stored": false,
+  "vector_stored": false,
+  "writes_memory": false
+}

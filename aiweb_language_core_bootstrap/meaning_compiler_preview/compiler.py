@@ -93,6 +93,14 @@ class _InwardResult:
     reasons: tuple[str, ...]
 
 
+@dataclass(frozen=True, slots=True)
+class _GovernedDefinitionMatch:
+    concept_ref: str
+    sense_ref: str
+    subject_ordinals: tuple[int, ...]
+    literal_ordinals: tuple[int, ...]
+
+
 def _ascii_key(text: str) -> str:
     """Return an ASCII case key without changing the source record."""
 
@@ -190,6 +198,43 @@ def _source_phrase(
     ]
 
 
+def _governed_definition_match(
+    source_text: str,
+    words: tuple[SourceForm, ...],
+) -> _GovernedDefinitionMatch | None:
+    """Recognize only a wording generated from the installed registry.
+
+    This is deliberately an exact full-string contract.  It lets Echo inspect
+    a real definition response without admitting arbitrary free text as a
+    definition or hiding any source characters.
+    """
+
+    registry = forge_seed_registry()
+    concepts_by_id = {concept.concept_id: concept for concept in registry.concepts}
+    for sense in registry.senses:
+        concept = concepts_by_id.get(sense.concept_ref)
+        if concept is None:
+            continue
+        expected = (
+            f"{concept.preferred_label} means "
+            f"{concept.provisional_definition}."
+        )
+        if source_text != expected:
+            continue
+        subject_length = len(concept.preferred_label.split(" "))
+        if len(words) <= subject_length + 1:
+            continue
+        if _ascii_key(words[subject_length].exact_text) != "means":
+            continue
+        return _GovernedDefinitionMatch(
+            concept_ref=concept.concept_id,
+            sense_ref=sense.sense_id,
+            subject_ordinals=tuple(range(subject_length)),
+            literal_ordinals=tuple(range(subject_length + 1, len(words))),
+        )
+    return None
+
+
 def _surface_is_contiguous(
     source_text: str,
     words: tuple[SourceForm, ...],
@@ -247,6 +292,7 @@ def _build_lexical_candidates(
     keys = tuple(_ascii_key(word.exact_text) for word in words)
     candidates: list[LexicalCandidate] = []
     covered: set[int] = set()
+    governed_definition = _governed_definition_match(source_text, words)
 
     for ordinal, key in enumerate(keys):
         if key in _FUNCTION_WORDS:
@@ -303,6 +349,29 @@ def _build_lexical_candidates(
                 )
                 covered.update(ordinals)
 
+    if governed_definition is not None:
+        # The exact registry-owned definition is a controlled symbolic literal,
+        # not a new vocabulary import.  One evidence record covers its source
+        # forms while the definition target retains its declared concept sense.
+        candidates.append(
+            _lexical_candidate(
+                kind=LexicalCandidateKind.FUNCTION,
+                exact_text=_source_phrase(
+                    source_text,
+                    words,
+                    governed_definition.literal_ordinals,
+                ),
+                forms=words,
+                ordinals=governed_definition.literal_ordinals,
+                function_key=(
+                    "governed_provisional_definition:"
+                    + governed_definition.concept_ref
+                ),
+                known=True,
+            )
+        )
+        covered.update(governed_definition.literal_ordinals)
+
     for ordinal, word in enumerate(words):
         if ordinal in covered:
             continue
@@ -351,6 +420,15 @@ def _structural_source_holds(
     frames: tuple[FrameCandidate, ...],
 ) -> tuple[LexicalCandidate, ...]:
     """Return exact non-word forms that the admitted v0 grammar cannot cover."""
+
+    if (
+        len(frames) == 1
+        and frames[0].grammar_rule_id
+        == "FORGE-GRAMMAR-V0-GOVERNED-DEFINITION-RESPONSE"
+    ):
+        # This frame is created only after an exact full-string comparison to
+        # the installed registry wording, including every punctuation mark.
+        return ()
 
     visible = tuple(
         form for form in forms if form.kind is not SourceFormKind.WHITESPACE
@@ -459,6 +537,24 @@ def _build_frame_candidates(
     if not keys:
         return ()
 
+    governed_definition = _governed_definition_match(source_text, words)
+    if governed_definition is not None:
+        binding = _binding(
+            "definition_target",
+            governed_definition.subject_ordinals,
+            source_text,
+            words,
+        )
+        return (_frame(
+            frame_key="definition_response",
+            speech_act="definition_response",
+            purport="provide_governed_provisional_definition",
+            predicate_key="mean",
+            negated=False,
+            bindings=(binding,),
+            grammar_rule_id="FORGE-GRAMMAR-V0-GOVERNED-DEFINITION-RESPONSE",
+        ),)
+
     # Definition questions share one meaning relation even when externalized
     # as either "what is X" or "what does X mean".
     if len(keys) >= 4 and keys[0] == "what" and keys[1] in _AUXILIARY_DO and keys[-1] in {"mean", "means"}:
@@ -482,6 +578,20 @@ def _build_frame_candidates(
             negated=False,
             bindings=(binding,),
             grammar_rule_id="FORGE-GRAMMAR-V0-DEFINITION-COPULA",
+        ),)
+
+    if len(keys) >= 3 and keys[0] == "forge" and keys[1] in {"is", "are", "was", "were"}:
+        subject = _binding("subject", (0,), source_text, words)
+        object_start = 3 if len(keys) >= 4 and keys[2] == "not" else 2
+        object_binding = _binding("object", tuple(range(object_start, len(keys))), source_text, words)
+        return (_frame(
+            frame_key="copula_clause",
+            speech_act="statement",
+            purport="assert_provisional_class_relation",
+            predicate_key="be",
+            negated=len(keys) >= 4 and keys[2] == "not",
+            bindings=(subject, object_binding),
+            grammar_rule_id="FORGE-GRAMMAR-V0-COPULA-ANCHOR",
         ),)
 
     if keys[0] == "compare":
@@ -645,18 +755,34 @@ def _semantic_signature(
     frame: FrameCandidate,
     roles: tuple[MeaningRole, ...],
 ) -> str:
-    body = {
-        "speech_act": frame.speech_act,
-        "purport": frame.purport,
-        "predicate_key": frame.predicate_key,
-        "negated": frame.negated,
-        "roles": tuple(
-            sorted(
-                (role.role_key, role.concept_ref, role.sense_ref)
-                for role in roles
-            )
-        ),
-    }
+    role_signature = tuple(
+        sorted(
+            (role.role_key, role.concept_ref, role.sense_ref)
+            for role in roles
+        )
+    )
+    if (
+        frame.predicate_key == "mean"
+        and frame.speech_act in {"definition_request", "definition_response"}
+    ):
+        # A governed answer and the request it satisfies share the same
+        # definition-relation signature.  Echo still reparses the answer and
+        # admits it only when its full wording exactly matches the installed
+        # provisional definition.
+        body = {
+            "semantic_relation": "governed_provisional_definition",
+            "predicate_key": frame.predicate_key,
+            "negated": frame.negated,
+            "roles": role_signature,
+        }
+    else:
+        body = {
+            "speech_act": frame.speech_act,
+            "purport": frame.purport,
+            "predicate_key": frame.predicate_key,
+            "negated": frame.negated,
+            "roles": role_signature,
+        }
     return stable_record_id("semantic_signature", body)
 
 
@@ -687,6 +813,22 @@ def _build_meaning_candidates(
         sense_options = tuple(
             _matching_senses(binding, words, source_text)
             for binding in frame.role_bindings
+        )
+        individual_concept_ordinals = {
+            candidate.word_ordinals[0]
+            for candidate in lexical
+            if candidate.kind is LexicalCandidateKind.CONCEPT_SENSE
+            and len(candidate.word_ordinals) == 1
+        }
+        unadmitted_compositions = tuple(
+            binding.role_key
+            for binding, options in zip(frame.role_bindings, sense_options)
+            if not options
+            and len(binding.word_ordinals) > 1
+            and all(
+                ordinal in individual_concept_ordinals
+                for ordinal in binding.word_ordinals
+            )
         )
         product_options = tuple(options if options else (None,) for options in sense_options)
         for choice in product(*product_options):
@@ -725,10 +867,21 @@ def _build_meaning_candidates(
             ) and bool(bound_ordinals)
             purport_ok = frame.speech_act in {
                 "definition_request",
+                "definition_response",
                 "comparison_request",
                 "request",
                 "statement",
             }
+
+            if congruity_ok:
+                congruity_reasons: tuple[str, ...] = ()
+            elif unadmitted_compositions:
+                congruity_reasons = tuple(
+                    "unadmitted_compositional_phrase:" + role_key
+                    for role_key in unadmitted_compositions
+                )
+            else:
+                congruity_reasons = ("role_sense_incompatible_or_unknown",)
 
             gates = (
                 _gate(
@@ -741,7 +894,7 @@ def _build_meaning_candidates(
                     "congruity",
                     congruity_ok,
                     "FORGE-MEANING-GATE-YOGYATA-V0",
-                    () if congruity_ok else ("role_sense_incompatible_or_unknown",),
+                    congruity_reasons,
                 ),
                 _gate(
                     "connectedness",
@@ -963,7 +1116,10 @@ def _mark_rmc_selection(
     resonances = tuple(
         replace(
             resonance,
-            used_for_selection=(resonance.meaning_candidate_ref == selected_id),
+            used_for_selection=(
+                resonance.meaning_candidate_ref == selected_id
+                and bool(resonance.exact_semantic_contract_refs)
+            ),
         )
         for resonance in evaluation.resonances
     )
@@ -991,7 +1147,13 @@ def _select_with_context(
         return None, evaluation, "no_gate_admitted_meaning"
     totals = {candidate.meaning_candidate_id: 0 for candidate in candidates}
     for resonance in evaluation.resonances:
-        if resonance.meaning_candidate_ref in totals:
+        # A partial concept/relation overlap is audit evidence only.  It may
+        # influence selection only when the complete polarity/force/grammar
+        # semantic contract also matches exactly.
+        if (
+            resonance.meaning_candidate_ref in totals
+            and resonance.exact_semantic_contract_refs
+        ):
             totals[resonance.meaning_candidate_ref] += resonance.resonance_count
     maximum = max(totals.values(), default=0)
     winners = tuple(key for key, value in totals.items() if value == maximum)
@@ -1005,55 +1167,113 @@ def _select_with_context(
     return None, evaluation, "ambiguous_meaning_requires_clarification"
 
 
-def _concept_label(concept_ref: str) -> str:
-    for concept in forge_seed_registry().concepts:
-        if concept.concept_id == concept_ref:
-            return concept.preferred_label
-    return "Unknown"
+def _concept_by_ref(concept_ref: str):
+    return next(
+        (
+            concept
+            for concept in forge_seed_registry().concepts
+            if concept.concept_id == concept_ref
+        ),
+        None,
+    )
+
+
+def _outward_label(concept_ref: str) -> str:
+    concept = _concept_by_ref(concept_ref)
+    if concept is None:
+        return "unknown"
+    if concept.concept_key in {"forge", "forge_core", "language_core", "rmc_memory"}:
+        return concept.preferred_label
+    label = concept.preferred_label
+    return label[:1].lower() + label[1:]
+
+
+def _definite_phrase(concept_ref: str) -> str:
+    concept = _concept_by_ref(concept_ref)
+    label = _outward_label(concept_ref)
+    if concept is not None and concept.concept_key in {
+        "forge",
+        "forge_core",
+        "language_core",
+        "rmc_memory",
+    }:
+        return label
+    return "the " + label
+
+
+def _indefinite_phrase(concept_ref: str) -> str:
+    concept = _concept_by_ref(concept_ref)
+    label = _outward_label(concept_ref)
+    if concept is not None and concept.semantic_class in {"quality", "state"}:
+        return label
+    article = "an" if label[:1].lower() in {"a", "e", "i", "o", "u"} else "a"
+    return f"{article} {label}"
+
+
+def _third_person_present(predicate_key: str) -> str:
+    predicate = _predicate_by_key(predicate_key)
+    if len(predicate.exact_surface_forms) >= 2:
+        return predicate.exact_surface_forms[1]
+    return predicate.preferred_label
 
 
 def _render_candidate_wording(meaning: MeaningCandidate) -> CandidateWording:
-    roles = {role.role_key: _concept_label(role.concept_ref) for role in meaning.roles}
+    roles = {role.role_key: role for role in meaning.roles}
     predicate = meaning.predicate_key
     template = ""
     text = ""
-    if meaning.speech_act == "definition_request":
-        template = "definition_request"
-        text = f"What does {roles['definition_target']} mean?"
+    definition_concept_ref = ""
+    definition_sense_ref = ""
+    if meaning.speech_act in {"definition_request", "definition_response"}:
+        template = "governed_provisional_definition"
+        target = roles["definition_target"]
+        concept = _concept_by_ref(target.concept_ref)
+        if concept is None:
+            raise ValueError("definition target concept is unavailable")
+        definition_concept_ref = concept.concept_id
+        definition_sense_ref = target.sense_ref
+        text = (
+            f"{concept.preferred_label} means "
+            f"{concept.provisional_definition}."
+        )
     elif predicate == "compare":
         template = "comparison_request"
-        text = f"Compare {roles['comparison_left']} and {roles['comparison_right']}."
+        text = (
+            f"Compare {_outward_label(roles['comparison_left'].concept_ref)} "
+            f"and {_outward_label(roles['comparison_right'].concept_ref)}."
+        )
     elif predicate == "be":
         template = "copula_statement"
         negation = " not" if meaning.negated else ""
-        text = f"{roles['subject']} is{negation} a {roles['object']}."
+        text = (
+            f"{_outward_label(roles['subject'].concept_ref)} is{negation} "
+            f"{_indefinite_phrase(roles['object'].concept_ref)}."
+        )
     elif meaning.speech_act == "request" and "actor" in roles:
         template = "modal_request"
-        text = f"Can {roles['actor']} {predicate} {roles['object']}?"
+        text = (
+            f"Can {_outward_label(roles['actor'].concept_ref)} {predicate} "
+            f"{_definite_phrase(roles['object'].concept_ref)}?"
+        )
     elif meaning.speech_act == "request":
         template = "imperative_request"
-        text = f"Please {predicate} the {roles['object']}."
+        text = f"Please {predicate} {_definite_phrase(roles['object'].concept_ref)}."
     else:
         template = "simple_statement"
+        actor = _outward_label(roles["actor"].concept_ref)
+        object_phrase = _definite_phrase(roles["object"].concept_ref)
         if meaning.negated:
-            text = f"{roles['actor']} does not {predicate} {roles['object']}."
+            text = f"{actor} does not {predicate} {object_phrase}."
         else:
-            inflected = {
-                "use": "uses",
-                "remember": "remembers",
-                "store": "stores",
-                "retrieve": "retrieves",
-                "inspect": "inspects",
-                "report": "reports",
-                "explain": "explains",
-                "describe": "describes",
-            }.get(predicate, predicate)
-            text = f"{roles['actor']} {inflected} {roles['object']}."
+            inflected = _third_person_present(predicate)
+            text = f"{actor} {inflected} {object_phrase}."
     body = {
         "meaning_candidate_ref": meaning.meaning_candidate_id,
         "template_key": template,
         "text": text,
         "outward_semantic_signature": meaning.semantic_signature,
+        "definition_concept_ref": definition_concept_ref,
+        "definition_sense_ref": definition_sense_ref,
         "provisional": True,
         "delivery_authorized": False,
     }
@@ -1241,7 +1461,11 @@ def compile_meaning_preview(
     except (TypeError, ValueError):
         snapshot = build_rmc_context_snapshot()
         snapshot_invalid = True
-    evaluation = evaluate_rmc_context(snapshot, inward.meaning_candidates)
+    evaluation = evaluate_rmc_context(
+        snapshot,
+        inward.meaning_candidates,
+        inward.frame_candidates,
+    )
     admitted = tuple(
         candidate for candidate in inward.meaning_candidates if candidate.all_gates_passed
     )

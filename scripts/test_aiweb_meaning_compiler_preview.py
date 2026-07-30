@@ -137,6 +137,7 @@ def _build_context_record(builder, refs: dict[str, tuple[str, ...]], suffix: str
 
     available = inspect.signature(builder).parameters
     proposed: dict[str, object] = {
+        "semantic_contract_refs": refs.get("semantic_contract_refs", ()),
         "concept_refs": refs.get("concept_refs", ()),
         "relation_refs": refs.get("relation_refs", ()),
         "ancestry_refs": refs.get("ancestry_refs", ()),
@@ -222,6 +223,7 @@ def main() -> int:
         build_rmc_context_snapshot,
         compile_meaning_preview,
         meaning_compiler_preview_boundary,
+        validate_forge_seed_registry,
     )
     from aiweb_language_core_bootstrap.meaning_compiler_preview.registry import (
         forge_seed_registry,
@@ -289,12 +291,20 @@ def main() -> int:
         "What does language core mean?",
         "What is RMC?",
         "Please inspect the manifest.",
+        "Please audit the manifest.",
         "Can Forge report status?",
         "Forge uses RMC memory.",
+        "Forge analyzes the artifact.",
         "Forge does not use vector memory.",
         "Forge is a system.",
+        "Forge is an authority.",
         "Forge is not a vector memory.",
+        "Forge is not an anomaly.",
         "Compare RMC memory and vector memory.",
+        "Please begin the batch.",
+        "Forge balances the budget.",
+        "Please build the blueprint.",
+        "Forge blocks the boundary.",
     )
     ready_results: dict[str, object] = {}
     for source in ready_sources:
@@ -312,6 +322,71 @@ def main() -> int:
         ledger.check(_value(echo, "delivery_authorized") is False, f"Echo grants no delivery: {source}")
         ledger.check(_value(wording, "delivery_authorized") is False, f"wording grants no delivery: {source}")
         ledger.check(_value(selected, "selection_authority") is False, f"preview is not selection authority: {source}")
+
+    # Definition requests must answer from the governed provisional registry,
+    # not merely paraphrase the incoming question.  Echo admits only the exact
+    # generated registry wording.
+    definition_result = ready_results["What does language core mean?"]
+    definition_wording = _value(definition_result, "candidate_wording")
+    definition_concept = next(
+        concept
+        for concept in forge_seed_registry().concepts
+        if concept.concept_key == "language_core"
+    )
+    definition_sense = next(
+        sense
+        for sense in forge_seed_registry().senses
+        if sense.concept_ref == definition_concept.concept_id
+    )
+    expected_definition = (
+        f"{definition_concept.preferred_label} means "
+        f"{definition_concept.provisional_definition}."
+    )
+    ledger.check(
+        _value(definition_wording, "text") == expected_definition,
+        "definition request returns the governed provisional definition",
+        _dict(definition_wording),
+    )
+    ledger.check(
+        _value(definition_wording, "definition_concept_ref") == definition_concept.concept_id
+        and _value(definition_wording, "definition_sense_ref") == definition_sense.sense_id,
+        "definition wording carries exact registry grounding",
+        _dict(definition_wording),
+    )
+    ledger.check(
+        not str(_value(definition_wording, "text", "")).endswith("?"),
+        "definition output is an answer rather than a rephrased question",
+    )
+    definition_answer_reparse = compile_meaning_preview(expected_definition)
+    ledger.check(
+        _status(definition_answer_reparse) == "PREVIEW_READY"
+        and _enum_value(_value(_value(definition_answer_reparse, "echo"), "status", "")) == "PASS",
+        "governed definition answer reparses and Echo-validates",
+        _dict(definition_answer_reparse),
+    )
+    definition_drift = package.validate_candidate_wording(
+        meaning_candidate=_value(definition_result, "selected_meaning"),
+        wording_text=expected_definition.replace("provisional", "final", 1),
+    )
+    ledger.check(
+        _status(definition_drift) == "REJECT",
+        "Echo rejects a definition not exactly grounded in the registry",
+        _dict(definition_drift),
+    )
+
+    # Reverse wording uses declared predicate morphology and article selection.
+    for source, expected_wording in (
+        ("Forge analyzes the artifact.", "Forge analyzes the artifact."),
+        ("Forge balances the budget.", "Forge balances the budget."),
+        ("Forge is an authority.", "Forge is an authority."),
+        ("Forge is not an anomaly.", "Forge is not an anomaly."),
+    ):
+        ledger.check(
+            _value(_value(ready_results[source], "candidate_wording"), "text")
+            == expected_wording,
+            f"governed morphology and articles: {source}",
+            _dict(_value(ready_results[source], "candidate_wording")),
+        )
 
     repeated_a = compile_meaning_preview("Please inspect the manifest.")
     repeated_b = compile_meaning_preview("Please inspect the manifest.")
@@ -340,6 +415,112 @@ def main() -> int:
     composed = ready_results[composed_source]
     composed_meaning = _value(composed, "selected_meaning")
     registry = forge_seed_registry()
+    registry_errors = validate_forge_seed_registry(registry)
+    ledger.check(not registry_errors, "installed registry passes integrity validation", registry_errors)
+    ledger.check(
+        all(concept.provisional for concept in registry.concepts)
+        and all(sense.provisional for sense in registry.senses)
+        and all(predicate.provisional for predicate in registry.predicates)
+        and all(role.provisional for role in registry.roles),
+        "every expanded registry entry remains provisional",
+    )
+    ledger.check(
+        all(not concept.external_reference_authority for concept in registry.concepts)
+        and all(not sense.external_reference_authority for sense in registry.senses),
+        "expanded entries claim no external reference authority",
+    )
+    ledger.check(
+        all(concept.provisional_definition.strip() for concept in registry.concepts)
+        and all(sense.provisional_gloss.strip() for sense in registry.senses),
+        "every concept and sense has bounded provisional semantic content",
+    )
+    ledger.check(
+        {"forge", "language_core", "rmc_memory", "authority", "artifact", "manifest", "grammar", "resonance"}
+        .issubset({concept.concept_key for concept in registry.concepts}),
+        "registry covers the bounded operator-language foundation",
+    )
+    ledger.check(
+        len({concept.concept_key for concept in registry.concepts}) == len(registry.concepts)
+        and len({concept.concept_id for concept in registry.concepts}) == len(registry.concepts)
+        and len({sense.sense_key for sense in registry.senses}) == len(registry.senses)
+        and len({sense.sense_id for sense in registry.senses}) == len(registry.senses)
+        and len({predicate.predicate_key for predicate in registry.predicates}) == len(registry.predicates)
+        and len({predicate.predicate_id for predicate in registry.predicates}) == len(registry.predicates),
+        "registry keys and stable record identities are unique",
+    )
+    duplicate_predicate_registry = replace(
+        registry,
+        predicates=registry.predicates + (registry.predicates[0],),
+    )
+    duplicate_predicate_errors = validate_forge_seed_registry(duplicate_predicate_registry)
+    ledger.check(
+        any(error.startswith("duplicate_predicate_key:") for error in duplicate_predicate_errors)
+        and any(error.startswith("duplicate_predicate_id:") for error in duplicate_predicate_errors),
+        "registry validation rejects duplicate predicate keys and identities",
+        duplicate_predicate_errors,
+    )
+    duplicate_form_predicate = replace(
+        registry.predicates[0],
+        exact_surface_forms=(
+            *registry.predicates[0].exact_surface_forms,
+            registry.predicates[0].exact_surface_forms[0],
+        ),
+    )
+    duplicate_form_registry = replace(
+        registry,
+        predicates=(duplicate_form_predicate, *registry.predicates[1:]),
+    )
+    duplicate_form_errors = validate_forge_seed_registry(duplicate_form_registry)
+    ledger.check(
+        any(error.startswith("duplicate_predicate_surface_form:") for error in duplicate_form_errors),
+        "registry validation rejects duplicate predicate forms",
+        duplicate_form_errors,
+    )
+    core_senses = tuple(
+        sense
+        for sense in registry.senses
+        if ("core",) in {
+            tuple(str(word).lower() for word in form)
+            for form in sense.exact_surface_forms
+        }
+    )
+    ledger.check(
+        len(core_senses) == 2,
+        "declared core polysemy remains explicit and validation-safe",
+        tuple(sense.sense_key for sense in core_senses),
+    )
+    manifest_surface = ("manifest",)
+    foreign_surface_index = next(
+        index
+        for index, sense in enumerate(registry.senses)
+        if sense.sense_key == "authority_preview_sense"
+    )
+    foreign_surface_sense = replace(
+        registry.senses[foreign_surface_index],
+        exact_surface_forms=(
+            *registry.senses[foreign_surface_index].exact_surface_forms,
+            manifest_surface,
+        ),
+    )
+    undeclared_polysemy_registry = replace(
+        registry,
+        senses=(
+            *registry.senses[:foreign_surface_index],
+            foreign_surface_sense,
+            *registry.senses[foreign_surface_index + 1 :],
+        ),
+    )
+    undeclared_polysemy_errors = validate_forge_seed_registry(
+        undeclared_polysemy_registry
+    )
+    ledger.check(
+        any(
+            error.startswith("undeclared_polysemous_surface_form:manifest:")
+            for error in undeclared_polysemy_errors
+        ),
+        "registry validation rejects undeclared duplicate sense forms",
+        undeclared_polysemy_errors,
+    )
     declared_surface_phrases = {
         " ".join(form)
         for sense in registry.senses
@@ -389,6 +570,34 @@ def main() -> int:
     unsupported = compile_meaning_preview("purple quickly maybe")
     ledger.check(_status(unsupported) in {"HELD", "UNSUPPORTED"}, "unsupported grammar held")
     ledger.check(_value(unsupported, "selected_meaning") is None, "unsupported grammar not guessed")
+
+    # Separate known words do not silently become an undeclared compound or
+    # adjective+noun relation.  Composition remains held until a typed rule is
+    # installed for it.
+    unadmitted_composition = compile_meaning_preview(
+        "Please inspect the active manifest."
+    )
+    composition_gate_reasons = tuple(
+        str(reason)
+        for candidate in _sequence(unadmitted_composition, "meaning_candidates")
+        for gate in _sequence(candidate, "gates")
+        for reason in _sequence(gate, "reasons")
+    )
+    ledger.check(
+        _status(unadmitted_composition) == "HELD",
+        "unadmitted adjective-noun composition is held",
+        _dict(unadmitted_composition),
+    )
+    ledger.check(
+        "unadmitted_compositional_phrase:object" in composition_gate_reasons,
+        "composition hold has an explicit symbolic gate reason",
+        composition_gate_reasons,
+    )
+    ledger.check(
+        _value(unadmitted_composition, "selected_meaning") is None
+        and _value(unadmitted_composition, "candidate_wording") is None,
+        "unadmitted composition is neither selected nor worded",
+    )
 
     # Every visible non-whitespace source form must participate in the hold
     # decision; numbers, symbols, and speech-act punctuation cannot disappear.
@@ -444,6 +653,13 @@ def main() -> int:
     if alternatives:
         target = alternatives[0]
         unique_refs = _unique_candidate_refs(target, alternatives)
+        target_contract = package.semantic_contract_for_candidate(
+            target,
+            _sequence(ambiguous, "frame_candidates"),
+        )
+        unique_refs["semantic_contract_refs"] = (
+            _value(target_contract, "semantic_contract_id"),
+        )
         ledger.check(any(unique_refs.values()), "ambiguous candidates expose distinguishable structured references", unique_refs)
         support = _build_context_record(build_rmc_context_record, unique_refs, "support")
         inert = _build_context_record(

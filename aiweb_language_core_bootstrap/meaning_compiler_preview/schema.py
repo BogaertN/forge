@@ -263,6 +263,40 @@ class MeaningCandidate:
 
 
 @dataclass(frozen=True, slots=True)
+class SemanticContractBinding:
+    """Exact reusable meaning boundary, independent of source occurrence IDs.
+
+    A semantic signature alone is not sufficient because the governed
+    definition request/response pair deliberately shares one Echo signature.
+    The complete contract therefore binds communicative force, purport,
+    polarity, frame, grammar rule, and predicate as well.
+    """
+
+    semantic_contract_id: str
+    semantic_signature_ref: str
+    speech_act: str
+    purport: str
+    negated: bool
+    frame_key: str
+    grammar_rule_ref: str
+    predicate_ref: str
+
+    def identity_payload(self) -> dict[str, object]:
+        value = self.to_dict()
+        value.pop("semantic_contract_id", None)
+        return value
+
+    def expected_id(self) -> str:
+        return stable_record_id(
+            "meaning_semantic_contract",
+            self.identity_payload(),
+        )
+
+    def to_dict(self) -> dict[str, object]:
+        return _record_dict(self)
+
+
+@dataclass(frozen=True, slots=True)
 class AlgebraTraceStep:
     trace_step_id: str
     sequence: int
@@ -279,6 +313,7 @@ class AlgebraTraceStep:
 @dataclass(frozen=True, slots=True)
 class RmcContextRecord:
     record_id: str
+    semantic_contract_refs: tuple[str, ...]
     concept_refs: tuple[str, ...]
     relation_refs: tuple[str, ...]
     ancestry_refs: tuple[str, ...]
@@ -318,6 +353,7 @@ class RmcCandidateResonance:
     resonance_id: str
     meaning_candidate_ref: str
     record_ref: str
+    exact_semantic_contract_refs: tuple[str, ...]
     exact_concept_refs: tuple[str, ...]
     exact_relation_refs: tuple[str, ...]
     exact_ancestry_refs: tuple[str, ...]
@@ -349,6 +385,8 @@ class CandidateWording:
     template_key: str
     text: str
     outward_semantic_signature: str
+    definition_concept_ref: str
+    definition_sense_ref: str
     provisional: bool
     delivery_authorized: bool
 
@@ -490,6 +528,7 @@ __all__ = (
     "RmcContextSnapshot",
     "RoleBinding",
     "RoleDefinition",
+    "SemanticContractBinding",
     "SourceCustodySummary",
     "SourceForm",
     "SourceFormKind",

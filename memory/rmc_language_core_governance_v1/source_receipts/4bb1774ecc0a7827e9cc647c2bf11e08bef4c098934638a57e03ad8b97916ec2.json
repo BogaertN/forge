@@ -1,0 +1,42 @@
+{
+  "ancestry_refs": [
+    "input_event:a9ddf58794276071d220a01faf2f105b299ad07a023893a857b83511c34e6d5a",
+    "source_form:942231e51bed819b0be751d35380c315e7375f6463197a3048c85544cda8d8bf"
+  ],
+  "charter_entry_ref": "semantic_charter_replay_fixture:6eb1adae92de72951e264cdca1c687a0825c7ae7449000091359b7b775e6e1b9",
+  "charter_ref": "governed_semantic_charter:976e7fbd7d1eb426847525062cedd9bf7a1fe8dec2499e7156b0a7ea5aafb0c8",
+  "compiler_result_ref": "meaning_compiler_preview_result:dd5b9e1b769e957557974292bbbb07b0939968f21f1b491ab0da1c21b218ca27",
+  "concept_refs": [
+    "forge_preview_concept:7ea34a078fd3dab9539164a727d9214aeff9b453053d078469e094becff25f62"
+  ],
+  "echo_receipt_ref": "meaning_echo:c14ba7e2f3fe22595afa981d09576fc814c7cf30f10b38264cb79d1246ac8a5b",
+  "echo_status": "PASS",
+  "embedding_stored": false,
+  "exact_identity_binding_verified": true,
+  "grants_runtime_authority": false,
+  "input_event_ref": "input_event:a9ddf58794276071d220a01faf2f105b299ad07a023893a857b83511c34e6d5a",
+  "raw_text_stored": false,
+  "registry_ref": "forge_preview_registry:eba54768ad3c5e10d0e370be39e41c0b77ccc41a2163c5de028b2bd77a4eb770",
+  "relation_refs": [
+    "predicate:mean",
+    "role:definition_target:forge_preview_concept:7ea34a078fd3dab9539164a727d9214aeff9b453053d078469e094becff25f62"
+  ],
+  "role_refs": [
+    "forge_preview_role:a19234bdb7644cb0c37d4022d059dcf85fe3040a9e9f76c98a43de969c822aa0"
+  ],
+  "schema_version": "aiweb-forge-language-source-receipt-v1",
+  "selected_meaning_ref": "meaning_candidate:b3089474198f1da6ef61b904b848b627e0b35abcfa20f3a0d80b8e8ed8121ea3",
+  "semantic_contract_ref": "meaning_semantic_contract:dd8e726ed729359840a1e616fd72e0c56e72c60c4465725614eb6e48d5975f25",
+  "sense_refs": [
+    "forge_preview_sense:1ac5e200784743622aaf6d600ed58ab53775d3627b3da18443c6110d3a850768"
+  ],
+  "source_form_refs": [
+    "source_form:942231e51bed819b0be751d35380c315e7375f6463197a3048c85544cda8d8bf"
+  ],
+  "source_receipt_id": "source_receipt:4bb1774ecc0a7827e9cc647c2bf11e08bef4c098934638a57e03ad8b97916ec2",
+  "source_replay_verified": true,
+  "source_sha256": "74705945971f41694f102cec8d8b7c85905e6b18e94d3be893dd1f582622bdf0",
+  "token_stream_stored": false,
+  "vector_stored": false,
+  "writes_memory": false
+}

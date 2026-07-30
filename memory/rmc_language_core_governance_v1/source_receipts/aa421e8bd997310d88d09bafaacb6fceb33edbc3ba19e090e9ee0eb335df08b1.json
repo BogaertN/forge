@@ -1,0 +1,52 @@
+{
+  "ancestry_refs": [
+    "input_event:c8223e239499682ffa926bce40c325fcc0e5b9ac252d60db10ff73284fc38405",
+    "source_form:4544b602924f2aba6e229e54d65b1f5d0755c4f71467850c04e7989bca79650e",
+    "source_form:47b9b5ad38cda34c023044f2a529b6d7d4e069005c725fe8cb2e2848dddcc950",
+    "source_form:500e2fb8c9463d16b6fd2525862d61fa414941dee60b7be8dbea93283251e6dc",
+    "source_form:eed02e284c5fe2c757f1ab1cb8bdd6d349c836ecf768410603efd38d42a66204"
+  ],
+  "charter_entry_ref": "semantic_charter_replay_fixture:c8ec0247038dd22acd2fdb37ebfacd483cbec8e55c146a37830b1d3b2f853e34",
+  "charter_ref": "governed_semantic_charter:976e7fbd7d1eb426847525062cedd9bf7a1fe8dec2499e7156b0a7ea5aafb0c8",
+  "compiler_result_ref": "meaning_compiler_preview_result:984d290b8fc99a6a78119c00369616ce24206a5844a2b755eff131c91d12676d",
+  "concept_refs": [
+    "forge_preview_concept:381d527ba8096779252e9697e2d04eb00a30e87a0b265548398808eb5ce5a4d2",
+    "forge_preview_concept:7ea34a078fd3dab9539164a727d9214aeff9b453053d078469e094becff25f62"
+  ],
+  "echo_receipt_ref": "meaning_echo:8bf435c4b8b5a7a04d28137f7e09314b7e1f6cade3c5df789bd4bcee58c44c42",
+  "echo_status": "PASS",
+  "embedding_stored": false,
+  "exact_identity_binding_verified": true,
+  "grants_runtime_authority": false,
+  "input_event_ref": "input_event:c8223e239499682ffa926bce40c325fcc0e5b9ac252d60db10ff73284fc38405",
+  "raw_text_stored": false,
+  "registry_ref": "forge_preview_registry:eba54768ad3c5e10d0e370be39e41c0b77ccc41a2163c5de028b2bd77a4eb770",
+  "relation_refs": [
+    "predicate:compare",
+    "role:comparison_left:forge_preview_concept:7ea34a078fd3dab9539164a727d9214aeff9b453053d078469e094becff25f62",
+    "role:comparison_right:forge_preview_concept:381d527ba8096779252e9697e2d04eb00a30e87a0b265548398808eb5ce5a4d2"
+  ],
+  "role_refs": [
+    "forge_preview_role:bccc6968ce7b57a7e077097a94a9a9534f85aaba23e61dee368eb01cf242eeaa",
+    "forge_preview_role:efa4ddfda0337b39aec4ff185696296a9bfaefec6823ed999842ddd316ae73f4"
+  ],
+  "schema_version": "aiweb-forge-language-source-receipt-v1",
+  "selected_meaning_ref": "meaning_candidate:ae0f5c67b645acd714067e9c73693e49a7b4dd310fc72eb8777aa9d1ad886ab9",
+  "semantic_contract_ref": "meaning_semantic_contract:36ded30defcecd6f8a99a313d123940768b6fe9f67d234570733abac28e81022",
+  "sense_refs": [
+    "forge_preview_sense:1ac5e200784743622aaf6d600ed58ab53775d3627b3da18443c6110d3a850768",
+    "forge_preview_sense:4dd3e2cd093af2b0722e03b248074ccf61313354f31ae19d7411a6e613e38742"
+  ],
+  "source_form_refs": [
+    "source_form:4544b602924f2aba6e229e54d65b1f5d0755c4f71467850c04e7989bca79650e",
+    "source_form:47b9b5ad38cda34c023044f2a529b6d7d4e069005c725fe8cb2e2848dddcc950",
+    "source_form:500e2fb8c9463d16b6fd2525862d61fa414941dee60b7be8dbea93283251e6dc",
+    "source_form:eed02e284c5fe2c757f1ab1cb8bdd6d349c836ecf768410603efd38d42a66204"
+  ],
+  "source_receipt_id": "source_receipt:aa421e8bd997310d88d09bafaacb6fceb33edbc3ba19e090e9ee0eb335df08b1",
+  "source_replay_verified": true,
+  "source_sha256": "0ab61aa8b1a735752c27eb92b1646857b9f28036b2e4b2394ca2f3f2af0acb34",
+  "token_stream_stored": false,
+  "vector_stored": false,
+  "writes_memory": false
+}
